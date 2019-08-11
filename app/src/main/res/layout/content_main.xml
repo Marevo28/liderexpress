@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <Button
+        android:id="@+id/btnposition"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="ОК"
+        app:layout_constraintStart_toStartOf="@+id/textpositon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textpositon"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textuprav"
+        android:layout_width="131dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="16dp"
+        android:text="Управление"
+        app:layout_constraintStart_toStartOf="@+id/texttypetu"
+        app:layout_constraintTop_toBottomOf="@+id/texttypetu" />
+
+    <TextView
+        android:id="@+id/texttypetu"
+        android:layout_width="131dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginLeft="216dp"
+        android:layout_marginTop="16dp"
+        android:text="Тип ту"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textceh"
+        android:layout_width="131dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="16dp"
+        android:text="Цех"
+        app:layout_constraintStart_toStartOf="@+id/texttypetu"
+        app:layout_constraintTop_toBottomOf="@+id/textuprav" />
+
+    <TextView
+        android:id="@+id/textobekt"
+        android:layout_width="131dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="16dp"
+        android:text="Объект"
+        app:layout_constraintStart_toStartOf="@+id/texttypetu"
+        app:layout_constraintTop_toBottomOf="@+id/textceh" />
+
+    <TextView
+        android:id="@+id/textskvazhina"
+        android:layout_width="131dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="16dp"
+        android:text="Скважина"
+        app:layout_constraintStart_toStartOf="@+id/texttypetu"
+        app:layout_constraintTop_toBottomOf="@+id/textobekt" />
+
+    <Button
+        android:id="@+id/btnKarta"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="196dp"
+        android:text="Заполнение карты"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSvodnaya"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Заполнение сводной"
+        app:layout_constraintStart_toStartOf="@+id/btnKarta"
+        app:layout_constraintTop_toBottomOf="@+id/btnKarta" />
+
+    <Button
+        android:id="@+id/btnPhotoTu"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Фото объекта"
+        app:layout_constraintStart_toStartOf="@+id/btnKarta"
+        app:layout_constraintTop_toBottomOf="@+id/btnSvodnaya" />
+
+    <Button
+        android:id="@+id/btnPhotoDoc"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Фото документов"
+        app:layout_constraintStart_toStartOf="@+id/btnKarta"
+        app:layout_constraintTop_toBottomOf="@+id/btnPhotoTu" />
+
+    <Button
+        android:id="@+id/btnPhotoKontrol"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Фото контроля"
+        app:layout_constraintStart_toStartOf="@+id/btnKarta"
+        app:layout_constraintTop_toBottomOf="@+id/btnPhotoDoc" />
+</androidx.constraintlayout.widget.ConstraintLayout>
