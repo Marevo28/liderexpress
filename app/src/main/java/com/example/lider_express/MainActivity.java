@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public SQLiteDatabase mDb;
     Button btnpostion, btnSvodnaya, btnPhotoTu, btnPhotoDoc, btnPhotoKontrol, btnKarta;
     TextView textuprav, textceh, textobekt, texttypetu, textskvazhina, textpostion;
-    String position, Papka;
+    String position, Papka, NameTu;
     String Zakazchik="БНД 2019";
 
     @Override
@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     cursor.moveToFirst();
                     texttypetu.setText(cursor.getString(2));//Тип оборудования
                     textuprav.setText(cursor.getString(5));// Управление
+                    NameTu=cursor.getString(7);
                     textceh.setText(cursor.getString(14));//Цех
                     textobekt.setText(cursor.getString(15));//объект
                     textskvazhina.setText(cursor.getString(16));//скважина
@@ -96,6 +97,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", Zakazchik);
                 IntentPhoto.putExtra("Papka", Papka);
+                IntentPhoto.putExtra("Name", NameTu);
                 startActivity(IntentPhoto);
             }
         });
@@ -107,6 +109,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", Zakazchik);
                 IntentPhoto.putExtra("Papka", Papka);
+                IntentPhoto.putExtra("Name", NameTu);
                 startActivity(IntentPhoto);
             }
         });
@@ -118,6 +121,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", Zakazchik);
                 IntentPhoto.putExtra("Papka", Papka);
+                IntentPhoto.putExtra("Name", NameTu);
                 startActivity(IntentPhoto);
             }
         });

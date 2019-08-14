@@ -9,8 +9,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-
     <uses-permission android:name="android.hardware.camera2.full" />
 
     <application
@@ -22,12 +20,12 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".BNDSvodnaya"
-            android:label="@string/title_activity_bndsvodnaya"
+            android:label="Сводная таблица"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".Photo" />
         <activity
             android:name=".SittingsActivity"
-            android:label="@string/title_activity_sittings"
+            android:label="Настройки"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <provider

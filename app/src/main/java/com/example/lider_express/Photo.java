@@ -144,10 +144,11 @@ public class Photo extends AppCompatActivity {
             String Papka = arguments.getString("Papka");
             String Zakazchik = arguments.getString("Zakazchik");
             String position = arguments.getString("position");
+            String NameTu = arguments.getString("Name");
 
-            path = new File(Environment.getExternalStorageDirectory()+"/"+data+"/"+position+"/"+Papka);
+            path = new File(Environment.getExternalStorageDirectory()+"/"+Zakazchik+"_"+NameTu+"/"+position+"/"+Papka);
             path.mkdirs();
-            file = new File(Environment.getExternalStorageDirectory()+"/"+data+"/"+position+"/"+Papka+"/" +"Фоточка_"+i+".jpg");
+            file = new File(Environment.getExternalStorageDirectory()+"/"+Zakazchik+"_"+NameTu+"/"+position+"/"+Papka+"/" +"Фоточка_"+i+".jpg");
             i++;
             ImageReader.OnImageAvailableListener readerListener = new ImageReader.OnImageAvailableListener() {
                 @Override
