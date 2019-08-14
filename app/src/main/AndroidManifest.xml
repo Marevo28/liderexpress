@@ -8,7 +8,6 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
-
     <uses-permission android:name="android.hardware.camera2.full" />
 
     <application
@@ -19,9 +18,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Spisok"
+            android:label="@string/title_activity_spisok"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".BNDSvodnaya"
             android:label="Сводная таблица"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Photo" />
         <activity
             android:name=".SittingsActivity"

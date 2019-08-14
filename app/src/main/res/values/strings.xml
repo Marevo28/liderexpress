@@ -16,4 +16,5 @@
     <string name="title_activity_sittings">SittingsActivity</string>
     <string name="title_activity_photo">Photo</string>
     <string name="title_activity_bndsvodnaya">BNDSvodnaya</string>
+    <string name="title_activity_spisok">Spisok</string>
 </resources>
