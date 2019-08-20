@@ -18,9 +18,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".GiSosuda"
+            android:label="@string/title_activity_gi_sosuda"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Spisok"
             android:label="@string/title_activity_spisok"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".BNDSvodnaya"
             android:label="Сводная таблица"

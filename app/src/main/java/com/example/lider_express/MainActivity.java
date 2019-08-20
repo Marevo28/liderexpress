@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public DatabaseHelper mDBHelper;
     public SQLiteDatabase mDb;
     Button btnpostion, btnSvodnaya, btnPhotoTu, btnPhotoDoc, btnPhotoKontrol, btnKarta;
-    TextView textuprav, textceh, textobekt, texttypetu, textskvazhina, textpostion;
-    String position, Papka, NameTu;
+    TextView textuprav, textceh, textobekt, texttypetu, textskvazhina, textpostion, NameTu;
+    String position, Papka,Name;
     String Zakazchik="БНД 2019";
 
     @Override
@@ -55,9 +55,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         textobekt = (TextView) findViewById(R.id.textobekt);
         texttypetu = (TextView) findViewById(R.id.texttypetu);
         textskvazhina = (TextView) findViewById(R.id.textskvazhina);
+        NameTu = (TextView) findViewById(R.id.NameTu);
         textpostion = (EditText) findViewById(R.id.textpositon);
+
         btnSvodnaya.setEnabled(false);
         btnKarta.setEnabled(false);
+        btnPhotoTu.setEnabled(false);
+        btnPhotoDoc.setEnabled(false);
+        btnPhotoKontrol.setEnabled(false);
+
         mDBHelper = new DatabaseHelper(this);
         try {
             mDBHelper.updateDataBase();
@@ -77,51 +83,56 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     displayMessage(getBaseContext(), "Алло! Ебать! Введи число!");
                 } else {
                     btnSvodnaya.setEnabled(true);
+                    btnPhotoTu.setEnabled(true);
+                    btnPhotoDoc.setEnabled(true);
+                    btnPhotoKontrol.setEnabled(true);
                     Cursor cursor = mDb.query("ZayavkaBND", null, "POSITION = ?", new String[]{position}, null, null, null);
                     cursor.moveToFirst();
                     texttypetu.setText(cursor.getString(2));//Тип оборудования
                     textuprav.setText(cursor.getString(5));// Управление
-                    NameTu=cursor.getString(cursor.getColumnIndex("field7"));
                     textceh.setText(cursor.getString(14));//Цех
                     textobekt.setText(cursor.getString(15));//объект
                     textskvazhina.setText(cursor.getString(16));//скважина
+                    String NameTy=cursor.getString(cursor.getColumnIndex("field7"));//Наименование устройства
+                    NameTu.setText(NameTy);
                     cursor.close();
+                    Name=NameTy;
                 }
             }
         });
         btnPhotoTu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);
+                Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);//кнопка вызова Фото объекта
                 Papka = "Фото";
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", Zakazchik);
                 IntentPhoto.putExtra("Papka", Papka);
-                IntentPhoto.putExtra("Name", NameTu);
+                IntentPhoto.putExtra("Name", Name);
                 startActivity(IntentPhoto);
             }
         });
         btnPhotoDoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);
+                Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);//кнопка вызова Фото документов
                 Papka = "Документы";
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", Zakazchik);
                 IntentPhoto.putExtra("Papka", Papka);
-                IntentPhoto.putExtra("Name", NameTu);
+                IntentPhoto.putExtra("Name", Name);
                 startActivity(IntentPhoto);
             }
         });
         btnPhotoKontrol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);
+                Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);//кнопка вызова контроля
                 Papka = "Контроль";
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", Zakazchik);
                 IntentPhoto.putExtra("Papka", Papka);
-                IntentPhoto.putExtra("Name", NameTu);
+                IntentPhoto.putExtra("Name", Name);
                 startActivity(IntentPhoto);
             }
         });
@@ -171,7 +182,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-
+            Intent IntentSittings = new Intent(MainActivity.this, GiSosuda.class);
+            startActivity(IntentSittings);
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_tools) {

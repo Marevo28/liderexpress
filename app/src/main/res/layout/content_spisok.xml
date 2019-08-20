@@ -8,4 +8,21 @@
     tools:context=".Spisok"
     tools:showIn="@layout/activity_spisok">
 
+    <TextView
+        android:id="@+id/selection"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/countriesList"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/countriesList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:choiceMode="multipleChoice"
+        app:layout_constraintTop_toBottomOf="@+id/selection"
+        tools:layout_editor_absoluteX="0dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,7 +31,7 @@
 
     <TextView
         android:id="@+id/textuprav"
-        android:layout_width="131dp"
+        android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:layout_marginTop="16dp"
         android:text="Управление"
@@ -40,10 +40,9 @@
 
     <TextView
         android:id="@+id/texttypetu"
-        android:layout_width="131dp"
+        android:layout_width="wrap_content"
         android:layout_height="18dp"
-        android:layout_marginStart="216dp"
-        android:layout_marginLeft="216dp"
+        android:layout_marginStart="180dp"
         android:layout_marginTop="16dp"
         android:text="Тип ту"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +50,7 @@
 
     <TextView
         android:id="@+id/textceh"
-        android:layout_width="131dp"
+        android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:layout_marginTop="16dp"
         android:text="Цех"
@@ -60,7 +59,7 @@
 
     <TextView
         android:id="@+id/textobekt"
-        android:layout_width="131dp"
+        android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:layout_marginTop="16dp"
         android:text="Объект"
@@ -69,20 +68,28 @@
 
     <TextView
         android:id="@+id/textskvazhina"
-        android:layout_width="131dp"
+        android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:layout_marginTop="16dp"
         android:text="Скважина"
         app:layout_constraintStart_toStartOf="@+id/texttypetu"
         app:layout_constraintTop_toBottomOf="@+id/textobekt" />
 
+    <TextView
+        android:id="@+id/NameTu"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginTop="16dp"
+        android:text="Скважина"
+        app:layout_constraintStart_toStartOf="@+id/texttypetu"
+        app:layout_constraintTop_toBottomOf="@+id/textskvazhina" />
+
     <Button
         android:id="@+id/btnKarta"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="234dp"
         android:text="Заполнение карты"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

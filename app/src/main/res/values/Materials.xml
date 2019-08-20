@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Металлы">
+        <item>Ст 3</item>
+        <item>09Г2С</item>
+        <item>16ГС</item>
+        <item>Сталь 20</item>
+        <item>Сталь 20К</item>
+        <item>Сталь 10</item>
+        <item>09Г2</item>
+        <item>10Г2</item>
+        <item>17ГС</item>
+        <item>17Г1С</item>
+        <item>10Г2С1</item>
+        <item>03Х21Н21М4ГБ</item>
+        <item>03Х18Н11</item>
+        <item>03Х17Н14М3</item>
+        <item>Сталь 25Л</item>
+        <item>12ХМ</item>
+        <item>12МХ</item>
+        <item>15ХМ</item>
+        <item>15Х5М</item>
+        <item>15Х5М-У</item>
+        <item>08Х18Н10Т</item>
+        <item>08Х18Н12Т</item>
+        <item>Сталь 5</item>
+        <item>ВСт3пс4</item>
+        <item>Сталь 10В</item>
+        <item>ВСт3сп</item>
+        <item>Ст3</item>
+        <item>52D (аналог 09Г2С)</item>
+        <item>ВСт3Сп5</item>
+        <item>ВМст3сп</item>
+        <item>Х18Н10Т</item>
+        <item>09Г2С15</item>
+        <item>08Х17Н13М2Т</item>
+        <item>08Х17Н13М3Т</item>
+        <item>12Х18Н10Т</item>
+        <item>12Х18Н12Т</item>
+        <item>10Х17Н13М2Т</item>
+        <item>10Х17Н13М3Т</item>
+        <item>10Х14Г14Н4Т</item>
+        <item>08Х18Г8Н2Т</item>
+        <item>07Х13АГ20</item>
+        <item>02Х8Н22С6</item>
+        <item>15Х18Н12С4АТЮ</item>
+        <item>06ХН28МДТ</item>
+        <item>03ХН28МДТ</item>
+        <item>08Х22Н6Т</item>
+        <item>08Х21Н6М2Т</item>
+
+    </string-array>
+</resources>
