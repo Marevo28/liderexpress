@@ -22,4 +22,6 @@
 
     <include layout="@layout/content_gi_sosuda" />
 
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

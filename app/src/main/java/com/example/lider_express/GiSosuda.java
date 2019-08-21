@@ -1,15 +1,20 @@
 package com.example.lider_express;
 
+import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +24,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -93,11 +99,15 @@ public class GiSosuda extends AppCompatActivity {
                 e = cursor.getString(cursor.getColumnIndex("20"));
                 a = cursor.getString(cursor.getColumnIndex(niz));
                 b = cursor.getString(cursor.getColumnIndex(verh));
+                int f = Integer.parseInt(niz);
+                int g = Integer.parseInt(verh);
                 nizhnee = Integer.parseInt(a);
                 verhnee = Integer.parseInt(b);
                 sigmaudel = Integer.parseInt(e);
-                sigma = nizhnee - ((double) (temp - 20) / (100 - 20)) * (nizhnee - verhnee);
-                result = davl * 1.25 * (sigmaudel / sigma);
+                double h = (double) (temp - f) / (g - f);
+                sigma = nizhnee - h * (nizhnee - verhnee);
+                h = (sigmaudel / sigma);
+                result = davl * 1.25 * h;
                 result = Math.round(result * 100.0) / 100.0;
                 textResult.setText("Расчётное давление = " + result);
                 cursor.close();
@@ -105,3 +115,4 @@ public class GiSosuda extends AppCompatActivity {
         });
     }
 }
+

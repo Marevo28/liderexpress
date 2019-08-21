@@ -17,5 +17,5 @@
     <string name="title_activity_photo">Photo</string>
     <string name="title_activity_bndsvodnaya">BNDSvodnaya</string>
     <string name="title_activity_spisok">Spisok</string>
-    <string name="title_activity_gi_sosuda">GiSosuda</string>
+    <string name="title_activity_gi_sosuda">Расчёт ГИ</string>
 </resources>
