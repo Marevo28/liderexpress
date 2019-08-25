@@ -185,7 +185,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent IntentSittings = new Intent(MainActivity.this, GiSosuda.class);
             startActivity(IntentSittings);
         } else if (id == R.id.nav_slideshow) {
-
+            Intent IntentSittings = new Intent(MainActivity.this, VmyatinaSocuda.class);
+            startActivity(IntentSittings);
         } else if (id == R.id.nav_tools) {
 
         } else if (id == R.id.nav_sittings) {
