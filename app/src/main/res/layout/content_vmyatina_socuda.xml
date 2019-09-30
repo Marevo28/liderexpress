@@ -13,7 +13,7 @@
         android:layout_width="118dp"
         android:layout_height="40dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="date"
         app:layout_constraintStart_toStartOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -163,18 +163,20 @@
         android:id="@+id/textUslovie"
         android:layout_width="wrap_content"
         android:layout_height="27dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="276dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="280dp"
         android:text="Условие прочности:"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textZnachenie"
+        android:id="@+id/textRaschetnoeZnachenie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:text="TextView"
+        android:layout_marginStart="60dp"
+        android:text="Расчётно значение ="
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textUslovie" />
 
@@ -182,9 +184,20 @@
         android:id="@+id/butItog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="32dp"
         android:text="Расчитать"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textZnachenie" />
+        app:layout_constraintTop_toBottomOf="@+id/textRaschetnoeZnachenie" />
+
+    <TextView
+        android:id="@+id/textDopuskZnachenie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="332dp"
+        android:text="Допускаемое значение ="
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

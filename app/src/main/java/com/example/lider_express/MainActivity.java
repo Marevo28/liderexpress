@@ -97,6 +97,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     NameTu.setText(NameTy);
                     cursor.close();
                     Name=NameTy;
+                    Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);//кнопка вызова контроля
+                    Papka = "Контроль";
+                    IntentPhoto.putExtra("position", position);
                 }
             }
         });

@@ -5,9 +5,6 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -27,10 +24,10 @@ public class VmyatinaSocuda extends AppCompatActivity {
     public SQLiteDatabase mDb;
     Button butItog;
     String metal,sigma,uslovie,V;
-    int sigmaR,davl,diam,ispol,shir,dlin,glub, min;
-    TextView textUslovie,textZnachenie;
+    int sigmaR,diam,ispol,shir,dlin,glub, min;
+    TextView textUslovie,textZnachenie,textDopuskZnachenie;
     EditText textDavlenie,textDiametr,textIspolnitelnoe,textShirina,textDlina,textGlubina;
-    double psipsi,psi,cospsi,rnar,n,pi,sigmaMAX,drob1,drob2,drob3,drob4,drob5,drob6;
+    double psipsi,psi,cospsi,rnar,n,pi,sigmaMAX,davl,drob1,drob2,drob3,drob4,drob5,drob6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +37,8 @@ public class VmyatinaSocuda extends AppCompatActivity {
 
         butItog=findViewById(R.id.butItog);
         textUslovie=findViewById(R.id.textUslovie);
-        textZnachenie=findViewById(R.id.textZnachenie);
+        textZnachenie=findViewById(R.id.textRaschetnoeZnachenie);
+        textDopuskZnachenie=findViewById(R.id.textDopuskZnachenie);
         textDavlenie=findViewById(R.id.textDavlenie);
         textDiametr=findViewById(R.id.textDiametr);
         textIspolnitelnoe=findViewById(R.id.textIspolnitelnoe);
@@ -68,7 +66,7 @@ public class VmyatinaSocuda extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 metal = autoCompleteTextView.getText().toString();
-                davl = Integer.parseInt(textDavlenie.getText().toString());
+                davl = Double.parseDouble(textDavlenie.getText().toString());
                 diam = Integer.parseInt(textDiametr.getText().toString());
                 ispol = Integer.parseInt(textIspolnitelnoe.getText().toString());
                 shir = Integer.parseInt(textShirina.getText().toString());
@@ -88,6 +86,7 @@ public class VmyatinaSocuda extends AppCompatActivity {
                 Cursor cursormetal = mDb.query("Metal", null, "metal = ?", new String[]{metal}, null, null, null);
                 cursormetal.moveToFirst();
                 sigma = cursormetal.getString(cursormetal.getColumnIndex("20"));
+                cursormetal.close();
                 sigmaR= Integer.parseInt(sigma);
                 sigmaR=3*sigmaR;
                 drob1=(double)(6*glub)/(ispol-1);
@@ -106,7 +105,8 @@ public class VmyatinaSocuda extends AppCompatActivity {
                     V=">";
                 }
                 textUslovie.setText("Условие " + uslovie);
-                textZnachenie.setText(sigmaMAX+V+sigmaR);
+                textZnachenie.setText("Расчётное значение = "+sigmaMAX);
+                textDopuskZnachenie.setText("Допустимое значение = "+sigmaR);
                 cursormetal.close();
             }
         });
