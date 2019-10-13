@@ -1,5 +1,6 @@
 package com.example.lider_express;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -15,6 +16,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static String DB_NAME = "info1.db";
     private static String DB_PATH = "";
     private static final int DB_VERSION = 1;
+    private static final String DATABASE_TABLE = "table1";
+    public static final String COLUMN_ID = "_id";
+    public static final String COLUMN_POS = "POS";
+    public static final String COLUMN_ISP = "ISP";
     private SQLiteDatabase mDataBase;
     private final Context mContext;
     private boolean mNeedUpdate = false;
@@ -26,11 +31,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else
             DB_PATH = "/data/data/" + context.getPackageName() + "/databases/";
         this.mContext = context;
-
         copyDataBase();
-
         this.getReadableDatabase();
     }
+
     public void updateDataBase() throws IOException {
         if (mNeedUpdate) {
             File dbFile = new File(DB_PATH + DB_NAME);
@@ -67,24 +71,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         mOutput.close();
         mInput.close();
     }
-
     public boolean openDataBase() throws SQLException {
         mDataBase = SQLiteDatabase.openDatabase(DB_PATH + DB_NAME, null, SQLiteDatabase.CREATE_IF_NECESSARY);
         return mDataBase != null;
     }
-
     @Override
     public synchronized void close() {
         if (mDataBase != null)
             mDataBase.close();
         super.close();
     }
-
     @Override
     public void onCreate(SQLiteDatabase db) {
+        //db.execSQL(DATABASE_CREATE);
+        ContentValues initialValues = createContentValues("","");
+        db.insert(DATABASE_TABLE, null, initialValues);
 
     }
-
+    private ContentValues createContentValues(String POS, String ISP) {
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_POS, POS);
+        values.put(COLUMN_ISP, ISP);;
+        return values;
+    }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (newVersion > oldVersion)

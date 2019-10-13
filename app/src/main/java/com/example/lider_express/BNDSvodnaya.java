@@ -2,13 +2,8 @@ package com.example.lider_express;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
@@ -24,9 +19,11 @@ public class BNDSvodnaya extends AppCompatActivity {
         setContentView(R.layout.activity_bndsvodnaya);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Bundle arguments = getIntent().getExtras();
-        String position = arguments.getString("position");
+        Bundle IntentPosition = getIntent().getExtras();
+        //String position = IntentPosition.getString("position");// выбило нуль надо, при передачи с титула
+        //String experts = IntentPosition.getString("experts");
         textexperts=findViewById(R.id.textexperts);
+        //textexperts.setText(experts);
         PickExpert=findViewById(R.id.PickExpert);
         PickExpert.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,4 +50,5 @@ public class BNDSvodnaya extends AppCompatActivity {
             }
         });
     }
+
 }

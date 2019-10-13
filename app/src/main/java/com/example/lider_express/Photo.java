@@ -135,7 +135,8 @@ public class Photo extends AppCompatActivity {
             final CaptureRequest.Builder captureBuilder = cameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_STILL_CAPTURE);
             captureBuilder.addTarget(reader.getSurface());
             captureBuilder.set(CaptureRequest.CONTROL_MODE, CameraMetadata.CONTROL_MODE_AUTO);
-
+            captureBuilder.set(CaptureRequest.CONTROL_AWB_MODE, CaptureRequest.CONTROL_AWB_MODE_WARM_FLUORESCENT);
+            captureBuilder.set(CaptureRequest.CONTROL_AF_MODE, CaptureRequest.CONTROL_AF_TRIGGER_CANCEL);
             //Check orientation base on device
             int rotation = getWindowManager().getDefaultDisplay().getRotation();
             captureBuilder.set(CaptureRequest.JPEG_ORIENTATION,ORIENTATIONS.get(rotation));
@@ -187,7 +188,6 @@ public class Photo extends AppCompatActivity {
                     }
                 }
             };
-
             reader.setOnImageAvailableListener(readerListener,mBackgroundHandler);
             final CameraCaptureSession.CaptureCallback captureListener = new CameraCaptureSession.CaptureCallback() {
                 @Override
@@ -197,7 +197,6 @@ public class Photo extends AppCompatActivity {
                     createCameraPreview();
                 }
             };
-
             cameraDevice.createCaptureSession(outputSurface, new CameraCaptureSession.StateCallback() {
                 @Override
                 public void onConfigured(@NonNull CameraCaptureSession cameraCaptureSession) {
@@ -207,13 +206,10 @@ public class Photo extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-
                 @Override
                 public void onConfigureFailed(@NonNull CameraCaptureSession cameraCaptureSession) {
-
                 }
             },mBackgroundHandler);
-
 
         } catch (CameraAccessException e) {
             e.printStackTrace();
