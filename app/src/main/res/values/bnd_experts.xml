@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="bnd_experts">
-        <item>Михайлов</item>
-        <item>Голуб</item>
-        <item>Семенов</item>
-        <item>Шафиков</item>
+    <item>Михайлов</item>
+    <item>Голуб</item>
+    <item>Семенов</item>
+    <item>Шафиков</item>
     </string-array>
+    <string-array name="bnd_defects">
+        <item>Чернышов</item>
+        <item>Михайлов</item>
+        <item>Алик</item>
+        <item>Брат Алика</item>
+    </string-array>
+
 </resources>

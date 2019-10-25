@@ -146,7 +146,6 @@ public class Photo extends AppCompatActivity {
             String Zakazchik = arguments.getString("Zakazchik");
             String position = arguments.getString("position");
             String NameTu = arguments.getString("Name");
-
             path = new File(Environment.getExternalStorageDirectory()+"/"+Zakazchik+"/"+position+"_"+NameTu+"/"+Papka);
             path.mkdirs();
             file = new File(Environment.getExternalStorageDirectory()+"/"+Zakazchik+"/"+position+"_"+NameTu+"/"+Papka+"/" +"Фоточка_"+i+".jpg");

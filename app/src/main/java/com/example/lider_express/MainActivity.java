@@ -97,15 +97,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         textceh.setText(cursor.getString(14));//Цех
                         textobekt.setText(cursor.getString(15));//объект
                         textskvazhina.setText(cursor.getString(16));//скважина
-                        String NameTy = cursor.getString(cursor.getColumnIndex("field7"));//Наименование устройства
+                        String NameTy = cursor.getString(7);//Наименование устройства
                         NameTu.setText(NameTy);
                         cursor.close();
                         Name = NameTy;
-                        Intent IntentPosition = new Intent(MainActivity.this, BNDSvodnaya.class);//кнопка вызова контроля
-                        IntentPosition.putExtra("position", position);
+
                 }
             }
         });
+
         btnPhotoTu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -145,8 +145,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnSvodnaya.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String key = "key";
                 Intent IntentSittings = new Intent(MainActivity.this, BNDSvodnaya.class);
+                IntentSittings.putExtra("position", position);
+                IntentSittings.putExtra("key", key);
                 startActivity(IntentSittings);
+
                 //Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/p9ECCxeg8tQ2NTQVA"));
                 //startActivity(browserIntent);
             }

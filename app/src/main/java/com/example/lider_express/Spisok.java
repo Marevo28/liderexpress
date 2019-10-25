@@ -14,8 +14,11 @@ import android.widget.TextView;
 
 public class Spisok extends AppCompatActivity {
     TextView selection;
-    String experts;
-Button butSave;
+    String select;
+    public static String PEOPLE;
+    Button butSave;
+    String[] spisochek;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +26,21 @@ Button butSave;
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         selection = (TextView) findViewById(R.id.selection);// получаем элемент ListView
+        butSave=(Button)findViewById(R.id.butSave);
         final ListView countriesList = (ListView) findViewById(R.id.countriesList);// получаем ресурс
-        final String[] bnd_experts = getResources().getStringArray(R.array.bnd_experts);// создаем адаптер
-        ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, bnd_experts);
+
+        Bundle arguments = getIntent().getExtras();
+        PEOPLE = arguments.getString("people");
+        switch (PEOPLE){
+            case "experts":
+                spisochek = getResources().getStringArray(R.array.bnd_experts);// создаем адаптер
+                break;
+            case "defects":
+                spisochek = getResources().getStringArray(R.array.bnd_defects);// создаем адаптер
+                break;
+        }
+
+        ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, spisochek);
         countriesList.setAdapter(adapter);
         countriesList.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
@@ -33,22 +48,24 @@ Button butSave;
             {
                 SparseBooleanArray sp=countriesList.getCheckedItemPositions();
                 String selectedItems="";
-                for(int i=0;i < bnd_experts.length;i++)
+                for(int i=0;i < spisochek.length;i++)
                 {
                     if(sp.get(i))
-                        selectedItems+=bnd_experts[i]+",";
+                        selectedItems+=spisochek[i]+",";
                 }
                 selection.setText("Выбрано: " + selectedItems);
-                experts=selectedItems;
+                select=selectedItems;
             }
         });
-       butSave=(Button)findViewById(R.id.butSave);
+
        butSave.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
                Intent IntentSvodnaya = new Intent(Spisok.this, BNDSvodnaya.class);//данны дял передачи
-               IntentSvodnaya.putExtra("experts", experts);
-               startActivity(IntentSvodnaya);
+               IntentSvodnaya.putExtra("select", select);
+               IntentSvodnaya.putExtra("people", PEOPLE);
+               setResult(RESULT_OK, IntentSvodnaya);
+               finish();
            }
        });
     }
