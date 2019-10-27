@@ -1,27 +1,36 @@
 package com.example.lider_express;
 
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
+import java.sql.Statement;
 
 public class BNDSvodnaya extends AppCompatActivity {
+    public static final String POSITION = "Position";
     public DatabaseHelper mDBHelper;
     public SQLiteDatabase mDb;
     TextView textexperts, textdefek;
-    Button PickExpert, PickDefects;
-    String ispol, shurf, actshurf,naryadS, position,lampa;
+    Button PickExpert, PickDefects, ButZapisat;
+    String ispol, shurf, actshurf, naryadS, position, lampa;
     RadioGroup ispolnenie, shurfovka, actshurfovka, naryad;
     static final private int PEOPLE = 0;
+    Statement stmt = null;
+    int ID = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +42,8 @@ public class BNDSvodnaya extends AppCompatActivity {
         textdefek = findViewById(R.id.textdefek);
         PickExpert = findViewById(R.id.PickExpert);
         PickDefects = findViewById(R.id.PickDefects);
-        ispolnenie =findViewById(R.id.ispolnenie);
+        ButZapisat = findViewById(R.id.ButZapisat);
+        ispolnenie = findViewById(R.id.ispolnenie);
         shurfovka = findViewById(R.id.shurfovka);
         actshurfovka = findViewById(R.id.actshurfovka);
         naryad = findViewById(R.id.naryad);
@@ -56,15 +66,15 @@ public class BNDSvodnaya extends AppCompatActivity {
         Cursor cursor = mDb.query("ZayavkaBND", null, "POSITION = ?", new String[]{position}, null, null, null);
         cursor.moveToFirst();
 
-        if(cursor.getString(28)!=null) {
+        if (cursor.getString(28) != null) {
             textexperts.setText(cursor.getString(28));
         }
 
-        if(cursor.getString(30)!=null) {
+        if (cursor.getString(30) != null) {
             textdefek.setText(cursor.getString(30));
         }
 
-        if(cursor.getString(31)!=null) {
+        if (cursor.getString(31) != null) {
             ispol = cursor.getString(31);
             switch (ispol) {
                 case "Надземное":
@@ -76,7 +86,7 @@ public class BNDSvodnaya extends AppCompatActivity {
             }
         }
 
-        if(cursor.getString(32)!=null) {
+        if (cursor.getString(32) != null) {
             shurf = cursor.getString(32);
             switch (shurf) {
                 case "Да":
@@ -88,8 +98,8 @@ public class BNDSvodnaya extends AppCompatActivity {
             }
         }
 
-        if(cursor.getString(33)!=null){
-            actshurf=cursor.getString(33);
+        if (cursor.getString(33) != null) {
+            actshurf = cursor.getString(33);
             switch (actshurf) {
                 case "Да":
                     actshurfovka.check(R.id.actshurfDA);
@@ -100,16 +110,15 @@ public class BNDSvodnaya extends AppCompatActivity {
             }
         }
 
-        if(cursor.getString(34)!=null){
-            naryadS=cursor.getString(34);
-            switch (naryadS) {
-                case "Да":
-                    naryad.check(R.id.naryadDa);
-                    break;
-                case "Нет":
-                    naryad.check(R.id.naryadNet);
-                    break;
-            }
+        if (cursor.getString(34) != null) {
+            naryadS = cursor.getString(34);
+            // naryad.check("Да".equals(naryadS) ? R.id.naryadDa : R.id.naryadNet);
+            // загугли тернарный оператор
+            if ("Да".equals(naryadS))
+                naryad.check(R.id.naryadDa);
+            else
+                naryad.check(R.id.naryadNet);
+
         }
 
         PickExpert.setOnClickListener(new View.OnClickListener() {
@@ -126,16 +135,43 @@ public class BNDSvodnaya extends AppCompatActivity {
                 Intent IntentSittings = new Intent(BNDSvodnaya.this, Spisok.class);
                 IntentSittings.putExtra("people", "defects");
                 startActivityForResult(IntentSittings, PEOPLE);
+
+            }
+        });
+        ButZapisat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ContentValues initialValues = new ContentValues();
+                //initialValues.put("_id", ID);
+                initialValues.put(POSITION, position);
+                initialValues.put("Ispolnenie", ispol);
+                initialValues.put("Shurfovka", shurf);
+                initialValues.put("Actshurfovka", actshurf);
+                initialValues.put("Naryad", naryadS);
+                //Statement statement = mDBHelper.createStatement();
+                long result = mDBHelper.getWritableDatabase().insert("DefectBND", null, initialValues);
+                //= "INSERT INTO DefectBND (_id,Position,Ispolnenie,Shurfovka,Actshurfovka,Naryad) " +
+                // "VALUES ('"+ ID + "', '"+ position + "', '"+ ispol + "', '"+ shurf + "', '"+ actshurf + "', '"+ naryadS + "') ";
+
+
+                ID++;
+                if (result > 0) {
+                    System.out.println("insert");
+                    Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
+                    displayMessage(getBaseContext(), String.valueOf(defectBND.getCount()));
+                    // действия
+                }
             }
         });
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
             lampa = data.getStringExtra("people");
             String a;
-            switch (lampa){
+            switch (lampa) {
                 case "experts":
                     a = data.getStringExtra("select");
                     textexperts.setText(a);
@@ -146,5 +182,9 @@ public class BNDSvodnaya extends AppCompatActivity {
                     break;
             }
         }
+    }
+
+    private void displayMessage(Context context, String message) {
+        Toast.makeText(context, message, Toast.LENGTH_LONG).show();
     }
 }

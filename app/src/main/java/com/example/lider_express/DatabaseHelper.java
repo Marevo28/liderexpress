@@ -11,18 +11,15 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.sql.*;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static String DB_NAME = "info1.db";
     private static String DB_PATH = "";
-    private static final int DB_VERSION = 1;
-    private static final String DATABASE_TABLE = "table1";
-    public static final String COLUMN_ID = "_id";
-    public static final String COLUMN_POS = "POS";
-    public static final String COLUMN_ISP = "ISP";
+    private static final int DB_VERSION = 20;
     private SQLiteDatabase mDataBase;
     private final Context mContext;
-    private boolean mNeedUpdate = false;
+    private boolean mNeedUpdate = true;
 
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -83,20 +80,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //db.execSQL(DATABASE_CREATE);
-        ContentValues initialValues = createContentValues("","");
-        db.insert(DATABASE_TABLE, null, initialValues);
-
-    }
-    private ContentValues createContentValues(String POS, String ISP) {
-        ContentValues values = new ContentValues();
-        values.put(COLUMN_POS, POS);
-        values.put(COLUMN_ISP, ISP);;
-        return values;
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (newVersion > oldVersion)
             mNeedUpdate = true;
     }
+
 }
