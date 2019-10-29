@@ -18,6 +18,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.Statement;
 
 public class BNDSvodnaya extends AppCompatActivity {
@@ -78,6 +80,7 @@ public class BNDSvodnaya extends AppCompatActivity {
             ispol = cursor.getString(31);
             switch (ispol) {
                 case "Надземное":
+
                     ispolnenie.check(R.id.nadzemnoe);
                     break;
                 case "Подземное":
@@ -141,6 +144,7 @@ public class BNDSvodnaya extends AppCompatActivity {
         ButZapisat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ConnectDB();
                 ContentValues initialValues = new ContentValues();
                 //initialValues.put("_id", ID);
                 initialValues.put(POSITION, position);
@@ -186,5 +190,15 @@ public class BNDSvodnaya extends AppCompatActivity {
 
     private void displayMessage(Context context, String message) {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+    }
+    public static Connection ConnectDB(){
+        try {
+            Class.forName("org.sqlite.JDBC");
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:info1.db");
+            System.out.println("connected");
+        }catch(Exception e) {
+            System.out.println(e);
+        }
+        return null;
     }
 }
