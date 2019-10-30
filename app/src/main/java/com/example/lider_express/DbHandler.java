@@ -30,34 +30,8 @@ public class DbHandler {
         this.connection = DriverManager.getConnection(CON_STR);
     }
 
-    public List<Product> getAllProducts() {
-
-        // Statement используется для того, чтобы выполнить sql-запрос
-        try (Statement statement = this.connection.createStatement()) {
-            // В данный список будем загружать наши продукты, полученные из БД
-            List<Product> products = new ArrayList<Product>();
-            // В resultSet будет храниться результат нашего запроса,
-            // который выполняется командой statement.executeQuery()
-            ResultSet resultSet = statement.executeQuery("SELECT id, good, price, category_name FROM products");
-            // Проходимся по нашему resultSet и заносим данные в products
-            while (resultSet.next()) {
-                products.add(new Product(resultSet.getInt("id"),
-                        resultSet.getString("good"),
-                        resultSet.getDouble("price"),
-                        resultSet.getString("category_name")));
-            }
-            // Возвращаем наш список
-            return products;
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-            // Если произошла ошибка - возвращаем пустую коллекцию
-            return Collections.emptyList();
-        }
-    }
-
     // Добавление продукта в БД
-    public void addProduct(Product product) {
+    public void addProduct(Position_BND product) {
         // Создадим подготовленное выражение, чтобы избежать SQL-инъекций
         try (PreparedStatement statement = this.connection.prepareStatement(
                 "INSERT INTO Products(`good`, `price`, `category_name`) " +
