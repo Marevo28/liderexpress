@@ -38,6 +38,9 @@ public class Spisok extends AppCompatActivity {
             case "defects":
                 spisochek = getResources().getStringArray(R.array.bnd_defects);// создаем адаптер
                 break;
+            case "irldefects":
+                spisochek = getResources().getStringArray(R.array.bnd_defects);// создаем адаптер
+                break;
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, spisochek);

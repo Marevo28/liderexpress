@@ -7,7 +7,7 @@ import java.util.*;
 public class DbHandler {
     //https://alekseygulynin.ru/rabota-s-sqlite-v-java/
     // Константа, в которой хранится адрес подключения
-    private static final String CON_STR = "jdbc:sqlite:D:/myfin.db";
+    private static final String CON_STR = "jdbc:sqlite:info1.db";
 
     // Используем шаблон одиночка, чтобы не плодить множество
     // экземпляров класса DbHandler
@@ -34,11 +34,11 @@ public class DbHandler {
     public void addProduct(Position_BND product) {
         // Создадим подготовленное выражение, чтобы избежать SQL-инъекций
         try (PreparedStatement statement = this.connection.prepareStatement(
-                "INSERT INTO Products(`good`, `price`, `category_name`) " +
+                "INSERT INTO  DefectBND(`Position`, `Ispolnenie`, `Shurfovka`) " +
                         "VALUES(?, ?, ?)")) {
-            statement.setObject(1, product.good);
-            statement.setObject(2, product.price);
-            statement.setObject(3, product.category_name);
+            statement.setObject(1, product.position);
+            statement.setObject(2, product.ispol);
+            statement.setObject(3, product.shurf);
             // Выполняем запрос
             statement.execute();
         } catch (SQLException e) {

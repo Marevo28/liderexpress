@@ -41,16 +41,6 @@
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
         <EditText
-            android:id="@+id/editText6"
-            android:layout_width="131dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="62dp"
-            android:ems="10"
-            android:inputType="date"
-            app:layout_constraintStart_toStartOf="@+id/textView17"
-            app:layout_constraintTop_toBottomOf="@+id/textView17" />
-
-        <EditText
             android:id="@+id/editText7"
             android:layout_width="131dp"
             android:layout_height="43dp"
@@ -61,12 +51,23 @@
 
         <TextView
             android:id="@+id/textexperts"
-            android:layout_width="325dp"
+            android:layout_width="160dp"
             android:layout_height="50dp"
+            android:layout_marginStart="165dp"
             android:layout_marginTop="12dp"
             android:text="Эксперты"
             app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="131dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="62dp"
+            android:ems="10"
+            android:inputType="date"
+            app:layout_constraintStart_toStartOf="@+id/textView17"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
         <TextView
             android:id="@+id/textView2"
@@ -81,17 +82,19 @@
 
         <Button
             android:id="@+id/PickExpert"
-            android:layout_width="325dp"
+            android:layout_width="160dp"
             android:layout_height="40dp"
+            android:layout_marginStart="165dp"
             android:layout_marginTop="62dp"
-            android:text="Выбрать"
+            android:text="Выбрать экспертов"
             app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <Button
             android:id="@+id/PickDefects"
-            android:layout_width="325dp"
+            android:layout_width="160dp"
             android:layout_height="40dp"
+            android:layout_marginStart="165dp"
             android:layout_marginTop="62dp"
             android:text="Выбрать"
             app:layout_constraintStart_toStartOf="@+id/textView6"
@@ -99,15 +102,16 @@
 
         <TextView
             android:id="@+id/textdefek"
-            android:layout_width="325dp"
+            android:layout_width="160dp"
             android:layout_height="50dp"
+            android:layout_marginStart="165dp"
             android:layout_marginTop="12dp"
             android:text="Специалисты"
             app:layout_constraintStart_toStartOf="@+id/textView6"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
         <TextView
-            android:id="@+id/textView18"
+            android:id="@+id/textirldefek"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:layout_marginStart="144dp"
@@ -182,7 +186,7 @@
         </RadioGroup>
 
         <RadioGroup
-            android:id="@+id/luk-laz"
+            android:id="@+id/luklaz"
             android:layout_width="325dp"
             android:layout_height="43dp"
             android:orientation="horizontal"
@@ -190,14 +194,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textView10">
 
             <RadioButton
-                android:id="@+id/radioButton8"
+                android:id="@+id/luklazDA"
                 android:layout_width="198dp"
                 android:layout_height="43dp"
                 android:layout_weight="1"
                 android:text="Да" />
 
             <RadioButton
-                android:id="@+id/radioButton7"
+                android:id="@+id/luklazNet"
                 android:layout_width="195dp"
                 android:layout_height="43dp"
                 android:layout_weight="1"
@@ -230,7 +234,7 @@
         </RadioGroup>
 
         <RadioGroup
-            android:id="@+id/radioGroup6"
+            android:id="@+id/ostanov"
             android:layout_width="325dp"
             android:layout_height="43dp"
             android:orientation="horizontal"
@@ -238,14 +242,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textView5">
 
             <RadioButton
-                android:id="@+id/radioButton12"
+                android:id="@+id/ostanovDa"
                 android:layout_width="198dp"
                 android:layout_height="43dp"
                 android:layout_weight="1"
                 android:text="Да" />
 
             <RadioButton
-                android:id="@+id/radioButton11"
+                android:id="@+id/ostanovNet"
                 android:layout_width="195dp"
                 android:layout_height="43dp"
                 android:layout_weight="1"
@@ -255,7 +259,7 @@
 
 
         <RadioGroup
-            android:id="@+id/radioGroup7"
+            android:id="@+id/documents"
             android:layout_width="325dp"
             android:layout_height="43dp"
             android:orientation="horizontal"
@@ -263,14 +267,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textView14">
 
             <RadioButton
-                android:id="@+id/radioButton13"
+                android:id="@+id/documentsDa"
                 android:layout_width="198dp"
                 android:layout_height="43dp"
                 android:layout_weight="1"
                 android:text="Да" />
 
             <RadioButton
-                android:id="@+id/radioButton14"
+                android:id="@+id/documentsNet"
                 android:layout_width="195dp"
                 android:layout_height="43dp"
                 android:layout_weight="1"
@@ -279,7 +283,7 @@
         </RadioGroup>
 
         <RadioGroup
-            android:id="@+id/radioGroup9"
+            android:id="@+id/vedomostdef"
             android:layout_width="325dp"
             android:layout_height="43dp"
             android:layout_weight="1"
@@ -288,14 +292,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textView13">
 
             <RadioButton
-                android:id="@+id/radioButton17"
+                android:id="@+id/vedomostdefDa"
                 android:layout_width="198dp"
                 android:layout_height="43dp"
                 android:layout_weight="1"
                 android:text="Да" />
 
             <RadioButton
-                android:id="@+id/radioButton18"
+                android:id="@+id/vedomostdefNet"
                 android:layout_width="195dp"
                 android:layout_height="43dp"
                 android:layout_weight="1"
@@ -304,7 +308,7 @@
         </RadioGroup>
 
         <RadioGroup
-            android:id="@+id/radioGroup13"
+            android:id="@+id/iskluchenie"
             android:layout_width="325dp"
             android:layout_height="43dp"
             android:layout_marginTop="62dp"
@@ -313,14 +317,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textView13">
 
             <RadioButton
-                android:id="@+id/radioButton26"
+                android:id="@+id/iskluchenieDa"
                 android:layout_width="198dp"
                 android:layout_height="43dp"
                 android:layout_weight="1"
                 android:text="Да" />
 
             <RadioButton
-                android:id="@+id/radioButton27"
+                android:id="@+id/iskluchenieNet"
                 android:layout_width="195dp"
                 android:layout_height="43dp"
                 android:layout_weight="1"
@@ -341,10 +345,10 @@
             android:id="@+id/textView4"
             android:layout_width="325dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="80dp"
             android:text="Наряд на газоопасные работы для проведения контроля изнутри получен"
             app:layout_constraintStart_toStartOf="@+id/textView10"
-            app:layout_constraintTop_toTopOf="@+id/luk-laz" />
+            app:layout_constraintTop_toTopOf="@+id/textView10" />
 
         <TextView
             android:id="@+id/textView5"
@@ -362,7 +366,7 @@
             android:layout_marginStart="150dp"
             android:layout_marginTop="48dp"
             android:text="Конец останова"
-            app:layout_constraintStart_toStartOf="@+id/radioGroup6"
+            app:layout_constraintStart_toStartOf="@+id/ostanov"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <TextView
@@ -371,7 +375,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
             android:text="Начало останова"
-            app:layout_constraintStart_toStartOf="@+id/radioGroup6"
+            app:layout_constraintStart_toStartOf="@+id/ostanov"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <TextView
@@ -389,7 +393,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="126dp"
             android:text="Дата акта неготовности"
-            app:layout_constraintStart_toStartOf="@+id/radioGroup6"
+            app:layout_constraintStart_toStartOf="@+id/ostanov"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
@@ -408,7 +412,7 @@
             android:layout_marginTop="43dp"
             android:text="Исключение позиции из договора"
             app:layout_constraintStart_toStartOf="@+id/textView13"
-            app:layout_constraintTop_toTopOf="@+id/radioGroup9" />
+            app:layout_constraintTop_toTopOf="@+id/vedomostdef" />
 
         <EditText
             android:id="@+id/editText3"
@@ -426,14 +430,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/PickIrlDefects"
             android:layout_width="180dp"
             android:layout_height="43dp"
             android:layout_marginStart="148dp"
             android:layout_marginTop="144dp"
             android:text="Выбрать"
             app:layout_constraintStart_toStartOf="@+id/editText6"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup9" />
+            app:layout_constraintTop_toBottomOf="@+id/vedomostdef" />
 
         <TextView
             android:id="@+id/textView16"
@@ -483,11 +487,12 @@
             android:layout_width="325dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="43dp"
-            android:text="На момент проведения НК оборудование было в останове"
+            android:text="Осмотр внутренней поверхности проводился"
             app:layout_constraintStart_toStartOf="@+id/textView11"
             app:layout_constraintTop_toTopOf="@+id/editText4" />
 
         <RadioGroup
+            android:id="@+id/osmotr"
             android:layout_width="325dp"
             android:layout_height="43dp"
             android:layout_marginTop="76dp"
@@ -496,13 +501,13 @@
             app:layout_constraintTop_toTopOf="@+id/editText4">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/osmotrDa"
                 android:layout_width="165dp"
                 android:layout_height="43dp"
                 android:text="Да" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/osmotrNet"
                 android:layout_width="160dp"
                 android:layout_height="43dp"
                 android:text="Нет" />
@@ -526,6 +531,41 @@
             android:text="Внести данные"
             app:layout_constraintStart_toStartOf="@+id/editText3"
             app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="165dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:text="Дата вписания экспертов"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="165dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="62dp"
+            android:text="Выбрать дату"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="165dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:text="Дата вписания специалистов"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="165dp"
+            android:layout_height="40dp"
+            android:text="Выбрать дату"
+            app:layout_constraintStart_toStartOf="@+id/textView23"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

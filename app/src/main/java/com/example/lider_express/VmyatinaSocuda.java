@@ -46,12 +46,12 @@ public class VmyatinaSocuda extends AppCompatActivity {
         textDlina=findViewById(R.id.textDlina);
         textGlubina=findViewById(R.id.textGlubina);
 
-        mDBHelper = new DatabaseHelper(this);
-        try {
-            mDBHelper.updateDataBase();
-        } catch (IOException mIOException) {
-            throw new Error("UnableToUpdateDatabase");
-        }
+        mDBHelper = MainActivity.getDBHelper();
+//        try {
+//            mDBHelper.updateDataBase();
+//        } catch (IOException mIOException) {
+//            throw new Error("UnableToUpdateDatabase");
+//        }
         try {
             mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {

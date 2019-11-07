@@ -7,10 +7,16 @@
     <item>Шафиков</item>
     </string-array>
     <string-array name="bnd_defects">
+    <item>Чернышов</item>
+    <item>Михайлов</item>
+    <item>Алик</item>
+    <item>Брат Алика</item>
+</string-array>
+    <string-array name="bnd_irldefects">
         <item>Чернышов</item>
         <item>Михайлов</item>
         <item>Алик</item>
-        <item>Брат Алика</item>
+        <item>Тицкий</item>
     </string-array>
 
 </resources>

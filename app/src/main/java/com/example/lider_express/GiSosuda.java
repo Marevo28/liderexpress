@@ -52,12 +52,12 @@ public class GiSosuda extends AppCompatActivity {
         textDavlenie = (EditText) findViewById(R.id.textDavlenie);
         textTempreture = (EditText) findViewById(R.id.textTempreture);
         textResult = (TextView) findViewById(R.id.textResult);
-        mDBHelper = new DatabaseHelper(this);
-        try {
-            mDBHelper.updateDataBase();
-        } catch (IOException mIOException) {
-            throw new Error("UnableToUpdateDatabase");
-        }
+        mDBHelper = MainActivity.getDBHelper();//new DatabaseHelper(this);
+//        try {
+//            mDBHelper.updateDataBase();
+//        } catch (IOException mIOException) {
+//            throw new Error("UnableToUpdateDatabase");
+//        }
         try {
             mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {

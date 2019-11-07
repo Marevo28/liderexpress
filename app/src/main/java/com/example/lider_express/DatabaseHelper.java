@@ -28,8 +28,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else
             DB_PATH = "/data/data/" + context.getPackageName() + "/databases/";
         this.mContext = context;
-        copyDataBase();
-        this.getReadableDatabase();
+        //copyDataBase();
+//        this.getWritableDatabase();
     }
 
     public void updateDataBase() throws IOException {

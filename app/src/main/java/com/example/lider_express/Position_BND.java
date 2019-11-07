@@ -11,11 +11,11 @@ public class Position_BND {
     public String actshurf;
 
     // Конструктор
-    public Position_BND(String id, String good, String price, String category_name) {
-        this.position = id;
-        this.ispol = good;
-        this.shurf = price;
-        this.actshurf = category_name;
+    public Position_BND(String position, String ispol, String shurf, String actshurf) {
+        this.position = position;
+        this.ispol = ispol;
+        this.shurf = shurf;
+        this.actshurf = actshurf;
     }
 
     // Выводим информацию по продукту

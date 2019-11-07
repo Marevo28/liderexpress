@@ -5,3 +5,17 @@ l
 <app/src/main/java/com/example/lider_express/BNDSvodnaya.java,7\c\7c9e8ae0158e053540542e42ef88e065fdc980b5
 j
 :app/src/main/java/com/example/lider_express/DbHandler.java,7\4\74a021cbcd72beaee301b73ed8e5d374ef3840c3
+q
+Aapp/src/main/java/com/example/lider_express/SittingsActivity.java,f\c\fcb14c07dae8becdd24e23e0c668637da758a73a
+o
+?app/src/main/java/com/example/lider_express/DatabaseHelper.java,5\f\5f65c9aa62f958fbf0a4da1bca3e8fb9c59b9b08
+m
+=app/src/main/java/com/example/lider_express/Position_BND.java,2\e\2eac91099420f7e5e80e815cf1c8f9fd1967709a
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+i
+9app/src/main/java/com/example/lider_express/GiSosuda.java,b\b\bb4d425fbaeb8f45d0be8c67f233226d96d8aee7
+o
+?app/src/main/java/com/example/lider_express/VmyatinaSocuda.java,f\1\f1ccaeea27bce5ef2287dffbac0def0ee953ad2c
+g
+7app/src/main/java/com/example/lider_express/Spisok.java,6\e\6e20316df81c17a14e3b384295638fd13e822efd
