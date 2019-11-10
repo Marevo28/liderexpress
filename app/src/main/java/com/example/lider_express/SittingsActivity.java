@@ -65,7 +65,6 @@ public class SittingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 TextZakazchik.setText(Zakazchik);
-
                 SharedPreferences.Editor prefEditor = mSettings.edit();
                 prefEditor.putString(APP_ZAKAZCHIK, Zakazchik);
                 prefEditor.apply();

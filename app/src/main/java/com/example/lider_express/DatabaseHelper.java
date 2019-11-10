@@ -16,7 +16,7 @@ import java.sql.*;
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static String DB_NAME = "info1.db";
     private static String DB_PATH = "";
-    private static final int DB_VERSION = 20;
+    private static final int DB_VERSION = 21;
     private SQLiteDatabase mDataBase;
     private final Context mContext;
     private boolean mNeedUpdate = true;

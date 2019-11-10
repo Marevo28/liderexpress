@@ -1,16 +1,19 @@
 
-usquid:UselessImportCheck"JRemove this unused import 'com.google.android.material.snackbar.Snackbar'.(ë„ƒŠ8Ù¨–‚å-
-Bsquid:S1659"$Declare "NameTu" on a separate line.(€°³£8ï®Ÿ‚å-
-xsquid:S1450"URemove the "zapros" field and declare it as a local variable in the relevant methods.(”øŠÂùÿÿÿÿ8“”„å-
-Csquid:S1659"%Declare "textceh" on a separate line.(€°³£8ï®Ÿ‚å-
-Fsquid:S1659"#Declare "obekt" on a separate line.(îÁêÊÿÿÿÿÿ8Ù¬„å-
-Fsquid:S1659"#Declare "uprav" on a separate line.(îÁêÊÿÿÿÿÿ8ú×«„å-
-psquid:S00116"QRename this field "NameTu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€°³£8ï®Ÿ‚å-
-jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(ñï¥àıÿÿÿÿ
-Fsquid:S1659"(Declare "texttypetu" on a separate line.(€°³£8ï®Ÿ‚å-
+nsquid:CommentedOutCodeLine:"<This block of commented-out lines of code should be removed.(¿…ê¨ûÿÿÿÿ8Ëû‡¯å-
+Isquid:S1659"+Declare "textskvazhina" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
+Asquid:S1659"#Declare "uprav" on a separate line.(ëÁº8ú×«„å-
 ’squid:UselessImportCheck"bRemove this unused import 'com.google.android.material.floatingactionbutton.FloatingActionButton'.(ôˆêãÿÿÿÿÿ8Ù¨–‚å-
-Dsquid:S1659"!Declare "ceh" on a separate line.(îÁêÊÿÿÿÿÿ8ú×«„å-
-isquid:S2142."FEither re-interrupt this method or rethrow the "InterruptedException".(øôÔ×ûÿÿÿÿ8Ë‰¤„å-
-Gsquid:S1659")Declare "textpostion" on a separate line.(€°³£8ï®Ÿ‚å-
-Esquid:S1659"'Declare "textobekt" on a separate line.(€°³£8ï®Ÿ‚å-
-Isquid:S1659"+Declare "textskvazhina" on a separate line.(€°³£8ï®Ÿ‚å-
+Esquid:S1659"'Declare "textobekt" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
+Fsquid:S1659"(Declare "texttypetu" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
+dsquid:UselessImportCheck"4Remove this unused import 'android.widget.TextView'.(„Ë‚ˆÿÿÿÿÿ8·öö®å-
+?squid:S1659"!Declare "ceh" on a separate line.(ëÁº8ú×«„å-
+Bsquid:S1659"$Declare "NameTu" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
+isquid:S2142E"FEither re-interrupt this method or rethrow the "InterruptedException".(øôÔ×ûÿÿÿÿ8”âğ®å-
+psquid:S00116"QRename this field "NameTu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŞ…õ8ï®Ÿ‚å-
+usquid:UselessImportCheck"JRemove this unused import 'com.google.android.material.snackbar.Snackbar'.(ë„ƒŠ8Ù¨–‚å-
+Gsquid:S1659")Declare "textpostion" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
+isquid:S2142-"FEither re-interrupt this method or rethrow the "InterruptedException".(øôÔ×ûÿÿÿÿ8Ë‰¤„å-
+jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(ñï¥àıÿÿÿÿ
+Csquid:S1659"%Declare "textceh" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
+Asquid:S1659"#Declare "login" on a separate line.(ëÁº8Üûƒ¯å-
+Asquid:S1659"#Declare "obekt" on a separate line.(ëÁº8Ù¬„å-

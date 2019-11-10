@@ -103,6 +103,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     case "Полюс 2019":
                         Zakazchik = "ZayavkaBND";
                         break;
+                     default: Zakazchik = "ZayavkaBND";
+                            break;
                 }
                 position = textpostion.getText().toString();//сквозной номер
                 if (position.length() == 0) {
@@ -114,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     btnPhotoTu.setEnabled(true);
                     btnPhotoDoc.setEnabled(true);
                     btnPhotoKontrol.setEnabled(true);
-                    Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position},null,null,null);
+                    Cursor cursor = mDb.query("ZayavkaBND", null, "POSITION = ?", new String[]{position},null,null,null);
                     cursor.moveToFirst();
                     texttypetu.setText(cursor.getString(2));//Тип оборудования
                     textuprav.setText(cursor.getString(5));// Управление

@@ -1,9 +1,9 @@
 
-8squid:S16439"Use a StringBuilder instead.(Úè²úüÿÿÿÿ
-hsquid:S3008"QRename this field "PEOPLE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ƒÉ¾
-P"squid:SwitchLastCaseIsDefaultCheck"""Add a default case to this switch.(°ý…ø
-jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(êð¶ýÿÿÿÿ
 Msquid:S2696!"6Make the enclosing method "static" or remove this set.(â³ËÎ
+jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(êð¶ýÿÿÿÿ
 isquid:S00117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÖÿÈ
+hsquid:S3008"QRename this field "PEOPLE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ƒÉ¾
 Csquid:S1444",Make this "public static PEOPLE" field final(“ƒÉ¾
+8squid:S16439"Use a StringBuilder instead.(Úè²úüÿÿÿÿ
+P"squid:SwitchLastCaseIsDefaultCheck"""Add a default case to this switch.(°ý…ø
 €"squid:ClassVariableVisibilityCheck"RMake PEOPLE a static final constant or non-public and provide accessors if needed.(“ƒÉ¾

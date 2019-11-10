@@ -25,3 +25,5 @@ k
 ;app/src/main/java/com/example/lider_express/JsonZapros.java,1\7\1775fb9606846b19f20ba034b61c51ffb1d6e8cc
 p
 @app/src/main/java/com/example/lider_express/Synchronization.java,e\1\e13880276d2a6280a9bf6af266269923e7a200fb
+f
+6app/src/main/java/com/example/lider_express/Photo.java,6\b\6b98a2f0b4b599e563413d950a4ecf64d09fde54
