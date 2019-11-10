@@ -1,5 +1,6 @@
 package com.example.lider_express;
 
+import android.app.DatePickerDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +14,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,17 +25,21 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class BNDSvodnaya extends AppCompatActivity {
     public static final String POSITION = "Position";
     public DatabaseHelper mDBHelper;
     public SQLiteDatabase mDb;
     public DbHandler dbHandler;
-    TextView textexperts, textdefek,textirldefek;
-    Button PickExpert, PickDefects,PickIrlDefects, ButZapisat;
-    String ispol, shurf, actshurf, naryadS, position, luk,ostanovka,osmotrel,doki,vedomost,iskluch;
+    Calendar dateAndTime = Calendar.getInstance();
+    TextView textexperts, textdefek, textirldefek, TextDataExp, TextDataSpec;
+    Button PickExpert, PickDefects, PickIrlDefects, ButZapisat, PickDataExp, PickDataSpec;
+    String ispol, shurf, actshurf, naryadS, position, luk, ostanovka, osmotrel, doki, vedomost, iskluch;
     String lampa;
-    RadioGroup ispolnenie, shurfovka, actshurfovka, naryad, luk_laz,ostanov,osmotr,documents,vedomostdef,iskluchenie;
+    RadioGroup ispolnenie, shurfovka, actshurfovka, naryad, luk_laz, ostanov, osmotr, documents, vedomostdef, iskluchenie;
     static final private int PEOPLE = 0;
     Statement stmt = null;
     int ID = 1;
@@ -61,39 +67,37 @@ public class BNDSvodnaya extends AppCompatActivity {
         documents = findViewById(R.id.documents);
         vedomostdef = findViewById(R.id.vedomostdef);
         iskluchenie = findViewById(R.id.iskluchenie);
+        TextDataExp = findViewById(R.id.TextDataExp);
+        PickDataExp = findViewById(R.id.PickDataExp);
+        TextDataSpec = findViewById(R.id.TextDataSpec);
+        PickDataSpec = findViewById(R.id.PickDataSpec);
+
 
         mDBHelper = MainActivity.getDBHelper();// new DatabaseHelper(this);// подклчюение к БД
-//        try {
-//            mDBHelper.updateDataBase();
-//        } catch (IOException mIOException) {
-//            throw new Error("UnableToUpdateDatabase");
-//        }
         try {
             mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
             throw mSQLException;
         }
 
-        try {
-            // Создаем экземпляр по работе с БД
-            dbHandler.getInstance();
-        } catch (java.sql.SQLException e) {
-            e.printStackTrace();
-        }
         Bundle arguments = getIntent().getExtras();
         position = arguments.getString("position");
 
         Cursor cursor = mDb.query("ZayavkaBND", null, "POSITION = ?", new String[]{position}, null, null, null);
         cursor.moveToFirst();
 
+        if (cursor.getString(27) != null) {
+            TextDataExp.setText(cursor.getString(27));
+        }
         if (cursor.getString(28) != null) {
             textexperts.setText(cursor.getString(28));
         }
-
+        if (cursor.getString(29) != null) {
+            TextDataSpec.setText(cursor.getString(29));
+        }
         if (cursor.getString(30) != null) {
             textdefek.setText(cursor.getString(30));
         }
-
         if (cursor.getString(31) != null) {
             ispol = cursor.getString(31);
             switch (ispol) {
@@ -106,7 +110,6 @@ public class BNDSvodnaya extends AppCompatActivity {
                     break;
             }
         }
-
         if (cursor.getString(32) != null) {
             shurf = cursor.getString(32);
             switch (shurf) {
@@ -118,7 +121,6 @@ public class BNDSvodnaya extends AppCompatActivity {
                     break;
             }
         }
-
         if (cursor.getString(33) != null) {
             actshurf = cursor.getString(33);
             switch (actshurf) {
@@ -130,7 +132,6 @@ public class BNDSvodnaya extends AppCompatActivity {
                     break;
             }
         }
-
         if (cursor.getString(35) != null) {
             naryadS = cursor.getString(35);
             // naryad.check("Да".equals(naryadS) ? R.id.naryadDa : R.id.naryadNet);
@@ -140,7 +141,6 @@ public class BNDSvodnaya extends AppCompatActivity {
             else
                 naryad.check(R.id.naryadNet);
         }
-
         if (cursor.getString(34) != null) {
             luk = cursor.getString(34);
             switch (luk) {
@@ -207,7 +207,7 @@ public class BNDSvodnaya extends AppCompatActivity {
                     break;
             }
         }
-
+        // отображаем диалоговое окно для выбора даты
         PickExpert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -236,15 +236,15 @@ public class BNDSvodnaya extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 DebugDB.getAddressLog();
-               ContentValues initialValues = new ContentValues();
-               initialValues.put(POSITION, position);
-               initialValues.put("Ispolnenie", ispol);
-               initialValues.put("Shurfovka", shurf);
-               initialValues.put("Actshurfovka", actshurf);
-               initialValues.put("Naryad", naryadS);
-               long result = mDb.insert("DefectBND", null, initialValues);
-                    Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
-                    displayMessage(getBaseContext(), String.valueOf(defectBND.getCount()));
+                ContentValues initialValues = new ContentValues();
+                initialValues.put(POSITION, position);
+                initialValues.put("Ispolnenie", ispol);
+                initialValues.put("Shurfovka", shurf);
+                initialValues.put("Actshurfovka", actshurf);
+                initialValues.put("Naryad", naryadS);
+                long result = mDb.insert("DefectBND", null, initialValues);
+                Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
+                displayMessage(getBaseContext(), String.valueOf(defectBND.getCount()));
                 //}
             }
         });
@@ -272,7 +272,30 @@ public class BNDSvodnaya extends AppCompatActivity {
             }
         }
     }
+
     private void displayMessage(Context context, String message) {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+    }
+
+    public void setDate(View v) {
+        new DatePickerDialog(BNDSvodnaya.this, d,
+                dateAndTime.get(Calendar.YEAR),
+                dateAndTime.get(Calendar.MONTH),
+                dateAndTime.get(Calendar.DAY_OF_MONTH))
+                .show();
+    }
+
+    DatePickerDialog.OnDateSetListener d = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            dateAndTime.set(Calendar.YEAR, year);
+            dateAndTime.set(Calendar.MONTH, monthOfYear);
+            dateAndTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            setInitialDateTime();
+        }
+    };
+
+    // установка начальных даты и времени
+    private void setInitialDateTime() {
+        TextDataExp.setText(new SimpleDateFormat("dd.MM.yyyy").format(new Date(dateAndTime.getTimeInMillis())));
     }
 }

@@ -19,3 +19,9 @@ o
 ?app/src/main/java/com/example/lider_express/VmyatinaSocuda.java,f\1\f1ccaeea27bce5ef2287dffbac0def0ee953ad2c
 g
 7app/src/main/java/com/example/lider_express/Spisok.java,6\e\6e20316df81c17a14e3b384295638fd13e822efd
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+k
+;app/src/main/java/com/example/lider_express/JsonZapros.java,1\7\1775fb9606846b19f20ba034b61c51ffb1d6e8cc
+p
+@app/src/main/java/com/example/lider_express/Synchronization.java,e\1\e13880276d2a6280a9bf6af266269923e7a200fb

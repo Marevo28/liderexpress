@@ -60,7 +60,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-
         btnpostion = (Button) findViewById(R.id.btnposition);
         btnSvodnaya = (Button) findViewById(R.id.btnSvodnaya);
         btnPhotoTu = (Button) findViewById(R.id.btnPhotoTu);
@@ -75,7 +74,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NameTu = (TextView) findViewById(R.id.NameTu);
         textpostion = (EditText) findViewById(R.id.textpositon);
         mSettings = getSharedPreferences(APP_FILES, MODE_PRIVATE);
-
         btnSvodnaya.setEnabled(false);
         btnKarta.setEnabled(false);
         btnPhotoTu.setEnabled(false);
@@ -84,11 +82,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (mDBHelper == null)
             mDBHelper = new DatabaseHelper(this);// подклчюение к БД
-//        try {
-//        mDBHelper.updateDataBase();
-//        } catch (IOException mIOException) {
-//        throw new Error("UnableToUpdateDatabase");
-//        }
         try {
             mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
@@ -98,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnpostion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String Zakazchik = mSettings.getString(APP_ZAKAZCHIK, "не определено");
                 switch (Zakazchik) {
                     case "Башнефть 2019":
@@ -120,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     btnPhotoTu.setEnabled(true);
                     btnPhotoDoc.setEnabled(true);
                     btnPhotoKontrol.setEnabled(true);
-                    Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position}, null, null, null);
+                    Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position},null,null,null);
                     cursor.moveToFirst();
                     texttypetu.setText(cursor.getString(2));//Тип оборудования
                     textuprav.setText(cursor.getString(5));// Управление
@@ -223,7 +217,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent IntentSittings = new Intent(MainActivity.this, VmyatinaSocuda.class);
             startActivity(IntentSittings);
         } else if (id == R.id.nav_tools) {
-
+            Intent IntentSittings = new Intent(MainActivity.this, Synchronization.class);
+            startActivity(IntentSittings);
         } else if (id == R.id.nav_sittings) {
             Intent IntentSittings = new Intent(this, SittingsActivity.class);
             startActivity(IntentSittings);

@@ -20,4 +20,5 @@
     <string name="title_activity_gi_sosuda">Расчёт ГИ</string>
     <string name="title_activity_vmyatina_socuda">VmyatinaSocuda</string>
     <string name="experts_in_text">Эксперты вписанные в журнал</string>
+    <string name="title_activity_synchronization">Synchronization</string>
 </resources>

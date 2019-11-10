@@ -1,0 +1,6 @@
+
+\squid:S4719."9Replace charset name argument with StandardCharsets.UTF_8(øƒã¯ûÿÿÿÿ8…å¤å-
+psquid:S1192"MDefine a constant instead of duplicating this literal "ĞĞ¨Ğ˜ĞŸĞšĞ" 3 times.(Œÿ²Õûÿÿÿÿ8Æß²ƒå-
+wsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(§ÉòÌ8Æß²ƒå-
+Xsquid:S1161":Add the "@Override" annotation above this method signature(“–ış8Æß²ƒå-
+usquid:S00117;"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çç²‚úÿÿÿÿ8Æß²ƒå-

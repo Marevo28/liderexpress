@@ -1,1 +1,1 @@
-include ':app', ':sqlite-jdbc'
+include ':app', ':sqlite-jdbc', ':apache-httpcomponents-httpclient', ':apache-httpcomponents-httpcore'

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Synchronization"
+    tools:showIn="@layout/activity_synchronization">
+    <Button
+        android:id="@+id/btnposition"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="ОК"
+        android:onClick="onSync"
+        app:layout_constraintStart_toStartOf="@+id/textpositon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textpositon"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textuprav"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="password"
+        app:layout_constraintStart_toStartOf="@+id/texttypetu"
+        app:layout_constraintTop_toBottomOf="@+id/texttypetu" />
+
+    <EditText
+        android:id="@+id/texttypetu"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="16dp"
+        android:text="login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textceh"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="first"
+        app:layout_constraintStart_toStartOf="@+id/texttypetu"
+        app:layout_constraintTop_toBottomOf="@+id/textuprav" />
+
+    <EditText
+        android:id="@+id/textobekt"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="last"
+        app:layout_constraintStart_toStartOf="@+id/texttypetu"
+        app:layout_constraintTop_toBottomOf="@+id/textceh" />
+
+    <EditText
+        android:id="@+id/textskvazhina"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Скважина"
+        app:layout_constraintStart_toStartOf="@+id/texttypetu"
+        app:layout_constraintTop_toBottomOf="@+id/textobekt" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="320dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="72dp"
+        android:text="Отправка данных"
+        android:onClick="onDown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textskvazhina" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
