@@ -1,46 +1,46 @@
 
-Bsquid:S1659%"&Declare "btnKarta" on a separate line.(Ìª¿€ıÿÿÿÿ
-msquid:S1192Œ"IDefine a constant instead of duplicating this literal "position" 4 times.(¶êÀûşÿÿÿÿ8™‹İ´å-
-usquid:S00117_"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±šƒ¿ûÿÿÿÿ8ã†‚å-
-vsquid:S00117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×®ñçûÿÿÿÿ8™‹İ´å-
-Tsquid:S2696T"6Make the enclosing method "static" or remove this set.(Œë8ØÓÒŠä-
-esquid:S1192"FDefine a constant instead of duplicating this literal "Papka" 3 times.(³…˜Í8êÖÛ´å-
-`squid:S1854j"=Remove this useless assignment to local variable "Zakazchik".(ê¡¨éúÿÿÿÿ8Áñ…·å-
-usquid:S2737X"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ8ØÓÒŠä-
-<squid:S1659&"%Declare "textceh" on a separate line.(€°³£
 psquid:S00117~"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆá©†8™‹İ´å-
-lsquid:S00116'"ORename this field "Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ»•Ôúÿÿÿÿ
-vsquid:S00117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶÷Õ÷ùÿÿÿÿ8™‹İ´å-
-Esquid:S1659%")Declare "btnSvodnaya" on a separate line.(Ìª¿€ıÿÿÿÿ
 esquid:MaximumInheritanceDepth""<This class has 6 parents which is greater than 5 authorized.(ƒ¿
-;squid:S1659&"$Declare "NameTu" on a separate line.(€°³£
-ksquid:HiddenFieldCheck_"=Rename "Zakazchik" which hides the field declared at line 40.(±šƒ¿ûÿÿÿÿ8ã†‚å-
+vsquid:S00117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶÷Õ÷ùÿÿÿÿ8™‹İ´å-
+usquid:S00117_"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±šƒ¿ûÿÿÿÿ8ã†‚å-
+vsquid:S00117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å­¹¦ûÿÿÿÿ8™‹İ´å-
+Isquid:S00108ã")Either remove or fill this block of code.(ªå×‚8™‹İ´å-
+<squid:S1659&"%Declare "textceh" on a separate line.(€°³£
+‚"squid:ClassVariableVisibilityCheck$"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ
 >squid:S1659'""Declare "Name" on a separate line.(İ»•Ôúÿÿÿÿ
->squid:S1659&"'Declare "textobekt" on a separate line.(€°³£
-?squid:S1659'"#Declare "Papka" on a separate line.(İ»•Ôúÿÿÿÿ
-qsquid:S00117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÿË8™‹İ´å-
-isquid:S1192b"KDefine a constant instead of duplicating this literal "ZayavkaBND" 4 times.( ¾¾8»ôÜ´å-
-@squid:S1659&")Declare "textpostion" on a separate line.(€°³£
+esquid:UselessImportCheck":Remove this unused import 'android.content.ContentValues'.(å’µŞ8È½ÜŠä-
 [squid:S1854b"=Remove this useless assignment to local variable "Zakazchik".( ¾¾8Áñ…·å-
-`squid:UselessImportCheck "0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8’§ÿå-
-Isquid:S1659%"-Declare "btnPhotoKontrol" on a separate line.(Ìª¿€ıÿÿÿÿ
-vsquid:S00117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™œ“éüÿÿÿÿ8™‹İ´å-
+?squid:S1659&"(Declare "texttypetu" on a separate line.(€°³£
+>squid:S1659&"'Declare "textobekt" on a separate line.(€°³£
+@squid:S1659&")Declare "textpostion" on a separate line.(€°³£
+ksquid:HiddenFieldCheck_"=Rename "Zakazchik" which hides the field declared at line 40.(±šƒ¿ûÿÿÿÿ8ã†‚å-
+msquid:S00116'"PRename this field "Papka" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ»•Ôúÿÿÿÿ
+vsquid:S00117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¨ÍÎÿÿÿÿÿ8™‹İ´å-
+Bsquid:S1659%"&Declare "btnKarta" on a separate line.(Ìª¿€ıÿÿÿÿ
+;squid:S1659&"$Declare "NameTu" on a separate line.(€°³£
+Dsquid:S1659%"(Declare "btnPhotoTu" on a separate line.(Ìª¿€ıÿÿÿÿ
 Usquid:UselessImportCheck
 ",Remove this unused import 'android.net.Uri'.(òêû‘ıÿÿÿÿ
-Isquid:S00108ã")Either remove or fill this block of code.(ªå×‚8™‹İ´å-
-Dsquid:S1659%"(Declare "btnPhotoTu" on a separate line.(Ìª¿€ıÿÿÿÿ
-?squid:S1659&"(Declare "texttypetu" on a separate line.(€°³£
-Bsquid:S1659&"+Declare "textskvazhina" on a separate line.(€°³£
-isquid:S00116&"QRename this field "NameTu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€°³£
-wsquid:S1192"SUse already-defined constant 'APP_ZAKAZCHIK' instead of duplicating its value here.(ŒÃÇÆşÿÿÿÿ8ØÓÒŠä-
-lsquid:S00116("TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÜÕù
-vsquid:S00117Ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íØ¯ùÿÿÿÿ8™‹İ´å-
-‚"squid:ClassVariableVisibilityCheck$"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ
-Esquid:S1659%")Declare "btnPhotoDoc" on a separate line.(Ìª¿€ıÿÿÿÿ
-msquid:S00116'"PRename this field "Papka" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ»•Ôúÿÿÿÿ
-esquid:UselessImportCheck":Remove this unused import 'android.content.ContentValues'.(å’µŞ8È½ÜŠä-
-`squid:S1854e"=Remove this useless assignment to local variable "Zakazchik".(ô’†ïùÿÿÿÿ8Áñ…·å-
 [squid:S1854h"=Remove this useless assignment to local variable "Zakazchik".( ¾¾8Áñ…·å-
-vsquid:S00117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¨ÍÎÿÿÿÿÿ8™‹İ´å-
-vsquid:S00117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å­¹¦ûÿÿÿÿ8™‹İ´å-
+wsquid:S1192"SUse already-defined constant 'APP_ZAKAZCHIK' instead of duplicating its value here.(ŒÃÇÆşÿÿÿÿ8ØÓÒŠä-
+usquid:S2737X"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ8ØÓÒŠä-
+`squid:S1854j"=Remove this useless assignment to local variable "Zakazchik".(ê¡¨éúÿÿÿÿ8Áñ…·å-
+esquid:S1192"FDefine a constant instead of duplicating this literal "Papka" 3 times.(³…˜Í8êÖÛ´å-
+isquid:S1192b"KDefine a constant instead of duplicating this literal "ZayavkaBND" 4 times.( ¾¾8»ôÜ´å-
+vsquid:S00117Ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íØ¯ùÿÿÿÿ8™‹İ´å-
+`squid:UselessImportCheck "0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8’§ÿå-
 qsquid:S00117Û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÌ„í8™‹İ´å-
+?squid:S1659'"#Declare "Papka" on a separate line.(İ»•Ôúÿÿÿÿ
+Esquid:S1659%")Declare "btnSvodnaya" on a separate line.(Ìª¿€ıÿÿÿÿ
+Isquid:S1659%"-Declare "btnPhotoKontrol" on a separate line.(Ìª¿€ıÿÿÿÿ
+qsquid:S00117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÿË8™‹İ´å-
+vsquid:S00117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×®ñçûÿÿÿÿ8™‹İ´å-
+Tsquid:S2696T"6Make the enclosing method "static" or remove this set.(Œë8ØÓÒŠä-
+vsquid:S00117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™œ“éüÿÿÿÿ8™‹İ´å-
+lsquid:S00116("TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÜÕù
+`squid:S1854e"=Remove this useless assignment to local variable "Zakazchik".(ô’†ïùÿÿÿÿ8Áñ…·å-
+msquid:S1192Œ"IDefine a constant instead of duplicating this literal "position" 4 times.(¶êÀûşÿÿÿÿ8™‹İ´å-
+isquid:S00116&"QRename this field "NameTu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€°³£
+lsquid:S00116'"ORename this field "Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ»•Ôúÿÿÿÿ
+Esquid:S1659%")Declare "btnPhotoDoc" on a separate line.(Ìª¿€ıÿÿÿÿ
+Bsquid:S1659&"+Declare "textskvazhina" on a separate line.(€°³£
