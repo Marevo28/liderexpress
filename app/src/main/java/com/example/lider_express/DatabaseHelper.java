@@ -14,9 +14,9 @@ import java.io.OutputStream;
 import java.sql.*;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    private static String DB_NAME = "info1.db";
+    private static String DB_NAME = "info2.db";
     private static String DB_PATH = "";
-    private static final int DB_VERSION = 23;
+    private static final int DB_VERSION = 2;
     private SQLiteDatabase mDataBase;
     private final Context mContext;
     private boolean mNeedUpdate = true;
@@ -28,10 +28,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else
             DB_PATH = "/data/data/" + context.getPackageName() + "/databases/";
         this.mContext = context;
-        //copyDataBase();
-//        this.getWritableDatabase();
+        copyDataBase();
+        this.getReadableDatabase();
     }
-
     public void updateDataBase() throws IOException {
         if (mNeedUpdate) {
             File dbFile = new File(DB_PATH + DB_NAME);
@@ -68,23 +67,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         mOutput.close();
         mInput.close();
     }
+
     public boolean openDataBase() throws SQLException {
         mDataBase = SQLiteDatabase.openDatabase(DB_PATH + DB_NAME, null, SQLiteDatabase.CREATE_IF_NECESSARY);
         return mDataBase != null;
     }
+
     @Override
     public synchronized void close() {
         if (mDataBase != null)
             mDataBase.close();
         super.close();
     }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
+
     }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (newVersion > oldVersion)
             mNeedUpdate = true;
     }
-
 }
