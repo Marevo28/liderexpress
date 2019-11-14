@@ -311,6 +311,9 @@ public class BNDSvodnaya extends AppCompatActivity {
                 long result = mDb.insert("DefectBND", null, initialValues);
                 Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
                 displayMessage(getBaseContext(), String.valueOf(defectBND.getCount()));
+                displayMessage(getBaseContext(), "Записан: "+position);
+                //Intent IntentSittings = new Intent(BNDSvodnaya.this, MainActivity.class);
+                //startActivity(IntentSittings);
 
             }
         });

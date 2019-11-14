@@ -38,9 +38,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     TextView textuprav, textceh, textobekt, texttypetu, textskvazhina, textpostion, NameTu;
     String position, Papka, Name;
     String Zakazchik;
+    int Max,intposition;
     public static final String APP_FILES = "mysettings";
     public static final String APP_ZAKAZCHIK = "Zakazchik";
     SharedPreferences mSettings;
+
 
     public static DatabaseHelper getDBHelper() {
         return mDBHelper;
@@ -80,8 +82,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPhotoDoc.setEnabled(false);
         btnPhotoKontrol.setEnabled(false);
 
-        if (mDBHelper == null)
-            mDBHelper = new DatabaseHelper(this);// подклчюение к БД
+        //if (mDBHelper == null)
+        mDBHelper = new DatabaseHelper(this);// подклчюение к БД
+        try {
+            mDBHelper.updateDataBase();
+        } catch (IOException mSQLException) {
+            throw new Error("Ошибка обновления MainActivity 90 стр.");
+        }
         try {
             mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
@@ -92,7 +99,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
 
+                position = textpostion.getText().toString();//сквозной номер
+                intposition =  Integer.parseInt(position);
                 String Zakazchik = mSettings.getString(APP_ZAKAZCHIK, "не определено");
+
                 switch (Zakazchik) {
                     case "Башнефть 2019":
                         Zakazchik = "ZayavkaBND";
@@ -103,10 +113,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     case "Полюс 2019":
                         Zakazchik = "ZayavkaBND";
                         break;
+                    default: Zakazchik = "Не выбран";
+                        break;
                 }
-                position = textpostion.getText().toString();//сквозной номер
-                if (position.length() == 0) {
+
+                if (Zakazchik == "Не выбран") {
+                    displayMessage(getBaseContext(), "Ахтунг! Выбери объект!");
+                }else if (position.length() == 0) {
+                    Cursor MaxCount = mDb.query(Zakazchik, null, null, null, null, null, null);
+                    Max = MaxCount.getCount();
+                    MaxCount.close();
                     displayMessage(getBaseContext(), "Алло! Ебать! Введи число!");
+                //}else if (intposition>Max) {
+                //    displayMessage(getBaseContext(), "Брат, там столько нет, обновись"); //Разобратся так как надо проверочку на наличие этих данных
                 } else {
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(btnpostion.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);

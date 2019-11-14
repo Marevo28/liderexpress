@@ -23,6 +23,7 @@ public class Synchronization extends AppCompatActivity {
     public DatabaseHelper mDBHelper;
     public SQLiteDatabase mDb;
     Button btnpostion;
+    int n=1;
     EditText textuprav, textceh, textobekt, texttypetu, textskvazhina, textpostion, NameTu;
     String position,stolb27,stolb28,stolb29,stolb30,stolb31,stolb32,stolb33,stolb34,stolb35,stolb36,stolb37,stolb38,stolb39,
             stolb40,stolb41,stolb42,stolb43,stolb44,stolb45,stolb46,stolb47,stolb48,stolb49,stolb50,stolb51,stolb52,stolb53;
@@ -49,26 +50,26 @@ public class Synchronization extends AppCompatActivity {
         }
     }
     public void onSync(View view){
-        position=textpostion.getText().toString();
-        zapros = new JsonZapros();
-        zapros.start(position);
-
-        try{
-            zapros.join();
-        }catch (InterruptedException ie){
-            Log.e("pass 0",ie.getMessage());
-        }
+        Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
+        displayMessage(getBaseContext(), String.valueOf(defectBND.getCount()));
+        defectBND.close();
+       //position=textpostion.getText().toString();
+       //zapros = new JsonZapros();
+       //zapros.start(position);
+       //try{
+       //    zapros.join();
+       //}catch (InterruptedException ie){
+       //    Log.e("pass 0",ie.getMessage());
+       //}
        //uprav = zapros.resname();
        //ceh = zapros.ressurname();
        //obekt = zapros.resmiddlename();
-
        //textuprav.setText(uprav);
        //textceh.setText(ceh);
        //textobekt.setText(obekt);
     }
 
     public void onDown(View view) {
-
 
         Cursor cursor = mDb.query("DefectBND", null, null, null, null, null, null);
         cursor.moveToFirst();
@@ -111,6 +112,8 @@ public class Synchronization extends AppCompatActivity {
             Log.e("pass 0",ie.getMessage());
         }
         displayMessage(getBaseContext(), zapros.reposition());
+        mDb.delete("DefectBND", "_id = " + n, null);
+        n++;
     }
     private void displayMessage(Context context, String message) {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show();

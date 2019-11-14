@@ -1,13 +1,15 @@
 
-nsquid:CommentedOutCodeLine<"<This block of commented-out lines of code should be removed.(®…‘Ãûÿÿÿÿ8‘¿Ö±æ-
-gsquid:S4042&"IUse "java.nio.Files#delete" here for better messages on error conditions.(ø†„æ8‘¿Ö±æ-
-isquid:S3008"RRename this field "DB_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯‹å
-jsquid:S001126"FDefine and throw a dedicated exception instead of using a generic one.(ÿ…Éùÿÿÿÿ8‘¿Ö±æ-
-;squid:S3010"$Remove this assignment of "DB_PATH".(É÷¡
+žsquid:S1186T"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ã€¡u8ñžÁÖæ-
+lsquid:S00100c"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À­«68ñžÁÖæ-
+isquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(êŸµç8™áëÙæ-
+usquid:S3008"RRename this field "DB_NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Ö¿Öùÿÿÿÿ8ñžÁÖæ-
+jsquid:S001129"FDefine and throw a dedicated exception instead of using a generic one.(ÿ…Éùÿÿÿÿ8ñžÁÖæ-
+Bsquid:S3010"$Remove this assignment of "DB_PATH".(É÷¡8ñžÁÖæ-
+psquid:S3008"RRename this field "DB_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯‹å8ñžÁÖæ-
+Bsquid:S3010"$Remove this assignment of "DB_PATH".(¼·žš8ñžÁÖæ-
+rsquid:S00100g"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨ˆ©Æøÿÿÿÿ8ñžÁÖæ-
+nsquid:CommentedOutCodeLine?"<This block of commented-out lines of code should be removed.(®…‘Ãûÿÿÿÿ8ñžÁÖæ-
+qsquid:S2095@"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(«£òöùÿÿÿÿ8ñžÁÖæ-
 X
-squid:S899&";Do something with the "boolean" value returned by "delete".(ø†„æ8‘¿Ö±æ-
-žsquid:S1186T"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ã€¡u8‘¿Ö±æ-
-^squid:UselessImportCheck":Remove this unused import 'android.content.ContentValues'.(å’µÞ
-nsquid:S3008"RRename this field "DB_NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Ö¿Öùÿÿÿÿ
-;squid:S3010"$Remove this assignment of "DB_PATH".(¼·žš
-qsquid:S2095="NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(«£òöùÿÿÿÿ8‘¿Ö±æ-
+squid:S899)";Do something with the "boolean" value returned by "delete".(ø†„æ8ñžÁÖæ-
+gsquid:S4042)"IUse "java.nio.Files#delete" here for better messages on error conditions.(ø†„æ8ñžÁÖæ-

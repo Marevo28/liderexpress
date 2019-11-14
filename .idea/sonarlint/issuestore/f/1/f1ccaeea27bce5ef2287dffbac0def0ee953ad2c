@@ -1,39 +1,39 @@
 
-7squid:S1659" Declare "pi" on a separate line.(ÛÑ¼É
-:squid:S1659"#Declare "drob3" on a separate line.(ÛÑ¼É
-6squid:S1659"Declare "n" on a separate line.(ÛÑ¼É
-=squid:S1659"&Declare "sigmaMAX" on a separate line.(ÛÑ¼É
-Wsquid:S2184]"@Cast one of the operands of this integer division to a "double".(™ı‰
 Asquid:S1659"%Declare "uslovie" on a separate line.(ı¥¥ÿÿÿÿÿ
-Esquid:S1905^")Remove this unnecessary cast to "double".(‹Ü§œÿÿÿÿÿ
-@squid:S1659")Declare "textDiametr" on a separate line.(Ğ°Áù
-:squid:S1659"#Declare "drob4" on a separate line.(ÛÑ¼É
-:squid:S1659"#Declare "drob6" on a separate line.(ÛÑ¼É
-Fsquid:S1659"/Declare "textIspolnitelnoe" on a separate line.(Ğ°Áù
-nsquid:CommentedOutCodeLine2"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8»íúŠä-
-jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(ÄüÕñøÿÿÿÿ
-nsquid:S2737:"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ
-9squid:S1659""Declare "davl" on a separate line.(ÛÑ¼É
-;squid:S1659"Declare "V" on a separate line.(ı¥¥ÿÿÿÿÿ
->squid:S1659""Declare "glub" on a separate line.(Û®ËÁıÿÿÿÿ
+=squid:S1659"&Declare "sigmaMAX" on a separate line.(ÛÑ¼É
 >squid:S1659""Declare "shir" on a separate line.(Û®ËÁıÿÿÿÿ
->squid:S1659"'Declare "textDlina" on a separate line.(Ğ°Áù
-@squid:S1659")Declare "textGlubina" on a separate line.(Ğ°Áù
-Msquid:S1659"1Declare "textDopuskZnachenie" on a separate line.(µ¸¾†ûÿÿÿÿ
-Gsquid:S1659"+Declare "textZnachenie" on a separate line.(µ¸¾†ûÿÿÿÿ
-9squid:S1659""Declare "rnar" on a separate line.(ÛÑ¼É
-@squid:S1659")Declare "textShirina" on a separate line.(Ğ°Áù
-‚"squid:ClassVariableVisibilityCheck"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ
-:squid:S1659"#Declare "drob2" on a separate line.(ÛÑ¼É
-=squid:S1659"!Declare "min" on a separate line.(Û®ËÁıÿÿÿÿ
-?squid:S1659"#Declare "sigma" on a separate line.(ı¥¥ÿÿÿÿÿ
-8squid:S1659"!Declare "psi" on a separate line.(ÛÑ¼É
-:squid:S1659"#Declare "drob5" on a separate line.(ÛÑ¼É
-ˆ"squid:ClassVariableVisibilityCheck"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ
 ?squid:S1659"#Declare "ispol" on a separate line.(Û®ËÁıÿÿÿÿ
->squid:S1659""Declare "diam" on a separate line.(Û®ËÁıÿÿÿÿ
-:squid:S1659"#Declare "drob1" on a separate line.(ÛÑ¼É
-isquid:S00116"LRename this field "V" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı¥¥ÿÿÿÿÿ
-Nsquid:S2589g"7Remove this expression which always evaluates to "true"(Î¦™·
->squid:S1659""Declare "dlin" on a separate line.(Û®ËÁıÿÿÿÿ
+6squid:S1659"Declare "n" on a separate line.(ÛÑ¼É
+@squid:S1659")Declare "textShirina" on a separate line.(Ğ°Áù
+jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(ÄüÕñøÿÿÿÿ
+@squid:S1659")Declare "textGlubina" on a separate line.(Ğ°Áù
+ˆ"squid:ClassVariableVisibilityCheck"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ
+‚"squid:ClassVariableVisibilityCheck"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ
+Gsquid:S1659"+Declare "textZnachenie" on a separate line.(µ¸¾†ûÿÿÿÿ
+:squid:S1659"#Declare "drob3" on a separate line.(ÛÑ¼É
 ;squid:S1659"$Declare "cospsi" on a separate line.(ÛÑ¼É
+:squid:S1659"#Declare "drob5" on a separate line.(ÛÑ¼É
+?squid:S1659"#Declare "sigma" on a separate line.(ı¥¥ÿÿÿÿÿ
+:squid:S1659"#Declare "drob6" on a separate line.(ÛÑ¼É
+>squid:S1659""Declare "glub" on a separate line.(Û®ËÁıÿÿÿÿ
+nsquid:S2737:"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ
+>squid:S1659""Declare "dlin" on a separate line.(Û®ËÁıÿÿÿÿ
+:squid:S1659"#Declare "drob2" on a separate line.(ÛÑ¼É
+;squid:S1659"Declare "V" on a separate line.(ı¥¥ÿÿÿÿÿ
+>squid:S1659"'Declare "textDlina" on a separate line.(Ğ°Áù
+8squid:S1659"!Declare "psi" on a separate line.(ÛÑ¼É
+:squid:S1659"#Declare "drob1" on a separate line.(ÛÑ¼É
+:squid:S1659"#Declare "drob4" on a separate line.(ÛÑ¼É
+9squid:S1659""Declare "davl" on a separate line.(ÛÑ¼É
+isquid:S00116"LRename this field "V" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı¥¥ÿÿÿÿÿ
+9squid:S1659""Declare "rnar" on a separate line.(ÛÑ¼É
+@squid:S1659")Declare "textDiametr" on a separate line.(Ğ°Áù
+Nsquid:S2589g"7Remove this expression which always evaluates to "true"(Î¦™·
+Esquid:S1905^")Remove this unnecessary cast to "double".(‹Ü§œÿÿÿÿÿ
+Msquid:S1659"1Declare "textDopuskZnachenie" on a separate line.(µ¸¾†ûÿÿÿÿ
+>squid:S1659""Declare "diam" on a separate line.(Û®ËÁıÿÿÿÿ
+Fsquid:S1659"/Declare "textIspolnitelnoe" on a separate line.(Ğ°Áù
+7squid:S1659" Declare "pi" on a separate line.(ÛÑ¼É
+nsquid:CommentedOutCodeLine2"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8»íúŠä-
+Wsquid:S2184]"@Cast one of the operands of this integer division to a "double".(™ı‰
+=squid:S1659"!Declare "min" on a separate line.(Û®ËÁıÿÿÿÿ
