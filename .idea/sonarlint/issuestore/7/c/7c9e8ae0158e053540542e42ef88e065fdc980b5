@@ -1,107 +1,107 @@
 
-Hsquid:S1659)"%Declare "irlspec" on a separate line.(”‚Øúÿÿÿÿ8´óÔ²å-
-Esquid:S1659)""Declare "note" on a separate line.(”‚Øúÿÿÿÿ8«‰¢´å-
-zsquid:S00116'"[Rename this field "TextDataActNegot" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª“¡‰8óÇÅ³å-
-^squid:UselessImportCheck"3Remove this unused import 'java.sql.DriverManager'.(“£°8£ˆƒä-
-Msquid:S1659)"*Declare "konostanovka" on a separate line.(”‚Øúÿÿÿÿ8ªÁÎ²å-
-]"squid:SwitchLastCaseIsDefaultCheck¨""Add a default case to this switch.(ıÈÀ–ÿÿÿÿÿ8ªÁÎ²å-
-osquid:S1301‰"KReplace this "switch" statement by "if" statements to increase readability.(û¼±ÿşÿÿÿÿ8çõ‘°å-
-jsquid:CommentedOutCodeLineŸ"<This block of commented-out lines of code should be removed.(àó‹8ªÁÎ²å-
-usquid:S00116("VRename this field "PickDataExp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å·‚†8í³šå-
-osquid:S1301”"KReplace this "switch" statement by "if" statements to increase readability.(Öç·™ÿÿÿÿÿ8çõ‘°å-
-Fsquid:S1659)"#Declare "shurf" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
-xsquid:S00116'"YRename this field "TextKonOstanov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª“¡‰8ªÁÎ²å-
-‰"squid:ClassVariableVisibilityCheck$"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ8í³šå-
-vsquid:S00117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùƒ¨‚øÿÿÿÿ8çõ‘°å-
-Isquid:S1659)"&Declare "actshurf" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
-Msquid:S1659+"*Declare "actshurfovka" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
-[squid:UselessImportCheck"0Remove this unused import 'java.sql.Connection'.(¥ËôÖ8£ˆƒä-
-X"squid:SwitchLastCaseIsDefaultCheckğ""Add a default case to this switch.(ÿîã8çõ‘°å-
-Hsquid:S1659'"*Declare "textirldefek" on a separate line.(ª“¡‰8í³šå-
-Psquid:S1659("2Declare "PickDataNegotovnosti" on a separate line.(å·‚†8‹İÄ³å-
-usquid:S00116'"VRename this field "TextDataExp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª“¡‰8í³šå-
-Jsquid:S1659'",Declare "TextKonOstanov" on a separate line.(ª“¡‰8ªÁÎ²å-
-Jsquid:S1659+"'Declare "documents" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
-vsquid:S00116("WRename this field "PickDataSpec" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å·‚†8í³šå-
-Isquid:S1659)"&Declare "dataspec" on a separate line.(”‚Øúÿÿÿÿ8›¥“°å-
-]"squid:SwitchLastCaseIsDefaultCheck‰""Add a default case to this switch.(û¼±ÿşÿÿÿÿ8çõ‘°å-
-\"squid:SwitchLastCaseIsDefaultChecks""Add a default case to this switch.(Ğ¬ÊÀşÿÿÿÿ8çõ‘°å-
-"squid:ClassVariableVisibilityCheck#"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ8í³šå-
-Gsquid:S1659)"$Declare "datank" on a separate line.(”‚Øúÿÿÿÿ8óÃ´å-
-Hsquid:S1659+"%Declare "luk_laz" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
-vsquid:S00117’"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùƒ¨‚øÿÿÿÿ8çõ‘°å-
-zsquid:S00116&"VRename this field "TextDefects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÙØ¬øÿÿÿÿ8òÌ˜´å-
-Isquid:S1659)"&Declare "prichina" on a separate line.(”‚Øúÿÿÿÿ8º½¾´å-
-xsquid:S00116("YRename this field "PickIrlDefects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å·‚†8í³šå-
-Lsquid:S1659+")Declare "vedomostdef" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
-Hsquid:S1659)"%Declare "defects" on a separate line.(”‚Øúÿÿÿÿ8¹‰š´å-
-`squid:HiddenFieldCheckÇ"6Rename "a" which hides the field declared at line 355.(ã‹Í8¤ã‡³å-
-dsquid:UselessImportCheck"4Remove this unused import 'com.amitshekhar.DebugDB'.(²€ñ¨ûÿÿÿÿ8åæš³å-
-jsquid:S1301á"KReplace this "switch" statement by "if" statements to increase readability.(ˆ‚¤À8çõ‘°å-
-Isquid:S1481·"+Remove this unused "result" local variable.(©Æ°g8çõ‘°å-
-Hsquid:S1659)"%Declare "naryadS" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
-Jsquid:S1659)"'Declare "ostanovka" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
-osquid:S1301Ò"KReplace this "switch" statement by "if" statements to increase readability.(®Ù›Äûÿÿÿÿ8çõ‘°å-
-Isquid:S1659&"&Declare "TextNote" on a separate line.(ŸÙØ¬øÿÿÿÿ8¼Ò¢´å-
-Hsquid:S1659+"%Declare "ostanov" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
-usquid:S37761"RRefactor this method to reduce its Cognitive Complexity from 44 to the 15 allowed.(¨Œşÿÿÿÿ8í³šå-
-Esquid:S1659'"'Declare "textdefek" on a separate line.(ª“¡‰8í³šå-
-wsquid:S00116&"SRename this field "TextNote" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÙØ¬øÿÿÿÿ8¼Ò¢´å-
+ysquid:S00116'"ZRename this field "TextNachOstanov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª“¡‰8ªÁÎ²å-
 Gsquid:S1659+"$Declare "osmotr" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
-vsquid:S00116'"WRename this field "TextDataSpec" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª“¡‰8í³šå-
-Jsquid:S1659(",Declare "PickIrlDefects" on a separate line.(å·‚†8í³šå-
+jsquid:S1192è"KDefine a constant instead of duplicating this literal "dd.MM.yyyy" 6 times.(¬İİ²8©”¢³å-
+Hsquid:S1659)"%Declare "irlspec" on a separate line.(”‚Øúÿÿÿÿ8´óÔ²å-
+Fsquid:S1659)"#Declare "ispol" on a separate line.(”‚Øúÿÿÿÿ8ÙÌİ¯å-
+Fsquid:S1659)"#Declare "shurf" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
+Isquid:S1659)"&Declare "osmotrel" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
+Lsquid:S1659+")Declare "vedomostdef" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
+usquid:S00116("VRename this field "PickDefects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å·‚†8í³šå-
 tsquid:S00116("URename this field "ButZapisat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å·‚†8í³šå-
-ksquid:S1192Ê"GDefine a constant instead of duplicating this literal "select" 3 times.(İ¾ú÷şÿÿÿÿ8çõ‘°å-
-Fsquid:S1659("(Declare "ButZapisat" on a separate line.(å·‚†8í³šå-
-Hsquid:S1659'"*Declare "TextDataSpec" on a separate line.(ª“¡‰8í³šå-
-Ksquid:S1659'"-Declare "TextNachOstanov" on a separate line.(ª“¡‰8ªÁÎ²å-
-Gsquid:S1659(")Declare "PickDefects" on a separate line.(å·‚†8í³šå-
-Qsquid:S1659&".Declare "TextPrichinaIskl" on a separate line.(ŸÙØ¬øÿÿÿÿ8–—¼´å-
+Isquid:S1481·"+Remove this unused "result" local variable.(©Æ°g8çõ‘°å-
+osquid:S1301»"KReplace this "switch" statement by "if" statements to increase readability.(¸­şÿÿÿÿ8çõ‘°å-
+Jsquid:S1659+"'Declare "documents" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
+[squid:UselessImportCheck"0Remove this unused import 'java.sql.Connection'.(¥ËôÖ8£ˆƒä-
+tsquid:S00116'"URename this field "TextDataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª“¡‰8£øû³å-
+usquid:S37761"RRefactor this method to reduce its Cognitive Complexity from 44 to the 15 allowed.(¨Œşÿÿÿÿ8í³šå-
+Esquid:S1659)""Declare "doki" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
 X"squid:SwitchLastCaseIsDefaultCheckÈ""Add a default case to this switch.(ƒ“¯Œ8çõ‘°å-
+]"squid:SwitchLastCaseIsDefaultCheck”""Add a default case to this switch.(Öç·™ÿÿÿÿÿ8çõ‘°å-
+Hsquid:S1659'"*Declare "TextDataSpec" on a separate line.(ª“¡‰8í³šå-
+vsquid:S00117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùƒ¨‚øÿÿÿÿ8çõ‘°å-
+Esquid:S1659'"'Declare "textdefek" on a separate line.(ª“¡‰8í³šå-
+Isquid:S1659)"&Declare "dataspec" on a separate line.(”‚Øúÿÿÿÿ8›¥“°å-
+Jsquid:S1659(",Declare "PickIrlDefects" on a separate line.(å·‚†8í³šå-
+Qsquid:S1659)".Declare "datanegotovnosti" on a separate line.(”‚Øúÿÿÿÿ8©ÜË³å-
+Gsquid:S1659)"$Declare "datank" on a separate line.(”‚Øúÿÿÿÿ8óÃ´å-
+Fsquid:S1659'"(Declare "TextDataNK" on a separate line.(ª“¡‰8£øû³å-
+^squid:UselessImportCheck"3Remove this unused import 'java.sql.DriverManager'.(“£°8£ˆƒä-
+jsquid:CommentedOutCodeLineŸ"<This block of commented-out lines of code should be removed.(àó‹8ªÁÎ²å-
+lsquid:S00116."MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯­ì›8í³šå-
+Msquid:S1659+"*Declare "actshurfovka" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
+xsquid:S00116'"YRename this field "TextKonOstanov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª“¡‰8ªÁÎ²å-
+Ksquid:S1659'"-Declare "TextNachOstanov" on a separate line.(ª“¡‰8ªÁÎ²å-
+squid:S00116&"[Rename this field "TextPrichinaIskl" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÙØ¬øÿÿÿÿ8–—¼´å-
+osquid:S1301”"KReplace this "switch" statement by "if" statements to increase readability.(Öç·™ÿÿÿÿÿ8çõ‘°å-
 jsquid:S1301ğ"KReplace this "switch" statement by "if" statements to increase readability.(ÿîã8çõ‘°å-
 Hsquid:S1659("*Declare "PickDataSpec" on a separate line.(å·‚†8í³šå-
-]"squid:SwitchLastCaseIsDefaultCheck»""Add a default case to this switch.(¸­şÿÿÿÿ8çõ‘°å-
-Gsquid:S1659'")Declare "TextDataExp" on a separate line.(ª“¡‰8í³šå-
-Qsquid:S1659)".Declare "datanegotovnosti" on a separate line.(”‚Øúÿÿÿÿ8©ÜË³å-
-~squid:S00116("_Rename this field "PickDataNegotovnosti" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å·‚†8‹İÄ³å-
-ysquid:S00116'"ZRename this field "TextNachOstanov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª“¡‰8ªÁÎ²å-
-Esquid:S1659)""Declare "spec" on a separate line.(”‚Øúÿÿÿÿ8›¥“°å-
-Isquid:S1659)"&Declare "osmotrel" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
-isquid:S1301~"KReplace this "switch" statement by "if" statements to increase readability.(š¤ıÀ8çõ‘°å-
-Gsquid:S1659(")Declare "PickDataExp" on a separate line.(å·‚†8í³šå-
-squid:S00116&"[Rename this field "TextPrichinaIskl" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÙØ¬øÿÿÿÿ8–—¼´å-
-vsquid:S00117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùƒ¨‚øÿÿÿÿ8çõ‘°å-
-osquid:S1301»"KReplace this "switch" statement by "if" statements to increase readability.(¸­şÿÿÿÿ8çõ‘°å-
-ksquid:S1192ƒ"GDefine a constant instead of duplicating this literal "people" 4 times.(¹¡èŸøÿÿÿÿ8çõ‘°å-
-Gsquid:S1659+"$Declare "naryad" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
-Jsquid:S1659+"'Declare "shurfovka" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
 Dsquid:S1659)"!Declare "luk" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
-nsquid:S1301s"KReplace this "switch" statement by "if" statements to increase readability.(Ğ¬ÊÀşÿÿÿÿ8çõ‘°å-
-Lsquid:S1659+")Declare "iskluchenie" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
-Isquid:S1659)"&Declare "position" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
-vsquid:S00116+"RRename this field "luk_laz" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ı¨Êøÿÿÿÿ8í³šå-
+Hsquid:S1659)"%Declare "defects" on a separate line.(”‚Øúÿÿÿÿ8¹‰š´å-
 vsquid:ModifiersOrderCheck,"EReorder the modifiers to comply with the Java Language Specification.(Ú›†ùûÿÿÿÿ8í³šå-
-]"squid:SwitchLastCaseIsDefaultCheck”""Add a default case to this switch.(Öç·™ÿÿÿÿÿ8çõ‘°å-
-Isquid:S1659)"&Declare "vedomost" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
-usquid:S00116("VRename this field "PickDefects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å·‚†8í³šå-
-qsquid:MaximumInheritanceDepth!"<This class has 6 parents which is greater than 5 authorized.(¨Å¿ıÿÿÿÿ8í³šå-
-Fsquid:S1659'"(Declare "TextDataNK" on a separate line.(ª“¡‰8£øû³å-
-Nsquid:S1659)"+Declare "nachostanovka" on a separate line.(”‚Øúÿÿÿÿ8ªÁÎ²å-
-Hsquid:S1659)"%Declare "experts" on a separate line.(”‚Øúÿÿÿÿ8Î·Ş¯å-
-Šsquid:S1845)"gRename field "position" to prevent any misunderstanding/clash with field "POSITION" defined on line 34.(”‚Øúÿÿÿÿ8í³šå-
-Hsquid:S1659)"%Declare "iskluch" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
-jsquid:S1192è"KDefine a constant instead of duplicating this literal "dd.MM.yyyy" 6 times.(¬İİ²8©”¢³å-
-lsquid:S00116."MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯­ì›8í³šå-
-Esquid:S1659)""Declare "doki" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
+Jsquid:S1659'",Declare "TextKonOstanov" on a separate line.(ª“¡‰8ªÁÎ²å-
+Jsquid:S1659+"'Declare "shurfovka" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
+vsquid:S00116'"WRename this field "TextDataSpec" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª“¡‰8í³šå-
 osquid:S1301¨"KReplace this "switch" statement by "if" statements to increase readability.(ıÈÀ–ÿÿÿÿÿ8ªÁÎ²å-
-]"squid:SwitchLastCaseIsDefaultCheckÒ""Add a default case to this switch.(®Ù›Äûÿÿÿÿ8çõ‘°å-
-Xsquid:S1854·":Remove this useless assignment to local variable "result".(©Æ°g8çõ‘°å-
-W"squid:SwitchLastCaseIsDefaultCheck~""Add a default case to this switch.(š¤ıÀ8çõ‘°å-
-Fsquid:S1659)"#Declare "ispol" on a separate line.(”‚Øúÿÿÿÿ8ÙÌİ¯å-
-tsquid:S00116("URename this field "PickExpert" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å·‚†8í³šå-
+~squid:S00116("_Rename this field "PickDataNegotovnosti" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å·‚†8‹İÄ³å-
+X"squid:SwitchLastCaseIsDefaultCheckğ""Add a default case to this switch.(ÿîã8çõ‘°å-
 Lsquid:S1659'".Declare "TextDataActNegot" on a separate line.(ª“¡‰8óÇÅ³å-
+osquid:S1301Ò"KReplace this "switch" statement by "if" statements to increase readability.(®Ù›Äûÿÿÿÿ8çõ‘°å-
+Isquid:S1659)"&Declare "prichina" on a separate line.(”‚Øúÿÿÿÿ8º½¾´å-
+Esquid:S1659)""Declare "spec" on a separate line.(”‚Øúÿÿÿÿ8›¥“°å-
+Xsquid:S1854·":Remove this useless assignment to local variable "result".(©Æ°g8çõ‘°å-
+zsquid:S00116'"[Rename this field "TextDataActNegot" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª“¡‰8óÇÅ³å-
+Jsquid:S1659)"'Declare "ostanovka" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
 X"squid:SwitchLastCaseIsDefaultChecká""Add a default case to this switch.(ˆ‚¤À8çõ‘°å-
-tsquid:S00116'"URename this field "TextDataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª“¡‰8£øû³å-
-usquid:S2737X"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ8í³šå-
-`squid:UselessImportCheck"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8í³šå-
+dsquid:UselessImportCheck"4Remove this unused import 'com.amitshekhar.DebugDB'.(²€ñ¨ûÿÿÿÿ8åæš³å-
+Nsquid:S1659)"+Declare "nachostanovka" on a separate line.(”‚Øúÿÿÿÿ8ªÁÎ²å-
+Gsquid:S1659(")Declare "PickDataExp" on a separate line.(å·‚†8í³šå-
+]"squid:SwitchLastCaseIsDefaultCheck¨""Add a default case to this switch.(ıÈÀ–ÿÿÿÿÿ8ªÁÎ²å-
+usquid:S00116'"VRename this field "TextDataExp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª“¡‰8í³šå-
+"squid:ClassVariableVisibilityCheck#"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ8í³šå-
+Hsquid:S1659+"%Declare "luk_laz" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
+Isquid:S1659&"&Declare "TextNote" on a separate line.(ŸÙØ¬øÿÿÿÿ8¼Ò¢´å-
+vsquid:S00116("WRename this field "PickDataSpec" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å·‚†8í³šå-
+Psquid:S1659("2Declare "PickDataNegotovnosti" on a separate line.(å·‚†8‹İÄ³å-
+Esquid:S1659)""Declare "note" on a separate line.(”‚Øúÿÿÿÿ8«‰¢´å-
+osquid:S1301‰"KReplace this "switch" statement by "if" statements to increase readability.(û¼±ÿşÿÿÿÿ8çõ‘°å-
+Fsquid:S1659("(Declare "ButZapisat" on a separate line.(å·‚†8í³šå-
+\"squid:SwitchLastCaseIsDefaultChecks""Add a default case to this switch.(Ğ¬ÊÀşÿÿÿÿ8çõ‘°å-
+Hsquid:S1659)"%Declare "naryadS" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
+Hsquid:S1659+"%Declare "ostanov" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
+Šsquid:S1845)"gRename field "position" to prevent any misunderstanding/clash with field "POSITION" defined on line 34.(”‚Øúÿÿÿÿ8í³šå-
+Gsquid:S1659'")Declare "TextDataExp" on a separate line.(ª“¡‰8í³šå-
+Hsquid:S1659)"%Declare "experts" on a separate line.(”‚Øúÿÿÿÿ8Î·Ş¯å-
 osquid:CommentedOutCodeLine»"<This block of commented-out lines of code should be removed.(›ôª¨ûÿÿÿÿ8‹÷¢Ùæ-
+vsquid:S00116+"RRename this field "luk_laz" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ı¨Êøÿÿÿÿ8í³šå-
+vsquid:S00117’"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùƒ¨‚øÿÿÿÿ8çõ‘°å-
+ksquid:S1192Ê"GDefine a constant instead of duplicating this literal "select" 3 times.(İ¾ú÷şÿÿÿÿ8çõ‘°å-
+qsquid:MaximumInheritanceDepth!"<This class has 6 parents which is greater than 5 authorized.(¨Å¿ıÿÿÿÿ8í³šå-
+]"squid:SwitchLastCaseIsDefaultCheckÒ""Add a default case to this switch.(®Ù›Äûÿÿÿÿ8çõ‘°å-
+nsquid:S1301s"KReplace this "switch" statement by "if" statements to increase readability.(Ğ¬ÊÀşÿÿÿÿ8çõ‘°å-
+Isquid:S1659)"&Declare "actshurf" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
+jsquid:S1301á"KReplace this "switch" statement by "if" statements to increase readability.(ˆ‚¤À8çõ‘°å-
+‰"squid:ClassVariableVisibilityCheck$"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ8í³šå-
+Isquid:S1659)"&Declare "position" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
+Gsquid:S1659+"$Declare "naryad" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-
+usquid:S2737X"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ8í³šå-
+xsquid:S00116("YRename this field "PickIrlDefects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å·‚†8í³šå-
+vsquid:S00117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùƒ¨‚øÿÿÿÿ8çõ‘°å-
+`squid:UselessImportCheck"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8í³šå-
+]"squid:SwitchLastCaseIsDefaultCheck‰""Add a default case to this switch.(û¼±ÿşÿÿÿÿ8çõ‘°å-
+]"squid:SwitchLastCaseIsDefaultCheck»""Add a default case to this switch.(¸­şÿÿÿÿ8çõ‘°å-
+`squid:HiddenFieldCheckÇ"6Rename "a" which hides the field declared at line 355.(ã‹Í8¤ã‡³å-
+Isquid:S1659)"&Declare "vedomost" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
+Gsquid:S1659(")Declare "PickDefects" on a separate line.(å·‚†8í³šå-
+Hsquid:S1659)"%Declare "iskluch" on a separate line.(”‚Øúÿÿÿÿ8í³šå-
+usquid:S00116("VRename this field "PickDataExp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å·‚†8í³šå-
+Hsquid:S1659'"*Declare "textirldefek" on a separate line.(ª“¡‰8í³šå-
+wsquid:S00116&"SRename this field "TextNote" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÙØ¬øÿÿÿÿ8¼Ò¢´å-
+Msquid:S1659)"*Declare "konostanovka" on a separate line.(”‚Øúÿÿÿÿ8ªÁÎ²å-
+tsquid:S00116("URename this field "PickExpert" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å·‚†8í³šå-
+Qsquid:S1659&".Declare "TextPrichinaIskl" on a separate line.(ŸÙØ¬øÿÿÿÿ8–—¼´å-
+isquid:S1301~"KReplace this "switch" statement by "if" statements to increase readability.(š¤ıÀ8çõ‘°å-
+zsquid:S00116&"VRename this field "TextDefects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÙØ¬øÿÿÿÿ8òÌ˜´å-
+ksquid:S1192ƒ"GDefine a constant instead of duplicating this literal "people" 4 times.(¹¡èŸøÿÿÿÿ8çõ‘°å-
+W"squid:SwitchLastCaseIsDefaultCheck~""Add a default case to this switch.(š¤ıÀ8çõ‘°å-
+Lsquid:S1659+")Declare "iskluchenie" on a separate line.(£ı¨Êøÿÿÿÿ8í³šå-

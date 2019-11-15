@@ -1,48 +1,48 @@
 
+Csquid:S1659"%Declare "stolb42" on a separate line.(”âÅÏ8€­Çæ-
 Hsquid:S1659"%Declare "stolb37" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
-Csquid:S1659"%Declare "textceh" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
-Hsquid:S1659"%Declare "stolb32" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
-Hsquid:S1659"%Declare "stolb39" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
-Csquid:S1659"%Declare "stolb46" on a separate line.(”âÅÏ8€­Çæ-
-jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(ñï¥àıÿÿÿÿ
-hsquid:S11925"JDefine a constant instead of duplicating this literal "DefectBND" 3 times.(Ó•ÑË8ŒÑöØæ-
-’squid:UselessImportCheck	"bRemove this unused import 'com.google.android.material.floatingactionbutton.FloatingActionButton'.(ôˆêãÿÿÿÿÿ8Ù¨–‚å-
-Gsquid:S1659")Declare "textpostion" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
-Csquid:S1659"%Declare "stolb51" on a separate line.(”âÅÏ8€­Çæ-
+usquid:S27371"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ8‘³äÿå-
 dsquid:UselessImportCheck"4Remove this unused import 'android.widget.TextView'.(„Ë‚ˆÿÿÿÿÿ8·öö®å-
 Csquid:S1659"%Declare "stolb43" on a separate line.(”âÅÏ8€­Çæ-
-"squid:ClassVariableVisibilityCheck"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ8À¾åÿå-
-Hsquid:S1659"%Declare "stolb35" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
-Csquid:S1659"%Declare "stolb40" on a separate line.(”âÅÏ8€­Çæ-
-psquid:S3776H"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(âÀÑô8³ïê€æ-
+psquid:S00116"QRename this field "NameTu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŞ…õ8ï®Ÿ‚å-
+’squid:UselessImportCheck	"bRemove this unused import 'com.google.android.material.floatingactionbutton.FloatingActionButton'.(ôˆêãÿÿÿÿÿ8Ù¨–‚å-
 Csquid:S1659"%Declare "stolb52" on a separate line.(”âÅÏ8€­Çæ-
-usquid:S27371"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ8‘³äÿå-
-Bsquid:S1659"$Declare "NameTu" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
-Hsquid:S1659"%Declare "stolb27" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
 Hsquid:S1659"%Declare "stolb36" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
-isquid:S2142o"FEither re-interrupt this method or rethrow the "InterruptedException".(øôÔ×ûÿÿÿÿ8”âğ®å-
-Csquid:S1659"%Declare "stolb45" on a separate line.(”âÅÏ8€­Çæ-
-Csquid:S1659"%Declare "stolb50" on a separate line.(”âÅÏ8€­Çæ-
-Hsquid:S1659"%Declare "stolb29" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
-Hsquid:S1659"%Declare "stolb31" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
-Csquid:S1659"%Declare "stolb42" on a separate line.(”âÅÏ8€­Çæ-
-nsquid:CommentedOutCodeLine8"<This block of commented-out lines of code should be removed.(¿…ê¨ûÿÿÿÿ8ÿşøØæ-
-Csquid:S1659"%Declare "stolb49" on a separate line.(”âÅÏ8€­Çæ-
-Csquid:S1659"%Declare "stolb48" on a separate line.(”âÅÏ8€­Çæ-
-Esquid:S1659"'Declare "textobekt" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
-Hsquid:S1659"%Declare "stolb28" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
-Hsquid:S1659"%Declare "stolb38" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
+Csquid:S1659"%Declare "stolb46" on a separate line.(”âÅÏ8€­Çæ-
+psquid:S3776H"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(âÀÑô8³ïê€æ-
+Csquid:S1659"%Declare "stolb40" on a separate line.(”âÅÏ8€­Çæ-
+‰"squid:ClassVariableVisibilityCheck"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ8À¾åÿå-
 usquid:UselessImportCheck
 "JRemove this unused import 'com.google.android.material.snackbar.Snackbar'.(ë„ƒŠ8Ù¨–‚å-
-Fsquid:S1659"(Declare "texttypetu" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
-psquid:S00116"QRename this field "NameTu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŞ…õ8ï®Ÿ‚å-
-Csquid:S1659"%Declare "stolb41" on a separate line.(”âÅÏ8€­Çæ-
-Hsquid:S1659"%Declare "stolb34" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
+Hsquid:S1659"%Declare "stolb27" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
+jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(ñï¥àıÿÿÿÿ
 Hsquid:S1659"%Declare "stolb30" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
+Csquid:S1659"%Declare "stolb51" on a separate line.(”âÅÏ8€­Çæ-
+Csquid:S1659"%Declare "stolb49" on a separate line.(”âÅÏ8€­Çæ-
+Csquid:S1659"%Declare "textceh" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
 Hsquid:S1659"%Declare "stolb33" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
-Isquid:S1659"+Declare "textskvazhina" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
-xsquid:S1450"URemove the "zapros" field and declare it as a local variable in the relevant methods.(”øŠÂùÿÿÿÿ8ÿşøØæ-
+Hsquid:S1659"%Declare "stolb34" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
+Csquid:S1659"%Declare "stolb50" on a separate line.(”âÅÏ8€­Çæ-
+Gsquid:S1659")Declare "textpostion" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
+Hsquid:S1659"%Declare "stolb39" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
+Csquid:S1659"%Declare "stolb45" on a separate line.(”âÅÏ8€­Çæ-
+Fsquid:S1659"(Declare "texttypetu" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
+Hsquid:S1659"%Declare "stolb35" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
 Csquid:S1659"%Declare "stolb44" on a separate line.(”âÅÏ8€­Çæ-
+Esquid:S1659"'Declare "textobekt" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
+Hsquid:S1659"%Declare "stolb28" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
+hsquid:S11925"JDefine a constant instead of duplicating this literal "DefectBND" 3 times.(Ó•ÑË8ŒÑöØæ-
+Hsquid:S1659"%Declare "stolb38" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
+Csquid:S1659"%Declare "stolb41" on a separate line.(”âÅÏ8€­Çæ-
+isquid:S2142o"FEither re-interrupt this method or rethrow the "InterruptedException".(øôÔ×ûÿÿÿÿ8”âğ®å-
 Csquid:S1659"%Declare "stolb47" on a separate line.(”âÅÏ8€­Çæ-
+Csquid:S1659"%Declare "stolb48" on a separate line.(”âÅÏ8€­Çæ-
+Hsquid:S1659"%Declare "stolb31" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
+Hsquid:S1659"%Declare "stolb32" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
+nsquid:CommentedOutCodeLine8"<This block of commented-out lines of code should be removed.(¿…ê¨ûÿÿÿÿ8ÿşøØæ-
+"squid:ClassVariableVisibilityCheck"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ8À¾åÿå-
+Isquid:S1659"+Declare "textskvazhina" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
 Csquid:S1659"%Declare "stolb53" on a separate line.(”âÅÏ8€­Çæ-
-‰"squid:ClassVariableVisibilityCheck"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ8À¾åÿå-
+Hsquid:S1659"%Declare "stolb29" on a separate line.(­¸•ÿÿÿÿÿ8€­Çæ-
+Bsquid:S1659"$Declare "NameTu" on a separate line.(ÃŞ…õ8ï®Ÿ‚å-
+xsquid:S1450"URemove the "zapros" field and declare it as a local variable in the relevant methods.(”øŠÂùÿÿÿÿ8ÿşøØæ-
