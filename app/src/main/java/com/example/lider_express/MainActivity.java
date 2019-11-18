@@ -82,9 +82,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPhotoDoc.setEnabled(false);
         btnPhotoKontrol.setEnabled(false);
 
-        if (mDBHelper == null) {
+
             mDBHelper = new DatabaseHelper(this);    // подклчюение к БД
-        }
 
         try {
             mDBHelper.updateDataBase();
@@ -93,16 +92,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         try {
-            mDb = mDBHelper.getReadableDatabase();
-        } catch (SQLException mSQLException) {
-            throw mSQLException;
-        }
-
-        /**     try {
             mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
             throw mSQLException;
-        } **/ 
+        }
 
         btnpostion.setOnClickListener(new View.OnClickListener() {
             @Override

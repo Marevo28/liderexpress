@@ -73,6 +73,8 @@ public class Photo extends AppCompatActivity {
     private Handler mBackgroundHandler;
     private HandlerThread mBackgroundThread;
 
+
+
     CameraDevice.StateCallback stateCallback = new CameraDevice.StateCallback() {
         @Override
         public void onOpened(@NonNull CameraDevice camera) {
@@ -83,6 +85,7 @@ public class Photo extends AppCompatActivity {
         @Override
         public void onDisconnected(@NonNull CameraDevice cameraDevice) {
             cameraDevice.close();
+            cameraDevice = null;
         }
 
         @Override
@@ -91,6 +94,7 @@ public class Photo extends AppCompatActivity {
             cameraDevice=null;
         }
     };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,6 +113,7 @@ public class Photo extends AppCompatActivity {
         });
 
     }
+
     private void takePicture() {
         if(cameraDevice == null)
             return;
@@ -150,6 +155,7 @@ public class Photo extends AppCompatActivity {
             path.mkdirs();
             file = new File(Environment.getExternalStorageDirectory()+"/"+Zakazchik+"/"+position+"_"+NameTu+"/"+Papka+"/" +"Фоточка_"+i+".jpg");
             i++;
+
             ImageReader.OnImageAvailableListener readerListener = new ImageReader.OnImageAvailableListener() {
                 @Override
                 public void onImageAvailable(ImageReader imageReader) {
@@ -187,7 +193,9 @@ public class Photo extends AppCompatActivity {
                     }
                 }
             };
+
             reader.setOnImageAvailableListener(readerListener,mBackgroundHandler);
+
             final CameraCaptureSession.CaptureCallback captureListener = new CameraCaptureSession.CaptureCallback() {
                 @Override
                 public void onCaptureCompleted(@NonNull CameraCaptureSession session, @NonNull CaptureRequest request, @NonNull TotalCaptureResult result) {
@@ -196,6 +204,7 @@ public class Photo extends AppCompatActivity {
                     createCameraPreview();
                 }
             };
+
             cameraDevice.createCaptureSession(outputSurface, new CameraCaptureSession.StateCallback() {
                 @Override
                 public void onConfigured(@NonNull CameraCaptureSession cameraCaptureSession) {
@@ -209,6 +218,8 @@ public class Photo extends AppCompatActivity {
                 public void onConfigureFailed(@NonNull CameraCaptureSession cameraCaptureSession) {
                 }
             },mBackgroundHandler);
+
+
 
         } catch (CameraAccessException e) {
             e.printStackTrace();
@@ -231,7 +242,6 @@ public class Photo extends AppCompatActivity {
                     cameraCaptureSessions = cameraCaptureSession;
                     updatePreview();
                 }
-
                 @Override
                 public void onConfigureFailed(@NonNull CameraCaptureSession cameraCaptureSession) {
                     Toast.makeText(Photo.this, "Changed", Toast.LENGTH_SHORT).show();
