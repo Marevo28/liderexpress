@@ -82,18 +82,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPhotoDoc.setEnabled(false);
         btnPhotoKontrol.setEnabled(false);
 
-        //if (mDBHelper == null)
-        mDBHelper = new DatabaseHelper(this);// подклчюение к БД
+        if (mDBHelper == null) {
+            mDBHelper = new DatabaseHelper(this);    // подклчюение к БД
+        }
+
         try {
             mDBHelper.updateDataBase();
         } catch (IOException mSQLException) {
             throw new Error("Ошибка обновления MainActivity 90 стр.");
         }
+
         try {
-            mDb = mDBHelper.getWritableDatabase();
+            mDb = mDBHelper.getReadableDatabase();
         } catch (SQLException mSQLException) {
             throw mSQLException;
         }
+
+        /**     try {
+            mDb = mDBHelper.getWritableDatabase();
+        } catch (SQLException mSQLException) {
+            throw mSQLException;
+        } **/ 
 
         btnpostion.setOnClickListener(new View.OnClickListener() {
             @Override

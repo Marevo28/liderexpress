@@ -82,6 +82,7 @@ public class BNDSvodnaya extends AppCompatActivity {
         TextPrichinaIskl= findViewById(R.id.TextPrichinaIskl);
 
         mDBHelper = MainActivity.getDBHelper();// new DatabaseHelper(this);// подклчюение к БД
+
         try {
             mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
