@@ -371,7 +371,8 @@ public class BNDSvodnaya extends AppCompatActivity {
                 initialValues.put("Stolb51", note);
                 initialValues.put("Stolb52", iskluch);
                 initialValues.put("Stolb53", prichina);
-                long result = mDb.insert("DefectBND", null, initialValues);
+
+                mDb.insert("DefectBND", null, initialValues);
                 //Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
                 //displayMessage(getBaseContext(), String.valueOf(defectBND.getCount()));
                 displayMessage(getBaseContext(), "Записан: "+ position);
