@@ -1,47 +1,47 @@
 
 Usquid:UselessImportCheck
 ",Remove this unused import 'android.net.Uri'.(òêû‘ıÿÿÿÿ
-Bsquid:S1659%"&Declare "btnKarta" on a separate line.(Ìª¿€ıÿÿÿÿ
-<squid:S1659&"%Declare "textceh" on a separate line.(€°³£
-Tsquid:S2696V"6Make the enclosing method "static" or remove this set.(Œë8ÉúÃÖæ-
-vsquid:S00117¿"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™œ“éüÿÿÿÿ8™‹İ´å-
-Isquid:S00108ô")Either remove or fill this block of code.(ªå×‚8™‹İ´å-
-vsquid:S00117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×®ñçûÿÿÿÿ8™‹İ´å-
-vsquid:S00117ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å­¹¦ûÿÿÿÿ8™‹İ´å-
-esquid:MaximumInheritanceDepth""<This class has 6 parents which is greater than 5 authorized.(ƒ¿
-Isquid:S1659%"-Declare "btnPhotoKontrol" on a separate line.(Ìª¿€ıÿÿÿÿ
-usquid:S2737_"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ8ØÓÒŠä-
-qsquid:S00117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÌ„í8™‹İ´å-
-isquid:CommentedOutCodeLineU"<This block of commented-out lines of code should be removed.(ËéŸ½8ÉúÃÖæ-
-;squid:S1659&"$Declare "NameTu" on a separate line.(€°³£
-wsquid:S1192"SUse already-defined constant 'APP_ZAKAZCHIK' instead of duplicating its value here.(ŒÃÇÆşÿÿÿÿ8ØÓÒŠä-
-Esquid:S1659%")Declare "btnSvodnaya" on a separate line.(Ìª¿€ıÿÿÿÿ
-qsquid:S00117§"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÿË8™‹İ´å-
-?squid:S1659&"(Declare "texttypetu" on a separate line.(€°³£
-Bsquid:S1659&"+Declare "textskvazhina" on a separate line.(€°³£
-Dsquid:S1659%"(Declare "btnPhotoTu" on a separate line.(Ìª¿€ıÿÿÿÿ
-jsquid:S00112Z"FDefine and throw a dedicated exception instead of using a generic one.(¢ÖöĞıÿÿÿÿ8ÉúÃÖæ-
-Wsquid:S4973x"9Use the "equals" method if value comparison was intended.(Ä°ÚÊ8Â¸Ùæ-
-ksquid:HiddenFieldCheckh"=Rename "Zakazchik" which hides the field declared at line 40.(±šƒ¿ûÿÿÿÿ8ÎºØ×æ-
-msquid:S1192"IDefine a constant instead of duplicating this literal "position" 4 times.(¶êÀûşÿÿÿÿ8™‹İ´å-
-lsquid:S00116("TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÜÕù
-@squid:S1659&")Declare "textpostion" on a separate line.(€°³£
-msquid:S00116'"PRename this field "Papka" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ»•Ôúÿÿÿÿ
-‚"squid:ClassVariableVisibilityCheck$"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ
->squid:S1659'""Declare "Name" on a separate line.(İ»•Ôúÿÿÿÿ
-esquid:UselessImportCheck":Remove this unused import 'android.content.ContentValues'.(å’µŞ8È½ÜŠä-
-qsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆá©†8Â¸Ùæ-
->squid:S1659&"'Declare "textobekt" on a separate line.(€°³£
-usquid:S00117h"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±šƒ¿ûÿÿÿÿ8ÎºØ×æ-
-?squid:S1659'"#Declare "Papka" on a separate line.(İ»•Ôúÿÿÿÿ
-lsquid:S00116'"ORename this field "Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ»•Ôúÿÿÿÿ
-esquid:S1192Ÿ"FDefine a constant instead of duplicating this literal "Papka" 3 times.(³…˜Í8êÖÛ´å-
-Gsquid:S1659)")Declare "intposition" on a separate line.(êÉøê8¯±ı×æ-
-vsquid:S00117ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶÷Õ÷ùÿÿÿÿ8™‹İ´å-
-vsquid:S00117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íØ¯ùÿÿÿÿ8™‹İ´å-
-Esquid:S1659%")Declare "btnPhotoDoc" on a separate line.(Ìª¿€ıÿÿÿÿ
-msquid:S00116)"NRename this field "Max" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÉøê8¯±ı×æ-
-usquid:S00117{"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğŞ»Ùşÿÿÿÿ8Â¸Ùæ-
 isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ã¡Ã8Â¸Ùæ-
-vsquid:S00117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¨ÍÎÿÿÿÿÿ8™‹İ´å-
+usquid:S2737_"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ8ØÓÒŠä-
+Dsquid:S1659%"(Declare "btnPhotoTu" on a separate line.(Ìª¿€ıÿÿÿÿ
+Tsquid:S2696V"6Make the enclosing method "static" or remove this set.(Œë8ÉúÃÖæ-
+isquid:CommentedOutCodeLineU"<This block of commented-out lines of code should be removed.(ËéŸ½8ÉúÃÖæ-
+‚"squid:ClassVariableVisibilityCheck$"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ
+Bsquid:S1659&"+Declare "textskvazhina" on a separate line.(€°³£
+qsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆá©†8Â¸Ùæ-
+msquid:S00116'"PRename this field "Papka" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ»•Ôúÿÿÿÿ
+jsquid:S00112Z"FDefine and throw a dedicated exception instead of using a generic one.(¢ÖöĞıÿÿÿÿ8ÉúÃÖæ-
+@squid:S1659&")Declare "textpostion" on a separate line.(€°³£
+wsquid:S1192"SUse already-defined constant 'APP_ZAKAZCHIK' instead of duplicating its value here.(ŒÃÇÆşÿÿÿÿ8ØÓÒŠä-
 isquid:S00116&"QRename this field "NameTu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€°³£
+vsquid:S00117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íØ¯ùÿÿÿÿ8™‹İ´å-
+vsquid:S00117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×®ñçûÿÿÿÿ8™‹İ´å-
+msquid:S1192"IDefine a constant instead of duplicating this literal "position" 4 times.(¶êÀûşÿÿÿÿ8™‹İ´å-
+vsquid:S00117ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶÷Õ÷ùÿÿÿÿ8™‹İ´å-
+esquid:UselessImportCheck":Remove this unused import 'android.content.ContentValues'.(å’µŞ8È½ÜŠä-
+esquid:S1192Ÿ"FDefine a constant instead of duplicating this literal "Papka" 3 times.(³…˜Í8êÖÛ´å-
+lsquid:S00116'"ORename this field "Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ»•Ôúÿÿÿÿ
+>squid:S1659&"'Declare "textobekt" on a separate line.(€°³£
+;squid:S1659&"$Declare "NameTu" on a separate line.(€°³£
+lsquid:S00116("TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÜÕù
+Esquid:S1659%")Declare "btnPhotoDoc" on a separate line.(Ìª¿€ıÿÿÿÿ
+<squid:S1659&"%Declare "textceh" on a separate line.(€°³£
+usquid:S00117{"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğŞ»Ùşÿÿÿÿ8Â¸Ùæ-
+vsquid:S00117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¨ÍÎÿÿÿÿÿ8™‹İ´å-
+esquid:MaximumInheritanceDepth""<This class has 6 parents which is greater than 5 authorized.(ƒ¿
+vsquid:S00117ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å­¹¦ûÿÿÿÿ8™‹İ´å-
+qsquid:S00117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÌ„í8™‹İ´å-
+Wsquid:S4973x"9Use the "equals" method if value comparison was intended.(Ä°ÚÊ8Â¸Ùæ-
+>squid:S1659'""Declare "Name" on a separate line.(İ»•Ôúÿÿÿÿ
+Isquid:S1659%"-Declare "btnPhotoKontrol" on a separate line.(Ìª¿€ıÿÿÿÿ
+usquid:S00117h"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±šƒ¿ûÿÿÿÿ8ÎºØ×æ-
+vsquid:S00117¿"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™œ“éüÿÿÿÿ8™‹İ´å-
+?squid:S1659'"#Declare "Papka" on a separate line.(İ»•Ôúÿÿÿÿ
+ksquid:HiddenFieldCheckh"=Rename "Zakazchik" which hides the field declared at line 40.(±šƒ¿ûÿÿÿÿ8ÎºØ×æ-
+Gsquid:S1659)")Declare "intposition" on a separate line.(êÉøê8¯±ı×æ-
+Isquid:S00108ô")Either remove or fill this block of code.(ªå×‚8™‹İ´å-
+qsquid:S00117§"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÿË8™‹İ´å-
+Esquid:S1659%")Declare "btnSvodnaya" on a separate line.(Ìª¿€ıÿÿÿÿ
+?squid:S1659&"(Declare "texttypetu" on a separate line.(€°³£
+msquid:S00116)"NRename this field "Max" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÉøê8¯±ı×æ-
+Bsquid:S1659%"&Declare "btnKarta" on a separate line.(Ìª¿€ıÿÿÿÿ

@@ -157,8 +157,6 @@ public class BNDSvodnaya extends AppCompatActivity {
         }
         if (cursor.getString(35) != null) {
             naryadS = cursor.getString(35);
-            // naryad.check("Да".equals(naryadS) ? R.id.naryadDa : R.id.naryadNet);
-            // загугли тернарный оператор
             if ("Да".equals(naryadS))
                 naryad.check(R.id.naryadDa);
             else
@@ -252,7 +250,6 @@ public class BNDSvodnaya extends AppCompatActivity {
             TextPrichinaIskl.setText(prichina);
         }
 
-        // отображаем диалоговое окно для выбора даты
         PickExpert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -310,12 +307,11 @@ public class BNDSvodnaya extends AppCompatActivity {
                 initialValues.put("Stolb52", iskluch);
                 initialValues.put("Stolb53", prichina);
                 long result = mDb.insert("DefectBND", null, initialValues);
-                Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
-                displayMessage(getBaseContext(), String.valueOf(defectBND.getCount()));
+                //Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
+                //displayMessage(getBaseContext(), String.valueOf(defectBND.getCount()));
                 displayMessage(getBaseContext(), "Записан: "+position);
-                //Intent IntentSittings = new Intent(BNDSvodnaya.this, MainActivity.class);
-                //startActivity(IntentSittings);
-
+                Intent IntentSittings = new Intent(BNDSvodnaya.this, MainActivity.class);
+                startActivity(IntentSittings);
             }
         });
     }

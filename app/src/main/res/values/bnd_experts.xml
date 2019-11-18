@@ -1,22 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="bnd_experts">
-    <item>Михайлов</item>
-    <item>Голуб</item>
-    <item>Семенов</item>
-    <item>Шафиков</item>
-    </string-array>
-    <string-array name="bnd_defects">
-    <item>Чернышов</item>
-    <item>Михайлов</item>
-    <item>Алик</item>
-    <item>Брат Алика</item>
+    <item>Михайлов Е.А.</item>
+    <item>Семенов В.Ю.</item>
+    <item>Голуб Е.Д.</item>
+    <item>Шафиков А.Ф.</item>
+</string-array>
+<string-array name="bnd_defects">
+    <item>Козлов П.А.</item>
+    <item>Калинин В.А.</item>
+    <item>Иванов А.А.</item>
+    <item>Гусар А.Г.</item>
+    <item>Галяутдинов Э.И.</item>
+    <item>Чернышов А.Б.</item>
+    <item>Имангулов Б.М.</item>
+    <item>Евсевьев А.А.</item>
+    <item>Тицкий Э.А.</item>
+    <item>Абдуллин А.Р.</item>
 </string-array>
     <string-array name="bnd_irldefects">
-        <item>Чернышов</item>
-        <item>Михайлов</item>
-        <item>Алик</item>
-        <item>Тицкий</item>
+        <item>Калинин В.А.</item>
+        <item>Гусар А.Г.</item>
+        <item>Галяутдинов Э.И.</item>
+        <item>Чернышов А.Б.</item>
+        <item>Иванов А.А.</item>
+        <item>Михайлов Е.А.</item>
+        <item>Абдуллин А.Р.</item>
+        <item>Имангулов Б.М.</item>
+        <item>Козлов П.А.</item>
+        <item>Исламуратов</item>
+        <item>Юсупов И.А.</item>
+        <item>Кузнецов С.И.</item>
+        <item>Кузнецов Д.И.</item>
+        <item>Михайлов В.В.</item>
+        <item>Фасхутдинов Р.Р.</item>
+        <item>Ахметшин Р.М.</item>
+        <item>Халиков А.И.</item>
     </string-array>
 
 </resources>

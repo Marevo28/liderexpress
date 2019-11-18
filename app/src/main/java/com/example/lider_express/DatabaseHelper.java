@@ -18,7 +18,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private SQLiteDatabase mDataBase;
     private final Context mContext;
     private boolean mNeedUpdate = true;
-
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
         if (android.os.Build.VERSION.SDK_INT >= 17) {
@@ -29,9 +28,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         this.mContext = context;
 
-       // copyDataBase();
+        copyDataBase(); //  Не коментировать!!!
+        this.getReadableDatabase();  //  Не коментировать!!!
 
-       // this.getReadableDatabase();
     }
 
     public void updateDataBase() throws IOException {
