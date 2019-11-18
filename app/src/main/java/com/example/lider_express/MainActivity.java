@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPhotoDoc.setEnabled(false);
         btnPhotoKontrol.setEnabled(false);
 
-        if (mDBHelper == null) {
-            mDBHelper = new DatabaseHelper(this);    // подклчюение к БД
+        if(mDBHelper == null) {
+            mDBHelper = new DatabaseHelper(this);
         }
 
         try {
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         try {
-            mDb = mDBHelper.getReadableDatabase();
+            mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
             throw mSQLException;
         }
@@ -109,7 +109,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onClick(View v) {
 
                 position = textpostion.getText().toString();//сквозной номер
-                intposition =  Integer.parseInt(position);
+                if(position.length() > 0) {
+                    intposition = Integer.parseInt(position);
                 String Zakazchik = mSettings.getString(APP_ZAKAZCHIK, "не определено");
 
                 switch (Zakazchik) {
@@ -142,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     btnPhotoTu.setEnabled(true);
                     btnPhotoDoc.setEnabled(true);
                     btnPhotoKontrol.setEnabled(true);
-                    Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position},null,null,null);
+                    Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position}, null, null, null);
                     cursor.moveToFirst();
                     texttypetu.setText(cursor.getString(2));//Тип оборудования
                     textuprav.setText(cursor.getString(5));// Управление
@@ -153,6 +154,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     NameTu.setText(NameTy);
                     cursor.close();
                     Name = NameTy;
+                }
 
                 }
             }

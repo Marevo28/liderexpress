@@ -21,21 +21,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
         if (android.os.Build.VERSION.SDK_INT >= 17) {
-            DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
+           // DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
+            DB_PATH = context.getDatabasePath(DB_NAME).getPath();
         }
         else {
             DB_PATH = "/data/data/" + context.getPackageName() + "/databases/";
         }
         this.mContext = context;
 
-        copyDataBase(); //  Не коментировать!!!
-        this.getReadableDatabase();  //  Не коментировать!!!
+        copyDataBase();
+        this.getReadableDatabase();
 
     }
 
     public void updateDataBase() throws IOException {
         if (mNeedUpdate) {
-            File dbFile = new File(DB_PATH + DB_NAME);
+            File dbFile = new File(DB_PATH /** + DB_NAME **/ );
             if (dbFile.exists())
                 dbFile.delete();
             copyDataBase();
@@ -44,7 +45,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private boolean checkDataBase() {
-        File dbFile = new File(DB_PATH + DB_NAME);
+        File dbFile = new File(DB_PATH /** + DB_NAME **/);
         return dbFile.exists();
     }
 
@@ -63,7 +64,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private void copyDBFile() throws IOException {
         InputStream mInput = mContext.getAssets().open(DB_NAME);
         //InputStream mInput = mContext.getResources().openRawResource(R.raw.info);
-        OutputStream mOutput = new FileOutputStream(DB_PATH + DB_NAME);
+        OutputStream mOutput = new FileOutputStream(DB_PATH /** + DB_NAME **/);
         byte[] mBuffer = new byte[1024];
         int mLength;
         while ((mLength = mInput.read(mBuffer)) > 0)
@@ -74,7 +75,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public boolean openDataBase() throws SQLException {
-        mDataBase = SQLiteDatabase.openDatabase(DB_PATH + DB_NAME, null, SQLiteDatabase.CREATE_IF_NECESSARY);
+        mDataBase = SQLiteDatabase.openDatabase(DB_PATH /** + DB_NAME **/, null, SQLiteDatabase.CREATE_IF_NECESSARY);
         return mDataBase != null;
     }
 
