@@ -86,8 +86,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             mDBHelper = new DatabaseHelper(this);
         }
 
-            mDBHelper = new DatabaseHelper(this);    // подклчюение к БД
-
         try {
             mDBHelper.updateDataBase();
         } catch (IOException mSQLException) {
@@ -100,9 +98,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             throw mSQLException;
         }
 
-             try {
-
-
+        try {
             mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
             throw mSQLException;

@@ -11,7 +11,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    private static String DB_NAME = "info2.db";
+    private static String DB_NAME = "info.db";
     private static String DB_PATH = "";
     private static final int DB_VERSION = 2;
     private SQLiteDatabase mDataBase;
