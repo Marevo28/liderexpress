@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -113,65 +114,105 @@ public class BNDSvodnaya extends AppCompatActivity {
         }
         if (cursor.getString(31) != null) {
             ispol = cursor.getString(31);
-            switch (ispol) {
-                case "Надземное":
-                    ispolnenie.check(R.id.nadzemnoe);
-                    break;
-                case "Подземное":
-                    ispolnenie.check(R.id.podzemnoe);
-                    break;
-            }
+            ispolnenie.check("Да".equals(ispol) ? R.id.nadzemnoe : R.id.podzemnoe);
         }
+        ispolnenie.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId){
+                    case R.id.nadzemnoe:
+                        ispol="Надземное";
+                                break;
+                    case R.id.podzemnoe:
+                        ispol="Подземное";
+                        break;
+                }
+            }
+        });
         if (cursor.getString(32) != null) {
             shurf = cursor.getString(32);
-            switch (shurf) {
-                case "Да":
-                    shurfovka.check(R.id.shurfDA);
-                    break;
-                case "Нет":
-                    shurfovka.check(R.id.shurfNet);
-                    break;
-            }
+            shurfovka.check("Да".equals(shurf) ? R.id.shurfDA : R.id.shurfNet);
         }
+        shurfovka.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId){
+                    case R.id.shurfDA:
+                        shurf="Да";
+                        break;
+                    case R.id.shurfNet:
+                        shurf="Нет";
+                        break;
+                }
+            }
+        });
         if (cursor.getString(33) != null) {
             actshurf = cursor.getString(33);
-            switch (actshurf) {
-                case "Да":
-                    actshurfovka.check(R.id.actshurfDA);
-                    break;
-                case "Нет":
-                    actshurfovka.check(R.id.actshurfNet);
-                    break;
-            }
+            actshurfovka.check("Да".equals(actshurf) ? R.id.actshurfDA : R.id.actshurfNet);
+            actshurfovka.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    switch (checkedId){
+                        case R.id.actshurfDA:
+                            actshurf="Да";
+                            break;
+                        case R.id.actshurfNet:
+                            actshurf="Нет";
+                            break;
+                    }
+                }
+            });
         }
         if (cursor.getString(34) != null) {
             luk = cursor.getString(34);
-            switch (luk) {
-                case "Да":
-                    luk_laz.check(R.id.luklazDA);
-                    break;
-                case "Нет":
-                    luk_laz.check(R.id.luklazNet);
-                    break;
-            }
+            luk_laz.check("Да".equals(luk) ? R.id.luklazDA : R.id.luklazNet);
+            luk_laz.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    switch (checkedId){
+                        case R.id.luklazDA:
+                            luk="Да";
+                            break;
+                        case R.id.luklazNet:
+                            luk="Нет";
+                            break;
+                    }
+                }
+            });
         }
         if (cursor.getString(35) != null) {
             naryadS = cursor.getString(35);
-            if ("Да".equals(naryadS))
-                naryad.check(R.id.naryadDa);
-            else
-                naryad.check(R.id.naryadNet);
+            naryad.check("Да".equals(naryadS) ? R.id.naryadDa : R.id.naryadNet);// загугли тернарный оператор
+            naryad.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    switch (checkedId){
+                        case R.id.naryadDa:
+                            naryadS="Да";
+                            break;
+                        case R.id.naryadNet:
+                            naryadS="Нет";
+                            break;
+                    }
+                }
+            });
         }
         if (cursor.getString(36) != null) {
             ostanovka = cursor.getString(36);
-            switch (ostanovka) {
-                case "Да":
-                    ostanov.check(R.id.ostanovDa);
-                    break;
-                case "Нет":
-                    ostanov.check(R.id.ostanovNet);
-                    break;
-            }
+            ostanov.check("Да".equals(ostanovka) ? R.id.ostanovDa : R.id.ostanovNet);
+            ostanov.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    switch (checkedId){
+                        case R.id.ostanovDa:
+                            ostanovka="Да";
+                            break;
+                        case R.id.ostanovNet:
+                            ostanovka="Нет";
+                            break;
+                    }
+                }
+            });
         }
         if (cursor.getString(37) != null) {
             nachostanovka = cursor.getString(37);
@@ -183,14 +224,20 @@ public class BNDSvodnaya extends AppCompatActivity {
         }
         if (cursor.getString(39) != null) {
             osmotrel = cursor.getString(39);
-            switch (osmotrel) {
-                case "Да":
-                    osmotr.check(R.id.osmotrDa);
-                    break;
-                case "Нет":
-                    osmotr.check(R.id.osmotrNet);
-                    break;
-            }
+            osmotr.check("Да".equals(osmotrel) ? R.id.osmotrDa : R.id.osmotrNet);
+            osmotr.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    switch (checkedId){
+                        case R.id.osmotrDa:
+                            osmotrel="Да";
+                            break;
+                        case R.id.osmotrNet:
+                            osmotrel="Нет";
+                            break;
+                    }
+                }
+            });
         }
         if (cursor.getString(45) != null) {
             datanegotovnosti=cursor.getString(45);
@@ -206,14 +253,8 @@ public class BNDSvodnaya extends AppCompatActivity {
         }
         if (cursor.getString(48) != null) {
             doki = cursor.getString(48);
-            switch (doki) {
-                case "Да":
-                    documents.check(R.id.documentsDa);
-                    break;
-                case "Нет":
-                    documents.check(R.id.documentsNet);
-                    break;
-            }
+            documents.check("Да".equals(doki) ? R.id.documentsDa : R.id.documentsNet);
+
         }
         if (cursor.getString(49) != null) {
             defects=cursor.getString(49);
@@ -221,14 +262,20 @@ public class BNDSvodnaya extends AppCompatActivity {
         }
         if (cursor.getString(50) != null) {
             vedomost = cursor.getString(50);
-            switch (vedomost) {
-                case "Да":
-                    vedomostdef.check(R.id.vedomostdefDa);
-                    break;
-                case "Нет":
-                    vedomostdef.check(R.id.vedomostdefNet);
-                    break;
-            }
+            vedomostdef.check("Да".equals(vedomost) ? R.id.vedomostdefDa : R.id.vedomostdefNet);
+            vedomostdef.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    switch (checkedId){
+                        case R.id.vedomostdefDa:
+                            vedomost="Да";
+                            break;
+                        case R.id.vedomostdefNet:
+                            vedomost="Нет";
+                            break;
+                    }
+                }
+            });
         }
         if (cursor.getString(51) != null) {
             note=cursor.getString(51);
@@ -236,14 +283,20 @@ public class BNDSvodnaya extends AppCompatActivity {
         }
         if (cursor.getString(52) != null) {
             iskluch = cursor.getString(52);
-            switch (iskluch) {
-                case "Да":
-                    iskluchenie.check(R.id.iskluchenieDa);
-                    break;
-                case "Нет":
-                    iskluchenie.check(R.id.iskluchenieNet);
-                    break;
-            }
+            iskluchenie.check("Да".equals(iskluch) ? R.id.iskluchenieDa : R.id.iskluchenieNet);
+            iskluchenie.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    switch (checkedId){
+                        case R.id.iskluchenieDa:
+                            iskluch="Да";
+                            break;
+                        case R.id.iskluchenieNet:
+                            iskluch="Нет";
+                            break;
+                    }
+                }
+            });
         }
         if (cursor.getString(53) != null) {
             prichina=cursor.getString(53);
@@ -295,7 +348,7 @@ public class BNDSvodnaya extends AppCompatActivity {
                 //initialValues.put("Stolb40", ); не используется
                 //initialValues.put("Stolb41", ); Планирование
                 //initialValues.put("Stolb42", ); Планирование
-                //initialValues.put("Stolb43", ); Дата выезда на объект
+                //initialValues.put("Stolb43", ); Дата выезда на объектметод считывания значение
                 //initialValues.put("Stolb44", ); ФИО Специалиста выехавшего на объект без контроля
                 initialValues.put("Stolb45", datanegotovnosti);
                 initialValues.put("Stolb46", datank);

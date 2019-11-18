@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
             throw mSQLException;
-        } **/ 
+        } **/
 
         btnpostion.setOnClickListener(new View.OnClickListener() {
             @Override

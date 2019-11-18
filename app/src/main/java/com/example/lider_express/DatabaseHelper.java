@@ -50,7 +50,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private void copyDataBase() {
         if (!checkDataBase()) {
-            //this.getReadableDatabase();
+            this.getReadableDatabase();
             this.close();
             try {
                 copyDBFile();
