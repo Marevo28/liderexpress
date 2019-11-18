@@ -1,12 +1,12 @@
 
-squid:S1186Y"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ã€¡u8Úìñˆç-
-psquid:S3008"RRename this field "DB_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯‹å8ñÁÖæ-
-gsquid:S4042("IUse "java.nio.Files#delete" here for better messages on error conditions.(ø†„æ8Úìñˆç-
-jsquid:S00112:"FDefine and throw a dedicated exception instead of using a generic one.(ÿ…Éùÿÿÿÿ8­¼ãşç-
-nsquid:CommentedOutCodeLineA"<This block of commented-out lines of code should be removed.(®…‘Ãûÿÿÿÿ8Úìñˆç-
-usquid:S3008"RRename this field "DB_NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Ö¿Öùÿÿÿÿ8ñÁÖæ-
-Bsquid:S3010"$Remove this assignment of "DB_PATH".(É÷¡8Úìñˆç-
-Bsquid:S3010"$Remove this assignment of "DB_PATH".(¼·š8Úìñˆç-
+gsquid:S4042&"IUse "java.nio.Files#delete" here for better messages on error conditions.(ø†„æ8Úìñˆç-
+qsquid:S2095@"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(«£òöùÿÿÿÿ8Úìñˆç-
 X
-squid:S899(";Do something with the "boolean" value returned by "delete".(ø†„æ8Úìñˆç-
-qsquid:S2095B"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(«£òöùÿÿÿÿ8Úìñˆç-
+squid:S899&";Do something with the "boolean" value returned by "delete".(ø†„æ8Úìñˆç-
+usquid:S3008"RRename this field "DB_NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Ö¿Öùÿÿÿÿ8ñÁÖæ-
+psquid:S3008"RRename this field "DB_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯‹å8ñÁÖæ-
+Bsquid:S3010"$Remove this assignment of "DB_PATH".(¼·š8Úìñˆç-
+jsquid:S001128"FDefine and throw a dedicated exception instead of using a generic one.(ÿ…Éùÿÿÿÿ8­¼ãşç-
+squid:S1186W"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ã€¡u8Úìñˆç-
+nsquid:CommentedOutCodeLine?"<This block of commented-out lines of code should be removed.(®…‘Ãûÿÿÿÿ8Úìñˆç-
+Bsquid:S3010"$Remove this assignment of "DB_PATH".(É÷¡8Úìñˆç-

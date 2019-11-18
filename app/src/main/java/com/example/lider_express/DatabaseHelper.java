@@ -14,10 +14,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static String DB_NAME = "info2.db";
     private static String DB_PATH = "";
     private static final int DB_VERSION = 2;
-
     private SQLiteDatabase mDataBase;
     private final Context mContext;
     private boolean mNeedUpdate = true;
+
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
         if (android.os.Build.VERSION.SDK_INT >= 17) {
@@ -32,6 +32,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         copyDataBase();
         this.getReadableDatabase();
 
+        copyDataBase();
+        this.getReadableDatabase();
     }
 
     public void updateDataBase() throws IOException {
