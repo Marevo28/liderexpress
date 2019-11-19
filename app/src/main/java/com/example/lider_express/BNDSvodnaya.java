@@ -370,7 +370,7 @@ public class BNDSvodnaya extends AppCompatActivity {
                 initialValues.put("Stolb50", vedomost);
                 initialValues.put("Stolb51", note);
                 initialValues.put("Stolb52", iskluch);
-                initialValues.put("Stolb53", prichina);
+                initialValues.put("Stolb53", text(TextPrichinaIskl));
                 long result = mDb.insert("DefectBND", null, initialValues);
                 //Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
                 //displayMessage(getBaseContext(), String.valueOf(defectBND.getCount()));
@@ -484,4 +484,8 @@ public class BNDSvodnaya extends AppCompatActivity {
             datank = TextDataNK.getText().toString();
         }
     };
+    public static String text(EditText a1){
+        String str = a1.getText().toString();
+        return str;
+    }
 }
