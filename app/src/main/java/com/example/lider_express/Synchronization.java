@@ -50,8 +50,10 @@ public class Synchronization extends AppCompatActivity {
         }
     }
     public void onSync(View view){
-        Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
-        displayMessage(getBaseContext(), String.valueOf(defectBND.getCount()));
+        Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null,
+                null, null, null, null, null);
+        String count = String.valueOf(defectBND.getCount());
+        displayMessage(getBaseContext(), count);
         defectBND.close();
        //position=textpostion.getText().toString();
        //zapros = new JsonZapros();
