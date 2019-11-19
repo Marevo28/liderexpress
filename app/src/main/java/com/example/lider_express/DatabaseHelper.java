@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -20,16 +22,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
-        if (android.os.Build.VERSION.SDK_INT >= 17) {
+
+        //  if (android.os.Build.VERSION.SDK_INT >= 17) {
            // DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
+
             DB_PATH = context.getDatabasePath(DB_NAME).getPath();
-        }
-        else {
-            DB_PATH = "/data/data/" + context.getPackageName() + "/databases/";
-        }
+
+      //    }
+      //   else {
+      //      DB_PATH = "/data/data/" + context.getPackageName() + "/databases/";
+      //  }
+
         this.mContext = context;
 
       //  copyDataBase();
+
         this.getReadableDatabase();
     }
 
@@ -45,7 +52,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private boolean checkDataBase() {
         File dbFile = new File(DB_PATH /** + DB_NAME **/);
-        return dbFile.exists();
+        boolean flag = dbFile.exists();
+        if(flag){
+            Log.i("---------checkDataBase", "true");
+        }else {
+            Log.i("---------checkDataBase", "false");
+        }
+        return flag;
     }
 
     private void copyDataBase() {
@@ -95,12 +108,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             mNeedUpdate = true;
     }
 
-    //LeStat
-    // Возвращаемся к старой версии БД
-    @Override
-    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.setVersion(oldVersion);
-    }
 
 
 

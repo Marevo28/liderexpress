@@ -9,6 +9,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.core.view.GravityCompat;
@@ -86,18 +87,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             mDBHelper = new DatabaseHelper(this);
         }
 
-        try {
+      /**  try {
             mDBHelper.updateDataBase();
         } catch (IOException mSQLException) {
             throw new Error("Ошибка обновления MainActivity 90 стр.");
-        }
-
-        try {
-            mDb = mDBHelper.getWritableDatabase();
-        } catch (SQLException mSQLException) {
-            throw mSQLException;
-        }
-
+        } **/
+      
         try {
             mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
