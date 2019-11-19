@@ -45,19 +45,13 @@ import java.util.List;
 import java.util.UUID;
 
 public class Photo extends AppCompatActivity {
-    private Button btnCapture;
+
+    private Button tackPhoto;
+    private Button flash;
     private TextureView textureView;
-    public int i=1;
+    public int i = 1;
     SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
     String data = sdf.format(new Date());
-    //Check state orientation of output image
-    private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
-    static{
-        ORIENTATIONS.append(Surface.ROTATION_0,90);
-        ORIENTATIONS.append(Surface.ROTATION_90,0);
-        ORIENTATIONS.append(Surface.ROTATION_180,270);
-        ORIENTATIONS.append(Surface.ROTATION_270,180);
-    }
 
     private String cameraId;
     private CameraDevice cameraDevice;
@@ -67,11 +61,39 @@ public class Photo extends AppCompatActivity {
     private ImageReader imageReader;
 
     //Save to FILE
-    private File file, path;
+    private File file;
+    private File path;
     private static final int REQUEST_CAMERA_PERMISSION = 200;
     private boolean mFlashSupported;
     private Handler mBackgroundHandler;
     private HandlerThread mBackgroundThread;
+    //Check state orientation of output image
+
+    private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
+    static{
+        ORIENTATIONS.append(Surface.ROTATION_0,90);
+        ORIENTATIONS.append(Surface.ROTATION_90,0);
+        ORIENTATIONS.append(Surface.ROTATION_180,270);
+        ORIENTATIONS.append(Surface.ROTATION_270,180);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_photo);
+        textureView = (TextureView)findViewById(R.id.textureView);
+        //From Java 1.4 , you can use keyword 'assert' to check expression true or false
+        assert textureView != null;
+        textureView.setSurfaceTextureListener(textureListener);
+        tackPhoto = (Button)findViewById(R.id.btnCapture);
+        tackPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                takePicture();
+            }
+        });
+
+    }
 
 
 
@@ -94,25 +116,6 @@ public class Photo extends AppCompatActivity {
             cameraDevice=null;
         }
     };
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_photo);
-        textureView = (TextureView)findViewById(R.id.textureView);
-        //From Java 1.4 , you can use keyword 'assert' to check expression true or false
-        assert textureView != null;
-        textureView.setSurfaceTextureListener(textureListener);
-        btnCapture = (Button)findViewById(R.id.btnCapture);
-        btnCapture.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                takePicture();
-            }
-        });
-
-    }
 
     private void takePicture() {
         if(cameraDevice == null)
@@ -156,7 +159,8 @@ public class Photo extends AppCompatActivity {
             file = new File(Environment.getExternalStorageDirectory()+"/"+Zakazchik+"/"+position+"_"+NameTu+"/"+Papka+"/" +"Фоточка_"+i+".jpg");
             i++;
 
-            ImageReader.OnImageAvailableListener readerListener = new ImageReader.OnImageAvailableListener() {
+            ImageReader.OnImageAvailableListener mOnImageAvailableListener
+                    = new ImageReader.OnImageAvailableListener() {
                 @Override
                 public void onImageAvailable(ImageReader imageReader) {
                     Image image = null;
@@ -182,6 +186,7 @@ public class Photo extends AppCompatActivity {
                         }
                     }
                 }
+
                 private void save(byte[] bytes) throws IOException {
                     OutputStream outputStream = null;
                     try{
@@ -194,7 +199,7 @@ public class Photo extends AppCompatActivity {
                 }
             };
 
-            reader.setOnImageAvailableListener(readerListener,mBackgroundHandler);
+            reader.setOnImageAvailableListener(mOnImageAvailableListener,mBackgroundHandler);
 
             final CameraCaptureSession.CaptureCallback captureListener = new CameraCaptureSession.CaptureCallback() {
                 @Override
@@ -349,5 +354,7 @@ public class Photo extends AppCompatActivity {
         mBackgroundThread.start();
         mBackgroundHandler = new Handler(mBackgroundThread.getLooper());
     }
+
+
 }
 
