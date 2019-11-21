@@ -1,23 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Photo">
+    tools:context=".Photo"
+    android:orientation="vertical">
     <TextureView
         android:id="@+id/textureView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/btnCapture"
-
+        android:layout_height="0dp"
+        android:layout_weight="12"
         />
-
-    <Button
-        android:id="@+id/btnCapture"
-        android:text="CAPTURE"
-        android:layout_alignParentBottom="true"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/btnFlash"
+            android:text="Flash"
+            android:layout_alignParentBottom="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/btnCapture"
+            android:text="CAPTURE"
+            android:layout_alignParentBottom="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"/>
+
+    </LinearLayout>
+</LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageFlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_flash_off_white_64dp"/>
+
+</FrameLayout>
