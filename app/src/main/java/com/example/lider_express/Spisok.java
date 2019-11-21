@@ -39,7 +39,7 @@ public class Spisok extends AppCompatActivity {
                 spisochek = getResources().getStringArray(R.array.bnd_defects);// создаем адаптер
                 break;
             case "irldefects":
-                spisochek = getResources().getStringArray(R.array.bnd_defects);// создаем адаптер
+                spisochek = getResources().getStringArray(R.array.bnd_irldefects);// создаем адаптер
                 break;
         }
 
