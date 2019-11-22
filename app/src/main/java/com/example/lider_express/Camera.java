@@ -105,7 +105,7 @@ public class Camera extends AppCompatActivity {
         mButtonFlashOnOff.setOnClickListener(new View.OnClickListener() {                           /** Listener mButtonFlashOnOff **/
         @Override
         public void onClick(View v) {
-            switch (countFlash) {
+         /**   switch (countFlash) {
                 case 0: try {
                     mCameraManager.setTorchMode(mCameraID, false);
                 } catch (CameraAccessException e) {
@@ -122,16 +122,9 @@ public class Camera extends AppCompatActivity {
                 mImageFlash.setImageResource(R.drawable.ic_flash_on_white_64dp);
                 countFlash = 0;
                 break;
-            }
+            } **/
         }
         });
-
-        try {
-            mCameraManager.setTorchMode(mCameraID, true);
-        } catch (CameraAccessException e) {
-            e.printStackTrace();
-        }
-
     } //  --- OnCreate ---
 
     public class CameraService {                                                                    /** Class CameraService **/

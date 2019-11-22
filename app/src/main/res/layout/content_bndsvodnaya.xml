@@ -421,8 +421,6 @@
             android:ems="10"
             android:gravity="left"
             android:inputType="text|textMultiLine|textCapSentences"
-            android:maxLength="21"
-            android:maxLines="2"
             android:text="Примечание"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@+id/textView17"
