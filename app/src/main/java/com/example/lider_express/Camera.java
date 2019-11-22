@@ -7,11 +7,13 @@ import android.graphics.ImageFormat;
 import android.graphics.SurfaceTexture;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCaptureSession;
+import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraDevice;
 import android.hardware.camera2.CameraManager;
 import android.hardware.camera2.CameraMetadata;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.TotalCaptureResult;
+import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.Image;
 import android.media.ImageReader;
 import android.os.Build;
@@ -19,8 +21,11 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.util.Log;
+import android.util.Size;
 import android.util.SparseIntArray;
 import android.view.Surface;
+import android.view.SurfaceHolder;
 import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
@@ -50,9 +55,12 @@ public class Camera extends AppCompatActivity {
     private ImageView mImageFlash;
     private Button mButtonTakePhoto = null;
     private Button mButtonFlashOnOff = null;
-    private TextureView mImageView = null;
+    private TextureView mImageView;
     private HandlerThread mBackgroundThread;
     private Handler mBackgroundHandler = null;
+    CameraCharacteristics characteristics;
+    StreamConfigurationMap map;
+    Size mPreviewSize;
 
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
     static{
@@ -79,7 +87,6 @@ public class Camera extends AppCompatActivity {
         mButtonTakePhoto =  findViewById(R.id.btnCapture);
         mButtonFlashOnOff =  findViewById(R.id.btnFlash);
         mImageFlash = findViewById(R.id.imageFlash);
-
         mImageView = findViewById(R.id.textureView);
 
         mCameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
@@ -90,6 +97,14 @@ public class Camera extends AppCompatActivity {
         } catch(CameraAccessException e){
             e.printStackTrace();
         }
+
+        try {
+            characteristics = mCameraManager.getCameraCharacteristics(mCameraID);
+        } catch (CameraAccessException e) {
+            e.printStackTrace();
+        }
+        map = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
+        mPreviewSize = map.getOutputSizes(SurfaceTexture.class)[0];
 
         if (myCamera != null) {
             if (!myCamera.isOpen()) myCamera.openCamera();
@@ -133,9 +148,6 @@ public class Camera extends AppCompatActivity {
         private CameraDevice mCameraDevice = null;
         private CameraCaptureSession mCaptureSession;
         private ImageReader mImageReader;
-
-
-
 
         public CameraService(CameraManager cameraManager, String cameraID) {
             mCameraManager = cameraManager;
@@ -219,12 +231,13 @@ public class Camera extends AppCompatActivity {
 
         private void createCameraPreviewSession() {
 
-            mImageReader = ImageReader.newInstance(1920,1080, ImageFormat.JPEG,1);
+            mImageReader = ImageReader.newInstance(mPreviewSize.getWidth(),mPreviewSize.getHeight(), ImageFormat.JPEG,1);
             mImageReader.setOnImageAvailableListener(mOnImageAvailableListener, null);
-
+            
             SurfaceTexture texture = mImageView.getSurfaceTexture();
 
-            texture.setDefaultBufferSize(1920,1080);
+            texture.setDefaultBufferSize(mPreviewSize.getWidth(),mPreviewSize.getHeight());
+
             Surface surface = new Surface(texture);
 
             try {
