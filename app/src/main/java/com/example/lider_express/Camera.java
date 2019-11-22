@@ -28,6 +28,7 @@ import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -57,6 +58,7 @@ public class Camera extends AppCompatActivity {
     CameraCharacteristics characteristics;
     StreamConfigurationMap map;
     Size mPreviewSize;
+    private static final int REQUEST_CAMERA_PERMISSION = 200;
 
     private CameraDevice mCameraDevice = null;
     private CameraCaptureSession mCaptureSession;
@@ -81,12 +83,6 @@ public class Camera extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo);
-
-        if ( checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED ||
-                (ContextCompat.checkSelfPermission(Camera.this,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
-            requestPermissions(new String[]{Manifest.permission.CAMERA,Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
-        }
 
         mButtonTakePhoto =  findViewById(R.id.btnCapture);
         mButtonFlashOnOff =  findViewById(R.id.btnFlash);
@@ -285,6 +281,18 @@ public class Camera extends AppCompatActivity {
         }
         else {
             mImageView.setSurfaceTextureListener(textureListener);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(requestCode == REQUEST_CAMERA_PERMISSION)
+        {
+            if(grantResults[0] != PackageManager.PERMISSION_GRANTED)
+            {
+                Toast.makeText(this, "You can't use camera without permission", Toast.LENGTH_SHORT).show();
+                finish();
+            }
         }
     }
 

@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPhotoTu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото объекта
+                Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);//кнопка вызова Фото объекта
                 Papka = "Фото";
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", Zakazchik);
@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPhotoDoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото документов
+                Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);//кнопка вызова Фото документов
                 Papka = "Документы";
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", Zakazchik);
@@ -195,7 +195,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPhotoKontrol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова контроля
+                Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);//кнопка вызова контроля
                 Papka = "Контроль";
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", Zakazchik);

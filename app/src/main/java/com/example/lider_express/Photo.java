@@ -99,27 +99,6 @@ public class Photo extends AppCompatActivity {
         });
     }
 
-    public class CameraService {
-
-        private File mFile = new File(Environment.
-                getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM), "test1.jpg");
-
-        private String mCameraID;
-        private CameraDevice mCameraDevice = null;
-        private CameraCaptureSession mCaptureSession;
-        private ImageReader mImageReader;
-
-        public CameraService(CameraManager cameraManager, String cameraID) {
-            mCameraManager = cameraManager;
-            mCameraID = cameraID;
-        }
-
-    }
-
-
-
-
-
         CameraDevice.StateCallback stateCallback = new CameraDevice.StateCallback() {
         @Override
         public void onOpened(@NonNull CameraDevice camera) {
