@@ -114,8 +114,7 @@ public class Synchronization extends AppCompatActivity {
             Log.e("pass 0",ie.getMessage());
         }
         displayMessage(getBaseContext(), zapros.reposition());
-        mDb.delete("DefectBND", "_id = " + n, null);
-        n++;
+        mDb.delete("DefectBND", "Position = " + zapros.reposition(), null);
     }
     private void displayMessage(Context context, String message) {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
