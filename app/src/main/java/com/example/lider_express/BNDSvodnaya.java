@@ -143,26 +143,16 @@ public class BNDSvodnaya extends AppCompatActivity {
         Cursor cursor = mDb.query("ZayavkaBND", null, "POSITION = ?", new String[]{position}, null, null, null);
         cursor.moveToFirst();
 
-        if (cursor.getString(27) != null) {
-            dataexperts = cursor.getString(27);
-            TextDataExp.setText(dataexperts);
-        }
-        if (cursor.getString(28) != null) {
-            experts = cursor.getString(28);
-            textexperts.setText(experts);
-        }
-        if (cursor.getString(29) != null) {
-            dataspec = cursor.getString(29);
-            TextDataSpec.setText(dataspec);
-        }
-        if (cursor.getString(30) != null) {
-            spec = cursor.getString(30);
-            textdefek.setText(spec);
-        }
+        setStringFromBD(cursor, dataexperts, TextDataExp, 27);
+        setStringFromBD(cursor, experts, textexperts, 28);
+        setStringFromBD(cursor, dataspec, TextDataSpec, 29);
+        setStringFromBD(cursor, spec, textdefek, 30);
+
         if (cursor.getString(31) != null) {
             ispol = cursor.getString(31);
             ispolnenie.check("Да".equals(ispol) ? R.id.nadzemnoe : R.id.podzemnoe);
         }
+
         ispolnenie.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -176,6 +166,7 @@ public class BNDSvodnaya extends AppCompatActivity {
                 }
             }
         });
+
         if (cursor.getString(32) != null) {
             shurf = cursor.getString(32);
             shurfovka.check("Да".equals(shurf) ? R.id.shurfDA : R.id.shurfNet);
@@ -261,14 +252,10 @@ public class BNDSvodnaya extends AppCompatActivity {
                 }
             }
         });
-        if (cursor.getString(37) != null) {
-            nachostanovka = cursor.getString(37);
-            TextNachOstanov.setText(nachostanovka);
-        }
-        if (cursor.getString(38) != null) {
-            konostanovka = cursor.getString(38);
-            TextKonOstanov.setText(konostanovka);
-        }
+
+        setStringFromBD(cursor, nachostanovka, TextNachOstanov, 37);
+        setStringFromBD(cursor, konostanovka, TextKonOstanov, 38);
+
         if (cursor.getString(39) != null) {
             osmotrel = cursor.getString(39);
             osmotr.check("Да".equals(osmotrel) ? R.id.osmotrDa : R.id.osmotrNet);
@@ -286,18 +273,11 @@ public class BNDSvodnaya extends AppCompatActivity {
                 }
             }
         });
-        if (cursor.getString(45) != null) {
-            datanegotovnosti=cursor.getString(45);
-            TextDataActNegot.setText(datanegotovnosti);
-        }
-        if (cursor.getString(46) != null) {
-            datank = cursor.getString(46);
-            TextDataNK.setText(datank);
-        }
-        if (cursor.getString(47) != null) {
-            irlspec = cursor.getString(47);
-            textirldefek.setText(irlspec);
-        }
+
+        setStringFromBD(cursor, datanegotovnosti, TextDataActNegot, 45);
+        setStringFromBD(cursor, datank, TextDataNK, 46);
+        setStringFromBD(cursor, irlspec, textirldefek, 47);
+
         if (cursor.getString(48) != null) {
             doki = cursor.getString(48);
             documents.check("Да".equals(doki) ? R.id.documentsDa : R.id.documentsNet);
@@ -315,10 +295,6 @@ public class BNDSvodnaya extends AppCompatActivity {
                 }
             }
         });
-       /** if (cursor.getString(49) != null) {
-            defects=cursor.getString(49);
-            TextDefects.setText(defects);
-        }**/
         if (cursor.getString(50) != null) {
             vedomost = cursor.getString(50);
             vedomostdef.check("Да".equals(vedomost) ? R.id.vedomostdefDa : R.id.vedomostdefNet);
@@ -337,10 +313,6 @@ public class BNDSvodnaya extends AppCompatActivity {
             }
         });
 
-       /** if (cursor.getString(51) != null) {
-            note = cursor.getString(51);
-            TextNote.setText(note);
-        } **/
 
         if (cursor.getString(52) != null) {
             iskluch = cursor.getString(52);
@@ -359,10 +331,6 @@ public class BNDSvodnaya extends AppCompatActivity {
                 }
             }
         });
-       /** if (cursor.getString(53) != null) {
-            prichina = cursor.getString(53);
-            TextPrichinaIskl.setText(prichina);
-        } **/
 
         PickExpert.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -387,14 +355,12 @@ public class BNDSvodnaya extends AppCompatActivity {
                 IntentSittings.putExtra("people", "irldefects");
                 startActivityForResult(IntentSittings, PEOPLE);
             }
+
         });
 
         ButZapisat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-
                 ContentValues initialValues = new ContentValues();
                 initialValues.put(POSITION, position);
                 initialValues.put("Stolb27", dataexperts);
@@ -433,6 +399,14 @@ public class BNDSvodnaya extends AppCompatActivity {
             }
         });
     }
+
+    public void setStringFromBD(Cursor c, String value_1, TextView value_2, int id){
+        if (c.getString(id) != null) {
+            value_1 = c.getString(id);
+            value_2.setText(value_1);
+        }
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
