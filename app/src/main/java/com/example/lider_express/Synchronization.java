@@ -22,6 +22,7 @@ public class Synchronization extends AppCompatActivity {
     public SQLiteDatabase mDb;
 
     Button btnpostion;
+    int i;
     int n = 1;
     EditText textuprav;
     EditText textceh;
@@ -103,50 +104,82 @@ public class Synchronization extends AppCompatActivity {
     }
 
     public void onDown(View view) {
-
         Cursor cursor = mDb.query("DefectBND", null, null, null, null, null, null);
-        cursor.moveToFirst();
-        if (cursor.getString(1) != null) { position =cursor.getString(1);}
-        if (cursor.getString(2) != null) { stolb27 =cursor.getString(2);}
-        if (cursor.getString(3) != null) { stolb28 =cursor.getString(3);}
-        if (cursor.getString(4) != null) { stolb29 =cursor.getString(4);}
-        if (cursor.getString(5) != null) { stolb30 =cursor.getString(5);}
-        if (cursor.getString(6) != null) { stolb31 =cursor.getString(6);}
-        if (cursor.getString(7) != null) { stolb32 =cursor.getString(7);}
-        if (cursor.getString(8) != null) { stolb33 =cursor.getString(8);}
-        if (cursor.getString(9) != null) { stolb34 =cursor.getString(9);}
-        if (cursor.getString(10) != null) { stolb35 =cursor.getString(10);}
-        if (cursor.getString(11) != null) { stolb36 =cursor.getString(11);}
-        if (cursor.getString(12) != null) { stolb37 =cursor.getString(12);}
-        if (cursor.getString(13) != null) { stolb38 =cursor.getString(13);}
-        if (cursor.getString(14) != null) { stolb39 =cursor.getString(14);}
-        if (cursor.getString(15) != null) { stolb40 =cursor.getString(15);}
-        if (cursor.getString(16) != null) { stolb41 =cursor.getString(16);}
-        if (cursor.getString(17) != null) { stolb42 =cursor.getString(17);}
-        if (cursor.getString(18) != null) { stolb43 =cursor.getString(18);}
-        if (cursor.getString(19) != null) { stolb44 =cursor.getString(19);}
-        if (cursor.getString(20) != null) { stolb45 =cursor.getString(20);}
-        if (cursor.getString(21) != null) { stolb46 =cursor.getString(21);}
-        if (cursor.getString(22) != null) { stolb47 =cursor.getString(22);}
-        if (cursor.getString(23) != null) { stolb48 =cursor.getString(23);}
-        if (cursor.getString(24) != null) { stolb49 =cursor.getString(24);}
-        if (cursor.getString(25) != null) { stolb50 =cursor.getString(25);}
-        if (cursor.getString(26) != null) { stolb51 =cursor.getString(26);}
-        if (cursor.getString(27) != null) { stolb52 =cursor.getString(27);}
-        if (cursor.getString(28) != null) { stolb53 =cursor.getString(28);}
-
-        zapros = new JsonZapros();
-        zapros.download(position,stolb27,stolb28,stolb29,stolb30,stolb31,stolb32,stolb33,stolb34,stolb35,stolb36,stolb37,stolb38,stolb39,
-                stolb40,stolb41,stolb42,stolb43,stolb44,stolb45,stolb46,stolb47,stolb48,stolb49,stolb50,stolb51,stolb52,stolb53);
-
-        try{
-            zapros.join();
-        }catch (InterruptedException ie){
-            Log.e("pass 0",ie.getMessage());
+        Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
+        i = defectBND.getCount();
+        if (i == 0) {
+            displayMessage(getBaseContext(), "В базе пусто");
+        }else {
+            cursor.moveToFirst();
+            if (cursor.getString(1) != null) {
+                position = cursor.getString(1); }
+            if (cursor.getString(2) != null) {
+                stolb27 = cursor.getString(2); }
+            if (cursor.getString(3) != null) {
+                stolb28 = cursor.getString(3); }
+            if (cursor.getString(4) != null) {
+                stolb29 = cursor.getString(4); }
+            if (cursor.getString(5) != null) {
+                stolb30 = cursor.getString(5); }
+            if (cursor.getString(6) != null) {
+                stolb31 = cursor.getString(6); }
+            if (cursor.getString(7) != null) {
+                stolb32 = cursor.getString(7); }
+            if (cursor.getString(8) != null) {
+                stolb33 = cursor.getString(8); }
+            if (cursor.getString(9) != null) {
+                stolb34 = cursor.getString(9); }
+            if (cursor.getString(10) != null) {
+                stolb35 = cursor.getString(10); }
+            if (cursor.getString(11) != null) {
+                stolb36 = cursor.getString(11); }
+            if (cursor.getString(12) != null) {
+                stolb37 = cursor.getString(12); }
+            if (cursor.getString(13) != null) {
+                stolb38 = cursor.getString(13); }
+            if (cursor.getString(14) != null) {
+                stolb39 = cursor.getString(14); }
+            if (cursor.getString(15) != null) {
+                stolb40 = cursor.getString(15); }
+            if (cursor.getString(16) != null) {
+                stolb41 = cursor.getString(16); }
+            if (cursor.getString(17) != null) {
+                stolb42 = cursor.getString(17); }
+            if (cursor.getString(18) != null) {
+                stolb43 = cursor.getString(18); }
+            if (cursor.getString(19) != null) {
+                stolb44 = cursor.getString(19); }
+            if (cursor.getString(20) != null) {
+                stolb45 = cursor.getString(20); }
+            if (cursor.getString(21) != null) {
+                stolb46 = cursor.getString(21); }
+            if (cursor.getString(22) != null) {
+                stolb47 = cursor.getString(22); }
+            if (cursor.getString(23) != null) {
+                stolb48 = cursor.getString(23); }
+            if (cursor.getString(24) != null) {
+                stolb49 = cursor.getString(24); }
+            if (cursor.getString(25) != null) {
+                stolb50 = cursor.getString(25); }
+            if (cursor.getString(26) != null) {
+                stolb51 = cursor.getString(26); }
+            if (cursor.getString(27) != null) {
+                stolb52 = cursor.getString(27); }
+            if (cursor.getString(28) != null) {
+                stolb53 = cursor.getString(28); }
+            zapros = new JsonZapros();
+            zapros.download(position, stolb27, stolb28, stolb29, stolb30, stolb31, stolb32, stolb33, stolb34, stolb35, stolb36, stolb37, stolb38, stolb39,
+                    stolb40, stolb41, stolb42, stolb43, stolb44, stolb45, stolb46, stolb47, stolb48, stolb49, stolb50, stolb51, stolb52, stolb53);
+            try {
+                zapros.join();
+            } catch (InterruptedException ie) {
+                Log.e("pass 0", ie.getMessage());
+            }
+            displayMessage(getBaseContext(), "отправлено"+zapros.reposition());
+            mDb.delete("DefectBND", "Position = " + zapros.reposition(), null);
         }
-        displayMessage(getBaseContext(), zapros.reposition());
-        mDb.delete("DefectBND", "Position = " + zapros.reposition(), null);
     }
+
     private void displayMessage(Context context, String message) {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
     }
