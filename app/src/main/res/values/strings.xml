@@ -10,7 +10,7 @@
     <string name="menu_home">Объект</string>
     <string name="menu_gallery">Расчёт ГИ</string>
     <string name="menu_slideshow">Расчёт вмятины</string>
-    <string name="menu_tools">Tools</string>
+    <string name="menu_tools">Синхронизация</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="title_activity_sittings">SittingsActivity</string>
