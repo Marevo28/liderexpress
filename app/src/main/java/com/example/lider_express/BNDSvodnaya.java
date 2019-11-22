@@ -133,24 +133,26 @@ public class BNDSvodnaya extends AppCompatActivity {
             throw mSQLException;
         }
 
+         defects = TextDefects.getText().toString();
+         note = TextNote.getText().toString();
+         prichina = TextPrichinaIskl.getText().toString();
+
         Bundle arguments = getIntent().getExtras();
         position = arguments.getString("position");
 
         Cursor cursor = mDb.query("ZayavkaBND", null, "POSITION = ?", new String[]{position}, null, null, null);
         cursor.moveToFirst();
 
-        note = TextNote.getText().toString();
-
         if (cursor.getString(27) != null) {
-            dataexperts=cursor.getString(27);
+            dataexperts = cursor.getString(27);
             TextDataExp.setText(dataexperts);
         }
         if (cursor.getString(28) != null) {
-            experts=cursor.getString(28);
+            experts = cursor.getString(28);
             textexperts.setText(experts);
         }
         if (cursor.getString(29) != null) {
-            dataspec=cursor.getString(29);
+            dataspec = cursor.getString(29);
             TextDataSpec.setText(dataspec);
         }
         if (cursor.getString(30) != null) {
@@ -289,11 +291,11 @@ public class BNDSvodnaya extends AppCompatActivity {
             TextDataActNegot.setText(datanegotovnosti);
         }
         if (cursor.getString(46) != null) {
-            datank=cursor.getString(46);
+            datank = cursor.getString(46);
             TextDataNK.setText(datank);
         }
         if (cursor.getString(47) != null) {
-            irlspec=cursor.getString(47);
+            irlspec = cursor.getString(47);
             textirldefek.setText(irlspec);
         }
         if (cursor.getString(48) != null) {
@@ -313,10 +315,10 @@ public class BNDSvodnaya extends AppCompatActivity {
                 }
             }
         });
-        if (cursor.getString(49) != null) {
+       /** if (cursor.getString(49) != null) {
             defects=cursor.getString(49);
             TextDefects.setText(defects);
-        }
+        }**/
         if (cursor.getString(50) != null) {
             vedomost = cursor.getString(50);
             vedomostdef.check("Да".equals(vedomost) ? R.id.vedomostdefDa : R.id.vedomostdefNet);
@@ -334,10 +336,12 @@ public class BNDSvodnaya extends AppCompatActivity {
                 }
             }
         });
+
        /** if (cursor.getString(51) != null) {
             note = cursor.getString(51);
             TextNote.setText(note);
         } **/
+
         if (cursor.getString(52) != null) {
             iskluch = cursor.getString(52);
             iskluchenie.check("Да".equals(iskluch) ? R.id.iskluchenieDa : R.id.iskluchenieNet);
@@ -355,10 +359,10 @@ public class BNDSvodnaya extends AppCompatActivity {
                 }
             }
         });
-        if (cursor.getString(53) != null) {
+       /** if (cursor.getString(53) != null) {
             prichina = cursor.getString(53);
             TextPrichinaIskl.setText(prichina);
-        }
+        } **/
 
         PickExpert.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -384,9 +388,13 @@ public class BNDSvodnaya extends AppCompatActivity {
                 startActivityForResult(IntentSittings, PEOPLE);
             }
         });
+
         ButZapisat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
                 ContentValues initialValues = new ContentValues();
                 initialValues.put(POSITION, position);
                 initialValues.put("Stolb27", dataexperts);
@@ -529,8 +537,10 @@ public class BNDSvodnaya extends AppCompatActivity {
             datank = TextDataNK.getText().toString();
         }
     };
+
     public static String text(EditText a1){
         String str = a1.getText().toString();
         return str;
     }
+
 }
