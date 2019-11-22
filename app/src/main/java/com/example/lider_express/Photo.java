@@ -159,8 +159,8 @@ public class Photo extends AppCompatActivity {
             String NameTu = arguments.getString("Name");
             path = new File(Environment.getExternalStorageDirectory()+"/"+Zakazchik+"/"+position+"_"+NameTu+"/"+Papka);
             path.mkdirs();
-            file = new File(Environment.getExternalStorageDirectory() + "/"
-                    + Zakazchik + "/" + position + "_" + NameTu + "/" + Papka+"/" + "Фоточка_" + i + ".jpg");
+
+            file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM), "Фоточка_" + i + ".jpg");
             i++;
 
             ImageReader.OnImageAvailableListener mOnImageAvailableListener
@@ -233,7 +233,7 @@ public class Photo extends AppCompatActivity {
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
-    }
+    } // Take picture
 
     private void createCameraPreview() {
         try{
@@ -271,7 +271,6 @@ public class Photo extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
 
     private void openCamera() {
         CameraManager manager = (CameraManager)getSystemService(Context.CAMERA_SERVICE);
