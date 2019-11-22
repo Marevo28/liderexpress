@@ -6,8 +6,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.example.lider_express.DataBase.DatabaseHelper;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -16,17 +15,49 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class Synchronization extends AppCompatActivity {
     public DatabaseHelper mDBHelper;
     public SQLiteDatabase mDb;
+
     Button btnpostion;
-    int n=1;
-    EditText textuprav, textceh, textobekt, texttypetu, textskvazhina, textpostion, NameTu;
-    String position,stolb27,stolb28,stolb29,stolb30,stolb31,stolb32,stolb33,stolb34,stolb35,stolb36,stolb37,stolb38,stolb39,
-            stolb40,stolb41,stolb42,stolb43,stolb44,stolb45,stolb46,stolb47,stolb48,stolb49,stolb50,stolb51,stolb52,stolb53;
+    int n = 1;
+    EditText textuprav;
+    EditText textceh;
+    EditText textobekt;
+    EditText texttypetu;
+    EditText textskvazhina;
+    EditText textpostion;
+    EditText NameTu;
+    String position;
+    String stolb27;
+    String stolb28;
+    String stolb29;
+    String stolb30;
+    String stolb31;
+    String stolb32;
+    String stolb33;
+    String stolb34;
+    String stolb35;
+    String stolb36;
+    String stolb37;
+    String stolb38;
+    String stolb39;
+    String stolb40;
+    String stolb41;
+    String stolb42;
+    String stolb43;
+    String stolb44;
+    String stolb45;
+    String stolb46;
+    String stolb47;
+    String stolb48;
+    String stolb49;
+    String stolb50;
+    String stolb51;
+    String stolb52;
+    String stolb53;
     private JsonZapros zapros;
 
     @Override

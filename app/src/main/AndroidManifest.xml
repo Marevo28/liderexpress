@@ -39,6 +39,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Photo" />
         <activity
+            android:name=".Camera" />
+        <activity
             android:name=".SittingsActivity"
             android:label="Настройки"
             android:theme="@style/AppTheme.NoActionBar" />

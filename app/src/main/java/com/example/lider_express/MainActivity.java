@@ -1,22 +1,17 @@
 package com.example.lider_express;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 
-import android.view.MenuItem;
-
+import com.example.lider_express.DataBase.DatabaseHelper;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -29,20 +24,37 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.IOException;
+import android.view.View;
+import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private static DatabaseHelper mDBHelper;
-    public SQLiteDatabase mDb;
-    Button btnpostion, btnSvodnaya, btnPhotoTu, btnPhotoDoc, btnPhotoKontrol, btnKarta;
-    TextView textuprav, textceh, textobekt, texttypetu, textskvazhina, textpostion, NameTu;
-    String position, Papka, Name;
-    String Zakazchik;
-    int Max,intposition;
+
     public static final String APP_FILES = "mysettings";
     public static final String APP_ZAKAZCHIK = "Zakazchik";
+    private static DatabaseHelper mDBHelper;
+    public static Context context; // Временно !!!!!
+
+    public SQLiteDatabase mDb;
     SharedPreferences mSettings;
+    Button btnpostion;
+    Button btnSvodnaya;
+    Button btnPhotoTu;
+    Button btnPhotoDoc;
+    Button btnPhotoKontrol;
+    Button btnKarta;
+    TextView textuprav;
+    TextView textceh;
+    TextView textobekt;
+    TextView texttypetu;
+    TextView textskvazhina;
+    TextView textpostion;
+    TextView NameTu;
+    String position;
+    String Papka;
+    String Name;
+    String Zakazchik;
+    int max;
+    int intposition;
 
 
     public static DatabaseHelper getDBHelper() {
@@ -53,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        context = this; // Временно!!!
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -92,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } catch (IOException mSQLException) {
             throw new Error("Ошибка обновления MainActivity 90 стр.");
         } **/
-      
+
         try {
             mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
@@ -127,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     displayMessage(getBaseContext(), "Ахтунг! Выбери объект!");
                 }else if (position.length() == 0) {
                     Cursor MaxCount = mDb.query(Zakazchik, null, null, null, null, null, null);
-                    Max = MaxCount.getCount();
+                    max = MaxCount.getCount();
                     MaxCount.close();
                     displayMessage(getBaseContext(), "Алло! Ебать! Введи число!");
                 //}else if (intposition>Max) {
@@ -151,7 +164,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     cursor.close();
                     Name = NameTy;
                 }
-
                 }
             }
         });
@@ -159,7 +171,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPhotoTu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);//кнопка вызова Фото объекта
+                Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото объекта
                 Papka = "Фото";
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", Zakazchik);
@@ -171,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPhotoDoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);//кнопка вызова Фото документов
+                Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото документов
                 Papka = "Документы";
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", Zakazchik);
@@ -183,7 +195,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPhotoKontrol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);//кнопка вызова контроля
+                Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова контроля
                 Papka = "Контроль";
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", Zakazchik);
