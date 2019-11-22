@@ -44,8 +44,6 @@ import java.util.Arrays;
 
 public class Camera extends AppCompatActivity {
 
-    CameraService myCamera = null;
-
     private CameraManager mCameraManager    = null;
     private String mCameraID;
 
@@ -61,6 +59,15 @@ public class Camera extends AppCompatActivity {
     CameraCharacteristics characteristics;
     StreamConfigurationMap map;
     Size mPreviewSize;
+
+    private CameraDevice mCameraDevice = null;
+    private CameraCaptureSession mCaptureSession;
+    private ImageReader mImageReader;
+
+    String Papka;
+    String Zakazchik;
+    String position;
+    String NameTu;
 
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
     static{
@@ -93,7 +100,6 @@ public class Camera extends AppCompatActivity {
 
         try{
             mCameraID = mCameraManager.getCameraIdList()[0];
-            myCamera = new CameraService(mCameraManager,mCameraID);
         } catch(CameraAccessException e){
             e.printStackTrace();
         }
@@ -106,14 +112,16 @@ public class Camera extends AppCompatActivity {
         map = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
         mPreviewSize = map.getOutputSizes(SurfaceTexture.class)[0];
 
-        if (myCamera != null) {
-            if (!myCamera.isOpen()) myCamera.openCamera();
-        }
+            if (mCameraDevice == null) {
+                openCamera();
+            }
 
         mButtonTakePhoto.setOnClickListener(new View.OnClickListener() {                            /** Listener mButtonTakePhoto **/
         @Override
         public void onClick(View v) {
-            if (myCamera.isOpen()) myCamera.makePhoto();
+            if (mCameraDevice == null) {
+                makePhoto();
+            }
         }
         });
 
@@ -140,19 +148,20 @@ public class Camera extends AppCompatActivity {
             } **/
         }
         });
+
+        Bundle arguments = getIntent().getExtras();
+        Papka = arguments.getString("Papka");
+        Zakazchik = arguments.getString("Zakazchik");
+        position = arguments.getString("position");
+        NameTu = arguments.getString("Name");
     } //  --- OnCreate ---
 
-    public class CameraService {                                                                    /** Class CameraService **/
 
-        private String mCameraID;
-        private CameraDevice mCameraDevice = null;
-        private CameraCaptureSession mCaptureSession;
-        private ImageReader mImageReader;
 
-        public CameraService(CameraManager cameraManager, String cameraID) {
+       /** public CameraService(CameraManager cameraManager, String cameraID) {
             mCameraManager = cameraManager;
             mCameraID = cameraID;
-        }
+        } **/
 
         public void makePhoto (){                                                                   /** makePhoto **/
             try {
@@ -175,7 +184,6 @@ public class Camera extends AppCompatActivity {
                     }
                 }; // --- CaptureCallback ---
 
-
                 mCaptureSession.stopRepeating();
                 mCaptureSession.abortCaptures();
                 mCaptureSession.capture(captureBuilder.build(), CaptureCallback, mBackgroundHandler);
@@ -187,15 +195,8 @@ public class Camera extends AppCompatActivity {
 
         }  // --- MakePhoto ---
 
-
         private final ImageReader.OnImageAvailableListener mOnImageAvailableListener                /** ImageReader **/
                 = new ImageReader.OnImageAvailableListener() {
-
-            Bundle arguments = getIntent().getExtras();
-            String Papka = arguments.getString("Papka");
-            String Zakazchik = arguments.getString("Zakazchik");
-            String position = arguments.getString("position");
-            String NameTu = arguments.getString("Name");
 
             String mFileName = "Photo_" + mNumberPhoto + ".jpg";
             File mFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM), mFileName);
@@ -207,7 +208,6 @@ public class Camera extends AppCompatActivity {
             }
 
         };
-
 
         private CameraDevice.StateCallback mCameraCallback = new CameraDevice.StateCallback() {     /** CameraDevice.StateCallback **/
 
@@ -233,7 +233,7 @@ public class Camera extends AppCompatActivity {
 
             mImageReader = ImageReader.newInstance(mPreviewSize.getWidth(),mPreviewSize.getHeight(), ImageFormat.JPEG,1);
             mImageReader.setOnImageAvailableListener(mOnImageAvailableListener, null);
-            
+
             SurfaceTexture texture = mImageView.getSurfaceTexture();
 
             texture.setDefaultBufferSize(mPreviewSize.getWidth(),mPreviewSize.getHeight());
@@ -273,14 +273,6 @@ public class Camera extends AppCompatActivity {
         } // --- createCameraPreviewSession ---
 
 
-        public boolean isOpen() {
-            if (mCameraDevice == null) {
-                return false;
-            } else {
-                return true;
-            }
-        }
-
 
         @RequiresApi(api = Build.VERSION_CODES.M)                                                      /** Request API 23 **/
 
@@ -302,20 +294,45 @@ public class Camera extends AppCompatActivity {
             }
         }
 
-    } // ------- CameraService -------------
+        TextureView.SurfaceTextureListener textureListener = new TextureView.SurfaceTextureListener() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
+            @Override
+            public void onSurfaceTextureAvailable(SurfaceTexture surfaceTexture, int i, int i1) {
+                openCamera();
+            }
+            @Override
+            public void onSurfaceTextureSizeChanged(SurfaceTexture surfaceTexture, int i, int i1) {
+            }
+            @Override
+            public boolean onSurfaceTextureDestroyed(SurfaceTexture surfaceTexture) {
+                return false;
+            }
+            @Override
+            public void onSurfaceTextureUpdated(SurfaceTexture surfaceTexture) {
+            }
+        };
 
 
     @Override
     public void onPause() {
-        if(myCamera.isOpen()){myCamera.closeCamera();}
+        if (mCameraDevice == null) {
+            closeCamera();
+        }
         stopBackgroundThread();
         super.onPause();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onResume() {
         super.onResume();
         startBackgroundThread();
+        if(mImageView.isAvailable()) {
+            openCamera();
+        }
+        else {
+            mImageView.setSurfaceTextureListener(textureListener);
+        }
     }
 
 
