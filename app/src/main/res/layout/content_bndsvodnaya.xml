@@ -59,7 +59,7 @@
             app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <EditText
+        <TextView
             android:id="@+id/TextDataNK"
             android:layout_width="165dp"
             android:layout_height="50dp"

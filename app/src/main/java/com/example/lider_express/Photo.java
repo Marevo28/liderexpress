@@ -52,13 +52,13 @@ public class Photo extends AppCompatActivity {
     public int i = 1;
     SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
     String data = sdf.format(new Date());
+    private Size imageDimension;
 
     private String mCameraID;
     private CameraManager mCameraManager;
     private CameraDevice mCameraDevice;
     private CameraCaptureSession mCameraCaptureSessions;
     private CaptureRequest.Builder captureRequestBuilder;
-    private Size imageDimension;
     private ImageReader imageReader;
 
     //Save to FILE

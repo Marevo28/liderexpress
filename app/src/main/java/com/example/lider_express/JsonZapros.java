@@ -16,6 +16,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class JsonZapros extends Thread {
+
     String position;
     String stolb27,stolb28,stolb29,stolb30,stolb31,stolb32,stolb33,stolb34,stolb35,stolb36,stolb37,stolb38,stolb39,
             stolb40,stolb41,stolb42,stolb43,stolb44,stolb45,stolb46,stolb47,stolb48,stolb49,stolb50,stolb51,stolb52,stolb53;
@@ -94,6 +95,7 @@ public class JsonZapros extends Thread {
         this.position = idp;
         this.start();
     }
+
     public void download(String positionb,String stolb27b,String stolb28b,String stolb29b,String stolb30b,String stolb31b,String stolb32b,String stolb33b,String stolb34b,String stolb35b,String stolb36b,String stolb37b,String stolb38b,String stolb39b, String stolb40b,String stolb41b,String stolb42b,String stolb43b,String stolb44b,String stolb45b,String stolb46b,String stolb47b,String stolb48b,String stolb49b,String stolb50b,String stolb51b,String stolb52b,String stolb53b) {
         this.position = positionb;
         this.stolb27 = stolb27b;

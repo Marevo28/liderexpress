@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     TextView textobekt;
     TextView texttypetu;
     TextView textskvazhina;
-    TextView textpostion;
+    EditText textpostion;
     TextView NameTu;
     String position;
     String Papka;
@@ -117,6 +118,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
 
+
                 position = textpostion.getText().toString();//сквозной номер
                 if(position.length() > 0) {
                     intposition = Integer.parseInt(position);
@@ -136,7 +138,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         break;
                 }
 
-                if (Zakazchik == "Не выбран") {
+                if (Zakazchik != "Не выбран" || position.length() != 0) {
+                        long rowCount = DatabaseUtils.queryNumEntries(mDb, Zakazchik);
+                    if(Integer.parseInt(position) > rowCount){
+                        displayMessage(getBaseContext(), "Такого нет, понимаешь!?");
+                    }else{
+                        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                        imm.hideSoftInputFromWindow(btnpostion.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                        btnSvodnaya.setEnabled(true);
+                        btnPhotoTu.setEnabled(true);
+                        btnPhotoDoc.setEnabled(true);
+                        btnPhotoKontrol.setEnabled(true);
+                        Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position}, null, null, null);
+                        cursor.moveToFirst();
+                        texttypetu.setText(cursor.getString(2));//Тип оборудования
+                        textuprav.setText(cursor.getString(5));// Управление
+                        textceh.setText(cursor.getString(14));//Цех
+                        textobekt.setText(cursor.getString(15));//объект
+                        textskvazhina.setText(cursor.getString(16));//скважина
+                        String NameTy = cursor.getString(7);//Наименование устройства
+                        NameTu.setText(NameTy);
+                        cursor.close();
+                        Name = NameTy;
+                    }
+                }else{
+                    displayMessage(getBaseContext(), "Ахтунг! Выбери объект!");
+                }
+
+
+
+
+           /**     if (Zakazchik == "Не выбран") {
                     displayMessage(getBaseContext(), "Ахтунг! Выбери объект!");
                 }else if (position.length() == 0) {
                     Cursor MaxCount = mDb.query(Zakazchik, null, null, null, null, null, null);
@@ -163,7 +195,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     NameTu.setText(NameTy);
                     cursor.close();
                     Name = NameTy;
-                }
+                } **/
+
+
                 }
             }
         });
@@ -171,7 +205,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPhotoTu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);//кнопка вызова Фото объекта
+                Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото объекта
                 Papka = "Фото";
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", Zakazchik);
@@ -183,7 +217,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPhotoDoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);//кнопка вызова Фото документов
+                Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото документов
                 Papka = "Документы";
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", Zakazchik);
@@ -195,7 +229,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPhotoKontrol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Photo.class);//кнопка вызова контроля
+                Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова контроля
                 Papka = "Контроль";
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", Zakazchik);
@@ -222,6 +256,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        // Thread stop
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        // Thread resume
+
     }
 
     @Override

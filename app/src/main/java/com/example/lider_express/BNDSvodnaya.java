@@ -133,20 +133,32 @@ public class BNDSvodnaya extends AppCompatActivity {
             throw mSQLException;
         }
 
-         defects = TextDefects.getText().toString();
-         note = TextNote.getText().toString();
-         prichina = TextPrichinaIskl.getText().toString();
-
         Bundle arguments = getIntent().getExtras();
         position = arguments.getString("position");
 
         Cursor cursor = mDb.query("ZayavkaBND", null, "POSITION = ?", new String[]{position}, null, null, null);
         cursor.moveToFirst();
 
-        setStringFromBD(cursor, dataexperts, TextDataExp, 27);
-        setStringFromBD(cursor, experts, textexperts, 28);
-        setStringFromBD(cursor, dataspec, TextDataSpec, 29);
-        setStringFromBD(cursor, spec, textdefek, 30);
+
+        if (cursor.getString(27) != null) {
+            dataexperts = cursor.getString(27);
+            TextDataExp.setText(dataexperts);
+        }
+
+
+        if (cursor.getString(28) != null) {
+            experts = cursor.getString(28);
+            textexperts.setText(experts);
+        }
+        if (cursor.getString(29) != null) {
+            dataspec = cursor.getString(29);
+            TextDataSpec.setText(dataspec);
+        }
+        if (cursor.getString(30) != null) {
+            spec = cursor.getString(30);
+            textdefek.setText(spec);
+        }
+
 
         if (cursor.getString(31) != null) {
             ispol = cursor.getString(31);
@@ -253,8 +265,15 @@ public class BNDSvodnaya extends AppCompatActivity {
             }
         });
 
-        setStringFromBD(cursor, nachostanovka, TextNachOstanov, 37);
-        setStringFromBD(cursor, konostanovka, TextKonOstanov, 38);
+        if (cursor.getString(37) != null) {
+            nachostanovka = cursor.getString(37);
+            TextNachOstanov.setText(nachostanovka);
+        }
+
+        if (cursor.getString(38) != null) {
+            konostanovka = cursor.getString(38);
+            TextKonOstanov.setText(konostanovka);
+        }
 
         if (cursor.getString(39) != null) {
             osmotrel = cursor.getString(39);
@@ -274,9 +293,19 @@ public class BNDSvodnaya extends AppCompatActivity {
             }
         });
 
-        setStringFromBD(cursor, datanegotovnosti, TextDataActNegot, 45);
-        setStringFromBD(cursor, datank, TextDataNK, 46);
-        setStringFromBD(cursor, irlspec, textirldefek, 47);
+        if (cursor.getString(45) != null) {
+            datanegotovnosti = cursor.getString(38);
+            TextDataActNegot.setText(datanegotovnosti);
+        }
+        if (cursor.getString(46) != null) {
+            datank = cursor.getString(38);
+            TextDataNK.setText(datank);
+        }
+        if (cursor.getString(47) != null) {
+            irlspec = cursor.getString(38);
+            textirldefek.setText(irlspec);
+        }
+
 
         if (cursor.getString(48) != null) {
             doki = cursor.getString(48);
@@ -361,6 +390,12 @@ public class BNDSvodnaya extends AppCompatActivity {
         ButZapisat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // EditText
+                defects = TextDefects.getText().toString();
+                note = TextNote.getText().toString();
+                prichina = TextPrichinaIskl.getText().toString();
+
                 ContentValues initialValues = new ContentValues();
                 initialValues.put(POSITION, position);
                 initialValues.put("Stolb27", dataexperts);
@@ -398,13 +433,6 @@ public class BNDSvodnaya extends AppCompatActivity {
                 startActivity(IntentSittings);
             }
         });
-    }
-
-    public void setStringFromBD(Cursor c, String value_1, TextView value_2, int id){
-        if (c.getString(id) != null) {
-            value_1 = c.getString(id);
-            value_2.setText(value_1);
-        }
     }
 
 
@@ -512,8 +540,8 @@ public class BNDSvodnaya extends AppCompatActivity {
         }
     };
 
-    public static String text(EditText a1){
-        String str = a1.getText().toString();
+    public static String getTextFromEdit(EditText editText){
+        String str = editText.getText().toString();
         return str;
     }
 
