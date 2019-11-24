@@ -15,22 +15,17 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Synchronization extends AppCompatActivity {
     public DatabaseHelper mDBHelper;
     public SQLiteDatabase mDb;
 
-    Button btnpostion;
     int i;
-    int n = 1;
-    EditText textuprav;
-    EditText textceh;
-    EditText textobekt;
-    EditText texttypetu;
-    EditText textskvazhina;
+    Button btnpostion;
+    TextView TextKolvoZap;
     EditText textpostion;
-    EditText NameTu;
     String position;
     String stolb27;
     String stolb28;
@@ -68,39 +63,22 @@ public class Synchronization extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         btnpostion = (Button) findViewById(R.id.btnposition);
-        textuprav = (EditText) findViewById(R.id.textuprav);
-        textceh = (EditText) findViewById(R.id.textceh);
-        textobekt = (EditText) findViewById(R.id.textobekt);
-        texttypetu = (EditText) findViewById(R.id.texttypetu);
-        textskvazhina = (EditText) findViewById(R.id.textskvazhina);
         textpostion = (EditText) findViewById(R.id.textpositon);
+        TextKolvoZap = (TextView) findViewById(R.id.TextKolvoZap);
         mDBHelper = MainActivity.getDBHelper();// new DatabaseHelper(this);// подклчюение к БД
         try {
             mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
             throw mSQLException;
         }
-    }
-    public void onSync(View view){
-        Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null,
-                null, null, null, null, null);
-        String count = String.valueOf(defectBND.getCount());
-        displayMessage(getBaseContext(), count);
-        defectBND.close();
-       //position=textpostion.getText().toString();
-       //zapros = new JsonZapros();
-       //zapros.start(position);
-       //try{
-       //    zapros.join();
-       //}catch (InterruptedException ie){
-       //    Log.e("pass 0",ie.getMessage());
-       //}
-       //uprav = zapros.resname();
-       //ceh = zapros.ressurname();
-       //obekt = zapros.resmiddlename();
-       //textuprav.setText(uprav);
-       //textceh.setText(ceh);
-       //textobekt.setText(obekt);
+        btnpostion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
+                TextKolvoZap.setText("Количество записей в базе: " + defectBND.getCount());
+                defectBND.close();
+            }
+        });
     }
 
     public void onDown(View view) {
@@ -175,8 +153,9 @@ public class Synchronization extends AppCompatActivity {
             } catch (InterruptedException ie) {
                 Log.e("pass 0", ie.getMessage());
             }
-            displayMessage(getBaseContext(), "отправлено"+zapros.reposition());
+            displayMessage(getBaseContext(), "отправлено: "+zapros.reposition());
             mDb.delete("DefectBND", "Position = " + zapros.reposition(), null);
+            TextKolvoZap.setText("Количество записей в базе: " + defectBND.getCount());
         }
     }
 

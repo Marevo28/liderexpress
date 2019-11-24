@@ -7,83 +7,44 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Synchronization"
     tools:showIn="@layout/activity_synchronization">
+
     <Button
         android:id="@+id/btnposition"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:text="ОК"
-        android:onClick="onSync"
-        app:layout_constraintStart_toStartOf="@+id/textpositon"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
+        android:text="Узнать кол-во записей"
+        app:layout_constraintStart_toStartOf="@+id/TextKolvoZap"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/textpositon"
-        android:layout_width="140dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/textuprav"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:text="password"
-        app:layout_constraintStart_toStartOf="@+id/texttypetu"
-        app:layout_constraintTop_toBottomOf="@+id/texttypetu" />
-
-    <EditText
-        android:id="@+id/texttypetu"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="16dp"
-        android:text="login"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/textceh"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:text="first"
-        app:layout_constraintStart_toStartOf="@+id/texttypetu"
-        app:layout_constraintTop_toBottomOf="@+id/textuprav" />
-
-    <EditText
-        android:id="@+id/textobekt"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:text="last"
-        app:layout_constraintStart_toStartOf="@+id/texttypetu"
-        app:layout_constraintTop_toBottomOf="@+id/textceh" />
-
-    <EditText
-        android:id="@+id/textskvazhina"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:text="Скважина"
-        app:layout_constraintStart_toStartOf="@+id/texttypetu"
-        app:layout_constraintTop_toBottomOf="@+id/textobekt" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="320dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="72dp"
-        android:text="Отправка данных"
+        android:layout_height="40dp"
+        android:layout_marginTop="112dp"
         android:onClick="onDown"
+        android:text="Отправка данных"
+        app:layout_constraintStart_toStartOf="@+id/btnposition"
+        app:layout_constraintTop_toBottomOf="@+id/btnposition" />
+
+    <TextView
+        android:id="@+id/TextKolvoZap"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:text="Количество записей в базе:"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textskvazhina" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="148dp"
+        android:text="Обновление сводной"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

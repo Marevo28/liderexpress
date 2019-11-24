@@ -1,28 +1,17 @@
 
-esquid:MaximumInheritanceDepth!"<This class has 6 parents which is greater than 5 authorized.(¥¸®½
->squid:S1659'""Declare "davl" on a separate line.(ûÄÍùÿÿÿÿ
-Hsquid:S1659(",Declare "textTempreture" on a separate line.(ûÏæ…øÿÿÿÿ
-9squid:S1659&""Declare "temp" on a separate line.(ÿøüÃ
-;squid:S1659%"Declare "d" on a separate line.(—–Üşÿÿÿÿ
-=squid:S1659%"!Declare "niz" on a separate line.(—–Üşÿÿÿÿ
-isquid:UselessImportCheck"FRemove this unused import 'androidx.drawerlayout.widget.DrawerLayout'.(çÊş
-Xsquid:UselessImportCheck"4Remove this unused import 'android.content.Context'.(©Ê‰è
-Zsquid:UselessImportCheck"1Remove this unused import 'android.widget.Toast'.(©›ïÍúÿÿÿÿ
-hsquid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(Ì¶³{8ÉÈ¤Šä-
-‹squid:UselessImportCheck
-"bRemove this unused import 'com.google.android.material.floatingactionbutton.FloatingActionButton'.(ôˆêãÿÿÿÿÿ
-fsquid:UselessImportCheck"=Remove this unused import 'androidx.core.view.GravityCompat'.(…Ü…çÿÿÿÿÿ
->squid:S1659%""Declare "verh" on a separate line.(—–Üşÿÿÿÿ
-;squid:S1659%"Declare "a" on a separate line.(—–Üşÿÿÿÿ
-;squid:S1659%"Declare "b" on a separate line.(—–Üşÿÿÿÿ
-nsquid:S2737@"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ
-ˆ"squid:ClassVariableVisibilityCheck""UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ
-{squid:UselessImportCheck"RRemove this unused import 'com.google.android.material.navigation.NavigationView'.(Û²òÿÿÿÿÿ
-Vsquid:UselessImportCheck"2Remove this unused import 'android.view.MenuItem'.(Ğ¬Ó‘
-;squid:S1659%"Declare "c" on a separate line.(—–Üşÿÿÿÿ
-?squid:S1659'"#Declare "sigma" on a separate line.(ûÄÍùÿÿÿÿ
-‚"squid:ClassVariableVisibilityCheck#"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ
-Vsquid:UselessImportCheck"3Remove this unused import 'android.content.Intent'.(³ğ‹G
-Rsquid:UselessImportCheck".Remove this unused import 'android.view.Menu'.(£¯Ò…
-nsquid:UselessImportCheck"JRemove this unused import 'com.google.android.material.snackbar.Snackbar'.(ë„ƒŠ
-<squid:S1659&"%Declare "nizhnee" on a separate line.(ÿøüÃ
+;squid:S1659"Declare "c" on a separate line.(—–Üşÿÿÿÿ
+<squid:S1659"%Declare "nizhnee" on a separate line.(ÿøüÃ
+esquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(¥¸®½
+;squid:S1659"Declare "d" on a separate line.(—–Üşÿÿÿÿ
+>squid:S1659""Declare "davl" on a separate line.(ûÄÍùÿÿÿÿ
+>squid:S1659""Declare "verh" on a separate line.(—–Üşÿÿÿÿ
+=squid:S1659"!Declare "niz" on a separate line.(—–Üşÿÿÿÿ
+?squid:S1659"#Declare "sigma" on a separate line.(ûÄÍùÿÿÿÿ
+9squid:S1659""Declare "temp" on a separate line.(ÿøüÃ
+;squid:S1659"Declare "b" on a separate line.(—–Üşÿÿÿÿ
+nsquid:S27376"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ
+‚"squid:ClassVariableVisibilityCheck"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ
+;squid:S1659"Declare "a" on a separate line.(—–Üşÿÿÿÿ
+ˆ"squid:ClassVariableVisibilityCheck"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ
+Hsquid:S1659",Declare "textTempreture" on a separate line.(ûÏæ…øÿÿÿÿ
+hsquid:CommentedOutCodeLine-"<This block of commented-out lines of code should be removed.(Ì¶³{8ÉÈ¤Šä-
