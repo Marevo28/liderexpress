@@ -32,5 +32,6 @@ dependencies {
     implementation 'org.apache:apache:21'
     implementation project(path: ':apache-httpcomponents-httpclient')
     implementation project(path: ':apache-httpcomponents-httpcore')
+    implementation 'commons-logging:commons-logging:1.1.1'
 
 }
