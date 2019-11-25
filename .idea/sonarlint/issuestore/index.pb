@@ -5,8 +5,6 @@ l
 <app/src/main/java/com/example/lider_express/BNDSvodnaya.java,7\c\7c9e8ae0158e053540542e42ef88e065fdc980b5
 q
 Aapp/src/main/java/com/example/lider_express/SittingsActivity.java,f\c\fcb14c07dae8becdd24e23e0c668637da758a73a
-o
-?app/src/main/java/com/example/lider_express/DatabaseHelper.java,5\f\5f65c9aa62f958fbf0a4da1bca3e8fb9c59b9b08
 m
 =app/src/main/java/com/example/lider_express/Position_BND.java,2\e\2eac91099420f7e5e80e815cf1c8f9fd1967709a
 @
