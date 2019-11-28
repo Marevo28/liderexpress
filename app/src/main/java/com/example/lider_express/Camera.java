@@ -35,6 +35,7 @@ import android.widget.ToggleButton;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import java.io.File;
@@ -58,11 +59,16 @@ public class Camera extends AppCompatActivity {
     private String cameraID;
 
     private Button mButtonTakePhoto = null;
-    private Button mButtonFlash = null;
+    private ToggleButton mButtonFlash = null;
+    private boolean mFlashFlag = false;
     private Button mButtonBrightness = null;
     private TextureView mTextureView = null;
     private HandlerThread mBackgroundThread;
     private Handler mBackgroundHandler = null;
+    private static final int REQUEST_CAMERA_PERMISSION = 200;
+
+    public AppCompatActivity appCompatActivity;
+    public Context context;
 
     String Papka;
     String Zakazchik;
@@ -83,15 +89,11 @@ public class Camera extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo);
 
-        if ( checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED ||
-                (ContextCompat.checkSelfPermission(Camera.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
-        ) // if
-        {
-            requestPermissions(new String[]{Manifest.permission.CAMERA,Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
-        }
+        appCompatActivity = this;
+        context = this;
 
         mButtonTakePhoto =  findViewById(R.id.btnCapture);
-       // mButtonFlash =  findViewById(R.id.btnFlash);
+        mButtonFlash =  findViewById(R.id.btnFlash);
         mButtonBrightness =findViewById(R.id.btnBrightness);
         mTextureView = findViewById(R.id.textureView);
 
@@ -119,6 +121,19 @@ public class Camera extends AppCompatActivity {
             }
         });
 
+        mButtonFlash.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if(mButtonFlash.isChecked()){
+                    mFlashFlag = true;
+                }else{
+                    mFlashFlag = false;
+                }
+            }
+        });
+
+
+
         Bundle arguments = getIntent().getExtras();
         Papka = arguments.getString("Papka");
         Zakazchik = arguments.getString("Zakazchik");
@@ -126,8 +141,17 @@ public class Camera extends AppCompatActivity {
         NameTu = arguments.getString("Name");
     } //  --- OnCreate ---
 
-
-
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(requestCode == REQUEST_CAMERA_PERMISSION)
+        {
+            if(grantResults[0] != PackageManager.PERMISSION_GRANTED)
+            {
+                Toast.makeText(this, "You can't use camera without permission", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        }
+    }
 
 
 
@@ -141,6 +165,9 @@ public class Camera extends AppCompatActivity {
         private ImageReader mImageReader;
         private int mImageWidth;
         private int mImageHeight;
+        private CaptureRequest.Builder builder;
+
+        private CaptureRequest.Builder mBuilder;
 
         public CameraService(CameraManager cameraManager, String cameraID) {
             mCameraManager = cameraManager;
@@ -154,6 +181,14 @@ public class Camera extends AppCompatActivity {
                         mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_STILL_CAPTURE);
 
                 captureBuilder.addTarget(mImageReader.getSurface());
+
+                if(mFlashFlag) {
+                    builder.set(CaptureRequest.FLASH_MODE, CaptureRequest.FLASH_MODE_SINGLE);
+                    mCaptureSession.setRepeatingRequest(builder.build(), null, null);
+                }else{
+                    builder.set(CaptureRequest.FLASH_MODE, CaptureRequest.FLASH_MODE_OFF);
+                    mCaptureSession.setRepeatingRequest(builder.build(), null, null);
+                }
 
                 int rotation = getWindowManager().getDefaultDisplay().getRotation();
                 captureBuilder.set(CaptureRequest.JPEG_ORIENTATION,ORIENTATIONS.get(rotation));
@@ -237,11 +272,9 @@ public class Camera extends AppCompatActivity {
             Surface surface = new Surface(texture);
 
             try {
-                final CaptureRequest.Builder builder =
-                        mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
 
+                builder = mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
                 builder.addTarget(surface);
-
                 mCameraDevice.createCaptureSession(Arrays.asList(surface,mImageReader.getSurface()),
                         new CameraCaptureSession.StateCallback() {
                             // =========================================
@@ -281,9 +314,16 @@ public class Camera extends AppCompatActivity {
         public void openCamera() {
             try {
 
-                if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
-                    mCameraManager.openCamera(mCameraID,mCameraCallback,mBackgroundHandler);
+                if(ActivityCompat.checkSelfPermission(context, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)
+                {
+                    ActivityCompat.requestPermissions(appCompatActivity,new String[]{
+                            Manifest.permission.CAMERA,
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE
+                    },REQUEST_CAMERA_PERMISSION);
+                    return;
                 }
+                    mCameraManager.openCamera(mCameraID,mCameraCallback,mBackgroundHandler);
+
             } catch (CameraAccessException e) {
             }
         } // - openCamera -

@@ -22,12 +22,14 @@
         android:orientation="horizontal"
         android:layout_weight="1">
 
-        <Button
+        <ToggleButton
             android:id="@+id/btnFlash"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
-           <!-- android:background="@drawable/selector_button_flash"-->
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_flash"
+            android:textOn=""
+            android:textOff=""/>
 
 
         <Button
@@ -42,8 +44,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background = "@drawable/ic_settings_brightness_black_64dp" />
-
     </LinearLayout>
+
 </LinearLayout>
 
 </FrameLayout>

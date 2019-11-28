@@ -31,6 +31,8 @@ import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import android.widget.ToggleButton;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -46,8 +48,9 @@ import java.util.UUID;
 
 public class Photo extends AppCompatActivity {
 
-    private Button tackPhoto;
-    private Button flash;
+    private Button mTakePhoto;
+    private ToggleButton mButtonFlash;
+    private Button mButtonBrightness;
     private TextureView textureView;
     public int i = 1;
     SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
@@ -67,9 +70,9 @@ public class Photo extends AppCompatActivity {
     private static final int REQUEST_CAMERA_PERMISSION = 200;
     private final int CAMERA1 = 0;
     private final int CAMERA2 = 1;
-    private boolean mFlashSupported;
     private Handler mBackgroundHandler;
     private HandlerThread mBackgroundThread;
+    private CameraCaptureSession.CaptureCallback captureListener;
     //Check state orientation of output image
 
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
@@ -88,15 +91,51 @@ public class Photo extends AppCompatActivity {
         //From Java 1.4 , you can use keyword 'assert' to check expression true or false
         assert textureView != null;
         textureView.setSurfaceTextureListener(textureListener);
-        tackPhoto = findViewById(R.id.btnCapture);
+        mTakePhoto = findViewById(R.id.btnCapture);
+        mButtonFlash = findViewById(R.id.btnFlash);
 
-
-        tackPhoto.setOnClickListener(new View.OnClickListener() {
+        mTakePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 takePicture();
             }
         });
+
+        mButtonFlash.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if(mButtonFlash.isChecked()){
+                    if (captureRequestBuilder != null) {
+                        captureRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE,
+                                CaptureRequest.CONTROL_AE_MODE_ON_ALWAYS_FLASH);
+                        captureRequestBuilder.set(CaptureRequest.FLASH_MODE,
+                                CaptureRequest.FLASH_MODE_OFF);
+                        if (mCameraCaptureSessions != null) {
+                            try {
+                                mCameraCaptureSessions.setRepeatingRequest(captureRequestBuilder.build(),
+                                        captureListener, null);
+                            } catch (CameraAccessException e) {
+                            }
+                        }
+                    }
+                }else{
+                    captureRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE,
+                            CaptureRequest.CONTROL_AE_MODE_ON);
+                    captureRequestBuilder.set(CaptureRequest.FLASH_MODE,
+                            CaptureRequest.FLASH_MODE_OFF);
+                        if (mCameraCaptureSessions != null) {
+                            try {
+                                mCameraCaptureSessions.setRepeatingRequest(captureRequestBuilder.build(),
+                                        captureListener, null);
+                            } catch (CameraAccessException e) {
+                            }
+                        }
+                    }
+                }
+
+        });
+
+
     }
 
         CameraDevice.StateCallback stateCallback = new CameraDevice.StateCallback() {
@@ -117,27 +156,18 @@ public class Photo extends AppCompatActivity {
             cameraDevice.close();
             mCameraDevice = null;
         }
-    };
+    }; // stateCallback
 
     private void takePicture() {
+
         if(mCameraDevice == null)
             return;
         CameraManager manager = (CameraManager)getSystemService(Context.CAMERA_SERVICE);
         try{
-            CameraCharacteristics characteristics = manager.getCameraCharacteristics(mCameraDevice.getId());
 
-            Size[] jpegSizes = null;
-            if(characteristics != null)
-                jpegSizes = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP)
-                        .getOutputSizes(ImageFormat.JPEG);
-            //Capture image with custom size
-            int width = 1280;
-            int height = 960;
-            if(jpegSizes != null && jpegSizes.length > 0)
-            {
-                width = jpegSizes[0].getWidth();
-                height = jpegSizes[0].getHeight();
-            }
+            int width = MainActivity.getDisplayWidth();
+            int height = MainActivity.getDisplayHeight();
+
             final ImageReader reader = ImageReader.newInstance(width,height,ImageFormat.JPEG,1);
 
             List<Surface> outputSurface = new ArrayList<>(2);
@@ -153,15 +183,17 @@ public class Photo extends AppCompatActivity {
             int rotation = getWindowManager().getDefaultDisplay().getRotation();
             captureBuilder.set(CaptureRequest.JPEG_ORIENTATION,ORIENTATIONS.get(rotation));
 
+
             Bundle arguments = getIntent().getExtras();
             String Papka = arguments.getString("Papka");
             String Zakazchik = arguments.getString("Zakazchik");
             String position = arguments.getString("position");
             String NameTu = arguments.getString("Name");
-            path = new File(Environment.getExternalStorageDirectory()+"/"+Zakazchik+"/"+position+"_"+NameTu+"/"+Papka);
+            path = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)
+                    + "/" + "Job" + "/" + Zakazchik+"/"+position+"_"+NameTu+"/"+Papka);
             path.mkdirs();
 
-            file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM), "Фоточка_" + i + ".jpg");
+            file = new File(path, "Фоточка_" + i + ".jpg");
             i++;
 
             ImageReader.OnImageAvailableListener mOnImageAvailableListener
@@ -206,7 +238,8 @@ public class Photo extends AppCompatActivity {
 
             reader.setOnImageAvailableListener(mOnImageAvailableListener,mBackgroundHandler);
 
-            final CameraCaptureSession.CaptureCallback captureListener = new CameraCaptureSession.CaptureCallback() {
+            /** captureListener **/
+            captureListener = new CameraCaptureSession.CaptureCallback() {
                 @Override
                 public void onCaptureCompleted(@NonNull CameraCaptureSession session, @NonNull CaptureRequest request, @NonNull TotalCaptureResult result) {
                     super.onCaptureCompleted(session, request, result);
@@ -214,6 +247,7 @@ public class Photo extends AppCompatActivity {
                     createCameraPreview();
                 }
             };
+
 
             mCameraDevice.createCaptureSession(outputSurface, new CameraCaptureSession.StateCallback() {
                 @Override
@@ -243,9 +277,13 @@ public class Photo extends AppCompatActivity {
             assert  texture != null;
             texture.setDefaultBufferSize(imageDimension.getWidth(),imageDimension.getHeight());
             Surface surface = new Surface(texture);
+
             captureRequestBuilder = mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
+
             captureRequestBuilder.addTarget(surface);
-            mCameraDevice.createCaptureSession(Arrays.asList(surface), new CameraCaptureSession.StateCallback() {
+
+            mCameraDevice.createCaptureSession(Arrays.asList(surface),
+                    new CameraCaptureSession.StateCallback() {
                 @Override
                 public void onConfigured(@NonNull CameraCaptureSession cameraCaptureSession) {
                     if(mCameraDevice == null)
@@ -299,7 +337,8 @@ public class Photo extends AppCompatActivity {
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
-    }
+    } //  - openCamera -
+
 
     TextureView.SurfaceTextureListener textureListener = new TextureView.SurfaceTextureListener() {
         @Override
