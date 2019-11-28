@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Point;
 import android.os.Bundle;
 
 import androidx.core.view.GravityCompat;
@@ -19,7 +20,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.view.Display;
 import android.view.Menu;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,27 +38,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private static DatabaseHelper mDBHelper;
     public static Context context; // Временно !!!!!
 
+    private static int mDisplayWidth;
+    private static int mDisplayHeight;
+
+
+
     public SQLiteDatabase mDb;
     SharedPreferences mSettings;
-    Button btnpostion;
-    Button btnSvodnaya;
-    Button btnPhotoTu;
-    Button btnPhotoDoc;
-    Button btnPhotoKontrol;
-    Button btnKarta;
-    TextView textuprav;
-    TextView textceh;
-    TextView textobekt;
-    TextView texttypetu;
-    TextView textskvazhina;
-    EditText textpostion;
-    TextView NameTu;
-    String position;
-    String Papka;
-    String Name;
-    String Zakazchik;
+    private Button btnpostion;
+    private Button btnSvodnaya;
+    private Button btnPhotoTu;
+    private Button btnPhotoDoc;
+    private Button btnPhotoKontrol;
+    private Button btnKarta;
+    private TextView textuprav;
+    private TextView textceh;
+    private TextView textobekt;
+    private TextView texttypetu;
+    private TextView textskvazhina;
+    private EditText textpostion;
+    private TextView NameTu;
+    private String position;
+    private String Papka;
+    private String Name;
+    private String Zakazchik;
     int max;
     int intposition;
+
 
 
     public static DatabaseHelper getDBHelper() {
@@ -76,6 +85,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        iniWH(); // Инициализировать высоту и ширину устройства - (Для камеры)
 
         btnpostion = (Button) findViewById(R.id.btnposition);
         btnSvodnaya = (Button) findViewById(R.id.btnSvodnaya);
@@ -118,11 +129,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
 
-
                 position = textpostion.getText().toString();//сквозной номер
                 if(position.length() > 0) {
                     intposition = Integer.parseInt(position);
-                String Zakazchik = mSettings.getString(APP_ZAKAZCHIK, "не определено");
+                Zakazchik = mSettings.getString(APP_ZAKAZCHIK, "не определено");
 
                 switch (Zakazchik) {
                     case "Башнефть 2019":
@@ -246,6 +256,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(IntentSittings);
             }
         });
+    }
+
+    private void iniWH(){  // Ширина и высота экрана устройства
+    WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+    Display display = wm.getDefaultDisplay();
+    Point size = new Point();
+    display.getSize(size);
+
+    mDisplayWidth = size.x;
+    mDisplayHeight = size.y;
+    }
+
+    public static int getDisplayWidth(){
+        return mDisplayWidth;
+    }
+
+    public static int getDisplayHeight(){
+        return mDisplayHeight;
     }
 
     @Override

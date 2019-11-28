@@ -139,6 +139,7 @@ public class Photo extends AppCompatActivity {
                 height = jpegSizes[0].getHeight();
             }
             final ImageReader reader = ImageReader.newInstance(width,height,ImageFormat.JPEG,1);
+
             List<Surface> outputSurface = new ArrayList<>(2);
             outputSurface.add(reader.getSurface());
             outputSurface.add(new Surface(textureView.getSurfaceTexture()));
@@ -233,6 +234,7 @@ public class Photo extends AppCompatActivity {
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
+
     } // Take picture
 
     private void createCameraPreview() {

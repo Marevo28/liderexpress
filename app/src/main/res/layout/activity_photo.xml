@@ -21,31 +21,29 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:layout_weight="1">
+
         <Button
             android:id="@+id/btnFlash"
-            android:text="Flash"
-            android:layout_alignParentBottom="true"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
+           <!-- android:background="@drawable/selector_button_flash"-->
+
 
         <Button
             android:id="@+id/btnCapture"
-            android:text="CAPTURE"
-            android:layout_alignParentBottom="true"
+            android:text="Take Photo"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="5"/>
+        <Button
+            android:id="@+id/btnBrightness"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background = "@drawable/ic_settings_brightness_black_64dp" />
 
     </LinearLayout>
 </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageFlash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="550dp"
-        android:layout_marginLeft="10dp"
-        android:src="@drawable/ic_flash_off_white_64dp"/>
 
 </FrameLayout>
