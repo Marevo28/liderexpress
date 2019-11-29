@@ -10,10 +10,8 @@ import android.hardware.camera2.CameraCaptureSession;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraDevice;
 import android.hardware.camera2.CameraManager;
-import android.hardware.camera2.CameraMetadata;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.TotalCaptureResult;
-import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.Image;
 import android.media.ImageReader;
 import android.os.Build;
@@ -21,16 +19,13 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.util.Log;
 import android.util.Range;
-import android.util.Size;
 import android.util.SparseIntArray;
 import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -39,19 +34,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.attribute.FileAttribute;
-import java.nio.file.attribute.PosixFilePermission;
-import java.nio.file.attribute.PosixFilePermissions;
 import java.util.Arrays;
-import java.util.Set;
 
 public class Camera extends AppCompatActivity {
 
@@ -120,10 +108,6 @@ public class Camera extends AppCompatActivity {
         assert mTextureView != null;
         mTextureView.setSurfaceTextureListener(textureListener);
 
-      //  if (myCameras != null) {
-      //      if (!myCameras.isOpen()) myCameras.openCamera();
-      //  }
-
         mButtonTakePhoto.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -189,11 +173,7 @@ public class Camera extends AppCompatActivity {
         }
     }
 
-
-
     public class CameraService {                                                                    /** Class CameraService **/
-
-    int i = 0;
 
         private String mCameraID;
         private CameraDevice mCameraDevice = null;
@@ -204,6 +184,7 @@ public class Camera extends AppCompatActivity {
         private CaptureRequest.Builder mBuilder;
         private int minCompensationRange = 0;
         private int maxCompensationRange = 10;
+        private RWClass rwClass = new RWClass();
 
         public CameraService(CameraManager cameraManager, String cameraID) {
             mCameraManager = cameraManager;
@@ -249,8 +230,6 @@ public class Camera extends AppCompatActivity {
               //  mCaptureSession.stopRepeating();
               //  mCaptureSession.abortCaptures();
                 mCaptureSession.capture(captureBuilder.build(), CaptureCallback, mBackgroundHandler);
-
-
             } catch (CameraAccessException e)
             {
                 e.printStackTrace();
@@ -265,13 +244,36 @@ public class Camera extends AppCompatActivity {
 
             @Override
             public void onImageAvailable(ImageReader reader) {
-                i++;
                 File mFile = new File(Environment.
                         getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)
                            + "/Job"
                            + "/" + Zakazchik + "/" + position + "_" + NameTu + "/" + Papka);
                 mFile.mkdirs();
-                File mFileWrite = new File(mFile, "Photo" + String.valueOf(i) + ".jpg");
+
+                rwClass.setPath(mFile.toString());  // Указываем путь
+
+                int countPhoto = 0;
+                try {
+                    countPhoto = rwClass.getCountPhoto();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                File mFileWrite = new File(mFile, "Photo" + countPhoto + ".jpg");
+
+                String fullPath = "DCIM" + "/Job" + "/" + Zakazchik + "/" + position + "_" + NameTu + "/"
+                        + Papka + "Photo" + countPhoto + ".jpg";
+
+                try {
+                    rwClass.writeCountPhoto(countPhoto); //Записываем в текст файл
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        fullPath, Toast.LENGTH_SHORT);
+                toast.show();
+
                 mBackgroundHandler.post(new ImageSaver(reader.acquireNextImage(), mFileWrite));
             }
         };
@@ -371,6 +373,7 @@ public class Camera extends AppCompatActivity {
         }
         /** ------------------------------------------ Range ----------------------------------- **/
 
+        /** ==================================== setBrightness ================================= **/
         public void setBrightness(int value) {
             int brightness = (int) (minCompensationRange + (maxCompensationRange - minCompensationRange) * (value / 100f));
             mBuilder.set(CaptureRequest.CONTROL_AE_EXPOSURE_COMPENSATION, brightness);
@@ -380,6 +383,7 @@ public class Camera extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+        /** --------------------------------- setBrightness ----------------------------------- **/
 
 
         public boolean isOpen() {
@@ -433,7 +437,7 @@ public class Camera extends AppCompatActivity {
 
 
 
-
+    /** ================================== textureListener ====================================== **/
     TextureView.SurfaceTextureListener textureListener = new TextureView.SurfaceTextureListener() {
         @RequiresApi(api = Build.VERSION_CODES.M)
         @Override
@@ -451,8 +455,10 @@ public class Camera extends AppCompatActivity {
         public void onSurfaceTextureUpdated(SurfaceTexture surfaceTexture) {
         }
     };
+    /** ------------------------------------ textureListener ----------------------------------- **/
 
 
+    /** ==================================== ImageSaver ======================================== **/
     private static class ImageSaver implements Runnable {                                           /** ImageSaver **/
 
         /**
@@ -493,6 +499,7 @@ public class Camera extends AppCompatActivity {
         } // -- run() --
 
     } // --- ImageSaver ---
+    /** ------------------------------------ ImageSaver --------------------------------------- **/
 
     private void startBackgroundThread() {
         mBackgroundThread = new HandlerThread("CameraBackground");
