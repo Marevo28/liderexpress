@@ -5,8 +5,6 @@ l
 <app/src/main/java/com/example/lider_express/BNDSvodnaya.java,7\c\7c9e8ae0158e053540542e42ef88e065fdc980b5
 q
 Aapp/src/main/java/com/example/lider_express/SittingsActivity.java,f\c\fcb14c07dae8becdd24e23e0c668637da758a73a
-m
-=app/src/main/java/com/example/lider_express/Position_BND.java,2\e\2eac91099420f7e5e80e815cf1c8f9fd1967709a
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 i
@@ -23,3 +21,7 @@ p
 @app/src/main/java/com/example/lider_express/Synchronization.java,e\1\e13880276d2a6280a9bf6af266269923e7a200fb
 f
 6app/src/main/java/com/example/lider_express/Photo.java,6\b\6b98a2f0b4b599e563413d950a4ecf64d09fde54
+n
+>app/src/main/java/com/example/lider_express/BNDblochkaUDE.java,d\3\d39e792e633738ae3ec224f1686ae5be62a5c0ea
+g
+7app/src/main/java/com/example/lider_express/Camera.java,c\1\c1df44eca1f7911f8a6e4763df237f298eefcc6b

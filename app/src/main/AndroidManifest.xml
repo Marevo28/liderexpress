@@ -5,7 +5,8 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.hardware.camera2.full" />
@@ -18,9 +19,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".BNDblochkaUDE"
+            android:label="@string/title_activity_bndblochka_ude"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Synchronization"
             android:label="@string/title_activity_synchronization"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".VmyatinaSocuda"
             android:label="@string/title_activity_vmyatina_socuda"
@@ -38,8 +43,7 @@
             android:label="Сводная таблица"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Photo" />
-        <activity
-            android:name=".Camera" />
+        <activity android:name=".Camera" />
         <activity
             android:name=".SittingsActivity"
             android:label="Настройки"
