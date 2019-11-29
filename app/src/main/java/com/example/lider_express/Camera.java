@@ -43,39 +43,39 @@ import java.util.Arrays;
 
 public class Camera extends AppCompatActivity {
 
-    CameraService myCameras = null;
-
+    private CameraService myCamera = null;
     private CameraManager mCameraManager    = null;
-    private final int CAMERA1   = 0;
+    public AppCompatActivity appCompatActivity;
+    private HandlerThread mBackgroundThread;
+    private Handler mBackgroundHandler = null;
+    public Context context;
+
+    private String Papka;
+    private String Zakazchik;
+    private String position;
+    private String NameTu;
     private String cameraID;
+
+    private final int CAMERA1   = 0;
+    private static final int REQUEST_CAMERA_PERMISSION = 200;
+
+    private boolean mFlashFlag = false;
+    private boolean mFlashFlagCount = false;
+    private boolean mBrightnessFlagCount = true;
 
     private Button mButtonTakePhoto = null;
     private ToggleButton mButtonFlash = null;
     private ToggleButton mButtonBrightness = null;
-    private boolean mFlashFlag = false;
-    private boolean mFlashFlagCount = false;
     private FrameLayout mFrameLayoutSeekBar = null;
     private SeekBar seekBar = null;
-    private boolean mBrightnessFlagCount = true;
     private TextureView mTextureView = null;
-    private HandlerThread mBackgroundThread;
-    private Handler mBackgroundHandler = null;
-    private static final int REQUEST_CAMERA_PERMISSION = 200;
-
-    public AppCompatActivity appCompatActivity;
-    public Context context;
-
-    String Papka;
-    String Zakazchik;
-    String position;
-    String NameTu;
 
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
-    static{
-        ORIENTATIONS.append(Surface.ROTATION_0,90);
-        ORIENTATIONS.append(Surface.ROTATION_90,0);
-        ORIENTATIONS.append(Surface.ROTATION_180,270);
-        ORIENTATIONS.append(Surface.ROTATION_270,180);
+
+    static{ ORIENTATIONS.append(Surface.ROTATION_0,90);
+            ORIENTATIONS.append(Surface.ROTATION_90,0);
+            ORIENTATIONS.append(Surface.ROTATION_180,270);
+            ORIENTATIONS.append(Surface.ROTATION_270,180);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -100,7 +100,7 @@ public class Camera extends AppCompatActivity {
         try{
             cameraID = mCameraManager.getCameraIdList()[CAMERA1];
             // обработчик для камеры
-            myCameras = new CameraService(mCameraManager,cameraID);
+            myCamera = new CameraService(mCameraManager,cameraID);
         } catch(CameraAccessException e){
             e.printStackTrace();
         }
@@ -111,7 +111,7 @@ public class Camera extends AppCompatActivity {
         mButtonTakePhoto.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                myCameras.makePhoto();
+                myCamera.makePhoto();
             }
         });
 
@@ -134,11 +134,11 @@ public class Camera extends AppCompatActivity {
                 if(mButtonBrightness.isChecked()){
                     mFrameLayoutSeekBar.setVisibility(View.VISIBLE);
                     mBrightnessFlagCount = false;
-                    myCameras.setBrightness(seekBar.getProgress());
+                    myCamera.setBrightness(seekBar.getProgress());
                 }else{
                     mFrameLayoutSeekBar.setVisibility(View.INVISIBLE);
                     mBrightnessFlagCount = true;
-                    myCameras.setBrightness(0);
+                    myCamera.setBrightness(0);
                 }
             }
         });
@@ -146,7 +146,7 @@ public class Camera extends AppCompatActivity {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
-                myCameras.setBrightness(progress);
+                myCamera.setBrightness(progress);
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) { }
@@ -173,18 +173,21 @@ public class Camera extends AppCompatActivity {
         }
     }
 
-    public class CameraService {                                                                    /** Class CameraService **/
+    /** ===================================== CLASS CameraService ============================== **/
+    public class CameraService {
 
-        private String mCameraID;
         private CameraDevice mCameraDevice = null;
         private CameraCaptureSession mCaptureSession;
         private ImageReader mImageReader;
+        private CaptureRequest.Builder mBuilder;
+        private RWClass rwClass = new RWClass();
+
+        private String mCameraID;
+
         private int mImageWidth;
         private int mImageHeight;
-        private CaptureRequest.Builder mBuilder;
         private int minCompensationRange = 0;
         private int maxCompensationRange = 10;
-        private RWClass rwClass = new RWClass();
 
         public CameraService(CameraManager cameraManager, String cameraID) {
             mCameraManager = cameraManager;
@@ -394,7 +397,7 @@ public class Camera extends AppCompatActivity {
             }
         }
 
-
+        /** ====================================== openCamera ================================= **/
         @RequiresApi(api = Build.VERSION_CODES.M)                                                      /** Request API 23 **/
         public void openCamera() {
             try {
@@ -412,6 +415,7 @@ public class Camera extends AppCompatActivity {
             } catch (CameraAccessException e) {
             }
         } // - openCamera -
+        /** --------------------------------- openCamera ----------------------------------- **/
 
         public void closeCamera() {
             if (mCameraDevice != null) {
@@ -419,20 +423,27 @@ public class Camera extends AppCompatActivity {
                 mCameraDevice = null;
             }
         } // - closeCamera -
-    } // ------- CameraService -------------
+
+    } // - CameraService -
+    /** -------------------------------------class CameraService ------------------------------ **/
 
 
     @Override
     public void onPause() {
-        if(myCameras.isOpen()){myCameras.closeCamera();}
+        if(myCamera.isOpen()){myCamera.closeCamera();}
         stopBackgroundThread();
         super.onPause();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onResume() {
         super.onResume();
         startBackgroundThread();
+        if(mTextureView.isAvailable())
+            myCamera.openCamera();
+        else
+            mTextureView.setSurfaceTextureListener(textureListener);
     }
 
 
@@ -442,7 +453,7 @@ public class Camera extends AppCompatActivity {
         @RequiresApi(api = Build.VERSION_CODES.M)
         @Override
         public void onSurfaceTextureAvailable(SurfaceTexture surfaceTexture, int i, int i1) {
-            myCameras.openCamera();
+            myCamera.openCamera();
         }
         @Override
         public void onSurfaceTextureSizeChanged(SurfaceTexture surfaceTexture, int i, int i1) {
