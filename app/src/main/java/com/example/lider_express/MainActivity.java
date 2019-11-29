@@ -37,14 +37,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public static final String APP_ZAKAZCHIK = "Zakazchik";
     private static DatabaseHelper mDBHelper;
     public static Context context; // Временно !!!!!
+    public SQLiteDatabase mDb;
+    SharedPreferences mSettings;
 
     private static int mDisplayWidth;
     private static int mDisplayHeight;
 
-
-
-    public SQLiteDatabase mDb;
-    SharedPreferences mSettings;
     private Button btnpostion;
     private Button btnSvodnaya;
     private Button btnPhotoTu;
@@ -112,12 +110,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             mDBHelper = new DatabaseHelper(this);
         }
 
-      /**  try {
-            mDBHelper.updateDataBase();
-        } catch (IOException mSQLException) {
-            throw new Error("Ошибка обновления MainActivity 90 стр.");
-        } **/
-
         try {
             mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
@@ -132,85 +124,43 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 position = textpostion.getText().toString();//сквозной номер
                 if(position.length() > 0) {
                     intposition = Integer.parseInt(position);
-                Zakazchik = mSettings.getString(APP_ZAKAZCHIK, "не определено");
-
-                switch (Zakazchik) {
-                    case "Башнефть 2019":
-                        Zakazchik = "ZayavkaBND";
-                        break;
-                    case "Мегион 2019":
-                        Zakazchik = "Megion2019";
-                        break;
-                    case "Полюс 2019":
-                        Zakazchik = "ZayavkaBND";
-                        break;
-                    default: Zakazchik = "Не выбран";
-                        break;
-                }
-
-                if (Zakazchik != "Не выбран" || position.length() != 0) {
-                        long rowCount = DatabaseUtils.queryNumEntries(mDb, Zakazchik);
-                    if(Integer.parseInt(position) > rowCount){
-                        displayMessage(getBaseContext(), "Такого нет, понимаешь!?");
-                    }else{
-                        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                        imm.hideSoftInputFromWindow(btnpostion.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-                        btnSvodnaya.setEnabled(true);
-                        btnPhotoTu.setEnabled(true);
-                        btnPhotoDoc.setEnabled(true);
-                        btnPhotoKontrol.setEnabled(true);
-                        Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position}, null, null, null);
-                        cursor.moveToFirst();
-                        texttypetu.setText(cursor.getString(2));//Тип оборудования
-                        textuprav.setText(cursor.getString(5));// Управление
-                        textceh.setText(cursor.getString(14));//Цех
-                        textobekt.setText(cursor.getString(15));//объект
-                        textskvazhina.setText(cursor.getString(16));//скважина
-                        String NameTy = cursor.getString(7);//Наименование устройства
-                        NameTu.setText(NameTy);
-                        cursor.close();
-                        Name = NameTy;
+                    Zakazchik = mSettings.getString(APP_ZAKAZCHIK, "не определено");
+                    switch (Zakazchik) {
+                        case "Башнефть 2019": Zakazchik = "ZayavkaBND";break;
+                        case "Мегион 2019": Zakazchik = "Megion2019"; break;
+                        case "Полюс 2019": Zakazchik = "ZayavkaBND"; break;
+                        default: Zakazchik = "Не выбран"; break;
                     }
-                }else{
-                    displayMessage(getBaseContext(), "Ахтунг! Выбери объект!");
-                }
 
-
-
-
-           /**     if (Zakazchik == "Не выбран") {
-                    displayMessage(getBaseContext(), "Ахтунг! Выбери объект!");
-                }else if (position.length() == 0) {
-                    Cursor MaxCount = mDb.query(Zakazchik, null, null, null, null, null, null);
-                    max = MaxCount.getCount();
-                    MaxCount.close();
-                    displayMessage(getBaseContext(), "Алло! Ебать! Введи число!");
-                //}else if (intposition>Max) {
-                //    displayMessage(getBaseContext(), "Брат, там столько нет, обновись"); //Разобратся так как надо проверочку на наличие этих данных
-                } else {
-                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                    imm.hideSoftInputFromWindow(btnpostion.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-                    btnSvodnaya.setEnabled(true);
-                    btnPhotoTu.setEnabled(true);
-                    btnPhotoDoc.setEnabled(true);
-                    btnPhotoKontrol.setEnabled(true);
-                    Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position}, null, null, null);
-                    cursor.moveToFirst();
-                    texttypetu.setText(cursor.getString(2));//Тип оборудования
-                    textuprav.setText(cursor.getString(5));// Управление
-                    textceh.setText(cursor.getString(14));//Цех
-                    textobekt.setText(cursor.getString(15));//объект
-                    textskvazhina.setText(cursor.getString(16));//скважина
-                    String NameTy = cursor.getString(7);//Наименование устройства
-                    NameTu.setText(NameTy);
-                    cursor.close();
-                    Name = NameTy;
-                } **/
-
-
-                }
-            }
-        });
+                    if (Zakazchik != "Не выбран" || position.length() != 0) {
+                        long rowCount = DatabaseUtils.queryNumEntries(mDb, Zakazchik);
+                        if(Integer.parseInt(position) > rowCount){
+                            displayMessage(getBaseContext(), "Такого нет, понимаешь!?");
+                        }else{
+                            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(btnpostion.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                            btnSvodnaya.setEnabled(true);
+                            btnPhotoTu.setEnabled(true);
+                            btnPhotoDoc.setEnabled(true);
+                            btnPhotoKontrol.setEnabled(true);
+                            Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position}, null, null, null);
+                            cursor.moveToFirst();
+                            texttypetu.setText(cursor.getString(2));//Тип оборудования
+                            textuprav.setText(cursor.getString(5));// Управление
+                            textceh.setText(cursor.getString(14));//Цех
+                            textobekt.setText(cursor.getString(15));//объект
+                            textskvazhina.setText(cursor.getString(16));//скважина
+                            String NameTy = cursor.getString(7);//Наименование устройства
+                            NameTu.setText(NameTy);
+                            cursor.close();
+                            Name = NameTy;
+                        }
+                    }else{
+                        displayMessage(getBaseContext(), "Ахтунг! Выбери объект!");
+                    }
+                } // - if -
+            } // - onClick -
+        }); // - btnpostion -
 
         btnPhotoTu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -279,12 +229,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public String getNameZakaz(String str){
         String zakazchik = "def";
         switch (str) {
-            case "ZayavkaBND" :
-                zakazchik = "Башнефть_2019";
-                break;
-            case "Megion2019":
-                zakazchik = "Мегион_2019";
-                break;
+            case "ZayavkaBND": zakazchik = "Башнефть_2019"; break;
+            case "Megion2019": zakazchik = "Мегион_2019"; break;
         }
         return zakazchik;
     }
@@ -302,17 +248,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public void onPause(){
         super.onPause();
-        // Thread stop
     }
     @Override
     public void onResume(){
         super.onResume();
-        // Thread resume
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
