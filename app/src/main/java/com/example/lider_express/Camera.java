@@ -271,7 +271,7 @@ public class Camera extends AppCompatActivity {
                 }
 
                 Toast toast = Toast.makeText(getApplicationContext(),
-                        fullPath, Toast.LENGTH_SHORT);
+                        fullPath, Toast.LENGTH_LONG);
                 toast.show();
 
                 mBackgroundHandler.post(new ImageSaver(reader.acquireNextImage(), mFileWrite));
