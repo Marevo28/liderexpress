@@ -218,7 +218,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото объекта
                 Papka = "Фото";
                 IntentPhoto.putExtra("position", position);
-                IntentPhoto.putExtra("Zakazchik", Zakazchik);
+                IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));
                 IntentPhoto.putExtra("Papka", Papka);
                 IntentPhoto.putExtra("Name", Name);
                 startActivity(IntentPhoto);
@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото документов
                 Papka = "Документы";
                 IntentPhoto.putExtra("position", position);
-                IntentPhoto.putExtra("Zakazchik", Zakazchik);
+                IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));
                 IntentPhoto.putExtra("Papka", Papka);
                 IntentPhoto.putExtra("Name", Name);
                 startActivity(IntentPhoto);
@@ -242,7 +242,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова контроля
                 Papka = "Контроль";
                 IntentPhoto.putExtra("position", position);
-                IntentPhoto.putExtra("Zakazchik", Zakazchik);
+                IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));
                 IntentPhoto.putExtra("Papka", Papka);
                 IntentPhoto.putExtra("Name", Name);
                 startActivity(IntentPhoto);
@@ -259,13 +259,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void iniWH(){  // Ширина и высота экрана устройства
-    WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-    Display display = wm.getDefaultDisplay();
-    Point size = new Point();
-    display.getSize(size);
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
 
-    mDisplayWidth = size.x;
-    mDisplayHeight = size.y;
+        mDisplayWidth = size.x;
+        mDisplayHeight = size.y;
     }
 
     public static int getDisplayWidth(){
@@ -274,6 +274,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public static int getDisplayHeight(){
         return mDisplayHeight;
+    }
+
+    public String getNameZakaz(String str){
+        String zakazchik = "def";
+        switch (str) {
+            case "ZayavkaBND" :
+                zakazchik = "Башнефть_2019";
+                break;
+            case "Megion2019":
+                zakazchik = "Мегион_2019";
+                break;
+        }
+        return zakazchik;
     }
 
     @Override
@@ -295,7 +308,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void onResume(){
         super.onResume();
         // Thread resume
-
     }
 
     @Override
