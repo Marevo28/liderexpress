@@ -30,22 +30,39 @@
             android:background="@drawable/selector_button_flash"
             android:textOn=""
             android:textOff=""/>
-
-
         <Button
             android:id="@+id/btnCapture"
             android:text="Take Photo"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="5"/>
-        <Button
+        <ToggleButton
             android:id="@+id/btnBrightness"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background = "@drawable/ic_settings_brightness_black_64dp" />
+            android:background="@drawable/selector_button_brightness"
+            android:textOn=""
+            android:textOff=""/>
     </LinearLayout>
 
 </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayoutSeekBar"
+        android:layout_width="32dp"
+        android:layout_height="192dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="10dp">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="192dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:rotation="270" />
+
+    </FrameLayout>
 
 </FrameLayout>
