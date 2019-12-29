@@ -19,9 +19,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Megion20220"
+            android:label="@string/title_activity_megion20220"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".BNDblochkaUDE"
             android:label="@string/title_activity_bndblochka_ude"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Synchronization"
             android:label="@string/title_activity_synchronization"

@@ -1,0 +1,55 @@
+
+ksquid:S1192®"GDefine a constant instead of duplicating this literal "select" 3 times.(İ¾ú÷şÿÿÿÿ8á¿Äøò-
+osquid:S1301 "KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+zsquid:S1488"[Immediately return this expression instead of assigning it to the temporary variable "str".(Âåı8á¿Äøò-
+vsquid:S00116Q"RRename this field "luk_laz" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü’ÆŸøÿÿÿÿ8“İ¥øò-
+ysquid:S001161"URename this field "ButZapisat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô£ÊÇüÿÿÿÿ8“İ¥øò-
+osquid:S1301Ò"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+‰"squid:ClassVariableVisibilityCheck "OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ8Ê¾¨øò-
+}squid:S001160"YRename this field "PickIrlDefects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½İÂ°øÿÿÿÿ8“İ¥øò-
+jsquid:S1192Ì"KDefine a constant instead of duplicating this literal "dd.MM.yyyy" 6 times.(¬İİ²8á¿Äøò-
+]"squid:SwitchLastCaseIsDefaultCheck±""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+vsquid:S2737‚"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ8ä¬øò-
+{squid:S00116)"WRename this field "TextDataSpec" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Îàÿöøÿÿÿÿ8“İ¥øò-
+`squid:HiddenFieldCheck«"6Rename "a" which hides the field declared at line 455.(ã‹Í8á¿Äøò-
+jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(ÀëÏöùÿÿÿÿ
+usquid:S00116/"VRename this field "PickDefects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘õ½”8“İ¥øò-
+usquid:S3776Z"RRefactor this method to reduce its Cognitive Complexity from 60 to the 15 allowed.(¨Œşÿÿÿÿ8ä¬øò-
+vsquid:ModifiersOrderCheckW"EReorder the modifiers to comply with the Java Language Specification.(Ú›†ùûÿÿÿÿ8“İ¥øò-
+osquid:S1301Ó"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+X"squid:SwitchLastCaseIsDefaultCheck¬""Add a default case to this switch.(ƒ“¯Œ8á¿Äøò-
+„squid:S1845="gRename field "position" to prevent any misunderstanding/clash with field "POSITION" defined on line 30.(µó» 8Ê¾¨øò-
+]"squid:SwitchLastCaseIsDefaultCheck®""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+osquid:S1301ä"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+usquid:S00116("VRename this field "TextDataExp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿¤¤¡8“İ¥øò-
+ksquid:S1192á"GDefine a constant instead of duplicating this literal "people" 4 times.(¹¡èŸøÿÿÿÿ8á¿Äøò-
+]"squid:SwitchLastCaseIsDefaultCheckÂ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+vsquid:S00117à"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìôªƒıÿÿÿÿ8á¿Äøò-
+usquid:S001162"VRename this field "PickDataExp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¬¨•8“İ¥øò-
+osquid:S1301¿"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+tsquid:S00116""VRename this field "TextDefects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äıL8“İ¥øò-
+zsquid:S00116$"[Rename this field "TextPrichinaIskl" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤’ä«8“İ¥øò-
+osquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+]"squid:SwitchLastCaseIsDefaultCheckÓ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+osquid:S1301®"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+"squid:ClassVariableVisibilityCheck"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ8Ê¾¨øò-
+~squid:S00116*"ZRename this field "TextNachOstanov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Èâøÿÿÿÿ8“İ¥øò-
+{squid:S001163"WRename this field "PickDataSpec" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â‘ìßûÿÿÿÿ8“İ¥øò-
+tsquid:S00116-"URename this field "TextDataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·×À±8“İ¥øò-
+osquid:S1301Â"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+squid:S00116,"[Rename this field "TextDataActNegot" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯É»Šşÿÿÿÿ8“İ¥øò-
+rsquid:S00116#"SRename this field "TextNote" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦ô¥Ş8“İ¥øò-
+]"squid:SwitchLastCaseIsDefaultCheckä""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+]"squid:SwitchLastCaseIsDefaultCheckõ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+]"squid:SwitchLastCaseIsDefaultCheckÒ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+vsquid:S00117è"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìôªƒıÿÿÿÿ8á¿Äøò-
+]"squid:SwitchLastCaseIsDefaultCheck ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+tsquid:S00116."URename this field "PickExpert" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êª»Ó8“İ¥øò-
+xsquid:S00116+"YRename this field "TextKonOstanov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ”ÊÎ8“İ¥øò-
+]"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+]"squid:SwitchLastCaseIsDefaultCheck¿""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+vsquid:S00117ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìôªƒıÿÿÿÿ8á¿Äøò-
+osquid:S1301õ"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+osquid:S1301±"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8á¿Äøò-
+ƒsquid:S001164"_Rename this field "PickDataNegotovnosti" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Üû“ˆÿÿÿÿÿ8“İ¥øò-
+qsquid:S00117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½¯°ô8á¿Äøò-

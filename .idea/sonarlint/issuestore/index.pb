@@ -25,3 +25,7 @@ n
 >app/src/main/java/com/example/lider_express/BNDblochkaUDE.java,d\3\d39e792e633738ae3ec224f1686ae5be62a5c0ea
 g
 7app/src/main/java/com/example/lider_express/Camera.java,c\1\c1df44eca1f7911f8a6e4763df237f298eefcc6b
+u
+Eapp/src/main/java/com/example/lider_express/Fragment/BNDSvodnaya.java,a\4\a402a9d0d2a25972bc62db94d25984a4825db309
+k
+;app/src/main/java/com/example/lider_express/Megion2020.java,0\3\030a52ac171d05f80b9f92c9140b22ecaf54e1ac
