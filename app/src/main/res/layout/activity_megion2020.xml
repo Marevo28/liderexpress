@@ -20,6 +20,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_megion2020" />
+    <include layout="@layout/content_meg2020" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

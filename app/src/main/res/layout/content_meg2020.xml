@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Megion2020"
+    tools:showIn="@layout/activity_megion2020">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="3000dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--   Исполнение    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Исполнение"/>
+            <RadioGroup
+                android:id="@+id/RadioGroup_Ispolnenie"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/nadzemnoe"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Надземное" />
+                <RadioButton
+                    android:id="@+id/podzemnoe"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Подземное" />
+            </RadioGroup>
+
+            <!--   Шурфовка фактически проводилась?    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Шурфовка фактически проводилась"/>
+            <RadioGroup
+                android:id="@+id/RadioGroup_Shurf"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Shurf_DA"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="ДА" />
+
+                <RadioButton
+                    android:id="@+id/Shurf_NET"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="НЕТ" />
+            </RadioGroup>
+
+            <!--   Акт шурфовки оформлен?    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Акт шурфовки оформлен"/>
+            <RadioGroup
+                android:id="@+id/RadioGroup_ActShurf"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/ActShurf_DA"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="ДА" />
+                <RadioButton
+                    android:id="@+id/ActShurf_NET"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="НЕТ" />
+            </RadioGroup>
+
+            <!--   Размер люк-лаза позволяет провести контрорль изнутри?    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Размер люк-лаза позволяет провести контроль изнутри"/>
+            <RadioGroup
+                android:id="@+id/RadioGroup_LukLaz"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/LukLaz_DA"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="ДА" />
+                <RadioButton
+                    android:id="@+id/LukLaz_NET"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="НЕТ" />
+            </RadioGroup>
+
+            <!--   Наряд на газоопасные работы для проведения контрорля изнутри получен?    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Наряд на газоопасные работы для проведения контроля изнутри получен"/>
+            <RadioGroup
+                android:id="@+id/RadioGroup_Naryad"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Naryad_DA"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="ДА" />
+                <RadioButton
+                    android:id="@+id/Naryad_NET"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="НЕТ" />
+            </RadioGroup>
+
+            <!--   На момент проведения НК оборудование было в останове    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="На момент проведения НК оборудование было в останове"/>
+            <RadioGroup
+                android:id="@+id/RadioGroup_NK"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/NK_DA"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="ДА" />
+                <RadioButton
+                    android:id="@+id/NK_NET"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="НЕТ" />
+            </RadioGroup>
+
+            <!--   Дата останова и начала    -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Дата останова: начала, окончание"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Дата начала"/>
+                        <TextView
+                            android:id="@+id/TextView_DataNachalo"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Дата начала"/>
+                        <Button
+                            android:id="@+id/Button_DataNachalo"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:text="Выбрать дату"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Дата окончания"/>
+                        <TextView
+                            android:id="@+id/TextView_DataOkon"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Дата окончания"/>
+                        <Button
+                            android:id="@+id/Button_DataOkon"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:text="Выбрать дату"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--   Осмотр внутренней поверхности проводился    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Осмотр внутренней поверхности проводился"/>
+            <RadioGroup
+                android:id="@+id/RadioGroup_OsmotrVnutrPov"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/OsmotrVnutrPov_DA"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="ДА" />
+                <RadioButton
+                    android:id="@+id/OsmotrVnutrPov_NET"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="НЕТ" />
+            </RadioGroup>
+
+            <!--   Дата выезда на объект без проведения НК    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Дата выезда на объект без проведения НК"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/TextView_DataViezdaBezNKO"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Дата выезда на объект без проведения НК"/>
+                <Button
+                    android:id="@+id/Button_DataViezdaBezNKO"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Выбрать дату"/>
+            </LinearLayout>
+
+            <!--   ФИО специалиста (-ов), выезжающего (-их) на объект      -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="ФИО специалиста (-ов), выезжающего (-их) на объект"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/TextView_SpecViezdObject"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="ФИО специалиста (-ов), выезжающего (-их) на объект"/>
+                <Button
+                    android:id="@+id/Button_SpecViezdObject"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Выбрать специалиста"/>
+            </LinearLayout>
+
+            <!--   Акт неготовности (писать дату акта)   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Акт неготовности (писать дату акта)"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/TextView_DataActNegotov"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Акт неготовности (писать дату акта)"/>
+                <Button
+                    android:id="@+id/Button_DataActNegotov"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Выбрать дату"/>
+            </LinearLayout>
+
+            <!--   Акт о непредоставлении документов (писать дату акта)    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Акт о непредоставлении документов (писать дату акта)"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/TextView_ActNepredostav"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Акт о непредоставлении документов (писать дату акта)"/>
+                <Button
+                    android:id="@+id/Button_ActNepredostav"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Выбрать дату"/>
+            </LinearLayout>
+
+            <!--   Дата НК    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Дата НК"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/TextView_DataNK"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Дата НК"/>
+                <Button
+                    android:id="@+id/Button_DataNK"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Выбрать дату"/>
+            </LinearLayout>
+
+            <!--   ФИО специалиста (-ов), проводящего (-их) НК *    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="ФИО специалиста (-ов), проводившего (-их) НК"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/TextView_SpecProvNK"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="ФИО специалиста (-ов), выезжающего (-их) на объект"/>
+                <Button
+                    android:id="@+id/Button_SpecProvNK"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Выбрать специалиста"/>
+            </LinearLayout>
+
+            <!--   Дефекты (указать выявленные дефекты)    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal|center_vertical"
+                android:text=" Дефекты (указать выявленные дефекты)"/>
+            <EditText
+                android:id="@+id/EditText_Defects"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:hint="Дефект"/>
+
+
+            <!--   Дефектная ведомость оформлена    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Дефектная ведомость оформлена"/>
+            <RadioGroup
+                android:id="@+id/RadioGroup_DefectVedom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Defect_DA"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="ДА" />
+                <RadioButton
+                    android:id="@+id/Defect_NET"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="НЕТ" />
+            </RadioGroup>
+
+            <!--   Дата повторного выезда    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text=" Дата повторного выезда"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/TextView_DataPovtorViezd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Дата повторного выезда"/>
+                <Button
+                    android:id="@+id/Button_DataPovtorViezd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Выбрать дату"/>
+            </LinearLayout>
+
+
+            <!--   Результат повторного выезда    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text=" Результат повторного выезда"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:orientation="vertical">
+                <CheckBox
+                    android:id="@+id/CheckBox_DefUstranen"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Устранен"/>
+                <CheckBox
+                    android:id="@+id/CheckBox_DefNeUstranen"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Не устранен"/>
+                <CheckBox
+                    android:id="@+id/CheckBox_DefDrugoe"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Другое"/>
+                <EditText
+                    android:id="@+id/EditText_DefDrugoe"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:hint="Другое"/>
+            </LinearLayout>
+
+            <!--   Исключение позиции из договора     -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Исключение позиции из договора"/>
+            <RadioGroup
+                android:id="@+id/RadioGroup_Iskluchenie"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Iskluchenie_DA"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="ДА" />
+                <RadioButton
+                    android:id="@+id/Iskluchenie_NET"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="НЕТ" />
+            </RadioGroup>
+
+            <!--   Дата исключения   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Дата исключения"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/TextView_DataIsklucheniya"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Дата повторного выезда"/>
+                <Button
+                    android:id="@+id/Button_DataIsklucheniya"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Выбрать дату"/>
+            </LinearLayout>
+
+            <!--   Причина исключения    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Причина исключения"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:orientation="vertical">
+                <CheckBox
+                    android:id="@+id/CheckBox_PrichinaDemon"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Демонтировано/Демонтируется"/>
+                <CheckBox
+                    android:id="@+id/CheckBox_PrichinaIskluchil"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Исключил сотрудник СН-МНГ"/>
+                <CheckBox
+                    android:id="@+id/CheckBox_PrichinaDrugoe"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Другое"/>
+                <EditText
+                    android:id="@+id/EditText_PrichinaDrugoe"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:hint="Другое"/>
+            </LinearLayout>
+
+
+            <!--   Кто исключил (ФИО и должность сотрудника СН-МНГ)   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Кто исключил (ФИО и должность сотрудника СН-МНГ)"/>
+            <EditText
+                android:id="@+id/EditText_KtoIskluchil"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:hint="Кто исключил"/>
+
+            <!--   Записи в паспорте    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Записи в паспорте"/>
+            <RadioGroup
+                android:id="@+id/RadioGroup_ZapisiVPasporte"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/ZapisiVPasporte_DA"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="ДА" />
+                <RadioButton
+                    android:id="@+id/ZapisiVPasporte_NET"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="НЕТ" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/Button_Vnesti"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:text="Внести"/>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

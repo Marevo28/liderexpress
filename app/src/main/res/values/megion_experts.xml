@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="megion_experts">
+        <item>Абдулвалеев Р.Х.</item>
+        <item>Абузаров Г.Р.</item>
+        <item>Байкалов В.А.</item>
+        <item>Батталов А.Г.</item>
+        <item>Галяутдинов Э.И.</item>
+        <item>Евсевьев А.А.</item>
+        <item>Имангулов Б.М.</item>
+        <item>Калинин В.А.</item>
+        <item>Комаров Е.Н.</item>
+        <item>Спиридонов А.Н.</item>
+        <item>Спиридонов Е.Н.</item>
+    </string-array>
+
+</resources>
+
+
+
