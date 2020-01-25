@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Megion20220"
+            android:name=".Megion2020"
             android:label="@string/title_activity_megion20220"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
@@ -40,6 +40,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Spisok"
+            android:label="@string/title_activity_spisok"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SpisokMegion"
             android:label="@string/title_activity_spisok"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     if (Zakazchik != "Не выбран" || position.length() != 0) {
                         long rowCount = DatabaseUtils.queryNumEntries(mDb, Zakazchik);
                         if(Integer.parseInt(position) > rowCount){
-                            displayMessage(getBaseContext(), "Такого нет, понимаешь!?");
+                            displayMessage(getBaseContext(), "Такого не существует!");
                         }else{
                             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(btnpostion.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                             Name = NameTy;
                         }
                     }else{
-                        displayMessage(getBaseContext(), "Ахтунг! Выбери объект!");
+                        displayMessage(getBaseContext(), "Выберите объект!");
                     }
                 } // - if -
             } // - onClick -
@@ -201,9 +201,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnSvodnaya.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentSittings = new Intent(MainActivity.this, BNDSvodnaya.class);
-                IntentSittings.putExtra("position", position);
-                startActivity(IntentSittings);
+                switch (Zakazchik){
+                    case "ZayavkaBND": Intent IntentSvodnayaBND = new Intent(MainActivity.this, BNDSvodnaya.class);
+                                       IntentSvodnayaBND.putExtra("position", position);
+                                       startActivity(IntentSvodnayaBND);
+                    case "Megion2019": Intent IntentMegion2019 = new Intent(MainActivity.this, Megion2020.class);
+                                       IntentMegion2019.putExtra("position", position);
+                                       startActivity(IntentMegion2019);
+                }
+
             }
         });
     }

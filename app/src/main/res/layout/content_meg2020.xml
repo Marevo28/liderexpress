@@ -183,7 +183,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="4"
+                android:layout_weight="4.5"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
@@ -195,7 +195,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="4"
+                    android:layout_weight="4.2"
                     android:orientation="horizontal">
                     <LinearLayout
                         android:layout_width="0dp"
@@ -219,7 +219,7 @@
                             android:id="@+id/Button_DataNachalo"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="2"
+                            android:layout_weight="2.5"
                             android:text="Выбрать дату"/>
                     </LinearLayout>
                     <LinearLayout
@@ -244,7 +244,7 @@
                             android:id="@+id/Button_DataOkon"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="2"
+                            android:layout_weight="2.5"
                             android:text="Выбрать дату"/>
                     </LinearLayout>
 
@@ -317,7 +317,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_weight="2.5"
                 android:orientation="horizontal">
                 <TextView
                     android:id="@+id/TextView_SpecViezdObject"
@@ -425,7 +425,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_weight="2.5"
                 android:orientation="horizontal">
                 <TextView
                     android:id="@+id/TextView_SpecProvNK"
@@ -522,31 +522,39 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="4"
+                android:layout_weight="4.5"
                 android:orientation="vertical">
-                <CheckBox
-                    android:id="@+id/CheckBox_DefUstranen"
+                <RadioGroup
+                    android:id="@+id/RadioGroup_DefectUstr"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="Устранен"/>
-                <CheckBox
-                    android:id="@+id/CheckBox_DefNeUstranen"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="Не устранен"/>
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/DefUstranen"
+                        android:layout_width="195dp"
+                        android:layout_height="43dp"
+                        android:layout_weight="1"
+                        android:text="Дефекты устранены" />
+                    <RadioButton
+                        android:id="@+id/DefNeUstranen"
+                        android:layout_width="198dp"
+                        android:layout_height="43dp"
+                        android:layout_weight="1"
+                        android:text="Дефекты не устранены" />
+                </RadioGroup>
                 <CheckBox
                     android:id="@+id/CheckBox_DefDrugoe"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="Другое"/>
+                    android:text="Другое"
+                    android:onClick="OnCheckedDefects"/>
                 <EditText
                     android:id="@+id/EditText_DefDrugoe"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="2"
+                    android:layout_weight="2.3"
                     android:hint="Другое"/>
             </LinearLayout>
 
@@ -614,31 +622,39 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="4"
+                android:layout_weight="4.5"
                 android:orientation="vertical">
-                <CheckBox
-                    android:id="@+id/CheckBox_PrichinaDemon"
+                <RadioGroup
+                    android:id="@+id/RadioGroup_PrichinaDemIskl"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="Демонтировано/Демонтируется"/>
-                <CheckBox
-                    android:id="@+id/CheckBox_PrichinaIskluchil"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="Исключил сотрудник СН-МНГ"/>
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/Prichina_Demont"
+                        android:layout_width="195dp"
+                        android:layout_height="43dp"
+                        android:layout_weight="1"
+                        android:text="Демонтировано/демонтируется" />
+                    <RadioButton
+                        android:id="@+id/PrichinaIskluchil"
+                        android:layout_width="198dp"
+                        android:layout_height="43dp"
+                        android:layout_weight="1"
+                        android:text="Исключил сотрудник СН-МНГ" />
+                </RadioGroup>
                 <CheckBox
                     android:id="@+id/CheckBox_PrichinaDrugoe"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="Другое"/>
+                    android:text="Другое"
+                    android:onClick="OnCheckedPrichina"/>
                 <EditText
                     android:id="@+id/EditText_PrichinaDrugoe"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="2"
+                    android:layout_weight="2.3"
                     android:hint="Другое"/>
             </LinearLayout>
 
