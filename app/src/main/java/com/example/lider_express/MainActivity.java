@@ -9,34 +9,33 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Point;
 import android.os.Bundle;
-
-import androidx.core.view.GravityCompat;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-
-import com.example.lider_express.DataBase.DatabaseHelper;
-import com.google.android.material.navigation.NavigationView;
-
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.view.Display;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.view.View;
-import android.view.MenuItem;
+
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.example.lider_express.DataBase.DatabaseHelper;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     public static final String APP_FILES = "mysettings";
     public static final String APP_ZAKAZCHIK = "Zakazchik";
     private static DatabaseHelper mDBHelper;
-    public static Context context; // Временно !!!!!
+    private static Context context;
+    private static AppCompatActivity appCompatActivity;
     public SQLiteDatabase mDb;
     SharedPreferences mSettings;
 
@@ -67,6 +66,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public static DatabaseHelper getDBHelper() {
         return mDBHelper;
+    }
+    public static Context getContext(){
+        return context;
+    }
+    public static AppCompatActivity getAppCompatActivity(){
+        return appCompatActivity;
     }
 
     @Override
@@ -121,7 +126,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
 
-                position = textpostion.getText().toString();//сквозной номер
+                //сквозной номер
+                position = textpostion.getText().toString();
+
                 if(position.length() > 0) {
                     intposition = Integer.parseInt(position);
                     Zakazchik = mSettings.getString(APP_ZAKAZCHIK, "не определено");
@@ -139,12 +146,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         }else{
                             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(btnpostion.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+
                             btnSvodnaya.setEnabled(true);
                             btnPhotoTu.setEnabled(true);
                             btnPhotoDoc.setEnabled(true);
                             btnPhotoKontrol.setEnabled(true);
+
                             Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position}, null, null, null);
                             cursor.moveToFirst();
+
                             texttypetu.setText(cursor.getString(2));//Тип оборудования
                             textuprav.setText(cursor.getString(5));// Управление
                             textceh.setText(cursor.getString(14));//Цех
@@ -224,10 +234,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mDisplayHeight = size.y;
     }
 
+    // Ширина дисплея
     public static int getDisplayWidth(){
         return mDisplayWidth;
     }
 
+    // Высота дисплея
     public static int getDisplayHeight(){
         return mDisplayHeight;
     }

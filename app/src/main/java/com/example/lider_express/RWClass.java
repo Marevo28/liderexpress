@@ -19,7 +19,7 @@ public class RWClass {
 
 
     public RWClass(){
-        mContext = MainActivity.context;
+        mContext = Shared.context;
     }
 
     public void writeCountPhoto(@NonNull int countPhoto) throws IOException {

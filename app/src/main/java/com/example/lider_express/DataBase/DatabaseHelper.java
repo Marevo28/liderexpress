@@ -11,7 +11,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    private static String DB_NAME = "info.db";
+    private static String DB_NAME = "leaderexpress.db";
     private static String DB_PATH = "";
     private static final int DB_VERSION = 3;
     private SQLiteDatabase mDataBase;
@@ -65,7 +65,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private void copyDBFile() throws IOException {
         InputStream mInput = mContext.getAssets().open(DB_NAME);
-        //InputStream mInput = mContext.getResources().openRawResource(R.raw.info);
         OutputStream mOutput = new FileOutputStream(DB_PATH /** + DB_NAME **/);
         byte[] mBuffer = new byte[1024];
         int mLength;

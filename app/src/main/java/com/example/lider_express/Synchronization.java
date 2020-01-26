@@ -5,12 +5,6 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-
-import com.example.lider_express.DataBase.DatabaseHelper;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,12 +12,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.example.lider_express.DataBase.DatabaseHelper;
+
 public class Synchronization extends AppCompatActivity {
+
     public DatabaseHelper mDBHelper;
     public SQLiteDatabase mDb;
 
-    int i;
+    int amount;
     Button btnpostion;
+    Button btnUpdateDB;
+    Button btnSendData;
+
     TextView TextKolvoZap;
     EditText textpostion;
     String position;
@@ -63,14 +66,18 @@ public class Synchronization extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         btnpostion = (Button) findViewById(R.id.btnposition);
+        btnUpdateDB = findViewById(R.id.ButtonUpdateDB);
+        btnSendData = findViewById(R.id.ButtonSendData);
         textpostion = (EditText) findViewById(R.id.textpositon);
         TextKolvoZap = (TextView) findViewById(R.id.TextKolvoZap);
-        mDBHelper = MainActivity.getDBHelper();// new DatabaseHelper(this);// подклчюение к БД
+
+        mDBHelper = MainActivity.getDBHelper();
         try {
             mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
             throw mSQLException;
         }
+
         btnpostion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,10 +89,12 @@ public class Synchronization extends AppCompatActivity {
     }
 
     public void onDown(View view) {
+
         Cursor cursor = mDb.query("DefectBND", null, null, null, null, null, null);
         Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
-        i = defectBND.getCount();
-        if (i == 0) {
+
+        amount = defectBND.getCount();
+        if (amount == 0) {
             displayMessage(getBaseContext(), "В базе пусто");
         }else {
             cursor.moveToFirst();
@@ -148,6 +157,15 @@ public class Synchronization extends AppCompatActivity {
             zapros = new JsonZapros();
             zapros.download(position, stolb27, stolb28, stolb29, stolb30, stolb31, stolb32, stolb33, stolb34, stolb35, stolb36, stolb37, stolb38, stolb39,
                     stolb40, stolb41, stolb42, stolb43, stolb44, stolb45, stolb46, stolb47, stolb48, stolb49, stolb50, stolb51, stolb52, stolb53);
+
+
+
+
+
+
+
+
+
             try {
                 zapros.join();
             } catch (InterruptedException ie) {
@@ -162,4 +180,5 @@ public class Synchronization extends AppCompatActivity {
     private void displayMessage(Context context, String message) {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
     }
+
 }

@@ -97,10 +97,10 @@ public class Megion2020 extends AppCompatActivity {
     private String strDefects;               //  -  43 Дефекты
     private String strDefectVedom;           //  -  44 Дефектная ведомость
     private String strDataPovtorViezd;       //  -  45 Дефектная ведомость оформлена
-    private String strDefectUstr;              //  -  46 CheckBox Дефекты Другое
+    private String strDefectUstr;            //  -  46 CheckBox Дефекты Другое
     private String strIskluchenie;           //  -  47 Исключение
     private String strDataIskluchenie;       //  -  48 Дата Исключения
-    private String strPrichinaDomIsk;            //  -  49 CheckBox причина
+    private String strPrichinaDomIsk;        //  -  49 CheckBox причина
     private String strKtoIskluchil;          //  -  50 Кто исключил?
     private String strZapisiVPasporte;       //  -  51 Записи в паспорте
 
