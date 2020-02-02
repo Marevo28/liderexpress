@@ -1,9 +1,11 @@
 package com.example.lider_express.DataBase;
 
-import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.example.lider_express.Shared;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -15,19 +17,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static String DB_PATH = "";
     private static final int DB_VERSION = 3;
     private SQLiteDatabase mDataBase;
-    private final Context mContext;
     private boolean mNeedUpdate = true;
 
-    public DatabaseHelper(Context context) {
-        super(context, DB_NAME, null, DB_VERSION);
+    public DatabaseHelper() {
+        super(Shared.context, DB_NAME, null, DB_VERSION);
         if (android.os.Build.VERSION.SDK_INT >= 17) {
            // DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
-            DB_PATH = context.getDatabasePath(DB_NAME).getPath();
+            DB_PATH = Shared.context.getDatabasePath(DB_NAME).getPath();
         }
         else {
-            DB_PATH = "/data/data/" + context.getPackageName() + "/databases/";
+            DB_PATH = "/data/data/" + Shared.context.getPackageName() + "/databases/";
         }
-        this.mContext = context;
 
         copyDataBase();
         this.getReadableDatabase();
@@ -43,6 +43,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 dbFile.delete();
             copyDataBase();
             mNeedUpdate = false;
+
         }
     }
 
@@ -64,7 +65,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private void copyDBFile() throws IOException {
-        InputStream mInput = mContext.getAssets().open(DB_NAME);
+        InputStream mInput = Shared.context.getAssets().open(DB_NAME);
         OutputStream mOutput = new FileOutputStream(DB_PATH /** + DB_NAME **/);
         byte[] mBuffer = new byte[1024];
         int mLength;

@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private static DatabaseHelper mDBHelper;
     private static Context context;
     private static AppCompatActivity appCompatActivity;
-    public SQLiteDatabase mDb;
+    public static SQLiteDatabase mDb;
     SharedPreferences mSettings;
 
     private static int mDisplayWidth;
@@ -73,6 +73,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public static AppCompatActivity getAppCompatActivity(){
         return appCompatActivity;
     }
+    public static SQLiteDatabase getSQLiteDatabase(){
+        return mDb;
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,14 +116,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPhotoKontrol.setEnabled(false);
 
         if(mDBHelper == null) {
-            mDBHelper = new DatabaseHelper(this);
+            mDBHelper = new DatabaseHelper();
         }
 
         try {
             mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
             throw mSQLException;
-
         }
 
         btnpostion.setOnClickListener(new View.OnClickListener() {

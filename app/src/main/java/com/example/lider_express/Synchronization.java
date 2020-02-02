@@ -3,7 +3,6 @@ package com.example.lider_express;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,11 +15,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.lider_express.DataBase.DatabaseHelper;
+import com.example.lider_express.UpdateDB.DeleteDB;
+import com.example.lider_express.UpdateDB.FileDownloadClass;
+
+import java.io.File;
 
 public class Synchronization extends AppCompatActivity {
 
-    public DatabaseHelper mDBHelper;
-    public SQLiteDatabase mDb;
+
+    String nameD = "/data/user/0/com.example.lider_express/databases";
 
     int amount;
     Button btnpostion;
@@ -71,9 +74,9 @@ public class Synchronization extends AppCompatActivity {
         textpostion = (EditText) findViewById(R.id.textpositon);
         TextKolvoZap = (TextView) findViewById(R.id.TextKolvoZap);
 
-        mDBHelper = MainActivity.getDBHelper();
+        Shared.databaseHelper = MainActivity.getDBHelper();
         try {
-            mDb = mDBHelper.getWritableDatabase();
+            Shared.mDb = Shared.databaseHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
             throw mSQLException;
         }
@@ -81,17 +84,76 @@ public class Synchronization extends AppCompatActivity {
         btnpostion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
+                Cursor defectBND = Shared.databaseHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
                 TextKolvoZap.setText("Количество записей в базе: " + defectBND.getCount());
                 defectBND.close();
             }
         });
+
+
+        btnUpdateDB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             //   MainActivity.getDBHelper().close();
+              //  MainActivity.getContext().deleteDatabase("");
+
+                
+                {
+                    String path = nameD;
+                    Log.d("Files", "Path: " + path);
+                    File directory = new File(path);
+                    File[] files = directory.listFiles();
+                    Log.d("Files", "Size: " + files.length);
+                    for (int i = 0; i < files.length; i++) {
+                        Log.d("-1---------------Files", "FileName:" + files[i].getName());
+                    }
+                }
+
+                if(Shared.databaseHelper != null){
+                    Shared.databaseHelper.close();
+                }
+
+                new DeleteDB(Shared.nameDB);
+
+                {
+                    String path = nameD;
+                    Log.d("Files", "Path: " + path);
+                    File directory = new File(path);
+                    File[] files = directory.listFiles();
+                    Log.d("Files", "Size: " + files.length);
+                    for (int i = 0; i < files.length; i++) {
+                        Log.d("-2----------------Files", "FileName:" + files[i].getName());
+                    }
+                }
+
+                File destination = new File(Shared.pathDB + "/" + Shared.nameDB);
+                new FileDownloadClass(Shared.URL, destination, Shared.context);
+                Shared.databaseHelper = new DatabaseHelper();
+                Shared.databaseHelper.openDataBase();
+                Shared.mDb = Shared.databaseHelper.getWritableDatabase();
+
+                {
+                    String path = nameD;
+                    Log.d("Files", "Path: " + path);
+                    File directory = new File(path);
+                    File[] files = directory.listFiles();
+                    Log.d("Files", "Size: " + files.length);
+                    for (int i = 0; i < files.length; i++) {
+                        Log.d("-3----------------Files", "FileName:" + files[i].getName());
+                    }
+                }
+
+
+                Toast.makeText(Shared.context, "Update", Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
 
     public void onDown(View view) {
 
-        Cursor cursor = mDb.query("DefectBND", null, null, null, null, null, null);
-        Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
+        Cursor cursor = Shared.mDb.query("DefectBND", null, null, null, null, null, null);
+        Cursor defectBND = Shared.databaseHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
 
         amount = defectBND.getCount();
         if (amount == 0) {
@@ -172,7 +234,7 @@ public class Synchronization extends AppCompatActivity {
                 Log.e("pass 0", ie.getMessage());
             }
             displayMessage(getBaseContext(), "отправлено: "+zapros.reposition());
-            mDb.delete("DefectBND", "Position = " + zapros.reposition(), null);
+            Shared.mDb.delete("DefectBND", "Position = " + zapros.reposition(), null);
             TextKolvoZap.setText("Количество записей в базе: " + defectBND.getCount());
         }
     }

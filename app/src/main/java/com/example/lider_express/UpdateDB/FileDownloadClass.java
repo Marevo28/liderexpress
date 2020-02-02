@@ -1,8 +1,7 @@
-package com.example.lider_express.DownloadFile;
+package com.example.lider_express.UpdateDB;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import org.apache.commons.io.FileUtils;
@@ -19,7 +18,7 @@ public class FileDownloadClass extends AsyncTask<Void, Void, Void> {
     private Throwable throwable;
     Context context;
 
-    public FileDownloadClass(String url, File destination, ProgressBar fileLoadingListener, Context c) {
+    public FileDownloadClass(String url, File destination, Context c) {
         this.url = url;
         this.destination = destination;
         this.context = c;
@@ -47,4 +46,5 @@ public class FileDownloadClass extends AsyncTask<Void, Void, Void> {
 
         Toast.makeText(context, "Обновлено", Toast.LENGTH_LONG).show();
     }
+
 }
