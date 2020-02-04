@@ -136,9 +136,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     intposition = Integer.parseInt(position);
                     Zakazchik = mSettings.getString(APP_ZAKAZCHIK, "не определено");
                     switch (Zakazchik) {
-                        case "Башнефть 2019": Zakazchik = "ZayavkaBND";break;
-                        case "Мегион 2019": Zakazchik = "Megion2019"; break;
-                        case "Полюс 2019": Zakazchik = "ZayavkaBND"; break;
+                        case "Башнефть 2019": Zakazchik = Shared.nameBND2019;break;
+                        case "Мегион 2019": Zakazchik = Shared.nameMegion2019; break;
+                        case "Полюс 2019": Zakazchik = Shared.namePolus2019; break;
+                        case "Башнефть 2020": Zakazchik = Shared.nameBND2020;break;
+                        case "Мегион 2020": Zakazchik = Shared.nameMegion2020; break;
+                        case "Полюс 2020": Zakazchik = Shared.namePolus2020; break;
+                        case "Башнефть 2021": Zakazchik = Shared.nameBND2021;break;
+                        case "Мегион 2021": Zakazchik = Shared.nameMegion2021; break;
+                        case "Полюс 2021": Zakazchik = Shared.namePolus2021; break;
                         default: Zakazchik = "Не выбран"; break;
                     }
 
@@ -215,16 +221,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
                 switch (Zakazchik){
-                    case "ZayavkaBND": Intent IntentSvodnayaBND = new Intent(MainActivity.this, BNDSvodnaya.class);
-                                       IntentSvodnayaBND.putExtra("position", position);
-                                       startActivity(IntentSvodnayaBND);
-                    case "Megion2019": Intent IntentMegion2019 = new Intent(MainActivity.this, Megion2020.class);
-                                       IntentMegion2019.putExtra("position", position);
-                                       startActivity(IntentMegion2019);
+                    case "ZayavkaBND2019": Intent IntentSvodnayaBND2019 = new Intent(MainActivity.this, BNDSvodnaya.class);
+                                       startIntent(IntentSvodnayaBND2019); break;
+                    case "Megion2019": Intent IntentMegion2019 = new Intent(MainActivity.this, Megion.class);
+                                       startIntent(IntentMegion2019); break;
+                        /**   case "Polus2019": Intent IntentPolus2019 = new Intent(MainActivity.this, Polus.class);
+                        startIntent(IntentPolus2019); break;**/
+                    case "ZayavkaBND2020": Intent IntentSvodnayaBND2020 = new Intent(MainActivity.this, BNDSvodnaya.class);
+                        startIntent(IntentSvodnayaBND2020); break;
+                    case "Megion2020": Intent IntentMegion2020 = new Intent(MainActivity.this, Megion.class);
+                        startIntent(IntentMegion2020); break;
+                        /**   case "Polus2020": Intent IntentPolus2020 = new Intent(MainActivity.this, Polus.class);
+                         startIntent(IntentPolus2020); break;**/
+                    case "ZayavkaBND2021": Intent IntentSvodnayaBND2021 = new Intent(MainActivity.this, BNDSvodnaya.class);
+                        startIntent(IntentSvodnayaBND2021); break;
+                    case "Megion2021": Intent IntentMegion2021 = new Intent(MainActivity.this, Megion.class);
+                        startIntent(IntentMegion2021); break;
+                        /**   case "Polus2021": Intent IntentPolus2021 = new Intent(MainActivity.this, Polus.class);
+                         startIntent(IntentPolus2021); **/
                 }
-
             }
         });
+    }
+
+    public void startIntent(Intent intent){
+        intent.putExtra("position", position);
+        intent.putExtra("Zakazchik", Zakazchik);
+        startActivity(intent);
     }
 
     private void iniWH(){  // Ширина и высота экрана устройства

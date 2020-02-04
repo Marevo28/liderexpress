@@ -67,7 +67,7 @@ public class SpisokMegion extends AppCompatActivity {
         butSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentSvodnaya = new Intent(SpisokMegion.this, Megion2020.class);//данны дял передачи
+                Intent IntentSvodnaya = new Intent(SpisokMegion.this, Megion.class);//данны дял передачи
                 IntentSvodnaya.putExtra("select", select);
                 IntentSvodnaya.putExtra("people", PEOPLE);
                 setResult(RESULT_OK, IntentSvodnaya);

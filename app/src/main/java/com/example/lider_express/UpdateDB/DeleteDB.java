@@ -6,11 +6,12 @@ import java.io.File;
 
 public class DeleteDB {
 
+    /**
     public DeleteDB(String nameDB){
         File file = new File( Shared.pathDB + nameDB);
         if(file.exists()) {
             file.delete();
         }
-    }
+    } **/
 
 }

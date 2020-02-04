@@ -89,6 +89,9 @@ public class BNDSvodnaya extends AppCompatActivity {
     Statement stmt = null;
     int ID = 1;
 
+    private String Zakazchik;
+    private String ZakazchikDefect;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -125,7 +128,7 @@ public class BNDSvodnaya extends AppCompatActivity {
         TextNote = findViewById(R.id.TextNote);
         TextPrichinaIskl = findViewById(R.id.TextPrichinaIskl);
 
-        mDBHelper = MainActivity.getDBHelper();// new DatabaseHelper(this);// подклчюение к БД
+        mDBHelper = MainActivity.getDBHelper();  // new DatabaseHelper(this);// подклчюение к БД
 
         try {
             mDb = mDBHelper.getWritableDatabase();
@@ -136,7 +139,22 @@ public class BNDSvodnaya extends AppCompatActivity {
         Bundle arguments = getIntent().getExtras();
         position = arguments.getString("position");
 
-        Cursor cursor = mDb.query("ZayavkaBND", null, "POSITION = ?", new String[]{position}, null, null, null);
+        Zakazchik = arguments.getString("Zakazchik");
+        switch (Zakazchik){
+            case "ZayavkaBND2019": ZakazchikDefect = Shared.nameDefectBND2019; break;
+            case "Megion2019": ZakazchikDefect = Shared.nameDefectMegion2019; break;
+            case "Polus2019": ZakazchikDefect = Shared.nameDefectPolus2019; break;
+            case "ZayavkaBND2020": ZakazchikDefect = Shared.nameDefectBND2020; break;
+            case "Megion2020": ZakazchikDefect = Shared.nameDefectMegion2020; break;
+            case "Polus2020": ZakazchikDefect = Shared.nameDefectPolus2020; break;
+            case "ZayavkaBND2021": ZakazchikDefect = Shared.nameDefectBND2021; break;
+            case "Megion2021": ZakazchikDefect = Shared.nameDefectMegion2021; break;
+            case "Polus2021": ZakazchikDefect = Shared.nameDefectPolus2021; break;
+        }
+
+        System.out.println("-------------------------------------------------" + Zakazchik);
+
+        Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position}, null, null, null);
         cursor.moveToFirst();
 
 
@@ -425,7 +443,7 @@ public class BNDSvodnaya extends AppCompatActivity {
                 initialValues.put("Stolb51", note);
                 initialValues.put("Stolb52", iskluch);
                 initialValues.put("Stolb53", prichina);
-                mDb.insert("DefectBND", null, initialValues);
+                mDb.insert(ZakazchikDefect, null, initialValues);
                 //Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
                 //displayMessage(getBaseContext(), String.valueOf(defectBND.getCount()));
                 displayMessage(getBaseContext(), "Записан: "+ position);

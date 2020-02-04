@@ -21,7 +21,9 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 public class SittingsActivity extends AppCompatActivity {
-    String[] Zakazchiki = {"Башнефть 2019", "Мегион 2019", "Полюс 2019"};
+    String[] Zakazchiki = {"Башнефть 2019", "Мегион 2019", "Полюс 2019",
+            "Башнефть 2020", "Мегион 2020", "Полюс 2020",
+            "Башнефть 2021", "Мегион 2021", "Полюс 2021"};
     String Zakazchik;
     Button ButSave;
     TextView TextZakazchik;

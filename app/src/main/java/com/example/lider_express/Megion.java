@@ -26,7 +26,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class Megion2020 extends AppCompatActivity {
+public class Megion extends AppCompatActivity {
 
     public static final String POSITION = "Position";
     public DatabaseHelper mDBHelper;
@@ -468,7 +468,7 @@ public class Megion2020 extends AppCompatActivity {
         Button_DataNachaloOstanova.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(Megion2020.this, Picker_DataNachaloOstanova,
+                new DatePickerDialog(Megion.this, Picker_DataNachaloOstanova,
                         dateAndTime.get(Calendar.YEAR),
                         dateAndTime.get(Calendar.MONTH),
                         dateAndTime.get(Calendar.DAY_OF_MONTH))
@@ -480,7 +480,7 @@ public class Megion2020 extends AppCompatActivity {
         Button_DataOkonOstanova.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(Megion2020.this, Picker_DataOkonOstanova,
+                new DatePickerDialog(Megion.this, Picker_DataOkonOstanova,
                         dateAndTime.get(Calendar.YEAR),
                         dateAndTime.get(Calendar.MONTH),
                         dateAndTime.get(Calendar.DAY_OF_MONTH))
@@ -493,7 +493,7 @@ public class Megion2020 extends AppCompatActivity {
         Button_DataViezdaBezNK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(Megion2020.this, Picker_DataViezdaBezNKO,
+                new DatePickerDialog(Megion.this, Picker_DataViezdaBezNKO,
                         dateAndTime.get(Calendar.YEAR),
                         dateAndTime.get(Calendar.MONTH),
                         dateAndTime.get(Calendar.DAY_OF_MONTH))
@@ -506,7 +506,7 @@ public class Megion2020 extends AppCompatActivity {
         Button_SpecViezdObject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentSittings = new Intent(Megion2020.this, SpisokMegion.class);
+                Intent IntentSittings = new Intent(Megion.this, SpisokMegion.class);
                 IntentSittings.putExtra("people", "expertsObject");
                 startActivityForResult(IntentSittings, PEOPLE);
             }
@@ -516,7 +516,7 @@ public class Megion2020 extends AppCompatActivity {
         Button_DataActNegotov.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(Megion2020.this, Picker_DataActNegotov,
+                new DatePickerDialog(Megion.this, Picker_DataActNegotov,
                         dateAndTime.get(Calendar.YEAR),
                         dateAndTime.get(Calendar.MONTH),
                         dateAndTime.get(Calendar.DAY_OF_MONTH))
@@ -528,7 +528,7 @@ public class Megion2020 extends AppCompatActivity {
         Button_DataActNepredostav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(Megion2020.this, Picker_DataActNepredostav,
+                new DatePickerDialog(Megion.this, Picker_DataActNepredostav,
                         dateAndTime.get(Calendar.YEAR),
                         dateAndTime.get(Calendar.MONTH),
                         dateAndTime.get(Calendar.DAY_OF_MONTH))
@@ -541,7 +541,7 @@ public class Megion2020 extends AppCompatActivity {
         Button_SpecProvNK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentSittings = new Intent(Megion2020.this, SpisokMegion.class);
+                Intent IntentSittings = new Intent(Megion.this, SpisokMegion.class);
                 IntentSittings.putExtra("people", "expertsNK");
                 startActivityForResult(IntentSittings, PEOPLE);
             }
@@ -552,7 +552,7 @@ public class Megion2020 extends AppCompatActivity {
         Button_DataNK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(Megion2020.this, Picker_DataNK,
+                new DatePickerDialog(Megion.this, Picker_DataNK,
                         dateAndTime.get(Calendar.YEAR),
                         dateAndTime.get(Calendar.MONTH),
                         dateAndTime.get(Calendar.DAY_OF_MONTH))
@@ -565,7 +565,7 @@ public class Megion2020 extends AppCompatActivity {
         Button_DataPovtorViezd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(Megion2020.this, Picker_DataPovtorViezd,
+                new DatePickerDialog(Megion.this, Picker_DataPovtorViezd,
                         dateAndTime.get(Calendar.YEAR),
                         dateAndTime.get(Calendar.MONTH),
                         dateAndTime.get(Calendar.DAY_OF_MONTH))
@@ -578,7 +578,7 @@ public class Megion2020 extends AppCompatActivity {
         Button_DataIsklucheniya.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(Megion2020.this, Picker_DataIsklucheniya,
+                new DatePickerDialog(Megion.this, Picker_DataIsklucheniya,
                         dateAndTime.get(Calendar.YEAR),
                         dateAndTime.get(Calendar.MONTH),
                         dateAndTime.get(Calendar.DAY_OF_MONTH))
@@ -630,7 +630,7 @@ public class Megion2020 extends AppCompatActivity {
                 initialValues.put("Stolb51", strZapisiVPasporte);
                 mDb.insert("DefectMegion", null, initialValues);
                 displayMessage(getBaseContext(), "Записан: "+ position);
-                Intent IntentSittings = new Intent(Megion2020.this, MainActivity.class);
+                Intent IntentSittings = new Intent(Megion.this, MainActivity.class);
                 startActivity(IntentSittings);
             }
         });

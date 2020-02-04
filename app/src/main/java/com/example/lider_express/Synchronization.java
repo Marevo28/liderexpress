@@ -3,11 +3,15 @@ package com.example.lider_express;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,50 +21,55 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.lider_express.DataBase.DatabaseHelper;
 import com.example.lider_express.UpdateDB.DeleteDB;
 import com.example.lider_express.UpdateDB.FileDownloadClass;
-
 import java.io.File;
 
 public class Synchronization extends AppCompatActivity {
 
+     DatabaseHelper mDBHelper;
+     SQLiteDatabase mDb;
+     private Spinner spinnerDefect;
+     String[] Zakazchiki = {"Башнефть 2019", "Мегион 2019", "Полюс 2019",
+             "Башнефть 2020", "Мегион 2020", "Полюс 2020",
+             "Башнефть 2021", "Мегион 2021", "Полюс 2021"};
 
-    String nameD = "/data/user/0/com.example.lider_express/databases";
+     private String Zakazchik = Shared.nameDefectBND2020;
 
-    int amount;
-    Button btnpostion;
-    Button btnUpdateDB;
-    Button btnSendData;
+     int amount;
+     Button btnpostion;
+     Button btnUpdateDB;
+     Button btnSendData;
 
-    TextView TextKolvoZap;
-    EditText textpostion;
-    String position;
-    String stolb27;
-    String stolb28;
-    String stolb29;
-    String stolb30;
-    String stolb31;
-    String stolb32;
-    String stolb33;
-    String stolb34;
-    String stolb35;
-    String stolb36;
-    String stolb37;
-    String stolb38;
-    String stolb39;
-    String stolb40;
-    String stolb41;
-    String stolb42;
-    String stolb43;
-    String stolb44;
-    String stolb45;
-    String stolb46;
-    String stolb47;
-    String stolb48;
-    String stolb49;
-    String stolb50;
-    String stolb51;
-    String stolb52;
-    String stolb53;
-    private JsonZapros zapros;
+     TextView TextKolvoZap;
+     EditText textpostion;
+     String position;
+     String stolb27;
+     String stolb28;
+     String stolb29;
+     String stolb30;
+     String stolb31;
+     String stolb32;
+     String stolb33;
+     String stolb34;
+     String stolb35;
+     String stolb36;
+     String stolb37;
+     String stolb38;
+     String stolb39;
+     String stolb40;
+     String stolb41;
+     String stolb42;
+     String stolb43;
+     String stolb44;
+     String stolb45;
+     String stolb46;
+     String stolb47;
+     String stolb48;
+     String stolb49;
+     String stolb50;
+     String stolb51;
+     String stolb52;
+     String stolb53;
+     private JsonZapros zapros;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,10 +82,18 @@ public class Synchronization extends AppCompatActivity {
         btnSendData = findViewById(R.id.ButtonSendData);
         textpostion = (EditText) findViewById(R.id.textpositon);
         TextKolvoZap = (TextView) findViewById(R.id.TextKolvoZap);
+        spinnerDefect = findViewById(R.id.spinnerDefect);
 
-        Shared.databaseHelper = MainActivity.getDBHelper();
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Zakazchiki);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinnerDefect.setAdapter(adapter);
+        spinnerDefect.setSelection(3);
+
+        mDBHelper = new DatabaseHelper();
         try {
-            Shared.mDb = Shared.databaseHelper.getWritableDatabase();
+            mDb = mDBHelper.getWritableDatabase();
         } catch (SQLException mSQLException) {
             throw mSQLException;
         }
@@ -84,13 +101,36 @@ public class Synchronization extends AppCompatActivity {
         btnpostion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Cursor defectBND = Shared.databaseHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
+                Cursor defectBND = mDb.query(Zakazchik, null, null, null, null, null, null);
                 TextKolvoZap.setText("Количество записей в базе: " + defectBND.getCount());
                 defectBND.close();
             }
         });
 
+        spinnerDefect.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 0: Zakazchik = Shared.nameDefectBND2019; break;
+                    case 1: Zakazchik = Shared.nameDefectMegion2019; break;
+                    case 2: Zakazchik = Shared.nameDefectPolus2019; break;
+                    case 3: Zakazchik = Shared.nameDefectBND2020; break;
+                    case 4: Zakazchik = Shared.nameDefectMegion2020; break;
+                    case 5: Zakazchik = Shared.nameDefectPolus2020; break;
+                    case 6: Zakazchik = Shared.nameDefectBND2021; break;
+                    case 7: Zakazchik = Shared.nameDefectMegion2021; break;
+                    case 8: Zakazchik = Shared.nameDefectPolus2021; break;
+                }
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+        /**
         btnUpdateDB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -147,13 +187,14 @@ public class Synchronization extends AppCompatActivity {
                 Toast.makeText(Shared.context, "Update", Toast.LENGTH_LONG).show();
             }
         });
+         **/
 
     }
 
     public void onDown(View view) {
 
-        Cursor cursor = Shared.mDb.query("DefectBND", null, null, null, null, null, null);
-        Cursor defectBND = Shared.databaseHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
+        Cursor cursor = mDb.query("DefectBND2020", null, null, null, null, null, null);
+        Cursor defectBND = mDb.query("DefectBND2020", null, null, null, null, null, null);
 
         amount = defectBND.getCount();
         if (amount == 0) {
@@ -219,23 +260,16 @@ public class Synchronization extends AppCompatActivity {
             zapros = new JsonZapros();
             zapros.download(position, stolb27, stolb28, stolb29, stolb30, stolb31, stolb32, stolb33, stolb34, stolb35, stolb36, stolb37, stolb38, stolb39,
                     stolb40, stolb41, stolb42, stolb43, stolb44, stolb45, stolb46, stolb47, stolb48, stolb49, stolb50, stolb51, stolb52, stolb53);
-
-
-
-
-
-
-
-
-
             try {
                 zapros.join();
             } catch (InterruptedException ie) {
                 Log.e("pass 0", ie.getMessage());
             }
-            displayMessage(getBaseContext(), "отправлено: "+zapros.reposition());
-            Shared.mDb.delete("DefectBND", "Position = " + zapros.reposition(), null);
+
+            displayMessage(getBaseContext(), "отправлено: " + zapros.reposition());
+            mDb.delete("DefectBND2020", "Position = " + zapros.reposition(), null);
             TextKolvoZap.setText("Количество записей в базе: " + defectBND.getCount());
+            zapros.interrupt(); // Останваливаем поток
         }
     }
 
