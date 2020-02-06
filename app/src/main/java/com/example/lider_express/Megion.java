@@ -35,6 +35,8 @@ public class Megion extends AppCompatActivity {
     private Calendar dateAndTime = Calendar.getInstance();
 
     private String position;
+    private String Zakazchik;
+    private String ZakazchikDefect;
 
     // XML Привзяки
     private RadioGroup Ispolnenie;                // - 28  RadioGroup Исполнение
@@ -167,7 +169,20 @@ public class Megion extends AppCompatActivity {
 
         Bundle arguments = getIntent().getExtras(); // Bundle
         position = arguments.getString("position"); // Позиция оборудования в БД
-        Cursor cursor = mDb.query("Megion2019", null, "POSITION = ?", new String[]{position}, null, null, null);
+        Zakazchik= arguments.getString("Zakazchik");
+        switch (Zakazchik){
+            case "ZayavkaBND2019": ZakazchikDefect = Shared.nameDefectBND2019; break;
+            case "Megion2019": ZakazchikDefect = Shared.nameDefectMegion2019; break;
+            case "Polus2019": ZakazchikDefect = Shared.nameDefectPolus2019; break;
+            case "ZayavkaBND2020": ZakazchikDefect = Shared.nameDefectBND2020; break;
+            case "Megion2020": ZakazchikDefect = Shared.nameDefectMegion2020; break;
+            case "Polus2020": ZakazchikDefect = Shared.nameDefectPolus2020; break;
+            case "ZayavkaBND2021": ZakazchikDefect = Shared.nameDefectBND2021; break;
+            case "Megion2021": ZakazchikDefect = Shared.nameDefectMegion2021; break;
+            case "Polus2021": ZakazchikDefect = Shared.nameDefectPolus2021; break;
+        }
+
+        Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position}, null, null, null);
         cursor.moveToFirst();
 
         // Исполнение
@@ -626,9 +641,9 @@ public class Megion extends AppCompatActivity {
                 initialValues.put("Stolb47", strIskluchenie);
                 initialValues.put("Stolb48", strDataIskluchenie);
                 initialValues.put("Stolb49", strPrichinaDomIsk);
-                initialValues.put("Stolb50", strKtoIskluchil);
-                initialValues.put("Stolb51", strZapisiVPasporte);
-                mDb.insert("DefectMegion", null, initialValues);
+                initialValues.put("Stolb52", strKtoIskluchil);
+                initialValues.put("Stolb53", strZapisiVPasporte);
+                mDb.insert(ZakazchikDefect, null, initialValues);
                 displayMessage(getBaseContext(), "Записан: "+ position);
                 Intent IntentSittings = new Intent(Megion.this, MainActivity.class);
                 startActivity(IntentSittings);

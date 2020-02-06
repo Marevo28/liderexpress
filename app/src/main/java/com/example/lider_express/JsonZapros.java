@@ -17,39 +17,55 @@ import java.util.ArrayList;
 
 public class JsonZapros extends Thread {
 
-    String position;
+    private String position;
 
-    String stolb27;
-    String stolb28;
-    String stolb29;
-    String stolb30;
-    String stolb31;
-    String stolb32;
-    String stolb33;
-    String stolb34;
-    String stolb35;
-    String stolb36;
-    String stolb37;
-    String stolb38;
-    String stolb39;
-    String stolb40;
-    String stolb41;
-    String stolb42;
-    String stolb43;
-    String stolb44;
-    String stolb45;
-    String stolb46;
-    String stolb47;
-    String stolb48;
-    String stolb49;
-    String stolb50;
-    String stolb51;
-    String stolb52;
-    String stolb53;
+    private String mURL;
 
-    String result = null;
-    String line = null;
-    InputStream is = null;
+    private String stolb27;
+    private String stolb28;
+    private String stolb29;
+    private String stolb30;
+    private String stolb31;
+    private String stolb32;
+    private String stolb33;
+    private String stolb34;
+    private String stolb35;
+    private String stolb36;
+    private String stolb37;
+    private String stolb38;
+    private String stolb39;
+    private String stolb40;
+    private String stolb41;
+    private String stolb42;
+    private String stolb43;
+    private String stolb44;
+    private String stolb45;
+    private String stolb46;
+    private String stolb47;
+    private String stolb48;
+    private String stolb49;
+    private String stolb50;
+    private String stolb51;
+    private String stolb52;
+    private String stolb53;
+
+    private String result = null;
+    private String line = null;
+    private InputStream is = null;
+
+    public JsonZapros(String Zakazchik){
+        switch (Zakazchik){
+            case "ZayavkaBND2019": mURL = "http://peremoga.tech/Download.php"; break;
+            case "Megion2019": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
+            case "Polus2019": mURL = ""; break;
+            case "ZayavkaBND2020": mURL = "http://peremoga.tech/Download.php"; break;
+            case "Megion2020": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
+            case "Polus2020": mURL = ""; break;
+            case "ZayavkaBND2021": mURL = "http://peremoga.tech/Download.php"; break;
+            case "Megion2021": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
+            case "Polus2021": mURL = ""; break;
+        }
+    }
 
     public void run() {
         // создаем лист для отправки запросов
@@ -86,7 +102,7 @@ public class JsonZapros extends Thread {
         //  подключаемся к php запросу и отправляем в него id
         try {
             HttpClient httpclient = new DefaultHttpClient();
-            HttpPost httppost = new HttpPost("http://peremoga.tech/Download.php");
+            HttpPost httppost = new HttpPost(mURL);
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs, "UTF-8"));
             HttpResponse response = httpclient.execute(httppost);
             HttpEntity entity = response.getEntity();

@@ -101,9 +101,9 @@ public class Synchronization extends AppCompatActivity {
         btnpostion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Cursor defectBND = mDb.query(Zakazchik, null, null, null, null, null, null);
-                TextKolvoZap.setText("Количество записей в базе: " + defectBND.getCount());
-                defectBND.close();
+                Cursor defect = mDb.query(Zakazchik, null, null, null, null, null, null);
+                TextKolvoZap.setText("Количество записей в базе: " + defect.getCount());
+                defect.close();
             }
         });
 
@@ -113,13 +113,13 @@ public class Synchronization extends AppCompatActivity {
                 switch (position) {
                     case 0: Zakazchik = Shared.nameDefectBND2019; break;
                     case 1: Zakazchik = Shared.nameDefectMegion2019; break;
-                    case 2: Zakazchik = Shared.nameDefectPolus2019; break;
+                    case 2: /** Zakazchik = Shared.nameDefectPolus2019; **/ break;
                     case 3: Zakazchik = Shared.nameDefectBND2020; break;
                     case 4: Zakazchik = Shared.nameDefectMegion2020; break;
-                    case 5: Zakazchik = Shared.nameDefectPolus2020; break;
+                    case 5: /**Zakazchik = Shared.nameDefectPolus2020;**/  break;
                     case 6: Zakazchik = Shared.nameDefectBND2021; break;
                     case 7: Zakazchik = Shared.nameDefectMegion2021; break;
-                    case 8: Zakazchik = Shared.nameDefectPolus2021; break;
+                    case 8: /**Zakazchik = Shared.nameDefectPolus2021;**/  break;
                 }
             }
 
@@ -193,10 +193,10 @@ public class Synchronization extends AppCompatActivity {
 
     public void onDown(View view) {
 
-        Cursor cursor = mDb.query("DefectBND2020", null, null, null, null, null, null);
-        Cursor defectBND = mDb.query("DefectBND2020", null, null, null, null, null, null);
+        Cursor cursor = mDb.query(Zakazchik, null, null, null, null, null, null);
+        Cursor defect = mDb.query(Zakazchik, null, null, null, null, null, null);
 
-        amount = defectBND.getCount();
+        amount = defect.getCount();
         if (amount == 0) {
             displayMessage(getBaseContext(), "В базе пусто");
         }else {
@@ -257,7 +257,7 @@ public class Synchronization extends AppCompatActivity {
                 stolb52 = cursor.getString(27); }
             if (cursor.getString(28) != null) {
                 stolb53 = cursor.getString(28); }
-            zapros = new JsonZapros();
+            zapros = new JsonZapros(Zakazchik);
             zapros.download(position, stolb27, stolb28, stolb29, stolb30, stolb31, stolb32, stolb33, stolb34, stolb35, stolb36, stolb37, stolb38, stolb39,
                     stolb40, stolb41, stolb42, stolb43, stolb44, stolb45, stolb46, stolb47, stolb48, stolb49, stolb50, stolb51, stolb52, stolb53);
             try {
@@ -267,8 +267,8 @@ public class Synchronization extends AppCompatActivity {
             }
 
             displayMessage(getBaseContext(), "отправлено: " + zapros.reposition());
-            mDb.delete("DefectBND2020", "Position = " + zapros.reposition(), null);
-            TextKolvoZap.setText("Количество записей в базе: " + defectBND.getCount());
+            mDb.delete(Zakazchik, "Position = " + zapros.reposition(), null);
+            TextKolvoZap.setText("Количество записей в базе: " + defect.getCount());
             zapros.interrupt(); // Останваливаем поток
         }
     }

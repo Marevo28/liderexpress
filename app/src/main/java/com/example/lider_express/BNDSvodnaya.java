@@ -152,8 +152,6 @@ public class BNDSvodnaya extends AppCompatActivity {
             case "Polus2021": ZakazchikDefect = Shared.nameDefectPolus2021; break;
         }
 
-        System.out.println("-------------------------------------------------" + Zakazchik);
-
         Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position}, null, null, null);
         cursor.moveToFirst();
 

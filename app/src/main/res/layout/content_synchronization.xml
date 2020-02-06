@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,52 +9,58 @@
     tools:context=".Synchronization"
     tools:showIn="@layout/activity_synchronization">
 
-    <Button
-        android:id="@+id/btnposition"
-        android:layout_width="320dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="100dp"
-        android:text="Узнать кол-во записей"
-        app:layout_constraintStart_toStartOf="@+id/TextKolvoZap"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp">
 
-    <Spinner
-        android:id="@+id/spinnerDefect"
-        android:layout_width="325dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintStart_toStartOf="@+id/btnposition"
-        app:layout_constraintTop_toBottomOf="@+id/btnposition" />
+        <Spinner
+            android:id="@+id/spinnerDefect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"/>
 
-    <Button
-        android:id="@+id/ButtonSendData"
-        android:layout_width="320dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="112dp"
-        android:onClick="onDown"
-        android:text="Отправка данных"
-        app:layout_constraintStart_toStartOf="@+id/btnposition"
-        app:layout_constraintTop_toBottomOf="@+id/btnposition" />
+        <TextView
+            android:id="@+id/TextKolvoZap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Количество записей в базе:"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:layout_gravity="center" />
 
-    <TextView
-        android:id="@+id/TextKolvoZap"
-        android:layout_width="320dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="28dp"
-        android:text="Количество записей в базе:"
-        android:gravity="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/ButtonUpdateDB"
-        android:layout_width="320dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="148dp"
-        android:text="Обновление сводной"
-        app:layout_constraintStart_toStartOf="@+id/ButtonSendData"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonSendData" />
+        <Button
+            android:id="@+id/btnposition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Узнать кол-во записей"
+            android:layout_margin="10dp"
+            android:layout_gravity="center" />
+
+
+        <Button
+            android:id="@+id/ButtonSendData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onDown"
+            android:text="Отправка данных"
+            android:layout_margin="10dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/ButtonUpdateDB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Обновление сводной"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+           />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
