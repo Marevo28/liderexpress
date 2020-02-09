@@ -115,7 +115,11 @@ public class JsonZapros extends Thread {
             Log.e("Fail 1", e.toString());
         }
         // получаем ответ от php запроса в формате json
+<<<<<<< HEAD
         System.out.println("-----получаем ответ от php запроса в формате json-------");
+=======
+        System.out.println("------------------ Server ------------------");
+>>>>>>> 0d66a5ce4a16cd3895bb7b157c1d1ed9fad0612d
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"), 8);
             StringBuilder sb = new StringBuilder();
@@ -129,7 +133,11 @@ public class JsonZapros extends Thread {
             Log.e("Fail 2", e.toString());
         }
         // обрабатываем полученный json
+<<<<<<< HEAD
         System.out.println("------обрабатываем полученный json------");
+=======
+        System.out.println("------------------ Server ------------------");
+>>>>>>> 0d66a5ce4a16cd3895bb7b157c1d1ed9fad0612d
         try {
             JSONObject json_data = new JSONObject(result);
             position= (json_data.getString("a"));

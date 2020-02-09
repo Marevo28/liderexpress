@@ -59,8 +59,11 @@ public class Shared {
     public static String nameDefectMegion2024 = "DefectMegion2024";
     public static String nameDefectPolus2024 = "DefectPolus2024";
 
-   // public static String pathDB = Shared.context.getFilesDir().getPath()+"/../databases/";
-   // public static String URL = "https://drive.google.com/uc?export=download&id=1eQd_wpkcixYyiz1xKiNvKdmKA_QRe9Tf";
+    public static String pathDB = "data/data/com.example.lider_express/databases/";
+    public static String URL = "https://vk.com/doc293382271_534672244?hash=d80f91739d0d0f0281&dl=68b702dc5d5eb6cd88";
+
+
+           // "http://peremoga.tech/dl.php";
 
 
 }

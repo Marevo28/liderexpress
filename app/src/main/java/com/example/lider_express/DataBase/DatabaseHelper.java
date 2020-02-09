@@ -13,24 +13,20 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    private static String DB_NAME = "leaderexpress.db";
     private static String DB_PATH = "";
     private static final int DB_VERSION = 3;
     private SQLiteDatabase mDataBase;
     private boolean mNeedUpdate = true;
 
     public DatabaseHelper() {
-        super(Shared.context, DB_NAME, null, DB_VERSION);
+        super(Shared.context, Shared.nameDB, null, DB_VERSION);
         if (android.os.Build.VERSION.SDK_INT >= 17) {
            // DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
-            DB_PATH = Shared.context.getDatabasePath(DB_NAME).getPath();
+            DB_PATH = Shared.context.getDatabasePath( Shared.nameDB).getPath();
         }
         else {
             DB_PATH = "/data/data/" + Shared.context.getPackageName() + "/databases/";
         }
-
-        copyDataBase();
-        this.getReadableDatabase();
 
         copyDataBase();
         this.getReadableDatabase();
@@ -65,7 +61,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private void copyDBFile() throws IOException {
-        InputStream mInput = Shared.context.getAssets().open(DB_NAME);
+        InputStream mInput = Shared.context.getAssets().open( Shared.nameDB);
         OutputStream mOutput = new FileOutputStream(DB_PATH /** + DB_NAME **/);
         byte[] mBuffer = new byte[1024];
         int mLength;
