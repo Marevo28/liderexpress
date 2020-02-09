@@ -55,15 +55,15 @@ public class JsonZapros extends Thread {
 
     public JsonZapros(String Zakazchik){
         switch (Zakazchik){
-            case "ZayavkaBND2019": mURL = "http://peremoga.tech/Download.php"; break;
-            case "Megion2019": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
-            case "Polus2019": mURL = ""; break;
-            case "ZayavkaBND2020": mURL = "http://peremoga.tech/Download.php"; break;
-            case "Megion2020": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
-            case "Polus2020": mURL = ""; break;
-            case "ZayavkaBND2021": mURL = "http://peremoga.tech/Download.php"; break;
-            case "Megion2021": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
-            case "Polus2021": mURL = ""; break;
+            case "DefectBND2019": mURL = "http://peremoga.tech/Android/DefectBND2020.php"; break;
+            case "DefectMegion2019": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
+            case "DefectPolus2019": mURL = ""; break;
+            case "DefectBND2020": mURL = "http://peremoga.tech/Android/DefectBND2020.php"; break;
+            case "DefectMegion2020": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
+            case "DefectPolus2020": mURL = ""; break;
+            case "DefectBND2021": mURL = "http://peremoga.tech/Android/DefectBND2020.php"; break;
+            case "DefectMegion2021": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
+            case "DefectPolus2021": mURL = ""; break;
         }
     }
 
@@ -112,6 +112,7 @@ public class JsonZapros extends Thread {
             Log.e("Fail 1", e.toString());
         }
         // получаем ответ от php запроса в формате json
+        System.out.println("------------------ Server ------------------");
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"), 8);
             StringBuilder sb = new StringBuilder();
@@ -125,6 +126,7 @@ public class JsonZapros extends Thread {
             Log.e("Fail 2", e.toString());
         }
         // обрабатываем полученный json
+        System.out.println("------------------ Server ------------------");
         try {
             JSONObject json_data = new JSONObject(result);
             position= (json_data.getString("a"));

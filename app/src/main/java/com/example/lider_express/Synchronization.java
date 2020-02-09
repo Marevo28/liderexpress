@@ -1,6 +1,7 @@
 package com.example.lider_express;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -130,16 +131,16 @@ public class Synchronization extends AppCompatActivity {
         });
 
 
-        /**
+
         btnUpdateDB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
              //   MainActivity.getDBHelper().close();
               //  MainActivity.getContext().deleteDatabase("");
 
-                
+               /**
                 {
-                    String path = nameD;
+                    String path = Shared.pathDB;
                     Log.d("Files", "Path: " + path);
                     File directory = new File(path);
                     File[] files = directory.listFiles();
@@ -148,15 +149,10 @@ public class Synchronization extends AppCompatActivity {
                         Log.d("-1---------------Files", "FileName:" + files[i].getName());
                     }
                 }
-
-                if(Shared.databaseHelper != null){
-                    Shared.databaseHelper.close();
-                }
-
-                new DeleteDB(Shared.nameDB);
+                new DeleteDB(); // Удаляем старую Базу данных
 
                 {
-                    String path = nameD;
+                    String path = Shared.pathDB;
                     Log.d("Files", "Path: " + path);
                     File directory = new File(path);
                     File[] files = directory.listFiles();
@@ -166,28 +162,22 @@ public class Synchronization extends AppCompatActivity {
                     }
                 }
 
-                File destination = new File(Shared.pathDB + "/" + Shared.nameDB);
-                new FileDownloadClass(Shared.URL, destination, Shared.context);
                 Shared.databaseHelper = new DatabaseHelper();
-                Shared.databaseHelper.openDataBase();
                 Shared.mDb = Shared.databaseHelper.getWritableDatabase();
 
-                {
-                    String path = nameD;
-                    Log.d("Files", "Path: " + path);
-                    File directory = new File(path);
-                    File[] files = directory.listFiles();
-                    Log.d("Files", "Size: " + files.length);
-                    for (int i = 0; i < files.length; i++) {
-                        Log.d("-3----------------Files", "FileName:" + files[i].getName());
-                    }
-                }
+                **/
+                new FileDownloadClass().execute();
 
+
+
+             //   Intent intent = new Intent(Synchronization.this, MainActivity.class);
 
                 Toast.makeText(Shared.context, "Update", Toast.LENGTH_LONG).show();
+
+             //   startActivity(intent);
             }
         });
-         **/
+
 
     }
 
