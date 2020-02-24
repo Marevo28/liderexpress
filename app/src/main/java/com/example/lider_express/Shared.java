@@ -1,69 +1,80 @@
 package com.example.lider_express;
 
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.lider_express.DataBase.DatabaseHelper;
+/**
+ * @author LeStat
+ * Этот класс создан для общего доступа к статическим именам,
+ * контексту приложения, актвити и т.д. ...
+ * Так делать не следует из за засирания кода статическими переменным!!!
+ * Но для уменьшения вероятности создания ошибки в написании пока делаем так :)
+ */
 
 public class Shared {
 
-    public static AppCompatActivity appCompatActivity = MainActivity.getAppCompatActivity();
     public static Context context = MainActivity.getContext();
-    public static DatabaseHelper databaseHelper = MainActivity.getDBHelper();
-    public static SQLiteDatabase mDb = MainActivity.getSQLiteDatabase();
 
+    public static boolean flagUpdate = false;
 
-    public static String nameDB = "leaderexpress.db";
+    // Эта переменная для файла базы данных, который будет обновляться
+    public static String nameUpdateDB = "leaderexpert.db";
 
-    public static String nameBND2019 = "ZayavkaBND2019";
+    // Эта переменная идет в конуструктор DataBaseHelper
+    // C этим именем создается база данных
+    public static String nameDB = "leaderexpert.db";
+
+    // Общий список имен таблиц оборудования и дефектов
+    // Таблицы в Базе данных называть соответсвенно
+    // 2019
+    public static String nameBND2019 = "Bashneft2019";
     public static String nameMegion2019 = "Megion2019";
     public static String namePolus2019 = "Polus2019";
-    public static String nameDefectBND2019 = "DefectBND2019";
-    public static String nameDefectMegion2019 = "DefectMegion2019";
-    public static String nameDefectPolus2019 = "DefectPolus2019";
-
-    public static String nameBND2020 = "ZayavkaBND2020";
+    public static String nameDefectBND2019 = "defectBashneft2019";
+    public static String nameDefectMegion2019 = "defectMegion2019";
+    public static String nameDefectPolus2019 = "defectPolus2019";
+    // 2020
+    public static String nameBND2020 = "Bashneft2020";
     public static String nameMegion2020 = "Megion2020";
     public static String namePolus2020 = "Polus2020";
-    public static String nameDefectBND2020 = "DefectBND2020";
-    public static String nameDefectMegion2020 = "DefectMegion2020";
-    public static String nameDefectPolus2020 = "DefectPolus2020";
-
-    public static String nameBND2021 = "ZayavkaBND21";
+    public static String nameDefectBND2020 = "defectBashneft2020";
+    public static String nameDefectMegion2020 = "defectMegion2020";
+    public static String nameDefectPolus2020 = "defectPolus2020";
+    // 2021
+    public static String nameBND2021 = "Bashneft2021";
     public static String nameMegion2021 = "Megion2021";
     public static String namePolus2021 = "Polus2021";
-    public static String nameDefectBND2021 = "DefectZayavkaBND2021";
-    public static String nameDefectMegion2021 = "DefectMegion2021";
-    public static String nameDefectPolus2021 = "DefectPolus2021";
-
-    public static String nameBND2022 = "ZayavkaBND2022";
+    public static String nameDefectBND2021 = "defectBashneft2021";
+    public static String nameDefectMegion2021 = "defectMegion2021";
+    public static String nameDefectPolus2021 = "defectPolus2021";
+    // 2022
+    public static String nameBND2022 = "Bashneft2022";
     public static String nameMegion2022 = "Megion2022";
     public static String namePolus2022 = "Polus2022";
-    public static String nameDefectBND2022 = "DefectBND2022";
-    public static String nameDefectMegion2022 = "DefectMegion2022";
-    public static String nameDefectPolus2022 = "DefectPolus2022";
-
-    public static String nameBND2023 = "ZayavkaBND2023";
+    public static String nameDefectBND2022 = "defectBashneft2022";
+    public static String nameDefectMegion2022 = "defectMegion2022";
+    public static String nameDefectPolus2022 = "defectPolus2022";
+    // 2023
+    public static String nameBND2023 = "Bashneft2023";
     public static String nameMegion2023 = "Megion2023";
     public static String namePolus2023 = "Polus2023";
-    public static String nameDefectBND2023 = "DefectBND2023";
-    public static String nameDefectMegion2023 = "DefectMegion2023";
-    public static String nameDefectPolus2023 = "DefectPolus2023";
-
-    public static String nameBND2024 = "ZayavkaBND2024";
+    public static String nameDefectBND2023 = "defectBashneft2023";
+    public static String nameDefectMegion2023 = "defectMegion2023";
+    public static String nameDefectPolus2023 = "defectPolus2023";
+    // 2024
+    public static String nameBND2024 = "Bashneft2024";
     public static String nameMegion2024 = "Megion2024";
     public static String namePolus2024 = "Polus2024";
-    public static String nameDefectBND2024 = "DefectBND2024";
-    public static String nameDefectMegion2024 = "DefectMegion2024";
-    public static String nameDefectPolus2024 = "DefectPolus2024";
+    public static String nameDefectBND2024 = "defectBashneft2024";
+    public static String nameDefectMegion2024 = "defectMegion2024";
+    public static String nameDefectPolus2024 = "defectPolus2024";
 
-    public static String pathDB = "data/data/com.example.lider_express/databases/";
-    public static String URL = "https://vk.com/doc293382271_534672244?hash=d80f91739d0d0f0281&dl=68b702dc5d5eb6cd88";
+    // Путь папки для обновления файла баззы данных
+    public static String pathUpdateDB = "data/data/com.example.lider_express/databaseUpdate";
 
+    // Путь папки базы данных
+    public static String pathDB = "data/data/com.example.lider_express/databases";
 
-           // "http://peremoga.tech/dl.php";
-
+    // Адрес для скачивания базы данных
+    public static String URL = "https://drive.google.com/u/0/uc?id=16e0iaW_u4EdYAz2ANdUyHgcsS5u_RSDF";
 
 }

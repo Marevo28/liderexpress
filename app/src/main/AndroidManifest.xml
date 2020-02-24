@@ -23,7 +23,7 @@
         android:theme="@style/AppTheme"
         android:networkSecurityConfig="@xml/network_security_config">
         <activity
-            android:name=".Megion"
+            android:name=".Svodnaya.MegionSvodnaya"
             android:label="@string/title_activity_megion20220"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
@@ -31,11 +31,11 @@
             android:label="@string/title_activity_bndblochka_ude"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Synchronization"
+            android:name=".Synchronization.Synchronization"
             android:label="@string/title_activity_synchronization"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".VmyatinaSocuda"
+            android:name=".Tools.VmyatinaSocuda"
             android:label="@string/title_activity_vmyatina_socuda"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -43,15 +43,15 @@
             android:label="@string/title_activity_gi_sosuda"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Spisok"
+            android:name=".Tools.SpisokBND"
             android:label="@string/title_activity_spisok"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SpisokMegion"
+            android:name=".Tools.SpisokMegion"
             android:label="@string/title_activity_spisok"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".BNDSvodnaya"
+            android:name=".Svodnaya.BNDSvodnaya"
             android:label="Сводная таблица"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Camera" />

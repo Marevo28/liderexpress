@@ -9,6 +9,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,18 +28,25 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.lider_express.DataBase.DatabaseHelper;
-import com.example.lider_express.UpdateDB.FileDownloadClass;
+import com.example.lider_express.Svodnaya.BNDSvodnaya;
+import com.example.lider_express.Svodnaya.MegionSvodnaya;
+import com.example.lider_express.Synchronization.Synchronization;
+import com.example.lider_express.Tools.VmyatinaSocuda;
 import com.google.android.material.navigation.NavigationView;
+
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     public static final String APP_FILES = "mysettings";
     public static final String APP_ZAKAZCHIK = "Zakazchik";
+    private SharedPreferences mSettings;
+    static SharedPreferences mPrefs;
+
     private static DatabaseHelper mDBHelper;
+    public static SQLiteDatabase mDb;
+
     private static Context context;
     private static AppCompatActivity appCompatActivity;
-    public static SQLiteDatabase mDb;
-    SharedPreferences mSettings;
 
     private static int mDisplayWidth;
     private static int mDisplayHeight;
@@ -60,7 +68,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private String Papka;
     private String Name;
     private String Zakazchik;
-    int max;
     int intposition;
 
 
@@ -94,8 +101,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-        iniWH(); // Инициализировать высоту и ширину устройства - (Для камеры)
-
         btnpostion = (Button) findViewById(R.id.btnposition);
         btnSvodnaya = (Button) findViewById(R.id.btnSvodnaya);
         btnPhotoTu = (Button) findViewById(R.id.btnPhotoTu);
@@ -109,15 +114,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         textskvazhina = (TextView) findViewById(R.id.textskvazhina);
         NameTu = (TextView) findViewById(R.id.NameTu);
         textpostion = (EditText) findViewById(R.id.textpositon);
-        mSettings = getSharedPreferences(APP_FILES, MODE_PRIVATE);
+
         btnSvodnaya.setEnabled(false);
         btnKarta.setEnabled(false);
         btnPhotoTu.setEnabled(false);
         btnPhotoDoc.setEnabled(false);
         btnPhotoKontrol.setEnabled(false);
 
-        if(mDBHelper == null) {
-            mDBHelper = new DatabaseHelper();
+        mSettings = getSharedPreferences(APP_FILES, MODE_PRIVATE);
+        mPrefs = getSharedPreferences("myAppPrefs", MODE_PRIVATE);
+
+        // Инициализировать высоту и ширину устройства - (Для камеры)
+        iniWH();
+
+        // Если не создана база данных или не установление флаг на обновление
+        if(mDBHelper == null || Shared.flagUpdate) {
+            mDBHelper = new DatabaseHelper(this, Shared.nameDB, 3);
         }
 
         try {
@@ -129,28 +141,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnpostion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 //сквозной номер
                 position = textpostion.getText().toString();
 
                 if(position.length() > 0) {
                     intposition = Integer.parseInt(position);
-                    Zakazchik = mSettings.getString(APP_ZAKAZCHIK, "не определено");
+                    Zakazchik = mSettings.getString(APP_ZAKAZCHIK, "Zakazchik");
+
                     switch (Zakazchik) {
-                        case "Башнефть 2019": Zakazchik = Shared.nameBND2019;break;
-                        case "Мегион 2019": Zakazchik = Shared.nameMegion2019; break;
-                        case "Полюс 2019": Zakazchik = Shared.namePolus2019; break;
+                    //    case "Башнефть 2019": Zakazchik = Shared.nameBND2019;break;
+                    //    case "Мегион 2019": Zakazchik = Shared.nameMegion2019; break;
+                    //    case "Полюс 2019": Zakazchik = Shared.namePolus2019; break;
                         case "Башнефть 2020": Zakazchik = Shared.nameBND2020;break;
                         case "Мегион 2020": Zakazchik = Shared.nameMegion2020; break;
-                        case "Полюс 2020": Zakazchik = Shared.namePolus2020; break;
-                        case "Башнефть 2021": Zakazchik = Shared.nameBND2021;break;
-                        case "Мегион 2021": Zakazchik = Shared.nameMegion2021; break;
-                        case "Полюс 2021": Zakazchik = Shared.namePolus2021; break;
-                        default: Zakazchik = "Не выбран"; break;
+                    //    case "Полюс 2020": Zakazchik = Shared.namePolus2020; break;
+                    //    case "Башнефть 2021": Zakazchik = Shared.nameBND2021;break;
+                    //    case "Мегион 2021": Zakazchik = Shared.nameMegion2021; break;
+                    //    case "Полюс 2021": Zakazchik = Shared.namePolus2021; break;
+                        default: Zakazchik = "No"; break;
                     }
 
-                    if (Zakazchik != "Не выбран" || position.length() != 0) {
+                    if (Zakazchik != "No" || position.length() != 0) {
+
                         long rowCount = DatabaseUtils.queryNumEntries(mDb, Zakazchik);
+
                         if(Integer.parseInt(position) > rowCount){
                             displayMessage(getBaseContext(), "Такого не существует!");
                         }else{
@@ -162,7 +176,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                             btnPhotoDoc.setEnabled(true);
                             btnPhotoKontrol.setEnabled(true);
 
-                            Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position}, null, null, null);
+                            Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position},
+                                    null, null, null);
                             cursor.moveToFirst();
 
                             texttypetu.setText(cursor.getString(2));//Тип оборудования
@@ -222,27 +237,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
                 switch (Zakazchik){
-                    case "ZayavkaBND2019": Intent IntentSvodnayaBND2019 = new Intent(MainActivity.this, BNDSvodnaya.class);
-                                       startIntent(IntentSvodnayaBND2019); break;
-                    case "Megion2019": Intent IntentMegion2019 = new Intent(MainActivity.this, Megion.class);
-                                       startIntent(IntentMegion2019); break;
-                        /**   case "Polus2019": Intent IntentPolus2019 = new Intent(MainActivity.this, Polus.class);
-                        startIntent(IntentPolus2019); break;**/
+                //    case "ZayavkaBND2019": Intent IntentSvodnayaBND2019 = new Intent(MainActivity.this, BNDSvodnaya.class);
+                //                       startIntent(IntentSvodnayaBND2019); break;
+                //    case "Megion2019": Intent IntentMegion2019 = new Intent(MainActivity.this, MegionSvodnaya.class);
+                //                       startIntent(IntentMegion2019); break;
+                //    case "Polus2019": Intent IntentPolus2019 = new Intent(MainActivity.this, Polus.class);
+                //        startIntent(IntentPolus2019); break;
                     case "ZayavkaBND2020": Intent IntentSvodnayaBND2020 = new Intent(MainActivity.this, BNDSvodnaya.class);
                         startIntent(IntentSvodnayaBND2020); break;
-                    case "Megion2020": Intent IntentMegion2020 = new Intent(MainActivity.this, Megion.class);
+                    case "Megion2020": Intent IntentMegion2020 = new Intent(MainActivity.this, MegionSvodnaya.class);
                         startIntent(IntentMegion2020); break;
-                        /**   case "Polus2020": Intent IntentPolus2020 = new Intent(MainActivity.this, Polus.class);
-                         startIntent(IntentPolus2020); break;**/
-                    case "ZayavkaBND2021": Intent IntentSvodnayaBND2021 = new Intent(MainActivity.this, BNDSvodnaya.class);
-                        startIntent(IntentSvodnayaBND2021); break;
-                    case "Megion2021": Intent IntentMegion2021 = new Intent(MainActivity.this, Megion.class);
-                        startIntent(IntentMegion2021); break;
-                        /**   case "Polus2021": Intent IntentPolus2021 = new Intent(MainActivity.this, Polus.class);
-                         startIntent(IntentPolus2021); **/
+                //    case "Polus2020": Intent IntentPolus2020 = new Intent(MainActivity.this, Polus.class);
+                //         startIntent(IntentPolus2020); break;
+                //    case "ZayavkaBND2021": Intent IntentSvodnayaBND2021 = new Intent(MainActivity.this, BNDSvodnaya.class);
+                //        startIntent(IntentSvodnayaBND2021); break;
+                //    case "Megion2021": Intent IntentMegion2021 = new Intent(MainActivity.this, MegionSvodnaya.class);
+                //        startIntent(IntentMegion2021); break;
+                //    case "Polus2021": Intent IntentPolus2021 = new Intent(MainActivity.this, Polus.class);
+                //         startIntent(IntentPolus2021);
                 }
             }
         });
+    }
+
+    public static boolean getFirstRun() {
+        return mPrefs.getBoolean("firstRun", true);
+    }
+
+    public static void setRunned() {
+        SharedPreferences.Editor edit = mPrefs.edit();
+        edit.putBoolean("firstRun", false);
+        edit.commit();
     }
 
     public void startIntent(Intent intent){
@@ -332,7 +357,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent IntentSittings = new Intent(MainActivity.this, Synchronization.class);
             startActivity(IntentSittings);
         } else if (id == R.id.nav_sittings) {
-            Intent IntentSittings = new Intent(this, SittingsActivity.class);
+            Intent IntentSittings = new Intent(MainActivity.this, SittingsActivity.class);
             startActivity(IntentSittings);
         } else if (id == R.id.nav_photo) {
 

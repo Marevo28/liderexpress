@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Megion"
+    tools:context=".Svodnaya.MegionSvodnaya"
     tools:showIn="@layout/activity_megion2020">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -584,7 +584,7 @@
                         android:text="Дефекты не устранены" />
                 </RadioGroup>
                 <CheckBox
-                    android:id="@+id/CheckBox_DefDrugoe"
+                    android:id="@+id/CheckBox_ResultatPovtorViezd"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -599,110 +599,10 @@
             </LinearLayout>
 
             <!--   Исключение позиции из договора     -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="Исключение позиции из договора"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
-            <RadioGroup
-                android:id="@+id/RadioGroup_Iskluchenie"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:orientation="horizontal">
-                <RadioButton
-                    android:id="@+id/Iskluchenie_DA"
-                    android:layout_width="195dp"
-                    android:layout_height="43dp"
-                    android:layout_weight="1"
-                    android:text="ДА" />
-                <RadioButton
-                    android:id="@+id/Iskluchenie_NET"
-                    android:layout_width="198dp"
-                    android:layout_height="43dp"
-                    android:layout_weight="1"
-                    android:text="НЕТ" />
-            </RadioGroup>
 
             <!--   Дата исключения   -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="Дата исключения"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/TextView_DataIsklucheniya"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:text="Дата повторного выезда"/>
-                <Button
-                    android:id="@+id/Button_DataIsklucheniya"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="Выбрать дату"/>
-            </LinearLayout>
 
             <!--   Причина исключения    -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="Причина исключения"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="4.5"
-                android:orientation="vertical">
-                <RadioGroup
-                    android:id="@+id/RadioGroup_PrichinaDemIskl"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:id="@+id/Prichina_Demont"
-                        android:layout_width="195dp"
-                        android:layout_height="43dp"
-                        android:layout_weight="1"
-                        android:text="Демонтировано/демонтируется" />
-                    <RadioButton
-                        android:id="@+id/PrichinaIskluchil"
-                        android:layout_width="198dp"
-                        android:layout_height="43dp"
-                        android:layout_weight="1"
-                        android:text="Исключил сотрудник СН-МНГ" />
-                </RadioGroup>
-                <CheckBox
-                    android:id="@+id/CheckBox_PrichinaDrugoe"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="Другое"
-                    android:onClick="OnCheckedPrichina"/>
-                <EditText
-                    android:id="@+id/EditText_PrichinaDrugoe"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2.3"
-                    android:hint="Другое"/>
-            </LinearLayout>
 
 
             <!--   Кто исключил (ФИО и должность сотрудника СН-МНГ)   -->
@@ -711,15 +611,16 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.9"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="Кто исключил (ФИО и должность сотрудника СН-МНГ)"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
+                android:text="Замечания дефектоскопистов"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
             <EditText
-                android:id="@+id/EditText_KtoIskluchil"
+                android:id="@+id/EditText_Zamechaniya"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
-                android:hint="Кто исключил"/>
+                android:hint="Замечания" />
 
             <!--   Записи в паспорте    -->
             <TextView

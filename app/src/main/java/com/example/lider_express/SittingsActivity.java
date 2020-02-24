@@ -1,15 +1,12 @@
 package com.example.lider_express;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -18,12 +15,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 public class SittingsActivity extends AppCompatActivity {
-    String[] Zakazchiki = {"Башнефть 2019", "Мегион 2019", "Полюс 2019",
-            "Башнефть 2020", "Мегион 2020", "Полюс 2020",
-            "Башнефть 2021", "Мегион 2021", "Полюс 2021"};
+    String[] Zakazchiki = {//"Башнефть 2019", "Мегион 2019", "Полюс 2019",
+            "Башнефть 2020", "Мегион 2020", // "Полюс 2020",
+            //"Башнефть 2021", "Мегион 2021", "Полюс 2021"
+    };
     String Zakazchik;
     Button ButSave;
     TextView TextZakazchik;
@@ -33,6 +29,7 @@ public class SittingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_sittings);
         Toolbar toolbar = findViewById(R.id.toolbar);
         ButSave = findViewById(R.id.ButSave);
@@ -48,8 +45,9 @@ public class SittingsActivity extends AppCompatActivity {
         // заголовок
         spinner.setPrompt("Title");
         // выделяем элемент
-        spinner.setSelection(2);
+        spinner.setSelection(0);
         // устанавливаем обработчик нажатия
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
@@ -77,7 +75,7 @@ public class SittingsActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         {
-            String name = mSettings.getString(APP_ZAKAZCHIK,"не определено");
+            String name = mSettings.getString(APP_ZAKAZCHIK,"Zakazchik");
             TextZakazchik.setText(name);
         }
     }
