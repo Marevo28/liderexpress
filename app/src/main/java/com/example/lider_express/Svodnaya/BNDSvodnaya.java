@@ -145,7 +145,7 @@ public class BNDSvodnaya extends AppCompatActivity {
         Zakazchik = arguments.getString("Zakazchik");
         switch (Zakazchik){
         //    case "ZayavkaBND2019": ZakazchikDefect = Shared.nameDefectBND2019; break;
-              case "ZayavkaBND2020": ZakazchikDefect = Shared.nameDefectBND2020; break;
+              case "Bashneft2020": ZakazchikDefect = Shared.nameDefectBND2020; break;
         //    case "ZayavkaBND2021": ZakazchikDefect = Shared.nameDefectBND2021; break;
         }
 

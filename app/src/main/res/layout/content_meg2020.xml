@@ -84,6 +84,16 @@
                 android:text="Акт шурфовки оформлен"
                 android:textStyle="bold"
                 android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Осмотр внутренней поверхности проводился"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
             <RadioGroup
                 android:id="@+id/RadioGroup_ActShurf"
                 android:layout_width="match_parent"
@@ -272,14 +282,6 @@
 
 
             <!--   Осмотр внутренней поверхности проводился    -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="Осмотр внутренней поверхности проводился"
-                android:textStyle="bold"
-                android:textSize="18sp" />
             <RadioGroup
                 android:id="@+id/RadioGroup_OsmotrVnutrPov"
                 android:layout_width="match_parent"
@@ -559,43 +561,50 @@
                 android:text=" Результат повторного выезда"
                 android:textStyle="bold"
                 android:textSize="18sp"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="4.5"
+                android:layout_weight="4.8"
                 android:orientation="vertical">
+
                 <RadioGroup
                     android:id="@+id/RadioGroup_DefectUstr"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="2"
+                    android:layout_weight="2.5"
                     android:orientation="horizontal">
+
                     <RadioButton
                         android:id="@+id/DefUstranen"
                         android:layout_width="195dp"
                         android:layout_height="43dp"
                         android:layout_weight="1"
                         android:text="Дефекты устранены" />
+
                     <RadioButton
                         android:id="@+id/DefNeUstranen"
                         android:layout_width="198dp"
                         android:layout_height="43dp"
                         android:layout_weight="1"
-                        android:text="Дефекты не устранены" />
+                        android:text="Дефекты не устранены"
+                        android:textSize="14sp" />
                 </RadioGroup>
+
                 <CheckBox
                     android:id="@+id/CheckBox_ResultatPovtorViezd"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="Другое"
-                    android:onClick="OnCheckedDefects"/>
+                    android:onClick="OnCheckedDefects"
+                    android:text="Другое" />
+
                 <EditText
                     android:id="@+id/EditText_DefDrugoe"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="2.3"
-                    android:hint="Другое"/>
+                    android:hint="Другое" />
             </LinearLayout>
 
             <!--   Исключение позиции из договора     -->

@@ -34,6 +34,8 @@ import com.example.lider_express.Synchronization.Synchronization;
 import com.example.lider_express.Tools.VmyatinaSocuda;
 import com.google.android.material.navigation.NavigationView;
 
+import java.io.File;
+
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -163,6 +165,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                     if (Zakazchik != "No" || position.length() != 0) {
 
+                        Log.e("Zakaz     : ", Zakazchik);
+                        Log.e("DataBase :    ", String.valueOf(new File(Shared.pathUpdateDB + "/" + Shared.nameUpdateDB).exists()));
+
                         long rowCount = DatabaseUtils.queryNumEntries(mDb, Zakazchik);
 
                         if(Integer.parseInt(position) > rowCount){
@@ -243,8 +248,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 //                       startIntent(IntentMegion2019); break;
                 //    case "Polus2019": Intent IntentPolus2019 = new Intent(MainActivity.this, Polus.class);
                 //        startIntent(IntentPolus2019); break;
-                    case "ZayavkaBND2020": Intent IntentSvodnayaBND2020 = new Intent(MainActivity.this, BNDSvodnaya.class);
-                        startIntent(IntentSvodnayaBND2020); break;
+                    case "Bashneft2020": Intent IntentBashneft2020 = new Intent(MainActivity.this, BNDSvodnaya.class);
+                        startIntent(IntentBashneft2020); break;
                     case "Megion2020": Intent IntentMegion2020 = new Intent(MainActivity.this, MegionSvodnaya.class);
                         startIntent(IntentMegion2020); break;
                 //    case "Polus2020": Intent IntentPolus2020 = new Intent(MainActivity.this, Polus.class);
