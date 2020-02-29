@@ -59,7 +59,7 @@ public class JsonZapros extends Thread {
            // case "DefectBND2019": mURL = "http://peremoga.tech/Android/DefectBND2020.php"; break;
            // case "DefectMegion2019": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
            // case "DefectPolus2019": mURL = ""; break;
-            case "defectBND2020": mURL = "http://peremoga.tech/Android/DefectBND2020.php"; break;
+            case "defectBashneft2020": mURL = "http://peremoga.tech/Android/DefectBND2020.php"; break;
             case "defectMegion2020": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
            // case "DefectPolus2020": mURL = ""; break;
            // case "DefectBND2021": mURL = "http://peremoga.tech/Android/DefectBND2020.php"; break;

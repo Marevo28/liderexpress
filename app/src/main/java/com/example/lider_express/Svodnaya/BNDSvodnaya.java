@@ -145,13 +145,12 @@ public class BNDSvodnaya extends AppCompatActivity {
         Zakazchik = arguments.getString("Zakazchik");
         switch (Zakazchik){
         //    case "ZayavkaBND2019": ZakazchikDefect = Shared.nameDefectBND2019; break;
-              case "ZayavkaBND2020": ZakazchikDefect = Shared.nameDefectBND2020; break;
+              case "Bashneft2020": ZakazchikDefect = Shared.nameDefectBND2020; break;
         //    case "ZayavkaBND2021": ZakazchikDefect = Shared.nameDefectBND2021; break;
         }
 
         Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position}, null, null, null);
         cursor.moveToFirst();
-
 
         if (cursor.getString(27) != null) {
             dataexperts = cursor.getString(27);
@@ -307,15 +306,15 @@ public class BNDSvodnaya extends AppCompatActivity {
         });
 
         if (cursor.getString(45) != null) {
-            datanegotovnosti = cursor.getString(38);
+            datanegotovnosti = cursor.getString(45);
             TextDataActNegot.setText(datanegotovnosti);
         }
         if (cursor.getString(46) != null) {
-            datank = cursor.getString(38);
+            datank = cursor.getString(46);
             TextDataNK.setText(datank);
         }
         if (cursor.getString(47) != null) {
-            irlspec = cursor.getString(38);
+            irlspec = cursor.getString(47);
             textirldefek.setText(irlspec);
         }
 

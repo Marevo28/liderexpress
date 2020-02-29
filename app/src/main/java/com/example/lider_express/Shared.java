@@ -75,6 +75,6 @@ public class Shared {
     public static String pathDB = "data/data/com.example.lider_express/databases";
 
     // Адрес для скачивания базы данных
-    public static String URL = "https://drive.google.com/u/0/uc?id=16e0iaW_u4EdYAz2ANdUyHgcsS5u_RSDF";
+    public static String URL = "http://peremoga.tech/leaderexpert.db";
 
 }

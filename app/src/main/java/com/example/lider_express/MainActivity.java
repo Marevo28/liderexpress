@@ -34,6 +34,8 @@ import com.example.lider_express.Synchronization.Synchronization;
 import com.example.lider_express.Tools.VmyatinaSocuda;
 import com.google.android.material.navigation.NavigationView;
 
+import java.io.File;
+
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -161,34 +163,41 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         default: Zakazchik = "No"; break;
                     }
 
-                    if (Zakazchik != "No" || position.length() != 0) {
+                    if (Zakazchik != "No") {
+                        if(Integer.parseInt(position) != 0 && position.length() != 0) {
 
-                        long rowCount = DatabaseUtils.queryNumEntries(mDb, Zakazchik);
+                            Log.e("Zakaz     : ", Zakazchik);
+                            Log.e("DataBase :    ", String.valueOf(new File(Shared.pathUpdateDB + "/" + Shared.nameUpdateDB).exists()));
 
-                        if(Integer.parseInt(position) > rowCount){
-                            displayMessage(getBaseContext(), "Такого не существует!");
+                            long rowCount = DatabaseUtils.queryNumEntries(mDb, Zakazchik);
+
+                            if (Integer.parseInt(position) > rowCount) {
+                                displayMessage(getBaseContext(), "Такого не существует!");
+                            } else {
+                                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                                imm.hideSoftInputFromWindow(btnpostion.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+
+                                btnSvodnaya.setEnabled(true);
+                                btnPhotoTu.setEnabled(true);
+                                btnPhotoDoc.setEnabled(true);
+                                btnPhotoKontrol.setEnabled(true);
+
+                                Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position},
+                                        null, null, null);
+                                cursor.moveToFirst();
+
+                                texttypetu.setText(cursor.getString(2));//Тип оборудования
+                                textuprav.setText(cursor.getString(5));// Управление
+                                textceh.setText(cursor.getString(14));//Цех
+                                textobekt.setText(cursor.getString(15));//объект
+                                textskvazhina.setText(cursor.getString(16));//скважина
+                                String NameTy = cursor.getString(7);//Наименование устройства
+                                NameTu.setText(NameTy);
+                                cursor.close();
+                                Name = NameTy;
+                            }
                         }else{
-                            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                            imm.hideSoftInputFromWindow(btnpostion.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-
-                            btnSvodnaya.setEnabled(true);
-                            btnPhotoTu.setEnabled(true);
-                            btnPhotoDoc.setEnabled(true);
-                            btnPhotoKontrol.setEnabled(true);
-
-                            Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position},
-                                    null, null, null);
-                            cursor.moveToFirst();
-
-                            texttypetu.setText(cursor.getString(2));//Тип оборудования
-                            textuprav.setText(cursor.getString(5));// Управление
-                            textceh.setText(cursor.getString(14));//Цех
-                            textobekt.setText(cursor.getString(15));//объект
-                            textskvazhina.setText(cursor.getString(16));//скважина
-                            String NameTy = cursor.getString(7);//Наименование устройства
-                            NameTu.setText(NameTy);
-                            cursor.close();
-                            Name = NameTy;
+                            displayMessage(getBaseContext(), "Выберите существующую позицию или обновите базу!");
                         }
                     }else{
                         displayMessage(getBaseContext(), "Выберите объект!");
@@ -236,26 +245,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnSvodnaya.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (Zakazchik){
-                //    case "ZayavkaBND2019": Intent IntentSvodnayaBND2019 = new Intent(MainActivity.this, BNDSvodnaya.class);
-                //                       startIntent(IntentSvodnayaBND2019); break;
-                //    case "Megion2019": Intent IntentMegion2019 = new Intent(MainActivity.this, MegionSvodnaya.class);
-                //                       startIntent(IntentMegion2019); break;
-                //    case "Polus2019": Intent IntentPolus2019 = new Intent(MainActivity.this, Polus.class);
-                //        startIntent(IntentPolus2019); break;
-                    case "ZayavkaBND2020": Intent IntentSvodnayaBND2020 = new Intent(MainActivity.this, BNDSvodnaya.class);
-                        startIntent(IntentSvodnayaBND2020); break;
-                    case "Megion2020": Intent IntentMegion2020 = new Intent(MainActivity.this, MegionSvodnaya.class);
-                        startIntent(IntentMegion2020); break;
-                //    case "Polus2020": Intent IntentPolus2020 = new Intent(MainActivity.this, Polus.class);
-                //         startIntent(IntentPolus2020); break;
-                //    case "ZayavkaBND2021": Intent IntentSvodnayaBND2021 = new Intent(MainActivity.this, BNDSvodnaya.class);
-                //        startIntent(IntentSvodnayaBND2021); break;
-                //    case "Megion2021": Intent IntentMegion2021 = new Intent(MainActivity.this, MegionSvodnaya.class);
-                //        startIntent(IntentMegion2021); break;
-                //    case "Polus2021": Intent IntentPolus2021 = new Intent(MainActivity.this, Polus.class);
-                //         startIntent(IntentPolus2021);
-                }
+
+                if (Integer.parseInt(position) != 0 && position.length() != 0) {
+                    switch (Zakazchik) {
+                        //    case "ZayavkaBND2019": Intent IntentSvodnayaBND2019 = new Intent(MainActivity.this, BNDSvodnaya.class);
+                        //                       startIntent(IntentSvodnayaBND2019); break;
+                        //    case "Megion2019": Intent IntentMegion2019 = new Intent(MainActivity.this, MegionSvodnaya.class);
+                        //                       startIntent(IntentMegion2019); break;
+                        //    case "Polus2019": Intent IntentPolus2019 = new Intent(MainActivity.this, Polus.class);
+                        //        startIntent(IntentPolus2019); break;
+                        case "Bashneft2020":
+                            Intent IntentBashneft2020 = new Intent(MainActivity.this, BNDSvodnaya.class);
+                            startIntent(IntentBashneft2020);
+                            break;
+                        case "Megion2020":
+                            Intent IntentMegion2020 = new Intent(MainActivity.this, MegionSvodnaya.class);
+                            startIntent(IntentMegion2020);
+                            break;
+                        //    case "Polus2020": Intent IntentPolus2020 = new Intent(MainActivity.this, Polus.class);
+                        //         startIntent(IntentPolus2020); break;
+                        //    case "ZayavkaBND2021": Intent IntentSvodnayaBND2021 = new Intent(MainActivity.this, BNDSvodnaya.class);
+                        //        startIntent(IntentSvodnayaBND2021); break;
+                        //    case "Megion2021": Intent IntentMegion2021 = new Intent(MainActivity.this, MegionSvodnaya.class);
+                        //        startIntent(IntentMegion2021); break;
+                        //    case "Polus2021": Intent IntentPolus2021 = new Intent(MainActivity.this, Polus.class);
+                        //         startIntent(IntentPolus2021);
+                    }
+                }else{ displayMessage(getBaseContext(), "Выберите существующую позицию или обновите базу!");}
             }
         });
     }

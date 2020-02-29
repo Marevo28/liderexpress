@@ -401,8 +401,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Дата акта неготовности"
+<<<<<<< HEAD
             app:layout_constraintStart_toStartOf="@+id/ostanov"
             app:layout_constraintTop_toBottomOf="@+id/TextPrichinaIskl" />
+=======
+            app:layout_constraintStart_toStartOf="@+id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+>>>>>>> e6d39d2a216fc70b4335237762f3bdf82f0d909a
 
         <TextView
             android:id="@+id/textView13"
