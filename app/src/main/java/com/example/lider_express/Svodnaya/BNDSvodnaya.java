@@ -451,23 +451,24 @@ public class BNDSvodnaya extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
         if (resultCode == RESULT_OK) {
             lampa = data.getStringExtra("people");
             String a;
             switch (lampa) {
                 case "experts":
                     a = data.getStringExtra("select");
-                    experts=a;
+                    experts = a ;
                     textexperts.setText(a);
                     break;
                 case "defects":
                     a = data.getStringExtra("select");
-                    spec=a;
+                    spec = a;
                     textdefek.setText(a);
                     break;
                 case "irldefects":
                     a = data.getStringExtra("select");
-                    irlspec=a;
+                    irlspec = a;
                     textirldefek.setText(a);
                     break;
             }

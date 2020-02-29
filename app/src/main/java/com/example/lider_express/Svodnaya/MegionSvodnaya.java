@@ -176,7 +176,7 @@ public class MegionSvodnaya extends AppCompatActivity {
 
         EditText_Zamechaniya  = findViewById(R.id.EditText_Zamechaniya);
         ZapisiVPasporte = findViewById(R.id.RadioGroup_ZapisiVPasporte);
-        Button_Vnesti = findViewById(R.id.Button_Vnesti);
+        Button_Vnesti = findViewById(R.id.Button_Vnest);
 
         mDBHelper = MainActivity.getDBHelper();  // подклчюение к БД
 

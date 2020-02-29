@@ -57,10 +57,10 @@ public class SpisokBND extends AppCompatActivity {
                 for(int i=0;i < spisochek.length;i++)
                 {
                     if(sp.get(i))
-                        selectedItems+=spisochek[i]+",";
+                        selectedItems += spisochek[i]+",";
                 }
                 selection.setText("Выбрано: " + selectedItems);
-                select=selectedItems;
+                select = selectedItems;
             }
         });
 

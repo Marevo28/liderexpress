@@ -37,6 +37,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         if (android.os.Build.VERSION.SDK_INT >= 17) {
             DB_PATH = context.getDatabasePath(nameDB).getPath();
+            Log.e("DBPath:   ",   DB_PATH);
             Shared.pathDB = DB_PATH;
         }
         else {
@@ -98,7 +99,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             InputStream is = null;
             OutputStream os = null;
             File source = new File(Shared.pathUpdateDB + "/" + Shared.nameUpdateDB);
+
+            Log.e("DBPath111:   ",   DB_PATH);
+
             File dest = new File(DB_PATH);
+
+            Log.e("File EXIST:   ", String.valueOf(dest.exists()));
 
             try {
                 is = new FileInputStream(source);

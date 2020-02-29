@@ -29,6 +29,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.lider_express.DataBase.DatabaseHelper;
 import com.example.lider_express.Svodnaya.BNDSvodnaya;
+import com.example.lider_express.Svodnaya.KartaKontrolyaYDE;
 import com.example.lider_express.Svodnaya.MegionSvodnaya;
 import com.example.lider_express.Synchronization.Synchronization;
 import com.example.lider_express.Tools.VmyatinaSocuda;
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private String Papka;
     private String Name;
     private String Zakazchik;
-    int intposition;
+    private int intposition;
 
 
 
@@ -165,10 +166,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                     if (Zakazchik != "No") {
                         if(Integer.parseInt(position) != 0 && position.length() != 0) {
-
-                            Log.e("Zakaz     : ", Zakazchik);
-                            Log.e("DataBase :    ", String.valueOf(new File(Shared.pathUpdateDB + "/" + Shared.nameUpdateDB).exists()));
-
                             long rowCount = DatabaseUtils.queryNumEntries(mDb, Zakazchik);
 
                             if (Integer.parseInt(position) > rowCount) {
@@ -187,6 +184,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 cursor.moveToFirst();
 
                                 texttypetu.setText(cursor.getString(2));//Тип оборудования
+                                String block = "Блок реагентов (УДЭ)";
+                                if(block.equals(cursor.getString(2))) {
+                                    btnKarta.setEnabled(true);
+                                }else {
+                                    btnKarta.setEnabled(false);
+                                }
                                 textuprav.setText(cursor.getString(5));// Управление
                                 textceh.setText(cursor.getString(14));//Цех
                                 textobekt.setText(cursor.getString(15));//объект
@@ -272,6 +275,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         //         startIntent(IntentPolus2021);
                     }
                 }else{ displayMessage(getBaseContext(), "Выберите существующую позицию или обновите базу!");}
+            }
+        });
+
+        btnKarta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (Integer.parseInt(position) != 0 && position.length() != 0) {
+                    Intent IntentKartaKontrolya = new Intent(MainActivity.this, KartaKontrolyaYDE.class);
+                    IntentKartaKontrolya.putExtra("position", position);
+                    startIntent(IntentKartaKontrolya);
+                }else{
+                    displayMessage(getBaseContext(), "Выберите существующую позицию или обновите базу!");
+                }
+
             }
         });
     }
