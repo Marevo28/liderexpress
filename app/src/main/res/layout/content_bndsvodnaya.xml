@@ -386,7 +386,6 @@
             android:text="Начало останова"
             app:layout_constraintStart_toStartOf="@+id/ostanov"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
         <TextView
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
@@ -401,14 +400,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Дата акта неготовности"
-<<<<<<< HEAD
-            app:layout_constraintStart_toStartOf="@+id/ostanov"
-            app:layout_constraintTop_toBottomOf="@+id/TextPrichinaIskl" />
-=======
             app:layout_constraintStart_toStartOf="@+id/textView22"
-            app:layout_constraintTop_toBottomOf="@+id/textView22" />
->>>>>>> e6d39d2a216fc70b4335237762f3bdf82f0d909a
-
+            app:layout_constraintTop_toBottomOf="@+id/TextPrichinaIskl" />
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
@@ -605,11 +598,11 @@
             app:layout_constraintTop_toBottomOf="@+id/TextKonOstanov" />
 
         <Button
-            android:id="@+id/PickDataNegotovnosti"
+            android:id="@+id/PickDataActNoDoc"
             android:layout_width="160dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
-            android:onClick="setDataNegotovnosti"
+            android:onClick="setDataActNoDoc"
             android:text="Выбрать дату"
             app:layout_constraintStart_toEndOf="@+id/TextDataActNegot"
             app:layout_constraintTop_toBottomOf="@+id/documents" />
@@ -649,53 +642,56 @@
             app:layout_constraintTop_toBottomOf="@+id/documents" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/PickDataNegotovnosti"
             android:layout_width="160dp"
             android:layout_height="40dp"
             android:layout_marginStart="165dp"
             android:text="Выбрать дату"
+            android:onClick="setDataNegotovnosti"
             app:layout_constraintStart_toStartOf="@+id/TextDataActNegot"
             app:layout_constraintTop_toTopOf="@+id/TextDataActNegot" />
 
         <TextView
             android:id="@+id/textView25"
             android:layout_width="325dp"
+            android:layout_height="40dp"
             android:text="Дата выезда на объект (заполнять в том случае когда контроль не проводился)"
             app:layout_constraintStart_toStartOf="@+id/TextDataActNegot"
             app:layout_constraintTop_toBottomOf="@+id/TextDataActNegot" />
 
         <TextView
-            android:id="@+id/textdefekBeznk"
+            android:id="@+id/textdataBeznk"
             android:layout_width="165dp"
             android:layout_height="40dp"
-            android:text="textdefek"
+            android:text="textdataBeznk"
             app:layout_constraintStart_toStartOf="@+id/textView25"
             app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
         <TextView
-            android:id="@+id/textView31"
+            android:id="@+id/textdefecBeznk"
             android:layout_width="160dp"
             android:layout_height="40dp"
             android:layout_marginStart="165dp"
-            android:text="TextView"
+            android:text="textdefekBeznk"
             app:layout_constraintStart_toStartOf="@+id/textView5"
             app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/PickDataBeznk"
             android:layout_width="165dp"
             android:layout_height="40dp"
             android:text="Выбрать дату"
-            app:layout_constraintStart_toStartOf="@+id/textdefekBeznk"
-            app:layout_constraintTop_toBottomOf="@+id/textdefekBeznk" />
+            android:onClick="setDataBeznk"
+            app:layout_constraintStart_toStartOf="@+id/textdataBeznk"
+            app:layout_constraintTop_toBottomOf="@+id/textdataBeznk" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/PickDefectsBeznk"
             android:layout_width="160dp"
             android:layout_height="40dp"
             android:text="Выбрать"
-            app:layout_constraintStart_toEndOf="@+id/button2"
-            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+            app:layout_constraintStart_toEndOf="@+id/PickDataBeznk"
+            app:layout_constraintTop_toBottomOf="@+id/textdefecBeznk" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
