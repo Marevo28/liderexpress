@@ -285,6 +285,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 if (Integer.parseInt(position) != 0 && position.length() != 0) {
                     Intent IntentKartaKontrolya = new Intent(MainActivity.this, KartaKontrolyaYDE.class);
                     IntentKartaKontrolya.putExtra("position", position);
+                    IntentKartaKontrolya.putExtra("Zakazchik", getNameZakaz(Zakazchik));
                     startIntent(IntentKartaKontrolya);
                 }else{
                     displayMessage(getBaseContext(), "Выберите существующую позицию или обновите базу!");
