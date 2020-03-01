@@ -26,7 +26,6 @@ import com.example.lider_express.R;
 import com.example.lider_express.Shared;
 import com.example.lider_express.Tools.SpisokBND;
 
-import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -49,13 +48,21 @@ public class BNDSvodnaya extends AppCompatActivity {
     TextView TextKonOstanov;
     TextView TextDataActNegot;
     TextView TextDataNK;
+    TextView textdefekBeznk;
+    TextView textdataBeznk;
+    TextView TextDataActNoDoc;
     Button PickExpert;
     Button PickDefects;
+    Button PickDefectsBeznk;
+    Button PickDataBeznk;
     Button PickIrlDefects;
     Button ButZapisat;
     Button PickDataExp;
     Button PickDataSpec;
     Button PickDataNegotovnosti;
+    String dataBeznk;
+    String defekBeznk;
+    String dataActNoDoc;
     String dataexperts;
     String experts;
     String dataspec;
@@ -130,6 +137,13 @@ public class BNDSvodnaya extends AppCompatActivity {
         TextDefects = findViewById(R.id.TextDefects);
         TextNote = findViewById(R.id.TextNote);
         TextPrichinaIskl = findViewById(R.id.TextPrichinaIskl);
+        textdefekBeznk = findViewById(R.id.textdefecBeznk);
+        textdataBeznk = findViewById(R.id.textdataBeznk);
+        TextDataActNoDoc=findViewById(R.id.TextDataActNoDoc);
+        PickDefectsBeznk =findViewById(R.id.PickDefectsBeznk);
+        PickExpert=findViewById(R.id.PickExpert);
+        PickDefects=findViewById(R.id.PickDefects);
+
 
         mDBHelper = MainActivity.getDBHelper();  // new DatabaseHelper(this);// подклчюение к БД
 
@@ -156,8 +170,6 @@ public class BNDSvodnaya extends AppCompatActivity {
             dataexperts = cursor.getString(27);
             TextDataExp.setText(dataexperts);
         }
-
-
         if (cursor.getString(28) != null) {
             experts = cursor.getString(28);
             textexperts.setText(experts);
@@ -170,13 +182,10 @@ public class BNDSvodnaya extends AppCompatActivity {
             spec = cursor.getString(30);
             textdefek.setText(spec);
         }
-
-
         if (cursor.getString(31) != null) {
             ispol = cursor.getString(31);
             ispolnenie.check("Да".equals(ispol) ? R.id.nadzemnoe : R.id.podzemnoe);
         }
-
         ispolnenie.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -190,7 +199,6 @@ public class BNDSvodnaya extends AppCompatActivity {
                 }
             }
         });
-
         if (cursor.getString(32) != null) {
             shurf = cursor.getString(32);
             shurfovka.check("Да".equals(shurf) ? R.id.shurfDA : R.id.shurfNet);
@@ -304,10 +312,21 @@ public class BNDSvodnaya extends AppCompatActivity {
                 }
             }
         });
-
+        if (cursor.getString(42) != null) {
+            dataBeznk=cursor.getString(42);
+            textdataBeznk.setText(dataBeznk);
+        }
+        if (cursor.getString(43) != null) {
+            defekBeznk=cursor.getString(43);
+            textdefekBeznk.setText(defekBeznk);
+        }
+        if (cursor.getString(44) != null) {
+            datanegotovnosti = cursor.getString(44);
+            TextDataActNegot.setText(cursor.getString(44));
+        }
         if (cursor.getString(45) != null) {
-            datanegotovnosti = cursor.getString(45);
-            TextDataActNegot.setText(datanegotovnosti);
+            dataActNoDoc=cursor.getString(45);
+            TextDataActNoDoc.setText(dataActNoDoc);
         }
         if (cursor.getString(46) != null) {
             datank = cursor.getString(46);
@@ -317,8 +336,6 @@ public class BNDSvodnaya extends AppCompatActivity {
             irlspec = cursor.getString(47);
             textirldefek.setText(irlspec);
         }
-
-
         if (cursor.getString(48) != null) {
             doki = cursor.getString(48);
             documents.check("Да".equals(doki) ? R.id.documentsDa : R.id.documentsNet);
@@ -398,6 +415,15 @@ public class BNDSvodnaya extends AppCompatActivity {
             }
 
         });
+        PickDefectsBeznk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent IntentSittings = new Intent(BNDSvodnaya.this, SpisokBND.class);
+                IntentSittings.putExtra("people", "defectsbeznk");
+                startActivityForResult(IntentSittings, PEOPLE);
+            }
+
+        });
 
         ButZapisat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -423,12 +449,12 @@ public class BNDSvodnaya extends AppCompatActivity {
                 initialValues.put("Stolb37", nachostanovka);
                 initialValues.put("Stolb38", konostanovka);
                 initialValues.put("Stolb39", osmotrel );
-                //initialValues.put("Stolb40", ); не используется
+                //initialValues.put("Stolb40", ); Планирование
                 //initialValues.put("Stolb41", ); Планирование
-                //initialValues.put("Stolb42", ); Планирование
-                //initialValues.put("Stolb43", ); Дата выезда на объектметод считывания значение
-                //initialValues.put("Stolb44", ); ФИО Специалиста выехавшего на объект без контроля
-                initialValues.put("Stolb45", datanegotovnosti);
+                initialValues.put("Stolb42", dataBeznk); //Дата выезда на объектметод считывания значение
+                initialValues.put("Stolb43", defekBeznk); //ФИО Специалиста выехавшего на объект без контроля
+                initialValues.put("Stolb44", datanegotovnosti);
+                initialValues.put("Stolb45", dataActNoDoc);
                 initialValues.put("Stolb46", datank);
                 initialValues.put("Stolb47", irlspec);
                 initialValues.put("Stolb48", doki);
@@ -438,8 +464,6 @@ public class BNDSvodnaya extends AppCompatActivity {
                 initialValues.put("Stolb52", iskluch);
                 initialValues.put("Stolb53", prichina);
                 mDb.insert(ZakazchikDefect, null, initialValues);
-                //Cursor defectBND = mDBHelper.getReadableDatabase().query("DefectBND", null, null, null, null, null, null);
-                //displayMessage(getBaseContext(), String.valueOf(defectBND.getCount()));
                 displayMessage(getBaseContext(), "Записан: "+ position);
                 Intent IntentSittings = new Intent(BNDSvodnaya.this, MainActivity.class);
                 startActivity(IntentSittings);
@@ -470,6 +494,11 @@ public class BNDSvodnaya extends AppCompatActivity {
                     a = data.getStringExtra("select");
                     irlspec = a;
                     textirldefek.setText(a);
+                    break;
+                case "defectsbeznk":
+                    a = data.getStringExtra("select");
+                    defekBeznk=a;
+                    textdefekBeznk.setText(a);
                     break;
             }
         }
@@ -550,6 +579,31 @@ public class BNDSvodnaya extends AppCompatActivity {
             dateAndTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);
             TextDataNK.setText(new SimpleDateFormat("dd.MM.yyyy").format(new Date(dateAndTime.getTimeInMillis())));
             datank = TextDataNK.getText().toString();
+        }
+    };
+
+    public void setDataActNoDoc(View v) {
+        new DatePickerDialog(BNDSvodnaya.this, g, dateAndTime.get(Calendar.YEAR), dateAndTime.get(Calendar.MONTH), dateAndTime.get(Calendar.DAY_OF_MONTH)).show();
+    }
+    DatePickerDialog.OnDateSetListener g = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            dateAndTime.set(Calendar.YEAR, year);
+            dateAndTime.set(Calendar.MONTH, monthOfYear);
+            dateAndTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            TextDataActNoDoc.setText(new SimpleDateFormat("dd.MM.yyyy").format(new Date(dateAndTime.getTimeInMillis())));
+            dataActNoDoc = TextDataActNoDoc.getText().toString();
+        }
+    };
+    public void setDataBeznk(View v) {
+        new DatePickerDialog(BNDSvodnaya.this, h, dateAndTime.get(Calendar.YEAR), dateAndTime.get(Calendar.MONTH), dateAndTime.get(Calendar.DAY_OF_MONTH)).show();
+    }
+    DatePickerDialog.OnDateSetListener h = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            dateAndTime.set(Calendar.YEAR, year);
+            dateAndTime.set(Calendar.MONTH, monthOfYear);
+            dateAndTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            textdataBeznk.setText(new SimpleDateFormat("dd.MM.yyyy").format(new Date(dateAndTime.getTimeInMillis())));
+            dataBeznk = textdataBeznk.getText().toString();
         }
     };
 
