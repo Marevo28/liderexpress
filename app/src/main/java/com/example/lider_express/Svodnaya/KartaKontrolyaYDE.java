@@ -24,6 +24,7 @@ import com.example.lider_express.DataBase.DatabaseHelper;
 import com.example.lider_express.MainActivity;
 import com.example.lider_express.R;
 
+import com.example.lider_express.Shared;
 import com.example.lider_express.Tools.SpisokBND;
 
 import java.text.SimpleDateFormat;
@@ -39,6 +40,8 @@ public class KartaKontrolyaYDE extends AppCompatActivity {
     private Calendar dateAndTime = Calendar.getInstance();
 
     private String position;
+    private String defectTable;
+    private String nameTableForCursor;
     private String Zakazchik;
    // private String ZakazchikDefect;
 
@@ -97,8 +100,11 @@ public class KartaKontrolyaYDE extends AppCompatActivity {
     private String strManometrIspraven;            // - 41         манометр исправен?
     private String strManometrShkala;              // - 42         шкала манометра Рраб
     private String strManometrProverka;            // - 43        менометр проверка
-    private String strYZT_Points[];                // - 44 - 64        УЗТ
-    private String strVedomostDef;                 // - 65         Дефектная ведомость
+    private String strYZT_Points[];                // - 44 - 64     УЗТ Точки
+    private String strYZT_Dlina;                   // - 65          УЗТ Длина
+    private String strYZT_Shirina;                 // - 66         УЗТ Ширина
+    private String strYZT_Visota;                  // - 67         УЗТ Глубина
+    private String strVedomostDef;                 // - 68         Дефектная ведомость
 
 
     // Переменная в метод onActivityResult
@@ -164,17 +170,81 @@ public class KartaKontrolyaYDE extends AppCompatActivity {
 
         Bundle arguments = getIntent().getExtras(); // Bundle
         position = arguments.getString("position"); // Позиция оборудования в БД
+        Zakazchik = arguments.getString("Zakazchik");
 
-        Zakazchik = arguments.getString("Zakazchik");// Заказчик
+        switch (Zakazchik){
+            case "Bashneft2020": defectTable = Shared.nameDefectBashneft2020_UDE;
+                nameTableForCursor = Shared.nameBashneft2020_UDE; break;
+        }
 
 
         /** =============================== СЧИТЫВАНИЕМ ИЗ БАЗЫ И УСТАНВЛИВАЕМ В VIEW ========================================== **/
 
-        Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position}, null, null, null);
+        Cursor cursor = mDb.query(nameTableForCursor, null, "POSITION = ?", new String[]{position}, null, null, null);
         cursor.moveToFirst();
-
-        /**
+       /**
+        // Дата НК
+        if (cursor.getString(27) != null) {
+            strDataNK = cursor.getString(28);
+            TextView_DataNK.setText(strDataNK);
+        }
+        // Специалисты
+        if (cursor.getString(28) != null) {
+            strNKSpec = cursor.getString(28);
+            TextView_SpecProvNK.setText(strNKSpec);
+        }
+        //Размещение
+        if (cursor.getString(34) != null) {
+            strRazmesheniye = cursor.getString(34);
+            RadioGroup_Razmecheniye.check("На улице".equals(strRazmesheniye) ? R.id.Razmeshenie_Ul : R.id.Razmeshenie_Block);
+        }
+        //Инф табличка
+        if (cursor.getString(36) != null) {
+            strNalichieInfTable = cursor.getString(36);
+            RadioGroup_NalichInfTable.check("Eсть".equals(strNalichieInfTable) ? R.id.Nal_Inf_Tab_Da : R.id.Nal_Inf_Tab_Net);
+        }
+        //Заземление
+        if (cursor.getString(37) != null) {
+            strNalZazemleniya = cursor.getString(37);
+            RadioGroup_NalichZazeml.check("Eсть".equals(strNalZazemleniya) ? R.id.Nal_Zazemleniya_Da : R.id.Nal_Zazemleniya_Net);
+        }
+        //Антикорозийное покрытие
+        if (cursor.getString(38) != null) {
+            strAntikor = cursor.getString(38);
+            switch (strAntikor){
+                case "Отсутсвует": RadioGroup_Antikor.check(R.id.Anticor_Otsutstvie); break;
+                case "Удовлетворительное": RadioGroup_Antikor.check(R.id.Anticor_Udovl); break;
+                case "Неудовлетворительное": RadioGroup_Antikor.check(R.id.Anticor_NeUdovl); break;
+                case "Повреждено": ; RadioGroup_Antikor.check(R.id.Anticor_Povr); break;
+            }
+        }
+        //Манометр имеется?
+        if (cursor.getString(39) != null) {
+            strImeetsyaManometr = cursor.getString(39);
+             RadioGroup_ImManometr.check("Да".equals(strImeetsyaManometr) ? R.id.Im_Manometr_Da : R.id.Im_Manometr_Net);
+        }
+        //Манометр пломба
+        if (cursor.getString(40) != null) {
+            strManometrPlomba = cursor.getString(40);
+            RadioGroup_ManometrPlomba.check("Да".equals(strManometrPlomba) ? R.id.Manometr_Plomba_Da : R.id.Manometr_Plomba_Net);
+        }
+        // Манометр исправен
+        if (cursor.getString(41) != null) {
+            strManometrIspraven = cursor.getString(41);
+            RadioGroup_ManometrIspraven.check("Да".equals(strManometrIspraven) ? R.id.Manometr_Ispraven_Da : R.id.Manometr_Ispraven_Net);
+        }
+        // Манометр шкала
+        if (cursor.getString(42) != null) {
+            strManometrShkala = cursor.getString(42);
+            RadioGroup_ManometrShkala.check("Да".equals(strManometrShkala) ? R.id.Manometr_Cherta_Da : R.id.Manometr_Cherta_Net);
+        }
+        //Проверка манометра действующая?
+        if (cursor.getString(43) != null) {
+            strManometrProverka = cursor.getString(43);
+            RadioGroup_ManomtrProverka.check("Да".equals(strManometrProverka) ? R.id.Manoment_Proverka_Da : R.id.Manoment_Proverka_Net);
+        }
         // Берем из таблицы значения и кладем в массив с точками
+        //  44-67
         int number_column_for_point = 44;
         for (int i = 0; i < strYZT_Points.length; i++) {
             // Точки
@@ -183,147 +253,16 @@ public class KartaKontrolyaYDE extends AppCompatActivity {
                 number_column_for_point++;
             }
         }
+        //
+        if (cursor.getString(68) != null) {
+            strVedomostDef = cursor.getString(68);
+            RadioGroup_DefectVedom.check("Да".equals(strVedomostDef) ? R.id.Vedomost_Da : R.id.Vedomost_Da);
+        }
 
-             // Исполнение
-             if (cursor.getString(28) != null) {
-             strIspolnenie = cursor.getString(28);
-             Ispolnenie.check("Надземное".equals(strIspolnenie) ? R.id.nadzemnoe : R.id.podzemnoe);
-             }
-             // Шурфовка фактически проводилась
-             if (cursor.getString(29) != null) {
-             strShurf = cursor.getString(29);
-             Shurf.check("Да".equals(strShurf) ? R.id.Shurf_DA : R.id.Shurf_NET);
-             }
-             // Акт шурфовки оформлен
-             if (cursor.getString(30) != null) {
-             strActShurf = cursor.getString(30);
-             ActShurf.check("Да".equals(strActShurf) ? R.id.ActShurf_DA : R.id.ActShurf_NET);
-             }
-             // Размер люк-лаза позволяет провести контроль изнутри
-             if (cursor.getString(31) != null) {
-             strLukLaz = cursor.getString(31);
-             LukLaz.check("Да".equals(strLukLaz) ? R.id.LukLaz_DA : R.id.LukLaz_NET);
-             }
-             // Наряд на газоопасные работы для проведения контроля изнутри получен
-             if (cursor.getString(32) != null) {
-             strNaryad = cursor.getString(32);
-             Naryad.check("Да".equals(strNaryad) ? R.id.Naryad_DA : R.id.Naryad_NET);
-             }
-             // На момент проведения НК оборудование было в останове
-             if (cursor.getString(33) != null) {
-             strNK = cursor.getString(33);
-             NK.check("Да".equals(strNK) ? R.id.NK_DA : R.id.NK_NET);
-             }
-             // Дата останова: начало
-             if (cursor.getString(34) != null) {
-             strDataNachaloOstanova = cursor.getString(34);
-             TextView_DataNachaloOstanova.setText(strDataNachaloOstanova);
-             }
-             // Дата останова: окончание
-             if (cursor.getString(35) != null) {
-             strDataOkonOstanova = cursor.getString(35);
-             TextView_DataOkonOstanova.setText(strDataOkonOstanova);
-             }
-             // Осмотр внутренней поверхности проводился
-             if (cursor.getString(36) != null) {
-             strOsmotrVnutrPov = cursor.getString(36);
-             OsmotrVnutrPov.check("Да".equals(strOsmotrVnutrPov) ? R.id.OsmotrVnutrPov_DA : R.id.OsmotrVnutrPov_NET);
-             }
-             // Дата выезда Без НК
-             if (cursor.getString(37) != null) {
-             strDataViezdBezNK = cursor.getString(37);
-             TextView_DataViezdaBezNKO.setText(strDataViezdBezNK);
-             }
-             // Специалисты, выезжающие на обьект
-             if (cursor.getString(38) != null) {
-             strSpecViezdObject = cursor.getString(38);
-             TextView_SpecViezdObject.setText(strSpecViezdObject);
-             }
-             // Акт некотовности
-             if (cursor.getString(39) != null) {
-             strDataActNegotov = cursor.getString(40);
-             TextView_DataActNegotov.setText(strDataActNegotov);
-             }
-             // Акт непредоставления
-             if (cursor.getString(40) != null) {
-             strDataActNepredostav = cursor.getString(40);
-             TextView_DataActNepredostav.setText(strDataActNepredostav);
-             }
-             // Дата НК
-             if (cursor.getString(41) != null) {
-             strDataNK = cursor.getString(41);
-             TextView_DataNK.setText(strDataNK);
-             }
-             // ФИО специалиста (-ов), проводящего (-их) НК
-             if (cursor.getString(42) != null) {
-             strNKSpec = cursor.getString(42);
-             TextView_SpecProvNK.setText(strNKSpec);
-             }
-             // Дефекты (указать выявленные дефекты)
-             if (cursor.getString(43) != null) {
-             strDefects = cursor.getString(43);
-             EditText_Defects.setText(strDefects);
-             }
-             // Дефектная ведомость оформлена
-             if (cursor.getString(44) != null) {
-             strDefectVedom = cursor.getString(36);
-             DefectVedom.check("Да".equals(strDefectVedom) ? R.id.Defect_DA : R.id.Defect_NET);
-             }
-             // Дата повторного выезда
-             if (cursor.getString(45) != null) {
-             strDataPovtorViezd = cursor.getString(45);
-             TextView_DataPovtorViezd.setText(strDataPovtorViezd);
-             }
+        **/
 
-             // Результат повторного выезда
-             if (cursor.getString(46) != null) {
-             switch (cursor.getString(46)){
-             case "Дефекты устранены": ResultatPovtorViezd.check(R.id.DefUstranen);
-             CB_DefDrugoe.setEnabled(false);
-             break;
-             case "Дефекты не устранены": ResultatPovtorViezd.check(R.id.DefNeUstranen);
-             CB_DefDrugoe.setEnabled(false);
-             break;
-             default: ResultatPovtorViezd.setEnabled(false);
-             CB_DefDrugoe.setChecked(true);
-             strResultatPovtorViezd = cursor.getString(46);
-             EditText_DefDrugoe.setText(strResultatPovtorViezd);
-             break;
-             }
-             }
-
-             // Исключение позиции из договора
-             if (cursor.getString(47) != null) {
-             strIskluchenie = cursor.getString(47);
-             Iskluchenie.check("Да".equals(strIskluchenie) ? R.id.Iskluchenie_DA : R.id.Iskluchenie_NET);
-             }
-             // Дата исключения
-             if (cursor.getString(48) != null) {
-             strDataIskluchenie = cursor.getString(48);
-             TextView_DataIsklucheniya.setText(strDataIskluchenie);
-             }
-             // CheckBox Причина исключения
-             if (cursor.getString(49) != null) {
-             strPrichinaDomIsk = cursor.getString(49);
-             EditText_PrichinaDrugoe.setText(strPrichinaDomIsk);
-             }
-
-
-             // Замечания дефектоскопистов
-             if (cursor.getString(52) != null) {
-             strZamechaniya = cursor.getString(50);
-             EditText_Zamechaniya.setText(strZamechaniya);
-             }
-
-
-             // Записи в паспорте
-             if (cursor.getString(53) != null) {
-             strZapisiVPasporte = cursor.getString(51);
-             ZapisiVPasporte.check("Да".equals(strZapisiVPasporte) ? R.id.ZapisiVPasporte_DA : R.id.ZapisiVPasporte_NET);
-             } **/
-
-
-            /** =============================== СЧИТЫВАНИЕМ ИЗ VIEW И УСТАНВЛИВАЕМ В STRING ========================================== **/
+            /** =============================== СЧИТЫВАНИЕМ ИЗ VIEW И УСТАНВЛИВАЕМ В STRING ==========================================
+             * Listeners **/
 
             /**  Размещение -  **/
             RadioGroup_Razmecheniye.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -376,16 +315,16 @@ public class KartaKontrolyaYDE extends AppCompatActivity {
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
                     switch (checkedId) {
                         case R.id.Anticor_Otsutstvie:
-                            strAntikor = "Да";
+                            strAntikor = "Отсутствует";
                             break;
                         case R.id.Anticor_Udovl:
-                            strAntikor = "Нет";
+                            strAntikor = "Удовлетворительное";
                             break;
                         case R.id.Anticor_NeUdovl:
-                            strAntikor = "Нет";
+                            strAntikor = "Неудовлетворительное";
                             break;
                         case R.id.Anticor_Povr:
-                            strAntikor = "Нет";
+                            strAntikor = "Повреждено";
                             break;
                     }
                 }
@@ -511,20 +450,6 @@ public class KartaKontrolyaYDE extends AppCompatActivity {
             });
 
 
-            /**
-             // Button Дата исключения
-             Button_DataIsklucheniya.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-            new DatePickerDialog(MegionSvodnaya.this, Picker_DataIsklucheniya,
-            dateAndTime.get(Calendar.YEAR),
-            dateAndTime.get(Calendar.MONTH),
-            dateAndTime.get(Calendar.DAY_OF_MONTH))
-            .show();
-            }
-            });
-             **/
-
-
             // Button Внести
             Button_Vnesti.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -572,34 +497,24 @@ public class KartaKontrolyaYDE extends AppCompatActivity {
                     int number_column_for_point = 44;
                     String strNumber_column_for_point = "";
                     for (int i = 0; i < strYZT_Points.length; i++) {
-                        strNumber_column_for_point += Integer.toString(number_column_for_point);
+                        strNumber_column_for_point = "Stolb" + Integer.toString(number_column_for_point);
                         // Точки
                         initialValues.put(strNumber_column_for_point, strYZT_Points[i]);
                         number_column_for_point++;
                     }
 
-                    initialValues.put("Stolb65", strVedomostDef);
+                    initialValues.put("Stolb65", strYZT_Dlina);
+                    initialValues.put("Stolb66", strYZT_Shirina);
+                    initialValues.put("Stolb67", strYZT_Visota);
+                    initialValues.put("Stolb68", strVedomostDef);
 
-                    mDb.insert("Bashneft2020_UDe", null, initialValues);
+                    mDb.insert(defectTable, null, initialValues);
                     displayMessage(getBaseContext(), "Записан: " + position);
                     Intent IntentSittings = new Intent(KartaKontrolyaYDE.this, MainActivity.class);
                     startActivity(IntentSittings);
                 }
             });
     }
-
-    /**
-     public void OnCheckedPrichina(View view){
-     if(CB_PrichinaDrugoe.isChecked()){
-     EditText_PrichinaDrugoe.setEnabled(true);
-     PrichinaDemIskl.setEnabled(false);
-     }
-     else{
-     EditText_PrichinaDrugoe.setEnabled(false);
-     PrichinaDemIskl.setEnabled(true);
-     }
-     }
-     **/
 
 
     // Дата НК
@@ -612,19 +527,6 @@ public class KartaKontrolyaYDE extends AppCompatActivity {
             strDataNK = TextView_DataNK.getText().toString();
         }
     };
-
-    /**
-     // Дата Исключения
-     DatePickerDialog.OnDateSetListener Picker_DataIsklucheniya = new DatePickerDialog.OnDateSetListener() {
-     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-     dateAndTime.set(Calendar.YEAR, year);
-     dateAndTime.set(Calendar.MONTH, monthOfYear);
-     dateAndTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-     TextView_DataIsklucheniya.setText(new SimpleDateFormat("dd.MM.yyyy").format(new Date(dateAndTime.getTimeInMillis())));
-     strDataIskluchenie = TextView_DataIsklucheniya.getText().toString();
-     }
-     };
-     **/
 
 
     private void displayMessage(Context context, String message) {
@@ -648,6 +550,9 @@ public class KartaKontrolyaYDE extends AppCompatActivity {
                 case "points":
                     array = data.getStringArrayExtra("points");
                     strYZT_Points = array;
+                    strYZT_Dlina = data.getStringExtra("Dlina");
+                    strYZT_Shirina = data.getStringExtra("Shirina");
+                    strYZT_Visota = data.getStringExtra("Visota");
                     break;
             }
         }

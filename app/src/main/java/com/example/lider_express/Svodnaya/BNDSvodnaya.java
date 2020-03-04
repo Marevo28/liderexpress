@@ -26,6 +26,7 @@ import com.example.lider_express.R;
 import com.example.lider_express.Shared;
 import com.example.lider_express.Tools.SpisokBND;
 
+import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -48,21 +49,17 @@ public class BNDSvodnaya extends AppCompatActivity {
     TextView TextKonOstanov;
     TextView TextDataActNegot;
     TextView TextDataNK;
-    TextView textdefekBeznk;
     TextView textdataBeznk;
+    TextView textdefecBeznk;
     TextView TextDataActNoDoc;
+    Button PickDefectsBeznk;
     Button PickExpert;
     Button PickDefects;
-    Button PickDefectsBeznk;
-    Button PickDataBeznk;
     Button PickIrlDefects;
     Button ButZapisat;
     Button PickDataExp;
     Button PickDataSpec;
     Button PickDataNegotovnosti;
-    String dataBeznk;
-    String defekBeznk;
-    String dataActNoDoc;
     String dataexperts;
     String experts;
     String dataspec;
@@ -87,6 +84,9 @@ public class BNDSvodnaya extends AppCompatActivity {
     String note;
     String prichina;
     String lampa;
+    String databeznk;
+    String defecBeznk;
+    String dataActNoDoc;
     RadioGroup ispolnenie;
     RadioGroup shurfovka;
     RadioGroup actshurfovka;
@@ -137,13 +137,10 @@ public class BNDSvodnaya extends AppCompatActivity {
         TextDefects = findViewById(R.id.TextDefects);
         TextNote = findViewById(R.id.TextNote);
         TextPrichinaIskl = findViewById(R.id.TextPrichinaIskl);
-        textdefekBeznk = findViewById(R.id.textdefecBeznk);
         textdataBeznk = findViewById(R.id.textdataBeznk);
-        TextDataActNoDoc=findViewById(R.id.TextDataActNoDoc);
-        PickDefectsBeznk =findViewById(R.id.PickDefectsBeznk);
-        PickExpert=findViewById(R.id.PickExpert);
-        PickDefects=findViewById(R.id.PickDefects);
-
+        textdefecBeznk = findViewById(R.id.textdefecBeznk);
+        TextDataActNoDoc = findViewById(R.id.TextDataActNoDoc);
+        PickDefectsBeznk = findViewById(R.id.PickDefectsBeznk);
 
         mDBHelper = MainActivity.getDBHelper();  // new DatabaseHelper(this);// подклчюение к БД
 
@@ -170,6 +167,7 @@ public class BNDSvodnaya extends AppCompatActivity {
             dataexperts = cursor.getString(27);
             TextDataExp.setText(dataexperts);
         }
+
         if (cursor.getString(28) != null) {
             experts = cursor.getString(28);
             textexperts.setText(experts);
@@ -182,10 +180,20 @@ public class BNDSvodnaya extends AppCompatActivity {
             spec = cursor.getString(30);
             textdefek.setText(spec);
         }
+
+
         if (cursor.getString(31) != null) {
             ispol = cursor.getString(31);
-            ispolnenie.check("Да".equals(ispol) ? R.id.nadzemnoe : R.id.podzemnoe);
+            switch (ispol) {
+                case ("Да"):
+                    ispolnenie.check(R.id.nadzemnoe);
+                    break;
+                case ("Нет"):
+                    ispolnenie.check(R.id.podzemnoe);
+                    break;
+            }
         }
+
         ispolnenie.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -199,9 +207,15 @@ public class BNDSvodnaya extends AppCompatActivity {
                 }
             }
         });
+
         if (cursor.getString(32) != null) {
             shurf = cursor.getString(32);
-            shurfovka.check("Да".equals(shurf) ? R.id.shurfDA : R.id.shurfNet);
+            switch (shurf){
+                case ("Да"):shurfovka.check(R.id.shurfDA);
+                    break;
+                case ("Нет"):shurfovka.check(R.id.shurfNet);
+                    break;
+            }
         }
         shurfovka.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -218,7 +232,12 @@ public class BNDSvodnaya extends AppCompatActivity {
         });
         if (cursor.getString(33) != null) {
             actshurf = cursor.getString(33);
-            actshurfovka.check("Да".equals(actshurf) ? R.id.actshurfDA : R.id.actshurfNet);
+            switch (actshurf){
+                case ("Да"):actshurfovka.check(R.id.actshurfDA);
+                    break;
+                case ("Нет"):actshurfovka.check(R.id.actshurfNet);
+                    break;
+            }
         }
         actshurfovka.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -235,7 +254,13 @@ public class BNDSvodnaya extends AppCompatActivity {
         });
         if (cursor.getString(34) != null) {
             luk = cursor.getString(34);
-            luk_laz.check("Да".equals(luk) ? R.id.luklazDA : R.id.luklazNet);
+            switch (luk){
+                case ("Да"):luk_laz.check(R.id.luklazDA);
+                    break;
+                case ("Нет"):luk_laz.check(R.id.luklazNet);
+                    break;
+            }
+
         }
         luk_laz.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -252,7 +277,12 @@ public class BNDSvodnaya extends AppCompatActivity {
         });
         if (cursor.getString(35) != null) {
             naryadS = cursor.getString(35);
-            naryad.check("Да".equals(naryadS) ? R.id.naryadDa : R.id.naryadNet);// загугли тернарный оператор
+            switch (naryadS){
+                case ("Да"):naryad.check(R.id.naryadDa);
+                    break;
+                case ("Нет"):naryad.check(R.id.naryadNet);
+                    break;
+            }
         }
         naryad.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -270,6 +300,12 @@ public class BNDSvodnaya extends AppCompatActivity {
         if (cursor.getString(36) != null) {
             ostanovka = cursor.getString(36);
             ostanov.check("Да".equals(ostanovka) ? R.id.ostanovDa : R.id.ostanovNet);
+            switch (ostanovka){
+                case ("Да"):ostanov.check(R.id.ostanovDa);
+                    break;
+                case ("Нет"):ostanov.check(R.id.ostanovNet);
+                    break;
+            }
         }
         ostanov.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -297,7 +333,12 @@ public class BNDSvodnaya extends AppCompatActivity {
 
         if (cursor.getString(39) != null) {
             osmotrel = cursor.getString(39);
-            osmotr.check("Да".equals(osmotrel) ? R.id.osmotrDa : R.id.osmotrNet);
+            switch (osmotrel){
+                case ("Да"):osmotr.check(R.id.osmotrDa);
+                    break;
+                case ("Нет"):osmotr.check(R.id.osmotrNet);
+                    break;
+            }
         }
         osmotr.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -312,21 +353,10 @@ public class BNDSvodnaya extends AppCompatActivity {
                 }
             }
         });
-        if (cursor.getString(42) != null) {
-            dataBeznk=cursor.getString(42);
-            textdataBeznk.setText(dataBeznk);
-        }
-        if (cursor.getString(43) != null) {
-            defekBeznk=cursor.getString(43);
-            textdefekBeznk.setText(defekBeznk);
-        }
-        if (cursor.getString(44) != null) {
-            datanegotovnosti = cursor.getString(44);
-            TextDataActNegot.setText(cursor.getString(44));
-        }
+
         if (cursor.getString(45) != null) {
-            dataActNoDoc=cursor.getString(45);
-            TextDataActNoDoc.setText(dataActNoDoc);
+            datanegotovnosti = cursor.getString(45);
+            TextDataActNegot.setText(datanegotovnosti);
         }
         if (cursor.getString(46) != null) {
             datank = cursor.getString(46);
@@ -336,9 +366,16 @@ public class BNDSvodnaya extends AppCompatActivity {
             irlspec = cursor.getString(47);
             textirldefek.setText(irlspec);
         }
+
+
         if (cursor.getString(48) != null) {
             doki = cursor.getString(48);
-            documents.check("Да".equals(doki) ? R.id.documentsDa : R.id.documentsNet);
+            switch (doki){
+                case ("Да"):documents.check(R.id.documentsDa);
+                    break;
+                case ("Нет"):documents.check(R.id.documentsNet);
+                    break;
+            }
         }
         documents.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -355,7 +392,12 @@ public class BNDSvodnaya extends AppCompatActivity {
         });
         if (cursor.getString(50) != null) {
             vedomost = cursor.getString(50);
-            vedomostdef.check("Да".equals(vedomost) ? R.id.vedomostdefDa : R.id.vedomostdefNet);
+            switch (vedomost){
+                case ("Да"):vedomostdef.check(R.id.vedomostdefDa);
+                    break;
+                case ("Нет"):vedomostdef.check(R.id.vedomostdefNet);
+                    break;
+            }
         }
         vedomostdef.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -374,7 +416,13 @@ public class BNDSvodnaya extends AppCompatActivity {
 
         if (cursor.getString(52) != null) {
             iskluch = cursor.getString(52);
-            iskluchenie.check("Да".equals(iskluch) ? R.id.iskluchenieDa : R.id.iskluchenieNet);
+            switch (iskluch){
+                case ("Да"):iskluchenie.check(R.id.iskluchenieDa);
+                    break;
+                case ("Нет"):iskluchenie.check(R.id.iskluchenieNet);
+                    break;
+            }
+
         }
         iskluchenie.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -422,7 +470,6 @@ public class BNDSvodnaya extends AppCompatActivity {
                 IntentSittings.putExtra("people", "defectsbeznk");
                 startActivityForResult(IntentSittings, PEOPLE);
             }
-
         });
 
         ButZapisat.setOnClickListener(new View.OnClickListener() {
@@ -451,8 +498,8 @@ public class BNDSvodnaya extends AppCompatActivity {
                 initialValues.put("Stolb39", osmotrel );
                 //initialValues.put("Stolb40", ); Планирование
                 //initialValues.put("Stolb41", ); Планирование
-                initialValues.put("Stolb42", dataBeznk); //Дата выезда на объектметод считывания значение
-                initialValues.put("Stolb43", defekBeznk); //ФИО Специалиста выехавшего на объект без контроля
+                initialValues.put("Stolb42", databeznk); //Планирование
+                initialValues.put("Stolb43", defecBeznk); //Дата выезда на объектметод считывания значение
                 initialValues.put("Stolb44", datanegotovnosti);
                 initialValues.put("Stolb45", dataActNoDoc);
                 initialValues.put("Stolb46", datank);
@@ -475,32 +522,32 @@ public class BNDSvodnaya extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
         if (resultCode == RESULT_OK) {
             lampa = data.getStringExtra("people");
             String a;
             switch (lampa) {
                 case "experts":
                     a = data.getStringExtra("select");
-                    experts = a ;
+                    experts=a;
                     textexperts.setText(a);
                     break;
                 case "defects":
                     a = data.getStringExtra("select");
-                    spec = a;
+                    spec=a;
                     textdefek.setText(a);
                     break;
                 case "irldefects":
                     a = data.getStringExtra("select");
-                    irlspec = a;
+                    irlspec=a;
                     textirldefek.setText(a);
                     break;
                 case "defectsbeznk":
                     a = data.getStringExtra("select");
-                    defekBeznk=a;
-                    textdefekBeznk.setText(a);
+                    defecBeznk=a;
+                    textdefecBeznk.setText(a);
                     break;
             }
+
         }
     }
 
@@ -581,8 +628,7 @@ public class BNDSvodnaya extends AppCompatActivity {
             datank = TextDataNK.getText().toString();
         }
     };
-
-    public void setDataActNoDoc(View v) {
+    public void setTextDataBezNK(View v) {
         new DatePickerDialog(BNDSvodnaya.this, g, dateAndTime.get(Calendar.YEAR), dateAndTime.get(Calendar.MONTH), dateAndTime.get(Calendar.DAY_OF_MONTH)).show();
     }
     DatePickerDialog.OnDateSetListener g = new DatePickerDialog.OnDateSetListener() {
@@ -590,11 +636,11 @@ public class BNDSvodnaya extends AppCompatActivity {
             dateAndTime.set(Calendar.YEAR, year);
             dateAndTime.set(Calendar.MONTH, monthOfYear);
             dateAndTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-            TextDataActNoDoc.setText(new SimpleDateFormat("dd.MM.yyyy").format(new Date(dateAndTime.getTimeInMillis())));
-            dataActNoDoc = TextDataActNoDoc.getText().toString();
+            textdataBeznk.setText(new SimpleDateFormat("dd.MM.yyyy").format(new Date(dateAndTime.getTimeInMillis())));
+            databeznk = textdataBeznk.getText().toString();
         }
     };
-    public void setDataBeznk(View v) {
+    public void setDataActNoDoc(View v) {
         new DatePickerDialog(BNDSvodnaya.this, h, dateAndTime.get(Calendar.YEAR), dateAndTime.get(Calendar.MONTH), dateAndTime.get(Calendar.DAY_OF_MONTH)).show();
     }
     DatePickerDialog.OnDateSetListener h = new DatePickerDialog.OnDateSetListener() {
@@ -602,8 +648,8 @@ public class BNDSvodnaya extends AppCompatActivity {
             dateAndTime.set(Calendar.YEAR, year);
             dateAndTime.set(Calendar.MONTH, monthOfYear);
             dateAndTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-            textdataBeznk.setText(new SimpleDateFormat("dd.MM.yyyy").format(new Date(dateAndTime.getTimeInMillis())));
-            dataBeznk = textdataBeznk.getText().toString();
+            TextDataActNoDoc.setText(new SimpleDateFormat("dd.MM.yyyy").format(new Date(dateAndTime.getTimeInMillis())));
+            dataActNoDoc = TextDataActNoDoc.getText().toString();
         }
     };
 
