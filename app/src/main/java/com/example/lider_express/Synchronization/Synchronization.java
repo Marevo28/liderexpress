@@ -30,7 +30,7 @@ public class Synchronization extends AppCompatActivity {
      private Spinner spinnerDefect;
      AppCompatActivity appCompatActivity;
      String[] Zakazchiki = {//"Башнефть 2019", "Мегион 2019", "Полюс 2019",
-             "Башнефть 2020", "Мегион 2020", //"Полюс 2020",
+             "Башнефть 2020", "Мегион 2020", "Башнефть 2020 УДЭ" //"Полюс 2020",
             // "Башнефть 2021", "Мегион 2021", "Полюс 2021"
                            };
 
@@ -126,6 +126,7 @@ public class Synchronization extends AppCompatActivity {
                  //   case 2: /** Zakazchik = Shared.nameDefectPolus2019; **/ break;
                     case 0: Zakazchik = Shared.nameDefectBND2020; break;
                     case 1: Zakazchik = Shared.nameDefectMegion2020; break;
+                    case 2: Zakazchik = Shared.nameDefectBashneft2020_UDE; break;
                  //   case 5: Zakazchik = Shared.nameDefectPolus2020;**/  break;
                  //   case 6: Zakazchik = Shared.nameDefectBND2021; break;
                  //   case 7: Zakazchik = Shared.nameDefectMegion2021; break;

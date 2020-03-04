@@ -173,11 +173,14 @@ public class BNDSvodnaya extends AppCompatActivity {
 
         if (cursor.getString(31) != null) {
             ispol = cursor.getString(31);
-            switch (ispol){
-                case ("Да"):ispolnenie.check(R.id.nadzemnoe);
-                break;
-                case ("Нет"):ispolnenie.check(R.id.podzemnoe);
-                break;
+            switch (ispol) {
+                case ("Да"):
+                    ispolnenie.check(R.id.nadzemnoe);
+                    break;
+                case ("Нет"):
+                    ispolnenie.check(R.id.podzemnoe);
+                    break;
+            }
         }
 
         ispolnenie.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

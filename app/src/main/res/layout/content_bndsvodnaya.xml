@@ -65,8 +65,18 @@
             android:layout_height="50dp"
             android:ems="10"
             android:hint="Дата НК"
-            app:layout_constraintStart_toStartOf="@+id/textView22"
+            app:layout_constraintStart_toStartOf="@+id/textView24"
             app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+        <TextView
+            android:id="@+id/TextDataActNoDoc"
+            android:layout_width="165dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Дата"
+            app:layout_constraintStart_toStartOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/documents" />
 
         <TextView
             android:id="@+id/textView2"
@@ -311,10 +321,9 @@
             android:id="@+id/iskluchenie"
             android:layout_width="325dp"
             android:layout_height="40dp"
-            android:layout_marginTop="62dp"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="@+id/textView13"
-            app:layout_constraintTop_toBottomOf="@+id/textView13">
+            app:layout_constraintTop_toBottomOf="@+id/textView17">
 
             <RadioButton
                 android:id="@+id/iskluchenieDa"
@@ -377,54 +386,49 @@
             android:text="Начало останова"
             app:layout_constraintStart_toStartOf="@+id/ostanov"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
         <TextView
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:text="У заказчика имеются документы"
-            app:layout_constraintStart_toStartOf="@+id/textView15"
-            app:layout_constraintTop_toTopOf="@+id/TextDataActNegot" />
+            app:layout_constraintStart_toStartOf="@+id/PickDataNK"
+            app:layout_constraintTop_toTopOf="@+id/PickDataNK" />
 
         <TextView
             android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="146dp"
             android:text="Дата акта неготовности"
             app:layout_constraintStart_toStartOf="@+id/textView22"
-            app:layout_constraintTop_toBottomOf="@+id/textView22" />
-
+            app:layout_constraintTop_toBottomOf="@+id/TextPrichinaIskl" />
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="83dp"
             android:text="Дефектная ведомость составлена и подписана"
             app:layout_constraintStart_toStartOf="@+id/textView16"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+            app:layout_constraintTop_toBottomOf="@+id/TextDefects" />
 
         <TextView
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="43dp"
             android:text="Исключение позиции из договора"
             app:layout_constraintStart_toStartOf="@+id/textView13"
-            app:layout_constraintTop_toTopOf="@+id/vedomostdef" />
+            app:layout_constraintTop_toBottomOf="@+id/TextNote" />
 
         <EditText
             android:id="@+id/TextNote"
-            android:layout_width="325dp"
-            android:layout_height="100dp"
+            android:layout_width="323dp"
+            android:layout_height="58dp"
             android:ems="10"
             android:gravity="left"
-            android:inputType="text|textMultiLine|textCapSentences"
             android:hint="Примечание"
+            android:inputType="text|textMultiLine|textCapSentences"
             android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="@+id/textView17"
-            app:layout_constraintTop_toBottomOf="@+id/PickDataNK" />
+            app:layout_constraintStart_toStartOf="@+id/textView18"
+            app:layout_constraintTop_toBottomOf="@+id/vedomostdef" />
 
         <Button
             android:id="@+id/PickIrlDefects"
@@ -440,10 +444,9 @@
             android:id="@+id/textView16"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="43dp"
             android:text="Дефекты"
             app:layout_constraintStart_toStartOf="@+id/textView14"
-            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+            app:layout_constraintTop_toBottomOf="@+id/TextDataActNoDoc" />
 
         <TextView
             android:id="@+id/textView3"
@@ -453,6 +456,27 @@
             android:text="Оформлен акт шурфовки?"
             app:layout_constraintStart_toStartOf="@+id/textView9"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <RadioGroup
+            android:id="@+id/osmotr"
+            android:layout_width="325dp"
+            android:layout_height="43dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/textView22">
+
+            <RadioButton
+                android:id="@+id/osmotrDa"
+                android:layout_width="165dp"
+                android:layout_height="43dp"
+                android:text="Да" />
+
+            <RadioButton
+                android:id="@+id/osmotrNet"
+                android:layout_width="160dp"
+                android:layout_height="43dp"
+                android:text="Нет" />
+        </RadioGroup>
 
         <RadioGroup
             android:id="@+id/actshurfovka"
@@ -488,27 +512,6 @@
             app:layout_constraintStart_toStartOf="@+id/textView11"
             app:layout_constraintTop_toTopOf="@+id/TextNachOstanov" />
 
-        <RadioGroup
-            android:id="@+id/osmotr"
-            android:layout_width="325dp"
-            android:layout_height="43dp"
-            android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="@+id/textView22"
-            app:layout_constraintTop_toBottomOf="@+id/textView22">
-
-            <RadioButton
-                android:id="@+id/osmotrDa"
-                android:layout_width="165dp"
-                android:layout_height="43dp"
-                android:text="Да" />
-
-            <RadioButton
-                android:id="@+id/osmotrNet"
-                android:layout_width="160dp"
-                android:layout_height="43dp"
-                android:text="Нет" />
-        </RadioGroup>
-
         <EditText
             android:id="@+id/TextDefects"
             android:layout_width="325dp"
@@ -524,6 +527,7 @@
             android:id="@+id/ButZapisat"
             android:layout_width="325dp"
             android:layout_height="56dp"
+            android:layout_marginTop="300dp"
             android:text="Внести данные"
             app:layout_constraintStart_toStartOf="@+id/TextNote"
             app:layout_constraintTop_toBottomOf="@+id/TextNote" />
@@ -572,8 +576,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Фактический контроль"
-            app:layout_constraintStart_toStartOf="@+id/iskluchenie"
-            app:layout_constraintTop_toBottomOf="@+id/TextPrichinaIskl" />
+            app:layout_constraintStart_toStartOf="@+id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/osmotr" />
 
         <Button
             android:id="@+id/ButNachOstanov"
@@ -594,13 +598,14 @@
             app:layout_constraintTop_toBottomOf="@+id/TextKonOstanov" />
 
         <Button
-            android:id="@+id/PickDataNegotovnosti"
+            android:id="@+id/PickDataActNoDoc"
             android:layout_width="160dp"
             android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:onClick="setDataActNoDoc"
             android:text="Выбрать дату"
-            android:onClick="setDataNegotovnosti"
             app:layout_constraintStart_toEndOf="@+id/TextDataActNegot"
-            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+            app:layout_constraintTop_toBottomOf="@+id/documents" />
 
         <Button
             android:id="@+id/PickDataNK"
@@ -624,10 +629,69 @@
             android:id="@+id/textView18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
             android:text="Причина исключения"
             app:layout_constraintStart_toStartOf="@+id/textView17"
-            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+            app:layout_constraintTop_toBottomOf="@+id/iskluchenie" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Дата акта непредоставления документов"
+            app:layout_constraintStart_toStartOf="@+id/documents"
+            app:layout_constraintTop_toBottomOf="@+id/documents" />
+
+        <Button
+            android:id="@+id/PickDataNegotovnosti"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="165dp"
+            android:text="Выбрать дату"
+            android:onClick="setDataNegotovnosti"
+            app:layout_constraintStart_toStartOf="@+id/TextDataActNegot"
+            app:layout_constraintTop_toTopOf="@+id/TextDataActNegot" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="325dp"
+            android:layout_height="40dp"
+            android:text="Дата выезда на объект (заполнять в том случае когда контроль не проводился)"
+            app:layout_constraintStart_toStartOf="@+id/TextDataActNegot"
+            app:layout_constraintTop_toBottomOf="@+id/TextDataActNegot" />
+
+        <TextView
+            android:id="@+id/textdataBeznk"
+            android:layout_width="165dp"
+            android:layout_height="40dp"
+            android:text="textdataBeznk"
+            app:layout_constraintStart_toStartOf="@+id/textView25"
+            app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+        <TextView
+            android:id="@+id/textdefecBeznk"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="165dp"
+            android:text="textdefekBeznk"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+        <Button
+            android:id="@+id/PickDataBeznk"
+            android:layout_width="165dp"
+            android:layout_height="40dp"
+            android:text="Выбрать дату"
+            android:onClick="setDataBeznk"
+            app:layout_constraintStart_toStartOf="@+id/textdataBeznk"
+            app:layout_constraintTop_toBottomOf="@+id/textdataBeznk" />
+
+        <Button
+            android:id="@+id/PickDefectsBeznk"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:text="Выбрать"
+            app:layout_constraintStart_toEndOf="@+id/PickDataBeznk"
+            app:layout_constraintTop_toBottomOf="@+id/textdefecBeznk" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

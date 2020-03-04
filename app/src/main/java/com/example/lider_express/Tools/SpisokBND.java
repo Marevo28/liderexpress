@@ -44,6 +44,10 @@ public class SpisokBND extends AppCompatActivity {
             case "irldefects":
                 spisochek = getResources().getStringArray(R.array.bnd_irldefects);// создаем адаптер
                 break;
+            case "defectsbeznk":
+                spisochek = getResources().getStringArray(R.array.bnd_irldefects);// создаем адаптер
+                break;
+
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, spisochek);
@@ -57,10 +61,10 @@ public class SpisokBND extends AppCompatActivity {
                 for(int i=0;i < spisochek.length;i++)
                 {
                     if(sp.get(i))
-                        selectedItems+=spisochek[i]+",";
+                        selectedItems += spisochek[i]+",";
                 }
                 selection.setText("Выбрано: " + selectedItems);
-                select=selectedItems;
+                select = selectedItems;
             }
         });
 
