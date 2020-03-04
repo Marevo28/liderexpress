@@ -181,7 +181,6 @@ public class BNDSvodnaya extends AppCompatActivity {
             textdefek.setText(spec);
         }
 
-
         if (cursor.getString(31) != null) {
             ispol = cursor.getString(31);
             switch (ispol) {
@@ -299,7 +298,6 @@ public class BNDSvodnaya extends AppCompatActivity {
         });
         if (cursor.getString(36) != null) {
             ostanovka = cursor.getString(36);
-            ostanov.check("Да".equals(ostanovka) ? R.id.ostanovDa : R.id.ostanovNet);
             switch (ostanovka){
                 case ("Да"):ostanov.check(R.id.ostanovDa);
                     break;
@@ -353,10 +351,22 @@ public class BNDSvodnaya extends AppCompatActivity {
                 }
             }
         });
+        if (cursor.getString(42) != null) {
+            databeznk=cursor.getString(42);
+            textdataBeznk.setText(databeznk);
+        }
+        if (cursor.getString(43) != null) {
+            defecBeznk=cursor.getString(43);
+            textdefecBeznk.setText(defecBeznk);
+        }
+        if (cursor.getString(44) != null) {
+            datanegotovnosti = cursor.getString(44);
+            TextDataActNegot.setText(cursor.getString(44));
+        }
 
         if (cursor.getString(45) != null) {
-            datanegotovnosti = cursor.getString(45);
-            TextDataActNegot.setText(datanegotovnosti);
+            dataActNoDoc = cursor.getString(45);
+            TextDataActNoDoc.setText(dataActNoDoc);
         }
         if (cursor.getString(46) != null) {
             datank = cursor.getString(46);
@@ -366,7 +376,6 @@ public class BNDSvodnaya extends AppCompatActivity {
             irlspec = cursor.getString(47);
             textirldefek.setText(irlspec);
         }
-
 
         if (cursor.getString(48) != null) {
             doki = cursor.getString(48);
