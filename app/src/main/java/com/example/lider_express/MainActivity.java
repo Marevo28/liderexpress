@@ -1,13 +1,17 @@
 package com.example.lider_express;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Point;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
@@ -21,9 +25,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -36,6 +43,7 @@ import com.example.lider_express.Tools.VmyatinaSocuda;
 import com.google.android.material.navigation.NavigationView;
 
 import java.io.File;
+import java.io.IOException;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -74,7 +82,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private int intposition;
 
 
-
     public static DatabaseHelper getDBHelper() {
         return mDBHelper;
     }
@@ -87,7 +94,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public static SQLiteDatabase getSQLiteDatabase(){
         return mDb;
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +109,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
 
         btnpostion = (Button) findViewById(R.id.btnposition);
         btnSvodnaya = (Button) findViewById(R.id.btnSvodnaya);
@@ -131,14 +138,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         iniWH();
 
         // Если не создана база данных или не установление флаг на обновление
-        if(mDBHelper == null || Shared.flagUpdate) {
-            mDBHelper = new DatabaseHelper(this, Shared.nameDB, 3);
-        }
 
-        try {
-            mDb = mDBHelper.getWritableDatabase();
-        } catch (SQLException mSQLException) {
-            throw mSQLException;
+        if ( ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED &&
+        ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED ){
+            ActivityCompat.requestPermissions(MainActivity.this,
+                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    0);
+        }else {
+            if(mDBHelper == null || Shared.flagUpdate == true){
+                mDBHelper = new DatabaseHelper(this, Shared.nameDB, 3);
+            }
+            try{
+                mDb = mDBHelper.getWritableDatabase();
+            }catch (Exception e){
+            }
         }
 
         btnpostion.setOnClickListener(new View.OnClickListener() {
@@ -402,8 +418,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(requestCode == 0){
+            if(mDBHelper == null || Shared.flagUpdate == true){
+                mDBHelper = new DatabaseHelper(this, Shared.nameDB, 3);
+            }
+            try{
+                mDb = mDBHelper.getWritableDatabase();
+            }catch (Exception e){
+            }
+        }
+    }
 
     private void displayMessage(Context context, String message) {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
     }
+
 }

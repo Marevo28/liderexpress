@@ -76,7 +76,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1.5"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp"
+                        android:inputType="number"/>
                 </LinearLayout>
 
                 <!--   Ширина    /-->
@@ -96,7 +97,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1.5"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp"
+                        android:inputType="number"/>
                 </LinearLayout>
 
                 <!--   Высота    /-->
@@ -116,7 +118,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1.5"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp"
+                        android:inputType="number"/>
                 </LinearLayout>
 
 
@@ -149,7 +152,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="4"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp"
+                    android:inputType="number"/>
             </LinearLayout>
 
         <!--   2    /-->
@@ -170,7 +174,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="4"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp"
+                    android:inputType="number"/>
             </LinearLayout>
 
         <!--   3   /-->
@@ -191,7 +196,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="4"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp"
+                    android:inputType="number"/>
             </LinearLayout>
 
         <!--   4    /-->
@@ -212,7 +218,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="4"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp"
+                    android:inputType="number"/>
             </LinearLayout>
 
         <!--   5    /-->
@@ -234,7 +241,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="4"
                     android:paddingBottom="8dp"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp"
+                    android:inputType="number"/>
             </LinearLayout>
 
         <!--   6    /-->
@@ -255,7 +263,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="4"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp"
+                    android:inputType="number"/>
             </LinearLayout>
 
         <!--   7    /-->
@@ -276,7 +285,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="4"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp"
+                    android:inputType="number"/>
             </LinearLayout>
 
         <!--   8    /-->
@@ -297,7 +307,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="4"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp"
+                    android:inputType="number"/>
             </LinearLayout>
 
         <!--   9    /-->
@@ -318,7 +329,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="4"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp"
+                    android:inputType="number"/>
             </LinearLayout>
 
         <!--   10    /-->
@@ -339,7 +351,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="4"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp"
+                    android:inputType="number"/>
             </LinearLayout>
     </LinearLayout>
 
@@ -367,7 +380,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:inputType="number"/>
         </LinearLayout>
 
         <!--  12    /-->
@@ -388,7 +402,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:inputType="number"/>
         </LinearLayout>
 
         <!--  13    /-->
@@ -409,7 +424,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:inputType="number"/>
         </LinearLayout>
 
         <!--  14    /-->
@@ -430,7 +446,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:inputType="number"/>
         </LinearLayout>
 
         <!--  15    /-->
@@ -451,7 +468,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:inputType="number"/>
         </LinearLayout>
 
         <!--  16    /-->
@@ -472,7 +490,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:inputType="number"/>
         </LinearLayout>
 
         <!--  17    /-->
@@ -493,7 +512,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:inputType="number"/>
         </LinearLayout>
 
         <!--  18    /-->
@@ -514,7 +534,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:inputType="number"/>
         </LinearLayout>
 
         <!--  19    /-->
@@ -535,7 +556,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:inputType="number"/>
         </LinearLayout>
 
         <!--  20    /-->
@@ -556,7 +578,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:inputType="number"/>
         </LinearLayout>
 
 

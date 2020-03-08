@@ -32,13 +32,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static String DB_PATH = "";
     private SQLiteDatabase mDataBase;
 
+    private static final int MY_PERMISSIONS_REQUEST_STORAGE = 1;
+
     public DatabaseHelper(Context context, String nameDB, int version) {
         super(context, nameDB, null, version);
 
+
         if (android.os.Build.VERSION.SDK_INT >= 17) {
             DB_PATH = context.getDatabasePath(nameDB).getPath();
-            Log.e("DBPath:   ",   DB_PATH);
-            Shared.pathDB = DB_PATH;
         }
         else {
             DB_PATH = "/data/data/" + context.getPackageName() + "/databases/";
@@ -46,7 +47,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         copyDataBase();
 
-        this.getReadableDatabase();
+        this.getWritableDatabase();
     }
 
     private void copyDataBase() {
@@ -67,26 +68,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.e("Start", "Первый зпуск!!!");
             MainActivity.setRunned();
 
-            File path = new File(Shared.pathUpdateDB);  // путь к файлу
-            if(!path.exists()){   // если такого пути нет, создаем его
-                path.mkdir();
+            File pathUpDB = new File(Shared.pathUpdateDB);  // путь к файлу
+            if(!pathUpDB.exists()){   // если такого пути нет, создаем его
+                pathUpDB.mkdir();
             }
-            File fullPath = new File(path, Shared.nameUpdateDB);
+            File fullPathUpDB = new File(pathUpDB, Shared.nameUpdateDB);
             try {
-                fullPath.createNewFile(); // создаем сам файл
+                fullPathUpDB.createNewFile(); // создаем сам файл
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
-            if(fullPath.exists()) {
-                System.out.println("----------------- File : " + fullPath + " Создался");
+            if(fullPathUpDB.exists()) {
+                System.out.println("----------------- File : " + fullPathUpDB + " Создался");
             }else{
-                System.out.println("----------------- File : " + fullPath + " Не Создался");
+                System.out.println("----------------- File : " + fullPathUpDB + " Не Создался");
             }
 
             // Копируем Базу данных из папки Assets в папку для обновления базы данных
             InputStream mInput = Shared.context.getAssets().open(Shared.nameUpdateDB);
-            OutputStream mOutput = new FileOutputStream(fullPath);
+            OutputStream mOutput = new FileOutputStream(fullPathUpDB);
             byte[] mBuffer = new byte[1024];
             int mLength;
             while ((mLength = mInput.read(mBuffer)) > 0)
@@ -100,15 +101,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             OutputStream os = null;
             File source = new File(Shared.pathUpdateDB + "/" + Shared.nameUpdateDB);
 
-            Log.e("DBPath111:   ",   DB_PATH);
+            File pathDB = new File(Shared.pathDB);  // путь к файлу
+            if(!pathDB.exists()){   // если такого пути нет, создаем его
+                pathDB.mkdir();
+            }
+            File fullPathDB = new File(pathDB, Shared.nameDB);
+            if(!fullPathDB.exists()) {
+                try {
+                    fullPathDB.createNewFile(); // создаем сам файл
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
 
-            File dest = new File(DB_PATH);
-
-            Log.e("File EXIST:   ", String.valueOf(dest.exists()));
 
             try {
                 is = new FileInputStream(source);
-                os = new FileOutputStream(dest);
+                os = new FileOutputStream(fullPathDB);
                 byte[] buffer = new byte[1024];
                 int length;
                 while ((length = is.read(buffer)) > 0) {
@@ -128,21 +137,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             InputStream is = null;
             OutputStream os = null;
             File source = new File(Shared.pathUpdateDB + "/" + Shared.nameUpdateDB);
-            Log.e("Exist DataBase : ", String.valueOf(source.exists()));
-            File dest = new File(DB_PATH);
+
+            File pathDB = new File(Shared.pathDB);  // путь к файлу
+            if(!pathDB.exists()){   // если такого пути нет, создаем его
+                pathDB.mkdir();
+            }
+            File fullPathDB = new File(pathDB, Shared.nameDB);
+            if(!fullPathDB.exists()) {
+                try {
+                    fullPathDB.createNewFile(); // создаем сам файл
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
 
             try {
                 is = new FileInputStream(source);
-                os = new FileOutputStream(dest);
+                os = new FileOutputStream(fullPathDB);
                 byte[] buffer = new byte[1024];
                 int length;
                 while ((length = is.read(buffer)) > 0) {
                     os.write(buffer, 0, length);
                 }
-            }finally {
+            } finally {
                 is.close();
                 os.close();
             }
+
         }
 
     }
@@ -154,6 +175,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
     }
 
     @Override
