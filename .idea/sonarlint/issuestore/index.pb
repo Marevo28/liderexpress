@@ -15,3 +15,9 @@ g
 7app/src/main/java/com/example/lider_express/Camera.java,c\1\c1df44eca1f7911f8a6e4763df237f298eefcc6b
 x
 Happ/src/main/java/com/example/lider_express/Svodnaya/MegionSvodnaya.java,a\3\a3afba5a1e73f81e5b27ad93d12e837a821ddddf
+p
+@app/src/main/java/com/example/lider_express/Tools/SpisokBND.java,a\8\a88a56235512856aefe685f10f0b031d677af1f7
+g
+7app/src/main/java/com/example/lider_express/Shared.java,9\5\9570a686e5698868cdd6b4d4a092379a8212a0d5
+u
+Eapp/src/main/java/com/example/lider_express/Svodnaya/BNDSvodnaya.java,a\8\a8db0cd508e44989d177249691062850d3622ec7

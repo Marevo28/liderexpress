@@ -1,106 +1,106 @@
 
-dsquid:S1192"GDefine a constant instead of duplicating this literal "people" 3 times.(çå³óÿÿÿÿÿ
-hsquid:S1192À"KDefine a constant instead of duplicating this literal "dd.MM.yyyy" 7 times.(—Ü¯©ÿÿÿÿÿ
-hsquid:S1301À"KReplace this "switch" statement by "if" statements to increase readability.(€ÆèÔÿÿÿÿÿ
-hsquid:S1301á"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
-hsquid:S1301ğ"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
-hsquid:S1301ÿ"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
-hsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
-hsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
-hsquid:S1301«"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
-hsquid:S1301¹"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
-hsquid:S1301Ç"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
-hsquid:S1301Õ"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
-hsquid:S1301ä"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
-csquid:S1301™"KReplace this "switch" statement by "if" statements to increase readability.(ƒ“¯Œ
-ˆ"squid:ClassVariableVisibilityCheck)"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ
-‚"squid:ClassVariableVisibilityCheck*"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ
-osquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÃœ÷øÿÿÿÿ
-osquid:S00117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÃœ÷øÿÿÿÿ
-osquid:S00117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ô™£®ÿÿÿÿÿ
-wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ì¼úşÿÿÿÿ
-esquid:MaximumInheritanceDepth&"<This class has 6 parents which is greater than 5 authorized.(˜Ğ†ß
-osquid:S1450/"XRemove the "Zakazchik" field and declare it as a local variable in the relevant methods.(§ÍÒŞ
-usquid:S14505"YRemove the "Ispolnenie" field and declare it as a local variable in the relevant methods.(à–²Äøÿÿÿÿ
-ksquid:S14506"TRemove the "Shurf" field and declare it as a local variable in the relevant methods.(Øğ›
-nsquid:S14507"WRemove the "ActShurf" field and declare it as a local variable in the relevant methods.(‡˜¢í
-lsquid:S14508"URemove the "LukLaz" field and declare it as a local variable in the relevant methods.(ˆ³æ
-lsquid:S14509"URemove the "Naryad" field and declare it as a local variable in the relevant methods.(ã”»à
-msquid:S1450:"QRemove the "NK" field and declare it as a local variable in the relevant methods.(Á±ıûÿÿÿÿ
-…squid:S1450<"iRemove the "Button_DataNachaloOstanova" field and declare it as a local variable in the relevant methods.(‰³´Óøÿÿÿÿ
-‚squid:S1450>"fRemove the "Button_DataOkonOstanova" field and declare it as a local variable in the relevant methods.(Ş©«Çûÿÿÿÿ
-ysquid:S1450?"]Remove the "OsmotrVnutrPov" field and declare it as a local variable in the relevant methods.(½‰ıûÿÿÿÿ
-|squid:S1450A"eRemove the "Button_DataViezdaBezNK" field and declare it as a local variable in the relevant methods.(¿éì§
-|squid:S1450C"eRemove the "Button_SpecViezdObject" field and declare it as a local variable in the relevant methods.(²ÁÈº
-{squid:S1450E"dRemove the "Button_DataActNegotov" field and declare it as a local variable in the relevant methods.(Œ‘Ê
-squid:S1450G"hRemove the "Button_DataActNepredostav" field and declare it as a local variable in the relevant methods.(”ÚŞÑ
-xsquid:S1450I"\Remove the "Button_DataNK" field and declare it as a local variable in the relevant methods.(úÚİùÿÿÿÿ
-|squid:S1450K"`Remove the "Button_SpecProvNK" field and declare it as a local variable in the relevant methods.(¨×¼óøÿÿÿÿ
-psquid:S1450M"ZRemove the "DefectVedom" field and declare it as a local variable in the relevant methods.(—‘‹'
-{squid:S1450O"eRemove the "Button_DataPovtorViezd" field and declare it as a local variable in the relevant methods.(×ï¤j
-tsquid:S1450\"^Remove the "ZapisiVPasporte" field and declare it as a local variable in the relevant methods.(“ƒ%
-xsquid:S1450^"\Remove the "Button_Vnesti" field and declare it as a local variable in the relevant methods.(ãÕ‡Åıÿÿÿÿ
-psquid:S1450"TRemove the "lampa" field and declare it as a local variable in the relevant methods.(«õ®üÿÿÿÿ
-ƒsquid:S1845."gRename field "position" to prevent any misunderstanding/clash with field "POSITION" defined on line 40.(©ùéäıÿÿÿÿ
-lsquid:S00116/"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ÍÒŞ
-wsquid:S001160"ZRename this field "ZakazchikDefect" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢À—™ÿÿÿÿÿ
-rsquid:S001165"URename this field "Ispolnenie" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à–²Äøÿÿÿÿ
-hsquid:S001166"PRename this field "Shurf" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øğ›
-ksquid:S001167"SRename this field "ActShurf" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡˜¢í
-isquid:S001168"QRename this field "LukLaz" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ³æ
-isquid:S001169"QRename this field "Naryad" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã”»à
-jsquid:S00116:"MRename this field "NK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á±ıûÿÿÿÿ
-squid:S00116;"gRename this field "TextView_DataNachaloOstanova" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğÿ «
-‚squid:S00116<"eRename this field "Button_DataNachaloOstanova" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰³´Óøÿÿÿÿ
-|squid:S00116="dRename this field "TextView_DataOkonOstanova" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó­†ì
-squid:S00116>"bRename this field "Button_DataOkonOstanova" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş©«Çûÿÿÿÿ
-vsquid:S00116?"YRename this field "OsmotrVnutrPov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½‰ıûÿÿÿÿ
-squid:S00116@"dRename this field "TextView_DataViezdaBezNKO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÛÛûÿÿÿÿ
-ysquid:S00116A"aRename this field "Button_DataViezdaBezNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿éì§
-€squid:S00116B"cRename this field "TextView_SpecViezdObject" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û¸µÿÿÿÿÿ
-ysquid:S00116C"aRename this field "Button_SpecViezdObject" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ÁÈº
-squid:S00116D"bRename this field "TextView_DataActNegotov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã•Óùÿÿÿÿ
-xsquid:S00116E"`Rename this field "Button_DataActNegotov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ‘Ê
-~squid:S00116F"fRename this field "TextView_DataActNepredostav" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»Ù±Ö
-|squid:S00116G"dRename this field "Button_DataActNepredostav" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”ÚŞÑ
-qsquid:S00116H"ZRename this field "TextView_DataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ñj
-usquid:S00116I"XRename this field "Button_DataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úÚİùÿÿÿÿ
-{squid:S00116J"^Rename this field "TextView_SpecProvNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùù’ˆøÿÿÿÿ
-ysquid:S00116K"\Rename this field "Button_SpecProvNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨×¼óøÿÿÿÿ
-ssquid:S00116L"[Rename this field "EditText_Defects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç¯ÚÛ
-msquid:S00116M"VRename this field "DefectVedom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—‘‹'
-{squid:S00116N"cRename this field "TextView_DataPovtorViezd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æŸ·Œ
-xsquid:S00116O"aRename this field "Button_DataPovtorViezd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ï¤j
-vsquid:S00116P"^Rename this field "ResultatPovtorViezd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’«„Ã
-osquid:S00116Q"WRename this field "CB_DefDrugoe" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é°Øó
-tsquid:S00116R"]Rename this field "EditText_DefDrugoe" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°³„y
-|squid:S00116["_Rename this field "EditText_Zamechaniya" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ¾î£øÿÿÿÿ
-qsquid:S00116\"ZRename this field "ZapisiVPasporte" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ƒ%
-usquid:S00116^"XRename this field "Button_Vnesti" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãÕ‡Åıÿÿÿÿ
-}squid:S00116»"eRename this field "Picker_DataNachaloOstanova" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ¦T
-{squid:S00116Å"bRename this field "Picker_DataOkonOstanova" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½ë×‚
-€squid:S00116Ï"bRename this field "Picker_DataViezdaBezNKO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ÿÎÿÿÿÿÿ
-~squid:S00116Ù"`Rename this field "Picker_DataActNegotov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÓ°«ûÿÿÿÿ
-‚squid:S00116ã"dRename this field "Picker_DataActNepredostav" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ÓË¾úÿÿÿÿ
-qsquid:S00116í"XRename this field "Picker_DataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÒ³
-zsquid:S00116÷"aRename this field "Picker_DataPovtorViezd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•¦”Ô
-psquid:ModifiersOrderCheck‚"EReorder the modifiers to comply with the Java Language Specification.(Ú›†ùûÿÿÿÿ
-osquid:S3776…"RRefactor this method to reduce its Cognitive Complexity from 65 to the 15 allowed.(¨Œşÿÿÿÿ
-osquid:S2737º"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ
-V"squid:SwitchLastCaseIsDefaultCheckÀ""Add a default case to this switch.(€ÆèÔÿÿÿÿÿ
-V"squid:SwitchLastCaseIsDefaultChecká""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
-V"squid:SwitchLastCaseIsDefaultCheckğ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
-V"squid:SwitchLastCaseIsDefaultCheckÿ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
-V"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
-V"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
-V"squid:SwitchLastCaseIsDefaultCheck«""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
-V"squid:SwitchLastCaseIsDefaultCheck¹""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
-V"squid:SwitchLastCaseIsDefaultCheckÇ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
-V"squid:SwitchLastCaseIsDefaultCheckÕ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
-V"squid:SwitchLastCaseIsDefaultCheckä""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
-Q"squid:SwitchLastCaseIsDefaultCheck™""Add a default case to this switch.(ƒ“¯Œ
-gsquid:CommentedOutCodeLineW"<This block of commented-out lines of code should be removed.(ŒÕ×ˆşÿÿÿÿ
 hsquid:CommentedOutCodeLineª"<This block of commented-out lines of code should be removed.(¥Ú‡†üÿÿÿÿ
 csquid:CommentedOutCodeLineÁ"<This block of commented-out lines of code should be removed.(Ùåà‰
-csquid:CommentedOutCodeLineÃ"<This block of commented-out lines of code should be removed.(«‚ìÚ
+|squid:S00116="dRename this field "TextView_DataOkonOstanova" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó­†ì
+qsquid:S00116í"XRename this field "Picker_DataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÒ³
+hsquid:S1301á"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+vsquid:S00116P"^Rename this field "ResultatPovtorViezd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’«„Ã
+‚squid:S1450>"fRemove the "Button_DataOkonOstanova" field and declare it as a local variable in the relevant methods.(Ş©«Çûÿÿÿÿ
+ysquid:S1450?"]Remove the "OsmotrVnutrPov" field and declare it as a local variable in the relevant methods.(½‰ıûÿÿÿÿ
+|squid:S1450K"`Remove the "Button_SpecProvNK" field and declare it as a local variable in the relevant methods.(¨×¼óøÿÿÿÿ
+{squid:S00116N"cRename this field "TextView_DataPovtorViezd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æŸ·Œ
+hsquid:S1301Ç"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+xsquid:S1450^"\Remove the "Button_Vnesti" field and declare it as a local variable in the relevant methods.(ãÕ‡Åıÿÿÿÿ
+V"squid:SwitchLastCaseIsDefaultCheckÿ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+tsquid:S1450\"^Remove the "ZapisiVPasporte" field and declare it as a local variable in the relevant methods.(“ƒ%
+hsquid:S1301ÿ"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+€squid:S00116B"cRename this field "TextView_SpecViezdObject" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û¸µÿÿÿÿÿ
+|squid:S1450C"eRemove the "Button_SpecViezdObject" field and declare it as a local variable in the relevant methods.(²ÁÈº
+V"squid:SwitchLastCaseIsDefaultCheckğ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+psquid:S1450M"ZRemove the "DefectVedom" field and declare it as a local variable in the relevant methods.(—‘‹'
+osquid:S1450/"XRemove the "Zakazchik" field and declare it as a local variable in the relevant methods.(§ÍÒŞ
+zsquid:S00116÷"aRename this field "Picker_DataPovtorViezd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•¦”Ô
+osquid:S00117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÃœ÷øÿÿÿÿ
+isquid:S001169"QRename this field "Naryad" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã”»à
+~squid:S00116Ù"`Rename this field "Picker_DataActNegotov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÓ°«ûÿÿÿÿ
+‚squid:S00116ã"dRename this field "Picker_DataActNepredostav" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ÓË¾úÿÿÿÿ
+Q"squid:SwitchLastCaseIsDefaultCheck™""Add a default case to this switch.(ƒ“¯Œ
+hsquid:S1301«"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+hsquid:S1192À"KDefine a constant instead of duplicating this literal "dd.MM.yyyy" 7 times.(—Ü¯©ÿÿÿÿÿ
+hsquid:S1301ä"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ì¼úşÿÿÿÿ
+qsquid:S00116\"ZRename this field "ZapisiVPasporte" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ƒ%
+psquid:ModifiersOrderCheck‚"EReorder the modifiers to comply with the Java Language Specification.(Ú›†ùûÿÿÿÿ
+usquid:S00116^"XRename this field "Button_Vnesti" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãÕ‡Åıÿÿÿÿ
+usquid:S00116I"XRename this field "Button_DataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úÚİùÿÿÿÿ
+dsquid:S1192"GDefine a constant instead of duplicating this literal "people" 3 times.(çå³óÿÿÿÿÿ
+ˆ"squid:ClassVariableVisibilityCheck)"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ
+…squid:S1450<"iRemove the "Button_DataNachaloOstanova" field and declare it as a local variable in the relevant methods.(‰³´Óøÿÿÿÿ
+{squid:S1450O"eRemove the "Button_DataPovtorViezd" field and declare it as a local variable in the relevant methods.(×ï¤j
+lsquid:S14509"URemove the "Naryad" field and declare it as a local variable in the relevant methods.(ã”»à
+ysquid:S00116A"aRename this field "Button_DataViezdaBezNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿éì§
+|squid:S00116G"dRename this field "Button_DataActNepredostav" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”ÚŞÑ
+V"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+squid:S00116D"bRename this field "TextView_DataActNegotov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã•Óùÿÿÿÿ
+lsquid:S00116/"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ÍÒŞ
+hsquid:S001166"PRename this field "Shurf" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øğ›
+xsquid:S00116E"`Rename this field "Button_DataActNegotov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ‘Ê
+esquid:MaximumInheritanceDepth&"<This class has 6 parents which is greater than 5 authorized.(˜Ğ†ß
+wsquid:S001160"ZRename this field "ZakazchikDefect" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢À—™ÿÿÿÿÿ
+ksquid:S14506"TRemove the "Shurf" field and declare it as a local variable in the relevant methods.(Øğ›
+ysquid:S00116C"aRename this field "Button_SpecViezdObject" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ÁÈº
+~squid:S00116F"fRename this field "TextView_DataActNepredostav" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»Ù±Ö
+{squid:S00116J"^Rename this field "TextView_SpecProvNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùù’ˆøÿÿÿÿ
+squid:S00116;"gRename this field "TextView_DataNachaloOstanova" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğÿ «
+{squid:S00116Å"bRename this field "Picker_DataOkonOstanova" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½ë×‚
+squid:S00116@"dRename this field "TextView_DataViezdaBezNKO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÛÛûÿÿÿÿ
+osquid:S2737º"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ
+squid:S1450G"hRemove the "Button_DataActNepredostav" field and declare it as a local variable in the relevant methods.(”ÚŞÑ
+gsquid:CommentedOutCodeLineW"<This block of commented-out lines of code should be removed.(ŒÕ×ˆşÿÿÿÿ
+ysquid:S00116K"\Rename this field "Button_SpecProvNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨×¼óøÿÿÿÿ
+‚"squid:ClassVariableVisibilityCheck*"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ
+V"squid:SwitchLastCaseIsDefaultChecká""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+vsquid:S00116?"YRename this field "OsmotrVnutrPov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½‰ıûÿÿÿÿ
+hsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+squid:S00116>"bRename this field "Button_DataOkonOstanova" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş©«Çûÿÿÿÿ
 hsquid:CommentedOutCodeLine”"<This block of commented-out lines of code should be removed.(·¬Òïüÿÿÿÿ
+hsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+osquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÃœ÷øÿÿÿÿ
+osquid:S00117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ô™£®ÿÿÿÿÿ
+tsquid:S00116R"]Rename this field "EditText_DefDrugoe" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°³„y
+csquid:CommentedOutCodeLineÃ"<This block of commented-out lines of code should be removed.(«‚ìÚ
+V"squid:SwitchLastCaseIsDefaultCheckÀ""Add a default case to this switch.(€ÆèÔÿÿÿÿÿ
+msquid:S1450:"QRemove the "NK" field and declare it as a local variable in the relevant methods.(Á±ıûÿÿÿÿ
+ƒsquid:S1845."gRename field "position" to prevent any misunderstanding/clash with field "POSITION" defined on line 40.(©ùéäıÿÿÿÿ
+nsquid:S14507"WRemove the "ActShurf" field and declare it as a local variable in the relevant methods.(‡˜¢í
+V"squid:SwitchLastCaseIsDefaultCheckÇ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+hsquid:S1301Õ"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+qsquid:S00116H"ZRename this field "TextView_DataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ñj
+osquid:S3776…"RRefactor this method to reduce its Cognitive Complexity from 65 to the 15 allowed.(¨Œşÿÿÿÿ
+V"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+hsquid:S1301À"KReplace this "switch" statement by "if" statements to increase readability.(€ÆèÔÿÿÿÿÿ
+csquid:S1301™"KReplace this "switch" statement by "if" statements to increase readability.(ƒ“¯Œ
+usquid:S14505"YRemove the "Ispolnenie" field and declare it as a local variable in the relevant methods.(à–²Äøÿÿÿÿ
+ksquid:S001167"SRename this field "ActShurf" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡˜¢í
+ssquid:S00116L"[Rename this field "EditText_Defects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç¯ÚÛ
+xsquid:S00116O"aRename this field "Button_DataPovtorViezd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ï¤j
+|squid:S00116["_Rename this field "EditText_Zamechaniya" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ¾î£øÿÿÿÿ
+}squid:S00116»"eRename this field "Picker_DataNachaloOstanova" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ¦T
+{squid:S1450E"dRemove the "Button_DataActNegotov" field and declare it as a local variable in the relevant methods.(Œ‘Ê
+‚squid:S00116<"eRename this field "Button_DataNachaloOstanova" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰³´Óøÿÿÿÿ
+msquid:S00116M"VRename this field "DefectVedom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—‘‹'
+xsquid:S1450I"\Remove the "Button_DataNK" field and declare it as a local variable in the relevant methods.(úÚİùÿÿÿÿ
+lsquid:S14508"URemove the "LukLaz" field and declare it as a local variable in the relevant methods.(ˆ³æ
+V"squid:SwitchLastCaseIsDefaultCheck¹""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+hsquid:S1301¹"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+V"squid:SwitchLastCaseIsDefaultCheckÕ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+V"squid:SwitchLastCaseIsDefaultCheck«""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+V"squid:SwitchLastCaseIsDefaultCheckä""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+|squid:S1450A"eRemove the "Button_DataViezdaBezNK" field and declare it as a local variable in the relevant methods.(¿éì§
+jsquid:S00116:"MRename this field "NK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á±ıûÿÿÿÿ
+hsquid:S1301ğ"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+psquid:S1450"TRemove the "lampa" field and declare it as a local variable in the relevant methods.(«õ®üÿÿÿÿ
+€squid:S00116Ï"bRename this field "Picker_DataViezdaBezNKO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ÿÎÿÿÿÿÿ
+rsquid:S001165"URename this field "Ispolnenie" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à–²Äøÿÿÿÿ
+osquid:S00116Q"WRename this field "CB_DefDrugoe" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é°Øó
+isquid:S001168"QRename this field "LukLaz" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ³æ

@@ -1,13 +1,11 @@
 
-Vsquid:UselessImportCheck"-Remove this unused import 'org.w3c.dom.Text'.(¶Äè‹şÿÿÿÿ
-lsquid:S00116"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÜÕù
-usquid:S00116"XRename this field "TextZakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ‰€Ìÿÿÿÿÿ
-Isquid:S1199M"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-osquid:S00116"RRename this field "ButSave" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¡ úÿÿÿÿ
-lsquid:S00116"URename this field "Zakazchiki" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë™°j
+osquid:S00116"RRename this field "ButSave" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¡ úÿÿÿÿ
 squid:S1186<"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‹ûÄ‚üÿÿÿÿ
-nsquid:UselessImportCheck"JRemove this unused import 'com.google.android.material.snackbar.Snackbar'.(ë„ƒŠ
-jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(’İå…ûÿÿÿÿ
-Xsquid:UselessImportCheck"4Remove this unused import 'android.content.Context'.(©Ê‰è
-‹squid:UselessImportCheck"bRemove this unused import 'com.google.android.material.floatingactionbutton.FloatingActionButton'.(ôˆêãÿÿÿÿÿ
-usquid:S2293)"YReplace the type specification in this constructor call with the diamond operator ("<>").(±”½Ùøÿÿÿÿ
+usquid:S00116"XRename this field "TextZakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ‰€Ìÿÿÿÿÿ
+lsquid:S00116"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÜÕù
+Isquid:S1199M"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(’İå…ûÿÿÿÿ
+usquid:S2293("YReplace the type specification in this constructor call with the diamond operator ("<>").(±”½Ùøÿÿÿÿ
+qsquid:S1192N"SUse already-defined constant 'APP_ZAKAZCHIK' instead of duplicating its value here.(—õáô8¼‡¨‰.
+]squid:UselessImportCheck	"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8¼‡¨‰.
+ysquid:S00116"URename this field "Zakazchiki" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê²¤úÿÿÿÿ8¼‡¨‰.
