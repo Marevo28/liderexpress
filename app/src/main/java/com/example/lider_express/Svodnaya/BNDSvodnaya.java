@@ -12,6 +12,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -159,6 +160,8 @@ public class BNDSvodnaya extends AppCompatActivity {
               case "Bashneft2020": ZakazchikDefect = Shared.nameDefectBND2020; break;
         //    case "ZayavkaBND2021": ZakazchikDefect = Shared.nameDefectBND2021; break;
         }
+        Log.e("Svod_Zakaz", ZakazchikDefect );
+
 
         Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position}, null, null, null);
         cursor.moveToFirst();

@@ -30,7 +30,6 @@ import java.io.OutputStream;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static String DB_PATH = "";
-    private SQLiteDatabase mDataBase;
 
     private static final int MY_PERMISSIONS_REQUEST_STORAGE = 1;
 
@@ -113,8 +112,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     e.printStackTrace();
                 }
             }
-
-
+            
             try {
                 is = new FileInputStream(source);
                 os = new FileOutputStream(fullPathDB);
@@ -166,11 +164,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         }
 
-    }
-
-    public boolean openDataBase() throws SQLException {
-        mDataBase = SQLiteDatabase.openDatabase(DB_PATH /** + DB_NAME **/, null, SQLiteDatabase.CREATE_IF_NECESSARY);
-        return mDataBase != null;
     }
 
     @Override

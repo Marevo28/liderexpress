@@ -2,16 +2,13 @@ package com.example.lider_express;
 
 import android.Manifest;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Point;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
@@ -41,10 +38,6 @@ import com.example.lider_express.Svodnaya.MegionSvodnaya;
 import com.example.lider_express.Synchronization.Synchronization;
 import com.example.lider_express.Tools.VmyatinaSocuda;
 import com.google.android.material.navigation.NavigationView;
-
-import java.io.File;
-import java.io.IOException;
-
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -137,8 +130,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Инициализировать высоту и ширину устройства - (Для камеры)
         iniWH();
 
-        // Если не создана база данных или не установление флаг на обновление
-
         if ( ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED &&
         ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -150,9 +141,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }else {
             if(mDBHelper == null || Shared.flagUpdate == true){
                 mDBHelper = new DatabaseHelper(this, Shared.nameDB, 3);
+                Shared.flagUpdate = false;
+                Log.e("MainActivity", "New DataBase");
             }
             try{
                 mDb = mDBHelper.getWritableDatabase();
+                Log.e("MainActivity", "getWritableDatabase");
             }catch (Exception e){
             }
         }

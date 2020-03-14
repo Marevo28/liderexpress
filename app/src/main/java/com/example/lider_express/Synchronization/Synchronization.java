@@ -100,13 +100,6 @@ public class Synchronization extends AppCompatActivity {
         spinnerDefect.setAdapter(adapter);
         spinnerDefect.setSelection(0);
 
-    //    mDBHelper = new DatabaseHelper();
-
-    //    try {
-    //        mDb = mDBHelper.getWritableDatabase();
-    //    } catch (SQLException mSQLException) {
-    //        throw mSQLException;
-    //    }
 
         btnpostion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,11 +138,15 @@ public class Synchronization extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+             //   MainActivity.getSQLiteDatabase().close();
+             //   MainActivity.getDBHelper().close();
                 // Удаляем Базу данных в папке для обвновления
                 File file = new File(Shared.pathUpdateDB + "/" + Shared.nameUpdateDB);
+
                 if(file.exists()){
                     file.delete();
                 }
+
                 // Удаляем Базу данных
                 Shared.context.deleteDatabase(Shared.nameDB);
 
