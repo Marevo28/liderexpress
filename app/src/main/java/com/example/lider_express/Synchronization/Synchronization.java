@@ -197,7 +197,7 @@ public class Synchronization extends AppCompatActivity {
             displayMessage(getBaseContext(), "В базе пусто");
         }else {
             cursor.moveToFirst();
-
+/*
             for (int i = 1; i < cursor.getColumnCount(); i ++){
                 Log.e("Column", String.valueOf(cursor.getColumnCount()));
                 if(i == 1){
@@ -210,7 +210,7 @@ public class Synchronization extends AppCompatActivity {
                 }
             }
 
-            /**
+            */
             if (cursor.getString(1) != null) {  //27
                 position = cursor.getString(1); }
             if (cursor.getString(2) != null) {  //28
@@ -268,39 +268,42 @@ public class Synchronization extends AppCompatActivity {
             if (cursor.getString(28) != null) { //54
                 stolb53 = cursor.getString(28); }
             if (cursor.getString(29) != null) { //55
-                stolb53 = cursor.getString(28); }
+                stolb54 = cursor.getString(29); }
             if (cursor.getString(30) != null) { //56
-                stolb53 = cursor.getString(28); }
+                stolb55 = cursor.getString(30); }
             if (cursor.getString(31) != null) { //57
-                stolb53 = cursor.getString(28); }
+                stolb56 = cursor.getString(31); }
             if (cursor.getString(32) != null) { //58
-                stolb53 = cursor.getString(28); }
+                stolb57 = cursor.getString(32); }
             if (cursor.getString(33) != null) { //59
-                stolb53 = cursor.getString(28); }
+                stolb58 = cursor.getString(33); }
             if (cursor.getString(34) != null) { //60
-                stolb53 = cursor.getString(28); }
+                stolb59 = cursor.getString(34); }
             if (cursor.getString(35) != null) { //61
-                stolb53 = cursor.getString(28); }
+                stolb60 = cursor.getString(35); }
             if (cursor.getString(36) != null) { //62
-                stolb53 = cursor.getString(28); }
+                stolb61 = cursor.getString(36); }
             if (cursor.getString(37) != null) { //63
-                stolb53 = cursor.getString(28); }
+                stolb62 = cursor.getString(37); }
             if (cursor.getString(38) != null) { //64
-                stolb53 = cursor.getString(28); }
+                stolb63 = cursor.getString(38); }
             if (cursor.getString(39) != null) { //65
-                stolb53 = cursor.getString(28); }
+                stolb64 = cursor.getString(39); }
             if (cursor.getString(40) != null) { //66
-                stolb53 = cursor.getString(28); }
+                stolb65 = cursor.getString(40); }
             if (cursor.getString(41) != null) { //67
-                stolb53 = cursor.getString(28); }
+                stolb66 = cursor.getString(41); }
             if (cursor.getString(42) != null) { //68
-                stolb53 = cursor.getString(28); }
-
-             **/
+                stolb67 = cursor.getString(42); }
+            if (cursor.getString(42) != null) { //68
+                stolb68 = cursor.getString(43); }
 
             zapros = new JsonZapros(Zakazchik);
 
-            zapros.download(position, arrStolb);
+            //zapros.download(position, arrStolb);
+            zapros.download(position, stolb27, stolb28, stolb29, stolb30, stolb31, stolb32, stolb33, stolb34, stolb35, stolb36, stolb37, stolb38, stolb39,
+                    stolb40, stolb41, stolb42, stolb43, stolb44, stolb45, stolb46, stolb47, stolb48, stolb49, stolb50, stolb51, stolb52, stolb53, stolb54,
+                    stolb55, stolb56, stolb57, stolb58, stolb59, stolb60, stolb61, stolb62, stolb63, stolb64, stolb65, stolb66, stolb67, stolb68);
 
             try {
                 zapros.join();

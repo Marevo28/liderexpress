@@ -80,7 +80,7 @@ public class JsonZapros extends Thread {
            // case "DefectPolus2019": mURL = ""; break;
             case "defectBashneft2020": mURL = "http://peremoga.tech/Android/DefectBND2020.php"; break;
             case "defectMegion2020": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
-            case "DefectBND2020_UDE": mURL = "http://peremoga.tech/pages/Bashneft2020_UDE.php"; break;
+            case "DefectBND2020_UDE": mURL = "http://peremoga.tech/Android/DefectBND2020_UDE.php"; break;
            // case "DefectPolus2020": mURL = ""; break;
            // case "DefectBND2021": mURL = "http://peremoga.tech/Android/DefectBND2020.php"; break;
            // case "DefectMegion2021": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
@@ -93,7 +93,7 @@ public class JsonZapros extends Thread {
         // создаем лист для отправки запросов
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
         // один параметр, если нужно два и более просто добоовляем также
-        nameValuePairs.add(new BasicNameValuePair("position", position));
+        /*nameValuePairs.add(new BasicNameValuePair("position", position));
         int countStolb = 27;
         String strStolb = "stolb";
         for(int i = 0; i < mArray.length; i++){
@@ -102,7 +102,7 @@ public class JsonZapros extends Thread {
                 System.out.println("---------" + mArray[i]);
                 countStolb++;
         }
-     /**
+         */
         nameValuePairs.add(new BasicNameValuePair("position", position));
         nameValuePairs.add(new BasicNameValuePair("stolb27", stolb27));
         nameValuePairs.add(new BasicNameValuePair("stolb28", stolb28));
@@ -131,20 +131,22 @@ public class JsonZapros extends Thread {
         nameValuePairs.add(new BasicNameValuePair("stolb51", stolb51));
         nameValuePairs.add(new BasicNameValuePair("stolb52", stolb52));
         nameValuePairs.add(new BasicNameValuePair("stolb53", stolb53));
-        nameValuePairs.add(new BasicNameValuePair("stolb54", stolb53));
-        nameValuePairs.add(new BasicNameValuePair("stolb55", stolb53));
-        nameValuePairs.add(new BasicNameValuePair("stolb56", stolb53));
-        nameValuePairs.add(new BasicNameValuePair("stolb57", stolb53));
-        nameValuePairs.add(new BasicNameValuePair("stolb58", stolb53));
-        nameValuePairs.add(new BasicNameValuePair("stolb59", stolb53));
-        nameValuePairs.add(new BasicNameValuePair("stolb60", stolb53));
-        nameValuePairs.add(new BasicNameValuePair("stolb61", stolb53));
-        nameValuePairs.add(new BasicNameValuePair("stolb62", stolb53));
-        nameValuePairs.add(new BasicNameValuePair("stolb63", stolb53));
-        nameValuePairs.add(new BasicNameValuePair("stolb63", stolb53));
-        nameValuePairs.add(new BasicNameValuePair("stolb63", stolb53));
-        nameValuePairs.add(new BasicNameValuePair("stolb63", stolb53));
-      **/
+        nameValuePairs.add(new BasicNameValuePair("stolb54", stolb54));
+        nameValuePairs.add(new BasicNameValuePair("stolb55", stolb55));
+        nameValuePairs.add(new BasicNameValuePair("stolb56", stolb56));
+        nameValuePairs.add(new BasicNameValuePair("stolb57", stolb57));
+        nameValuePairs.add(new BasicNameValuePair("stolb58", stolb58));
+        nameValuePairs.add(new BasicNameValuePair("stolb59", stolb59));
+        nameValuePairs.add(new BasicNameValuePair("stolb60", stolb60));
+        nameValuePairs.add(new BasicNameValuePair("stolb61", stolb61));
+        nameValuePairs.add(new BasicNameValuePair("stolb62", stolb62));
+        nameValuePairs.add(new BasicNameValuePair("stolb63", stolb63));
+        nameValuePairs.add(new BasicNameValuePair("stolb64", stolb64));
+        nameValuePairs.add(new BasicNameValuePair("stolb65", stolb65));
+        nameValuePairs.add(new BasicNameValuePair("stolb66", stolb66));
+        nameValuePairs.add(new BasicNameValuePair("stolb67", stolb67));
+        nameValuePairs.add(new BasicNameValuePair("stolb68", stolb68));
+
         //  подключаемся к php запросу и отправляем в него id
         System.out.println(" подключаемся к php запросу и отправляем в него id");
         try {
@@ -189,14 +191,14 @@ public class JsonZapros extends Thread {
         this.start();
     }
 
-    public void download(String positionb, String[] array){
+    /*public void download(String positionb, String[] array){
         this.position = positionb;
         this.mArray = array;
 
         this.start();
     }
-
-    /**public void download(String positionb,String stolb27b,String stolb28b,String stolb29b,String stolb30b,
+    */
+    public void download(String positionb,String stolb27b,String stolb28b,String stolb29b,String stolb30b,
                          String stolb31b,String stolb32b,String stolb33b,String stolb34b,String stolb35b,
                          String stolb36b,String stolb37b,String stolb38b,String stolb39b, String stolb40b,
                          String stolb41b,String stolb42b,String stolb43b,String stolb44b,String stolb45b,
@@ -250,7 +252,7 @@ public class JsonZapros extends Thread {
 
         this.start();
     }
-     **/
+
 
     public String reposition() {
         return position;
