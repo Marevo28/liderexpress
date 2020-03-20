@@ -501,8 +501,10 @@ public class KartaKontrolyaYDE extends AppCompatActivity {
                         // Точки
                         initialValues.put(strNumber_column_for_point, strYZT_Points[i]);
                         number_column_for_point++;
+                        System.out.println(strNumber_column_for_point);
+                        System.out.println(strYZT_Points[i]);
                     }
-
+                    initialValues.put("Stolb64", "LyaLyaLya");
                     initialValues.put("Stolb65", strYZT_Dlina);
                     initialValues.put("Stolb66", strYZT_Shirina);
                     initialValues.put("Stolb67", strYZT_Visota);

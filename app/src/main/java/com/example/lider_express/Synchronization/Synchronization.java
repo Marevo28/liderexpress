@@ -23,6 +23,8 @@ import com.example.lider_express.R;
 import com.example.lider_express.Shared;
 
 import java.io.File;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Synchronization extends AppCompatActivity {
 
@@ -45,6 +47,7 @@ public class Synchronization extends AppCompatActivity {
 
      private TextView TextKolvoZap;
      private EditText textpostion;
+
      private String position;
      private String stolb27;
      private String stolb28;
@@ -73,6 +76,26 @@ public class Synchronization extends AppCompatActivity {
      private String stolb51;
      private String stolb52;
      private String stolb53;
+     private String stolb54;
+     private String stolb55;
+     private String stolb56;
+     private String stolb57;
+     private String stolb58;
+     private String stolb59;
+     private String stolb60;
+     private String stolb61;
+     private String stolb62;
+     private String stolb63;
+     private String stolb64;
+     private String stolb65;
+     private String stolb66;
+     private String stolb67;
+     private String stolb68;
+
+
+    String[] arrStolb = new String[42];
+
+
      private JsonZapros zapros;
 
     @Override
@@ -99,6 +122,11 @@ public class Synchronization extends AppCompatActivity {
 
         spinnerDefect.setAdapter(adapter);
         spinnerDefect.setSelection(0);
+
+        // Инициализируем массив
+        for(int i = 0; i < arrStolb.length; i ++){
+            arrStolb[i] = "";
+        }
 
 
         btnpostion.setOnClickListener(new View.OnClickListener() {
@@ -169,65 +197,111 @@ public class Synchronization extends AppCompatActivity {
             displayMessage(getBaseContext(), "В базе пусто");
         }else {
             cursor.moveToFirst();
-            if (cursor.getString(1) != null) {
+
+            for (int i = 1; i < cursor.getColumnCount(); i ++){
+                Log.e("Column", String.valueOf(cursor.getColumnCount()));
+                if(i == 1){
+                    if (cursor.getString(i) != null) {
+                        position = (cursor.getString(1)); }
+                } else{
+                    if (cursor.getString(i) != null) {
+                        arrStolb[i - 1] = (cursor.getString(i));
+                    }
+                }
+            }
+
+            /**
+            if (cursor.getString(1) != null) {  //27
                 position = cursor.getString(1); }
-            if (cursor.getString(2) != null) {
+            if (cursor.getString(2) != null) {  //28
                 stolb27 = cursor.getString(2); }
-            if (cursor.getString(3) != null) {
+            if (cursor.getString(3) != null) {  //29
                 stolb28 = cursor.getString(3); }
-            if (cursor.getString(4) != null) {
+            if (cursor.getString(4) != null) {  //30
                 stolb29 = cursor.getString(4); }
-            if (cursor.getString(5) != null) {
+            if (cursor.getString(5) != null) {  //31
                 stolb30 = cursor.getString(5); }
-            if (cursor.getString(6) != null) {
+            if (cursor.getString(6) != null) {  //32
                 stolb31 = cursor.getString(6); }
-            if (cursor.getString(7) != null) {
+            if (cursor.getString(7) != null) {  //33
                 stolb32 = cursor.getString(7); }
-            if (cursor.getString(8) != null) {
+            if (cursor.getString(8) != null) { //34
                 stolb33 = cursor.getString(8); }
-            if (cursor.getString(9) != null) {
+            if (cursor.getString(9) != null) { //35
                 stolb34 = cursor.getString(9); }
-            if (cursor.getString(10) != null) {
+            if (cursor.getString(10) != null) { //36
                 stolb35 = cursor.getString(10); }
-            if (cursor.getString(11) != null) {
+            if (cursor.getString(11) != null) { //37
                 stolb36 = cursor.getString(11); }
-            if (cursor.getString(12) != null) {
+            if (cursor.getString(12) != null) { //38
                 stolb37 = cursor.getString(12); }
-            if (cursor.getString(13) != null) {
+            if (cursor.getString(13) != null) { //39
                 stolb38 = cursor.getString(13); }
-            if (cursor.getString(14) != null) {
+            if (cursor.getString(14) != null) { //40
                 stolb39 = cursor.getString(14); }
-            if (cursor.getString(15) != null) {
+            if (cursor.getString(15) != null) { //41
                 stolb40 = cursor.getString(15); }
-            if (cursor.getString(16) != null) {
+            if (cursor.getString(16) != null) { //42
                 stolb41 = cursor.getString(16); }
-            if (cursor.getString(17) != null) {
+            if (cursor.getString(17) != null) { //43
                 stolb42 = cursor.getString(17); }
-            if (cursor.getString(18) != null) {
+            if (cursor.getString(18) != null) { //44
                 stolb43 = cursor.getString(18); }
-            if (cursor.getString(19) != null) {
+            if (cursor.getString(19) != null) { //45
                 stolb44 = cursor.getString(19); }
-            if (cursor.getString(20) != null) {
+            if (cursor.getString(20) != null) { //46
                 stolb45 = cursor.getString(20); }
-            if (cursor.getString(21) != null) {
+            if (cursor.getString(21) != null) { //47
                 stolb46 = cursor.getString(21); }
-            if (cursor.getString(22) != null) {
+            if (cursor.getString(22) != null) { //48
                 stolb47 = cursor.getString(22); }
-            if (cursor.getString(23) != null) {
+            if (cursor.getString(23) != null) {  //49
                 stolb48 = cursor.getString(23); }
-            if (cursor.getString(24) != null) {
+            if (cursor.getString(24) != null) { //50
                 stolb49 = cursor.getString(24); }
-            if (cursor.getString(25) != null) {
+            if (cursor.getString(25) != null) { //51
                 stolb50 = cursor.getString(25); }
-            if (cursor.getString(26) != null) {
+            if (cursor.getString(26) != null) { //52
                 stolb51 = cursor.getString(26); }
-            if (cursor.getString(27) != null) {
+            if (cursor.getString(27) != null) { //53
                 stolb52 = cursor.getString(27); }
-            if (cursor.getString(28) != null) {
+            if (cursor.getString(28) != null) { //54
                 stolb53 = cursor.getString(28); }
+            if (cursor.getString(29) != null) { //55
+                stolb53 = cursor.getString(28); }
+            if (cursor.getString(30) != null) { //56
+                stolb53 = cursor.getString(28); }
+            if (cursor.getString(31) != null) { //57
+                stolb53 = cursor.getString(28); }
+            if (cursor.getString(32) != null) { //58
+                stolb53 = cursor.getString(28); }
+            if (cursor.getString(33) != null) { //59
+                stolb53 = cursor.getString(28); }
+            if (cursor.getString(34) != null) { //60
+                stolb53 = cursor.getString(28); }
+            if (cursor.getString(35) != null) { //61
+                stolb53 = cursor.getString(28); }
+            if (cursor.getString(36) != null) { //62
+                stolb53 = cursor.getString(28); }
+            if (cursor.getString(37) != null) { //63
+                stolb53 = cursor.getString(28); }
+            if (cursor.getString(38) != null) { //64
+                stolb53 = cursor.getString(28); }
+            if (cursor.getString(39) != null) { //65
+                stolb53 = cursor.getString(28); }
+            if (cursor.getString(40) != null) { //66
+                stolb53 = cursor.getString(28); }
+            if (cursor.getString(41) != null) { //67
+                stolb53 = cursor.getString(28); }
+            if (cursor.getString(42) != null) { //68
+                stolb53 = cursor.getString(28); }
+
+             **/
+
             zapros = new JsonZapros(Zakazchik);
-            zapros.download(position, stolb27, stolb28, stolb29, stolb30, stolb31, stolb32, stolb33, stolb34, stolb35, stolb36, stolb37, stolb38, stolb39,
-                    stolb40, stolb41, stolb42, stolb43, stolb44, stolb45, stolb46, stolb47, stolb48, stolb49, stolb50, stolb51, stolb52, stolb53);
+
+            zapros.download(position, arrStolb);
+
             try {
                 zapros.join();
             } catch (InterruptedException ie) {

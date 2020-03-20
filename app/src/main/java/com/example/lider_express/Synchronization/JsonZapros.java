@@ -48,6 +48,25 @@ public class JsonZapros extends Thread {
     private String stolb51;
     private String stolb52;
     private String stolb53;
+    private String stolb54;
+    private String stolb55;
+    private String stolb56;
+    private String stolb57;
+    private String stolb58;
+    private String stolb59;
+    private String stolb60;
+    private String stolb61;
+    private String stolb62;
+    private String stolb63;
+    private String stolb64;
+    private String stolb65;
+    private String stolb66;
+    private String stolb67;
+    private String stolb68;
+
+    private String[] mArray;
+
+
 
     private String result = null;
     private String line = null;
@@ -61,6 +80,7 @@ public class JsonZapros extends Thread {
            // case "DefectPolus2019": mURL = ""; break;
             case "defectBashneft2020": mURL = "http://peremoga.tech/Android/DefectBND2020.php"; break;
             case "defectMegion2020": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
+            case "DefectBND2020_UDE": mURL = "http://peremoga.tech/pages/Bashneft2020_UDE.php"; break;
            // case "DefectPolus2020": mURL = ""; break;
            // case "DefectBND2021": mURL = "http://peremoga.tech/Android/DefectBND2020.php"; break;
            // case "DefectMegion2021": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
@@ -73,6 +93,16 @@ public class JsonZapros extends Thread {
         // создаем лист для отправки запросов
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
         // один параметр, если нужно два и более просто добоовляем также
+        nameValuePairs.add(new BasicNameValuePair("position", position));
+        int countStolb = 27;
+        String strStolb = "stolb";
+        for(int i = 0; i < mArray.length; i++){
+                nameValuePairs.add(new BasicNameValuePair(strStolb + countStolb, mArray[i]));
+            System.out.println("---------" + strStolb + countStolb);
+                System.out.println("---------" + mArray[i]);
+                countStolb++;
+        }
+     /**
         nameValuePairs.add(new BasicNameValuePair("position", position));
         nameValuePairs.add(new BasicNameValuePair("stolb27", stolb27));
         nameValuePairs.add(new BasicNameValuePair("stolb28", stolb28));
@@ -101,6 +131,20 @@ public class JsonZapros extends Thread {
         nameValuePairs.add(new BasicNameValuePair("stolb51", stolb51));
         nameValuePairs.add(new BasicNameValuePair("stolb52", stolb52));
         nameValuePairs.add(new BasicNameValuePair("stolb53", stolb53));
+        nameValuePairs.add(new BasicNameValuePair("stolb54", stolb53));
+        nameValuePairs.add(new BasicNameValuePair("stolb55", stolb53));
+        nameValuePairs.add(new BasicNameValuePair("stolb56", stolb53));
+        nameValuePairs.add(new BasicNameValuePair("stolb57", stolb53));
+        nameValuePairs.add(new BasicNameValuePair("stolb58", stolb53));
+        nameValuePairs.add(new BasicNameValuePair("stolb59", stolb53));
+        nameValuePairs.add(new BasicNameValuePair("stolb60", stolb53));
+        nameValuePairs.add(new BasicNameValuePair("stolb61", stolb53));
+        nameValuePairs.add(new BasicNameValuePair("stolb62", stolb53));
+        nameValuePairs.add(new BasicNameValuePair("stolb63", stolb53));
+        nameValuePairs.add(new BasicNameValuePair("stolb63", stolb53));
+        nameValuePairs.add(new BasicNameValuePair("stolb63", stolb53));
+        nameValuePairs.add(new BasicNameValuePair("stolb63", stolb53));
+      **/
         //  подключаемся к php запросу и отправляем в него id
         System.out.println(" подключаемся к php запросу и отправляем в него id");
         try {
@@ -145,12 +189,21 @@ public class JsonZapros extends Thread {
         this.start();
     }
 
-    public void download(String positionb,String stolb27b,String stolb28b,String stolb29b,String stolb30b,
+    public void download(String positionb, String[] array){
+        this.position = positionb;
+        this.mArray = array;
+
+        this.start();
+    }
+
+    /**public void download(String positionb,String stolb27b,String stolb28b,String stolb29b,String stolb30b,
                          String stolb31b,String stolb32b,String stolb33b,String stolb34b,String stolb35b,
                          String stolb36b,String stolb37b,String stolb38b,String stolb39b, String stolb40b,
                          String stolb41b,String stolb42b,String stolb43b,String stolb44b,String stolb45b,
                          String stolb46b,String stolb47b,String stolb48b,String stolb49b,String stolb50b,
-                         String stolb51b,String stolb52b,String stolb53b) {
+                         String stolb51b,String stolb52b,String stolb53b, String stolb54b,String stolb55b,String stolb56b,
+                         String stolb57b,String stolb58b,String stolb59b, String stolb60b,String stolb61b,String stolb62b,
+                         String stolb63b,String stolb64b,String stolb65b,String stolb66b,String stolb67b,String stolb68b) {
         this.position = positionb;
         this.stolb27 = stolb27b;
         this.stolb28 = stolb28b;
@@ -179,9 +232,25 @@ public class JsonZapros extends Thread {
         this.stolb51 = stolb51b;
         this.stolb52 = stolb52b;
         this.stolb53 = stolb53b;
+        this.stolb54 = stolb54b;
+        this.stolb55 = stolb55b;
+        this.stolb56 = stolb56b;
+        this.stolb57 = stolb57b;
+        this.stolb58 = stolb58b;
+        this.stolb59 = stolb59b;
+        this.stolb60 = stolb60b;
+        this.stolb61 = stolb61b;
+        this.stolb62 = stolb62b;
+        this.stolb63 = stolb63b;
+        this.stolb64 = stolb64b;
+        this.stolb65 = stolb65b;
+        this.stolb66 = stolb66b;
+        this.stolb67 = stolb67b;
+        this.stolb68 = stolb68b;
 
         this.start();
     }
+     **/
 
     public String reposition() {
         return position;
