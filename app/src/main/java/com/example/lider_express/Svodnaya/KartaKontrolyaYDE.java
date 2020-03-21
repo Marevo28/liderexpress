@@ -285,10 +285,10 @@ public class KartaKontrolyaYDE extends AppCompatActivity {
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
                     switch (checkedId) {
                         case R.id.Nal_Inf_Tab_Da:
-                            strNalichieInfTable = "Надземное";
+                            strNalichieInfTable = "Да";
                             break;
                         case R.id.Nal_Inf_Tab_Net:
-                            strNalichieInfTable = "Подземное";
+                            strNalichieInfTable = "Нет";
                             break;
                     }
                 }
@@ -300,10 +300,10 @@ public class KartaKontrolyaYDE extends AppCompatActivity {
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
                     switch (checkedId) {
                         case R.id.Nal_Zazemleniya_Da:
-                            strNalZazemleniya = "Надземное";
+                            strNalZazemleniya = "Да";
                             break;
                         case R.id.Nal_Zazemleniya_Net:
-                            strNalZazemleniya = "Подземное";
+                            strNalZazemleniya = "Нет";
                             break;
                     }
                 }
