@@ -93,7 +93,7 @@ public class Synchronization extends AppCompatActivity {
      private String stolb68;
 
 
-    String[] arrStolb = new String[42];
+    String[] arrStolb;
 
 
      private JsonZapros zapros;
@@ -122,11 +122,6 @@ public class Synchronization extends AppCompatActivity {
 
         spinnerDefect.setAdapter(adapter);
         spinnerDefect.setSelection(0);
-
-        // Инициализируем массив
-        for(int i = 0; i < arrStolb.length; i ++){
-            arrStolb[i] = "";
-        }
 
 
         btnpostion.setOnClickListener(new View.OnClickListener() {
@@ -191,6 +186,12 @@ public class Synchronization extends AppCompatActivity {
                 null, null, null, null);
         Cursor defect = MainActivity.mDb.query(Zakazchik, null, null,
                 null, null, null, null);
+
+        arrStolb = new String[cursor.getColumnCount()];
+        // Инициализируем массив
+        for(int i = 0; i < arrStolb.length; i ++){
+            arrStolb[i] = "";
+        }
 
         amount = defect.getCount();
         if (amount == 0) {
