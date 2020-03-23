@@ -197,7 +197,7 @@ public class Synchronization extends AppCompatActivity {
             displayMessage(getBaseContext(), "В базе пусто");
         }else {
             cursor.moveToFirst();
-/*
+
             for (int i = 1; i < cursor.getColumnCount(); i ++){
                 Log.e("Column", String.valueOf(cursor.getColumnCount()));
                 if(i == 1){
@@ -210,7 +210,7 @@ public class Synchronization extends AppCompatActivity {
                 }
             }
 
-            */
+            /**
             if (cursor.getString(1) != null) {  //27
                 position = cursor.getString(1); }
             if (cursor.getString(2) != null) {  //28
@@ -298,13 +298,16 @@ public class Synchronization extends AppCompatActivity {
             if (cursor.getString(42) != null) { //68
                 stolb68 = cursor.getString(43); }
 
+             **/
+
             zapros = new JsonZapros(Zakazchik);
 
-            //zapros.download(position, arrStolb);
-            zapros.download(position, stolb27, stolb28, stolb29, stolb30, stolb31, stolb32, stolb33, stolb34, stolb35, stolb36, stolb37, stolb38, stolb39,
+            zapros.download(position, arrStolb);
+
+           /** zapros.download(position, stolb27, stolb28, stolb29, stolb30, stolb31, stolb32, stolb33, stolb34, stolb35, stolb36, stolb37, stolb38, stolb39,
                     stolb40, stolb41, stolb42, stolb43, stolb44, stolb45, stolb46, stolb47, stolb48, stolb49, stolb50, stolb51, stolb52, stolb53, stolb54,
                     stolb55, stolb56, stolb57, stolb58, stolb59, stolb60, stolb61, stolb62, stolb63, stolb64, stolb65, stolb66, stolb67, stolb68);
-
+            **/
             try {
                 zapros.join();
             } catch (InterruptedException ie) {

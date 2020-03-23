@@ -92,8 +92,8 @@ public class JsonZapros extends Thread {
         System.out.println("Адрес на который отправляем: - " + mURL);
         // создаем лист для отправки запросов
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        // один параметр, если нужно два и более просто добоовляем также
-        /*nameValuePairs.add(new BasicNameValuePair("position", position));
+
+        nameValuePairs.add(new BasicNameValuePair("position", position));
         int countStolb = 27;
         String strStolb = "stolb";
         for(int i = 0; i < mArray.length; i++){
@@ -102,7 +102,9 @@ public class JsonZapros extends Thread {
                 System.out.println("---------" + mArray[i]);
                 countStolb++;
         }
-         */
+
+
+        /**
         nameValuePairs.add(new BasicNameValuePair("position", position));
         nameValuePairs.add(new BasicNameValuePair("stolb27", stolb27));
         nameValuePairs.add(new BasicNameValuePair("stolb28", stolb28));
@@ -146,6 +148,8 @@ public class JsonZapros extends Thread {
         nameValuePairs.add(new BasicNameValuePair("stolb66", stolb66));
         nameValuePairs.add(new BasicNameValuePair("stolb67", stolb67));
         nameValuePairs.add(new BasicNameValuePair("stolb68", stolb68));
+
+         **/
 
         //  подключаемся к php запросу и отправляем в него id
         System.out.println(" подключаемся к php запросу и отправляем в него id");
@@ -191,13 +195,15 @@ public class JsonZapros extends Thread {
         this.start();
     }
 
-    /*public void download(String positionb, String[] array){
+    public void download(String positionb, String[] array){
         this.position = positionb;
         this.mArray = array;
 
         this.start();
     }
-    */
+
+
+    /**
     public void download(String positionb,String stolb27b,String stolb28b,String stolb29b,String stolb30b,
                          String stolb31b,String stolb32b,String stolb33b,String stolb34b,String stolb35b,
                          String stolb36b,String stolb37b,String stolb38b,String stolb39b, String stolb40b,
@@ -252,6 +258,8 @@ public class JsonZapros extends Thread {
 
         this.start();
     }
+
+     **/
 
 
     public String reposition() {
