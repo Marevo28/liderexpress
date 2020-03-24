@@ -1,0 +1,8 @@
+
+B
+java:S1199*"-Extract this nested code block into a method.(‰Β—
+f	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ά‘Ά
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(φά ”όÿÿÿÿ
+V	java:S125""<This block of commented-out lines of code should be removed.(νδγ“ώÿÿÿÿ
+P	java:S1253"<This block of commented-out lines of code should be removed.(‰†ηp
+V	java:S125?"<This block of commented-out lines of code should be removed.(³ÿÿÿÿÿÿ

@@ -1,0 +1,25 @@
+
+Y	java:S125Â"<This block of commented-out lines of code should be removed.(­¢ªü8ÔÈŞÌ.
+s	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çç²‚úÿÿÿÿ8ğ¿ÜË.
+i
+java:S1450H"SRemove the "line" field and declare it as a local variable in the relevant methods.(œ•Ô
+o
+java:S2293^"YReplace the type specification in this constructor call with the diamond operator ("<>").(§ÉòÌ
+<	java:S131M""Add a default case to this switch.(€ÆèÔÿÿÿÿÿ
+N	java:S106L"9Replace this use of System.out or System.err by a logger.(–†ôÔ
+\
+java:S4719¦"9Replace charset name argument with StandardCharsets.UTF_8(øƒã¯ûÿÿÿÿ8ğ¿ÜË.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ùÖ“¦
+N	java:S106\"9Replace this use of System.out or System.err by a logger.(åäêÓ
+L
+java:S1068C"*Remove this unused "mArray" private field.(ÿ†şªùÿÿÿÿ8±³ÙË.
+P
+java:S1161[":Add the "@Override" annotation above this method signature(“–ış
+]	java:S125`"<This block of commented-out lines of code should be removed.(ïÍéÁúÿÿÿÿ8šúÒÌ.
+f	java:S117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©Ì©‚
+_	java:S107É"=Method has 43 parameters, which is greater than 7 authorized.(æ¬ğ‘ıÿÿÿÿ8ëÂıË.
+[	java:S106¤"9Replace this use of System.out or System.err by a logger.(ªÂÚöûÿÿÿÿ8ğ¿ÜË.
+Q	java:S125T"<This block of commented-out lines of code should be removed.(µÍÏ
+[	java:S106²"9Replace this use of System.out or System.err by a logger.(›²…ƒøÿÿÿÿ8ğ¿ÜË.
+[	java:S106—"9Replace this use of System.out or System.err by a logger.(Çñ–·ÿÿÿÿÿ8ğ¿ÜË.
+Q	java:S125N"<This block of commented-out lines of code should be removed.(×Í‚×

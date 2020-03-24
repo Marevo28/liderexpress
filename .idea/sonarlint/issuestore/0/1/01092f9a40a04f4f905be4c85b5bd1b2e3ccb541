@@ -1,0 +1,58 @@
+
+b
+java:S1301±"KReplace this "switch" statement by "if" statements to increase readability.(öˆö
+e
+java:S11921"ODefine a constant instead of duplicating this literal "loadSettings: " 3 times.(ÕÌ€×
+a
+java:S1192m"FDefine a constant instead of duplicating this literal "value" 7 times.(¶Èö´ùÿÿÿÿ
+C
+java:S1199"-Extract this nested code block into a method.(‰Â—
+Q
+java:S1141Š"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+e	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğì¦7
+l	java:S117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï¸Ü£øÿÿÿÿ
+g	java:S117Î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«—„
+l	java:S117ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù£ú¶úÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öÜ ”üÿÿÿÿ
+>
+java:S11488"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+>
+java:S1148H"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+?
+java:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+?
+java:S1148¦"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+?
+java:S1148’"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+?
+java:S1148›"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+t	java:S115("ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ä† ¯ùÿÿÿÿ
+o	java:S115)"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ó¹×¿
+t	java:S115*"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(™ê„™şÿÿÿÿ
+t	java:S115+"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ùáãúÿÿÿÿ
+t	java:S115,"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¾ßÿÿÿÿÿ
+o	java:S115-"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÍÓ®Õ
+m	java:S116""XRename this field "main_activity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ì³Ü
+`
+java:S1124("EReorder the modifiers to comply with the Java Language Specification.(ä† ¯ùÿÿÿÿ
+[
+java:S1124)"EReorder the modifiers to comply with the Java Language Specification.(Ó¹×¿
+`
+java:S1124*"EReorder the modifiers to comply with the Java Language Specification.(™ê„™şÿÿÿÿ
+`
+java:S1124+"EReorder the modifiers to comply with the Java Language Specification.(Ùáãúÿÿÿÿ
+`
+java:S1124,"EReorder the modifiers to comply with the Java Language Specification.(¾ßÿÿÿÿÿ
+[
+java:S1124-"EReorder the modifiers to comply with the Java Language Specification.(ÍÓ®Õ
+8	java:S131±""Add a default case to this switch.(öˆö
+i
+java:S3776¼"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(÷ ëª
+Q
+java:S4719‡":Replace Charset.forName() call with StandardCharsets.UTF_8(¾ãè‚
+F
+java:S2093À"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+V	java:S125]"<This block of commented-out lines of code should be removed.(ªïû°ÿÿÿÿÿ
+R	java:S125Â"<This block of commented-out lines of code should be removed.(Èİéş
+W	java:S125…"<This block of commented-out lines of code should be removed.(ªïû°ÿÿÿÿÿ
+Q	java:S125Š"<This block of commented-out lines of code should be removed.(ïìÃ

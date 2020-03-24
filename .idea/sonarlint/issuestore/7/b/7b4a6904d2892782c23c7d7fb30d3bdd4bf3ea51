@@ -1,0 +1,37 @@
+
+s
+java:S1104"XMake record_audio a static final constant or non-public and provide accessors if needed.(¼Áˆåÿÿÿÿÿ
+s
+java:S1104"XMake videoBitRate a static final constant or non-public and provide accessors if needed.(ÓòÛ¡úÿÿÿÿ
+l
+java:S1104"VMake audioCodec a static final constant or non-public and provide accessors if needed.(çùªô
+t
+java:S1104"YMake fileExtension a static final constant or non-public and provide accessors if needed.(ˆ­…Áøÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÜôàşÿÿÿÿ
+w
+java:S1104"\Make videoFrameHeight a static final constant or non-public and provide accessors if needed.(ßşÛÚşÿÿÿÿ
+r
+java:S1104"WMake audioSource a static final constant or non-public and provide accessors if needed.(‚‚ãûÿÿÿÿ
+s
+java:S1104"XMake audioBitRate a static final constant or non-public and provide accessors if needed.(‡Èöäıÿÿÿÿ
+s	java:S116"^Rename this field "no_audio_permission" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶×¡Û
+u
+java:S1104"_Make no_audio_permission a static final constant or non-public and provide accessors if needed.(¶×¡Û
+q
+java:S1104"VMake fileFormat a static final constant or non-public and provide accessors if needed.(»ÖÕ÷úÿÿÿÿ
+q
+java:S1104"[Make audioSampleRate a static final constant or non-public and provide accessors if needed.(À´‘–
+p
+java:S1104"[Make videoFrameWidth a static final constant or non-public and provide accessors if needed.(‹¨ÊG
+o
+java:S1104"YMake audioChannels a static final constant or non-public and provide accessors if needed.(Ó¸½å
+k	java:S117L"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÁÇ¹ÿÿÿÿÿ
+m
+java:S1104"WMake videoSource a static final constant or non-public and provide accessors if needed.(Ç¼Ì
+q	java:S116"WRename this field "record_audio" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼Áˆåÿÿÿÿÿ
+r
+java:S1104"\Make videoCaptureRate a static final constant or non-public and provide accessors if needed.(í—ïÍ
+u
+java:S1104"ZMake videoFrameRate a static final constant or non-public and provide accessors if needed.(ÕÛÊøÿÿÿÿ
+l
+java:S1104"VMake videoCodec a static final constant or non-public and provide accessors if needed.(Ó–ç·

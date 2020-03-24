@@ -1,0 +1,33 @@
+
+b
+java:S1192T"GDefine a constant instead of duplicating this literal "points" 3 times.(ıŞèşÿÿÿÿ
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¹·§øÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ì¼úşÿÿÿÿ
+q
+java:S1450"VRemove the "btnSave" field and declare it as a local variable in the relevant methods.(ÿ£×ˆüÿÿÿÿ
+n	java:S116"YRename this field "editText_YZT_1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡´”õ
+n	java:S116"YRename this field "editText_YZT_2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¦Ãß
+n	java:S116"YRename this field "editText_YZT_3" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉÇ
+n	java:S116"YRename this field "editText_YZT_4" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( éÊß
+n	java:S116"YRename this field "editText_YZT_5" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úËÎ
+s	java:S116"YRename this field "editText_YZT_6" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ÁŠüıÿÿÿÿ
+n	java:S116"YRename this field "editText_YZT_7" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å ÊÃ
+m	java:S116"YRename this field "editText_YZT_8" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„éü	
+n	java:S116"YRename this field "editText_YZT_9" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÄÅ½°
+o	java:S116"ZRename this field "editText_YZT_10" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûœˆå
+t	java:S116"ZRename this field "editText_YZT_11" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™µğÿÿÿÿÿ
+t	java:S116"ZRename this field "editText_YZT_12" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÒÇ›şÿÿÿÿ
+t	java:S116"ZRename this field "editText_YZT_13" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÇı°úÿÿÿÿ
+n	java:S116 "ZRename this field "editText_YZT_14" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶õ÷\
+t	java:S116!"ZRename this field "editText_YZT_15" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øëëûÿÿÿÿ
+o	java:S116""ZRename this field "editText_YZT_16" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÉ¥
+t	java:S116#"ZRename this field "editText_YZT_17" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šôœ™ÿÿÿÿÿ
+t	java:S116$"ZRename this field "editText_YZT_18" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½òŒúÿÿÿÿ
+o	java:S116%"ZRename this field "editText_YZT_19" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É³’ 
+t	java:S116&"ZRename this field "editText_YZT_20" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–›êéşÿÿÿÿ
+w	java:S116'"]Rename this field "editText_YZT_Dlina" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ¾±Âùÿÿÿÿ
+s	java:S116("_Rename this field "editText_YZT_Shirina" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¾¶m
+s	java:S116)"^Rename this field "editText_YZT_Visota" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÄÃÕ“
+k	java:S116+"QRename this field "Points" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ââ“üùÿÿÿÿ
+D
+java:S1185"(Remove this method to simply inherit it.(œƒƒ©ùÿÿÿÿ

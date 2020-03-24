@@ -37,6 +37,7 @@ import com.example.lider_express.Svodnaya.KartaKontrolyaYDE;
 import com.example.lider_express.Svodnaya.MegionSvodnaya;
 import com.example.lider_express.Synchronization.Synchronization;
 import com.example.lider_express.Tools.VmyatinaSocuda;
+import com.example.lider_express.Сamera2.MainCamera2;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -222,7 +223,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPhotoTu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото объекта
+                Intent IntentPhoto = new Intent(MainActivity.this, MainCamera2.class);//кнопка вызова Фото объекта
                 Papka = "Фото";
                 IntentPhoto.putExtra("position", position);
                 IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));

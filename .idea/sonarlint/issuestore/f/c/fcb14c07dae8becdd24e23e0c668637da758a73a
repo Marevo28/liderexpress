@@ -1,11 +1,15 @@
 
-osquid:S00116"RRename this field "ButSave" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¡ úÿÿÿÿ
-squid:S1186<"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‹ûÄ‚üÿÿÿÿ
-usquid:S00116"XRename this field "TextZakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ‰€Ìÿÿÿÿÿ
-lsquid:S00116"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÜÕù
-Isquid:S1199M"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(’İå…ûÿÿÿÿ
-usquid:S2293("YReplace the type specification in this constructor call with the diamond operator ("<>").(±”½Ùøÿÿÿÿ
-qsquid:S1192N"SUse already-defined constant 'APP_ZAKAZCHIK' instead of duplicating its value here.(—õáô8¼‡¨‰.
-]squid:UselessImportCheck	"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8¼‡¨‰.
-ysquid:S00116"URename this field "Zakazchiki" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê²¤úÿÿÿÿ8¼‡¨‰.
+p
+java:S1192N"SUse already-defined constant 'APP_ZAKAZCHIK' instead of duplicating its value here.(—õáô8ëÑ™Ë.
+O
+java:S1199M"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8ëÑ™Ë.
+O
+java:S1128	"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8ëÑ™Ë.
+v	java:S116"URename this field "Zakazchiki" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê²¤úÿÿÿÿ8ëÑ™Ë.
+p	java:S116"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÜÕù8ëÑ™Ë.
+s	java:S116"RRename this field "ButSave" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¡ úÿÿÿÿ8ëÑ™Ë.
+y	java:S116"XRename this field "TextZakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ‰€Ìÿÿÿÿÿ8ëÑ™Ë.
+{
+java:S2293("YReplace the type specification in this constructor call with the diamond operator ("<>").(±”½Ùøÿÿÿÿ8ëÑ™Ë.
+£
+java:S1186<"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‹ûÄ‚üÿÿÿÿ8ëÑ™Ë.
