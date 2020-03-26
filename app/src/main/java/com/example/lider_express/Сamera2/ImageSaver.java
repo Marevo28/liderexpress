@@ -55,6 +55,7 @@ import java.util.TimeZone;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
+
 /** Handles the saving (and any required processing) of photos.
  */
 public class ImageSaver extends Thread {
@@ -67,7 +68,7 @@ public class ImageSaver extends Thread {
     private static final String TAG_DATETIME_DIGITIZED = "DateTimeDigitized";
 
     private final Paint p = new Paint();
-
+    //private  final MainActivity pain;
     private final MainCamera2 main_activity;
     private final HDRProcessor hdrProcessor;
     private final PanoramaProcessor panoramaProcessor;
@@ -2318,8 +2319,14 @@ public class ImageSaver extends Thread {
         // If saveUri is non-null, then:
         //     Before Android 7, picFile is a temporary file which we use for saving exif tags too, and then we redirect the picFile to saveUri.
         //     On Android 7+, picFile is null - we can write the exif tags direct to the saveUri.
+
+        //String position =pain.getPosition();
+        //String papka =pain.getPapka();
+        //String name =pain.getName();
+
         File picFile = null;
         Uri saveUri = null;
+
         try {
             if( !raw_only ) {
                 PostProcessBitmapResult postProcessBitmapResult = postProcessBitmap(request, data, bitmap, ignore_exif_orientation);

@@ -40,10 +40,14 @@ import com.example.lider_express.Tools.VmyatinaSocuda;
 import com.example.lider_express.Сamera2.MainCamera2;
 import com.google.android.material.navigation.NavigationView;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     public static final String APP_FILES = "mysettings";
     public static final String APP_ZAKAZCHIK = "Zakazchik";
+    public static final String APP_CAMERA = "Open Camera";
     private SharedPreferences mSettings;
     static SharedPreferences mPrefs;
 
@@ -69,11 +73,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private TextView textskvazhina;
     private EditText textpostion;
     private TextView NameTu;
-    private String position;
-    private String Papka;
-    private String Name;
+    private static String position;
+    private static String Papka;
+    private static String Name;
     private String Zakazchik;
     private int intposition;
+    public String formattedDate;
 
 
     public static DatabaseHelper getDBHelper() {
@@ -88,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public static SQLiteDatabase getSQLiteDatabase(){
         return mDb;
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,6 +134,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mSettings = getSharedPreferences(APP_FILES, MODE_PRIVATE);
         mPrefs = getSharedPreferences("myAppPrefs", MODE_PRIVATE);
 
+        final String SelectedCamera = mSettings.getString(APP_CAMERA, "Open Camera");
+
         // Инициализировать высоту и ширину устройства - (Для камеры)
         iniWH();
 
@@ -151,6 +159,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }catch (Exception e){
             }
         }
+        Date currentDate = new Date();  // Текущая дата
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.YYYY"); // Задаем формат даты
+        formattedDate = sdf.format(currentDate); // и форматируем
 
         btnpostion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -220,40 +231,59 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             } // - onClick -
         }); // - btnpostion -
 
+
         btnPhotoTu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, MainCamera2.class);//кнопка вызова Фото объекта
-                Papka = "Фото";
-                IntentPhoto.putExtra("position", position);
-                IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));
-                IntentPhoto.putExtra("Papka", Papka);
-                IntentPhoto.putExtra("Name", Name);
-                startActivity(IntentPhoto);
+                if(SelectedCamera.equals("Open Camera")) {
+                    Intent IntentPhoto = new Intent(MainActivity.this, MainCamera2.class);//кнопка вызова Фото документов
+                    Papka = "Фото";
+                    startActivity(IntentPhoto);
+                }else{
+                    Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото документов
+                    Papka = "Фото";
+                    IntentPhoto.putExtra("position", position);
+                    IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));
+                    IntentPhoto.putExtra("Papka", Papka);
+                    IntentPhoto.putExtra("Name", Name);
+                    startActivity(IntentPhoto);
+                }
             }
         });
         btnPhotoDoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото документов
-                Papka = "Документы";
-                IntentPhoto.putExtra("position", position);
-                IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));
-                IntentPhoto.putExtra("Papka", Papka);
-                IntentPhoto.putExtra("Name", Name);
-                startActivity(IntentPhoto);
+                if(SelectedCamera.equals("Open Camera")) {
+                    Intent IntentPhoto = new Intent(MainActivity.this, MainCamera2.class);//кнопка вызова Фото документов
+                    Papka = "Документы";
+                    startActivity(IntentPhoto);
+                }else{
+                    Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото документов
+                    Papka = "Документы";
+                    IntentPhoto.putExtra("position", position);
+                    IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));
+                    IntentPhoto.putExtra("Papka", Papka);
+                    IntentPhoto.putExtra("Name", Name);
+                    startActivity(IntentPhoto);
+                }
             }
         });
         btnPhotoKontrol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова контроля
-                Papka = "Контроль";
-                IntentPhoto.putExtra("position", position);
-                IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));
-                IntentPhoto.putExtra("Papka", Papka);
-                IntentPhoto.putExtra("Name", Name);
-                startActivity(IntentPhoto);
+                if(SelectedCamera.equals("Open Camera")) {
+                    Intent IntentPhoto = new Intent(MainActivity.this, MainCamera2.class);//кнопка вызова Фото документов
+                    Papka = "Контроль";
+                    startActivity(IntentPhoto);
+                }else{
+                    Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото документов
+                    Papka = "Контроль";
+                    IntentPhoto.putExtra("position", position);
+                    IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));
+                    IntentPhoto.putExtra("Papka", Papka);
+                    IntentPhoto.putExtra("Name", Name);
+                    startActivity(IntentPhoto);
+                }
             }
         });
         btnSvodnaya.setOnClickListener(new View.OnClickListener() {
@@ -330,6 +360,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         mDisplayWidth = size.x;
         mDisplayHeight = size.y;
+    }
+
+    public static String getPositionMain() {
+        return position;
+    }
+    public static String getPapkaMain() {
+        return Papka;
+    }
+    public static String getNameMain() {
+        return Name;
     }
 
     // Ширина дисплея

@@ -1,31 +1,11 @@
 
-k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹õØúÿÿÿÿ
-k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹õØúÿÿÿÿ
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÑ
-f	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥àç
-f	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥àç
-e	java:S117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒı‘
-k	java:S117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ÛÖóøÿÿÿÿ
-f	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ÆĞé
-f	java:S117k"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÌı›
-f	java:S117k"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÌı›
-f	java:S117k"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÌı›
-f	java:S117o"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡¦•ò
-k	java:S117}"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙöÒùÿÿÿÿ
-k	java:S117}"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙöÒùÿÿÿÿ
-k	java:S117}"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙöÒùÿÿÿÿ
-l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’¤Í‹şÿÿÿÿ
-g	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÑ¤™
-g	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÑ¤™
-g	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÑ¤™
-g	java:S117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñã®·
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Û¦¥Àùÿÿÿÿ
 t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(…Œ«ªıÿÿÿÿ
-	java:S116A"gRename this field "seekbar_values_white_balance" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õä£æıÿÿÿÿ
-w	java:S116B"]Rename this field "seekbar_values_iso" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰­™™øÿÿÿÿ
-	java:S116C"gRename this field "seekbar_values_shutter_speed" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±éÑ–ûÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Û¦¥Àùÿÿÿÿ
 m
 java:S3776}"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ÙöÒùÿÿÿÿ
+	java:S116C"gRename this field "seekbar_values_shutter_speed" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±éÑ–ûÿÿÿÿ
+	java:S116A"gRename this field "seekbar_values_white_balance" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õä£æıÿÿÿÿ
+V	java:S125'"<This block of commented-out lines of code should be removed.(ÇŸã«üÿÿÿÿ
+w	java:S116B"]Rename this field "seekbar_values_iso" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰­™™øÿÿÿÿ
 i
 java:S3776ª"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(ÆÑ¤™
-V	java:S125'"<This block of commented-out lines of code should be removed.(ÇŸã«üÿÿÿÿ

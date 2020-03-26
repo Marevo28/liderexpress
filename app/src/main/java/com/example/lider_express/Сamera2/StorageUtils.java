@@ -31,6 +31,8 @@ import android.util.Log;
 import androidx.annotation.RequiresApi;
 import androidx.core.content.ContextCompat;
 
+import com.example.lider_express.MainActivity;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -56,6 +58,7 @@ public class StorageUtils {
     private final Context context;
     private final MyApplicationInterface applicationInterface;
     private Uri last_media_scanned;
+
 
     private final static File base_folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM);
 
@@ -303,7 +306,9 @@ public class StorageUtils {
 
     // only valid if !isUsingSAF()
     String getSaveLocation() {
+
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+
         return sharedPreferences.getString(PreferenceKeys.getSaveLocationPreferenceKey(), "OpenCamera");
     }
 
@@ -323,6 +328,8 @@ public class StorageUtils {
         return new File(context.getExternalFilesDir(null), "backups");
     }
 
+    public String DateNow;
+
     // valid if whether or not isUsingSAF()
     // but note that if isUsingSAF(), this may return null - it can't be assumed that there is a File corresponding to the SAF Uri
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -335,7 +342,11 @@ public class StorageUtils {
             file = getFileFromDocumentUriSAF(uri, true);
         }
         else {
-            String folder_name = getSaveLocation();
+            //String folder_name = getSaveLocation();
+            Date currentDate = new Date();  // Текущая дата
+            SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.YYYY"); // Задаем формат даты
+            DateNow = sdf.format(currentDate); // и форматируем
+            String folder_name = "Job" + "/" +DateNow+"/" + MainActivity.getPositionMain() + ". " + MainActivity.getNameMain() + "/" + MainActivity.getPapkaMain();
             file = getImageFolder(folder_name);
         }
         return file;

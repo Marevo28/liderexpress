@@ -1,702 +1,353 @@
 
-p
-java:S3776œ	"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(‹¨Å…8µÀĞÇ.
-r
-java:S1215¥"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-s	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ìØåşÿÿÿÿ8µÀĞÇ.
-g	java:S117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜£ÍÅ
-r
-java:S1215ß"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-l	java:S117ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”‡øÊúÿÿÿÿ
-n	java:S117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶¦ö¡8µÀĞÇ.
-g	java:S117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á¬´Ò
-g	java:S117Û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èõó–
-l	java:S117”"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞµÓŠøÿÿÿÿ
-l
-java:S4042Æ"IUse "java.nio.Files#delete" here for better messages on error conditions.(ã¹ëûÿÿÿÿ8µÀĞÇ.
-_	java:S107ú"=Method has 35 parameters, which is greater than 7 authorized.(Ïñ­şÿÿÿÿ8µÀĞÇ.
-l	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ
-l	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ
-M
-java:S2093³"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8µÀĞÇ.
-l	java:S117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ
-g	java:S117ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ì¾˜
-e
-java:S2184½"GCast one of the operands of this multiplication operation to a "float".(İöîõ8µÀĞÇ.
-l	java:S117ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä”šøÿÿÿÿ
-s	java:S117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£µ‘ûÿÿÿÿ8µÀĞÇ.
-s	java:S117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬´œøÿÿÿÿ8µÀĞÇ.
-s	java:S117©
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•¹Ô›ÿÿÿÿÿ8µÀĞÇ.
-s	java:S117ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è‡àùÿÿÿÿ8µÀĞÇ.
-m	java:S117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó¼÷8µÀĞÇ.
-h	java:S112Ä"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8µÀĞÇ.
-r	java:S116"\Rename this field "do_auto_stabilise" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ì†
-q
-java:S1104‘	"TMake vectorUp a static final constant or non-public and provide accessors if needed.(ª„x8µÀĞÇ.
-l	java:S117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş±Ïøÿÿÿÿ
-n	java:S117±"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö¿¦¤8µÀĞÇ.
-n	java:S117Ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÒšİ8µÀĞÇ.
-m	java:S117å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â»ş
-8µÀĞÇ.
-D	java:S131®	""Add a default case to this switch.(àĞŠ¹ıÿÿÿÿ8µÀĞÇ.
-s	java:S117Ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ—˜ûÿÿÿÿ8µÀĞÇ.
-s	java:S117ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÈÏæûÿÿÿÿ8µÀĞÇ.
-s	java:S117ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ìØåşÿÿÿÿ8µÀĞÇ.
-s	java:S117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬´œøÿÿÿÿ8µÀĞÇ.
-~
-java:S1104a"\Make test_slow_saving a static final constant or non-public and provide accessors if needed.(Ç×Ëˆûÿÿÿÿ8µÀĞÇ.
-_	java:S107—"=Method has 38 parameters, which is greater than 7 authorized.(òÑæ¾øÿÿÿÿ8µÀĞÇ.
-€	java:S116¢"eRename this field "preference_stamp_gpsformat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦şö¦üÿÿÿÿ
-r
-java:S1215º"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-n	java:S117ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÒšİ8µÀĞÇ.
-^	java:S125É"<This block of commented-out lines of code should be removed.(ÑŒ²°şÿÿÿÿ8µÀĞÇ.
-n	java:S117Ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿñ¤·8µÀĞÇ.
-|	java:S115Ù"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ŸâàÅúÿÿÿÿ8µÀĞÇ.
-s	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-r	java:S116ª"\Rename this field "custom_tag_artist" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ‘€Ó
-m	java:S117ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Úæ)8µÀĞÇ.
-g	java:S117û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•š‡
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öÜ ”üÿÿÿÿ
-n	java:S117’"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕŞˆ­8µÀĞÇ.
 F
-java:S1148ğ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-n	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢®Ï›8µÀĞÇ.
-s	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì·”Òşÿÿÿÿ8µÀĞÇ.
-l	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÛöÿÿÿÿÿ
-g	java:S117¡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­”•ğ
-r
-java:S1215"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-n	java:S117ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Íğ÷8µÀĞÇ.
-l	java:S117İ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áÏ¹€şÿÿÿÿ
-a
-java:S1124Õ"EReorder the modifiers to comply with the Java Language Specification.( åÀúÿÿÿÿ
-g	java:S117à"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›¯¦±
-s	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-g	java:S117¸	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ¿í
-s	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¹ğ…şÿÿÿÿ8µÀĞÇ.
-g	java:S117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ôøç
-^	java:S125ü"<This block of commented-out lines of code should be removed.(ÜÆÎºşÿÿÿÿ8µÀĞÇ.
-s	java:S117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â¤Íûÿÿÿÿ8µÀĞÇ.
-\
-java:S1124Ö"EReorder the modifiers to comply with the Java Language Specification.(áæäô
-l	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ
-s	java:S117Ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë®äŒùÿÿÿÿ8µÀĞÇ.
-{	java:S115Y"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(àµºÕıÿÿÿÿ8µÀĞÇ.
-r
-java:S1215 "TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-g	java:S117à"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò¯Ï‹
-g	java:S117Ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıŒû°
-s	java:S117š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÛöÿÿÿÿÿ8µÀĞÇ.
-g	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò¯Ï‹
-s	java:S117’"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤Ğ³çøÿÿÿÿ8µÀĞÇ.
-g	java:S117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜£ÍÅ
-l	java:S117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼©äùÿÿÿÿ
-m	java:S117ı
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÚúk8µÀĞÇ.
-l	java:S117§"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸‘…üÿÿÿÿ
-s	java:S117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¬Ù€øÿÿÿÿ8µÀĞÇ.
-g	java:S117š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µšÌË
-s	java:S117‹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á®¸úÿÿÿÿ8µÀĞÇ.
-R
-java:S1066õ"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ8µÀĞÇ.
-u	java:S116”"ZRename this field "is_front_facing" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í°Ÿàøÿÿÿÿ
-p
-java:S3776°"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(…ª¦¬8µÀĞÇ.
-h	java:S112ú"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8µÀĞÇ.
-g	java:S117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥şØÍ
-b
-java:S1124Z"EReorder the modifiers to comply with the Java Language Specification.(ıŞìú8µÀĞÇ.
+java:S1148Î"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
 N
-java:S4524¹"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ8µÀĞÇ.
-l	java:S117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ¤˜ÿÿÿÿÿ
-l	java:S117Û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÏ¨´üÿÿÿÿ
+java:S4524º"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ8À‚ì›‘.
 F
-java:S1148–"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-r
-java:S1215û"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-r
-java:S1215¶"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-l	java:S117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à•½¹şÿÿÿÿ
-s	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ìØåşÿÿÿÿ8µÀĞÇ.
-y	java:S116’"^Rename this field "camera_view_angle_x" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ìËûÿÿÿÿ
-n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Åéç8µÀĞÇ.
-l	java:S117ß"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù®Óšÿÿÿÿÿ
-F
-java:S1148ê	"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-q	java:S116"VRename this field "level_angle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÜ×¬ùÿÿÿÿ
-l	java:S117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ
-l	java:S117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È°ßîıÿÿÿÿ
-R	java:S125®
-"<This block of commented-out lines of code should be removed.(¥À–š
-g	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­”•ğ
-n
-java:S1301§	"KReplace this "switch" statement by "if" statements to increase readability.(ªçÇ™úÿÿÿÿ8µÀĞÇ.
-s	java:S117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-h	java:S112¦"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8µÀĞÇ.
-l	java:S117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë«—Ìúÿÿÿÿ
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„‘’¯
-s	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°•ñ‹şÿÿÿÿ8µÀĞÇ.
-s	java:S117Å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯ô’üÿÿÿÿ8µÀĞÇ.
-s	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œäåİüÿÿÿÿ8µÀĞÇ.
-n	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞíøÉ8µÀĞÇ.
-l	java:S117ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Êë†úÿÿÿÿ
-s	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-X
-java:S4719Ô":Replace Charset.forName() call with StandardCharsets.UTF_8(ÔÜæ8µÀĞÇ.
-Y	java:S125ª"<This block of commented-out lines of code should be removed.(ìï…ƒ8µÀĞÇ.
-n	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï¾Ãî8µÀĞÇ.
-l	java:S117ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïñ­şÿÿÿÿ
-r
-java:S1215å"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-l	java:S117ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã¾ë¶úÿÿÿÿ
-m	java:S117Ç
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÚúk8µÀĞÇ.
-u	java:S116‚"_Rename this field "image_capture_intent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÚÅÛ
-g	java:S117ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„é€Ü
-g	java:S117¤"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç¨åÓ
-f	java:S117Ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ßˆt
-p
-java:S3776’"RRefactor this method to reduce its Cognitive Complexity from 71 to the 15 allowed.(ÕŞˆ­8µÀĞÇ.
-l	java:S117’"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÈ›üÿÿÿÿ
-g	java:S117²"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–£Ú
-i
-java:S2142Ş"FEither re-interrupt this method or rethrow the "InterruptedException".(²ı…¦ûÿÿÿÿ8µÀĞÇ.
-f	java:S117¯"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–˜˜_
-n	java:S116©"XRename this field "geo_direction" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘¯·ú
-V
-java:S1854ğ"8Remove this useless assignment to local variable "ypos".(ÛûÌİ8µÀĞÇ.
-n	java:S117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀäúÚ8µÀĞÇ.
-|	java:S116a"[Rename this field "test_slow_saving" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç×Ëˆûÿÿÿÿ8µÀĞÇ.
-p
-java:S3776î"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(¥Ÿ’8µÀĞÇ.
-l	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ
-g	java:S117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³À€
-n	java:S117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„Íø¢8µÀĞÇ.
-h	java:S112¬"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8µÀĞÇ.
-s	java:S117Á
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ„”ûÿÿÿÿ8µÀĞÇ.
-t	java:S116–"WRename this field "current_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÜš¡8µÀĞÇ.
-n	java:S117û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö¨¢´8µÀĞÇ.
-s	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-g	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å´”¯
-s	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÆÄ¯
-M
-java:S1066¨"/Merge this if statement with the enclosing one.(Ù–¸ş8µÀĞÇ.
-X	java:S125["<This block of commented-out lines of code should be removed.(ÚõÆ»8µÀĞÇ.
-|	java:S116«"_Rename this field "custom_tag_copyright" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ë‰¢8µÀĞÇ.
-t	java:S116¦"YRename this field "store_location" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı„’˜úÿÿÿÿ
-g	java:S117µ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜£ÍÅ
-v	java:S116›"[Rename this field "preference_stamp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÓì¥ıÿÿÿÿ
-h	java:S112ğ"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8µÀĞÇ.
-s	java:S117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-l	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çİ™Îùÿÿÿÿ
-D	java:S131§	""Add a default case to this switch.(ªçÇ™úÿÿÿÿ8µÀĞÇ.
-m	java:S117ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Úæ)8µÀĞÇ.
-n	java:S117¦"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•‡åÙ8µÀĞÇ.
-n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËïúÅ8µÀĞÇ.
-s
-java:S1192­"UDefine a constant instead of duplicating this literal "decoded bitmap size " 3 times.(ÙÍ¶­8µÀĞÇ.
-n	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë¤Ïà8µÀĞÇ.
-s	java:S117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-F
-java:S1148ã"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-^	java:S125µ
-"<This block of commented-out lines of code should be removed.(¹ÙûÓşÿÿÿÿ8µÀĞÇ.
-s	java:S117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬´œøÿÿÿÿ8µÀĞÇ.
-^	java:S125‹
-"<This block of commented-out lines of code should be removed.(ÎÏÌ³øÿÿÿÿ8µÀĞÇ.
-Y	java:S125°
-"<This block of commented-out lines of code should be removed.(¯åßì8µÀĞÇ.
-g	java:S117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›˜ìÍ
-F
-java:S1148„"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-n	java:S117­"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Íğ÷8µÀĞÇ.
-u	java:S116„"XRename this field "using_camera2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šù8µÀĞÇ.
-X
-java:S1161×":Add the "@Override" annotation above this method signature(“–ış8µÀĞÇ.
-l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú±¥¤ùÿÿÿÿ
-z
-java:S1192¾"WDefine a constant instead of duplicating this literal "failed to delete temp " 4 times.(¡Ã¦˜şÿÿÿÿ8µÀĞÇ.
-_	java:S107®"BConstructor has 40 parameters, which is greater than 7 authorized.(ËŠ¿—8µÀĞÇ.
-s	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¹ğ…şÿÿÿÿ8µÀĞÇ.
-g	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç¨åÓ
-n	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­•Ì‹8µÀĞÇ.
-s	java:S117ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Êë†úÿÿÿÿ8µÀĞÇ.
-l	java:S116€"VRename this field "jpeg_images" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò½Ñ¨
-s	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¹ğ…şÿÿÿÿ8µÀĞÇ.
-q
-java:S1192“"NDefine a constant instead of duplicating this literal " is mutable? " 5 times.(ìÈ—çşÿÿÿÿ8µÀĞÇ.
-w	java:S115Ø"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¬¡¾ç8µÀĞÇ.
-g	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ•Ó€
-u	java:S115×"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(âŠä±ûÿÿÿÿ
-n	java:S117ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ—ÛĞ8µÀĞÇ.
-s	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-s	java:S117ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı¢ƒâúÿÿÿÿ8µÀĞÇ.
-g	java:S117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª¸íğ
-f	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì½ÒL
-n	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢®Ï›8µÀĞÇ.
-A
-java:S1148¾"#Use a logger to log this exception.(òçøì8µÀĞÇ.
-n	java:S117ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óä¶¾8µÀĞÇ.
-D	java:S131ˆ""Add a default case to this switch.(÷Íñúÿÿÿÿ8µÀĞÇ.
-F
-java:S1148Í"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-R
-java:S1066Ù"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ8µÀĞÇ.
-r
-java:S1215"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-n	java:S117ø
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó­È…8µÀĞÇ.
-n	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÈöÏ8µÀĞÇ.
-g
-java:S1124Y"EReorder the modifiers to comply with the Java Language Specification.(àµºÕıÿÿÿÿ8µÀĞÇ.
-m	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú°æ48µÀĞÇ.
-l	java:S117ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ìæ¥ıÿÿÿÿ
-l	java:S116q"WRename this field "process_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ŸíÏ
-v
-java:S3776â"SRefactor this method to reduce its Cognitive Complexity from 240 to the 15 allowed.(£åÀ£ÿÿÿÿÿ8µÀĞÇ.
-s	java:S117ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ²™¶şÿÿÿÿ8µÀĞÇ.
-u	java:S116"_Rename this field "gyro_rotation_matrix" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€Öò
-r
-java:S1215¯"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-p	java:S115Ñ"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(“€Á
-n	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢®Ï›8µÀĞÇ.
-g	java:S117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÁØè
-l	java:S117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ
-l
-java:S4042¼"IUse "java.nio.Files#delete" here for better messages on error conditions.(ã¹ëûÿÿÿÿ8µÀĞÇ.
-p	java:S115Ö"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(áæäô
-n	java:S117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó’«÷8µÀĞÇ.
-f	java:S117ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ßˆt
-s	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£åÀ£ÿÿÿÿÿ8µÀĞÇ.
-R
-java:S1066½"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ8µÀĞÇ.
-l	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«û‡Œûÿÿÿÿ
-n	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥×Ş†8µÀĞÇ.
-n	java:S117ë
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Áã³8µÀĞÇ.
-F
-java:S1148»"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-g	java:S117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œî²Õ
-s	java:S117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ùÁüÿÿÿÿ8µÀĞÇ.
-l	java:S117î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡Íèüÿÿÿÿ
-r
-java:S1215±"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-u	java:S116W"YRename this field "queue_capacity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÛ‹µ8µÀĞÇ.
-]
-java:S1444`";Make this "public static test_small_queue_size" field final(‹Ùàœÿÿÿÿÿ8µÀĞÇ.
-s	java:S117º	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ÊÌ©úÿÿÿÿ8µÀĞÇ.
-n	java:S117õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í½Êè8µÀĞÇ.
-l	java:S117Ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç²¿Æúÿÿÿÿ
-s	java:S117Ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ—˜ûÿÿÿÿ8µÀĞÇ.
-n	java:S117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Íğ÷8µÀĞÇ.
-s	java:S117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£µ‘ûÿÿÿÿ8µÀĞÇ.
-s	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ìØåşÿÿÿÿ8µÀĞÇ.
-„
-java:S1192É"fDefine a constant instead of duplicating this literal "exif orientation NoClassDefFoundError" 4 times.(¯ìâò8µÀĞÇ.
-s	java:S117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-s	java:S117ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ±ã˜úÿÿÿÿ8µÀĞÇ.
-n	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶å¤ã8µÀĞÇ.
-^	java:S125ı"<This block of commented-out lines of code should be removed.(ªÚ ıÿÿÿÿ8µÀĞÇ.
-^	java:S125»
-"<This block of commented-out lines of code should be removed.(óÈöúüÿÿÿÿ8µÀĞÇ.
-n	java:S117’"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕŞˆ­8µÀĞÇ.
-s	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö‡®Ãùÿÿÿÿ8µÀĞÇ.
-s	java:S117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-s	java:S117è"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Êë†úÿÿÿÿ8µÀĞÇ.
-g	java:S117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±¶‹•
-h	java:S112–"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8µÀĞÇ.
-l	java:S117ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ëºüüÿÿÿÿ
-o	java:S116"TRename this field "font_size" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ºüâüÿÿÿÿ
-s	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-n	java:S117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼È§³8µÀĞÇ.
-F
-java:S1148Ç"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-f	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ßˆt
-z	java:S116¤"dRename this field "preference_units_distance" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ı·
-g	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ìò‡
-u	java:S116¬"XRename this field "sample_factor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÌ–²8µÀĞÇ.
-P
-java:S1199¨	"-Extract this nested code block into a method.(¦Äºÿÿÿÿÿ8µÀĞÇ.
-b	java:S112ú"FDefine and throw a dedicated exception instead of using a generic one.(È³¥8µÀĞÇ.
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Â‚µ
-p
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(Å¯˜•8µÀĞÇ.
-M
-java:S2093…"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8µÀĞÇ.
-s	java:S117È"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûâñûşÿÿÿÿ8µÀĞÇ.
-s	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øñ”°şÿÿÿÿ8µÀĞÇ.
-R
-java:S1066Ç"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ8µÀĞÇ.
-s	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£åÀ£ÿÿÿÿÿ8µÀĞÇ.
-…	java:S116ƒ"cRename this field "image_capture_intent_uri" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı£³àûÿÿÿÿ8µÀĞÇ.
-h	java:S112€
-"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8µÀĞÇ.
-s	java:S117ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ìØåşÿÿÿÿ8µÀĞÇ.
-l	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ìØåşÿÿÿÿ
-s	java:S117ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂõÏúıÿÿÿÿ8µÀĞÇ.
-F
-java:S1148Æ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-o	java:S116"TRename this field "raw_image" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë¹ªüÿÿÿÿ
-l	java:S117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÛöÿÿÿÿÿ
-c
-java:S1124Ø"EReorder the modifiers to comply with the Java Language Specification.(¬¡¾ç8µÀĞÇ.
-n	java:S117ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÒšİ8µÀĞÇ.
-r
-java:S1215Ş"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-s	java:S116™"XRename this field "exposure_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ”˜¸ıÿÿÿÿ
-s	java:S117¡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñêæ”ùÿÿÿÿ8µÀĞÇ.
-s	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£µ‘ûÿÿÿÿ8µÀĞÇ.
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜£ÍÅ
-l	java:S117Ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£›Á„ùÿÿÿÿ
-n	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( «®ä8µÀĞÇ.
-l	java:S117¦"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìüÆÓüÿÿÿÿ
-n	java:S117¿"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øÿ²Ã8µÀĞÇ.
-s	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¹ğ…şÿÿÿÿ8µÀĞÇ.
-l	java:S117ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ìØåşÿÿÿÿ
-M
-java:S2093ò"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8µÀĞÇ.
-l	java:S117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìüÆÓüÿÿÿÿ
-s	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÇÔ„ûÿÿÿÿ8µÀĞÇ.
-|	java:S116¡"fRename this field "preference_stamp_timeformat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øª¦
-^	java:S125ˆ"<This block of commented-out lines of code should be removed.(¯Û±æÿÿÿÿÿ8µÀĞÇ.
-n	java:S117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İøß¯8µÀĞÇ.
-~	java:S116b"]Rename this field "test_queue_blocked" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É˜™ÿÿÿÿÿ8µÀĞÇ.
-l	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â¤Íûÿÿÿÿ
-n	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÈöÏ8µÀĞÇ.
-n	java:S117ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿñ¤·8µÀĞÇ.
-F
-java:S1148â	"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-r
-java:S1192"UDefine a constant instead of duplicating this literal "bitmap is mutable?: " 3 times.(– ­8µÀĞÇ.
-g	java:S117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šïåÀ
-s	java:S117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ÉÇùÿÿÿÿ8µÀĞÇ.
-s	java:S117ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç²¿Æúÿÿÿÿ8µÀĞÇ.
-s	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-t	java:S116G"XRename this field "main_activity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ì³Ü8µÀĞÇ.
-r
-java:S1215»"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-^	java:S125á"<This block of commented-out lines of code should be removed.(¿£°êøÿÿÿÿ8µÀĞÇ.
-n	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢§õ¡8µÀĞÇ.
-|	java:S116V"`Rename this field "n_real_images_to_save" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í¢ÕÊ8µÀĞÇ.
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜£ÍÅ
-i
-java:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(²ı…¦ûÿÿÿÿ8µÀĞÇ.
-h	java:S112ê"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8µÀĞÇ.
-p	java:S115Ó"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¯¾ÂÙ
-l	java:S117ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸³·øÿÿÿÿ
-i
-java:S2142˜"FEither re-interrupt this method or rethrow the "InterruptedException".(²ı…¦ûÿÿÿÿ8µÀĞÇ.
-s	java:S117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¾Îãûÿÿÿÿ8µÀĞÇ.
-n	java:S117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀäúÚ8µÀĞÇ.
-l	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ
-m	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì½ÒL8µÀĞÇ.
-n	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û¯ï•8µÀĞÇ.
-c	java:S112°"FDefine and throw a dedicated exception instead of using a generic one.(Úûæ±8µÀĞÇ.
-s	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-X	java:S125Ó"<This block of commented-out lines of code should be removed.(ØÑ—Z8µÀĞÇ.
-n	java:S117Å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Íğ÷8µÀĞÇ.
-l
-java:S4042ô"IUse "java.nio.Files#delete" here for better messages on error conditions.(ã¹ëûÿÿÿÿ8µÀĞÇ.
-g	java:S117ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›˜ìÍ
-u	java:S116U"[Rename this field "n_images_to_save" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øµ‡ßıÿÿÿÿ
-g	java:S117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“Š¬
-g	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç¨åÓ
-m	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡¯^8µÀĞÇ.
-g	java:S117¡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÒšİ
-l	java:S117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û·ï¦ıÿÿÿÿ
-h
-java:S1192Ê"JDefine a constant instead of duplicating this literal "save to: " 4 times.(­§ÂÉ8µÀĞÇ.
-n	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï¾Ãî8µÀĞÇ.
-‚	java:S116£"gRename this field "preference_stamp_geo_address" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯ÑÁüÿÿÿÿ
+java:S1148Å"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+|	java:S115Õ"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(–ßîşÿÿÿÿ8Äş¼˜‘.
 C
-java:S1659¹
-"%Declare "bitmap1" on a separate line.(Ï­ÌÛ8µÀĞÇ.
-m	java:S117î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥äö?8µÀĞÇ.
-Q
-java:S1121°	".Extract the assignment out of this expression.(Ø”Æıÿÿÿÿ8µÀĞÇ.
-g
-java:S1192"IUse already-defined constant 'TAG' instead of duplicating its value here.(ÕÃô8µÀĞÇ.
-g	java:S117¶"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›˜ìÍ
-s	java:S117ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±öò¦üÿÿÿÿ8µÀĞÇ.
-g	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑÃÅª
-g	java:S117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şéêš
-P
-java:S1199Ñ	"-Extract this nested code block into a method.(÷•û¨üÿÿÿÿ8µÀĞÇ.
-s	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡„¿üÿÿÿÿ8µÀĞÇ.
-n	java:S117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Äı¶¼8µÀĞÇ.
-s	java:S117Ü
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÄÈè­ûÿÿÿÿ8µÀĞÇ.
-n	java:S117İ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß–½ª8µÀĞÇ.
-l	java:S117ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ¤˜ÿÿÿÿÿ
-g	java:S117ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­”•ğ
-n	java:S117­"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûµÒ8µÀĞÇ.
-n	java:S117½"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İöîõ8µÀĞÇ.
-g	java:S117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶‰¡Å
-q
-java:S3776ò	"SRefactor this method to reduce its Cognitive Complexity from 231 to the 15 allowed.(Û„¾Ö8µÀĞÇ.
-a
-java:S1124×"EReorder the modifiers to comply with the Java Language Specification.(âŠä±ûÿÿÿÿ
-€	java:S116‘"eRename this field "panorama_dir_left_to_right" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”ÿ•¾ıÿÿÿÿ
+java:S1659º
+"%Declare "bitmap1" on a separate line.(Ï­ÌÛ8À‚ì›‘.
+^	java:S125ı"<This block of commented-out lines of code should be removed.(ÜÆÎºşÿÿÿÿ8À‚ì›‘.
+^	java:S125¶
+"<This block of commented-out lines of code should be removed.(¹ÙûÓşÿÿÿÿ8À‚ì›‘.
 r
-java:S1215Å"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-s	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Êë†úÿÿÿÿ8µÀĞÇ.
-p	java:S116Ÿ"URename this field "pref_style" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àÑŒâÿÿÿÿÿ
-M
-java:S2093ñ"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8µÀĞÇ.
-g	java:S117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç¡èä
-_	java:S107Ş"=Method has 40 parameters, which is greater than 7 authorized.(ş±Ïøÿÿÿÿ8µÀĞÇ.
-n	java:S117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼È§³8µÀĞÇ.
-n	java:S117¤"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø¯èì8µÀĞÇ.
-g	java:S117©"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„é€Ü
-m	java:S116Œ"WRename this field "image_format" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë’¤±
-n	java:S117©"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ±Å­8µÀĞÇ.
-m
-java:S1192ç"JDefine a constant instead of duplicating this literal "saveUri: " 3 times.(Ó”…‰şÿÿÿÿ8µÀĞÇ.
+java:S1215²"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+X	java:S125¦"<This block of commented-out lines of code should be removed.(œ²8À‚ì›‘.
+h	java:S112¨"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+h	java:S112§"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+F
+java:S1148ä"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+~	java:S116c"]Rename this field "test_queue_blocked" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É˜™ÿÿÿÿÿ8À‚ì›‘.
 X
-java:S1126Ö"AReplace this if-then-else statement by a single return statement.(ò¼‰„
-l	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ
-l	java:S117è"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êï™—ûÿÿÿÿ
-g	java:S117µ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜£ÍÅ
-l	java:S117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±½ç¬şÿÿÿÿ
-s	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-s	java:S117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îô¾ºûÿÿÿÿ8µÀĞÇ.
+java:S1161Ø":Add the "@Override" annotation above this method signature(“–ış8À‚ì›‘.
 F
-java:S1148Š"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-p	java:S115Ò"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(êˆÉƒ
-s	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¹ğ…şÿÿÿÿ8µÀĞÇ.
-s	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-g	java:S117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜£ÍÅ
-s	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-n	java:S117ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•éˆ²8µÀĞÇ.
-l	java:S117ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸‘…üÿÿÿÿ
+java:S1148ê"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+t	java:S116—"WRename this field "current_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÜš¡8ÎÃ˜‘.
 r
-java:S1215¢"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-h	java:S112ş"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8µÀĞÇ.
-€
-java:S1104b"^Make test_queue_blocked a static final constant or non-public and provide accessors if needed.(É˜™ÿÿÿÿÿ8µÀĞÇ.
-‚
-java:S3008`"`Rename this field "test_small_queue_size" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ùàœÿÿÿÿÿ8µÀĞÇ.
-l	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ìØåşÿÿÿÿ
-n	java:S117¬
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÒšİ8µÀĞÇ.
-g	java:S117Ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€Œô
-l	java:S117¿"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸‘…üÿÿÿÿ
-l	java:S117Ú
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”×È¡ÿÿÿÿÿ
-s	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ìØåşÿÿÿÿ8µÀĞÇ.
-g	java:S117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß¾²™
-l	java:S117è"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Êë†úÿÿÿÿ
-l	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á–ŞÎûÿÿÿÿ
-l
-java:S4042Ø"IUse "java.nio.Files#delete" here for better messages on error conditions.(Ô‘Û´ûÿÿÿÿ8µÀĞÇ.
-h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8µÀĞÇ.
-n	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶­Ç¯8µÀĞÇ.
-s	java:S117É"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øÏÎñúÿÿÿÿ8µÀĞÇ.
-l	java:S117ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à•½¹şÿÿÿÿ
-q	java:S116š"VRename this field "zoom_factor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ºè§ùÿÿÿÿ
-Y	java:S125¼"<This block of commented-out lines of code should be removed.(ÜÖâ«8µÀĞÇ.
-n	java:S117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“Èìä8µÀĞÇ.
-n	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ù€±8µÀĞÇ.
-l	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ
-n	java:S117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í½Êè8µÀĞÇ.
-n	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µà€‘8µÀĞÇ.
-s	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£åÀ£ÿÿÿÿÿ8µÀĞÇ.
-s	java:S117¹	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨¬áóúÿÿÿÿ8µÀĞÇ.
-n
-java:S1104	"WMake vectorRight a static final constant or non-public and provide accessors if needed.(ÁÃ³ï
-g	java:S117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„é€Ü
-l	java:S117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë«—Ìúÿÿÿÿ
-D	java:S131×	""Add a default case to this switch.(àĞŠ¹ıÿÿÿÿ8µÀĞÇ.
-p
-java:S1192°"SDefine a constant instead of duplicating this literal "do_in_background? " 4 times.(ƒ†œW8µÀĞÇ.
-g	java:S117ß"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥•·Ø
-l	java:S117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë«—Ìúÿÿÿÿ
-s	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-n	java:S117÷
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÌƒŸ8µÀĞÇ.
-F
-java:S1148é"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-g	java:S117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜£ÍÅ
-a
-java:S1155ü	">Use isEmpty() to check whether the collection is empty or not.(†™ÃÅüÿÿÿÿ8µÀĞÇ.
-^	java:S107â"<Method has 8 parameters, which is greater than 7 authorized.(£åÀ£ÿÿÿÿÿ8µÀĞÇ.
-l	java:S117ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìüÆÓüÿÿÿÿ
-s	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¹ğ…şÿÿÿÿ8µÀĞÇ.
-s	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£åÀ£ÿÿÿÿÿ8µÀĞÇ.
-s	java:S116s"XRename this field "suffix_offset" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÒİ18µÀĞÇ.
-A
-java:S1148Ê"#Use a logger to log this exception.(òçøì8µÀĞÇ.
-s	java:S117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-R
-java:S1066Ö"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ8µÀĞÇ.
-l	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û‰éûÿÿÿÿ
-^	java:S125è"<This block of commented-out lines of code should be removed.(¦²Ìõüÿÿÿÿ8µÀĞÇ.
-n
-java:S1301®	"KReplace this "switch" statement by "if" statements to increase readability.(àĞŠ¹ıÿÿÿÿ8µÀĞÇ.
-l	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ
+java:S1215"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+^	java:S125ş"<This block of commented-out lines of code should be removed.(ªÚ ıÿÿÿÿ8À‚ì›‘.
 M
-java:S2093¨"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8µÀĞÇ.
-n	java:S117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÒšİ8µÀĞÇ.
-F
-java:S1148ß"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-n	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İª·8µÀĞÇ.
-q
-java:S1192®"NDefine a constant instead of duplicating this literal "bitmap size: " 3 times.(ØÜ®¼üÿÿÿÿ8µÀĞÇ.
-s	java:S117·
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Éùøÿÿÿÿ8µÀĞÇ.
-g	java:S117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”¢²„
-X	java:S125¥"<This block of commented-out lines of code should be removed.(œ²8µÀĞÇ.
-s	java:S117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¿®ªüÿÿÿÿ8µÀĞÇ.
-l	java:S117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°•ñ‹şÿÿÿÿ
-s	java:S117Ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›‚Ïùÿÿÿÿ8µÀĞÇ.
-n	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ù€±8µÀĞÇ.
-n	java:S117¤	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’•Î 8µÀĞÇ.
-F
-java:S1148Ø"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-v
-java:S1104’	"XMake vectorScreen a static final constant or non-public and provide accessors if needed.(•À’Ä8µÀĞÇ.
-g	java:S117ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çã…á
+java:S1066©"/Merge this if statement with the enclosing one.(Ù–¸ş8À‚ì›‘.
+h	java:S112‚"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+g
+java:S1124Z"EReorder the modifiers to comply with the Java Language Specification.(àµºÕıÿÿÿÿ8À‚ì›‘.
+|	java:S116•"ZRename this field "is_front_facing" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í°Ÿàøÿÿÿÿ8ß©¶˜‘.
 h
-java:S1124Ù"EReorder the modifiers to comply with the Java Language Specification.(ŸâàÅúÿÿÿÿ8µÀĞÇ.
-I
-java:S1168£"+Return an empty collection instead of null.(¥¹ï8µÀĞÇ.
-w	java:S116•	"URename this field "image_info" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ÅÿÛüÿÿÿÿ8µÀĞÇ.
-Y	java:S125Ã"<This block of commented-out lines of code should be removed.(¼·Ø8µÀĞÇ.
-n	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š†Úƒ8µÀĞÇ.
-v	java:S115Z"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ıŞìú8µÀĞÇ.
-s	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£åÀ£ÿÿÿÿÿ8µÀĞÇ.
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­”•ğ
-s	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï±°úÿÿÿÿ8µÀĞÇ.
-s	java:S117ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤àäşÿÿÿÿ8µÀĞÇ.
-l	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷‘à±
-u	java:S115Ô"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(–ßîşÿÿÿÿ
-s	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«¨èûÿÿÿÿ8µÀĞÇ.
-u	java:S115Õ"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.( åÀúÿÿÿÿ
-p
-java:S3776Æ"RRefactor this method to reduce its Cognitive Complexity from 42 to the 15 allowed.(“–ış8µÀĞÇ.
-u	java:S116z"TRename this field "save_base" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş¿úœúÿÿÿÿ8µÀĞÇ.
-h	java:S112ú	"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8µÀĞÇ.
-s	java:S117ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À¯ü©øÿÿÿÿ8µÀĞÇ.
-Y	java:S125¥"<This block of commented-out lines of code should be removed.(©€Å8µÀĞÇ.
-h	java:S112ğ"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8µÀĞÇ.
-l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÛçøÿÿÿÿ
-l	java:S117‘"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë²üøÿÿÿÿ
-s	java:S117š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒşó‰øÿÿÿÿ8µÀĞÇ.
-s	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£µ‘ûÿÿÿÿ8µÀĞÇ.
-l	java:S117ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ÆşÂıÿÿÿÿ
-g	java:S117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©¹Í¿
-a
-java:S1124Ô"EReorder the modifiers to comply with the Java Language Specification.(–ßîşÿÿÿÿ
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿å¯Ù
-s	java:S117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¿®ªüÿÿÿÿ8µÀĞÇ.
-l	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Êë†úÿÿÿÿ
-s	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ìØåşÿÿÿÿ8µÀĞÇ.
-s	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-t	java:S116¥"XRename this field "panorama_crop" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å‚8µÀĞÇ.
-n	java:S117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Äı¶¼8µÀĞÇ.
-s	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-…	java:S116õ"hRename this field "pending_image_average_request" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡âî8µÀĞÇ.
-^	java:S107´"<Method has 9 parameters, which is greater than 7 authorized.(‹¹ğ…şÿÿÿÿ8µÀĞÇ.
-n	java:S117İ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡±£8µÀĞÇ.
-s	java:S117¤"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«¨èûÿÿÿÿ8µÀĞÇ.
-F
-java:S1148Ä"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-l	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìüÆÓüÿÿÿÿ
-s	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-m	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú°æ48µÀĞÇ.
-n	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï¾Ãî8µÀĞÇ.
-F
-java:S1148™"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-n	java:S117Ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•ÁÃè8µÀĞÇ.
-A
-java:S1148©"#Use a logger to log this exception.(òçøì8µÀĞÇ.
-s	java:S117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°•ñ‹şÿÿÿÿ8µÀĞÇ.
-s	java:S117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±½ç¬şÿÿÿÿ8µÀĞÇ.
-^	java:S125°"<This block of commented-out lines of code should be removed.(²ï¹ëıÿÿÿÿ8µÀĞÇ.
-A
-java:S1148¸"#Use a logger to log this exception.(òçøì8µÀĞÇ.
-p
-java:S3776Ş"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(ÀäúÚ8µÀĞÇ.
-r
-java:S1215à"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-s	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉÄšüùÿÿÿÿ8µÀĞÇ.
-u
-java:S3776„"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(Ş»ÀÖüÿÿÿÿ8µÀĞÇ.
-l	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ìØåşÿÿÿÿ
-^	java:S125¿"<This block of commented-out lines of code should be removed.(…ÃŒÔıÿÿÿÿ8µÀĞÇ.
-l	java:S117å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â¤Íûÿÿÿÿ
-l	java:S117±"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÛöÿÿÿÿÿ
-l	java:S117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÑæ¾øÿÿÿÿ
-\
-java:S1124Ñ"EReorder the modifiers to comply with the Java Language Specification.(“€Á
-x	java:S116r"WRename this field "force_suffix" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êó„Èùÿÿÿÿ8µÀĞÇ.
-g	java:S117Á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„é€Ü
-y	java:S116¨"^Rename this field "store_geo_direction" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÔ°Ùùÿÿÿÿ
-s	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ìØåşÿÿÿÿ8µÀĞÇ.
-s	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-s	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æÏóÚøÿÿÿÿ8µÀĞÇ.
->
-java:S1659¹" Declare "h1" on a separate line.(±ÄÎÆ8µÀĞÇ.
-l	java:S117‹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óËÁ¦ûÿÿÿÿ
+java:S1192Ë"JDefine a constant instead of duplicating this literal "save to: " 4 times.(­§ÂÉ8À‚ì›‘.
+€	java:S116©"^Rename this field "store_geo_direction" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÔ°Ùùÿÿÿÿ8ÎÃ˜‘.
+]
+java:S1444a";Make this "public static test_small_queue_size" field final(‹Ùàœÿÿÿÿÿ8À‚ì›‘.
 v
-java:S3776Ñ"SRefactor this method to reduce its Cognitive Complexity from 178 to the 15 allowed.(®ó´Úşÿÿÿÿ8µÀĞÇ.
-n	java:S117Â
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó­È…8µÀĞÇ.
-r
-java:S1215Ÿ"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8µÀĞÇ.
-n	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛšÅ¦8µÀĞÇ.
-\
-java:S1124Ò"EReorder the modifiers to comply with the Java Language Specification.(êˆÉƒ
-g	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Çó«
-m	java:S117ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Ò†48µÀĞÇ.
-l
-java:S4042Õ"IUse "java.nio.Files#delete" here for better messages on error conditions.(ã¹ëûÿÿÿÿ8µÀĞÇ.
-s	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é«ï‰ûÿÿÿÿ8µÀĞÇ.
-f	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ßˆt
-n	java:S117Ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í½Êè8µÀĞÇ.
-n	java:S117İ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡±£8µÀĞÇ.
-n	java:S117‹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í½Êè8µÀĞÇ.
-n	java:S117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ªƒÒ8µÀĞÇ.
-o
-java:S3776õ"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(«¼®~8µÀĞÇ.
-n	java:S116"XRename this field "image_quality" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Êù§
-g	java:S117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†Èø©
-s	java:S117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°•ñ‹şÿÿÿÿ8µÀĞÇ.
-	java:S116œ"_Rename this field "preference_textstamp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ó–®şÿÿÿÿ8µÀĞÇ.
-l	java:S117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸‘…üÿÿÿÿ
-s	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¹ğ…şÿÿÿÿ8µÀĞÇ.
-n
-java:S1301×	"KReplace this "switch" statement by "if" statements to increase readability.(àĞŠ¹ıÿÿÿÿ8µÀĞÇ.
-l	java:S117ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘€Ğùÿÿÿÿ
-n	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ù€±8µÀĞÇ.
-|
-java:S1104`"aMake test_small_queue_size a static final constant or non-public and provide accessors if needed.(‹Ùàœÿÿÿÿÿ
-n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å¯˜•8µÀĞÇ.
-	java:S116 "fRename this field "preference_stamp_dateformat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¹±¼ùÿÿÿÿ
-‰	java:S116—"nRename this field "preference_hdr_contrast_enhancement" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°­êáüÿÿÿÿ
+java:S3776Ò"SRefactor this method to reduce its Cognitive Complexity from 178 to the 15 allowed.(®ó´Úşÿÿÿÿ8À‚ì›‘.
+F
+java:S1148—"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
 A
-java:S1148–"#Use a logger to log this exception.(òçøì8µÀĞÇ.
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›˜ìÍ
+java:S1148¿"#Use a logger to log this exception.(òçøì8À‚ì›‘.
 F
-java:S1148ã"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8µÀĞÇ.
-\
-java:S1124Ó"EReorder the modifiers to comply with the Java Language Specification.(¯¾ÂÙ
-n	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µà€‘8µÀĞÇ.
-q
-java:S3776Ó"SRefactor this method to reduce its Cognitive Complexity from 113 to the 15 allowed.(•ÁÃè8µÀĞÇ.
-€	java:S116“"^Rename this field "camera_view_angle_y" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­Œìäıÿÿÿÿ8µÀĞÇ.
-s	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¹ğ…şÿÿÿÿ8µÀĞÇ.
-m	java:S117ß"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú°æ48µÀĞÇ.
+java:S1148ã	"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+n
+java:S1301¯	"KReplace this "switch" statement by "if" statements to increase readability.(àĞŠ¹ıÿÿÿÿ8À‚ì›‘.
+|	java:S116W"`Rename this field "n_real_images_to_save" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í¢ÕÊ8À‚ì›‘.
+u	java:S116X"YRename this field "queue_capacity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÛ‹µ8Äş¼˜‘.
+s	java:S116"VRename this field "jpeg_images" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò½Ñ¨8À‚ì›‘.
+_	java:S107¯"BConstructor has 40 parameters, which is greater than 7 authorized.(ËŠ¿—8À‚ì›‘.
+h
+java:S1124Ú"EReorder the modifiers to comply with the Java Language Specification.(ŸâàÅúÿÿÿÿ8ß©¶˜‘.
+u	java:S115Ö"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.( åÀúÿÿÿÿ
+F
+java:S1148Â"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(È³¥8À‚ì›‘.
+x	java:S116›"VRename this field "zoom_factor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ºè§ùÿÿÿÿ8À‚ì›‘.
+z	java:S116¥"dRename this field "preference_units_distance" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ı·
 i
-java:S2142‰"FEither re-interrupt this method or rethrow the "InterruptedException".(²ı…¦ûÿÿÿÿ8µÀĞÇ.
-h	java:S112§"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8µÀĞÇ.
-l	java:S117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë«—Ìúÿÿÿÿ
+java:S2142‚"FEither re-interrupt this method or rethrow the "InterruptedException".(²ı…¦ûÿÿÿÿ8À‚ì›‘.
+l
+java:S4042û"IUse "java.nio.Files#delete" here for better messages on error conditions.(ã¹ëûÿÿÿÿ8À‚ì›‘.
+h	java:S112—"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+q
+java:S3776Ú"SRefactor this method to reduce its Cognitive Complexity from 113 to the 15 allowed.(•ÁÃè8À‚ì›‘.
+^	java:S107»"<Method has 9 parameters, which is greater than 7 authorized.(‹¹ğ…şÿÿÿÿ8À‚ì›‘.
+h	java:S112ë"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+q
+java:S1192”"NDefine a constant instead of duplicating this literal " is mutable? " 5 times.(ìÈ—çşÿÿÿÿ8À‚ì›‘.
+w	java:S115Ò"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(“€Á8À‚ì›‘.
+	java:S116"_Rename this field "preference_textstamp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ó–®şÿÿÿÿ8Äş¼˜‘.
+h
+java:S1124Ø"EReorder the modifiers to comply with the Java Language Specification.(âŠä±ûÿÿÿÿ8Ó­˜‘.
+c
+java:S1124Ó"EReorder the modifiers to comply with the Java Language Specification.(êˆÉƒ8À‚ì›‘.
+h
+java:S1124Õ"EReorder the modifiers to comply with the Java Language Specification.(–ßîşÿÿÿÿ8Äş¼˜‘.
+D	java:S131Ø	""Add a default case to this switch.(àĞŠ¹ıÿÿÿÿ8À‚ì›‘.
+u
+java:S1104‘	"WMake vectorRight a static final constant or non-public and provide accessors if needed.(ÁÃ³ï8À‚ì›‘.
+D	java:S131¨	""Add a default case to this switch.(ªçÇ™úÿÿÿÿ8À‚ì›‘.
+A
+java:S1148°"#Use a logger to log this exception.(òçøì8À‚ì›‘.
+M
+java:S2093ù"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8À‚ì›‘.
+^	java:S125Œ
+"<This block of commented-out lines of code should be removed.(ÎÏÌ³øÿÿÿÿ8À‚ì›‘.
 F
-java:S1148¦"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8˜ñÖÇ.
+java:S1148‹"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+Y	java:S125“"<This block of commented-out lines of code should be removed.(Í­À®8À‚ì›‘.
+^	java:S125â"<This block of commented-out lines of code should be removed.(¿£°êøÿÿÿÿ8À‚ì›‘.
+i
+java:S2142Š"FEither re-interrupt this method or rethrow the "InterruptedException".(²ı…¦ûÿÿÿÿ8À‚ì›‘.
+z	java:S116š"XRename this field "exposure_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ”˜¸ıÿÿÿÿ8ÎÃ˜‘.
+w	java:S116–	"URename this field "image_info" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ÅÿÛüÿÿÿÿ8À‚ì›‘.
+>
+java:S1659º" Declare "h1" on a separate line.(±ÄÎÆ8À‚ì›‘.
+p
+java:S3776“"RRefactor this method to reduce its Cognitive Complexity from 71 to the 15 allowed.(ÕŞˆ­8À‚ì›‘.
+^	java:S125Æ"<This block of commented-out lines of code should be removed.(…ÃŒÔıÿÿÿÿ8À‚ì›‘.
+|	java:S116ƒ"_Rename this field "image_capture_intent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÚÅÛ8Äş¼˜‘.
+Y	java:S125±
+"<This block of commented-out lines of code should be removed.(¯åßì8ÎÃ˜‘.
+r
+java:S1215£"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
 F
-java:S1148õ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8˜ñÖÇ.
+java:S1148à"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+^	java:S107ã"<Method has 8 parameters, which is greater than 7 authorized.(£åÀ£ÿÿÿÿÿ8À‚ì›‘.
+„
+java:S1192Ğ"fDefine a constant instead of duplicating this literal "exif orientation NoClassDefFoundError" 4 times.(¯ìâò8À‚ì›‘.
+h	java:S112ÿ"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+c
+java:S1124Ò"EReorder the modifiers to comply with the Java Language Specification.(“€Á8À‚ì›‘.
+r
+java:S1215ü"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+R
+java:S1066¾"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ8À‚ì›‘.
+s	java:S116r"WRename this field "process_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ŸíÏ8À‚ì›‘.
+F
+java:S1148œ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+M
+java:S2093ø"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8À‚ì›‘.
+r
+java:S1215Æ"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+h	java:S112ñ"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+I
+java:S1168¤"+Return an empty collection instead of null.(¥¹ï8À‚ì›‘.
+u	java:S116{"TRename this field "save_base" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş¿úœúÿÿÿÿ8À‚ì›‘.
+X	java:S125Ô"<This block of commented-out lines of code should be removed.(ØÑ—Z8À‚ì›‘.
+h	java:S112Å"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+|	java:S116¬"_Rename this field "custom_tag_copyright" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ë‰¢8Äş¼˜‘.
+Q
+java:S1121±	".Extract the assignment out of this expression.(Ø”Æıÿÿÿÿ8À‚ì›‘.
+q
+java:S1192¯"NDefine a constant instead of duplicating this literal "bitmap size: " 3 times.(ØÜ®¼üÿÿÿÿ8À‚ì›‘.
+‚
+java:S3008a"`Rename this field "test_small_queue_size" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ùàœÿÿÿÿÿ8À‚ì›‘.
+w	java:S115Ô"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¯¾ÂÙ8Äş¼˜‘.
+r
+java:S1215æ"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+€
+java:S1104c"^Make test_queue_blocked a static final constant or non-public and provide accessors if needed.(É˜™ÿÿÿÿÿ8Äş¼˜‘.
+_	java:S107˜"=Method has 38 parameters, which is greater than 7 authorized.(òÑæ¾øÿÿÿÿ8À‚ì›‘.
+|	java:S115Ú"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ŸâàÅúÿÿÿÿ8ß©¶˜‘.
+i
+java:S2142ß"FEither re-interrupt this method or rethrow the "InterruptedException".(²ı…¦ûÿÿÿÿ8À‚ì›‘.
+q
+java:S3776ó	"SRefactor this method to reduce its Cognitive Complexity from 231 to the 15 allowed.(Û„¾Ö8À‚ì›‘.
+_
+java:S1126İ"AReplace this if-then-else statement by a single return statement.(ò¼‰„8À‚ì›‘.
+Y	java:S125Ä"<This block of commented-out lines of code should be removed.(¼·Ø8À‚ì›‘.
+p
+java:S3776Ç"RRefactor this method to reduce its Cognitive Complexity from 42 to the 15 allowed.(“–ış8À‚ì›‘.
+l
+java:S4042Ç"IUse "java.nio.Files#delete" here for better messages on error conditions.(ã¹ëûÿÿÿÿ8À‚ì›‘.
+r
+java:S1215à"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+ˆ	java:S116¡"fRename this field "preference_stamp_dateformat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¹±¼ùÿÿÿÿ8À‚ì›‘.
+M
+java:S2093º"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8À‚ì›‘.
+v	java:S116"TRename this field "font_size" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ºüâüÿÿÿÿ8ß©¶˜‘.
+m
+java:S1192î"JDefine a constant instead of duplicating this literal "saveUri: " 3 times.(Ó”…‰şÿÿÿÿ8À‚ì›‘.
+€	java:S116”"^Rename this field "camera_view_angle_y" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­Œìäıÿÿÿÿ8µÀĞÇ.
+|	java:S116b"[Rename this field "test_slow_saving" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç×Ëˆûÿÿÿÿ8À‚ì›‘.
+^	java:S125±"<This block of commented-out lines of code should be removed.(²ï¹ëıÿÿÿÿ8À‚ì›‘.
+c	java:S112·"FDefine and throw a dedicated exception instead of using a generic one.(Úûæ±8À‚ì›‘.
+r
+java:S1215»"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+F
+java:S1148ë	"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+p
+java:S1192±"SDefine a constant instead of duplicating this literal "do_in_background? " 4 times.(ƒ†œW8À‚ì›‘.
+r
+java:S1215å"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+D	java:S131¯	""Add a default case to this switch.(àĞŠ¹ıÿÿÿÿ8À‚ì›‘.
+…	java:S116ö"hRename this field "pending_image_average_request" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡âî8À‚ì›‘.
+Y	java:S125«"<This block of commented-out lines of code should be removed.(ìï…ƒ8À‚ì›‘.
+r
+java:S1215°"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+b
+java:S1124["EReorder the modifiers to comply with the Java Language Specification.(ıŞìú8À‚ì›‘.
+{	java:S115Z"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(àµºÕıÿÿÿÿ8À‚ì›‘.
+‡	java:S116£"eRename this field "preference_stamp_gpsformat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦şö¦üÿÿÿÿ8Äş¼˜‘.
+F
+java:S1148…"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+F
+java:S1148ö"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+v	java:S116‚"TRename this field "raw_image" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë¹ªüÿÿÿÿ8À‚ì›‘.
+^	java:S125"<This block of commented-out lines of code should be removed.(¯Û±æÿÿÿÿÿ8À‚ì›‘.
+a
+java:S1155ı	">Use isEmpty() to check whether the collection is empty or not.(†™ÃÅüÿÿÿÿ8À‚ì›‘.
+R
+java:S1066İ"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ8À‚ì›‘.
+z
+java:S1192¿"WDefine a constant instead of duplicating this literal "failed to delete temp " 4 times.(¡Ã¦˜şÿÿÿÿ8À‚ì›‘.
+R
+java:S1066ü"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ8À‚ì›‘.
+y	java:S116“"^Rename this field "camera_view_angle_x" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ìËûÿÿÿÿ
+D	java:S131‰""Add a default case to this switch.(÷Íñúÿÿÿÿ8À‚ì›‘.
+w	java:S115Ù"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¬¡¾ç8Ó­˜‘.
+‡	java:S116’"eRename this field "panorama_dir_left_to_right" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”ÿ•¾ıÿÿÿÿ8Ó­˜‘.
+l
+java:S4042½"IUse "java.nio.Files#delete" here for better messages on error conditions.(ã¹ëûÿÿÿÿ8À‚ì›‘.
+r
+java:S1215ç"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+s
+java:S1192®"UDefine a constant instead of duplicating this literal "decoded bitmap size " 3 times.(ÙÍ¶­8À‚ì›‘.
+i
+java:S2142™"FEither re-interrupt this method or rethrow the "InterruptedException".(²ı…¦ûÿÿÿÿ8À‚ì›‘.
+ƒ
+java:S1104a"aMake test_small_queue_size a static final constant or non-public and provide accessors if needed.(‹Ùàœÿÿÿÿÿ8À‚ì›‘.
+M
+java:S2093Œ"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8À‚ì›‘.
+^	java:S125¼
+"<This block of commented-out lines of code should be removed.(óÈöúüÿÿÿÿ8À‚ì›‘.
+A
+java:S1148Ñ"#Use a logger to log this exception.(òçøì8À‚ì›‘.
+R
+java:S1066È"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ8À‚ì›‘.
+Y	java:S125Ã"<This block of commented-out lines of code should be removed.(ÜÖâ«8À‚ì›‘.
+w	java:S116 "URename this field "pref_style" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àÑŒâÿÿÿÿÿ8ÎÃ˜‘.
+F
+java:S1148Í"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+A
+java:S1148Å"#Use a logger to log this exception.(òçøì8À‚ì›‘.
+x	java:S116s"WRename this field "force_suffix" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êó„Èùÿÿÿÿ8À‚ì›‘.
+F
+java:S1148ğ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+^	java:S125é"<This block of commented-out lines of code should be removed.(¦²Ìõüÿÿÿÿ8À‚ì›‘.
+|	java:S116¢"fRename this field "preference_stamp_timeformat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øª¦
+u	java:S116…"XRename this field "using_camera2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šù8ß©¶˜‘.
+y	java:S116«"\Rename this field "custom_tag_artist" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ‘€Ó8Ó­˜‘.
+X
+java:S4719Õ":Replace Charset.forName() call with StandardCharsets.UTF_8(ÔÜæ8À‚ì›‘.
+h	java:S112ñ"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+c
+java:S1124×"EReorder the modifiers to comply with the Java Language Specification.(áæäô8Ó­˜‘.
+h	java:S112
+"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+F
+java:S1148§"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+v	java:S115["ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ıŞìú8À‚ì›‘.
+|	java:S115Ø"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(âŠä±ûÿÿÿÿ8Ó­˜‘.
+u	java:S116ª"XRename this field "geo_direction" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘¯·ú8À‚ì›‘.
+p
+java:S3776±"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(…ª¦¬8À‚ì›‘.
+r
+java:S1215 "TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+n
+java:S1301Ø	"KReplace this "switch" statement by "if" statements to increase readability.(àĞŠ¹ıÿÿÿÿ8À‚ì›‘.
+w	java:S115Ó"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(êˆÉƒ8À‚ì›‘.
+u	java:S116‘"_Rename this field "gyro_rotation_matrix" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€Öò
+h	java:S112­"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+F
+java:S1148ß"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+y	java:S116"\Rename this field "do_auto_stabilise" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ì†8Äş¼˜‘.
+V
+java:S1854ñ"8Remove this useless assignment to local variable "ypos".(ÛûÌİ8À‚ì›‘.
+	java:S116˜"nRename this field "preference_hdr_contrast_enhancement" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°­êáüÿÿÿÿ8À‚ì›‘.
+F
+java:S1148š"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+c
+java:S1124Ù"EReorder the modifiers to comply with the Java Language Specification.(¬¡¾ç8Ó­˜‘.
+l
+java:S4042ß"IUse "java.nio.Files#delete" here for better messages on error conditions.(Ô‘Û´ûÿÿÿÿ8À‚ì›‘.
+]	java:S125G"<This block of commented-out lines of code should be removed.(¡ÍÃóüÿÿÿÿ8À‚ì›‘.
+g
+java:S1192‘"IUse already-defined constant 'TAG' instead of duplicating its value here.(ÕÃô8À‚ì›‘.
+F
+java:S1148÷"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+A
+java:S1148"#Use a logger to log this exception.(òçøì8À‚ì›‘.
+o
+java:S3776ü"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(«¼®~8À‚ì›‘.
+p
+java:S3776õ"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(¥Ÿ’8À‚ì›‘.
+Y	java:S125¯
+"<This block of commented-out lines of code should be removed.(¥À–š8À‚ì›‘.
+h	java:S112û"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+M
+java:S2093¯"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8À‚ì›‘.
+_	java:S107ß"=Method has 40 parameters, which is greater than 7 authorized.(ş±Ïøÿÿÿÿ8À‚ì›‘.
+v
+java:S1104“	"XMake vectorScreen a static final constant or non-public and provide accessors if needed.(•À’Ä8Äş¼˜‘.
+r
+java:S1215¡"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+s	java:S116t"XRename this field "suffix_offset" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÒİ18Äş¼˜‘.
+r
+java:S1215"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+v
+java:S3776ã"SRefactor this method to reduce its Cognitive Complexity from 240 to the 15 allowed.(£åÀ£ÿÿÿÿÿ8À‚ì›‘.
+u
+java:S3776‹"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(Ş»ÀÖüÿÿÿÿ8À‚ì›‘.
+t	java:S116"WRename this field "image_format" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë’¤±8À‚ì›‘.
+c
+java:S1124Ô"EReorder the modifiers to comply with the Java Language Specification.(¯¾ÂÙ8Äş¼˜‘.
+l
+java:S4042Ü"IUse "java.nio.Files#delete" here for better messages on error conditions.(ã¹ëûÿÿÿÿ8À‚ì›‘.
+‰	java:S116¤"gRename this field "preference_stamp_geo_address" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯ÑÁüÿÿÿÿ8Ó­˜‘.
+t	java:S116H"XRename this field "main_activity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ì³Ü8À‚ì›‘.
+a
+java:S1124Ö"EReorder the modifiers to comply with the Java Language Specification.( åÀúÿÿÿÿ
+R
+java:S1066à"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ8À‚ì›‘.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öÜ ”üÿÿÿÿ
+Y	java:S125¬"<This block of commented-out lines of code should be removed.(©€Å8À‚ì›‘.
+t	java:S116¦"XRename this field "panorama_crop" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å‚8µÀĞÇ.
+|	java:S116V"[Rename this field "n_images_to_save" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øµ‡ßıÿÿÿÿ8À‚ì›‘.
+h	java:S112û	"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+q
+java:S1104’	"TMake vectorUp a static final constant or non-public and provide accessors if needed.(ª„x8À‚ì›‘.
+…	java:S116„"cRename this field "image_capture_intent_uri" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı£³àûÿÿÿÿ8Äş¼˜‘.
+P
+java:S1199Ò	"-Extract this nested code block into a method.(÷•û¨üÿÿÿÿ8À‚ì›‘.
+e
+java:S2184¾"GCast one of the operands of this multiplication operation to a "float".(İöîõ8À‚ì›‘.
+~
+java:S1104b"\Make test_slow_saving a static final constant or non-public and provide accessors if needed.(Ç×Ëˆûÿÿÿÿ8À‚ì›‘.
+x	java:S116"VRename this field "level_angle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÜ×¬ùÿÿÿÿ8Äş¼˜‘.
+v	java:S116œ"[Rename this field "preference_stamp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÓì¥ıÿÿÿÿ
+P
+java:S1199©	"-Extract this nested code block into a method.(¦Äºÿÿÿÿÿ8À‚ì›‘.
+p
+java:S3776Ÿ"RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(Å¯˜•8À‚ì›‘.
+r
+java:S1215¼"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+u	java:S116"XRename this field "image_quality" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Êù§8À‚ì›‘.
+F
+java:S1148Ô"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+w	java:S115×"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(áæäô8Ó­˜‘.
+X	java:S125\"<This block of commented-out lines of code should be removed.(ÚõÆ»8À‚ì›‘.
+{	java:S116§"YRename this field "store_location" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı„’˜úÿÿÿÿ8ß©¶˜‘.
+^	java:S125Ê"<This block of commented-out lines of code should be removed.(ÑŒ²°şÿÿÿÿ8À‚ì›‘.
+_	java:S107û"=Method has 35 parameters, which is greater than 7 authorized.(Ïñ­şÿÿÿÿ8À‚ì›‘.
+p
+java:S3776ß"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(ÀäúÚ8À‚ì›‘.
+p
+java:S3776	"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(‹¨Å…8À‚ì›‘.
+r
+java:S1215¦"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+r
+java:S1192Ÿ"UDefine a constant instead of duplicating this literal "bitmap is mutable?: " 3 times.(– ­8À‚ì›‘.
+u	java:S116­"XRename this field "sample_factor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÌ–²8ß©¶˜‘.
+r
+java:S1215·"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+n
+java:S1301¨	"KReplace this "switch" statement by "if" statements to increase readability.(ªçÇ™úÿÿÿÿ8À‚ì›‘.

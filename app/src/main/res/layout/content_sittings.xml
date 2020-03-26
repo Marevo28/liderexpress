@@ -17,12 +17,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextZakazchik" />
 
+    <Spinner
+        android:id="@+id/spinnerCamera"
+        android:layout_width="325dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="144dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextZakazchik" />
+
     <TextView
         android:id="@+id/TextZakazchik"
         android:layout_width="325dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TextCamera"
+        android:layout_width="325dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="140dp"
         android:text="TextView"
         android:textAlignment="center"
         android:textSize="20sp"

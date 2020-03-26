@@ -191,7 +191,7 @@ public class MainCamera2 extends Activity {
             getWindow().setAttributes(layout);
         }
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_maincamera2);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false); // initialise any unset preferences to their default values
         if( MyDebug.LOG )
             Log.d(TAG, "onCreate: time after setting default preference values: " + (System.currentTimeMillis() - debug_time));

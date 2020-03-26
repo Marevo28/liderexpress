@@ -37,8 +37,6 @@ s
 Capp/src/main/java/com/example/lider_express/Сamera2/ui/MainUI.java,f\b\fb2fefea943157f00b55a9a60fb266fa49cf2211
 L
 app/src/main/rs/align_mtb.rs,1\c\1cd19d38ef8127d006e11f82dee039bca1f051e2
-`
-0app/src/main/res/layout/activity_maincamera2.xml,0\e\0ef7b4b8cdc5db73d9413ae2abab9e056e190ab2
 N
 app/src/main/rs/process_hdr.rs,f\8\f84661ff377cb66c6de9ad2c4108f89a4bd53252
 S
@@ -65,3 +63,19 @@ Iapp/src/main/java/com/example/lider_express/Сamera2/SettingsManager.java,0\1\
 Napp/src/main/java/com/example/lider_express/Сamera2/preview/VideoProfile.java,7\b\7b4a6904d2892782c23c7d7fb30d3bdd4bf3ea51
 {
 Kapp/src/main/java/com/example/lider_express/Сamera2/ui/ManualSeekbars.java,9\9\99b150b5543d21b1886dadddc71f5a4de4e1708b
+}
+Mapp/src/main/java/com/example/lider_express/Сamera2/SaveLocationHistory.java,f\f\ff0da716cf9a5973ae1a7d0248b50d7178c2c8cf
+{
+Kapp/src/main/java/com/example/lider_express/Сamera2/PermissionHandler.java,f\a\fa24e256bcf56473523c1b7a28afa9e35f3b4e83
+�
+Uapp/src/main/java/com/example/lider_express/Сamera2/remotecontrol/DeviceScanner.java,a\0\a061f794ca61c9b76c6ee0dad90ba9fb7765a6e4
+z
+Japp/src/main/java/com/example/lider_express/Сamera2/SoundPoolManager.java,5\3\5331868165acbcd009f1cf0294e179b0c27db86d
+s
+Capp/src/main/java/com/example/lider_express/Сamera2/TakePhoto.java,1\3\13b2b242393d3e95948172a2536dcc5ee4ae4476
+x
+Happ/src/main/java/com/example/lider_express/Сamera2/PreferenceKeys.java,4\d\4de3101461cf9cbe58e1e176f3920c6839f182be
+�
+Vapp/src/main/java/com/example/lider_express/Сamera2/preview/ApplicationInterface.java,1\f\1f572c6c349b0ff5038ee96bd10e4c271ee200c9
+v
+Fapp/src/main/java/com/example/lider_express/Сamera2/StorageUtils.java,0\2\0259ca8f82c09e6872c82759fb61912b0cb8b517
