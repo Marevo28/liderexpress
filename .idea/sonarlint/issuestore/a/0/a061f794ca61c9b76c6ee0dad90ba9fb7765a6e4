@@ -1,0 +1,17 @@
+
+g
+java:S1301³"KReplace this "switch" statement by "if" statements to increase readability.(×ö³–úÿÿÿÿ
+D
+java:S1199´"-Extract this nested code block into a method.(ÌéÜ±
+k	java:S117P"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±õ×Åøÿÿÿÿ
+e	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›éù	
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ëå¾ê
+l	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¦¦ïýÿÿÿÿ
+l	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±õ×Åøÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÖÏÍ°
+k	java:S116-"VRename this field "is_scanning" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôÓæç
+>
+java:S1172J"(Remove this unused method parameter "v".(¡é††
+D
+java:S1172¦"-Remove this unused method parameter "dialog".(ðžÂ¤
+=	java:S131³""Add a default case to this switch.(×ö³–úÿÿÿÿ

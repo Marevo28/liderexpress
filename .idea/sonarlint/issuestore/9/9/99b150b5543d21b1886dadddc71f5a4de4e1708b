@@ -1,0 +1,11 @@
+
+t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(…Œ«ªıÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Û¦¥Àùÿÿÿÿ
+m
+java:S3776}"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ÙöÒùÿÿÿÿ
+	java:S116C"gRename this field "seekbar_values_shutter_speed" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±éÑ–ûÿÿÿÿ
+	java:S116A"gRename this field "seekbar_values_white_balance" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õä£æıÿÿÿÿ
+V	java:S125'"<This block of commented-out lines of code should be removed.(ÇŸã«üÿÿÿÿ
+w	java:S116B"]Rename this field "seekbar_values_iso" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰­™™øÿÿÿÿ
+i
+java:S3776ª"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(ÆÑ¤™

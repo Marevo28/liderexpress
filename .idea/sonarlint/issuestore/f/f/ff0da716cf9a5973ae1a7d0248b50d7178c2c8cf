@@ -1,0 +1,15 @@
+
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÝ¸ìúÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÝ¸ìúÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÝ¸ìúÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ€Úýøÿÿÿÿ
+k	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š»üÿÿÿÿ
+k	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š»üÿÿÿÿ
+k	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ý«²Æùÿÿÿÿ
+k	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úßÇËþÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öÜ ”üÿÿÿÿ
+m	java:S116"XRename this field "main_activity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ì³Ü
+n	java:S116"TRename this field "pref_base" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çü„Ðúÿÿÿÿ
+u	java:S116"`Rename this field "save_location_history" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îô´¹
+>	java:S108F")Either remove or fill this block of code.(ä·ÑŒ
+P	java:S125,"<This block of commented-out lines of code should be removed.(•¬Þ
