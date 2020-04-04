@@ -23,8 +23,8 @@ public class SittingsActivity extends AppCompatActivity {
     Button ButSave;
     TextView TextZakazchik,TextCamera;
     public static final String APP_FILES = "mysettings";
-    public static final String APP_ZAKAZCHIK = "Не выбран";
-    public static final String APP_CAMERA = "Open Camera";
+    public static final String APP_ZAKAZCHIK = "Zakazchik";
+    public static final String APP_CAMERA = "Camera";
     SharedPreferences mSettings;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,10 +65,10 @@ public class SittingsActivity extends AppCompatActivity {
         });
         // адаптер
         ArrayAdapter<String> adapterCamera = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Cameras);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapterCamera.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         final Spinner spinnerCamera = (Spinner) findViewById(R.id.spinnerCamera);
-        spinnerCamera.setAdapter(adapter);
+        spinnerCamera.setAdapter(adapterCamera);
         // заголовок
         spinnerCamera.setPrompt("Title");
         // выделяем элемент
@@ -93,11 +93,16 @@ public class SittingsActivity extends AppCompatActivity {
                 TextZakazchik.setText(Zakazchik);
                 TextCamera.setText(SelectedCamera);
                 SharedPreferences.Editor prefEditor = mSettings.edit();
-                prefEditor.putString(APP_CAMERA, SelectedCamera);
-                prefEditor.putString(APP_ZAKAZCHIK, Zakazchik);
+                prefEditor.putString(APP_ZAKAZCHIK, TextZakazchik.getText().toString());
+                prefEditor.putString(APP_CAMERA, TextCamera.getText().toString());
                 prefEditor.apply();
+
             }
         });
+    }
+    public String getZakazchik(){
+        Zakazchik=TextZakazchik.getText().toString();
+        return Zakazchik;
     }
 
     @Override
@@ -105,9 +110,11 @@ public class SittingsActivity extends AppCompatActivity {
         super.onResume();
         {
             String cam = mSettings.getString(APP_CAMERA,"Open Camera");
-            String name = mSettings.getString(APP_ZAKAZCHIK,"Не выбран заказчик");
+            String name = mSettings.getString(APP_ZAKAZCHIK,"Zakazchik");
             TextZakazchik.setText(name);
             TextCamera.setText(cam);
         }
     }
+
+
 }

@@ -79,3 +79,7 @@ Happ/src/main/java/com/example/lider_express/Сamera2/PreferenceKeys.java,4\d\4
 Vapp/src/main/java/com/example/lider_express/Сamera2/preview/ApplicationInterface.java,1\f\1f572c6c349b0ff5038ee96bd10e4c271ee200c9
 v
 Fapp/src/main/java/com/example/lider_express/Сamera2/StorageUtils.java,0\2\0259ca8f82c09e6872c82759fb61912b0cb8b517
+w
+Gapp/src/main/java/com/example/lider_express/Сamera2/SpeechControl.java,2\d\2daee5fd98d7a0641a659aef89bb214df1ea4530
+|
+Lapp/src/main/java/com/example/lider_express/Svodnaya/KartaKontolyaNasos.java,6\1\61e3df3cff7415fcfb9c3d95c293b21abb5e9176

@@ -5,6 +5,27 @@
     <string name="action_settings">Налаштування</string>
     <string name="action_popup">Налаштування зринаючих вікон</string>
     <string name="intro_ok">"Гаразд (Більше це повідомлення не з'явиться.)"</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Lider-Express</string>
+    <string name="nav_header_subtitle">Не является интелектуальной собственностью ООО «Лидер-Эксперт» </string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="menu_home">Объект</string>
+    <string name="menu_gallery">Расчёт ГИ</string>
+    <string name="menu_slideshow">Расчёт вмятины</string>
+    <string name="menu_tools">Синхронизация</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="title_activity_sittings">SittingsActivity</string>
+    <string name="title_activity_photo">Photo</string>
+    <string name="title_activity_bndsvodnaya">BNDSvodnaya</string>
+    <string name="title_activity_spisok">Spisok</string>
+    <string name="title_activity_gi_sosuda">Расчёт ГИ</string>
+    <string name="title_activity_vmyatina_socuda">VmyatinaSocuda</string>
+    <string name="experts_in_text">Эксперты вписанные в журнал</string>
+    <string name="title_activity_synchronization">Synchronization</string>
+    <string name="title_activity_bndblochka_ude">BNDblochkaUDE</string>
+    <string name="title_activity_megion20220">Megion20220</string>
 
     <string name="on">Увімк</string> <!-- whether a setting is turned on, e.g., "Auto-stabilise: On" -->
     <string name="off">Вимк</string> <!-- whether a setting is turned off, e.g., "Auto-stabilise: Off" -->

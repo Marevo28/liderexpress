@@ -35,4 +35,5 @@ dependencies {
     implementation 'commons-logging:commons-logging:1.2'
     implementation 'commons-io:commons-io:20030203.000550'
     implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
 }

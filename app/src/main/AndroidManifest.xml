@@ -25,8 +25,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        
+        <activity android:name=".Svodnaya.KartaKontolyaNasos"></activity>
         <activity
             android:name=".Svodnaya.MegionSvodnaya"
             android:label="@string/title_activity_megion20220"
@@ -70,10 +69,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Сamera2.MainCamera2"
-            android:label="@string/app_name"
-            android:screenOrientation="fullSensor"
+            android:clearTaskOnLaunch="true"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:clearTaskOnLaunch="true" />
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
