@@ -206,7 +206,7 @@ public class Synchronization extends AppCompatActivity {
                         position = (cursor.getString(1)); }
                 } else{
                     if (cursor.getString(i) != null) {
-                        arrStolb[i - 1] = (cursor.getString(i));
+                        arrStolb[i - 2] = (cursor.getString(i));
                     }
                 }
             }

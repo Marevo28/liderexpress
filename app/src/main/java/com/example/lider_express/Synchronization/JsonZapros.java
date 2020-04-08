@@ -98,7 +98,7 @@ public class JsonZapros extends Thread {
         String strStolb = "stolb";
         for(int i = 0; i < mArray.length; i++){
                 nameValuePairs.add(new BasicNameValuePair(strStolb + countStolb, mArray[i]));
-            System.out.println("---------" + strStolb + countStolb);
+                System.out.println("---------" + strStolb + countStolb);
                 System.out.println("---------" + mArray[i]);
                 countStolb++;
         }
