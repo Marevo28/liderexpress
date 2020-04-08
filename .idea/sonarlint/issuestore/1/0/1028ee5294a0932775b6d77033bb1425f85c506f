@@ -1,0 +1,123 @@
+
+`
+java:S1124r"EReorder the modifiers to comply with the Java Language Specification.(Ú›†ùûÿÿÿÿ
+m	java:S1169"XRename this field "EditText_Kyst" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÁ£¡
+o
+java:S1450o"TRemove the "lampa" field and declare it as a local variable in the relevant methods.(ž«õ®üÿÿÿÿ
+g	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æäÈª
+r
+java:S14505"\Remove the "Button_DataNK" field and declare it as a local variable in the relevant methods.(ùà—ì
+n
+java:S1450-"XRemove the "Zakazchik" field and declare it as a local variable in the relevant methods.(§ÍÒÞ
+g
+java:S1301Ò"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+g
+java:S1301­"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+g	java:S117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëžÆ¿
+t	java:S1164"ZRename this field "TextView_DataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹×Äýûÿÿÿÿ
+Q	java:S125."<This block of commented-out lines of code should be removed.(ËÖâÑ
+=	java:S131ž""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ì¼úþÿÿÿÿ
+p	java:S116:"\Rename this field "EditText_Skvajina" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÂçm
+m	java:S1165"XRename this field "Button_DataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùà—ì
+c
+java:S1192™"GDefine a constant instead of duplicating this literal "points" 3 times.(’‘…ûûÿÿÿÿ
+z	java:S116F"`Rename this field "RadioGroup_ImManometr" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ú—Øÿÿÿÿÿ
+	java:S116J"eRename this field "RadioGroup_ManomtrProverka" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÓ³øÿÿÿÿ
+q	java:S116="WRename this field "EditText_Inv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å‘ôèøÿÿÿÿ
+m	java:S116P"XRename this field "Button_Vnesti" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âù‰
+q	java:S116h"WRename this field "strYZT_Dlina" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷«àúÿÿÿÿ
+w	java:S116D"bRename this field "RadioGroup_NalichZazeml" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÛ¯†
+=	java:S131""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+n
+java:S2737¨"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üðˆ
+=	java:S131á""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+O	java:S106ø"9Replace this use of System.out or System.err by a logger.(‰›Êã
+r	java:S116E"]Rename this field "RadioGroup_Antikor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á“Ÿ«
+
+java:S1450F"dRemove the "RadioGroup_ImManometr" field and declare it as a local variable in the relevant methods.(°ú—Øÿÿÿÿÿ
+S
+java:S1197g"8Move the array designator from the variable to the type.(…ßÛÿÿÿÿÿÿ
+t	java:S116L"_Rename this field "Button_ProvedenieYZT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚÁ¡
+q	java:S116<"WRename this field "EditText_Zav" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í³öêÿÿÿÿÿ
+ƒ
+java:S1450C"hRemove the "RadioGroup_NalichInfTable" field and declare it as a local variable in the relevant methods.(÷Šãíøÿÿÿÿ
+8	java:S131¢""Add a default case to this switch.(ƒ“¯Œ
+|
+java:S1450D"fRemove the "RadioGroup_NalichZazeml" field and declare it as a local variable in the relevant methods.(ªÛ¯†
+g
+java:S1301á"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+|
+java:S1450?"fRemove the "RadioGroup_Razmecheniye" field and declare it as a local variable in the relevant methods.(‘Ó¡á
+=	java:S131Ò""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+=	java:S131ï""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+T	java:S106ù"9Replace this use of System.out or System.err by a logger.(¬öç«úÿÿÿÿ
+g
+java:S1301ï"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+~	java:S116G"dRename this field "RadioGroup_ManometrPlomba" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï§Þ»ÿÿÿÿÿ
+=	java:S131¢""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+g
+java:S1301ý"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+i	java:S116-"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ÍÒÞ
+{
+java:S14507"`Remove the "Button_SpecProvNK" field and declare it as a local variable in the relevant methods.(·µ˜†ùÿÿÿÿ
+ƒ
+java:S1450I"hRemove the "RadioGroup_ManometrShkala" field and declare it as a local variable in the relevant methods.(ý·†Ÿüÿÿÿÿ
+w	java:S116A"cRename this field "EditText_NameBlockOborud" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª¬˜|
+g
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+y
+java:S1450L"cRemove the "Button_ProvedenieYZT" field and declare it as a local variable in the relevant methods.(ÚÁ¡
+ƒ
+java:S1450G"hRemove the "RadioGroup_ManometrPlomba" field and declare it as a local variable in the relevant methods.(Ï§Þ»ÿÿÿÿÿ
+|	java:S116;"bRename this field "EditText_Mestorojdeniye" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•€œÅøÿÿÿÿ
+w	java:S116?"bRename this field "RadioGroup_Razmecheniye" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ó¡á
+j
+java:S1104&"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ
+€	java:S116H"fRename this field "RadioGroup_ManometrIspraven" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï‡ëºùÿÿÿÿ
+~	java:S116I"dRename this field "RadioGroup_ManometrShkala" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ý·†Ÿüÿÿÿÿ
+v	java:S116N"aRename this field "RadioGroup_DefectVedom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²‘Ð™
+r	java:S116g"XRename this field "strYZT_Points" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ßÛÿÿÿÿÿÿ
+g
+java:S1301¢"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+=	java:S131­""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+=	java:S131‹""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+g
+java:S1301ž"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+H
+java:S1128"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ
+n	java:S116i"YRename this field "strYZT_Shirina" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“–„Š
+{
+java:S1450N"eRemove the "RadioGroup_DefectVedom" field and declare it as a local variable in the relevant methods.(²‘Ð™
+g
+java:S1301¯"KReplace this "switch" statement by "if" statements to increase readability.(€ÆèÔÿÿÿÿÿ
+‚
+java:S1845*"gRename field "position" to prevent any misunderstanding/clash with field "POSITION" defined on line 36.(©ùéäýÿÿÿÿ
+w
+java:S1450E"aRemove the "RadioGroup_Antikor" field and declare it as a local variable in the relevant methods.(Á“Ÿ«
+=	java:S131ý""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+f	java:S117ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Öõ½7
+r
+java:S1450P"\Remove the "Button_Vnesti" field and declare it as a local variable in the relevant methods.(âù‰
+b
+java:S1301¢"KReplace this "switch" statement by "if" statements to increase readability.(ƒ“¯Œ
+„
+java:S1450J"iRemove the "RadioGroup_ManomtrProverka" field and declare it as a local variable in the relevant methods.(ŒÓ³øÿÿÿÿ
+v	java:S1167"\Rename this field "Button_SpecProvNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·µ˜†ùÿÿÿÿ
+=	java:S131¯""Add a default case to this switch.(€ÆèÔÿÿÿÿÿ
+p
+java:S1104%"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ
+g	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß„Š´
+m	java:S116j"XRename this field "strYZT_Visota" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÇâ›
+…
+java:S1450H"jRemove the "RadioGroup_ManometrIspraven" field and declare it as a local variable in the relevant methods.(Ï‡ëºùÿÿÿÿ
+n	java:S116‹"XRename this field "Picker_DataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÒ³ž
+m
+java:S3776u"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(ž¨Œþÿÿÿÿ
+x	java:S1166"^Rename this field "TextView_SpecProvNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿âß¨üÿÿÿÿ
+=	java:S131¼""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ
+G
+java:S1172Œ"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ
+g
+java:S1301‹"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ
+~	java:S116C"dRename this field "RadioGroup_NalichInfTable" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷Šãíøÿÿÿÿ

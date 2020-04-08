@@ -1,0 +1,353 @@
+
+F
+java:S1148Î"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+N
+java:S4524º"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ8À‚ì›‘.
+F
+java:S1148Å"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+|	java:S115Õ"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(–ßîşÿÿÿÿ8Äş¼˜‘.
+C
+java:S1659º
+"%Declare "bitmap1" on a separate line.(Ï­ÌÛ8À‚ì›‘.
+^	java:S125ı"<This block of commented-out lines of code should be removed.(ÜÆÎºşÿÿÿÿ8À‚ì›‘.
+^	java:S125¶
+"<This block of commented-out lines of code should be removed.(¹ÙûÓşÿÿÿÿ8À‚ì›‘.
+r
+java:S1215²"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+X	java:S125¦"<This block of commented-out lines of code should be removed.(œ²8À‚ì›‘.
+h	java:S112¨"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+h	java:S112§"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+F
+java:S1148ä"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+~	java:S116c"]Rename this field "test_queue_blocked" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É˜™ÿÿÿÿÿ8À‚ì›‘.
+X
+java:S1161Ø":Add the "@Override" annotation above this method signature(“–ış8À‚ì›‘.
+F
+java:S1148ê"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+t	java:S116—"WRename this field "current_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÜš¡8ÎÃ˜‘.
+r
+java:S1215"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+^	java:S125ş"<This block of commented-out lines of code should be removed.(ªÚ ıÿÿÿÿ8À‚ì›‘.
+M
+java:S1066©"/Merge this if statement with the enclosing one.(Ù–¸ş8À‚ì›‘.
+h	java:S112‚"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+g
+java:S1124Z"EReorder the modifiers to comply with the Java Language Specification.(àµºÕıÿÿÿÿ8À‚ì›‘.
+|	java:S116•"ZRename this field "is_front_facing" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í°Ÿàøÿÿÿÿ8ß©¶˜‘.
+h
+java:S1192Ë"JDefine a constant instead of duplicating this literal "save to: " 4 times.(­§ÂÉ8À‚ì›‘.
+€	java:S116©"^Rename this field "store_geo_direction" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÔ°Ùùÿÿÿÿ8ÎÃ˜‘.
+]
+java:S1444a";Make this "public static test_small_queue_size" field final(‹Ùàœÿÿÿÿÿ8À‚ì›‘.
+v
+java:S3776Ò"SRefactor this method to reduce its Cognitive Complexity from 178 to the 15 allowed.(®ó´Úşÿÿÿÿ8À‚ì›‘.
+F
+java:S1148—"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+A
+java:S1148¿"#Use a logger to log this exception.(òçøì8À‚ì›‘.
+F
+java:S1148ã	"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+n
+java:S1301¯	"KReplace this "switch" statement by "if" statements to increase readability.(àĞŠ¹ıÿÿÿÿ8À‚ì›‘.
+|	java:S116W"`Rename this field "n_real_images_to_save" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í¢ÕÊ8À‚ì›‘.
+u	java:S116X"YRename this field "queue_capacity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÛ‹µ8Äş¼˜‘.
+s	java:S116"VRename this field "jpeg_images" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò½Ñ¨8À‚ì›‘.
+_	java:S107¯"BConstructor has 40 parameters, which is greater than 7 authorized.(ËŠ¿—8À‚ì›‘.
+h
+java:S1124Ú"EReorder the modifiers to comply with the Java Language Specification.(ŸâàÅúÿÿÿÿ8ß©¶˜‘.
+u	java:S115Ö"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.( åÀúÿÿÿÿ
+F
+java:S1148Â"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(È³¥8À‚ì›‘.
+x	java:S116›"VRename this field "zoom_factor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ºè§ùÿÿÿÿ8À‚ì›‘.
+z	java:S116¥"dRename this field "preference_units_distance" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ı·
+i
+java:S2142‚"FEither re-interrupt this method or rethrow the "InterruptedException".(²ı…¦ûÿÿÿÿ8À‚ì›‘.
+l
+java:S4042û"IUse "java.nio.Files#delete" here for better messages on error conditions.(ã¹ëûÿÿÿÿ8À‚ì›‘.
+h	java:S112—"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+q
+java:S3776Ú"SRefactor this method to reduce its Cognitive Complexity from 113 to the 15 allowed.(•ÁÃè8À‚ì›‘.
+^	java:S107»"<Method has 9 parameters, which is greater than 7 authorized.(‹¹ğ…şÿÿÿÿ8À‚ì›‘.
+h	java:S112ë"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+q
+java:S1192”"NDefine a constant instead of duplicating this literal " is mutable? " 5 times.(ìÈ—çşÿÿÿÿ8À‚ì›‘.
+w	java:S115Ò"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(“€Á8À‚ì›‘.
+	java:S116"_Rename this field "preference_textstamp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ó–®şÿÿÿÿ8Äş¼˜‘.
+h
+java:S1124Ø"EReorder the modifiers to comply with the Java Language Specification.(âŠä±ûÿÿÿÿ8Ó­˜‘.
+c
+java:S1124Ó"EReorder the modifiers to comply with the Java Language Specification.(êˆÉƒ8À‚ì›‘.
+h
+java:S1124Õ"EReorder the modifiers to comply with the Java Language Specification.(–ßîşÿÿÿÿ8Äş¼˜‘.
+D	java:S131Ø	""Add a default case to this switch.(àĞŠ¹ıÿÿÿÿ8À‚ì›‘.
+u
+java:S1104‘	"WMake vectorRight a static final constant or non-public and provide accessors if needed.(ÁÃ³ï8À‚ì›‘.
+D	java:S131¨	""Add a default case to this switch.(ªçÇ™úÿÿÿÿ8À‚ì›‘.
+A
+java:S1148°"#Use a logger to log this exception.(òçøì8À‚ì›‘.
+M
+java:S2093ù"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8À‚ì›‘.
+^	java:S125Œ
+"<This block of commented-out lines of code should be removed.(ÎÏÌ³øÿÿÿÿ8À‚ì›‘.
+F
+java:S1148‹"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+Y	java:S125“"<This block of commented-out lines of code should be removed.(Í­À®8À‚ì›‘.
+^	java:S125â"<This block of commented-out lines of code should be removed.(¿£°êøÿÿÿÿ8À‚ì›‘.
+i
+java:S2142Š"FEither re-interrupt this method or rethrow the "InterruptedException".(²ı…¦ûÿÿÿÿ8À‚ì›‘.
+z	java:S116š"XRename this field "exposure_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ”˜¸ıÿÿÿÿ8ÎÃ˜‘.
+w	java:S116–	"URename this field "image_info" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ÅÿÛüÿÿÿÿ8À‚ì›‘.
+>
+java:S1659º" Declare "h1" on a separate line.(±ÄÎÆ8À‚ì›‘.
+p
+java:S3776“"RRefactor this method to reduce its Cognitive Complexity from 71 to the 15 allowed.(ÕŞˆ­8À‚ì›‘.
+^	java:S125Æ"<This block of commented-out lines of code should be removed.(…ÃŒÔıÿÿÿÿ8À‚ì›‘.
+|	java:S116ƒ"_Rename this field "image_capture_intent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÚÅÛ8Äş¼˜‘.
+Y	java:S125±
+"<This block of commented-out lines of code should be removed.(¯åßì8ÎÃ˜‘.
+r
+java:S1215£"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+F
+java:S1148à"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+^	java:S107ã"<Method has 8 parameters, which is greater than 7 authorized.(£åÀ£ÿÿÿÿÿ8À‚ì›‘.
+„
+java:S1192Ğ"fDefine a constant instead of duplicating this literal "exif orientation NoClassDefFoundError" 4 times.(¯ìâò8À‚ì›‘.
+h	java:S112ÿ"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+c
+java:S1124Ò"EReorder the modifiers to comply with the Java Language Specification.(“€Á8À‚ì›‘.
+r
+java:S1215ü"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+R
+java:S1066¾"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ8À‚ì›‘.
+s	java:S116r"WRename this field "process_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ŸíÏ8À‚ì›‘.
+F
+java:S1148œ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+M
+java:S2093ø"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8À‚ì›‘.
+r
+java:S1215Æ"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+h	java:S112ñ"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+I
+java:S1168¤"+Return an empty collection instead of null.(¥¹ï8À‚ì›‘.
+u	java:S116{"TRename this field "save_base" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş¿úœúÿÿÿÿ8À‚ì›‘.
+X	java:S125Ô"<This block of commented-out lines of code should be removed.(ØÑ—Z8À‚ì›‘.
+h	java:S112Å"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+|	java:S116¬"_Rename this field "custom_tag_copyright" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ë‰¢8Äş¼˜‘.
+Q
+java:S1121±	".Extract the assignment out of this expression.(Ø”Æıÿÿÿÿ8À‚ì›‘.
+q
+java:S1192¯"NDefine a constant instead of duplicating this literal "bitmap size: " 3 times.(ØÜ®¼üÿÿÿÿ8À‚ì›‘.
+‚
+java:S3008a"`Rename this field "test_small_queue_size" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ùàœÿÿÿÿÿ8À‚ì›‘.
+w	java:S115Ô"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¯¾ÂÙ8Äş¼˜‘.
+r
+java:S1215æ"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+€
+java:S1104c"^Make test_queue_blocked a static final constant or non-public and provide accessors if needed.(É˜™ÿÿÿÿÿ8Äş¼˜‘.
+_	java:S107˜"=Method has 38 parameters, which is greater than 7 authorized.(òÑæ¾øÿÿÿÿ8À‚ì›‘.
+|	java:S115Ú"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ŸâàÅúÿÿÿÿ8ß©¶˜‘.
+i
+java:S2142ß"FEither re-interrupt this method or rethrow the "InterruptedException".(²ı…¦ûÿÿÿÿ8À‚ì›‘.
+q
+java:S3776ó	"SRefactor this method to reduce its Cognitive Complexity from 231 to the 15 allowed.(Û„¾Ö8À‚ì›‘.
+_
+java:S1126İ"AReplace this if-then-else statement by a single return statement.(ò¼‰„8À‚ì›‘.
+Y	java:S125Ä"<This block of commented-out lines of code should be removed.(¼·Ø8À‚ì›‘.
+p
+java:S3776Ç"RRefactor this method to reduce its Cognitive Complexity from 42 to the 15 allowed.(“–ış8À‚ì›‘.
+l
+java:S4042Ç"IUse "java.nio.Files#delete" here for better messages on error conditions.(ã¹ëûÿÿÿÿ8À‚ì›‘.
+r
+java:S1215à"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+ˆ	java:S116¡"fRename this field "preference_stamp_dateformat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¹±¼ùÿÿÿÿ8À‚ì›‘.
+M
+java:S2093º"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8À‚ì›‘.
+v	java:S116"TRename this field "font_size" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ºüâüÿÿÿÿ8ß©¶˜‘.
+m
+java:S1192î"JDefine a constant instead of duplicating this literal "saveUri: " 3 times.(Ó”…‰şÿÿÿÿ8À‚ì›‘.
+€	java:S116”"^Rename this field "camera_view_angle_y" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­Œìäıÿÿÿÿ8µÀĞÇ.
+|	java:S116b"[Rename this field "test_slow_saving" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç×Ëˆûÿÿÿÿ8À‚ì›‘.
+^	java:S125±"<This block of commented-out lines of code should be removed.(²ï¹ëıÿÿÿÿ8À‚ì›‘.
+c	java:S112·"FDefine and throw a dedicated exception instead of using a generic one.(Úûæ±8À‚ì›‘.
+r
+java:S1215»"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+F
+java:S1148ë	"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+p
+java:S1192±"SDefine a constant instead of duplicating this literal "do_in_background? " 4 times.(ƒ†œW8À‚ì›‘.
+r
+java:S1215å"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+D	java:S131¯	""Add a default case to this switch.(àĞŠ¹ıÿÿÿÿ8À‚ì›‘.
+…	java:S116ö"hRename this field "pending_image_average_request" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡âî8À‚ì›‘.
+Y	java:S125«"<This block of commented-out lines of code should be removed.(ìï…ƒ8À‚ì›‘.
+r
+java:S1215°"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+b
+java:S1124["EReorder the modifiers to comply with the Java Language Specification.(ıŞìú8À‚ì›‘.
+{	java:S115Z"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(àµºÕıÿÿÿÿ8À‚ì›‘.
+‡	java:S116£"eRename this field "preference_stamp_gpsformat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦şö¦üÿÿÿÿ8Äş¼˜‘.
+F
+java:S1148…"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+F
+java:S1148ö"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+v	java:S116‚"TRename this field "raw_image" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë¹ªüÿÿÿÿ8À‚ì›‘.
+^	java:S125"<This block of commented-out lines of code should be removed.(¯Û±æÿÿÿÿÿ8À‚ì›‘.
+a
+java:S1155ı	">Use isEmpty() to check whether the collection is empty or not.(†™ÃÅüÿÿÿÿ8À‚ì›‘.
+R
+java:S1066İ"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ8À‚ì›‘.
+z
+java:S1192¿"WDefine a constant instead of duplicating this literal "failed to delete temp " 4 times.(¡Ã¦˜şÿÿÿÿ8À‚ì›‘.
+R
+java:S1066ü"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ8À‚ì›‘.
+y	java:S116“"^Rename this field "camera_view_angle_x" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ìËûÿÿÿÿ
+D	java:S131‰""Add a default case to this switch.(÷Íñúÿÿÿÿ8À‚ì›‘.
+w	java:S115Ù"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¬¡¾ç8Ó­˜‘.
+‡	java:S116’"eRename this field "panorama_dir_left_to_right" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”ÿ•¾ıÿÿÿÿ8Ó­˜‘.
+l
+java:S4042½"IUse "java.nio.Files#delete" here for better messages on error conditions.(ã¹ëûÿÿÿÿ8À‚ì›‘.
+r
+java:S1215ç"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+s
+java:S1192®"UDefine a constant instead of duplicating this literal "decoded bitmap size " 3 times.(ÙÍ¶­8À‚ì›‘.
+i
+java:S2142™"FEither re-interrupt this method or rethrow the "InterruptedException".(²ı…¦ûÿÿÿÿ8À‚ì›‘.
+ƒ
+java:S1104a"aMake test_small_queue_size a static final constant or non-public and provide accessors if needed.(‹Ùàœÿÿÿÿÿ8À‚ì›‘.
+M
+java:S2093Œ"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8À‚ì›‘.
+^	java:S125¼
+"<This block of commented-out lines of code should be removed.(óÈöúüÿÿÿÿ8À‚ì›‘.
+A
+java:S1148Ñ"#Use a logger to log this exception.(òçøì8À‚ì›‘.
+R
+java:S1066È"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ8À‚ì›‘.
+Y	java:S125Ã"<This block of commented-out lines of code should be removed.(ÜÖâ«8À‚ì›‘.
+w	java:S116 "URename this field "pref_style" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àÑŒâÿÿÿÿÿ8ÎÃ˜‘.
+F
+java:S1148Í"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+A
+java:S1148Å"#Use a logger to log this exception.(òçøì8À‚ì›‘.
+x	java:S116s"WRename this field "force_suffix" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êó„Èùÿÿÿÿ8À‚ì›‘.
+F
+java:S1148ğ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+^	java:S125é"<This block of commented-out lines of code should be removed.(¦²Ìõüÿÿÿÿ8À‚ì›‘.
+|	java:S116¢"fRename this field "preference_stamp_timeformat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øª¦
+u	java:S116…"XRename this field "using_camera2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šù8ß©¶˜‘.
+y	java:S116«"\Rename this field "custom_tag_artist" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ‘€Ó8Ó­˜‘.
+X
+java:S4719Õ":Replace Charset.forName() call with StandardCharsets.UTF_8(ÔÜæ8À‚ì›‘.
+h	java:S112ñ"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+c
+java:S1124×"EReorder the modifiers to comply with the Java Language Specification.(áæäô8Ó­˜‘.
+h	java:S112
+"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+F
+java:S1148§"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+v	java:S115["ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ıŞìú8À‚ì›‘.
+|	java:S115Ø"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(âŠä±ûÿÿÿÿ8Ó­˜‘.
+u	java:S116ª"XRename this field "geo_direction" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘¯·ú8À‚ì›‘.
+p
+java:S3776±"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(…ª¦¬8À‚ì›‘.
+r
+java:S1215 "TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+n
+java:S1301Ø	"KReplace this "switch" statement by "if" statements to increase readability.(àĞŠ¹ıÿÿÿÿ8À‚ì›‘.
+w	java:S115Ó"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(êˆÉƒ8À‚ì›‘.
+u	java:S116‘"_Rename this field "gyro_rotation_matrix" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€Öò
+h	java:S112­"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+F
+java:S1148ß"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+y	java:S116"\Rename this field "do_auto_stabilise" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ì†8Äş¼˜‘.
+V
+java:S1854ñ"8Remove this useless assignment to local variable "ypos".(ÛûÌİ8À‚ì›‘.
+	java:S116˜"nRename this field "preference_hdr_contrast_enhancement" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°­êáüÿÿÿÿ8À‚ì›‘.
+F
+java:S1148š"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+c
+java:S1124Ù"EReorder the modifiers to comply with the Java Language Specification.(¬¡¾ç8Ó­˜‘.
+l
+java:S4042ß"IUse "java.nio.Files#delete" here for better messages on error conditions.(Ô‘Û´ûÿÿÿÿ8À‚ì›‘.
+]	java:S125G"<This block of commented-out lines of code should be removed.(¡ÍÃóüÿÿÿÿ8À‚ì›‘.
+g
+java:S1192‘"IUse already-defined constant 'TAG' instead of duplicating its value here.(ÕÃô8À‚ì›‘.
+F
+java:S1148÷"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+A
+java:S1148"#Use a logger to log this exception.(òçøì8À‚ì›‘.
+o
+java:S3776ü"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(«¼®~8À‚ì›‘.
+p
+java:S3776õ"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(¥Ÿ’8À‚ì›‘.
+Y	java:S125¯
+"<This block of commented-out lines of code should be removed.(¥À–š8À‚ì›‘.
+h	java:S112û"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+M
+java:S2093¯"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8À‚ì›‘.
+_	java:S107ß"=Method has 40 parameters, which is greater than 7 authorized.(ş±Ïøÿÿÿÿ8À‚ì›‘.
+v
+java:S1104“	"XMake vectorScreen a static final constant or non-public and provide accessors if needed.(•À’Ä8Äş¼˜‘.
+r
+java:S1215¡"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+s	java:S116t"XRename this field "suffix_offset" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÒİ18Äş¼˜‘.
+r
+java:S1215"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+v
+java:S3776ã"SRefactor this method to reduce its Cognitive Complexity from 240 to the 15 allowed.(£åÀ£ÿÿÿÿÿ8À‚ì›‘.
+u
+java:S3776‹"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(Ş»ÀÖüÿÿÿÿ8À‚ì›‘.
+t	java:S116"WRename this field "image_format" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë’¤±8À‚ì›‘.
+c
+java:S1124Ô"EReorder the modifiers to comply with the Java Language Specification.(¯¾ÂÙ8Äş¼˜‘.
+l
+java:S4042Ü"IUse "java.nio.Files#delete" here for better messages on error conditions.(ã¹ëûÿÿÿÿ8À‚ì›‘.
+‰	java:S116¤"gRename this field "preference_stamp_geo_address" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯ÑÁüÿÿÿÿ8Ó­˜‘.
+t	java:S116H"XRename this field "main_activity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ì³Ü8À‚ì›‘.
+a
+java:S1124Ö"EReorder the modifiers to comply with the Java Language Specification.( åÀúÿÿÿÿ
+R
+java:S1066à"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ8À‚ì›‘.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öÜ ”üÿÿÿÿ
+Y	java:S125¬"<This block of commented-out lines of code should be removed.(©€Å8À‚ì›‘.
+t	java:S116¦"XRename this field "panorama_crop" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å‚8µÀĞÇ.
+|	java:S116V"[Rename this field "n_images_to_save" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øµ‡ßıÿÿÿÿ8À‚ì›‘.
+h	java:S112û	"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‚ì›‘.
+q
+java:S1104’	"TMake vectorUp a static final constant or non-public and provide accessors if needed.(ª„x8À‚ì›‘.
+…	java:S116„"cRename this field "image_capture_intent_uri" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı£³àûÿÿÿÿ8Äş¼˜‘.
+P
+java:S1199Ò	"-Extract this nested code block into a method.(÷•û¨üÿÿÿÿ8À‚ì›‘.
+e
+java:S2184¾"GCast one of the operands of this multiplication operation to a "float".(İöîõ8À‚ì›‘.
+~
+java:S1104b"\Make test_slow_saving a static final constant or non-public and provide accessors if needed.(Ç×Ëˆûÿÿÿÿ8À‚ì›‘.
+x	java:S116"VRename this field "level_angle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÜ×¬ùÿÿÿÿ8Äş¼˜‘.
+v	java:S116œ"[Rename this field "preference_stamp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÓì¥ıÿÿÿÿ
+P
+java:S1199©	"-Extract this nested code block into a method.(¦Äºÿÿÿÿÿ8À‚ì›‘.
+p
+java:S3776Ÿ"RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(Å¯˜•8À‚ì›‘.
+r
+java:S1215¼"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+u	java:S116"XRename this field "image_quality" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Êù§8À‚ì›‘.
+F
+java:S1148Ô"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8À‚ì›‘.
+w	java:S115×"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(áæäô8Ó­˜‘.
+X	java:S125\"<This block of commented-out lines of code should be removed.(ÚõÆ»8À‚ì›‘.
+{	java:S116§"YRename this field "store_location" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı„’˜úÿÿÿÿ8ß©¶˜‘.
+^	java:S125Ê"<This block of commented-out lines of code should be removed.(ÑŒ²°şÿÿÿÿ8À‚ì›‘.
+_	java:S107û"=Method has 35 parameters, which is greater than 7 authorized.(Ïñ­şÿÿÿÿ8À‚ì›‘.
+p
+java:S3776ß"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(ÀäúÚ8À‚ì›‘.
+p
+java:S3776	"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(‹¨Å…8À‚ì›‘.
+r
+java:S1215¦"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+r
+java:S1192Ÿ"UDefine a constant instead of duplicating this literal "bitmap is mutable?: " 3 times.(– ­8À‚ì›‘.
+u	java:S116­"XRename this field "sample_factor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÌ–²8ß©¶˜‘.
+r
+java:S1215·"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“8À‚ì›‘.
+n
+java:S1301¨	"KReplace this "switch" statement by "if" statements to increase readability.(ªçÇ™úÿÿÿÿ8À‚ì›‘.

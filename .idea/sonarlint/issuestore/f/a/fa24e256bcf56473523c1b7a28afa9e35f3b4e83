@@ -1,0 +1,32 @@
+
+
+java:S1192+"wDefine a constant instead of duplicating this literal "shouldn't be requesting permissions for pre-Android M!" 6 times.(‹Òö“
+I
+java:S1199Ë"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+I
+java:S1199ß"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+I
+java:S1199ó"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+I
+java:S1199ˆ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+I
+java:S1199£"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä“£‚
+f	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úÎˆô
+k	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¦¦ïıÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öÜ ”üÿÿÿÿ
+m	java:S116"XRename this field "main_activity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ì³Ü
+Z
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÈÑél
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(éšëÕıÿÿÿÿ
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(†‚Ãüÿÿÿÿ
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¨†´»üÿÿÿÿ
+h
+java:S3776&"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(šÂìú
+C
+java:S1172Z"-Remove this unused method parameter "dialog".(ğÂ¤
+i
+java:S3776À"RRefactor this method to reduce its Cognitive Complexity from 50 to the 15 allowed.(Úúá¾

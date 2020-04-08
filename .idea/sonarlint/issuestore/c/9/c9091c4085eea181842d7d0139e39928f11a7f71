@@ -1,0 +1,14 @@
+
+}	java:S116"cRename this field "magnetic_accuracy_dialog" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼§…ÿÿÿÿÿ
+v	java:S116"\Rename this field "magnetic_accuracy" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†åĞĞûÿÿÿÿ
+V	java:S125k"<This block of commented-out lines of code should be removed.(£‘¾şøÿÿÿÿ
+	java:S116—"iRename this field "shown_magnetic_accuracy_dialog" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Åğñ¬
+]
+java:S1126Ê"AReplace this if-then-else statement by a single return statement.(Áßùüÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­…üÿÿÿÿ
+m	java:S116"XRename this field "main_activity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ì³Ü
+i
+java:S3776œ"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(£ÈĞø
+m
+java:S37764"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(½•ıîıÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öÜ ”üÿÿÿÿ

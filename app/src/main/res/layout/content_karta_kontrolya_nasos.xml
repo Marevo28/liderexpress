@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="3000dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Дата НК"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/TextView_DataNK"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Дата НК" />
+
+                    <Button
+                        android:id="@+id/Button_DataNK"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Выбрать дату" />
+                </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="ФИО специалиста (-ов), проводившего (-их) НК"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/TextView_SpecProvNK"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="ФИО специалиста (-ов), выезжающего (-их) на объект"/>
+
+                <Button
+                    android:id="@+id/Button_SpecProvNK"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Выбрать " />
+            </LinearLayout>
+
+
+            <!--   Куст   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:gravity="center_horizontal|center_vertical"
+                android:text=" Куст"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/EditText_Kyst"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:hint="Куст"/>
+
+            <!--   Скважина   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:gravity="center_horizontal|center_vertical"
+                android:text=" Скважина"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/EditText_Skvajina"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:hint="Скважина"/>
+
+            <!--   Месторождение   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:gravity="center_horizontal|center_vertical"
+                android:text=" Месторождение"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/EditText_Mestorojdenie"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:hint="Месторождение"/>
+
+            <!--   Зав. №   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text=" Зав. №"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/EditText_Zav"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:hint="Зав. №"/>
+
+
+            <!--   Инв. №   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text=" Инв. №"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/EditText_Inv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:hint=" Инв. №"/>
+
+
+            <!--  Работоспособное состояние   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Работоспособное состояние?"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <RadioGroup
+                android:id="@+id/RadioGroup_Sostoyanie"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/Sostoyanie_Da"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Да" />
+
+                <RadioButton
+                    android:id="@+id/Sostoyanie_Net"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Нет" />
+            </RadioGroup>
+
+            <!--  маркировки завода   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Наличие маркировки завода изготовителя"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/RadioGroup_MarkZavod"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Nal_MarkZavod_Da"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Есть" />
+                <RadioButton
+                    android:id="@+id/Nal_MarkZavod_Net"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Нет" />
+            </RadioGroup>
+            <RadioGroup
+                android:id="@+id/RadioGroup_MarkZavodInf"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Nal_MarkZavodInf_Da"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Информативная" />
+                <RadioButton
+                    android:id="@+id/Nal_MarkZavodInf_Net"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Неинформативная" />
+            </RadioGroup>
+            <!--  маркировки предприятия   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Наличие маркировки предприятия"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/RadioGroup_MarkOrganiz"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Nal_MarkOrganiz_Da"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Есть" />
+                <RadioButton
+                    android:id="@+id/Nal_MarkOrganiz_Net"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Нет" />
+            </RadioGroup>
+            <RadioGroup
+                android:id="@+id/RadioGroup_MarkOrganizInf"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Nal_MarkOrganizInf_Da"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Информативная" />
+                <RadioButton
+                    android:id="@+id/Nal_MarkOrganizInf_Net"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Неинформативная" />
+            </RadioGroup>
+
+            <!--  Наличие заземления   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Наличие заземления"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <RadioGroup
+                android:id="@+id/RadioGroup_Nal_Zazemleniya"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Nal_Zazemleniya_Da"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Есть" />
+                <RadioButton
+                    android:id="@+id/Nal_Zazemleniya_Net"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Нет" />
+            </RadioGroup>
+            <!--  Состояние фундамента   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Состояние фундамента"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <RadioGroup
+                android:id="@+id/RadioGroup_Fundament"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Fundament_Da"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Удовлентворительное" />
+                <RadioButton
+                    android:id="@+id/Fundament_Net"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Неудовлетворительное" />
+            </RadioGroup>
+
+            <!--  Антикорозийное покрытие   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Антикорозийное покрытие?"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/RadioGroup_Anticor"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/Anticor_Udovl"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Удовлетворительное" />
+
+                <RadioButton
+                    android:id="@+id/Anticor_NeUdovl"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Неудовлетворительное" />
+
+            </RadioGroup>
+
+            <!--  Протечки рабочей среды   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Протечки рабочей среды"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <RadioGroup
+                android:id="@+id/RadioGroup_Flow"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/Flow_Da"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Да" />
+
+                <RadioButton
+                    android:id="@+id/Flow_Net"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Нет" />
+            </RadioGroup>
+            <!--  Предохранительный клапан   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Предохранительный клапан (состояние)"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/RadioGroup_Klapan"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Klapan_Da"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Есть" />
+                <RadioButton
+                    android:id="@+id/Klapan_Net"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Нет" />
+            </RadioGroup>
+            <RadioGroup
+                android:id="@+id/RadioGroup_KlapanSost"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/KlapanSost_Udovl"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Удовлетворительное" />
+                <RadioButton
+                    android:id="@+id/KlapanSost_Neudovl"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Неудовлетворительное" />
+            </RadioGroup>
+            <!--  Стрелки направления среды   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Стрелки направления среды"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <RadioGroup
+                android:id="@+id/RadioGroup_ArrowFlow"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/ArrowFlow_Da"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Да" />
+
+                <RadioButton
+                    android:id="@+id/ArrowFlow_Net"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Нет" />
+            </RadioGroup>
+            <!--   Дефекты электродвигателя   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Дефекты электродвигателя"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/EditText_DefEngine"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:hint="Отсутствуют"/>
+            <!--   Дефекты корпуса насоса   -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Дефекты корпуса насоса"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/EditText_DefKorpus"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:hint="Отсутствуют"/>
+            <!--  Вибрация   -->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/colorPrimary"
+                android:showDividers="middle">
+                <TableRow>
+                <TextView
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_span="6"
+                    android:text="Замеры вибрации"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="1" />
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="X"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер"/>
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="2" />
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="X"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="1" />
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Y"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер"/>
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="2" />
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Y"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="1" />
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Z"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер"/>
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="2" />
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Z"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="3" />
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="X"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер"/>
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="4" />
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="X"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="3" />
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Y"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер"/>
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="4" />
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Y"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="3" />
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Z"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер"/>
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="4" />
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Z"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер"/>
+                </TableRow>
+            </TableLayout>
+
+            <!--  Толщинометрия   -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/colorPrimary"
+                android:showDividers="middle">
+                <TableRow>
+                    <TextView
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:layout_span="6"
+                        android:text="Замеры толщинометрии"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Всасывающий патрубок"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="Диаметр"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер 1"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер 2"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер 3"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер 4"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Напорный патрубок"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="Диаметр"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер 1"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер 2"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер 3"/>
+                    <EditText
+                        android:textSize="18sp"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Замер 4"/>
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Ведомость дефектов оформлена"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <RadioGroup
+                android:id="@+id/RadioGroup_Vedomost"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Vedomost_Da"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Да" />
+                <RadioButton
+                    android:id="@+id/Vedomost_Net"
+                    android:layout_width="198dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:text="Нет" />
+            </RadioGroup>
+
+
+            <Button
+                android:id="@+id/Button_Vnest"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="Внести" />
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

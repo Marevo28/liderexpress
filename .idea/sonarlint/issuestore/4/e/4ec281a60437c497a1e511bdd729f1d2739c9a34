@@ -1,69 +1,92 @@
 
-W
-java:S4973§"9Use the "equals" method if value comparison was intended.(íˆóş8ìµ…­‰.
-s	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Åçæıÿÿÿÿ8ìµ…­‰.
-t
-java:S3776]"RRefactor this method to reduce its Cognitive Complexity from 42 to the 15 allowed.(¨Œşÿÿÿÿ8ìµ…­‰.
-S
-java:S2696`"6Make the enclosing method "static" or remove this set.(ÆÄÎ8ìµ…­‰.
-n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¨‚º8ìµ…­‰.
-n	java:S117ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øªíé8ìµ…­‰.
-n	java:S117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÌ„í8ìµ…­‰.
-p	java:S116I"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ÍÒŞ8ìµ…­‰.
-s	java:S117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø­®„ÿÿÿÿÿ8ìµ…­‰.
-F
-java:S1185á"(Remove this method to simply inherit it.(ßû¢½8ìµ…­‰.
-n
-java:S1301ı"KReplace this "switch" statement by "if" statements to increase readability.(€ÆèÔÿÿÿÿÿ8ìµ…­‰.
-l	java:S116G"PRename this field "Papka" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µĞÉğ8ìµ…­‰.
-e
-java:S1126¼"BReplace this if-then-else statement by a single method invocation.(Àä’«üÿÿÿÿ8ìµ…­‰.
-^	java:S125 "<This block of commented-out lines of code should be removed.(¤¤ô£şÿÿÿÿ8ìµ…­‰.
-q
-java:S1192˜"SUse already-defined constant 'APP_ZAKAZCHIK' instead of duplicating its value here.(í‰Üé8ìµ…­‰.
-d
-java:S1192Û"FDefine a constant instead of duplicating this literal "Papka" 3 times.(³…˜Í8ìµ…­‰.
-l	java:S116E"QRename this field "NameTu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©Ÿb8ìµ…­‰.
-L
-java:S1068J"/Remove this unused "intposition" private field.(·îûï8ìµ…­‰.
+Y
+java:S2696Ö"6Make the enclosing method "static" or remove this set.(ËÙÚÁúÿÿÿÿ8±¬Ç¤”.
 l
-java:S1192Ù"IDefine a constant instead of duplicating this literal "position" 5 times.(¶êÀûşÿÿÿÿ8ìµ…­‰.
-s	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íØ¯ùÿÿÿÿ8ìµ…­‰.
-^	java:S125›"<This block of commented-out lines of code should be removed.(±Ö¤úÿÿÿÿ8ìµ…­‰.
-?	java:S131Ï""Add a default case to this switch.(å’ÎÑ8ìµ…­‰.
+java:S3008L"ORename this field "Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öû‹¬8Š¸ş¿‘.
+^	java:S125™"<This block of commented-out lines of code should be removed.(¯Ô¶…ıÿÿÿÿ8±¬Ç¤”.
+Y	java:S125…"<This block of commented-out lines of code should be removed.(¡Õ±š8±¬Ç¤”.
+l	java:S116I"QRename this field "NameTu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©Ÿb8ìµ…­‰.
 F
-java:S1128&")Remove this unused import 'java.io.File'.(†Ğ¥Å8ìµ…­‰.
-Y
-java:S2696¿"6Make the enclosing method "static" or remove this set.(½´ºäıÿÿÿÿ8ìµ…­‰.
-k
-java:S11041"OMake mDb a static final constant or non-public and provide accessors if needed.(õ¿î"8ìµ…­‰.
+java:S1125—"(Remove the literal "true" boolean value.(ÑØ°Î8±¬Ç¤”.
+e
+java:S1854‰"BRemove this useless assignment to local variable "SelectedCamera".(À¤ÆŞşÿÿÿÿ8±¬Ç¤”.
+F
+java:S1125Ò"(Remove the literal "true" boolean value.(ÑØ°Î8±¬Ç¤”.
 S
-java:S2696€"6Make the enclosing method "static" or remove this set.(ËÆåu8ìµ…­‰.
-n	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨Å¾ş8ìµ…­‰.
-Y	java:S125Œ"<This block of commented-out lines of code should be removed.(úü¢8ìµ…­‰.
-i
-java:S1301Ï"KReplace this "switch" statement by "if" statements to increase readability.(å’ÎÑ8ìµ…­‰.
-n	java:S117Å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆá©†8ìµ…­‰.
-n	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ¨±¤8ìµ…­‰.
-p	java:S116H"ORename this field "Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É¬­Áøÿÿÿÿ8ìµ…­‰.
+java:S2696‡"6Make the enclosing method "static" or remove this set.(ËÆåu8±¬Ç¤”.
+^	java:S125³"<This block of commented-out lines of code should be removed.(¤¤ô£şÿÿÿÿ8±¬Ç¤”.
+Y	java:S125õ"<This block of commented-out lines of code should be removed.(öª¯ê8±¬Ç¤”.
+^	java:S125"<This block of commented-out lines of code should be removed.(¼á„éûÿÿÿÿ8±¬Ç¤”.
+V
+java:S1481‰"3Remove this unused "SelectedCamera" local variable.(À¤ÆŞşÿÿÿÿ8±¬Ç¤”.
+^	java:S125‡"<This block of commented-out lines of code should be removed.(ü¤ºìÿÿÿÿÿ8±¬Ç¤”.
+n
+java:S1301§"KReplace this "switch" statement by "if" statements to increase readability.(€ÆèÔÿÿÿÿÿ8¼ÀÕ˜‘.
 Y
-java:S2696‹"6Make the enclosing method "static" or remove this set.(ËÙÚÁúÿÿÿÿ8ìµ…­‰.
+java:S2696ƒ"6Make the enclosing method "static" or remove this set.(±¼À÷üÿÿÿÿ8±¬Ç¤”.
+k
+java:S11045"OMake mDb a static final constant or non-public and provide accessors if needed.(õ¿î"8ìµ…­‰.
+Y
+java:S2696ğ"6Make the enclosing method "static" or remove this set.(½´ºäıÿÿÿÿ8±¬Ç¤”.
+^	java:S125“"<This block of commented-out lines of code should be removed.(¼á„éûÿÿÿÿ8±¬Ç¤”.
+t
+java:S3776c"RRefactor this method to reduce its Cognitive Complexity from 46 to the 15 allowed.(¨Œşÿÿÿÿ8±¬Ç¤”.
 T
-java:S2696‡"6Make the enclosing method "static" or remove this set.(Ä§Ã8ìµ…­‰.
-Y
-java:S2696À"6Make the enclosing method "static" or remove this set.(œ‘ó•şÿÿÿÿ8ìµ…­‰.
-n	java:S117ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óÔ›Œ8ìµ…­‰.
-Y	java:S125ş"<This block of commented-out lines of code should be removed.(îÇ˜¬8ìµ…­‰.
+java:S2696ñ"6Make the enclosing method "static" or remove this set.(¢ÆÉ÷8±¬Ç¤”.
 E
-java:S14441")Make this "public static mDb" field final(õ¿î"8ìµ…­‰.
-s	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å­¹¦ûÿÿÿÿ8ìµ…­‰.
-F
-java:S1185å"(Remove this method to simply inherit it.(öÿÕÅ8ìµ…­‰.
-D	java:S131ı""Add a default case to this switch.(€ÆèÔÿÿÿÿÿ8ìµ…­‰.
-O
-java:S1128"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8ìµ…­‰.
-F	java:S108Œ")Either remove or fill this block of code.(ªå×‚8ìµ…­‰.
+java:S14445")Make this "public static mDb" field final(õ¿î"8ìµ…­‰.
+r
+java:S3008K"PRename this field "Papka" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Ï““şÿÿÿÿ8Óıı¿‘.
+D	java:S131§""Add a default case to this switch.(€ÆèÔÿÿÿÿÿ8±¬Ç¤”.
+e
+java:S1126Ó"BReplace this if-then-else statement by a single method invocation.(¦¶ı”şÿÿÿÿ8ïòÔ¤”.
+i
+java:S1301Š"KReplace this "switch" statement by "if" statements to increase readability.(å’ÎÑ8¼ÀÕ˜‘.
+q	java:S116O"PRename this field "Karta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É¶ıüüÿÿÿÿ8ÈÅÇ¤”.
+K
+java:S1068O")Remove this unused "Karta" private field.(É¶ıüüÿÿÿÿ8ù¬Ñ¤”.
+Y
+java:S2696™"6Make the enclosing method "static" or remove this set.(Î¾¯¡ıÿÿÿÿ8±¬Ç¤”.
+^	java:S125ï"<This block of commented-out lines of code should be removed.(¼á„éûÿÿÿÿ8±¬Ç¤”.
+L
+java:S1068P"/Remove this unused "intposition" private field.(·îûï8±¬Ç¤”.
+S
+java:S2696f"6Make the enclosing method "static" or remove this set.(ÆÄÎ8±¬Ç¤”.
+F	java:S108×")Either remove or fill this block of code.(”ı¾8±¬Ç¤”.
+p	java:S116M"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ÍÒŞ8ìµ…­‰.
+F	java:S108Ç")Either remove or fill this block of code.(ªå×‚8±¬Ç¤”.
+^	java:S125®"<This block of commented-out lines of code should be removed.(±Ö¤úÿÿÿÿ8±¬Ç¤”.
+T
+java:S2696ß"6Make the enclosing method "static" or remove this set.(×÷ÌÜ8±¬Ç¤”.
+T
+java:S2696Ó"6Make the enclosing method "static" or remove this set.(Ä§Ã8±¬Ç¤”.
+Y
+java:S2696"6Make the enclosing method "static" or remove this set.(ËÙÚÁúÿÿÿÿ8±¬Ç¤”.
+T
+java:S2696•"6Make the enclosing method "static" or remove this set.(Úúû£8±¬Ç¤”.
+{
+java:S1104Q"YMake formattedDate a static final constant or non-public and provide accessors if needed.(¢ºğèûÿÿÿÿ8å†‹­‘.
+F	java:S108Ÿ")Either remove or fill this block of code.(”ı¾8±¬Ç¤”.
 ¿
-java:S1192Ë"›Define a constant instead of duplicating this literal "Ğ’Ñ‹Ğ±ĞµÑ€Ğ¸Ñ‚Ğµ ÑÑƒÑ‰ĞµÑÑ‚Ğ²ÑƒÑÑ‰ÑƒÑ Ğ¿Ğ¾Ğ·Ğ¸Ñ†Ğ¸Ñ Ğ¸Ğ»Ğ¸ Ğ¾Ğ±Ğ½Ğ¾Ğ²Ğ¸Ñ‚Ğµ Ğ±Ğ°Ğ·Ñƒ!" 3 times.(Â´şÿÿÿÿ8ìµ…­‰.
-u
-java:S2737"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ8ìµ…­‰.
+java:S1192â"›Define a constant instead of duplicating this literal "Ğ’Ñ‹Ğ±ĞµÑ€Ğ¸Ñ‚Ğµ ÑÑƒÑ‰ĞµÑÑ‚Ğ²ÑƒÑÑ‰ÑƒÑ Ğ¿Ğ¾Ğ·Ğ¸Ñ†Ğ¸Ñ Ğ¸Ğ»Ğ¸ Ğ¾Ğ±Ğ½Ğ¾Ğ²Ğ¸Ñ‚Ğµ Ğ±Ğ°Ğ·Ñƒ!" 3 times.(Â´şÿÿÿÿ8ìµ…­‰.
+Y
+java:S2696ñ"6Make the enclosing method "static" or remove this set.(œ‘ó•şÿÿÿÿ8±¬Ç¤”.
+F
+java:S1185 "(Remove this method to simply inherit it.(öÿÕÅ8±¬Ç¤”.
+l
+java:S1192É"IDefine a constant instead of duplicating this literal "position" 3 times.(“ÕÆ³øÿÿÿÿ8şöß¤”.
+W
+java:S4973º"9Use the "equals" method if value comparison was intended.(íˆóş8„‹³ï‘.
+Y	java:S125¨"<This block of commented-out lines of code should be removed.(îÇ˜¬8±¬Ç¤”.
+F
+java:S1185œ"(Remove this method to simply inherit it.(ßû¢½8±¬Ç¤”.
+S
+java:S2696§"6Make the enclosing method "static" or remove this set.(ôè68±¬Ç¤”.
+q
+java:S1192«"SUse already-defined constant 'APP_ZAKAZCHIK' instead of duplicating its value here.(í‰Üé8 ´¬‘.
+Y	java:S125ó"<This block of commented-out lines of code should be removed.(¡Õ±š8±¬Ç¤”.
+Y	java:S125—"<This block of commented-out lines of code should be removed.(¡Õ±š8±¬Ç¤”.
+Y	java:S125¶"<This block of commented-out lines of code should be removed.(úü¢8±¬Ç¤”.
+T
+java:S2696˜"6Make the enclosing method "static" or remove this set.(Ä§Ã8±¬Ç¤”.
+?	java:S131Š""Add a default case to this switch.(å’ÎÑ8±¬Ç¤”.

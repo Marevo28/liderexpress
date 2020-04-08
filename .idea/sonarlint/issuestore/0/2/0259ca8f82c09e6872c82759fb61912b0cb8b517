@@ -1,0 +1,105 @@
+
+h
+java:S2147ê"ECombine this catch with the one at line 998, which has the same body.(Ÿ¬á´ÿÿÿÿÿ8üˆ¸­‘.
+E
+java:S1659†""Declare "size" on a separate line.(’×…´úÿÿÿÿ8È¯º­‘.
+E
+java:S1659""Declare "size" on a separate line.(’×…´úÿÿÿÿ8È¯º­‘.
+v	java:S135ç"YReduce the total number of break and continue statements in this loop to use at most one.(êíÏ8È¯º­‘.
+p
+java:S3776˜"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(Ñï§8È¯º­‘.
+p
+java:S3776¬"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(½Ñ”²8È¯º­‘.
+F
+java:S1148‡"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8È¯º­‘.
+h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8È¯º­‘.
+v
+java:S3776š"SRefactor this method to reduce its Cognitive Complexity from 143 to the 15 allowed.(ŸˆÊªøÿÿÿÿ8È¯º­‘.
+z	java:S116B"YRename this field "failed_to_scan" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øéıÀúÿÿÿÿ8ŞÌŞ«‘.
+?	java:S131Ø""Add a default case to this switch.(ÜŸ•8È¯º­‘.
+p
+java:S3776ƒ"RRefactor this method to reduce its Cognitive Complexity from 51 to the 15 allowed.(Îçñæ8È¯º­‘.
+^	java:S125"<This block of commented-out lines of code should be removed.(¬ÿ›­ÿÿÿÿÿ8ŞÌŞ«‘.
+F
+java:S1148è"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8üˆ¸­‘.
+Y	java:S125ê"<This block of commented-out lines of code should be removed.(Ã¡÷8ŞÌŞ«‘.
+h	java:S112ã"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8È¯º­‘.
+F
+java:S1148Ä"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8È¯º­‘.
+g
+java:S3027ï"JPut single-quotes around '.' to use the faster "lastIndexOf(char)" method.(õ“ìA8È¯º­‘.
+U
+java:S2589º"7Remove this expression which always evaluates to "true"(Û­¯…8È¯º­‘.
+t	java:S116Ë"RRename this field "DateNow" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ºß¶ıÿÿÿÿ8·ï¹­‘.
+X	java:S125î"<This block of commented-out lines of code should be removed.(•¾õH8È¯º­‘.
+d
+java:S3027î"FPut single-quotes around '.' to use the faster "indexOf(char)" method.(¬×¼¢8È¯º­‘.
+h
+java:S2147‰"ECombine this catch with the one at line 518, which has the same body.(Ú—‰ÿøÿÿÿÿ8È¯º­‘.
+Y	java:S125™"<This block of commented-out lines of code should be removed.(ƒ¯Ü8È¯º­‘.
+F
+java:S1148ë"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8È¯º­‘.
+^	java:S125Ô"<This block of commented-out lines of code should be removed.(é•“èûÿÿÿÿ8üˆ¸­‘.
+K
+java:S1199Î"-Extract this nested code block into a method.(ßëÃµ8È¯º­‘.
+f
+java:S3986Û"HMake sure that Week Year "YYYY" is expected here instead of Year "yyyy".(è˜æÒ8üúË­‘.
+c
+java:S3027ã"FPut single-quotes around '.' to use the faster "indexOf(char)" method.(İ€Õ8È¯º­‘.
+F
+java:S1148Ï"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8È¯º­‘.
+^	java:S125„"<This block of commented-out lines of code should be removed.(åÏŒıûÿÿÿÿ8È¯º­‘.
+^	java:S125İ"<This block of commented-out lines of code should be removed.(‹ÜŸ½üÿÿÿÿ8È¯º­‘.
+j
+java:S1192"GDefine a constant instead of duplicating this literal "path: " 3 times.(šãå–úÿÿÿÿ8È¯º­‘.
+^	java:S125"<This block of commented-out lines of code should be removed.(İ±­¥şÿÿÿÿ8ŞÌŞ«‘.
+y	java:S116<"]Rename this field "last_media_scanned" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äªÆ–8ŞÌŞ«‘.
+F
+java:S1148ò"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8È¯º­‘.
+h
+java:S2147í"ECombine this catch with the one at line 998, which has the same body.(ñ“Š±üÿÿÿÿ8È¯º­‘.
+F
+java:S1148ª"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8È¯º­‘.
+F
+java:S1148Á"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8È¯º­‘.
+F
+java:S1148È"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8È¯º­‘.
+O
+java:S2692î"10 is a valid index, but is ignored by this check.(¬×¼¢8È¯º­‘.
+]	java:S125,"<This block of commented-out lines of code should be removed.(íê³éıÿÿÿÿ8ŞÌŞ«‘.
+^	java:S125ã"<This block of commented-out lines of code should be removed.(é¥èúÿÿÿÿ8ŞÌŞ«‘.
+F
+java:S1148¢"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8È¯º­‘.
+h
+java:S3027ä"JPut single-quotes around '.' to use the faster "lastIndexOf(char)" method.(¥Şİ©8È¯º­‘.
+_
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(ªÆ­“8È¯º­‘.
+P
+java:S1199Ø"-Extract this nested code block into a method.(ıÁùÿÿÿÿÿ8È¯º­‘.
+X	java:S125Ù"<This block of commented-out lines of code should be removed.(Å¼ù-8üˆ¸­‘.
+u
+java:S3776ù"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.( ¦Á’üÿÿÿÿ8È¯º­‘.
+^	java:S125³"<This block of commented-out lines of code should be removed.(•ì©Äÿÿÿÿÿ8ŞÌŞ«‘.
+^	java:S125·"<This block of commented-out lines of code should be removed.(ªïû°ÿÿÿÿÿ8È¯º­‘.
+p
+java:S3776Ş"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(€ôˆÅ8ŞÌŞ«‘.
+|
+java:S1104B"ZMake failed_to_scan a static final constant or non-public and provide accessors if needed.(øéıÀúÿÿÿÿ8ŞÌŞ«‘.
+Y	java:S125›"<This block of commented-out lines of code should be removed.(±…Î«8ŞÌŞ«‘.
+J
+java:S1199˜"-Extract this nested code block into a method.(‰Â—8È¯º­‘.
+F
+java:S1148‹"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8È¯º­‘.
+P
+java:S1199Ó"-Extract this nested code block into a method.(´ÏØùûÿÿÿÿ8È¯º­‘.
+t
+java:S3776Y"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(í„Íìúÿÿÿÿ8ŞÌŞ«‘.
+i
+java:S1192Ü"FDefine a constant instead of duplicating this literal "video" 3 times.(ØÑ‹Âÿÿÿÿÿ8È¯º­‘.
+g
+java:S1124?"EReorder the modifiers to comply with the Java Language Specification.(ÔÆØ‘ûÿÿÿÿ8ŞÌŞ«‘.
+N
+java:S2692ã"10 is a valid index, but is ignored by this check.(İ€Õ8È¯º­‘.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öÜ ”üÿÿÿÿ
+v
+java:S1104Ë"SMake DateNow a static final constant or non-public and provide accessors if needed.(·ºß¶ıÿÿÿÿ8·ï¹­‘.

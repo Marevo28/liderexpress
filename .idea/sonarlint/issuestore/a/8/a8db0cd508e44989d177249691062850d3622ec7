@@ -1,121 +1,152 @@
 
-D	java:S131•""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-x	java:S116="WRename this field "PickDataSpec" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â‘ìßûÿÿÿÿ8êµ…­‰.
+q	java:S1169"URename this field "PickExpert" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êª»Ó8êµ…­‰.
+{	java:S116h"ZRename this field "ZakazchikDefect" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢À—™ÿÿÿÿÿ8êµ…­‰.
+D	java:S131í""Add a default case to this switch.(û¼±ÿşÿÿÿÿ8çÑ™Ë.
+j
+java:S1192É"GDefine a constant instead of duplicating this literal "people" 5 times.(¹¡èŸøÿÿÿÿ8êµ…­‰.
 F
-java:S1172¼"(Remove this unused method parameter "v".(Š‰ç8êµ…­‰.
+java:S1172º"(Remove this unused method parameter "v".(••¼‘8êµ…­‰.
+z	java:S116;"YRename this field "PickIrlDefects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½İÂ°øÿÿÿÿ8êµ…­‰.
 N
-java:S1172´"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.
-n
-java:S1301•"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-i
-java:S1192‡"KDefine a constant instead of duplicating this literal "dd.MM.yyyy" 8 times.(¬İİ²8êµ…­‰.
-r	java:S116-"VRename this field "TextDataExp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿¤¤¡8êµ…­‰.
-n
-java:S1301ş"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+java:S1172â"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.
+N
+java:S1172û"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.
 F
-java:S1172£"(Remove this unused method parameter "v".(õÜ‡¨8êµ…­‰.
-n
-java:S1301ó"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-q	java:S1166"URename this field "PickExpert" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êª»Ó8êµ…­‰.
-D	java:S131À""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-t
-java:S3776j"RRefactor this method to reduce its Cognitive Complexity from 64 to the 15 allowed.(¨Œşÿÿÿÿ8êµ…­‰.
-z	java:S116:"YRename this field "PickIrlDefects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½İÂ°øÿÿÿÿ8êµ…­‰.
-F
-java:S1172ÿ"(Remove this unused method parameter "v".(••¼‘8êµ…­‰.
-D	java:S131â""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-N
-java:S1172À"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.
-N
-java:S1172"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.
-N
-java:S1172Ù"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.
-p	java:S116f"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ÍÒŞ8êµ…­‰.
-u
-java:S1450f"XRemove the "Zakazchik" field and declare it as a local variable in the relevant methods.(§ÍÒŞ8êµ…­‰.
-n
-java:S1301ë"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-u	java:S1160"YRename this field "TextKonOstanov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ”ÊÎ8êµ…­‰.
-T
-java:S1117á"6Rename "a" which hides the field declared at line 514.(ã‹Í8êµ…­‰.
-s	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú¤µÄûÿÿÿÿ8êµ…­‰.
-r	java:S1167"VRename this field "PickDefects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘õ½”8êµ…­‰.
-ƒ
-java:S1845J"gRename field "position" to prevent any misunderstanding/clash with field "POSITION" defined on line 35.(µó» 8êµ…­‰.
-q	java:S116'"VRename this field "TextDefects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äıL8êµ…­‰.
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ì¼úşÿÿÿÿ8êµ…­‰.
+java:S1172÷"(Remove this unused method parameter "v".(Š‰ç8êµ…­‰.
 K
-java:S1172‹"(Remove this unused method parameter "v".(¥·—›øÿÿÿÿ8êµ…­‰.
+java:S1172Ò"(Remove this unused method parameter "v".(ÿëó±ùÿÿÿÿ8êµ…­‰.
 n
-java:S1301 "KReplace this "switch" statement by "if" statements to increase readability.(€ÆèÔÿÿÿÿÿ8êµ…­‰.
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(€ÆèÔÿÿÿÿÿ8êµ…­‰.
+K
+java:S1172ƒ"(Remove this unused method parameter "v".(¿ùØæıÿÿÿÿ8çÑ™Ë.
+j
+java:S1192"GDefine a constant instead of duplicating this literal "select" 4 times.(İ¾ú÷şÿÿÿÿ8êµ…­‰.
 n
-java:S1301â"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-{	java:S116/"ZRename this field "TextNachOstanov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Èâøÿÿÿÿ8êµ…­‰.
-N
-java:S1172ƒ"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.
-€	java:S116>"_Rename this field "PickDataNegotovnosti" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Üû“ˆÿÿÿÿÿ8êµ…­‰.
-K
-java:S1172°"(Remove this unused method parameter "v".(¶—âıÿÿÿÿ8êµ…­‰.
-s	java:S116^"RRename this field "luk_laz" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü’ÆŸøÿÿÿÿ8êµ…­‰.
-|	java:S1161"[Rename this field "TextDataActNegot" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯É»Šşÿÿÿÿ8êµ…­‰.
-N
-java:S1172Í"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.
-n
-java:S1301Ñ"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-D	java:S131±""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-Y	java:S125£"<This block of commented-out lines of code should be removed.(Ûß‰È8êµ…­‰.
-w	java:S1165"[Rename this field "TextDataActNoDoc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä…İ™8êµ…­‰.
-{	java:S116g"ZRename this field "ZakazchikDefect" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢À—™ÿÿÿÿÿ8êµ…­‰.
-D	java:S131ş""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-u
-java:S2737™"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ8êµ…­‰.
-s	java:S117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú¤µÄûÿÿÿÿ8êµ…­‰.
-K
-java:S1172—"(Remove this unused method parameter "v".(ÿëó±ùÿÿÿÿ8êµ…­‰.
-D	java:S131„""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-q
-java:S1104%"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ8êµ…­‰.
-q	java:S1162"URename this field "TextDataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·×À±8êµ…­‰.
-x	java:S116."WRename this field "TextDataSpec" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Îàÿöøÿÿÿÿ8êµ…­‰.
-r	java:S116<"VRename this field "PickDataExp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¬¨•8êµ…­‰.
-K
-java:S1172Õ"(Remove this unused method parameter "v".(Ì—ßÅûÿÿÿÿ8êµ…­‰.
-n	java:S117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïü¬Å8êµ…­‰.
-w
-java:S1104$"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ8êµ…­‰.
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(®Ù›Äûÿÿÿÿ8çÑ™Ë.
 g
-java:S1124d"EReorder the modifiers to comply with the Java Language Specification.(Ú›†ùûÿÿÿÿ8êµ…­‰.
-D	java:S131Ú""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-y	java:S1169"XRename this field "PickDataBeznk" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†…†èûÿÿÿÿ8êµ…­‰.
+java:S1124e"EReorder the modifiers to comply with the Java Language Specification.(Ú›†ùûÿÿÿÿ8êµ…­‰.
+s	java:S117È"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú¤µÄûÿÿÿÿ8êµ…­‰.
+u
+java:S1450g"XRemove the "Zakazchik" field and declare it as a local variable in the relevant methods.(§ÍÒŞ8êµ…­‰.
 n
-java:S1301„"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-D	java:S131Ñ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+java:S1301í"KReplace this "switch" statement by "if" statements to increase readability.(û¼±ÿşÿÿÿÿ8çÑ™Ë.
+w
+java:S1104&"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ8êµ…­‰.
+u
+java:S2737—"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ8êµ…­‰.
+t
+java:S3776k"RRefactor this method to reduce its Cognitive Complexity from 64 to the 15 allowed.(¨Œşÿÿÿÿ8êµ…­‰.
+N
+java:S1172ï"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.
+x	java:S116>"WRename this field "PickDataSpec" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â‘ìßûÿÿÿÿ8êµ…­‰.
+n
+java:S1301¤"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+n
+java:S1301Û"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+{	java:S1161"ZRename this field "TextNachOstanov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Èâøÿÿÿÿ8êµ…­‰.
+q	java:S116)"VRename this field "TextDefects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äıL8êµ…­‰.
+n
+java:S1301½"KReplace this "switch" statement by "if" statements to increase readability.(Ğ¬ÊÀşÿÿÿÿ8çÑ™Ë.
+v	java:S116<"URename this field "ButZapisat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô£ÊÇüÿÿÿÿ8êµ…­‰.
 |	java:S1168"[Rename this field "PickDefectsBeznk" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÃ³åûÿÿÿÿ8êµ…­‰.
-D	java:S131ó""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+D	java:S131""Add a default case to this switch.(€ÆèÔÿÿÿÿÿ8êµ…­‰.
+D	java:S131Û""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+?	java:S131×""Add a default case to this switch.(š¤ıÀ8çÑ™Ë.
 n
-java:S1301À"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-D	java:S131 ""Add a default case to this switch.(€ÆèÔÿÿÿÿÿ8êµ…­‰.
-D	java:S131ë""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-?	java:S131â""Add a default case to this switch.(ƒ“¯Œ8êµ…­‰.
+java:S1301º"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+D	java:S131¤""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
 N
-java:S1172›"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.
-F
-java:S1172É"(Remove this unused method parameter "v".(¥¹©¥8êµ…­‰.
-^	java:S125¡"<This block of commented-out lines of code should be removed.(ıŞú´ûÿÿÿÿ8êµ…­‰.
-s	java:S117¥"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú¤µÄûÿÿÿÿ8êµ…­‰.
+java:S1172“"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.
+T
+java:S1117›"6Rename "a" which hides the field declared at line 573.(ã‹Í8êµ…­‰.
+s	java:S117Ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú¤µÄûÿÿÿÿ8êµ…­‰.
+L
+java:S1128"/Remove this unused import 'java.sql.Statement'.(ÏÖÔø8çÑ™Ë.
+D	java:S131á""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+€	java:S116?"_Rename this field "PickDataNegotovnosti" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Üû“ˆÿÿÿÿÿ8êµ…­‰.
+r	java:S116="VRename this field "PickDataExp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¬¨•8êµ…­‰.
+w	java:S116+"[Rename this field "TextPrichinaIskl" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤’ä«8êµ…­‰.
 y
-java:S1488ã"[Immediately return this expression instead of assigning it to the temporary variable "str".(Âåı8êµ…­‰.
-j
-java:S1192"GDefine a constant instead of duplicating this literal "people" 5 times.(¹¡èŸøÿÿÿÿ8êµ…­‰.
+java:S1488"[Immediately return this expression instead of assigning it to the temporary variable "str".(Âåı8êµ…­‰.
 n
-java:S1301±"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+java:S1301º"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+s	java:S116_"RRename this field "luk_laz" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü’ÆŸøÿÿÿÿ8êµ…­‰.
+D	java:S131Ê""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+Y	java:S125¡"<This block of commented-out lines of code should be removed.(Ûß‰È8êµ…­‰.
+K
+java:S1172ë"(Remove this unused method parameter "v".(¶—âıÿÿÿÿ8êµ…­‰.
+?	java:S131¯""Add a default case to this switch.(ÿîã8çÑ™Ë.
+i
+java:S1301×"KReplace this "switch" statement by "if" statements to increase readability.(š¤ıÀ8çÑ™Ë.
+ƒ
+java:S1845H"gRename field "position" to prevent any misunderstanding/clash with field "POSITION" defined on line 37.(µó» 8êµ…­‰.
+i
+java:S1192Â"KDefine a constant instead of duplicating this literal "dd.MM.yyyy" 8 times.(¬İİ²8êµ…­‰.
 n
-java:S1301Ú"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
-s	java:S117”"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú¤µÄûÿÿÿÿ8êµ…­‰.
-v	java:S116;"URename this field "ButZapisat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô£ÊÇüÿÿÿÿ8êµ…­‰.
-o	java:S116("SRename this field "TextNote" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦ô¥Ş8êµ…­‰.
-j
-java:S1192ä"GDefine a constant instead of duplicating this literal "select" 4 times.(İ¾ú÷şÿÿÿÿ8êµ…­‰.
-w	java:S116)"[Rename this field "TextPrichinaIskl" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤’ä«8êµ…­‰.
+java:S1301ƒ"KReplace this "switch" statement by "if" statements to increase readability.(Öç·™ÿÿÿÿÿ8çÑ™Ë.
 N
-java:S1172§"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.
+java:S1172¾"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.
+s	java:S117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú¤µÄûÿÿÿÿ8êµ…­‰.
+u	java:S1162"YRename this field "TextKonOstanov" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ”ÊÎ8êµ…­‰.
+q
+java:S1104'"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ8êµ…­‰.
+x	java:S1160"WRename this field "TextDataSpec" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Îàÿöøÿÿÿÿ8êµ…­‰.
+|	java:S1163"[Rename this field "TextDataActNegot" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯É»Šşÿÿÿÿ8êµ…­‰.
+D	java:S131½""Add a default case to this switch.(Ğ¬ÊÀşÿÿÿÿ8çÑ™Ë.
+?	java:S131œ""Add a default case to this switch.(ƒ“¯Œ8êµ…­‰.
+D	java:S131÷""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+n
+java:S1301‹"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+p	java:S116g"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ÍÒŞ8êµ…­‰.
+D	java:S131ƒ""Add a default case to this switch.(Öç·™ÿÿÿÿÿ8çÑ™Ë.
+D	java:S131Ñ""Add a default case to this switch.(¸­şÿÿÿÿ8çÑ™Ë.
+n
+java:S1301°"KReplace this "switch" statement by "if" statements to increase readability.(ıÈÀ–ÿÿÿÿÿ8çÑ™Ë.
+n
+java:S1301Ñ"KReplace this "switch" statement by "if" statements to increase readability.(¸­şÿÿÿÿ8çÑ™Ë.
+r	java:S116/"VRename this field "TextDataExp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿¤¤¡8êµ…­‰.
+n
+java:S1301á"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+D	java:S131š""Add a default case to this switch.(ö±¨Ûüÿÿÿÿ8çÑ™Ë.
+D	java:S131º""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+N
+java:S1172Ê"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.
+i
+java:S1301—"KReplace this "switch" statement by "if" statements to increase readability.(ˆ‚¤À8çÑ™Ë.
+n
+java:S1301š"KReplace this "switch" statement by "if" statements to increase readability.(ö±¨Ûüÿÿÿÿ8çÑ™Ë.
+F
+java:S1172"(Remove this unused method parameter "v".(¥¹©¥8êµ…­‰.
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïü¬Å8êµ…­‰.
+D	java:S131""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+q	java:S1164"URename this field "TextDataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·×À±8êµ…­‰.
+D	java:S131""Add a default case to this switch.(®Ù›Äûÿÿÿÿ8çÑ™Ë.
+n
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+n
+java:S1301÷"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+D	java:S131¡""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+K
+java:S1172Æ"(Remove this unused method parameter "v".(¥·—›øÿÿÿÿ8êµ…­‰.
+o	java:S116*"SRename this field "TextNote" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦ô¥Ş8êµ…­‰.
+F
+java:S1172Ş"(Remove this unused method parameter "v".(õÜ‡¨8êµ…­‰.
+?	java:S131—""Add a default case to this switch.(ˆ‚¤À8çÑ™Ë.
+s	java:S117Ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú¤µÄûÿÿÿÿ8êµ…­‰.
+i
+java:S1301¯"KReplace this "switch" statement by "if" statements to increase readability.(ÿîã8çÑ™Ë.
+D	java:S131°""Add a default case to this switch.(ıÈÀ–ÿÿÿÿÿ8çÑ™Ë.
+n
+java:S1301Ê"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+r	java:S116:"VRename this field "PickDefects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘õ½”8êµ…­‰.
+D	java:S131‹""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+^	java:S125Ÿ"<This block of commented-out lines of code should be removed.(ıŞú´ûÿÿÿÿ8çÑ™Ë.
+w	java:S1167"[Rename this field "TextDataActNoDoc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä…İ™8êµ…­‰.
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ì¼úşÿÿÿÿ8êµ…­‰.
+D	java:S131º""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+n
+java:S1301¡"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8êµ…­‰.
+N
+java:S1172Ö"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.
+N
+java:S1172‡"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8êµ…­‰.

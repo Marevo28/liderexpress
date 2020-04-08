@@ -1,0 +1,30 @@
+
+…
+java:S1192a"jDefine a constant instead of duplicating this literal "...but speech recognition already stopped" 8 times.(ö¡±øÿÿÿÿ
+C
+java:S1199™"-Extract this nested code block into a method.(‰Â—
+T
+java:S1155à">Use isEmpty() to check whether the collection is empty or not.(˜•™
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öÜ ”üÿÿÿÿ
+?
+java:S1148„"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+m	java:S116"XRename this field "main_activity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ì³Ü
+n
+java:S37769"SRefactor this method to reduce its Cognitive Complexity from 163 to the 15 allowed.(È¨¥Ôüÿÿÿÿ
+
+java:S1186é"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¨ÄÑ×úÿÿÿÿ
+1
+java:S3626b"Remove this redundant jump.(ûÁİ…
+1
+java:S3626m"Remove this redundant jump.(ûÁİ…
+2
+java:S3626¦"Remove this redundant jump.(ûÁİ…
+2
+java:S3626±"Remove this redundant jump.(ûÁİ…
+2
+java:S3626¼"Remove this redundant jump.(ûÁİ…
+Q	java:S125P"<This block of commented-out lines of code should be removed.(Òê¬ï
+Q	java:S125z"<This block of commented-out lines of code should be removed.(«ì‚Æ
+R	java:S125Š"<This block of commented-out lines of code should be removed.(«ì‚Æ
+R	java:S125Ë"<This block of commented-out lines of code should be removed.(ê¸
+W	java:S125Ó"<This block of commented-out lines of code should be removed.(£²ÅŠÿÿÿÿÿ

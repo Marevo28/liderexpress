@@ -1,0 +1,10 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÜôàþÿÿÿÿ
+l	java:S116"WRename this field "max_filesize" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óñëÜ
+=
+java:S1214""Move constants to a class or enum.(˜†±­øÿÿÿÿ
+l	java:S116"WRename this field "auto_restart" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ðñ­Ó
+n
+java:S1104"XMake auto_restart a static final constant or non-public and provide accessors if needed.(Ðñ­Ó
+n
+java:S1104"XMake max_filesize a static final constant or non-public and provide accessors if needed.(óñëÜ

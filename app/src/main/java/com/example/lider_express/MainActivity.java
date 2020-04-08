@@ -33,16 +33,19 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.lider_express.DataBase.DatabaseHelper;
 import com.example.lider_express.Svodnaya.BNDSvodnaya;
+import com.example.lider_express.Svodnaya.KartaKontolyaNasos;
 import com.example.lider_express.Svodnaya.KartaKontrolyaYDE;
 import com.example.lider_express.Svodnaya.MegionSvodnaya;
 import com.example.lider_express.Synchronization.Synchronization;
 import com.example.lider_express.Tools.VmyatinaSocuda;
+import com.example.lider_express.Сamera2.MainCamera2;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     public static final String APP_FILES = "mysettings";
     public static final String APP_ZAKAZCHIK = "Zakazchik";
+    public static final String APP_CAMERA = "Camera";
     private SharedPreferences mSettings;
     static SharedPreferences mPrefs;
 
@@ -68,11 +71,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private TextView textskvazhina;
     private EditText textpostion;
     private TextView NameTu;
-    private String position;
-    private String Papka;
-    private String Name;
+    private static String position;
+    private static String Papka;
+    private static String Name;
     private String Zakazchik;
+    private String typetu;
+    private String Karta;
     private int intposition;
+    public String formattedDate;
 
 
     public static DatabaseHelper getDBHelper() {
@@ -87,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public static SQLiteDatabase getSQLiteDatabase(){
         return mDb;
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +134,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mSettings = getSharedPreferences(APP_FILES, MODE_PRIVATE);
         mPrefs = getSharedPreferences("myAppPrefs", MODE_PRIVATE);
 
+        final String SelectedCamera = mSettings.getString(APP_CAMERA, "Open Camera");
+
         // Инициализировать высоту и ширину устройства - (Для камеры)
         iniWH();
 
@@ -159,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 if(position.length() > 0) {
                     intposition = Integer.parseInt(position);
-                    Zakazchik = mSettings.getString(APP_ZAKAZCHIK, "Zakazchik");
+                    Zakazchik =  mSettings.getString(APP_ZAKAZCHIK,"Zakazchik");
 
                     switch (Zakazchik) {
                     //    case "Башнефть 2019": Zakazchik = Shared.nameBND2019;break;
@@ -194,10 +203,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 cursor.moveToFirst();
 
                                 texttypetu.setText(cursor.getString(2));//Тип оборудования
+                                typetu=cursor.getString(2);
                                 String block = "Блок реагентов (УДЭ)";
+                                String nasos = "Насос";
                                 if(block.equals(cursor.getString(2))) {
                                     btnKarta.setEnabled(true);
-                                }else {
+                                }else if(nasos.equals(cursor.getString(2))){
+                                    btnKarta.setEnabled(true);
+                                }else{
                                     btnKarta.setEnabled(false);
                                 }
                                 textuprav.setText(cursor.getString(5));// Управление
@@ -219,40 +232,59 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             } // - onClick -
         }); // - btnpostion -
 
+
         btnPhotoTu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото объекта
-                Papka = "Фото";
-                IntentPhoto.putExtra("position", position);
-                IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));
-                IntentPhoto.putExtra("Papka", Papka);
-                IntentPhoto.putExtra("Name", Name);
-                startActivity(IntentPhoto);
+                //if(SelectedCamera.equals("Open Camera")) {
+                    Intent IntentPhoto = new Intent(MainActivity.this, MainCamera2.class);//кнопка вызова Фото документов
+                    Papka = "Фото";
+                    startActivity(IntentPhoto);
+                //}else{
+                //    Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото документов
+                //    Papka = "Фото";
+                //    IntentPhoto.putExtra("position", position);
+                //    IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));
+                //    IntentPhoto.putExtra("Papka", Papka);
+                //    IntentPhoto.putExtra("Name", Name);
+                //    startActivity(IntentPhoto);
+                //}
             }
         });
         btnPhotoDoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото документов
-                Papka = "Документы";
-                IntentPhoto.putExtra("position", position);
-                IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));
-                IntentPhoto.putExtra("Papka", Papka);
-                IntentPhoto.putExtra("Name", Name);
-                startActivity(IntentPhoto);
+                //if(SelectedCamera.equals("Open Camera")) {
+                      Intent IntentPhoto = new Intent(MainActivity.this, MainCamera2.class);//кнопка вызова Фото документов
+                      Papka = "Документы";
+                      startActivity(IntentPhoto);
+                //}else{
+                //    Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото документов
+                //    Papka = "Документы";
+                //    IntentPhoto.putExtra("position", position);
+                //    IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));
+                //    IntentPhoto.putExtra("Papka", Papka);
+                //    IntentPhoto.putExtra("Name", Name);
+                //    startActivity(IntentPhoto);
+                //}
             }
         });
         btnPhotoKontrol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова контроля
-                Papka = "Контроль";
-                IntentPhoto.putExtra("position", position);
-                IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));
-                IntentPhoto.putExtra("Papka", Papka);
-                IntentPhoto.putExtra("Name", Name);
-                startActivity(IntentPhoto);
+                //if(SelectedCamera.equals("Open Camera")) {
+                      Intent IntentPhoto = new Intent(MainActivity.this, MainCamera2.class);//кнопка вызова Фото документов
+                      Papka = "Контроль";
+                      startActivity(IntentPhoto);
+                //}else{
+                //    Intent IntentPhoto = new Intent(MainActivity.this, Camera.class);//кнопка вызова Фото документов
+                //    Papka = "Контроль";
+                //    IntentPhoto.putExtra("position", position);
+                //    IntentPhoto.putExtra("Zakazchik", getNameZakaz(Zakazchik));
+                //    IntentPhoto.putExtra("Papka", Papka);
+                //    IntentPhoto.putExtra("Name", Name);
+                //    startActivity(IntentPhoto);
+                //}
             }
         });
         btnSvodnaya.setOnClickListener(new View.OnClickListener() {
@@ -291,14 +323,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnKarta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if (Integer.parseInt(position) != 0 && position.length() != 0) {
-                    Intent IntentKartaKontrolya = new Intent(MainActivity.this, KartaKontrolyaYDE.class);
-                    IntentKartaKontrolya.putExtra("position", position);
-                    IntentKartaKontrolya.putExtra("Zakazchik", getNameZakaz(Zakazchik));
-                    startIntent(IntentKartaKontrolya);
-                }else{
-                    displayMessage(getBaseContext(), "Выберите существующую позицию или обновите базу!");
+                switch(typetu) {
+                    case "Насос":
+                    Intent IntentKartaKontrolyaNasos = new Intent(MainActivity.this, KartaKontolyaNasos.class);
+                        IntentKartaKontrolyaNasos.putExtra("position", position);
+                        IntentKartaKontrolyaNasos.putExtra("Zakazchik", getNameZakaz(Zakazchik));
+                    startIntent(IntentKartaKontrolyaNasos);
+                break;
+                    case "Блок реагентов (УДЭ)":
+                    Intent IntentKartaKontrolyaUde = new Intent(MainActivity.this, KartaKontrolyaYDE.class);
+                        IntentKartaKontrolyaUde.putExtra("position", position);
+                        IntentKartaKontrolyaUde.putExtra("Zakazchik", getNameZakaz(Zakazchik));
+                    startIntent(IntentKartaKontrolyaUde);
+                break;
+                        default: displayMessage(getBaseContext(), "Выберите существующую позицию или обновите базу!");
                 }
 
             }
@@ -329,6 +367,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         mDisplayWidth = size.x;
         mDisplayHeight = size.y;
+    }
+
+    public static String getPositionMain() {
+        return position;
+    }
+    public static String getPapkaMain() {
+        return Papka;
+    }
+    public static String getNameMain() {
+        return Name;
     }
 
     // Ширина дисплея
