@@ -547,6 +547,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="X"/>
                     <EditText
+                        android:id="@+id/EditText_Zamer_1_X"
                         android:textSize="18sp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -564,6 +565,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="X"/>
                     <EditText
+                        android:id="@+id/EditText_Zamer_2_X"
                         android:textSize="18sp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -584,6 +586,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="Y"/>
                     <EditText
+                        android:id="@+id/EditText_Zamer_1_Y"
                         android:textSize="18sp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -602,6 +605,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="Y"/>
                     <EditText
+                        android:id="@+id/EditText_Zamer_2_Y"
                         android:textSize="18sp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -622,6 +626,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="Z"/>
                     <EditText
+                        android:id="@+id/EditText_Zamer_1_Z"
                         android:textSize="18sp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -640,6 +645,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="Z"/>
                     <EditText
+                        android:id="@+id/EditText_Zamer_2_Z"
                         android:textSize="18sp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -660,6 +666,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="X"/>
                     <EditText
+                        android:id="@+id/EditText_Zamer_3_X"
                         android:textSize="18sp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -677,6 +684,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="X"/>
                     <EditText
+                        android:id="@+id/EditText_Zamer_4_X"
                         android:textSize="18sp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -697,6 +705,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="Y"/>
                     <EditText
+                        android:id="@+id/EditText_Zamer_3_Y"
                         android:textSize="18sp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -715,6 +724,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="Y"/>
                     <EditText
+                        android:id="@+id/EditText_Zamer_4_Y"
                         android:textSize="18sp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -735,6 +745,7 @@
                         android:gravity="center_horizontal|center_vertical"
                         android:text="Z"/>
                     <EditText
+                        android:id="@+id/EditText_Zamer_3_Z"
                         android:textSize="18sp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
@@ -752,11 +763,13 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal|center_vertical"
                         android:text="Z"/>
+
                     <EditText
-                        android:textSize="18sp"
+                        android:id="@+id/EditText_Zamer_4_Z"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:hint="Замер"/>
+                        android:hint="Замер"
+                        android:textSize="18sp" />
                 </TableRow>
             </TableLayout>
 
@@ -786,27 +799,32 @@
                         android:textSize="18sp" />
 
                     <EditText
+                        android:id="@+id/Vsas_Diametr"
                         android:textSize="18sp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal|center_vertical"
                         android:hint="Диаметр"/>
                     <EditText
+                        android:id="@+id/Vsas_Razmer_1"
                         android:textSize="18sp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:hint="Замер 1"/>
                     <EditText
+                        android:id="@+id/Vsas_Razmer_2"
                         android:textSize="18sp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:hint="Замер 2"/>
                     <EditText
+                        android:id="@+id/Vsas_Razmer_3"
                         android:textSize="18sp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:hint="Замер 3"/>
                     <EditText
+                        android:id="@+id/Vsas_Razmer_4"
                         android:textSize="18sp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
@@ -822,27 +840,32 @@
                         android:textSize="18sp" />
 
                     <EditText
+                        android:id="@+id/Naporniy_Diametr"
                         android:textSize="18sp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal|center_vertical"
                         android:hint="Диаметр"/>
                     <EditText
+                        android:id="@+id/Naporniy_Razmer_1"
                         android:textSize="18sp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:hint="Замер 1"/>
                     <EditText
+                        android:id="@+id/Naporniy_Razmer_2"
                         android:textSize="18sp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:hint="Замер 2"/>
                     <EditText
+                        android:id="@+id/Naporniy_Razmer_3"
                         android:textSize="18sp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:hint="Замер 3"/>
                     <EditText
+                        android:id="@+id/Naporniy_Razmer_4"
                         android:textSize="18sp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
