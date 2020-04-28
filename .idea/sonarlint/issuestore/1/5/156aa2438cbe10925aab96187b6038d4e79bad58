@@ -1,18 +1,12 @@
 
-e
-java:S11923"JDefine a constant instead of duplicating this literal " , diff: " 3 times.(¼“Çøÿÿÿÿ
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½Ï“ 
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò×ÔÍ
-e	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ã÷<
-f	java:S117;"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™±¼¶
-f	java:S117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™±¼¶
-f	java:S117W"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«úÓ¦
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öÜ ”üÿÿÿÿ
-m	java:S116"XRename this field "main_activity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ì³Ü
-j	java:S116"URename this field "last_level" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Õ÷¤
-o	java:S116"ZRename this field "time_quiet_loud" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ÒÓ¯
-}	java:S116"hRename this field "time_last_audio_trigger_photo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìõ¦
-|	java:S116"bRename this field "audio_noise_sensitivity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëí‰áüÿÿÿÿ
 h
 java:S3776"RRefactor this method to reduce its Cognitive Complexity from 38 to the 15 allowed.(ı´ë
+j	java:S116"URename this field "last_level" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Õ÷¤
+}	java:S116"hRename this field "time_last_audio_trigger_photo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìõ¦
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öÜ ”üÿÿÿÿ
+e
+java:S11923"JDefine a constant instead of duplicating this literal " , diff: " 3 times.(¼“Çøÿÿÿÿ
+o	java:S116"ZRename this field "time_quiet_loud" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ÒÓ¯
+|	java:S116"bRename this field "audio_noise_sensitivity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëí‰áüÿÿÿÿ
 V	java:S125 "<This block of commented-out lines of code should be removed.(ŸÉ÷ˆùÿÿÿÿ
+m	java:S116"XRename this field "main_activity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ì³Ü

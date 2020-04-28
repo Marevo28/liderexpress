@@ -83,3 +83,11 @@ w
 Gapp/src/main/java/com/example/lider_express/Сamera2/SpeechControl.java,2\d\2daee5fd98d7a0641a659aef89bb214df1ea4530
 |
 Lapp/src/main/java/com/example/lider_express/Svodnaya/KartaKontolyaNasos.java,6\1\61e3df3cff7415fcfb9c3d95c293b21abb5e9176
+p
+@app/src/main/java/com/example/lider_express/Second2Fragment.java,6\5\65d0f465f268e778314dd67d592d06112bc2e9bd
+k
+;app/src/main/java/com/example/lider_express/Navigation.java,1\7\179e2a1e26558988c235167070461857cfba5b14
+n
+>app/src/main/java/com/example/lider_express/Tools/RWClass.java,3\1\3188c0bbb5218313e8ee40c23ae9df1679153f06
+w
+Gapp/src/main/java/com/example/lider_express/Сamera2/AudioListener.java,3\0\3042a90bae1962a4adc924616c77a57016a997fb

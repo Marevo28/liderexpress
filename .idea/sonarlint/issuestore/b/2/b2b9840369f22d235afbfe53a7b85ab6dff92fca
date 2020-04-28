@@ -1,25 +1,104 @@
 
-Y	java:S125Â"<This block of commented-out lines of code should be removed.(­¢ªü8ÔÈŞÌ.
-s	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çç²‚úÿÿÿÿ8ğ¿ÜË.
-i
-java:S1450H"SRemove the "line" field and declare it as a local variable in the relevant methods.(œ•Ô
+H
+java:S1068-"+Remove this unused "stolb48" private field.(˜î¡š8¾á¸Ê•.
 o
 java:S2293^"YReplace the type specification in this constructor call with the diamond operator ("<>").(§ÉòÌ
-<	java:S131M""Add a default case to this switch.(€ÆèÔÿÿÿÿÿ
+M
+java:S10685"+Remove this unused "stolb56" private field.(ÅéæÑÿÿÿÿÿ8¾á¸Ê•.
+H
+java:S10681"+Remove this unused "stolb52" private field.(ôª¹ì8¾á¸Ê•.
+H
+java:S1068("+Remove this unused "stolb43" private field.(Ëà«’8¾á¸Ê•.
+H
+java:S10682"+Remove this unused "stolb53" private field.(ã‰çœ8¾á¸Ê•.
+G
+java:S1068"+Remove this unused "stolb33" private field.(”´8¾á¸Ê•.
 N	java:S106L"9Replace this use of System.out or System.err by a logger.(–†ôÔ
-\
-java:S4719¦"9Replace charset name argument with StandardCharsets.UTF_8(øƒã¯ûÿÿÿÿ8ğ¿ÜË.
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ùÖ“¦
+H
+java:S1068?"+Remove this unused "stolb66" private field.(î¢§´8¾á¸Ê•.
+H
+java:S1068"+Remove this unused "stolb27" private field.(•ÀÚË8¾á¸Ê•.
+[	java:S106¶"9Replace this use of System.out or System.err by a logger.(›²…ƒøÿÿÿÿ8ğ¿ÜË.
+M
+java:S10687"+Remove this unused "stolb58" private field.(”¢¸ëıÿÿÿÿ8¾á¸Ê•.
+M
+java:S1068"+Remove this unused "stolb32" private field.(ÿÊÉ§üÿÿÿÿ8¾á¸Ê•.
+M
+java:S1068)"+Remove this unused "stolb44" private field.(ù¯¶˜üÿÿÿÿ8¾á¸Ê•.
+H
+java:S1068""+Remove this unused "stolb37" private field.(¶ÖÑÏ8¾á¸Ê•.
 N	java:S106\"9Replace this use of System.out or System.err by a logger.(åäêÓ
-L
-java:S1068C"*Remove this unused "mArray" private field.(ÿ†şªùÿÿÿÿ8±³ÙË.
+M
+java:S1068#"+Remove this unused "stolb38" private field.(¸ç‰üÿÿÿÿ8¾á¸Ê•.
+H
+java:S1068+"+Remove this unused "stolb46" private field.(±¨•ç8¾á¸Ê•.
+M
+java:S1068"+Remove this unused "stolb29" private field.(Œúš…úÿÿÿÿ8¾á¸Ê•.
+Z	java:S106f"9Replace this use of System.out or System.err by a logger.(¶Û·Ãúÿÿÿÿ8¾á¸Ê•.
+G
+java:S1068"+Remove this unused "stolb31" private field.(ÿÔÏ8¾á¸Ê•.
+M
+java:S1068<"+Remove this unused "stolb63" private field.(‚Ì‰¥øÿÿÿÿ8¾á¸Ê•.
+M
+java:S1068@"+Remove this unused "stolb67" private field.(›ÏùŸüÿÿÿÿ8¾á¸Ê•.
+M
+java:S10680"+Remove this unused "stolb51" private field.(ÎØĞéûÿÿÿÿ8¾á¸Ê•.
+M
+java:S1068'"+Remove this unused "stolb42" private field.(¡¾¡¡øÿÿÿÿ8¾á¸Ê•.
+H
+java:S1068;"+Remove this unused "stolb62" private field.(•²§ø8¾á¸Ê•.
+H
+java:S1068,"+Remove this unused "stolb47" private field.(õÊó˜8¾á¸Ê•.
+[	java:S106¨"9Replace this use of System.out or System.err by a logger.(ªÂÚöûÿÿÿÿ8ğ¿ÜË.
+M
+java:S1068"+Remove this unused "stolb28" private field.( ğÖùÿÿÿÿ8¾á¸Ê•.
+M
+java:S10688"+Remove this unused "stolb59" private field.(ş˜§ïúÿÿÿÿ8¾á¸Ê•.
+M
+java:S10689"+Remove this unused "stolb60" private field.(Âøë«úÿÿÿÿ8¾á¸Ê•.
+M
+java:S1068"+Remove this unused "stolb34" private field.(µ¡Ç¨ùÿÿÿÿ8¾á¸Ê•.
+M
+java:S1068%"+Remove this unused "stolb40" private field.(ôÉ¯¼ûÿÿÿÿ8¾á¸Ê•.
+G
+java:S1068="+Remove this unused "stolb64" private field.(Õ x8¾á¸Ê•.
+H
+java:S1068!"+Remove this unused "stolb36" private field.(ÂÖÖ‰8¾á¸Ê•.
 P
 java:S1161[":Add the "@Override" annotation above this method signature(“–ış
-]	java:S125`"<This block of commented-out lines of code should be removed.(ïÍéÁúÿÿÿÿ8šúÒÌ.
-f	java:S117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©Ì©‚
-_	java:S107É"=Method has 43 parameters, which is greater than 7 authorized.(æ¬ğ‘ıÿÿÿÿ8ëÂıË.
-[	java:S106¤"9Replace this use of System.out or System.err by a logger.(ªÂÚöûÿÿÿÿ8ğ¿ÜË.
-Q	java:S125T"<This block of commented-out lines of code should be removed.(µÍÏ
-[	java:S106²"9Replace this use of System.out or System.err by a logger.(›²…ƒøÿÿÿÿ8ğ¿ÜË.
-[	java:S106—"9Replace this use of System.out or System.err by a logger.(Çñ–·ÿÿÿÿÿ8ğ¿ÜË.
+H
+java:S1068"+Remove this unused "stolb30" private field.(ÕÏ¦µ8¾á¸Ê•.
+H
+java:S1068."+Remove this unused "stolb49" private field.(“Çñ8¾á¸Ê•.
+\
+java:S4719ª"9Replace charset name argument with StandardCharsets.UTF_8(øƒã¯ûÿÿÿÿ8ğ¿ÜË.
 Q	java:S125N"<This block of commented-out lines of code should be removed.(×Í‚×
+H
+java:S1068/"+Remove this unused "stolb50" private field.(ÑƒïØ8¾á¸Ê•.
+M
+java:S1068A"+Remove this unused "stolb68" private field.(ÚË»şÿÿÿÿ8¾á¸Ê•.
+M
+java:S1068>"+Remove this unused "stolb65" private field.(¿•çıÿÿÿÿ8¾á¸Ê•.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ùÖ“¦
+i
+java:S1450H"SRemove the "line" field and declare it as a local variable in the relevant methods.(œ•Ô
+<	java:S131M""Add a default case to this switch.(€ÆèÔÿÿÿÿÿ
+M
+java:S1068 "+Remove this unused "stolb35" private field.(÷úşËùÿÿÿÿ8¾á¸Ê•.
+H
+java:S1068$"+Remove this unused "stolb39" private field.(ëì³‚8¾á¸Ê•.
+H
+java:S1068*"+Remove this unused "stolb45" private field.(šäØå8¾á¸Ê•.
+H
+java:S1068:"+Remove this unused "stolb61" private field.(÷ôÈÒ8¾á¸Ê•.
+G
+java:S10684"+Remove this unused "stolb55" private field.(²Í¹ 8¾á¸Ê•.
+U	java:S106e"9Replace this use of System.out or System.err by a logger.(ñ¦ä¡8¾á¸Ê•.
+Q	java:S125T"<This block of commented-out lines of code should be removed.(µÍÏ
+H
+java:S1068&"+Remove this unused "stolb41" private field.(øæ Â8¾á¸Ê•.
+[	java:S106›"9Replace this use of System.out or System.err by a logger.(Çñ–·ÿÿÿÿÿ8ğ¿ÜË.
+G
+java:S10683"+Remove this unused "stolb54" private field.(ë²ë8¾á¸Ê•.
+M
+java:S10686"+Remove this unused "stolb57" private field.(¥’¯Ôøÿÿÿÿ8¾á¸Ê•.

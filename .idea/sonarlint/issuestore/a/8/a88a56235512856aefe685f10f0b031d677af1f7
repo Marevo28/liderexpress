@@ -1,10 +1,13 @@
 
-jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(ûÍÍÀüÿÿÿÿ
-€"squid:ClassVariableVisibilityCheck"RMake PEOPLE a static final constant or non-public and provide accessors if needed.(“ƒÉ¾
-Csquid:S1444",Make this "public static PEOPLE" field final(“ƒÉ¾
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Øø€¬
-hsquid:S3008"QRename this field "PEOPLE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ƒÉ¾
-Msquid:S2696$"6Make the enclosing method "static" or remove this set.(â³ËÎ
-8squid:S1643@"Use a StringBuilder instead.(Úè²úüÿÿÿÿ
-P"squid:SwitchLastCaseIsDefaultCheck%""Add a default case to this switch.(°ý…ø
-nsquid:S00117J"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖªýÿÿÿÿ
+S
+java:S2696$"6Make the enclosing method "static" or remove this set.(â³ËÎ8¹²¸“—.
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Øø€¬8¹²¸“—.
+>
+java:S1643@"Use a StringBuilder instead.(Úè²úüÿÿÿÿ8¹²¸“—.
+>	java:S131%""Add a default case to this switch.(°ý…ø8¹²¸“—.
+n
+java:S3008"QRename this field "PEOPLE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ƒÉ¾8¹²¸“—.
+I
+java:S1444",Make this "public static PEOPLE" field final(“ƒÉ¾8¹²¸“—.
+o
+java:S1104"RMake PEOPLE a static final constant or non-public and provide accessors if needed.(“ƒÉ¾8¹²¸“—.

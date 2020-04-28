@@ -812,41 +812,47 @@
                         android:layout_height="wrap_content"
                         android:hint="Замер 4"/>
                 </TableRow>
+
                 <TableRow>
+
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal|center_vertical"
                         android:text="Напорный патрубок"
-                        android:textStyle="bold"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                     <EditText
-                        android:textSize="18sp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal|center_vertical"
-                        android:hint="Диаметр"/>
+                        android:hint="Диаметр"
+                        android:textSize="18sp" />
+
                     <EditText
-                        android:textSize="18sp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:hint="Замер 1"/>
+                        android:hint="Замер 1"
+                        android:textSize="18sp" />
+
                     <EditText
-                        android:textSize="18sp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:hint="Замер 2"/>
+                        android:hint="Замер 2"
+                        android:textSize="18sp" />
+
                     <EditText
-                        android:textSize="18sp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:hint="Замер 3"/>
+                        android:hint="Замер 3"
+                        android:textSize="18sp" />
+
                     <EditText
-                        android:textSize="18sp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:hint="Замер 4"/>
+                        android:hint="Замер 4"
+                        android:textSize="18sp" />
                 </TableRow>
 
             </TableLayout>

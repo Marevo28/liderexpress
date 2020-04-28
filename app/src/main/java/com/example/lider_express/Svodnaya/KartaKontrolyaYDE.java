@@ -8,7 +8,6 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -23,7 +22,6 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.lider_express.DataBase.DatabaseHelper;
 import com.example.lider_express.MainActivity;
 import com.example.lider_express.R;
-
 import com.example.lider_express.Shared;
 import com.example.lider_express.Tools.SpisokBND;
 
@@ -444,7 +442,7 @@ public class KartaKontrolyaYDE extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent IntentSittings = new Intent(KartaKontrolyaYDE.this, SpisokBND.class);
-                    IntentSittings.putExtra("people", "experts");
+                    IntentSittings.putExtra("people", "irldefects");
                     startActivityForResult(IntentSittings, PEOPLE);
                 }
             });
@@ -544,7 +542,7 @@ public class KartaKontrolyaYDE extends AppCompatActivity {
             String exp;
             String[] array;
             switch (lampa) {
-                case "experts":
+                case "irldefects":
                     exp = data.getStringExtra("select");
                     strNKSpec = exp;
                     TextView_SpecProvNK.setText(exp);

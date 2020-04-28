@@ -1,0 +1,19 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öÜ ”üÿÿÿÿ
+>
+java:S11482"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+>
+java:S1148t"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?
+java:S1148±"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+j	java:S116"URename this field "is_running" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Óœ­ò
+k	java:S116"VRename this field "buffer_size" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±õïÙ
+h
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 45 to the 15 allowed.(äü–Æ
+n
+java:S3776Ÿ"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(Èù£Æûÿÿÿÿ
+b
+java:S2142°"FEither re-interrupt this method or rethrow the "InterruptedException".(²ý…¦ûÿÿÿÿ
+V	java:S125L"<This block of commented-out lines of code should be removed.(¹ðõèûÿÿÿÿ
+Q	java:S125Q"<This block of commented-out lines of code should be removed.(½‘Ñ³
+Q	java:S125b"<This block of commented-out lines of code should be removed.(ƒ¯Ü
