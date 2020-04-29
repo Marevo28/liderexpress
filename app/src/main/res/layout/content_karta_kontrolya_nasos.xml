@@ -842,11 +842,7 @@
                         android:textStyle="bold" />
 
                     <EditText
-<<<<<<< HEAD
                         android:id="@+id/Naporniy_Diametr"
-                        android:textSize="18sp"
-=======
->>>>>>> 85c9f6b89e02ed106087ce5b8582fc6741960eda
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal|center_vertical"
@@ -854,44 +850,28 @@
                         android:textSize="18sp" />
 
                     <EditText
-<<<<<<< HEAD
                         android:id="@+id/Naporniy_Razmer_1"
-                        android:textSize="18sp"
-=======
->>>>>>> 85c9f6b89e02ed106087ce5b8582fc6741960eda
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:hint="Замер 1"
                         android:textSize="18sp" />
 
                     <EditText
-<<<<<<< HEAD
                         android:id="@+id/Naporniy_Razmer_2"
-                        android:textSize="18sp"
-=======
->>>>>>> 85c9f6b89e02ed106087ce5b8582fc6741960eda
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:hint="Замер 2"
                         android:textSize="18sp" />
 
                     <EditText
-<<<<<<< HEAD
                         android:id="@+id/Naporniy_Razmer_3"
-                        android:textSize="18sp"
-=======
->>>>>>> 85c9f6b89e02ed106087ce5b8582fc6741960eda
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:hint="Замер 3"
                         android:textSize="18sp" />
 
                     <EditText
-<<<<<<< HEAD
                         android:id="@+id/Naporniy_Razmer_4"
-                        android:textSize="18sp"
-=======
->>>>>>> 85c9f6b89e02ed106087ce5b8582fc6741960eda
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:hint="Замер 4"
