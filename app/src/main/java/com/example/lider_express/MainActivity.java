@@ -37,6 +37,7 @@ import com.example.lider_express.Svodnaya.KartaKontolyaNasos;
 import com.example.lider_express.Svodnaya.KartaKontrolyaYDE;
 import com.example.lider_express.Svodnaya.MegionSvodnaya;
 import com.example.lider_express.Synchronization.Synchronization;
+import com.example.lider_express.Tools.GiSosuda;
 import com.example.lider_express.Tools.VmyatinaSocuda;
 import com.example.lider_express.Сamera2.MainCamera2;
 import com.google.android.material.navigation.NavigationView;

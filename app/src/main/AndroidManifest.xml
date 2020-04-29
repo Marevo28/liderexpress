@@ -38,7 +38,7 @@
             android:label="@string/title_activity_vmyatina_socuda"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".GiSosuda"
+            android:name=".Tools.GiSosuda"
             android:label="@string/title_activity_gi_sosuda"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

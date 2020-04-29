@@ -1,4 +1,4 @@
-package com.example.lider_express;
+package com.example.lider_express.Tools;
 
 import android.database.Cursor;
 import android.database.SQLException;
@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import com.example.lider_express.DataBase.DatabaseHelper;
+import com.example.lider_express.MainActivity;
+import com.example.lider_express.R;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
