@@ -1,314 +1,314 @@
 
-x
-java:S1104£"aMake test_last_saved_image a static final constant or non-public and provide accessors if needed.(“£ÑÀ
-o	java:S116"RRename this field "is_test" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö«ÓŸ8Š‰ÕŸ.
-~	java:S116ÿ"cRename this field "immersive_timer_runnable" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³á úÿÿÿÿ
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öÜ ”üÿÿÿÿ
-p
-java:S3776Ë"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(»ä¹8Š‰ÕŸ.
-p
-java:S3776»"RRefactor this method to reduce its Cognitive Complexity from 85 to the 15 allowed.(Ì·âŒ8Š‰ÕŸ.
-^	java:S125£!"<This block of commented-out lines of code should be removed.(¨Ë´ùşÿÿÿÿ8Š‰ÕŸ.
-L
-java:S1066ç"/Merge this if statement with the enclosing one.(è‹—y8Š‰ÕŸ.
-w	java:S116s"bRename this field "supports_auto_stabilise" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûêó„
-p	java:S116u"[Rename this field "supports_camera2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÜì¡
-}	java:S116©"gRename this field "image_saving_notification_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ªîô
-I
-java:S1172¨"+Remove this unused method parameter "view".(Ïš’Ã8Š‰ÕŸ.
+~	java:S116€"aRename this field "any_significant_change" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®äº×8Š‰ÕŸ.
 I
 java:S1172"+Remove this unused method parameter "view".(Æ¿²¢8Š‰ÕŸ.
-u
-java:S1192›	"RDefine a constant instead of duplicating this literal "preference_raw_no" 3 times.(¬ï‘¸ûÿÿÿÿ8Š‰ÕŸ.
-J
-java:S1199Ü"-Extract this nested code block into a method.(‰Â—8Š‰ÕŸ.
-x	java:S116§"[Rename this field "has_notification" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã£ÎŞ8Š‰ÕŸ.
-~
-java:S1192ì"[Define a constant instead of duplicating this literal "immersive_mode_low_profile" 4 times.(£á´˜ÿÿÿÿÿ8Š‰ÕŸ.
-Ÿ
-java:S1186ù"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‰ÁÕ–8Š‰ÕŸ.
-W
-java:S1854Ä"9Remove this useless assignment to local variable "index".(Ôü¯©8Š‰ÕŸ.
-|	java:S116{"[Rename this field "screen_is_locked" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÛÓ”ûÿÿÿÿ8Š‰ÕŸ.
-T
-java:S2696¶"6Make the enclosing method "static" or remove this set.(˜£´É8Š‰ÕŸ.
-~	java:S116€"aRename this field "any_significant_change" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®äº×8Š‰ÕŸ.
-M
-java:S1066¥"/Merge this if statement with the enclosing one.(Éßû¢8Š‰ÕŸ.
-Œ
-java:S4165Õ"nRemove this useless assignment; "supports_camera2" already holds the assigned value along all execution paths.(Ø¯ƒ¢8Š‰ÕŸ.
-P
-java:S1199Õ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Š‰ÕŸ.
-€	java:S116w"dRename this field "save_location_history_saf" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä…ÓĞ8Š‰ÕŸ.
-F
-java:S1148®"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Š‰ÕŸ.
-^	java:S125î"<This block of commented-out lines of code should be removed.(«ª›òûÿÿÿÿ8Š‰ÕŸ.
-N
-java:S1172ñ	"+Remove this unused method parameter "view".(ëÓ¯˜úÿÿÿÿ8Š‰ÕŸ.
-I
-java:S1172ø"+Remove this unused method parameter "view".(Á§Ò8Š‰ÕŸ.
-Š
-java:S1192Ú"lDefine a constant instead of duplicating this literal "SecurityException failed to take permission" 3 times.(úÿû×8Š‰ÕŸ.
-Y	java:S125Æ"<This block of commented-out lines of code should be removed.(˜‹ÖÇ8Š‰ÕŸ.
-^	java:S125Ç "<This block of commented-out lines of code should be removed.(ÏÀâ€ùÿÿÿÿ8Š‰ÕŸ.
-p
-java:S3776ç"RRefactor this method to reduce its Cognitive Complexity from 77 to the 15 allowed.(ˆ¡ñÒ8Š‰ÕŸ.
-¤
-java:S1186±"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñ®çâùÿÿÿÿ8Š‰ÕŸ.
-z	java:S116|"eRename this field "preloaded_bitmap_resources" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ÿµ§
-d
-java:S1444¤"AMake this "public static test_force_supports_camera2" field final(Í¯¯€ùÿÿÿÿ8Š‰ÕŸ.
-N
-java:S1172†	"+Remove this unused method parameter "view".( …¹«úÿÿÿÿ8Š‰ÕŸ.
-X	java:S125×"<This block of commented-out lines of code should be removed.(ŞöÃV8Š‰ÕŸ.
-^	java:S125¾"<This block of commented-out lines of code should be removed.(ÂĞã”şÿÿÿÿ8Š‰ÕŸ.
-p	java:S116¨"URename this field "CHANNEL_ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³€µùÿÿÿÿ
-^	java:S125­"<This block of commented-out lines of code should be removed.(¨ã¶¯øÿÿÿÿ8Š‰ÕŸ.
-s
-java:S1149|"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".( ÿµ§8Š‰ÕŸ.
-C
-java:S1181„"%Catch Exception instead of Throwable.(å”»ê8Š‰ÕŸ.
-F
-java:S1148£ "#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Š‰ÕŸ.
-u
-java:S3776ë"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(åÖ‚¿ûÿÿÿÿ8Š‰ÕŸ.
-I
-java:S1172Æ"+Remove this unused method parameter "view".(åîÉŸ8Š‰ÕŸ.
-N
-java:S1172Å	"+Remove this unused method parameter "view".(ìšˆøÿÿÿÿ8Š‰ÕŸ.
-o
-java:S3776ô"RRefactor this method to reduce its Cognitive Complexity from 53 to the 15 allowed.(ûÕ¿i8Š‰ÕŸ.
-P
-java:S1199Ÿ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Š‰ÕŸ.
-^	java:S125¬"<This block of commented-out lines of code should be removed.(ÂÌ”Äúÿÿÿÿ8Š‰ÕŸ.
-u
-java:S3776Ô"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(¬ø­’şÿÿÿÿ8Š‰ÕŸ.
-K
-java:S1172¯"-Remove this unused method parameter "params".(‘‚¤é8Š‰ÕŸ.
+p	java:S116 "ZRename this field "test_low_memory" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë¢„
 K
 java:S1066Ï"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ
-t	java:S116Ÿ"YRename this field "gallery_bitmap" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÇüüÿÿÿÿ
-^	java:S125À"<This block of commented-out lines of code should be removed.(ªïû°ÿÿÿÿÿ8Š‰ÕŸ.
-Y
-java:S2696"6Make the enclosing method "static" or remove this set.(¯˜ÅŸúÿÿÿÿ8Š‰ÕŸ.
-t	java:S116y"_Rename this field "camera_in_background" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸¾ÍË
-a
-java:S1124‘"EReorder the modifiers to comply with the Java Language Specification.(°»óúÿÿÿÿ
-Y	java:S125™"<This block of commented-out lines of code should be removed.(ÜöÌ—8Š‰ÕŸ.
-‚	java:S116Š"gRename this field "changed_auto_stabilise_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±òÊ¨şÿÿÿÿ
-u
-java:S3776Ò"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(•âŸ·şÿÿÿÿ8Š‰ÕŸ.
-Œ
-java:S4165Ú"nRemove this useless assignment; "supports_camera2" already holds the assigned value along all execution paths.(Ø¯ƒ¢8Š‰ÕŸ.
 p
-java:S3776ô"RRefactor this method to reduce its Cognitive Complexity from 45 to the 15 allowed.(‡ª ñ8Š‰ÕŸ.
-^	java:S125ú"<This block of commented-out lines of code should be removed.(Ä±ø¢øÿÿÿÿ8Š‰ÕŸ.
-^	java:S125ó"<This block of commented-out lines of code should be removed.(ÆØÊäÿÿÿÿÿ8Š‰ÕŸ.
-I
-java:S1172Æ"+Remove this unused method parameter "view".(ßñİ8Š‰ÕŸ.
-~	java:S116‹"cRename this field "white_balance_lock_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ù¾Èùÿÿÿÿ
-F
-java:S1172Œ"(Remove this unused method parameter "v".(¡é††8Š‰ÕŸ.
-u
-java:S3776ä"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ƒÃ×™ıÿÿÿÿ8Š‰ÕŸ.
-R
-java:S1066"/Merge this if statement with the enclosing one.(¤ˆä´ıÿÿÿÿ8Š‰ÕŸ.
-P
-java:S1199Í"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Š‰ÕŸ.
-K
-java:S1066Ô"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ
-^	java:S125Ù"<This block of commented-out lines of code should be removed.(ó¨Õçÿÿÿÿÿ8Š‰ÕŸ.
-Y	java:S125â"<This block of commented-out lines of code should be removed.(ÙùŒ¦8Š‰ÕŸ.
-r
-java:S1104¢"VMake test_angle a static final constant or non-public and provide accessors if needed.(ò‹–Åşÿÿÿÿ
-F
-java:S1148”"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Š‰ÕŸ.
-¤
-java:S1186’"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñ®çâùÿÿÿÿ8Š‰ÕŸ.
-F
-java:S1148¾"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Š‰ÕŸ.
-N
-java:S1172À"+Remove this unused method parameter "view".(Ö£õ’ÿÿÿÿÿ8Š‰ÕŸ.
-^	java:S125ú"<This block of commented-out lines of code should be removed.(¢ĞÆÅşÿÿÿÿ8Š‰ÕŸ.
-p	java:S116¢"URename this field "test_angle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò‹–Åşÿÿÿÿ
-F
-java:S1148Û"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Š‰ÕŸ.
-I
-java:S1172€	"+Remove this unused method parameter "view".(‡“Ù8Š‰ÕŸ.
-v	java:S116ƒ"YRename this field "audio_listener" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ­º8Š‰ÕŸ.
-u
-java:S1192ö"WDefine a constant instead of duplicating this literal "preference_use_camera2" 3 times.(¬ĞÎ8Š‰ÕŸ.
-l	java:S116‰"VRename this field "stamp_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÄäë
-ƒ
-java:S1104¤"gMake test_force_supports_camera2 a static final constant or non-public and provide accessors if needed.(Í¯¯€ùÿÿÿÿ
-N
-java:S1172À
-"+Remove this unused method parameter "view".(»ÖÅ§øÿÿÿÿ8Š‰ÕŸ.
-H
-java:S1172´	"+Remove this unused method parameter "view".(Ğ½¸C8Š‰ÕŸ.
-H
-java:S1181š"%Catch Exception instead of Throwable.(’ğôãøÿÿÿÿ8Š‰ÕŸ.
+java:S3776Ë"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(»ä¹8Š‰ÕŸ.
+w
+java:S1104¡"[Make test_have_angle a static final constant or non-public and provide accessors if needed.(ªñšÜøÿÿÿÿ
 ^	java:S125¿"<This block of commented-out lines of code should be removed.(»­¶“øÿÿÿÿ8Š‰ÕŸ.
-p	java:S116}"\Rename this field "gallery_save_anim" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´Ï“:
-{	java:S116ë"YRename this field "has_saved_zoom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô¶Öøÿÿÿÿ8Š‰ÕŸ.
-u
-java:S3776–"RRefactor this method to reduce its Cognitive Complexity from 46 to the 15 allowed.(Šû£Êùÿÿÿÿ8Š‰ÕŸ.
-v
-java:S3776°"SRefactor this method to reduce its Cognitive Complexity from 111 to the 15 allowed.(¨Œşÿÿÿÿ8Š‰ÕŸ.
-Y	java:S125"<This block of commented-out lines of code should be removed.(¥¬ıã8Š‰ÕŸ.
-A
-java:S1148‰"#Use a logger to log this exception.(òçøì8Š‰ÕŸ.
-Ÿ
-java:S1186µ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‰ÁÕ–8Š‰ÕŸ.
-u
-java:S3776›"RRefactor this method to reduce its Cognitive Complexity from 77 to the 15 allowed.(³Õäˆûÿÿÿÿ8Š‰ÕŸ.
-p	java:S116«"SRename this field "is_video" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÄËé€8Š‰ÕŸ.
-F
-java:S1172‘"(Remove this unused method parameter "v".(¡é††8Š‰ÕŸ.
-\
-java:S1155ÿ">Use isEmpty() to check whether the collection is empty or not.(±®Ÿü8Š‰ÕŸ.
-Y	java:S125"<This block of commented-out lines of code should be removed.(Üîæİ8Š‰ÕŸ.
-a
-java:S1124”"EReorder the modifiers to comply with the Java Language Specification.(Œ©ıÌüÿÿÿÿ
-r
-java:S1104 "[Make test_low_memory a static final constant or non-public and provide accessors if needed.(ë¢„
-D	java:S131¾""Add a default case to this switch.(×ö³–úÿÿÿÿ8Š‰ÕŸ.
-F
-java:S1148æ"#Use a logger to log this exception.(‰œ‰Õúÿÿÿÿ8Š‰ÕŸ.
-z
-java:S1104¥"cMake test_save_settings_file a static final constant or non-public and provide accessors if needed.(ğ‰Û—
-Y	java:S125Ÿ"<This block of commented-out lines of code should be removed.(Šæ˜8Š‰ÕŸ.
-^	java:S125Û"<This block of commented-out lines of code should be removed.(ÊÊãéüÿÿÿÿ8Š‰ÕŸ.
 I
-java:S1172Ö"+Remove this unused method parameter "view".(ÊÃğ¸8Š‰ÕŸ.
-F
-java:S1172À"(Remove this unused method parameter "v".(¡é††8Š‰ÕŸ.
-u	java:S116¡"ZRename this field "test_have_angle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªñšÜøÿÿÿÿ
-Y	java:S125ê"<This block of commented-out lines of code should be removed.(Ğˆş…8Š‰ÕŸ.
-^	java:S125ƒ"<This block of commented-out lines of code should be removed.(¡‚ºşÿÿÿÿ8½…ÔŸ.
-Y	java:S125ù"<This block of commented-out lines of code should be removed.(º ‚8Š‰ÕŸ.
-K
-java:S1199Õ"-Extract this nested code block into a method.(Ò£Óî8Š‰ÕŸ.
-y	java:S116ˆ"^Rename this field "screen_locked_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…è¦ìüÿÿÿÿ
-z
-java:S3077Ÿ"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(ÕÇüüÿÿÿÿ8Š‰ÕŸ.
-p	java:S116"URename this field "any_change" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’¾ÿëıÿÿÿÿ
-y	java:S116ì"\Rename this field "saved_zoom_factor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µŞÒ8½…ÔŸ.
-^	java:S125"<This block of commented-out lines of code should be removed.(—¨ë•úÿÿÿÿ8Š‰ÕŸ.
-^	java:S125…"<This block of commented-out lines of code should be removed.(âÕ–äùÿÿÿÿ8Š‰ÕŸ.
-Y	java:S125¶"<This block of commented-out lines of code should be removed.(§“âÙ8Š‰ÕŸ.
-N
-java:S1172	"+Remove this unused method parameter "view".(€š¾İşÿÿÿÿ8Š‰ÕŸ.
-I
-java:S1172Ü"+Remove this unused method parameter "view".(§¢èÒ8Š‰ÕŸ.
-q
-java:S3776Ÿ"SRefactor this method to reduce its Cognitive Complexity from 116 to the 15 allowed.(şœ8Š‰ÕŸ.
-h
-java:S1124´"EReorder the modifiers to comply with the Java Language Specification.(¶îéûıÿÿÿÿ8Š‰ÕŸ.
+java:S1172¨"+Remove this unused method parameter "view".(Ïš’Ã8Š‰ÕŸ.
+Y	java:S125Æ"<This block of commented-out lines of code should be removed.(˜‹ÖÇ8Š‰ÕŸ.
 L
 java:S1121†".Extract the assignment out of this expression.(—8Š‰ÕŸ.
-N
-java:S1172•	"+Remove this unused method parameter "view".(‰Ÿë¹ùÿÿÿÿ8Š‰ÕŸ.
-^	java:S125‰"<This block of commented-out lines of code should be removed.(é•“èûÿÿÿÿ8Š‰ÕŸ.
-h
-java:S1124•"EReorder the modifiers to comply with the Java Language Specification.(şÀÁùÿÿÿÿ8êĞàÇ.
-K
-java:S1199Ï"-Extract this nested code block into a method.(¯ô½°8Š‰ÕŸ.
-‰
-java:S3008¤"fRename this field "test_force_supports_camera2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í¯¯€ùÿÿÿÿ8Š‰ÕŸ.
-v	java:S116£"`Rename this field "test_last_saved_image" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“£ÑÀ
-^	java:S125ˆ"<This block of commented-out lines of code should be removed.(ªïû°ÿÿÿÿÿ8Š‰ÕŸ.
-?
-java:S1170©"!Make this final field static too.(…ªîô8êĞàÇ.
-P
-java:S1199Æ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Š‰ÕŸ.
-M
-java:S1066µ"/Merge this if statement with the enclosing one.(©¥³Ä8Š‰ÕŸ.
-Ÿ
-java:S1186–"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‰ÁÕ–8Š‰ÕŸ.
-v
-java:S3776Ş"SRefactor this method to reduce its Cognitive Complexity from 103 to the 15 allowed.(ÓÂî¹üÿÿÿÿ8Š‰ÕŸ.
-N
-java:S1172¥
-"+Remove this unused method parameter "view".(´Õÿÿÿÿÿÿ8Š‰ÕŸ.
-P
-java:S1199ı"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Š‰ÕŸ.
-^	java:S125î"<This block of commented-out lines of code should be removed.(İ±­¥şÿÿÿÿ8Š‰ÕŸ.
-I
-java:S1172­
-"+Remove this unused method parameter "view".(¬ÇßÑ8Š‰ÕŸ.
-~
-java:S1192§"[Define a constant instead of duplicating this literal "preference_ghost_image_off" 3 times.(Û Ÿëÿÿÿÿÿ8Š‰ÕŸ.
-Y	java:S125™"<This block of commented-out lines of code should be removed.(›úìÎ8Š‰ÕŸ.
-^	java:S125Å"<This block of commented-out lines of code should be removed.(ßòšıÿÿÿÿ8Š‰ÕŸ.
-P
-java:S1199Ä"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Š‰ÕŸ.
-s
-java:S1192ë"UDefine a constant instead of duplicating this literal "SAF dialog cancelled" 3 times.(µ÷ã8Š‰ÕŸ.
-F
-java:S1172»"(Remove this unused method parameter "v".(¡é††8Š‰ÕŸ.
-p	java:S116 "ZRename this field "test_low_memory" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë¢„
-^	java:S125ˆ"<This block of commented-out lines of code should be removed.(—óÕĞùÿÿÿÿ8Š‰ÕŸ.
-X	java:S125”"<This block of commented-out lines of code should be removed.(£‰èN8Š‰ÕŸ.
-\
-java:S1124“"EReorder the modifiers to comply with the Java Language Specification.(‰ı¡
-u
-java:S3776ƒ"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(‰·Ú ÿÿÿÿÿ8Š‰ÕŸ.
-^	java:S125Ç"<This block of commented-out lines of code should be removed.(ªïû°ÿÿÿÿÿ8Š‰ÕŸ.
-{	java:S116x"fRename this field "saf_dialog_from_preferences" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÆÆü
+=
+java:S1170¨"!Make this final field static too.(³€µùÿÿÿÿ
 ¤
-java:S1186õ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñ®çâùÿÿÿÿ8Š‰ÕŸ.
-	java:S116‡"]Rename this field "switch_video_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚Âí™úÿÿÿÿ8Š‰ÕŸ.
-	java:S116¥"bRename this field "test_save_settings_file" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ‰Û—8Š‰ÕŸ.
+java:S1186¼"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñ®çâùÿÿÿÿ8Š‰ÕŸ.
+^	java:S125…"<This block of commented-out lines of code should be removed.(âÕ–äùÿÿÿÿ8Š‰ÕŸ.
+P
+java:S1199Õ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Š‰ÕŸ.
+w	java:S116t"bRename this field "supports_force_video_4k" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øïŠâ
+C
+java:S1181„"%Catch Exception instead of Throwable.(å”»ê8Š‰ÕŸ.
+^	java:S125Ç"<This block of commented-out lines of code should be removed.(ªïû°ÿÿÿÿÿ8Š‰ÕŸ.
+L
+java:S1066ç"/Merge this if statement with the enclosing one.(è‹—y8Š‰ÕŸ.
+N
+java:S1172À"+Remove this unused method parameter "view".(Ö£õ’ÿÿÿÿÿ8Š‰ÕŸ.
+x	java:S116r"\Rename this field "large_heap_memory" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æş¢8Š‰ÕŸ.
+u
+java:S3776ë"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(åÖ‚¿ûÿÿÿÿ8Š‰ÕŸ.
 q
 java:S1104"SMake is_test a static final constant or non-public and provide accessors if needed.(Ö«ÓŸ8Š‰ÕŸ.
+t	java:S116"^Rename this field "audio_control_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªïó­
+o	java:S116"RRename this field "is_test" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö«ÓŸ8Š‰ÕŸ.
+F
+java:S1172»"(Remove this unused method parameter "v".(¡é††8Š‰ÕŸ.
+P
+java:S1199Ÿ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Š‰ÕŸ.
+~	java:S116ÿ"cRename this field "immersive_timer_runnable" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³á úÿÿÿÿ
+¤
+java:S1186’"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñ®çâùÿÿÿÿ8Š‰ÕŸ.
+	java:S116‡"]Rename this field "switch_video_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚Âí™úÿÿÿÿ8Š‰ÕŸ.
+u	java:S116¡"ZRename this field "test_have_angle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªñšÜøÿÿÿÿ
+^	java:S125¾"<This block of commented-out lines of code should be removed.(ÂĞã”şÿÿÿÿ8Š‰ÕŸ.
+^	java:S125Ç "<This block of commented-out lines of code should be removed.(ÏÀâ€ùÿÿÿÿ8Š‰ÕŸ.
+^	java:S125Å"<This block of commented-out lines of code should be removed.(ßòšıÿÿÿÿ8Š‰ÕŸ.
+t	java:S116Œ"^Rename this field "exposure_lock_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûù½ì
+}	java:S116©"gRename this field "image_saving_notification_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ªîô
+I
+java:S1172Ü"+Remove this unused method parameter "view".(§¢èÒ8Š‰ÕŸ.
+F
+java:S1172Œ"(Remove this unused method parameter "v".(¡é††8Š‰ÕŸ.
+{	java:S116x"fRename this field "saf_dialog_from_preferences" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÆÆü
+Y	java:S125"<This block of commented-out lines of code should be removed.(Üîæİ8Š‰ÕŸ.
+^	java:S125"<This block of commented-out lines of code should be removed.(—¨ë•úÿÿÿÿ8Š‰ÕŸ.
+I
+java:S1172ø"+Remove this unused method parameter "view".(Á§Ò8Š‰ÕŸ.
+I
+java:S1172Æ"+Remove this unused method parameter "view".(åîÉŸ8Š‰ÕŸ.
+¤
+java:S1186±"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñ®çâùÿÿÿÿ8Š‰ÕŸ.
+F
+java:S1148£ "#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Š‰ÕŸ.
+N
+java:S1172	"+Remove this unused method parameter "view".(€š¾İşÿÿÿÿ8Š‰ÕŸ.
+„	java:S116ş"bRename this field "immersive_timer_handler" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éÅˆşÿÿÿÿ8Š‰ÕŸ.
+K
+java:S1199Õ"-Extract this nested code block into a method.(Ò£Óî8Š‰ÕŸ.
+I
+java:S1172€	"+Remove this unused method parameter "view".(‡“Ù8Š‰ÕŸ.
+€	java:S116w"dRename this field "save_location_history_saf" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä…ÓĞ8Š‰ÕŸ.
+Y	java:S125Ö"<This block of commented-out lines of code should be removed.(öĞç¢8Š‰ÕŸ.
+u
+java:S3776Ô"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(¬ø­’şÿÿÿÿ8Š‰ÕŸ.
+A
+java:S1148‰"#Use a logger to log this exception.(òçøì8Š‰ÕŸ.
+t	java:S116"^Rename this field "block_startup_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ¬ò™
+R
+java:S1066"/Merge this if statement with the enclosing one.(¤ˆä´ıÿÿÿÿ8Š‰ÕŸ.
+Y	java:S125"<This block of commented-out lines of code should be removed.(¥¬ıã8Š‰ÕŸ.
+Ÿ
+java:S1186¯"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‰ÁÕ–8Š‰ÕŸ.
+x
+java:S1104£"aMake test_last_saved_image a static final constant or non-public and provide accessors if needed.(“£ÑÀ
+X	java:S125”"<This block of commented-out lines of code should be removed.(£‰èN8Š‰ÕŸ.
+^	java:S125ˆ"<This block of commented-out lines of code should be removed.(—óÕĞùÿÿÿÿ8Š‰ÕŸ.
+y	java:S116ì"\Rename this field "saved_zoom_factor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µŞÒ8½…ÔŸ.
+\
+java:S1124“"EReorder the modifiers to comply with the Java Language Specification.(‰ı¡
+D	java:S131¾""Add a default case to this switch.(×ö³–úÿÿÿÿ8Š‰ÕŸ.
+^	java:S125­"<This block of commented-out lines of code should be removed.(¨ã¶¯øÿÿÿÿ8Š‰ÕŸ.
+H
+java:S1172´	"+Remove this unused method parameter "view".(Ğ½¸C8Š‰ÕŸ.
+¤
+java:S1186«"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñ®çâùÿÿÿÿ8Š‰ÕŸ.
+z
+java:S3077Ÿ"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(ÕÇüüÿÿÿÿ8Š‰ÕŸ.
+T
+java:S2696¶"6Make the enclosing method "static" or remove this set.(˜£´É8Š‰ÕŸ.
+p	java:S116¢"URename this field "test_angle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò‹–Åşÿÿÿÿ
+N
+java:S1172Å	"+Remove this unused method parameter "view".(ìšˆøÿÿÿÿ8Š‰ÕŸ.
+Ÿ
+java:S1186–"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‰ÁÕ–8Š‰ÕŸ.
+I
+java:S1172Ö"+Remove this unused method parameter "view".(ÊÃğ¸8Š‰ÕŸ.
+Ÿ
+java:S1186Ê"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ĞŠß±8Š‰ÕŸ.
+^	java:S125ú"<This block of commented-out lines of code should be removed.(¢ĞÆÅşÿÿÿÿ8Š‰ÕŸ.
+R
+java:S1066­"/Merge this if statement with the enclosing one.(µÑşÿÿÿÿ8Š‰ÕŸ.
+a
+java:S1124‘"EReorder the modifiers to comply with the Java Language Specification.(°»óúÿÿÿÿ
+v
+java:S3008_"YRename this field "activity_count" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÀ‘É8Š‰ÕŸ.
+w	java:S116s"bRename this field "supports_auto_stabilise" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûêó„
+~
+java:S1192ì"[Define a constant instead of duplicating this literal "immersive_mode_low_profile" 4 times.(£á´˜ÿÿÿÿÿ8Š‰ÕŸ.
+p
+java:S3776ç"RRefactor this method to reduce its Cognitive Complexity from 77 to the 15 allowed.(ˆ¡ñÒ8Š‰ÕŸ.
+p	java:S116«"SRename this field "is_video" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÄËé€8Š‰ÕŸ.
+P
+java:S1199Æ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Š‰ÕŸ.
+?
+java:S1170©"!Make this final field static too.(…ªîô8êĞàÇ.
+Ÿ
+java:S1186µ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‰ÁÕ–8Š‰ÕŸ.
+M
+java:S1066µ"/Merge this if statement with the enclosing one.(©¥³Ä8Š‰ÕŸ.
+p
+java:S3776ô"RRefactor this method to reduce its Cognitive Complexity from 45 to the 15 allowed.(‡ª ñ8Š‰ÕŸ.
+v
+java:S3776Ş"SRefactor this method to reduce its Cognitive Complexity from 103 to the 15 allowed.(ÓÂî¹üÿÿÿÿ8Š‰ÕŸ.
+Y	java:S125¶"<This block of commented-out lines of code should be removed.(§“âÙ8Š‰ÕŸ.
+^	java:S125‰"<This block of commented-out lines of code should be removed.(é•“èûÿÿÿÿ8Š‰ÕŸ.
+y	java:S116ˆ"^Rename this field "screen_locked_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…è¦ìüÿÿÿÿ
+F
+java:S1148Û"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Š‰ÕŸ.
+Š
+java:S1192Ú"lDefine a constant instead of duplicating this literal "SecurityException failed to take permission" 3 times.(úÿû×8Š‰ÕŸ.
 Ÿ
 java:S1186À"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‰ÁÕ–8Š‰ÕŸ.
+F
+java:S1148æ"#Use a logger to log this exception.(‰œ‰Õúÿÿÿÿ8Š‰ÕŸ.
+N
+java:S1172ñ	"+Remove this unused method parameter "view".(ëÓ¯˜úÿÿÿÿ8Š‰ÕŸ.
+~
+java:S1192§"[Define a constant instead of duplicating this literal "preference_ghost_image_off" 3 times.(Û Ÿëÿÿÿÿÿ8Š‰ÕŸ.
+M
+java:S1066¥"/Merge this if statement with the enclosing one.(Éßû¢8Š‰ÕŸ.
+z
+java:S1104¥"cMake test_save_settings_file a static final constant or non-public and provide accessors if needed.(ğ‰Û—
+v
+java:S1104Ÿ"ZMake gallery_bitmap a static final constant or non-public and provide accessors if needed.(ÕÇüüÿÿÿÿ
+u
+java:S3776Ò"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(•âŸ·şÿÿÿÿ8Š‰ÕŸ.
+Ÿ
+java:S1186ù"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‰ÁÕ–8Š‰ÕŸ.
+^	java:S125ú"<This block of commented-out lines of code should be removed.(Ä±ø¢øÿÿÿÿ8Š‰ÕŸ.
+^	java:S125ˆ"<This block of commented-out lines of code should be removed.(ªïû°ÿÿÿÿÿ8Š‰ÕŸ.
+p	java:S116¨"URename this field "CHANNEL_ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³€µùÿÿÿÿ
+W
+java:S1854Ä"9Remove this useless assignment to local variable "index".(Ôü¯©8Š‰ÕŸ.
+F
+java:S1148É"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Š‰ÕŸ.
+{	java:S116ë"YRename this field "has_saved_zoom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô¶Öøÿÿÿÿ8Š‰ÕŸ.
+p
+java:S3776å"RRefactor this method to reduce its Cognitive Complexity from 73 to the 15 allowed.(Ç‡öÚ8Š‰ÕŸ.
+z	java:S116|"eRename this field "preloaded_bitmap_resources" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ÿµ§
+N
+java:S1172•	"+Remove this unused method parameter "view".(‰Ÿë¹ùÿÿÿÿ8Š‰ÕŸ.
+H
+java:S1181š"%Catch Exception instead of Throwable.(’ğôãøÿÿÿÿ8Š‰ÕŸ.
+p
+java:S3776»"RRefactor this method to reduce its Cognitive Complexity from 85 to the 15 allowed.(Ì·âŒ8Š‰ÕŸ.
+^	java:S125À"<This block of commented-out lines of code should be removed.(ªïû°ÿÿÿÿÿ8Š‰ÕŸ.
+u
+java:S1192ö"WDefine a constant instead of duplicating this literal "preference_use_camera2" 3 times.(¬ĞÎ8Š‰ÕŸ.
+v
+java:S3776°"SRefactor this method to reduce its Cognitive Complexity from 111 to the 15 allowed.(¨Œşÿÿÿÿ8Š‰ÕŸ.
+Y	java:S125Ÿ"<This block of commented-out lines of code should be removed.(Šæ˜8Š‰ÕŸ.
+F
+java:S1172‘"(Remove this unused method parameter "v".(¡é††8Š‰ÕŸ.
+Y
+java:S2696"6Make the enclosing method "static" or remove this set.(¯˜ÅŸúÿÿÿÿ8Š‰ÕŸ.
+^	java:S125ƒ"<This block of commented-out lines of code should be removed.(¡‚ºşÿÿÿÿ8½…ÔŸ.
+z	java:S116v"`Rename this field "save_location_history" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§‘Ó¹ûÿÿÿÿ
+K
+java:S1199Ï"-Extract this nested code block into a method.(¯ô½°8Š‰ÕŸ.
+F
+java:S1148”"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Š‰ÕŸ.
 N
 java:S1172ƒ
 "+Remove this unused method parameter "view".(— ©ºøÿÿÿÿ8Š‰ÕŸ.
-u	java:S131Å"YComplete cases by adding the missing enum constants or add a default case to this switch.(’áûo8Š‰ÕŸ.
-v
-java:S3008_"YRename this field "activity_count" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÀ‘É8Š‰ÕŸ.
-F
-java:S1148ó"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Š‰ÕŸ.
+	java:S116¥"bRename this field "test_save_settings_file" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ‰Û—8Š‰ÕŸ.
+Œ
+java:S4165Õ"nRemove this useless assignment; "supports_camera2" already holds the assigned value along all execution paths.(Ø¯ƒ¢8Š‰ÕŸ.
+v	java:S116ƒ"YRename this field "audio_listener" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ­º8Š‰ÕŸ.
+^	java:S125î"<This block of commented-out lines of code should be removed.(«ª›òûÿÿÿÿ8Š‰ÕŸ.
 N
-java:S1172†"+Remove this unused method parameter "view".(¢†ìöÿÿÿÿÿ8Š‰ÕŸ.
-w	java:S116t"bRename this field "supports_force_video_4k" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øïŠâ
+java:S1172†	"+Remove this unused method parameter "view".( …¹«úÿÿÿÿ8Š‰ÕŸ.
+K
+java:S1066Ô"/Merge this if statement with the enclosing one.(¡‚ºşÿÿÿÿ
+u
+java:S1192›	"RDefine a constant instead of duplicating this literal "preference_raw_no" 3 times.(¬ï‘¸ûÿÿÿÿ8Š‰ÕŸ.
+t	java:S116Ÿ"YRename this field "gallery_bitmap" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÇüüÿÿÿÿ
+p	java:S116}"\Rename this field "gallery_save_anim" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´Ï“:
 I
 java:S1172Î"+Remove this unused method parameter "view".(óìùñ8Š‰ÕŸ.
-p
-java:S3776å"RRefactor this method to reduce its Cognitive Complexity from 73 to the 15 allowed.(Ç‡öÚ8Š‰ÕŸ.
+^	java:S125î"<This block of commented-out lines of code should be removed.(İ±­¥şÿÿÿÿ8Š‰ÕŸ.
+s
+java:S1149|"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".( ÿµ§8Š‰ÕŸ.
+u
+java:S3776›"RRefactor this method to reduce its Cognitive Complexity from 77 to the 15 allowed.(³Õäˆûÿÿÿÿ8Š‰ÕŸ.
+F
+java:S1148ó"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Š‰ÕŸ.
+Y	java:S125™"<This block of commented-out lines of code should be removed.(ÜöÌ—8Š‰ÕŸ.
+u	java:S131Å"YComplete cases by adding the missing enum constants or add a default case to this switch.(’áûo8Š‰ÕŸ.
+Y	java:S125™"<This block of commented-out lines of code should be removed.(›úìÎ8Š‰ÕŸ.
+h
+java:S1124•"EReorder the modifiers to comply with the Java Language Specification.(şÀÁùÿÿÿÿ8êĞàÇ.
+u
+java:S3776–"RRefactor this method to reduce its Cognitive Complexity from 46 to the 15 allowed.(Šû£Êùÿÿÿÿ8Š‰ÕŸ.
+‚	java:S116Š"gRename this field "changed_auto_stabilise_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±òÊ¨şÿÿÿÿ
+‰
+java:S3008¤"fRename this field "test_force_supports_camera2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í¯¯€ùÿÿÿÿ8Š‰ÕŸ.
+q
+java:S3776Ÿ"SRefactor this method to reduce its Cognitive Complexity from 116 to the 15 allowed.(şœ8Š‰ÕŸ.
+F
+java:S1148®"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Š‰ÕŸ.
+r
+java:S1104 "[Make test_low_memory a static final constant or non-public and provide accessors if needed.(ë¢„
+N
+java:S1172¥
+"+Remove this unused method parameter "view".(´Õÿÿÿÿÿÿ8Š‰ÕŸ.
+¤
+java:S1186õ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñ®çâùÿÿÿÿ8Š‰ÕŸ.
+P
+java:S1199Í"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Š‰ÕŸ.
+F
+java:S1148¾"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Š‰ÕŸ.
+a
+java:S1124”"EReorder the modifiers to comply with the Java Language Specification.(Œ©ıÌüÿÿÿÿ
+ƒ
+java:S1104¤"gMake test_force_supports_camera2 a static final constant or non-public and provide accessors if needed.(Í¯¯€ùÿÿÿÿ
+l	java:S116‰"VRename this field "stamp_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÄäë
 u
 java:S3776À
 "RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(»ÖÅ§øÿÿÿÿ8Š‰ÕŸ.
-„	java:S116ş"bRename this field "immersive_timer_handler" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éÅˆşÿÿÿÿ8Š‰ÕŸ.
-F
-java:S1148É"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Š‰ÕŸ.
-t	java:S116"^Rename this field "audio_control_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªïó­
-Ÿ
-java:S1186¯"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‰ÁÕ–8Š‰ÕŸ.
-z	java:S116~"eRename this field "last_continuous_fast_burst" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õÖôÊ
-Ÿ
-java:S1186Ê"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ĞŠß±8Š‰ÕŸ.
-¤
-java:S1186«"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñ®çâùÿÿÿÿ8Š‰ÕŸ.
-x	java:S116r"\Rename this field "large_heap_memory" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æş¢8Š‰ÕŸ.
-v
-java:S1104Ÿ"ZMake gallery_bitmap a static final constant or non-public and provide accessors if needed.(ÕÇüüÿÿÿÿ
-t	java:S116"^Rename this field "block_startup_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ¬ò™
-¤
-java:S1186¼"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñ®çâùÿÿÿÿ8Š‰ÕŸ.
-w
-java:S1104¡"[Make test_have_angle a static final constant or non-public and provide accessors if needed.(ªñšÜøÿÿÿÿ
-t	java:S116Œ"^Rename this field "exposure_lock_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûù½ì
-Y	java:S125Ö"<This block of commented-out lines of code should be removed.(öĞç¢8Š‰ÕŸ.
-\
-java:S1124’"EReorder the modifiers to comply with the Java Language Specification.(”Ê¢‹
-z	java:S116v"`Rename this field "save_location_history" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§‘Ó¹ûÿÿÿÿ
-R
-java:S1066­"/Merge this if statement with the enclosing one.(µÑşÿÿÿÿ8Š‰ÕŸ.
-=
-java:S1170¨"!Make this final field static too.(³€µùÿÿÿÿ
+^	java:S125Ù"<This block of commented-out lines of code should be removed.(ó¨Õçÿÿÿÿÿ8Š‰ÕŸ.
+d
+java:S1444¤"AMake this "public static test_force_supports_camera2" field final(Í¯¯€ùÿÿÿÿ8Š‰ÕŸ.
+P
+java:S1199ı"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Š‰ÕŸ.
+^	java:S125¬"<This block of commented-out lines of code should be removed.(ÂÌ”Äúÿÿÿÿ8Š‰ÕŸ.
 N
 java:S1172ó"+Remove this unused method parameter "view".(“òîÿÿÿÿÿ8Š‰ÕŸ.
+J
+java:S1199Ü"-Extract this nested code block into a method.(‰Â—8Š‰ÕŸ.
+t	java:S116y"_Rename this field "camera_in_background" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸¾ÍË
+v	java:S116£"`Rename this field "test_last_saved_image" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“£ÑÀ
+^	java:S125Û"<This block of commented-out lines of code should be removed.(ÊÊãéüÿÿÿÿ8Š‰ÕŸ.
+z	java:S116~"eRename this field "last_continuous_fast_burst" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õÖôÊ
+u
+java:S3776ä"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ƒÃ×™ıÿÿÿÿ8Š‰ÕŸ.
+Y	java:S125ê"<This block of commented-out lines of code should be removed.(Ğˆş…8Š‰ÕŸ.
+X	java:S125×"<This block of commented-out lines of code should be removed.(ŞöÃV8Š‰ÕŸ.
+N
+java:S1172†"+Remove this unused method parameter "view".(¢†ìöÿÿÿÿÿ8Š‰ÕŸ.
+N
+java:S1172À
+"+Remove this unused method parameter "view".(»ÖÅ§øÿÿÿÿ8Š‰ÕŸ.
+\
+java:S1124’"EReorder the modifiers to comply with the Java Language Specification.(”Ê¢‹
+F
+java:S1172À"(Remove this unused method parameter "v".(¡é††8Š‰ÕŸ.
+x	java:S116§"[Rename this field "has_notification" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã£ÎŞ8Š‰ÕŸ.
+Œ
+java:S4165Ú"nRemove this useless assignment; "supports_camera2" already holds the assigned value along all execution paths.(Ø¯ƒ¢8Š‰ÕŸ.
+P
+java:S1199Ä"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Š‰ÕŸ.
+h
+java:S1124´"EReorder the modifiers to comply with the Java Language Specification.(¶îéûıÿÿÿÿ8Š‰ÕŸ.
+p	java:S116u"[Rename this field "supports_camera2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÜì¡
+\
+java:S1155ÿ">Use isEmpty() to check whether the collection is empty or not.(±®Ÿü8Š‰ÕŸ.
+^	java:S125ó"<This block of commented-out lines of code should be removed.(ÆØÊäÿÿÿÿÿ8Š‰ÕŸ.
+K
+java:S1172¯"-Remove this unused method parameter "params".(‘‚¤é8Š‰ÕŸ.
+p	java:S116"URename this field "any_change" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’¾ÿëıÿÿÿÿ
+Y	java:S125â"<This block of commented-out lines of code should be removed.(ÙùŒ¦8Š‰ÕŸ.
+r
+java:S1104¢"VMake test_angle a static final constant or non-public and provide accessors if needed.(ò‹–Åşÿÿÿÿ
+o
+java:S3776ô"RRefactor this method to reduce its Cognitive Complexity from 53 to the 15 allowed.(ûÕ¿i8Š‰ÕŸ.
+~	java:S116‹"cRename this field "white_balance_lock_toast" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ù¾Èùÿÿÿÿ
+^	java:S125£!"<This block of commented-out lines of code should be removed.(¨Ë´ùşÿÿÿÿ8Š‰ÕŸ.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öÜ ”üÿÿÿÿ
+u
+java:S3776ƒ"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(‰·Ú ÿÿÿÿÿ8Š‰ÕŸ.
+|	java:S116{"[Rename this field "screen_is_locked" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÛÓ”ûÿÿÿÿ8Š‰ÕŸ.
+Y	java:S125ù"<This block of commented-out lines of code should be removed.(º ‚8Š‰ÕŸ.
+I
+java:S1172Æ"+Remove this unused method parameter "view".(ßñİ8Š‰ÕŸ.
+I
+java:S1172­
+"+Remove this unused method parameter "view".(¬ÇßÑ8Š‰ÕŸ.
+s
+java:S1192ë"UDefine a constant instead of duplicating this literal "SAF dialog cancelled" 3 times.(µ÷ã8Š‰ÕŸ.

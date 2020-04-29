@@ -454,7 +454,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent IntentSittings = new Intent(MainActivity.this, SittingsActivity.class);
             startActivity(IntentSittings);
         } else if (id == R.id.nav_photo) {
-
+            Intent IntentSittings = new Intent(MainActivity.this, Navigation.class);
+            startActivity(IntentSittings);
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

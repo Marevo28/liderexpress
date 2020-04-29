@@ -1,0 +1,13 @@
+
+<
+java:S1170"!Make this final field static too.(“ñäÿÿÿÿÿ
+q
+java:S1450"[Remove the "outputStream" field and declare it as a local variable in the relevant methods.(ßÉÞ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Øø€¬
+n	java:S116"TRename this field "FILE_NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ñäÿÿÿÿÿ
+u
+java:S1450"ZRemove the "inputStream" field and declare it as a local variable in the relevant methods.(ï«Ž¬ùÿÿÿÿ
+7
+java:S16431"Use a StringBuilder instead.(ÀãÁãÿÿÿÿÿ
+;
+java:S1075?"&Remove this hard-coded path-delimiter.(ÓÙ™x

@@ -1,9 +1,4 @@
 
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öÜ ”üÿÿÿÿ
-n	java:S116"TRename this field "sound_ids" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤òáìøÿÿÿÿ
 j	java:S116"URename this field "sound_pool" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å±Áá
-f	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÂÅ
-k	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™‚ÚÍùÿÿÿÿ
-k	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö¡×øüÿÿÿÿ
-k	java:S117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒËáÿÿÿÿÿ
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÄË‡É
+n	java:S116"TRename this field "sound_ids" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤òáìøÿÿÿÿ
