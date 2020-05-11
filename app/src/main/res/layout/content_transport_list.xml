@@ -6,39 +6,44 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <Button
+            android:text="Добавить"
+            android:layout_weight="0.5"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
         <TableLayout
             android:id="@+id/tableoborudovanie"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <TableRow>
                 <TextView
-                    android:text="Тип"
+                    android:text="Дата"
                     android:layout_weight="1"
                     android:layout_width="0dp"
+                    android:textAlignment="center"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:layout_weight="1"
-                    android:text="Марка"
+                    android:text="Пробег с утра"
                     android:layout_width="0dp"
+                    android:textAlignment="center"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:layout_weight="1"
-                    android:text="Зав.№"
+                    android:text="Пробег вечером"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_weight="1"
-                    android:text="Статус"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_weight="1"
-                    android:text="Передать"
-                    android:layout_width="0dp"
+                    android:textAlignment="center"
                     android:layout_height="wrap_content" />
             </TableRow>
         </TableLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

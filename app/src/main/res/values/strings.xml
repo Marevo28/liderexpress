@@ -16,6 +16,7 @@
     <string name="menu_tools">Синхронизация</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Оборудование</string>
+    <string name="menu_transport_list">Путевой лист</string>
     <string name="title_activity_sittings">SittingsActivity</string>
     <string name="title_activity_photo">Photo</string>
     <string name="title_activity_bndsvodnaya">BNDSvodnaya</string>
@@ -989,4 +990,6 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_oborudovanie">Oborudovanie</string>
+    <string name="title_activity_transport_list">Transport_list</string>
 </resources>

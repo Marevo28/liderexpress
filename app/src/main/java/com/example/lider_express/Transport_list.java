@@ -1,19 +1,21 @@
 package com.example.lider_express;
 
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
-public class Oborudovanie extends AppCompatActivity {
+public class Transport_list extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_oborudovanie);
+        setContentView(R.layout.activity_transport_list);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         int counter=5;
         TableLayout tableLayout =findViewById(R.id.tableoborudovanie);
         for (int i = 0; i < counter; i++) {
@@ -21,28 +23,20 @@ public class Oborudovanie extends AppCompatActivity {
             TableRow row = new TableRow(this);
             row.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.MATCH_PARENT));
             // create a new TextView
-            TextView type = new TextView(this);
-            TextView mark = new TextView(this);
-            TextView zav = new TextView(this);
-            TextView status = new TextView(this);
-            Button peredacha = new Button(this);
-            peredacha.setText("Передать");
+            TextView date = new TextView(this);
+            TextView startkm = new TextView(this);
+            TextView endkm = new TextView(this);
             // set the text to "text xx"
-            type.setText("type");
-            mark.setText("mark");
-            zav.setText("zav");
-            status.setText("status");
+            date.setText("date");
+            startkm.setText("startkm");
+            endkm.setText("endkm");
             // add the TextView and the CheckBox to the new TableRow
-            row.addView(type);
-            row.addView(mark);
-            row.addView(zav);
-            row.addView(status);
-            row.addView(peredacha);
+            row.addView(date);
+            row.addView(startkm);
+            row.addView(endkm);
             // add the TableRow to the TableLayout
             tableLayout.addView(row);
         }
     }
-
-
 
 }
