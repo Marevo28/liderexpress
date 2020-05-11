@@ -5,8 +5,6 @@ q
 Aapp/src/main/java/com/example/lider_express/SittingsActivity.java,f\c\fcb14c07dae8becdd24e23e0c668637da758a73a
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
-i
-9app/src/main/java/com/example/lider_express/GiSosuda.java,b\b\bb4d425fbaeb8f45d0be8c67f233226d96d8aee7
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 g
@@ -23,8 +21,6 @@ x
 Happ/src/main/java/com/example/lider_express/Svodnaya/ProvedeniyeYZT.java,2\5\2598eabd0611717351c9ab35408e296ff8642542
 {
 Kapp/src/main/java/com/example/lider_express/Svodnaya/KartaKontrolyaYDE.java,1\0\1028ee5294a0932775b6d77033bb1425f85c506f
-{
-Kapp/src/main/java/com/example/lider_express/Synchronization/JsonZapros.java,b\2\b2b9840369f22d235afbfe53a7b85ab6dff92fca
 €
 Papp/src/main/java/com/example/lider_express/Synchronization/Synchronization.java,5\7\578f3b260580f963c9b7325cbce0f872bd415716
 y
@@ -91,3 +87,17 @@ n
 >app/src/main/java/com/example/lider_express/Tools/RWClass.java,3\1\3188c0bbb5218313e8ee40c23ae9df1679153f06
 w
 Gapp/src/main/java/com/example/lider_express/Ð¡amera2/AudioListener.java,3\0\3042a90bae1962a4adc924616c77a57016a997fb
+[
++apache-httpcomponents-httpcore/build.gradle,9\0\90530327e2b77a6f4bc9d0258ee6de3a81ab69c6
+H
+sqlite-jdbc/build.gradle,1\4\14e4624aae5971d188ebbf99706bd8665f4abc14
+|
+Lapp/src/main/java/com/example/lider_express/Synchronization/JsonRequest.java,5\d\5dc4470eb4a13392e9cc606ac6c60e6b02c9774b
+]
+-apache-httpcomponents-httpclient/build.gradle,7\1\71163daeacf78b9474bdc68773585c556a9dc36c
+<
+build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
+o
+?app/src/main/java/com/example/lider_express/First2Fragment.java,c\8\c8f3c106eca10029db93a6695cde4d7ce02d1a40
+m
+=app/src/main/java/com/example/lider_express/Oborudovanie.java,9\a\9a391630b7b912c1acb92cc806b75940141aeafe

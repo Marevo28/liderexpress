@@ -15,7 +15,7 @@
     <string name="menu_slideshow">Расчёт вмятины</string>
     <string name="menu_tools">Синхронизация</string>
     <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
+    <string name="menu_send">Оборудование</string>
     <string name="title_activity_sittings">SittingsActivity</string>
     <string name="title_activity_photo">Photo</string>
     <string name="title_activity_bndsvodnaya">BNDSvodnaya</string>

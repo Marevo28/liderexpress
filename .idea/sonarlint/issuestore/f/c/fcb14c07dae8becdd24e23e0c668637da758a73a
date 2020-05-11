@@ -1,26 +1,43 @@
 
-]	java:S125R"<This block of commented-out lines of code should be removed.(¯–ıÿÿÿÿ8¶£¥¬‘.
+D
+java:S1659)""Declare "user" on a separate line.(›¦Í„ùÿÿÿÿ8Œû™™ .
 £
-java:S1186?"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‹ûÄ‚üÿÿÿÿ8¶£¥¬‘.
-z	java:S116"YRename this field "SelectedCamera" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÙ™Òıÿÿÿÿ8´¢›¬‘.
+java:S1186\"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‹ûÄ‚üÿÿÿÿ8Œû™™ .
+G
+java:S1659,"*Declare "TextPassword" on a separate line.(¾¹‹Ö8Œû™™ .
+t	java:S116+"XRename this field "TextZakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àìâÌ8Œû™™ .
+[	java:S106¦"9Replace this use of System.out or System.err by a logger.(›²…ƒøÿÿÿÿ8‚¼®™ .
+u	java:S116)"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›¦Í„ùÿÿÿÿ8Œû™™ .
+]	java:S125W"<This block of commented-out lines of code should be removed.(¯–ıÿÿÿÿ8Œû™™ .
 £
-java:S1186V"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‹ûÄ‚üÿÿÿÿ8¶£¥¬‘.
-O
-java:S1199o"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8ëÑ™Ë.
-t	java:S116"XRename this field "TextZakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àìâÌ8ëÑ™Ë.
-{
-java:S2293*"YReplace the type specification in this constructor call with the diamond operator ("<>").(±”½Ùøÿÿÿÿ8ëÑ™Ë.
-s	java:S116"RRename this field "ButSave" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¡ úÿÿÿÿ8ëÑ™Ë.
-]	java:S125;"<This block of commented-out lines of code should be removed.(¯–ıÿÿÿÿ8¶£¥¬‘.
-s	java:S116"RRename this field "Cameras" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£“º¹şÿÿÿÿ8éºš¬‘.
-q	java:S116"URename this field "TextCamera" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àìâÌ8ˆ©–¬‘.
-p
-java:S1192q"SUse already-defined constant 'APP_ZAKAZCHIK' instead of duplicating its value here.(—õáô8Ğø¹ï‘.
-v	java:S116"URename this field "Zakazchiki" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê²¤úÿÿÿÿ8ëÑ™Ë.
+java:S1186t"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‹ûÄ‚üÿÿÿÿ8Œû™™ .
 v
-java:S2293C"YReplace the type specification in this constructor call with the diamond operator ("<>").(ï·Øú8å¥¬‘.
-N
-java:S1659",Declare "SelectedCamera" on a separate line.(ÍÙ™Òıÿÿÿÿ8´¢›¬‘.
-u	java:S116"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÙ™Òıÿÿÿÿ8ëÑ™Ë.
+java:S2293`"YReplace the type specification in this constructor call with the diamond operator ("<>").(ï·Øú8Œû™™ .
+\
+java:S4719š"9Replace charset name argument with StandardCharsets.UTF_8(øƒã¯ûÿÿÿÿ8‚¼®™ .
+s	java:S116,"WRename this field "TextPassword" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¹‹Ö8Œû™™ .
+v	java:S116#"URename this field "Zakazchiki" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê²¤úÿÿÿÿ8Œû™™ .
+P
+java:S1199À"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8‚¼®™ .
+q	java:S116+"URename this field "TextCamera" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àìâÌ8Œû™™ .
+o	java:S116,"SRename this field "TextUser" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¹‹Ö8Œû™™ .
+H
+java:S1659)"&Declare "password" on a separate line.(›¦Í„ùÿÿÿÿ8Œû™™ .
+s	java:S116*"RRename this field "ButSave" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¡Ï¬úÿÿÿÿ8Œû™™ .
+]	java:S125o"<This block of commented-out lines of code should be removed.(¯–ıÿÿÿÿ8Œû™™ .
+H
+java:S1659*"&Declare "ButEnter" on a separate line.(“¡Ï¬úÿÿÿÿ8Œû™™ .
+q
+java:S1192Â"SUse already-defined constant 'APP_ZAKAZCHIK' instead of duplicating its value here.(—õáô8‚¼®™ .
+w
+java:S2293‰"YReplace the type specification in this constructor call with the diamond operator ("<>").(Æ„•÷8‚¼®™ .
+z	java:S116)"YRename this field "SelectedCamera" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›¦Í„ùÿÿÿÿ8Œû™™ .
 E
-java:S1659"(Declare "TextCamera" on a separate line.(àìâÌ8ˆ©–¬‘.
+java:S1659+"(Declare "TextCamera" on a separate line.(àìâÌ8Œû™™ .
+N
+java:S1659)",Declare "SelectedCamera" on a separate line.(›¦Í„ùÿÿÿÿ8Œû™™ .
+{
+java:S2293F"YReplace the type specification in this constructor call with the diamond operator ("<>").(±”½Ùøÿÿÿÿ8Œû™™ .
+[	java:S106˜"9Replace this use of System.out or System.err by a logger.(ªÂÚöûÿÿÿÿ8‚¼®™ .
+t	java:S116*"SRename this field "ButEnter" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¡Ï¬úÿÿÿÿ8Œû™™ .
+s	java:S116'"RRename this field "Cameras" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£“º¹şÿÿÿÿ8Œû™™ .
