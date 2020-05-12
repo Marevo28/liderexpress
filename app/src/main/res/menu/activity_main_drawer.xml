@@ -30,8 +30,12 @@
                 android:title="Настройки" />
             <item
                 android:id="@+id/nav_photo"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_menu_manage"
                 android:title="@string/menu_send" />
+            <item
+                android:id="@+id/transport_list"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/menu_transport_list" />
         </menu>
     </item>
 

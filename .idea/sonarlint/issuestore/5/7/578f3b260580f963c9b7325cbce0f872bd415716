@@ -1,128 +1,44 @@
 
-i
-java:S2142º"FEither re-interrupt this method or rethrow the "InterruptedException".(øôÔ×ûÿÿÿÿ8šªæÌ.
-J
-java:S10681"/Remove this unused "textpostion" private field.(ƒĞ½éşÿÿÿÿ
-
-java:S1186š"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ
-G
-java:S1068Y"+Remove this unused "stolb64" private field.(Õ x8Ïé¸Ê•.
-B
-java:S1172·"+Remove this unused method parameter "view".(âÀÑô
-H
-java:S1068N"+Remove this unused "stolb53" private field.(ã‰çœ8Ïé¸Ê•.
-G
-java:S1068P"+Remove this unused "stolb55" private field.(²Í¹ 8Ïé¸Ê•.
-H
-java:S1068B"+Remove this unused "stolb41" private field.(øæ Â8Ïé¸Ê•.
-J
-java:S1068."/Remove this unused "btnSendData" private field.(›ñÇşøÿÿÿÿ
-i
-java:S3776·"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(âÀÑô
-u
-java:S14501"ZRemove the "textpostion" field and declare it as a local variable in the relevant methods.(ƒĞ½éşÿÿÿÿ
-M
-java:S1068X"+Remove this unused "stolb63" private field.(‚Ì‰¥øÿÿÿÿ8Ïé¸Ê•.
-M
-java:S1068T"+Remove this unused "stolb59" private field.(ş˜§ïúÿÿÿÿ8Ïé¸Ê•.
-H
-java:S1068["+Remove this unused "stolb66" private field.(î¢§´8Ïé¸Ê•.
-W	java:S125Œ"<This block of commented-out lines of code should be removed.(í¨¢üÿÿÿÿ
-M
-java:S1068C"+Remove this unused "stolb42" private field.(¡¾¡¡øÿÿÿÿ8Ïé¸Ê•.
-u
-java:S1450."ZRemove the "btnSendData" field and declare it as a local variable in the relevant methods.(›ñÇşøÿÿÿÿ
-H
-java:S1068J"+Remove this unused "stolb49" private field.(“Çñ8Ïé¸Ê•.
-G
-java:S10688"+Remove this unused "stolb31" private field.(ÿÔÏ8Ïé¸Ê•.
-W	java:S125’"<This block of commented-out lines of code should be removed.(Õúµõüÿÿÿÿ
-t
-java:S2293x"YReplace the type specification in this constructor call with the diamond operator ("<>").(±”½Ùøÿÿÿÿ
-H
-java:S1068H"+Remove this unused "stolb47" private field.(õÊó˜8Ïé¸Ê•.
-H
-java:S10684"+Remove this unused "stolb27" private field.(•ÀÚË8Ïé¸Ê•.
+œ
+java:S1186q"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ
 w
-java:S1450 "\Remove the "spinnerDefect" field and declare it as a local variable in the relevant methods.(²½”Îüÿÿÿÿ
-M
-java:S1068\"+Remove this unused "stolb67" private field.(›ÏùŸüÿÿÿÿ8Ïé¸Ê•.
+java:S1450!"\Remove the "spinnerDefect" field and declare it as a local variable in the relevant methods.(²½”Îüÿÿÿÿ
+[	java:S106£"9Replace this use of System.out or System.err by a logger.(¤¦¤Şùÿÿÿÿ8› ™Ğœ.
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ùÖ“¦
-M
-java:S10685"+Remove this unused "stolb28" private field.( ğÖùÿÿÿÿ8Ïé¸Ê•.
-M
-java:S1068;"+Remove this unused "stolb34" private field.(µ¡Ç¨ùÿÿÿÿ8Ïé¸Ê•.
-M
-java:S1068A"+Remove this unused "stolb40" private field.(ôÉ¯¼ûÿÿÿÿ8Ïé¸Ê•.
-G
-java:S1068O"+Remove this unused "stolb54" private field.(ë²ë8Ïé¸Ê•.
-H
-java:S1068K"+Remove this unused "stolb50" private field.(ÑƒïØ8Ïé¸Ê•.
-H
-java:S1068D"+Remove this unused "stolb43" private field.(Ëà«’8Ïé¸Ê•.
-o
-java:S1450,"YRemove the "btnpostion" field and declare it as a local variable in the relevant methods.(Š€Íµ
-H
-java:S1068F"+Remove this unused "stolb45" private field.(šäØå8Ïé¸Ê•.
-M
-java:S1068E"+Remove this unused "stolb44" private field.(ù¯¶˜üÿÿÿÿ8Ïé¸Ê•.
-M
-java:S1068?"+Remove this unused "stolb38" private field.(¸ç‰üÿÿÿÿ8Ïé¸Ê•.
-=	java:S131‹""Add a default case to this switch.(¼œóÛüÿÿÿÿ
-M
-java:S1068Z"+Remove this unused "stolb65" private field.(¿•çıÿÿÿÿ8Ïé¸Ê•.
-=
-java:S1075§"&Remove this hard-coded path-delimiter.(äÔ¾Ò
-e
-java:S4042ª"IUse "java.nio.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ
-M
-java:S10689"+Remove this unused "stolb32" private field.(ÿÊÉ§üÿÿÿÿ8Ïé¸Ê•.
-o	java:S116""URename this field "Zakazchiki" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê²¤úÿÿÿÿ
-M
-java:S1068Q"+Remove this unused "stolb56" private field.(ÅéæÑÿÿÿÿÿ8Ïé¸Ê•.
-M
-java:S1068]"+Remove this unused "stolb68" private field.(ÚË»şÿÿÿÿ8Ïé¸Ê•.
+z
+java:S14500"^Remove the "btnDeleteRecord" field and declare it as a local variable in the relevant methods.(’—»E8› ™Ğœ.
+B
+java:S1172"+Remove this unused method parameter "view".(âÀÑô
+P
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8› ™Ğœ.
 p
 java:S1450-"ZRemove the "btnUpdateDB" field and declare it as a local variable in the relevant methods.(ë«ú¸
-M
-java:S1068R"+Remove this unused "stolb57" private field.(¥’¯Ôøÿÿÿÿ8Ïé¸Ê•.
-V	java:S899ª";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ
-M
-java:S1068L"+Remove this unused "stolb51" private field.(ÎØĞéûÿÿÿÿ8Ïé¸Ê•.
-H
-java:S1068V"+Remove this unused "stolb61" private field.(÷ôÈÒ8Ïé¸Ê•.
-l	java:S1160"WRename this field "TextKolvoZap" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û‚‹â
-M
-java:S1068<"+Remove this unused "stolb35" private field.(÷úşËùÿÿÿÿ8Ïé¸Ê•.
-M
-java:S1068S"+Remove this unused "stolb58" private field.(”¢¸ëıÿÿÿÿ8Ïé¸Ê•.
-p
-java:S1450c"URemove the "zapros" field and declare it as a local variable in the relevant methods.(”øŠÂùÿÿÿÿ
-H
-java:S1068W"+Remove this unused "stolb62" private field.(•²§ø8Ïé¸Ê•.
-H
-java:S1068I"+Remove this unused "stolb48" private field.(˜î¡š8Ïé¸Ê•.
-F
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
-H
-java:S10687"+Remove this unused "stolb30" private field.(ÕÏ¦µ8Ïé¸Ê•.
-n	java:S116'"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á¿üüÿÿÿÿ
-M
-java:S1068U"+Remove this unused "stolb60" private field.(Âøë«úÿÿÿÿ8Ïé¸Ê•.
-M
-java:S10686"+Remove this unused "stolb29" private field.(Œúš…úÿÿÿÿ8Ïé¸Ê•.
-H
-java:S1068@"+Remove this unused "stolb39" private field.(ëì³‚8Ïé¸Ê•.
-H
-java:S1068>"+Remove this unused "stolb37" private field.(¶ÖÑÏ8Ïé¸Ê•.
-H
-java:S1068="+Remove this unused "stolb36" private field.(ÂÖÖ‰8Ïé¸Ê•.
-H
-java:S1068G"+Remove this unused "stolb46" private field.(±¨•ç8Ïé¸Ê•.
-H
-java:S1068M"+Remove this unused "stolb52" private field.(ôª¹ì8Ïé¸Ê•.
+q	java:S116#"URename this field "Zakazchiki" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(± Í„8› ™Ğœ.
+|
+java:S14502"ZRemove the "textPostion" field and declare it as a local variable in the relevant methods.(¾’‘Õûÿÿÿÿ8› ™Ğœ.
 J
-java:S1128"4Remove this unused import 'java.lang.reflect.Array'.(‡¡É˜
-R	java:S125¤"<This block of commented-out lines of code should be removed.(ƒÛÃâ
-G
-java:S1068:"+Remove this unused "stolb33" private field.(”´8Ïé¸Ê•.
+java:S1068."/Remove this unused "btnSendData" private field.(›ñÇşøÿÿÿÿ
+V	java:S125j"<This block of commented-out lines of code should be removed.(Õúµõüÿÿÿÿ
+U	java:S899}";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ
+n	java:S116("TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á¿üüÿÿÿÿ
+i
+java:S2142®"FEither re-interrupt this method or rethrow the "InterruptedException".(øôÔ×ûÿÿÿÿ8šªæÌ.
+<	java:S131b""Add a default case to this switch.(¼œóÛüÿÿÿÿ
+t
+java:S2293O"YReplace the type specification in this constructor call with the diamond operator ("<>").(±”½Ùøÿÿÿÿ
+<
+java:S1075z"&Remove this hard-coded path-delimiter.(äÔ¾Ò
+o
+java:S1450,"YRemove the "btnpostion" field and declare it as a local variable in the relevant methods.(Š€Íµ
+Q
+java:S10682"/Remove this unused "textPostion" private field.(¾’‘Õûÿÿÿÿ8› ™Ğœ.
+V	java:S125c"<This block of commented-out lines of code should be removed.(í¨¢üÿÿÿÿ
+u
+java:S1450."ZRemove the "btnSendData" field and declare it as a local variable in the relevant methods.(›ñÇşøÿÿÿÿ
+P
+java:S1128".Remove this unused import 'java.util.TreeMap'.(¨éˆèıÿÿÿÿ8› ™Ğœ.
+x
+java:S14505"VRemove the "request" field and declare it as a local variable in the relevant methods.(¥÷ÌÙÿÿÿÿÿ8› ™Ğœ.
+l	java:S1161"WRename this field "TextKolvoZap" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û‚‹â
+i
+java:S4042}"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ
