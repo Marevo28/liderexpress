@@ -17,9 +17,7 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.TreeMap;
 
 public class JsonRequest extends Thread {
 
@@ -34,10 +32,11 @@ public class JsonRequest extends Thread {
 
     public JsonRequest(String Zakazchik){
         System.out.println("Таблица, которую отправляем: - " + Zakazchik);
+        mURL = Shared.URLAllForm;
         tableName = Zakazchik;
       //  mURL = Shared.URLAllForm;
 
-        switch (Zakazchik){
+      /**  switch (Zakazchik){
            // case "DefectBND2019": mURL = "http://peremoga.tech/Android/DefectBND2020.php"; break;
            // case "DefectMegion2019": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
            // case "DefectPolus2019": mURL = ""; break;
@@ -50,6 +49,7 @@ public class JsonRequest extends Thread {
            // case "DefectMegion2021": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
            // case "DefectPolus2021": mURL = ""; break;
         }
+       **/
 
     }
 
@@ -59,8 +59,9 @@ public class JsonRequest extends Thread {
         for(LinkedHashMap<String, String> row : rows) {
 
             nameValuePairs.add(new BasicNameValuePair("Table", tableName));
+
             System.out.println("URL : " + mURL);
-            System.out.println("TableName + " + tableName);
+            System.out.println("TableName : " + tableName);
 
             for (LinkedHashMap.Entry<String, String> entry : row.entrySet()) {
                 System.out.println(" entry Key " + entry.getKey() + " entry Value " + entry.getValue());
@@ -68,7 +69,9 @@ public class JsonRequest extends Thread {
                     nameValuePairs.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
                 }
             }
-            System.out.println("Pairs  " + nameValuePairs.toArray());
+            for(int i = 0; i < nameValuePairs.toArray().length; i ++){
+                System.out.println("nameValuePairs : " + nameValuePairs.toArray()[i]);
+            }
             connection(nameValuePairs);
             nameValuePairs.clear();
         }

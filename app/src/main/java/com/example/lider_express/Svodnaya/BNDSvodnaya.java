@@ -160,7 +160,7 @@ public class BNDSvodnaya extends AppCompatActivity {
               case "Bashneft2020": ZakazchikDefect = Shared.nameDefectBND2020; break;
         //    case "ZayavkaBND2021": ZakazchikDefect = Shared.nameDefectBND2021; break;
         }
-        Log.e("Svod_Zakaz", ZakazchikDefect );
+        Log.e("Svod_Zakaz--------", ZakazchikDefect );
 
 
         Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position}, null, null, null);

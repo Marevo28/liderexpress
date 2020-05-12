@@ -4,10 +4,6 @@ import android.content.Context;
 
 /**
  * @author LeStat
- * Этот класс создан для общего доступа к статическим именам,
- * контексту приложения, актвити и т.д. ...
- * Так делать не следует из за засирания кода статическими переменным!!!
- * Но для уменьшения вероятности создания ошибки в написании пока делаем так :)
  */
 
 public class Shared {
@@ -29,16 +25,16 @@ public class Shared {
     public static String nameBND2019 = "Bashneft2019";
     public static String nameMegion2019 = "Megion2019";
     public static String namePolus2019 = "Polus2019";
-    public static String nameDefectBND2019 = "defectBashneft2019";
-    public static String nameDefectMegion2019 = "defectMegion2019";
-    public static String nameDefectPolus2019 = "defectPolus2019";
+    public static String nameDefectBND2019 = "DefectBashneft2019";
+    public static String nameDefectMegion2019 = "DefectMegion2019";
+    public static String nameDefectPolus2019 = "DefectPolus2019";
     // 2020
     public static String nameBND2020 = "Bashneft2020";
     public static String nameMegion2020 = "Megion2020";
     public static String namePolus2020 = "Polus2020";
-    public static String nameDefectBND2020 = "defectBashneft2020";
-    public static String nameDefectMegion2020 = "defectMegion2020";
-    public static String nameDefectPolus2020 = "defectPolus2020";
+    public static String nameDefectBND2020 = "DefectBND2020";
+    public static String nameDefectMegion2020 = "DefectMegion2020";
+    public static String nameDefectPolus2020 = "DefectPolus2020";
 
     public static String nameBashneft2020_UDE = "Bashneft2020_UDE";
     public static String nameDefectBashneft2020_UDE = "DefectBND2020_UDE";
@@ -51,9 +47,9 @@ public class Shared {
     public static String nameBND2021 = "Bashneft2021";
     public static String nameMegion2021 = "Megion2021";
     public static String namePolus2021 = "Polus2021";
-    public static String nameDefectBND2021 = "defectBashneft2021";
-    public static String nameDefectMegion2021 = "defectMegion2021";
-    public static String nameDefectPolus2021 = "defectPolus2021";
+    public static String nameDefectBND2021 = "DefectBashneft2021";
+    public static String nameDefectMegion2021 = "DefectMegion2021";
+    public static String nameDefectPolus2021 = "DefectPolus2021";
     // 2022
     public static String nameBND2022 = "Bashneft2022";
     public static String nameMegion2022 = "Megion2022";
