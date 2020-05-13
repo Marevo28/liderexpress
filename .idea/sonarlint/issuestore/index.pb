@@ -99,3 +99,7 @@ m
 =app/src/main/java/com/example/lider_express/Oborudovanie.java,9\a\9a391630b7b912c1acb92cc806b75940141aeafe
 o
 ?app/src/main/java/com/example/lider_express/Transport_list.java,8\6\8646bba1dd78a3b1d7cd8f269fd3bb08508ed3ac
+r
+Bapp/src/main/java/com/example/lider_express/Svodnaya/Svodnaya.java,8\7\877513402083ea6cf4997bd3f3a034af6b5f2219
+|
+Lapp/src/main/java/com/example/lider_express/Svodnaya/KartaKontrolyaSPPK.java,7\4\744078c8f72eaa1eebfd215b80197ad0eefe4087

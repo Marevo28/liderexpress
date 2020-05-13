@@ -1,22 +1,22 @@
 
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ùÖ“¦
-p
-java:S1450"SRemove the "line" field and declare it as a local variable in the relevant methods.(œ•Ô8ÈÁ¶™ .
-Z	java:S1063"9Replace this use of System.out or System.err by a logger.(û‰ù÷øÿÿÿÿ8ş ú€ .
 v
 java:S2293)"YReplace the type specification in this constructor call with the diamond operator ("<>").(§ÉòÌ8ÈÁ¶™ .
-Z	java:S1069"9Replace this use of System.out or System.err by a logger.(ğ»òŸøÿÿÿÿ8¢×óå .
-U	java:S1060"9Replace this use of System.out or System.err by a logger.(ÚËÒÖ8¢×óå .
-[
-java:S4719R"9Replace charset name argument with StandardCharsets.UTF_8(øƒã¯ûÿÿÿÿ8ÈÁ¶™ .
-Z	java:S106P"9Replace this use of System.out or System.err by a logger.(ªÂÚöûÿÿÿÿ8ÈÁ¶™ .
-G
-java:S14812"*Remove this unused "entry" local variable.(§‚ÄÛ8ÈÁ¶™ .
-Z	java:S106C"9Replace this use of System.out or System.err by a logger.(Çñ–·ÿÿÿÿÿ8ÈÁ¶™ .
-W
-java:S1161(":Add the "@Override" annotation above this method signature(“–ış8ÈÁ¶™ .
-U	java:S106/"9Replace this use of System.out or System.err by a logger.(¯Î÷™8ÈÁ¶™ .
 Z	java:S106^"9Replace this use of System.out or System.err by a logger.(›²…ƒøÿÿÿÿ8ÈÁ¶™ .
-U	java:S106#"9Replace this use of System.out or System.err by a logger.(–†ôÔ8ÈÁ¶™ .
+Z	java:S1063"9Replace this use of System.out or System.err by a logger.(û‰ù÷øÿÿÿÿ8ş ú€ .
 ‘
 java:S1319n"oThe type of the "rows" object should be an interface such as "List" rather than the implementation "ArrayList".(Æ™úÛùÿÿÿÿ8ÈÁ¶™ .
+W
+java:S1161(":Add the "@Override" annotation above this method signature(“–ış8ÈÁ¶™ .
+Z	java:S1069"9Replace this use of System.out or System.err by a logger.(ğ»òŸøÿÿÿÿ8¢×óå .
+Z	java:S106P"9Replace this use of System.out or System.err by a logger.(ªÂÚöûÿÿÿÿ8ÈÁ¶™ .
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ùÖ“¦
+U	java:S106/"9Replace this use of System.out or System.err by a logger.(¯Î÷™8ÈÁ¶™ .
+Z	java:S106C"9Replace this use of System.out or System.err by a logger.(Çñ–·ÿÿÿÿÿ8ÈÁ¶™ .
+p
+java:S1450"SRemove the "line" field and declare it as a local variable in the relevant methods.(œ•Ô8ÈÁ¶™ .
+U	java:S1060"9Replace this use of System.out or System.err by a logger.(ÚËÒÖ8¢×óå .
+U	java:S106#"9Replace this use of System.out or System.err by a logger.(–†ôÔ8ÈÁ¶™ .
+[
+java:S4719R"9Replace charset name argument with StandardCharsets.UTF_8(øƒã¯ûÿÿÿÿ8ÈÁ¶™ .
+G
+java:S14812"*Remove this unused "entry" local variable.(§‚ÄÛ8ÈÁ¶™ .

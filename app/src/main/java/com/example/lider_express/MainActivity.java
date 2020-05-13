@@ -34,6 +34,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.example.lider_express.DataBase.DatabaseHelper;
 import com.example.lider_express.Svodnaya.BNDSvodnaya;
 import com.example.lider_express.Svodnaya.KartaKontolyaNasos;
+import com.example.lider_express.Svodnaya.KartaKontrolyaSPPK;
 import com.example.lider_express.Svodnaya.KartaKontrolyaYDE;
 import com.example.lider_express.Svodnaya.MegionSvodnaya;
 import com.example.lider_express.Synchronization.Synchronization;
@@ -205,11 +206,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                                 texttypetu.setText(cursor.getString(2));//Тип оборудования
                                 typetu=cursor.getString(2);
-                                String block = "Блок реагентов (УДЭ)";
+                                String blockude = "Блок реагентов (УДЭ)";
                                 String nasos = "Насос";
-                                if(block.equals(cursor.getString(2))) {
+                                String sppk = "СППК";
+                                if(blockude.equals(cursor.getString(2))) {
                                     btnKarta.setEnabled(true);
                                 }else if(nasos.equals(cursor.getString(2))){
+                                    btnKarta.setEnabled(true);
+                                }else if(sppk.equals(cursor.getString(2))){
                                     btnKarta.setEnabled(true);
                                 }else{
                                     btnKarta.setEnabled(false);
@@ -332,11 +336,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     startIntent(IntentKartaKontrolyaNasos);
                 break;
                     case "Блок реагентов (УДЭ)":
-                    Intent IntentKartaKontrolyaUde = new Intent(MainActivity.this, KartaKontrolyaYDE.class);
+                        Intent IntentKartaKontrolyaUde = new Intent(MainActivity.this, KartaKontrolyaYDE.class);
                         IntentKartaKontrolyaUde.putExtra("position", position);
                         IntentKartaKontrolyaUde.putExtra("Zakazchik", getNameZakaz(Zakazchik));
-                    startIntent(IntentKartaKontrolyaUde);
-                break;
+                        startIntent(IntentKartaKontrolyaUde);
+                        break;
+                    case "СППК":
+                        Intent IntentKartaKontrolyaSppk = new Intent(MainActivity.this, KartaKontrolyaSPPK.class);
+                        IntentKartaKontrolyaSppk.putExtra("position", position);
+                        IntentKartaKontrolyaSppk.putExtra("Zakazchik", getNameZakaz(Zakazchik));
+                        startIntent(IntentKartaKontrolyaSppk);
+                        break;
                         default: displayMessage(getBaseContext(), "Выберите существующую позицию или обновите базу!");
                 }
 

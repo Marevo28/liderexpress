@@ -992,4 +992,5 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_oborudovanie">Oborudovanie</string>
     <string name="title_activity_transport_list">Transport_list</string>
+    <string name="title_activity_karta_s_p_p_k">KartaSPPK</string>
 </resources>
