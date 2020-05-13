@@ -2,6 +2,8 @@ package com.example.lider_express.Synchronization;
 
 import android.util.Log;
 
+import com.example.lider_express.Shared;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -33,23 +35,6 @@ public class JsonRequest extends Thread {
         System.out.println("Таблица, которую отправляем: - " + Zakazchik);
         mURL = Shared.URLAllForm;
         tableName = Zakazchik;
-      //  mURL = Shared.URLAllForm;
-
-      /**  switch (Zakazchik){
-           // case "DefectBND2019": mURL = "http://peremoga.tech/Android/DefectBND2020.php"; break;
-           // case "DefectMegion2019": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
-           // case "DefectPolus2019": mURL = ""; break;
-            case "defectBashneft2020": mURL = "http://peremoga.tech/Android/DefectBND2020.php"; break;
-            case "defectMegion2020": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
-            case "DefectBND2020_UDE": mURL = "http://peremoga.tech/Android/DefectBND2020_UDE.php"; break;
-            case "DefectBND2020_Nasos": mURL = "http://peremoga.tech/Android/DefectBND2020_Nasos.php"; break;
-           // case "DefectPolus2020": mURL = ""; break;
-           // case "DefectBND2021": mURL = "http://peremoga.tech/Android/DefectBND2020.php"; break;
-           // case "DefectMegion2021": mURL = "http://peremoga.tech/Android/DefectMEGION2020.php"; break;
-           // case "DefectPolus2021": mURL = ""; break;
-        }
-       **/
-
     }
 
     public void run() {

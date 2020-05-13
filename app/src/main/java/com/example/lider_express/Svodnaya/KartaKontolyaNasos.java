@@ -130,56 +130,55 @@ public class KartaKontolyaNasos extends AppCompatActivity {
         // Чтобы избежать ошибок с одинаковыми именами,
         // И брать элемент от него !
 
-        final View view = View.inflate(this, R.layout.activity_karta_kontolya_nasos, null);
-        setContentView(view);
+        setContentView(R.layout.activity_karta_kontolya_nasos);
 
      //   Toolbar toolbar = findViewById(R.id.toolbar);
      //   setSupportActionBar(toolbar);
 
-        TextView_DataNk = view.findViewById(R.id.TextView_DataNK);
-        Button_DataNK = view.findViewById(R.id.Button_DataNK);
-        TextView_SpecProvNK = view.findViewById(R.id.TextView_SpecProvNK);
-        Button_SpecProvNK = view.findViewById(R.id.Button_SpecProvNK);
-        EditText_Kyst = view.findViewById(R.id.EditText_Kyst);
-        EditText_Skvajina = view.findViewById(R.id.EditText_Skvajina);
-        EditText_Mestorojdenie = view.findViewById(R.id.EditText_Mestorojdenie);
-        EditText_Zav = view.findViewById(R.id.EditText_Zav);
-        EditText_Inv = view.findViewById(R.id.EditText_Inv);
-        RadioGroup_Sostoyanie = view.findViewById(R.id.RadioGroup_Sostoyanie);
-        RadioGroup_MarkZavod = view.findViewById(R.id.RadioGroup_MarkZavod);
-        RadioGroup_MarkZavodInf = view.findViewById(R.id.RadioGroup_MarkZavodInf);
-        RadioGroup_MarkOrganiz = view.findViewById(R.id.RadioGroup_MarkOrganiz);
-        RadioGroup_MarkOrganizInf = view.findViewById(R.id.RadioGroup_MarkOrganizInf);
-        RadioGroup_Nal_Zazemleniya = view.findViewById(R.id.RadioGroup_Nal_Zazemleniya);
-        RadioGroup_Fundament = view.findViewById(R.id.RadioGroup_Fundament);
-        RadioGroup_Anticor = view.findViewById(R.id.RadioGroup_Anticor);
-        RadioGroup_Flow = view.findViewById(R.id.RadioGroup_Flow);
-        RadioGroup_Klapan = view.findViewById(R.id.RadioGroup_Klapan);
-        RadioGroup_KlapanSost = view.findViewById(R.id.RadioGroup_KlapanSost);
-        RadioGroup_ArrowFlow = view.findViewById(R.id.RadioGroup_ArrowFlow);
-        EditText_DefEngine = view.findViewById(R.id.EditText_DefEngine);
-        EditText_DefKorpus = view.findViewById(R.id.EditText_DefKorpus);
+        TextView_DataNk = findViewById(R.id.TextView_DataNK);
+        Button_DataNK = findViewById(R.id.Button_DataNK);
+        TextView_SpecProvNK = findViewById(R.id.TextView_SpecProvNK);
+        Button_SpecProvNK = findViewById(R.id.Button_SpecProvNK);
+        EditText_Kyst = findViewById(R.id.EditText_Kyst);
+        EditText_Skvajina = findViewById(R.id.EditText_Skvajina);
+        EditText_Mestorojdenie = findViewById(R.id.EditText_Mestorojdenie);
+        EditText_Zav = findViewById(R.id.EditText_Zav);
+        EditText_Inv = findViewById(R.id.EditText_Inv);
+        RadioGroup_Sostoyanie = findViewById(R.id.RadioGroup_Sostoyanie);
+        RadioGroup_MarkZavod = findViewById(R.id.RadioGroup_MarkZavod);
+        RadioGroup_MarkZavodInf = findViewById(R.id.RadioGroup_MarkZavodInf);
+        RadioGroup_MarkOrganiz = findViewById(R.id.RadioGroup_MarkOrganiz);
+        RadioGroup_MarkOrganizInf = findViewById(R.id.RadioGroup_MarkOrganizInf);
+        RadioGroup_Nal_Zazemleniya = findViewById(R.id.RadioGroup_Nal_Zazemleniya);
+        RadioGroup_Fundament = findViewById(R.id.RadioGroup_Fundament);
+        RadioGroup_Anticor = findViewById(R.id.RadioGroup_Anticor);
+        RadioGroup_Flow = findViewById(R.id.RadioGroup_Flow);
+        RadioGroup_Klapan = findViewById(R.id.RadioGroup_Klapan);
+        RadioGroup_KlapanSost = findViewById(R.id.RadioGroup_KlapanSost);
+        RadioGroup_ArrowFlow = findViewById(R.id.RadioGroup_ArrowFlow);
+        EditText_DefEngine = findViewById(R.id.EditText_DefEngine);
+        EditText_DefKorpus = findViewById(R.id.EditText_DefKorpus);
 
 
         EditText_Vibraci = new EditText[]{
-                view.findViewById(R.id.EditText_Zamer_1_X),  view.findViewById(R.id.EditText_Zamer_1_Y),view.findViewById(R.id.EditText_Zamer_1_Z),
-                view.findViewById(R.id.EditText_Zamer_2_X),  view.findViewById(R.id.EditText_Zamer_2_Y),view.findViewById(R.id.EditText_Zamer_2_Z),
-                view.findViewById(R.id.EditText_Zamer_3_X),  view.findViewById(R.id.EditText_Zamer_3_Y),view.findViewById(R.id.EditText_Zamer_3_Z),
-                view.findViewById(R.id.EditText_Zamer_4_X),  view.findViewById(R.id.EditText_Zamer_4_Y),view.findViewById(R.id.EditText_Zamer_4_Z)
+                findViewById(R.id.EditText_Zamer_1_X),  findViewById(R.id.EditText_Zamer_1_Y), findViewById(R.id.EditText_Zamer_1_Z),
+                findViewById(R.id.EditText_Zamer_2_X),  findViewById(R.id.EditText_Zamer_2_Y), findViewById(R.id.EditText_Zamer_2_Z),
+                findViewById(R.id.EditText_Zamer_3_X),  findViewById(R.id.EditText_Zamer_3_Y), findViewById(R.id.EditText_Zamer_3_Z),
+                findViewById(R.id.EditText_Zamer_4_X),  findViewById(R.id.EditText_Zamer_4_Y), findViewById(R.id.EditText_Zamer_4_Z)
         };
 
         EditText_Vsas_zameri = new EditText[]{
-                view.findViewById(R.id.Vsas_Diametr), view.findViewById(R.id.Vsas_Razmer_1),
-                view.findViewById(R.id.Vsas_Razmer_2), view.findViewById(R.id.Vsas_Razmer_3)
+                findViewById(R.id.Vsas_Diametr), findViewById(R.id.Vsas_Razmer_1),
+                findViewById(R.id.Vsas_Razmer_2), findViewById(R.id.Vsas_Razmer_3)
         };
 
         EditText_Naporniy_zameri = new EditText[]{
-                view.findViewById(R.id.Naporniy_Diametr), view.findViewById(R.id.Naporniy_Razmer_1),
-                view.findViewById(R.id.Naporniy_Razmer_2), view.findViewById(R.id.Naporniy_Razmer_3)
+                findViewById(R.id.Naporniy_Diametr), findViewById(R.id.Naporniy_Razmer_1),
+                findViewById(R.id.Naporniy_Razmer_2), findViewById(R.id.Naporniy_Razmer_3)
         };
 
-        RadioGroup_Vedomost = view.findViewById(R.id.RadioGroup_Vedomost);
-        Button_Vnesti = view.findViewById(R.id.Button_Vnest);
+        RadioGroup_Vedomost = findViewById(R.id.RadioGroup_Vedomost);
+        Button_Vnesti = findViewById(R.id.Button_Vnest);
 
         mDBHelper = MainActivity.getDBHelper();  // подклчюение к БД
         try {
@@ -389,7 +388,7 @@ public class KartaKontolyaNasos extends AppCompatActivity {
             }
         });
         /** Маркировка предприятия информативная?-  **/
-        RadioGroup_MarkZavodInf.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        RadioGroup_MarkOrganizInf.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId){
@@ -452,10 +451,10 @@ public class KartaKontolyaNasos extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId){
                     case R.id.Flow_Da:
-                        Flow = "Дефекты устранены";
+                        Flow = "Да";
                         break;
                     case R.id.Flow_Net:
-                        Flow = "Дефекты не устранены";
+                        Flow = "Нет";
                         break;
                 }
             }
@@ -491,7 +490,7 @@ public class KartaKontolyaNasos extends AppCompatActivity {
         });
 
         /** Стрелки направления воды   **/
-        RadioGroup_KlapanSost.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        RadioGroup_ArrowFlow.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId){
