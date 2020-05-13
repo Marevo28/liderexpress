@@ -22,7 +22,7 @@ import com.example.lider_express.DataBase.DatabaseHelper;
 import com.example.lider_express.MainActivity;
 import com.example.lider_express.R;
 import com.example.lider_express.Shared;
-import com.example.lider_express.Tools.SpisokMegion;
+import com.example.lider_express.Tools.SpisokBND;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -322,8 +322,8 @@ public class KartaKontolyaNasos extends AppCompatActivity {
         Button_SpecProvNK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentSittings = new Intent(KartaKontolyaNasos.this, SpisokMegion.class);
-                IntentSittings.putExtra("people", "expertsNK");
+                Intent IntentSittings = new Intent(KartaKontolyaNasos.this, SpisokBND.class);
+                IntentSittings.putExtra("people", "irldefects");
                 startActivityForResult(IntentSittings, PEOPLE);
             }
         });
@@ -623,6 +623,11 @@ public class KartaKontolyaNasos extends AppCompatActivity {
                 case "expertsNK":
                     exp = data.getStringExtra("select");
                     SpecProvNK = exp;
+                    TextView_SpecProvNK.setText(exp);
+                    break;
+                case "irldefects":
+                    exp = data.getStringExtra("select");
+                    SpecProvNK=exp;
                     TextView_SpecProvNK.setText(exp);
                     break;
             }
