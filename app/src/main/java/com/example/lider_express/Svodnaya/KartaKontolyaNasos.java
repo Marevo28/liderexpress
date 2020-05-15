@@ -32,7 +32,7 @@ import java.util.Date;
  * @author LeStat
  */
 
-public class KartaKontolyaNasos extends AppCompatActivity {
+public class KartaKontolyaNasos extends AppCompatActivity{
 
 
     public static final String POSITION = "Position";
@@ -121,6 +121,7 @@ public class KartaKontolyaNasos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         // Android имеет общее поле ID всех элементов.
         // Каждый элемент имеет уникальный ID
         // Поэтому, если в разных Layout
@@ -131,9 +132,6 @@ public class KartaKontolyaNasos extends AppCompatActivity {
         // И брать элемент от него !
 
         setContentView(R.layout.activity_karta_kontolya_nasos);
-
-     //   Toolbar toolbar = findViewById(R.id.toolbar);
-     //   setSupportActionBar(toolbar);
 
         TextView_DataNk = findViewById(R.id.TextView_DataNK);
         Button_DataNK = findViewById(R.id.Button_DataNK);
@@ -633,8 +631,8 @@ public class KartaKontolyaNasos extends AppCompatActivity {
             }
         }
     }
-
     private void displayMessage(Context context, String message) {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
     }
+
 }

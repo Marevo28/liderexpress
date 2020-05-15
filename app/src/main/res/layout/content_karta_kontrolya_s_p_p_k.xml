@@ -13,7 +13,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -31,19 +33,20 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/TextView_sppk_DataNK"
+                    android:id="@+id/Text_sppk_DataNK"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_horizontal|center_vertical"
                     android:text="Дата НК" />
-
                 <Button
                     android:id="@+id/Button_sppk_DataNK"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Выбрать дату" />
+                    android:text="Выбрать " />
+
+
             </LinearLayout>
 
 
@@ -56,19 +59,19 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2.5"
+                android:layout_weight="2"
                 android:orientation="horizontal">
+
                 <TextView
-                    android:id="@+id/TextView_sppk_SpecProvNK"
+                    android:id="@+id/Text_sppk__SpecProvNK"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="ФИО специалиста (-ов), выезжающего (-их) на объект"/>
+                    android:text="ФИО" />
 
                 <Button
                     android:id="@+id/Button_sppk_SpecProvNK"
@@ -78,71 +81,90 @@
                     android:text="Выбрать " />
             </LinearLayout>
 
-            <!--   Зав. №   -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="15dp"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:text=" Зав. №"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-            <EditText
-                android:id="@+id/EditText_sppk_Zav"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:hint="Зав. №" />
-
-
-            <!--   Инв. №   -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:text=" Инв. №"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
-            <EditText
-                android:id="@+id/EditText_sppk_Inv"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:hint=" Инв. №"/>
-
-            <!--  Текст давления и диаметра   -->
-
             <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2.5"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="Условный проход"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="Условное давление"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-                <!--  Значение давления и диаметра   -->
-        </LinearLayout>
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+                <!--   Зав. №   -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=" Зав. №"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=" Инв. №"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2.5"
                 android:orientation="horizontal">
+
                 <EditText
-                    android:id="@+id/sppk_usl_prohod"
+                    android:id="@+id/EditText_sppk_Zav"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:hint="Зав. №" />
+                <!--   Инв. №   -->
+                <EditText
+                    android:id="@+id/EditText_sppk_Inv"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:hint=" Инв. №" />
+            </LinearLayout>
+            <!--  Текст давления и диаметра   -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Условный проход"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Условное давление"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <!--  Значение давления и диаметра   -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/EditText_sppk_usl_prohod"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -151,13 +173,13 @@
                     android:textSize="18sp" />
 
                 <EditText
-                    android:id="@+id/sppk_usl_davlenie"
+                    android:id="@+id/EditText_sppk_usl_davlenie"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_horizontal|center_vertical"
                     android:hint="В МПа"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
             </LinearLayout>
             <!--  Наличие пломб   -->
             <TextView
@@ -168,6 +190,7 @@
                 android:text="Наличие пломб?"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
             <RadioGroup
                 android:id="@+id/RadioGroup_sppk_Plombs"
                 android:layout_width="match_parent"
@@ -198,6 +221,7 @@
                 android:text="Наличие АКП?"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
             <RadioGroup
                 android:id="@+id/RadioGroup_sppk_AKP"
                 android:layout_width="match_parent"
@@ -228,18 +252,21 @@
                 android:text="Состояние АКП?"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
             <RadioGroup
                 android:id="@+id/RadioGroup_sppk_SostoyanieAKP"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
                 android:orientation="horizontal">
+
                 <RadioButton
                     android:id="@+id/SostoyanieAKP_sppk_Da"
                     android:layout_width="195dp"
                     android:layout_height="43dp"
                     android:layout_weight="1"
                     android:text="Да" />
+
                 <RadioButton
                     android:id="@+id/SostoyanieAKP_sppk_Net"
                     android:layout_width="198dp"
@@ -256,18 +283,21 @@
                 android:text="Заглушка между объектом установки и клапаном имеются?"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
             <RadioGroup
                 android:id="@+id/RadioGroup_sppk_Zaglushka"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
                 android:orientation="horizontal">
+
                 <RadioButton
                     android:id="@+id/Zaglushka_sppk_Da"
                     android:layout_width="195dp"
                     android:layout_height="43dp"
                     android:layout_weight="1"
                     android:text="Да" />
+
                 <RadioButton
                     android:id="@+id/Zaglushka_sppk_Net"
                     android:layout_width="198dp"
@@ -284,18 +314,21 @@
                 android:text="Наличие на клапане специальной таблички с его характеристикой и сведениями об установке?"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
             <RadioGroup
                 android:id="@+id/RadioGroup_sppk_tablichka"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
                 android:orientation="horizontal">
+
                 <RadioButton
                     android:id="@+id/tablichka_sppk_Da"
                     android:layout_width="195dp"
                     android:layout_height="43dp"
                     android:layout_weight="1"
                     android:text="Да" />
+
                 <RadioButton
                     android:id="@+id/tablichka_sppk_Net"
                     android:layout_width="198dp"
@@ -303,46 +336,54 @@
                     android:layout_weight="1"
                     android:text="Нет" />
             </RadioGroup>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2.5"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="Установочное давление в МПа"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="Направление сброса клапана"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2.5"
                 android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Установочное давление в МПа"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Направление сброса клапана"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:orientation="horizontal">
+
                 <EditText
+                    android:id="@+id/EditText_sppk_factdavl"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_horizontal|center_vertical"
                     android:hint="МПа"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
+
                 <Spinner
                     android:id="@+id/SpinnerSppk"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1" />
             </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -351,18 +392,21 @@
                 android:text="Cоединения герметичны?"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
             <RadioGroup
                 android:id="@+id/RadioGroup_sppk_germetik"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
                 android:orientation="horizontal">
+
                 <RadioButton
                     android:id="@+id/germetik_sppk_Da"
                     android:layout_width="195dp"
                     android:layout_height="43dp"
                     android:layout_weight="1"
                     android:text="Герметичен" />
+
                 <RadioButton
                     android:id="@+id/germetik_sppk_Net"
                     android:layout_width="198dp"
@@ -370,6 +414,7 @@
                     android:layout_weight="1"
                     android:text="Не герметичен" />
             </RadioGroup>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -378,18 +423,21 @@
                 android:text="Герметичность затвора клапана?"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
             <RadioGroup
                 android:id="@+id/RadioGroup_sppk_germetikklapan"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
                 android:orientation="horizontal">
+
                 <RadioButton
                     android:id="@+id/germetikklapan_sppk_Da"
                     android:layout_width="195dp"
                     android:layout_height="43dp"
                     android:layout_weight="1"
                     android:text="Герметичен" />
+
                 <RadioButton
                     android:id="@+id/germetikklapan_sppk_Net"
                     android:layout_width="198dp"
@@ -397,6 +445,7 @@
                     android:layout_weight="1"
                     android:text="Не герметичен" />
             </RadioGroup>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -405,18 +454,21 @@
                 android:text="Целостность пружины у пружинного клапана?"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
             <RadioGroup
                 android:id="@+id/RadioGroup_sppk_pruzhina"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
                 android:orientation="horizontal">
+
                 <RadioButton
                     android:id="@+id/pruzhina_sppk_Da"
                     android:layout_width="195dp"
                     android:layout_height="43dp"
                     android:layout_weight="1"
                     android:text="Не нарушена" />
+
                 <RadioButton
                     android:id="@+id/pruzhina_sppk_Net"
                     android:layout_width="198dp"
@@ -424,11 +476,13 @@
                     android:layout_weight="1"
                     android:text="Нарушена" />
             </RadioGroup>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1.5"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -436,16 +490,18 @@
                     android:gravity="center_horizontal|center_vertical"
                     android:text="Входной патрубок"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
-                    android:text="Выходной патрубок"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center_horizontal|center_vertical"
                     android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Выходной патрубок"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -454,24 +510,30 @@
                 android:text="Диаметр"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1.5"
+                android:layout_weight="2.5"
                 android:orientation="horizontal">
+
                 <EditText
+                    android:id="@+id/EditText_sppk_VhodDiametr"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_horizontal|center_vertical"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
+
                 <EditText
+                    android:id="@+id/EditText_sppk_VihodDiametr"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center_horizontal|center_vertical"
                     android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
                     android:textSize="18sp" />
             </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -480,140 +542,175 @@
                 android:text="УЗТ замеры"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-            <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.5"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:text="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:textSize="18sp"/>
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal|center_vertical"
-                android:layout_weight="1"
-                android:textSize="18sp" />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:text="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:textSize="18sp"/>
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal|center_vertical"
-                android:layout_weight="1"
-                android:textSize="18sp" />
-        </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1.5"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="1"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/EditText_sppk_VhodUZT1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="1"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/EditText_sppk_VihodUZT1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_horizontal|center_vertical"
                     android:text="2"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
+
                 <EditText
+                    android:id="@+id/EditText_sppk_VhodUZT2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center_horizontal|center_vertical"
                     android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
                     android:textSize="18sp" />
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
+                    android:gravity="center_horizontal|center_vertical"
                     android:text="2"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
+
                 <EditText
+                    android:id="@+id/EditText_sppk_VihodUZT2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center_horizontal|center_vertical"
                     android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
                     android:textSize="18sp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1.5"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
+                    android:gravity="center_horizontal|center_vertical"
                     android:text="3"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:textSize="18sp"/>
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:layout_weight="1"
                     android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/EditText_sppk_VhodUZT3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textSize="18sp" />
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="3"
                     android:gravity="center_horizontal|center_vertical"
-                    android:textSize="18sp"/>
+                    android:text="3"
+                    android:textSize="18sp" />
+
                 <EditText
+                    android:id="@+id/EditText_sppk_VihodUZT3"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center_horizontal|center_vertical"
                     android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
                     android:textSize="18sp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1.5"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
+                    android:gravity="center_horizontal|center_vertical"
                     android:text="4"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:textSize="18sp"/>
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:layout_weight="1"
                     android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/EditText_sppk_VhodUZT4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textSize="18sp" />
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="4"
                     android:gravity="center_horizontal|center_vertical"
-                    android:textSize="18sp"/>
+                    android:text="4"
+                    android:textSize="18sp" />
+
                 <EditText
+                    android:id="@+id/EditText_sppk_VihodUZT4"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center_horizontal|center_vertical"
                     android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
                     android:textSize="18sp" />
             </LinearLayout>
+            <Button
+                android:id="@+id/Button_sppk_Vnesti"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="0.7"
+                android:text="Сохранить" />
+
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/sppkpicture" />
         </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

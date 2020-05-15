@@ -1,207 +1,213 @@
 
-o
-java:S1104"RMake nameDB a static final constant or non-public and provide accessors if needed.(ş²±»8âÑ™Ë.
-x
-java:S1104"VMake flagUpdate a static final constant or non-public and provide accessors if needed.(šøÚÀúÿÿÿÿ8âÑ™Ë.
-V
-java:S14444"4Make this "public static nameMegion2021" field final(û˜¦ßıÿÿÿÿ8âÑ™Ë.
-}
-java:S1104E"`Make nameDefectMegion2023 a static final constant or non-public and provide accessors if needed.(ôúŠ®8âÑ™Ë.
-
-java:S1104M"_Make nameDefectPolus2024 a static final constant or non-public and provide accessors if needed.(¡èœ€şÿÿÿÿ8âÑ™Ë.
-{
-java:S1104"YMake namePolus2019 a static final constant or non-public and provide accessors if needed.(¥“”Êùÿÿÿÿ8âÑ™Ë.
-
-java:S3008+"_Rename this field "nameBashneft2020_UDE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ˜ñªùÿÿÿÿ8âÑ™Ë.
-U
-java:S14445"3Make this "public static namePolus2021" field final(…ÓÙÍşÿÿÿÿ8âÑ™Ë.
-T
-java:S1444'"7Make this "public static nameDefectBND2020" field final(«ş8âÑ™Ë.
 N
-java:S1444"1Make this "public static nameBND2019" field final(ªÅ†8âÑ™Ë.
+java:S1444"1Make this "public static nameBND2019" field final(ªÅ†8âÑ™Ë.
 w
-java:S1104B"ZMake nameMegion2023 a static final constant or non-public and provide accessors if needed.(ĞÑõá8âÑ™Ë.
-W
-java:S1444L":Make this "public static nameDefectMegion2024" field final(ĞşÑ8âÑ™Ë.
-T
-java:S1444="7Make this "public static nameDefectBND2022" field final(°Ò¤²8âÑ™Ë.
-K
-java:S1444V")Make this "public static URL" field final(ß“ÉÁûÿÿÿÿ8âÑ™Ë.
-{
-java:S1104<"YMake namePolus2022 a static final constant or non-public and provide accessors if needed.(±ÿÃúÿÿÿÿ8âÑ™Ë.
-P
-java:S1444"4Make this "public static nameMegion2019" field final(ÃÄ³Q8âÑ™Ë.
-V
-java:S1444F"9Make this "public static nameDefectPolus2023" field final(³µÒÍ8âÑ™Ë.
-\
-java:S1444+":Make this "public static nameBashneft2020_UDE" field final(ÿ˜ñªùÿÿÿÿ8âÑ™Ë.
-z
-java:S1104="]Make nameDefectBND2022 a static final constant or non-public and provide accessors if needed.(°Ò¤²8âÑ™Ë.
-U
-java:S1444"3Make this "public static namePolus2019" field final(¥“”Êùÿÿÿÿ8âÑ™Ë.
-{
-java:S11045"YMake namePolus2021 a static final constant or non-public and provide accessors if needed.(…ÓÙÍşÿÿÿÿ8âÑ™Ë.
-W
-java:S14447":Make this "public static nameDefectMegion2021" field final(»œÏ°8âÑ™Ë.
-W
-java:S1444E":Make this "public static nameDefectMegion2023" field final(ôúŠ®8âÑ™Ë.
-T
-java:S1444 "7Make this "public static nameDefectBND2019" field final(èšì8âÑ™Ë.
-|
-java:S11048"_Make nameDefectPolus2021 a static final constant or non-public and provide accessors if needed.(ÎéÔÊ8âÑ™Ë.
-\
-java:S1444>":Make this "public static nameDefectMegion2022" field final(È³«áıÿÿÿÿ8âÑ™Ë.
-N
-java:S1444S",Make this "public static pathDB" field final(àÔüõøÿÿÿÿ8âÑ™Ë.
-I
-java:S1444",Make this "public static nameDB" field final(ş²±»8âÑ™Ë.
+java:S1104>"ZMake nameMegion2023 a static final constant or non-public and provide accessors if needed.(ĞÑõá8âÑ™Ë.
 Q
-java:S1444%"4Make this "public static nameMegion2020" field final(ß–Ø„8âÑ™Ë.
+java:S1444E"4Make this "public static nameMegion2024" field final(´™ø¹8âÑ™Ë.
+[
+java:S1444;"9Make this "public static nameDefectPolus2022" field final(œàâñúÿÿÿÿ8âÑ™Ë.
 |
-java:S1104""_Make nameDefectPolus2019 a static final constant or non-public and provide accessors if needed.(¨‹Íƒ8âÑ™Ë.
-{
-java:S1104C"YMake namePolus2023 a static final constant or non-public and provide accessors if needed.(¿¡®ûşÿÿÿÿ8âÑ™Ë.
-
-java:S1104D"]Make nameDefectBND2023 a static final constant or non-public and provide accessors if needed.(ŞÔ âúÿÿÿÿ8âÑ™Ë.
-|
-java:S1104)"_Make nameDefectPolus2020 a static final constant or non-public and provide accessors if needed.(ª£œ8âÑ™Ë.
+java:S11040"ZMake nameMegion2021 a static final constant or non-public and provide accessors if needed.(û˜¦ßıÿÿÿÿ8âÑ™Ë.
+‚
+java:S1104:"`Make nameDefectMegion2022 a static final constant or non-public and provide accessors if needed.(È³«áıÿÿÿÿ8âÑ™Ë.
 u
-java:S1104P"XMake pathUpdateDB a static final constant or non-public and provide accessors if needed.(İŒí8âÑ™Ë.
-Q
-java:S1444;"4Make this "public static nameMegion2022" field final(œŒŞó8âÑ™Ë.
-z
-java:S1104"XMake nameUpdateDB a static final constant or non-public and provide accessors if needed.(ÎŸêòıÿÿÿÿ8âÑ™Ë.
-W
-java:S1444!":Make this "public static nameDefectMegion2019" field final(ø¨…á8âÑ™Ë.
-R
-java:S1444"0Make this "public static flagUpdate" field final(šøÚÀúÿÿÿÿ8âÑ™Ë.
-}
-java:S1104!"`Make nameDefectMegion2019 a static final constant or non-public and provide accessors if needed.(ø¨…á8âÑ™Ë.
-{
-java:S1104&"YMake namePolus2020 a static final constant or non-public and provide accessors if needed.(½Ÿİ¦ıÿÿÿÿ8âÑ™Ë.
-N
-java:S1444H"1Make this "public static nameBND2024" field final(©Ü£í8âÑ™Ë.
-w
-java:S1104;"ZMake nameMegion2022 a static final constant or non-public and provide accessors if needed.(œŒŞó8âÑ™Ë.
-U
-java:S1444J"3Make this "public static namePolus2024" field final(Á½¨úÿÿÿÿ8âÑ™Ë.
-‚
-java:S1104>"`Make nameDefectMegion2022 a static final constant or non-public and provide accessors if needed.(È³«áıÿÿÿÿ8âÑ™Ë.
-Y
-java:S1444D"7Make this "public static nameDefectBND2023" field final(ŞÔ âúÿÿÿÿ8âÑ™Ë.
-Q
-java:S1444B"4Make this "public static nameMegion2023" field final(ĞÑõá8âÑ™Ë.
-t
-java:S1104H"WMake nameBND2024 a static final constant or non-public and provide accessors if needed.(©Ü£í8âÑ™Ë.
-{
-java:S1104J"YMake namePolus2024 a static final constant or non-public and provide accessors if needed.(Á½¨úÿÿÿÿ8âÑ™Ë.
-w
-java:S1104%"ZMake nameMegion2020 a static final constant or non-public and provide accessors if needed.(ß–Ø„8âÑ™Ë.
-W
-java:S1444(":Make this "public static nameDefectMegion2020" field final(òˆ¤¤8âÑ™Ë.
-U
-java:S1444<"3Make this "public static namePolus2022" field final(±ÿÃúÿÿÿÿ8âÑ™Ë.
-t
-java:S11043"WMake nameBND2021 a static final constant or non-public and provide accessors if needed.(÷Èò8âÑ™Ë.
+java:S1104L"XMake pathUpdateDB a static final constant or non-public and provide accessors if needed.(İŒí8âÑ™Ë.
+p
+java:S3008R"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß“ÉÁûÿÿÿÿ8âÑ™Ë.
+\
+java:S1444'":Make this "public static nameBashneft2020_UDE" field final(ÿ˜ñªùÿÿÿÿ8âÑ™Ë.
 [
-java:S1444M"9Make this "public static nameDefectPolus2024" field final(¡èœ€şÿÿÿÿ8âÑ™Ë.
-t
-java:S1104"WMake nameBND2019 a static final constant or non-public and provide accessors if needed.(ªÅ†8âÑ™Ë.
-U
-java:S1444&"3Make this "public static namePolus2020" field final(½Ÿİ¦ıÿÿÿÿ8âÑ™Ë.
-
-java:S11046"]Make nameDefectBND2021 a static final constant or non-public and provide accessors if needed.(£–¢ìûÿÿÿÿ8âÑ™Ë.
-Y
-java:S1444K"7Make this "public static nameDefectBND2024" field final(‚³®üÿÿÿÿ8âÑ™Ë.
-S
-java:S1444:"1Make this "public static nameBND2022" field final(·ñÊøÿÿÿÿ8âÑ™Ë.
-y
-java:S1104:"WMake nameBND2022 a static final constant or non-public and provide accessors if needed.(·ñÊøÿÿÿÿ8âÑ™Ë.
-U
-java:S1444C"3Make this "public static namePolus2023" field final(¿¡®ûşÿÿÿÿ8âÑ™Ë.
-t
-java:S1104A"WMake nameBND2023 a static final constant or non-public and provide accessors if needed.(½°™8âÑ™Ë.
-ƒ
-java:S1104,"fMake nameDefectBashneft2020_UDE a static final constant or non-public and provide accessors if needed.(ŞÈˆŠ8âÑ™Ë.
-N
-java:S1444A"1Make this "public static nameBND2023" field final(½°™8âÑ™Ë.
-
-java:S1104?"_Make nameDefectPolus2022 a static final constant or non-public and provide accessors if needed.(œàâñúÿÿÿÿ8âÑ™Ë.
-w
-java:S1104I"ZMake nameMegion2024 a static final constant or non-public and provide accessors if needed.(´™ø¹8âÑ™Ë.
-}
-java:S1104("`Make nameDefectMegion2020 a static final constant or non-public and provide accessors if needed.(òˆ¤¤8âÑ™Ë.
-}
-java:S1104L"`Make nameDefectMegion2024 a static final constant or non-public and provide accessors if needed.(ĞşÑ8âÑ™Ë.
-q
-java:S1104V"OMake URL a static final constant or non-public and provide accessors if needed.(ß“ÉÁûÿÿÿÿ8âÑ™Ë.
-z
-java:S1104'"]Make nameDefectBND2020 a static final constant or non-public and provide accessors if needed.(«ş8âÑ™Ë.
-‚
-java:S3008,"eRename this field "nameDefectBashneft2020_UDE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞÈˆŠ8âÑ™Ë.
-z
-java:S1104 "]Make nameDefectBND2019 a static final constant or non-public and provide accessors if needed.(èšì8âÑ™Ë.
-[
-java:S1444?"9Make this "public static nameDefectPolus2022" field final(œàâñúÿÿÿÿ8âÑ™Ë.
-Q
-java:S1444I"4Make this "public static nameMegion2024" field final(´™ø¹8âÑ™Ë.
-‚
-java:S1104+"`Make nameBashneft2020_UDE a static final constant or non-public and provide accessors if needed.(ÿ˜ñªùÿÿÿÿ8âÑ™Ë.
+java:S14444"9Make this "public static nameDefectPolus2021" field final(«ÇÌªøÿÿÿÿ8«ÌÅ¿¡.
 W
-java:S1118":Add a private constructor to hide the implicit public one.(©¨è›8âÑ™Ë.
-V
-java:S14448"9Make this "public static nameDefectPolus2021" field final(ÎéÔÊ8âÑ™Ë.
+java:S1444":Make this "public static nameDefectMegion2019" field final(Œ¢Ì™8«ÌÅ¿¡.
 v
-java:S1104"ZMake nameMegion2019 a static final constant or non-public and provide accessors if needed.(ÃÄ³Q8âÑ™Ë.
-V
-java:S1444)"9Make this "public static nameDefectPolus2020" field final(ª£œ8âÑ™Ë.
-p
-java:S1104"SMake context a static final constant or non-public and provide accessors if needed.(·Â“×8âÑ™Ë.
-p
-java:S3008V"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß“ÉÁûÿÿÿÿ8âÑ™Ë.
-
-java:S1104K"]Make nameDefectBND2024 a static final constant or non-public and provide accessors if needed.(‚³®üÿÿÿÿ8âÑ™Ë.
-}
-java:S11047"`Make nameDefectMegion2021 a static final constant or non-public and provide accessors if needed.(»œÏ°8âÑ™Ë.
-|
-java:S11044"ZMake nameMegion2021 a static final constant or non-public and provide accessors if needed.(û˜¦ßıÿÿÿÿ8âÑ™Ë.
-T
-java:S1444"2Make this "public static nameUpdateDB" field final(ÎŸêòıÿÿÿÿ8âÑ™Ë.
+java:S1104"ZMake nameMegion2019 a static final constant or non-public and provide accessors if needed.(ÃÄ³Q8âÑ™Ë.
+{
+java:S11048"YMake namePolus2022 a static final constant or non-public and provide accessors if needed.(±ÿÃúÿÿÿÿ8âÑ™Ë.
+[
+java:S1444I"9Make this "public static nameDefectPolus2024" field final(¡èœ€şÿÿÿÿ8âÑ™Ë.
+Q
+java:S1444>"4Make this "public static nameMegion2023" field final(ĞÑõá8âÑ™Ë.
+w
+java:S1104E"ZMake nameMegion2024 a static final constant or non-public and provide accessors if needed.(´™ø¹8âÑ™Ë.
 t
-java:S1104S"RMake pathDB a static final constant or non-public and provide accessors if needed.(àÔüõøÿÿÿÿ8âÑ™Ë.
-J
-java:S1444"-Make this "public static context" field final(·Â“×8âÑ™Ë.
-N
-java:S14443"1Make this "public static nameBND2021" field final(÷Èò8âÑ™Ë.
-V
-java:S1444""9Make this "public static nameDefectPolus2019" field final(¨‹Íƒ8âÑ™Ë.
-Y
-java:S14446"7Make this "public static nameDefectBND2021" field final(£–¢ìûÿÿÿÿ8âÑ™Ë.
-|
-java:S1104F"_Make nameDefectPolus2023 a static final constant or non-public and provide accessors if needed.(³µÒÍ8âÑ™Ë.
-S
-java:S1444$"1Make this "public static nameBND2020" field final(Øâüşıÿÿÿÿ8âÑ™Ë.
-y
-java:S1104$"WMake nameBND2020 a static final constant or non-public and provide accessors if needed.(Øâüşıÿÿÿÿ8âÑ™Ë.
-O
-java:S1444P"2Make this "public static pathUpdateDB" field final(İŒí8âÑ™Ë.
-]
-java:S1444,"@Make this "public static nameDefectBashneft2020_UDE" field final(ŞÈˆŠ8âÑ™Ë.
-^
-java:S1444."<Make this "public static nameBashneft2020_Nasos" field final(ùÃÑ’şÿÿÿÿ8³Å–™ .
+java:S1104="WMake nameBND2023 a static final constant or non-public and provide accessors if needed.(½°™8âÑ™Ë.
 _
-java:S1444/"BMake this "public static nameDefectBashneft2020_Nasos" field final(åØ²8³Å–™ .
-M
-java:S1444X"0Make this "public static URLAllForm" field final(ç´©8³Å–™ .
-„
-java:S1104."bMake nameBashneft2020_Nasos a static final constant or non-public and provide accessors if needed.(ùÃÑ’şÿÿÿÿ8³Å–™ .
-…
-java:S1104/"hMake nameDefectBashneft2020_Nasos a static final constant or non-public and provide accessors if needed.(åØ²8³Å–™ .
-s
-java:S1104X"VMake URLAllForm a static final constant or non-public and provide accessors if needed.(ç´©8³Å–™ .
+java:S1444+"BMake this "public static nameDefectBashneft2020_Nasos" field final(åØ²8³Å–™ .
+x
+java:S1104"VMake flagUpdate a static final constant or non-public and provide accessors if needed.(šøÚÀúÿÿÿÿ8âÑ™Ë.
+W
+java:S1118	":Add a private constructor to hide the implicit public one.(©¨è›8âÑ™Ë.
+w
+java:S1104!"ZMake nameMegion2020 a static final constant or non-public and provide accessors if needed.(ß–Ø„8âÑ™Ë.
+}
+java:S1104$"`Make nameDefectMegion2020 a static final constant or non-public and provide accessors if needed.(òÄÂÊ8«ÌÅ¿¡.
+W
+java:S1444$":Make this "public static nameDefectMegion2020" field final(òÄÂÊ8«ÌÅ¿¡.
 ƒ
-java:S3008."aRename this field "nameBashneft2020_Nasos" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÃÑ’şÿÿÿÿ8³Å–™ .
+java:S1104("fMake nameDefectBashneft2020_UDE a static final constant or non-public and provide accessors if needed.(ŞÈˆŠ8âÑ™Ë.
+z
+java:S11049"]Make nameDefectBND2022 a static final constant or non-public and provide accessors if needed.(°Ò¤²8âÑ™Ë.
+|
+java:S1104B"_Make nameDefectPolus2023 a static final constant or non-public and provide accessors if needed.(³µÒÍ8âÑ™Ë.
+W
+java:S1444H":Make this "public static nameDefectMegion2024" field final(ĞşÑ8âÑ™Ë.
+Q
+java:S1444!"4Make this "public static nameMegion2020" field final(ß–Ø„8âÑ™Ë.
+O
+java:S1444L"2Make this "public static pathUpdateDB" field final(İŒí8âÑ™Ë.
+N
+java:S1444O",Make this "public static pathDB" field final(àÔüõøÿÿÿÿ8âÑ™Ë.
+{
+java:S1104F"YMake namePolus2024 a static final constant or non-public and provide accessors if needed.(Á½¨úÿÿÿÿ8âÑ™Ë.
+Q
+java:S14447"4Make this "public static nameMegion2022" field final(œŒŞó8âÑ™Ë.
+|
+java:S1104%"_Make nameDefectPolus2020 a static final constant or non-public and provide accessors if needed.(¨ú¸Ş8«ÌÅ¿¡.
+U
+java:S14441"3Make this "public static namePolus2021" field final(…ÓÙÍşÿÿÿÿ8âÑ™Ë.
+{
+java:S1104?"YMake namePolus2023 a static final constant or non-public and provide accessors if needed.(¿¡®ûşÿÿÿÿ8âÑ™Ë.
+o
+java:S1104"RMake nameDB a static final constant or non-public and provide accessors if needed.(ş²±»8âÑ™Ë.
+
+java:S1104"]Make nameDefectBND2019 a static final constant or non-public and provide accessors if needed.(±Ñ‹®şÿÿÿÿ8«ÌÅ¿¡.
+q
+java:S1104R"OMake URL a static final constant or non-public and provide accessors if needed.(ß“ÉÁûÿÿÿÿ8âÑ™Ë.
 „
-java:S3008/"gRename this field "nameDefectBashneft2020_Nasos" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åØ²8³Å–™ .
+java:S3008+"gRename this field "nameDefectBashneft2020_Nasos" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åØ²8³Å–™ .
+V
+java:S14440"4Make this "public static nameMegion2021" field final(û˜¦ßıÿÿÿÿ8âÑ™Ë.
+{
+java:S1104"YMake namePolus2019 a static final constant or non-public and provide accessors if needed.(¥“”Êùÿÿÿÿ8âÑ™Ë.
 r
-java:S3008X"URename this field "URLAllForm" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç´©8³Å–™ .
+java:S3008T"URename this field "URLAllForm" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç´©8³Å–™ .
+J
+java:S1444"-Make this "public static context" field final(·Â“×8âÑ™Ë.
+y
+java:S11046"WMake nameBND2022 a static final constant or non-public and provide accessors if needed.(·ñÊøÿÿÿÿ8âÑ™Ë.
+t
+java:S1104O"RMake pathDB a static final constant or non-public and provide accessors if needed.(àÔüõøÿÿÿÿ8âÑ™Ë.
+W
+java:S1444A":Make this "public static nameDefectMegion2023" field final(ôúŠ®8âÑ™Ë.
+p
+java:S1104"SMake context a static final constant or non-public and provide accessors if needed.(·Â“×8âÑ™Ë.
+
+java:S1104@"]Make nameDefectBND2023 a static final constant or non-public and provide accessors if needed.(ŞÔ âúÿÿÿÿ8âÑ™Ë.
+ƒ
+java:S3008*"aRename this field "nameBashneft2020_Nasos" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÃÑ’şÿÿÿÿ8³Å–™ .
+]
+java:S1444("@Make this "public static nameDefectBashneft2020_UDE" field final(ŞÈˆŠ8âÑ™Ë.
+U
+java:S1444""3Make this "public static namePolus2020" field final(½Ÿİ¦ıÿÿÿÿ8âÑ™Ë.
+t
+java:S1104D"WMake nameBND2024 a static final constant or non-public and provide accessors if needed.(©Ü£í8âÑ™Ë.
+U
+java:S1444"3Make this "public static namePolus2019" field final(¥“”Êùÿÿÿÿ8âÑ™Ë.
+S
+java:S1444 "1Make this "public static nameBND2020" field final(Øâüşıÿÿÿÿ8âÑ™Ë.
+{
+java:S1104""YMake namePolus2020 a static final constant or non-public and provide accessors if needed.(½Ÿİ¦ıÿÿÿÿ8âÑ™Ë.
+„
+java:S1104*"bMake nameBashneft2020_Nasos a static final constant or non-public and provide accessors if needed.(ùÃÑ’şÿÿÿÿ8³Å–™ .
+}
+java:S11043"`Make nameDefectMegion2021 a static final constant or non-public and provide accessors if needed.(Í¶Ñø8«ÌÅ¿¡.
+‚
+java:S3008("eRename this field "nameDefectBashneft2020_UDE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞÈˆŠ8âÑ™Ë.
+\
+java:S1444:":Make this "public static nameDefectMegion2022" field final(È³«áıÿÿÿÿ8âÑ™Ë.
+M
+java:S1444T"0Make this "public static URLAllForm" field final(ç´©8³Å–™ .
+Y
+java:S1444@"7Make this "public static nameDefectBND2023" field final(ŞÔ âúÿÿÿÿ8âÑ™Ë.
+^
+java:S1444*"<Make this "public static nameBashneft2020_Nasos" field final(ùÃÑ’şÿÿÿÿ8³Å–™ .
+N
+java:S1444/"1Make this "public static nameBND2021" field final(÷Èò8âÑ™Ë.
+{
+java:S11041"YMake namePolus2021 a static final constant or non-public and provide accessors if needed.(…ÓÙÍşÿÿÿÿ8âÑ™Ë.
+S
+java:S14446"1Make this "public static nameBND2022" field final(·ñÊøÿÿÿÿ8âÑ™Ë.
+}
+java:S1104"`Make nameDefectMegion2019 a static final constant or non-public and provide accessors if needed.(Œ¢Ì™8«ÌÅ¿¡.
+P
+java:S1444"4Make this "public static nameMegion2019" field final(ÃÄ³Q8âÑ™Ë.
+}
+java:S1104H"`Make nameDefectMegion2024 a static final constant or non-public and provide accessors if needed.(ĞşÑ8âÑ™Ë.
+
+java:S3008'"_Rename this field "nameBashneft2020_UDE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ˜ñªùÿÿÿÿ8âÑ™Ë.
+R
+java:S1444"0Make this "public static flagUpdate" field final(šøÚÀúÿÿÿÿ8âÑ™Ë.
+Y
+java:S14442"7Make this "public static nameDefectBND2021" field final(É×Ç§øÿÿÿÿ8«ÌÅ¿¡.
+W
+java:S14443":Make this "public static nameDefectMegion2021" field final(Í¶Ñø8«ÌÅ¿¡.
+
+java:S1104I"_Make nameDefectPolus2024 a static final constant or non-public and provide accessors if needed.(¡èœ€şÿÿÿÿ8âÑ™Ë.
+U
+java:S14448"3Make this "public static namePolus2022" field final(±ÿÃúÿÿÿÿ8âÑ™Ë.
+V
+java:S1444B"9Make this "public static nameDefectPolus2023" field final(³µÒÍ8âÑ™Ë.
+s
+java:S1104T"VMake URLAllForm a static final constant or non-public and provide accessors if needed.(ç´©8³Å–™ .
+[
+java:S1444"9Make this "public static nameDefectPolus2019" field final(îÿéóÿÿÿÿÿ8«ÌÅ¿¡.
+I
+java:S1444",Make this "public static nameDB" field final(ş²±»8âÑ™Ë.
+N
+java:S1444="1Make this "public static nameBND2023" field final(½°™8âÑ™Ë.
+
+java:S11044"_Make nameDefectPolus2021 a static final constant or non-public and provide accessors if needed.(«ÇÌªøÿÿÿÿ8«ÌÅ¿¡.
+Y
+java:S1444"7Make this "public static nameDefectBND2019" field final(±Ñ‹®şÿÿÿÿ8«ÌÅ¿¡.
+V
+java:S1444%"9Make this "public static nameDefectPolus2020" field final(¨ú¸Ş8«ÌÅ¿¡.
+U
+java:S1444F"3Make this "public static namePolus2024" field final(Á½¨úÿÿÿÿ8âÑ™Ë.
+
+java:S11042"]Make nameDefectBND2021 a static final constant or non-public and provide accessors if needed.(É×Ç§øÿÿÿÿ8«ÌÅ¿¡.
+w
+java:S11047"ZMake nameMegion2022 a static final constant or non-public and provide accessors if needed.(œŒŞó8âÑ™Ë.
+
+java:S1104#"]Make nameDefectBND2020 a static final constant or non-public and provide accessors if needed.(¶¼››şÿÿÿÿ8«ÌÅ¿¡.
+
+java:S1104"_Make nameDefectPolus2019 a static final constant or non-public and provide accessors if needed.(îÿéóÿÿÿÿÿ8«ÌÅ¿¡.
+‚
+java:S1104'"`Make nameBashneft2020_UDE a static final constant or non-public and provide accessors if needed.(ÿ˜ñªùÿÿÿÿ8âÑ™Ë.
+N
+java:S1444D"1Make this "public static nameBND2024" field final(©Ü£í8âÑ™Ë.
+T
+java:S1444"2Make this "public static nameUpdateDB" field final(ÎŸêòıÿÿÿÿ8âÑ™Ë.
+T
+java:S14449"7Make this "public static nameDefectBND2022" field final(°Ò¤²8âÑ™Ë.
+…
+java:S1104+"hMake nameDefectBashneft2020_Nasos a static final constant or non-public and provide accessors if needed.(åØ²8³Å–™ .
+U
+java:S1444?"3Make this "public static namePolus2023" field final(¿¡®ûşÿÿÿÿ8âÑ™Ë.
+K
+java:S1444R")Make this "public static URL" field final(ß“ÉÁûÿÿÿÿ8âÑ™Ë.
+
+java:S1104;"_Make nameDefectPolus2022 a static final constant or non-public and provide accessors if needed.(œàâñúÿÿÿÿ8âÑ™Ë.
+t
+java:S1104"WMake nameBND2019 a static final constant or non-public and provide accessors if needed.(ªÅ†8âÑ™Ë.
+
+java:S1104G"]Make nameDefectBND2024 a static final constant or non-public and provide accessors if needed.(‚³®üÿÿÿÿ8âÑ™Ë.
+y
+java:S1104 "WMake nameBND2020 a static final constant or non-public and provide accessors if needed.(Øâüşıÿÿÿÿ8âÑ™Ë.
+Y
+java:S1444G"7Make this "public static nameDefectBND2024" field final(‚³®üÿÿÿÿ8âÑ™Ë.
+t
+java:S1104/"WMake nameBND2021 a static final constant or non-public and provide accessors if needed.(÷Èò8âÑ™Ë.
+}
+java:S1104A"`Make nameDefectMegion2023 a static final constant or non-public and provide accessors if needed.(ôúŠ®8âÑ™Ë.
+z
+java:S1104"XMake nameUpdateDB a static final constant or non-public and provide accessors if needed.(ÎŸêòıÿÿÿÿ8âÑ™Ë.
+Y
+java:S1444#"7Make this "public static nameDefectBND2020" field final(¶¼››şÿÿÿÿ8«ÌÅ¿¡.
+c
+java:S1444)"AMake this "public static nameDefectBashneft2020_SPPK" field final(Œÿàşÿÿÿÿ8ŠÇ¿¡.
+‰
+java:S1104)"gMake nameDefectBashneft2020_SPPK a static final constant or non-public and provide accessors if needed.(Œÿàşÿÿÿÿ8ŠÇ¿¡.
+ˆ
+java:S3008)"fRename this field "nameDefectBashneft2020_SPPK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œÿàşÿÿÿÿ8ŠÇ¿¡.

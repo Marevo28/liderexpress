@@ -38,7 +38,7 @@ public class Shared {
 
     public static String nameBashneft2020_UDE = "Bashneft2020_UDE";
     public static String nameDefectBashneft2020_UDE = "DefectBND2020_UDE";
-
+    public static String nameDefectBashneft2020_SPPK = "DefectBND2020_SPPK";
     public static String nameBashneft2020_Nasos = "BND2020_Nasos";
     public static String nameDefectBashneft2020_Nasos = "DefectBND2020_Nasos";
 
