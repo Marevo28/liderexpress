@@ -202,10 +202,10 @@ public class KartaKontrolyaSPPK extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId){
-                    case R.id.Sostoyanie_Da:
+                    case R.id.Plombs_sppk_Da:
                         Plombs = "Да";
                         break;
-                    case R.id.Sostoyanie_Net:
+                    case R.id.Plombs_sppk_Net:
                         Plombs = "Нет";
                         break;
                 }
@@ -350,9 +350,9 @@ public class KartaKontrolyaSPPK extends AppCompatActivity {
                 initialValues.put("Stolb28", SpecProvNK);
                 initialValues.put("Stolb29", Zav);
                 initialValues.put("Stolb30", Inv);
-                initialValues.put("Stolb31", Plombs);
-                initialValues.put("Stolb32", Usl_prohod);
-                initialValues.put("Stolb33", Usl_davlenie);
+                initialValues.put("Stolb31", Usl_prohod);
+                initialValues.put("Stolb32", Usl_davlenie);
+                initialValues.put("Stolb33", Plombs);
                 initialValues.put("Stolb34", AKP);
                 initialValues.put("Stolb35", SostoyanieAKP);
                 initialValues.put("Stolb36", Zaglushka );
