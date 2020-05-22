@@ -26,9 +26,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Tools.Menu_tools"
+            android:label="@string/title_activity_menu_tools"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Svodnaya.KartaKontrolyaSPPK"
             android:label="@string/title_activity_karta_s_p_p_k"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Transport_list"
             android:label="@string/title_activity_transport_list"

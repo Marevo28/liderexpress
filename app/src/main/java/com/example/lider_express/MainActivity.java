@@ -38,8 +38,7 @@ import com.example.lider_express.Svodnaya.KartaKontrolyaSPPK;
 import com.example.lider_express.Svodnaya.KartaKontrolyaYDE;
 import com.example.lider_express.Svodnaya.MegionSvodnaya;
 import com.example.lider_express.Synchronization.Synchronization;
-import com.example.lider_express.Tools.GiSosuda;
-import com.example.lider_express.Tools.VmyatinaSocuda;
+import com.example.lider_express.Tools.Menu_tools;
 import com.example.lider_express.Сamera2.MainCamera2;
 import com.google.android.material.navigation.NavigationView;
 
@@ -448,27 +447,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        if (id == R.id.nav_home) {
+        if (id == R.id.nav_оbekt) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-            Intent IntentSittings = new Intent(MainActivity.this, GiSosuda.class);
+        } else if (id == R.id.nav_оbekt) {
+            Intent IntentSittings = new Intent(MainActivity.this, MainActivity.class);
             startActivity(IntentSittings);
-        } else if (id == R.id.nav_slideshow) {
-            Intent IntentSittings = new Intent(MainActivity.this, VmyatinaSocuda.class);
-            startActivity(IntentSittings);
-        } else if (id == R.id.nav_tools) {
-            Intent IntentSittings = new Intent(MainActivity.this, Synchronization.class);
-            startActivity(IntentSittings);
-        } else if (id == R.id.nav_sittings) {
-            Intent IntentSittings = new Intent(MainActivity.this, SittingsActivity.class);
-            startActivity(IntentSittings);
-        } else if (id == R.id.nav_photo) {
+        } else if (id == R.id.nav_oborud) {
             Intent IntentSittings = new Intent(MainActivity.this, Oborudovanie.class);
             startActivity(IntentSittings);
         } else if (id == R.id.transport_list) {
             Intent IntentSittings = new Intent(MainActivity.this, Transport_list.class);
             startActivity(IntentSittings);
-        }
+        } else if (id == R.id.nav_sinhron) {
+            Intent IntentSittings = new Intent(MainActivity.this, Synchronization.class);
+            startActivity(IntentSittings);
+        } else if (id == R.id.nav_sittings) {
+            Intent IntentSittings = new Intent(MainActivity.this, SittingsActivity.class);
+            startActivity(IntentSittings);
+        } else if (id == R.id.nav_tools) {
+        Intent IntentSittings = new Intent(MainActivity.this, Menu_tools.class);
+        startActivity(IntentSittings);
+    }
             DrawerLayout drawer = findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
             return true;

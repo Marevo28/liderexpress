@@ -1,0 +1,31 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Øø€¬
+p
+java:S1104"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ
+j
+java:S1104"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ
+<
+java:S1659"!Declare "niz" on a separate line.(—–Üşÿÿÿÿ
+=
+java:S1659""Declare "verh" on a separate line.(—–Üşÿÿÿÿ
+:
+java:S1659"Declare "a" on a separate line.(—–Üşÿÿÿÿ
+:
+java:S1659"Declare "b" on a separate line.(—–Üşÿÿÿÿ
+:
+java:S1659"Declare "c" on a separate line.(—–Üşÿÿÿÿ
+:
+java:S1659"Declare "d" on a separate line.(—–Üşÿÿÿÿ
+;
+java:S1659"%Declare "nizhnee" on a separate line.(ÿøüÃ
+8
+java:S1659""Declare "temp" on a separate line.(ÿøüÃ
+>
+java:S1659"#Declare "sigma" on a separate line.(ûÄÍùÿÿÿÿ
+=
+java:S1659""Declare "davl" on a separate line.(ûÄÍùÿÿÿÿ
+G
+java:S1659 ",Declare "textTempreture" on a separate line.(ûÏæ…øÿÿÿÿ
+m
+java:S27378"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ
+P	java:S125/"<This block of commented-out lines of code should be removed.(Ì¶³{
