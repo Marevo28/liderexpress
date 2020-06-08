@@ -34,4 +34,22 @@
         <item name="colorControlHighlight">#673ab7</item>
     </style>
 
+
+    <style name="h1">
+        <item name="android:textColor">@color/colorBlack900</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="h2">
+        <item name="android:textColor">@color/colorBlack900</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="p">
+        <item name="android:textColor">@color/colorBlack900</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
 </resources>

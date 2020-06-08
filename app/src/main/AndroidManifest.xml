@@ -70,7 +70,7 @@
             android:label="@string/title_activity_spisok"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Svodnaya.BNDSvodnaya"
+            android:name=".ControlCard.PumpControlCard"
             android:label="Сводная таблица"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Camera" />
@@ -80,10 +80,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Svodnaya.ProvedeniyeYZT"
-            android:label="Сводная таблица"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Svodnaya.KartaKontolyaNasos"
             android:label="Сводная таблица"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

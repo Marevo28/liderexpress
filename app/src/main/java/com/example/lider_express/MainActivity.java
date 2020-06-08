@@ -32,8 +32,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.lider_express.DataBase.DatabaseHelper;
-import com.example.lider_express.Svodnaya.BNDSvodnaya;
-import com.example.lider_express.Svodnaya.KartaKontolyaNasos;
+import com.example.lider_express.ControlCard.PumpControlCard;
 import com.example.lider_express.Svodnaya.KartaKontrolyaSPPK;
 import com.example.lider_express.Svodnaya.KartaKontrolyaYDE;
 import com.example.lider_express.Svodnaya.MegionSvodnaya;
@@ -126,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NameTu = (TextView) findViewById(R.id.NameTu);
         textpostion = (EditText) findViewById(R.id.textpositon);
 
-        btnSvodnaya.setEnabled(false);
+        //btnSvodnaya.setEnabled(false);
         btnKarta.setEnabled(false);
         btnPhotoTu.setEnabled(false);
         btnPhotoDoc.setEnabled(false);
@@ -204,7 +203,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 cursor.moveToFirst();
 
                                 texttypetu.setText(cursor.getString(2));//Тип оборудования
-                                typetu=cursor.getString(2);
+                                typetu = cursor.getString(2);
                                 String blockude = "Блок реагентов (УДЭ)";
                                 String nasos = "Насос";
                                 String sppk = "СППК";
@@ -291,11 +290,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 //}
             }
         });
+
+        /**
         btnSvodnaya.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 if (Integer.parseInt(position) != 0 && position.length() != 0) {
+                    if(Zakazchik == Shared.nameBND2020){
+                        if()
+                    }
+
+
                     switch (Zakazchik) {
                         //    case "ZayavkaBND2019": Intent IntentSvodnayaBND2019 = new Intent(MainActivity.this, BNDSvodnaya.class);
                         //                       startIntent(IntentSvodnayaBND2019); break;
@@ -304,7 +310,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         //    case "Polus2019": Intent IntentPolus2019 = new Intent(MainActivity.this, Polus.class);
                         //        startIntent(IntentPolus2019); break;
                         case "Bashneft2020":
-                            Intent IntentBashneft2020 = new Intent(MainActivity.this, BNDSvodnaya.class);
+                            Intent IntentBashneft2020 = new Intent(MainActivity.this, NBDSvodnayaTEST.class);
                             startIntent(IntentBashneft2020);
                             break;
                         case "Megion2020":
@@ -323,13 +329,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }else{ displayMessage(getBaseContext(), "Выберите существующую позицию или обновите базу!");}
             }
         });
+         **/
 
         btnKarta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 switch(typetu) {
                     case "Насос":
-                    Intent IntentKartaKontrolyaNasos = new Intent(MainActivity.this, KartaKontolyaNasos.class);
+                        /** ИСПРАВИТЬ!!!!!!!
+                         * ДЛЯ КАРТЫ НАСОСА ОТДЕЛЬНЫЙ КЛАСС!!!
+                         * А ДЛЯ ОБЩЕЙ СВОДНОЙ ОТДЕЛЬНЫЙ !!!!
+                         * ВРЕМЕННО!!!!
+                         */
+                    Intent IntentKartaKontrolyaNasos = new Intent(MainActivity.this, PumpControlCard.class);
                         IntentKartaKontrolyaNasos.putExtra("position", position);
                         IntentKartaKontrolyaNasos.putExtra("Zakazchik", getNameZakaz(Zakazchik));
                     startIntent(IntentKartaKontrolyaNasos);

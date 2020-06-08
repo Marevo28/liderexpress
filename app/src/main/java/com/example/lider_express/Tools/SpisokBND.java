@@ -13,7 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.lider_express.R;
-import com.example.lider_express.Svodnaya.BNDSvodnaya;
+import com.example.lider_express.ControlCard.PumpControlCard;
 
 public class SpisokBND extends AppCompatActivity {
     TextView selection;
@@ -35,17 +35,17 @@ public class SpisokBND extends AppCompatActivity {
         Bundle arguments = getIntent().getExtras();
         PEOPLE = arguments.getString("people");
         switch (PEOPLE){
-            case "experts":
-                spisochek = getResources().getStringArray(R.array.bnd_experts);// создаем адаптер
+            case "EXPERTS_JOURNAL":
+                spisochek = getResources().getStringArray(R.array.bnd_experts_journal);// создаем адаптер
                 break;
-            case "defects":
-                spisochek = getResources().getStringArray(R.array.bnd_defects);// создаем адаптер
+            case "SPEC_JOURNAL":
+                spisochek = getResources().getStringArray(R.array.bnd_spec_journal);// создаем адаптер
                 break;
-            case "irldefects":
-                spisochek = getResources().getStringArray(R.array.bnd_irldefects);// создаем адаптер
+            case "SPEC_NKO":
+                spisochek = getResources().getStringArray(R.array.bnd_spec_nko);// создаем адаптер
                 break;
             case "defectsbeznk":
-                spisochek = getResources().getStringArray(R.array.bnd_irldefects);// создаем адаптер
+              //  spisochek = getResources().getStringArray(R.array.bnd_irldefects);// создаем адаптер
                 break;
 
         }
@@ -71,7 +71,7 @@ public class SpisokBND extends AppCompatActivity {
        butSave.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent IntentSvodnaya = new Intent(SpisokBND.this, BNDSvodnaya.class);//данны дял передачи
+               Intent IntentSvodnaya = new Intent(SpisokBND.this, PumpControlCard.class);//данны дял передачи
                IntentSvodnaya.putExtra("select", select);
                IntentSvodnaya.putExtra("people", PEOPLE);
                setResult(RESULT_OK, IntentSvodnaya);

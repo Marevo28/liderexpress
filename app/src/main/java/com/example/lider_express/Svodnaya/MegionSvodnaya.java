@@ -697,6 +697,7 @@ public class MegionSvodnaya extends AppCompatActivity {
 
 
     // Дата начала останова
+
     DatePickerDialog.OnDateSetListener Picker_DataNachaloOstanova = new DatePickerDialog.OnDateSetListener() {
         public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
             dateAndTime.set(Calendar.YEAR, year);
@@ -706,6 +707,7 @@ public class MegionSvodnaya extends AppCompatActivity {
             strDataNachaloOstanova = TextView_DataNachaloOstanova.getText().toString();
         }
     };
+
     // Дата окончания останова
     DatePickerDialog.OnDateSetListener Picker_DataOkonOstanova = new DatePickerDialog.OnDateSetListener() {
         public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
