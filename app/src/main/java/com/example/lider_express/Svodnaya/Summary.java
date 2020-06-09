@@ -99,6 +99,7 @@ public class Summary {
     private String position;
     private LinkedHashMap<Integer, String> values;
     private LinkedHashMap<Integer, HashMap<Integer, ArrayList<View>>> views;
+    private LinkedHashMap<Integer, Integer> idBundles;
 
     private SQLiteDatabase database;
     private Cursor cursor;
@@ -131,6 +132,7 @@ public class Summary {
 
         views = new LinkedHashMap<>();
         values = new LinkedHashMap<>();
+        idBundles = new LinkedHashMap<>();
     }
 
     /**
@@ -145,7 +147,7 @@ public class Summary {
         list.add(textView);
         hash.put(type, list);
         views.put(idColumn, hash);
-        values.put(idColumn, "-");
+        values.put(idColumn, "");
     }
 
     /**
@@ -159,7 +161,7 @@ public class Summary {
         list.add(editText);
         hash.put(TYPE_EDIT_TEXT, list);
         views.put(idColumn, hash);
-        values.put(idColumn, "-");
+        values.put(idColumn, "");
     }
 
     /**
@@ -180,7 +182,7 @@ public class Summary {
         list.add(radioButton2);
         hash.put(TYPE_RADIO_GROUP, list);
         views.put(idColumn, hash);
-        values.put(idColumn, "-");
+        values.put(idColumn, "");
     }
 
     /**
@@ -204,7 +206,7 @@ public class Summary {
         list.add(radioButton3);
         hash.put(TYPE_RADIO_GROUP, list);
         views.put(idColumn, hash);
-        values.put(idColumn, "-");
+        values.put(idColumn, "");
     }
 
     /**
@@ -231,7 +233,7 @@ public class Summary {
         list.add(radioButton4);
         hash.put(TYPE_RADIO_GROUP, list);
         views.put(idColumn, hash);
-        values.put(idColumn, "-");
+        values.put(idColumn, "");
     }
 
 
@@ -295,13 +297,13 @@ public class Summary {
                             if (TYPE == TYPE_SPEC_JOURNAL) {
                                 variableView = hashViews.get(TYPE).get(0); // Записываем переменные для ActivityResult
                                 Intent IntentSittings = new Intent(context, SpisokBND.class);
-                                IntentSittings.putExtra("people", "TYPE_SPEC_JOURNAL");
+                                IntentSittings.putExtra("people", "SPEC_JOURNAL");
                                 activity.startActivityForResult(IntentSittings, PEOPLE);
                             }
                             if (TYPE == TYPE_EXP_JOURNAL) {
                                 variableView = hashViews.get(TYPE).get(0); // Записываем переменные для ActivityResult
                                 Intent IntentSittings = new Intent(context, SpisokBND.class);
-                                IntentSittings.putExtra("people", "TYPE_EXP_JOURNAL");
+                                IntentSittings.putExtra("people", "EXP_JOURNAL");
                                 activity.startActivityForResult(IntentSittings, PEOPLE);
                             }
                         }
@@ -319,7 +321,9 @@ public class Summary {
                 if (TYPE == TYPE_RADIO_GROUP) {
                     RadioGroup radioGroup = (RadioGroup) hashViews.get(TYPE).get(0);
                     RadioButton checkedButton = (RadioButton) radioGroup.findViewById(radioGroup.getCheckedRadioButtonId());
-                    values.put(columnId, checkedButton.getText().toString());
+                    if (checkedButton != null) {
+                        values.put(columnId, checkedButton.getText().toString());
+                    }
                 } else if (TYPE == TYPE_EDIT_TEXT) {
                     EditText editText = (EditText) hashViews.get(TYPE).get(0);
                     values.put(columnId, editText.getText().toString());
@@ -340,6 +344,10 @@ public class Summary {
         for (int idColumn : values.keySet()) {
             key = column + String.valueOf(idColumn);
             initialValues.put(key, values.get(idColumn));
+        }
+
+        for(String k: initialValues.keySet()){
+            Log.e( k + ": => ", initialValues.get(k).toString());
         }
 
         database.insert(nameWriteDb, null, initialValues);
@@ -415,6 +423,31 @@ public class Summary {
 
     public Cursor getCursor() {
         return cursor;
+    }
+
+
+    public void overrideId(int id1, int id2) {
+        if (views.get(id1) != null) {
+            View view = null;
+            int type = -1;
+            HashMap<Integer, ArrayList<View>> beforeHash = views.get(id1);
+            for (int TYPE : beforeHash.keySet()) {
+                type = TYPE;
+                view = beforeHash.get(TYPE).get(0);
+            }
+            views.remove(id1);
+            values.remove(id1);
+            HashMap<Integer, ArrayList<View>> afterHash = new HashMap<>();
+            ArrayList<View> list = new ArrayList<>();
+            if (view != null) {
+                list.add(view);
+            }
+            if (type != -1) {
+                afterHash.put(type, list);
+            }
+            views.put(id2, afterHash);
+            values.put(id2, "");
+        }
     }
 
 

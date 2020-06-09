@@ -1,4 +1,4 @@
-package com.example.lider_express.ControlCard;
+package com.example.lider_express.ControlCard.BND;
 
 import android.content.Intent;
 
@@ -6,6 +6,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -76,10 +77,11 @@ public class PumpControlCard extends AppCompatActivity {
 
         /** Пример с TextView и Типом Выбора*/
 
-        /**
+        bnd.addTextView(46, bnd.TYPE_DATA, R.id.bnd_2020_pump_from_bnd_2020_id_46_42);
+        bnd.addTextView(47, bnd.TYPE_SPEC_NKO, R.id.bnd_2020_pump_from_bnd_2020_id_47_43);
 
         bnd.addTextView(27, bnd.TYPE_DATA, R.id.bnd_2020_pump_from_bnd_2020_id_27);
-        bnd.addTextView(27, bnd.TYPE_EXP_JOURNAL, R.id.bnd_2020_pump_from_bnd_2020_id_28);
+        bnd.addTextView(28, bnd.TYPE_EXP_JOURNAL, R.id.bnd_2020_pump_from_bnd_2020_id_28);
         bnd.addTextView(29, bnd.TYPE_DATA, R.id.bnd_2020_pump_from_bnd_2020_id_29);
         bnd.addTextView(30, bnd.TYPE_SPEC_JOURNAL, R.id.bnd_2020_pump_from_bnd_2020_id_30);
 
@@ -92,14 +94,14 @@ public class PumpControlCard extends AppCompatActivity {
         bnd.addTextView(37, bnd.TYPE_DATA, R.id.bnd_2020_pump_from_bnd_2020_id_37);
         bnd.addTextView(38, bnd.TYPE_DATA, R.id.bnd_2020_pump_from_bnd_2020_id_38);
 
+
         //  Чекаем данные из базы
         bnd.checkData();
 
         //  Делаем листенеры
         bnd.initListener();
-         */
 
-        /** КАСТОМНЫЙ ЧЕКЕР ПРИМЕР!
+        /** КАСТОМНЫЙ ЧЕКЕР ПРИМЕР! */
         // берем данные из Cursor из Summary из нужной колонки
         String data44 = bnd.getCursor().getString(44);
         // Инициализируемся для элемента, который нужно чекнуть
@@ -134,7 +136,6 @@ public class PumpControlCard extends AppCompatActivity {
             }
         }
 
-         **/
         // Далее определяем лейоты, которые должны скрываться
         final LinearLayout layoutHidden1 = findViewById(R.id.bnd_2020_pump_layout_hidden_1);
         final LinearLayout layoutHidden2 = findViewById(R.id.bnd_2020_pump_layout_hidden_2);
@@ -155,18 +156,16 @@ public class PumpControlCard extends AppCompatActivity {
                     case R.id.bnd_2020_pump_radio_group_hidden_1_button_1:
                         layoutHidden1.setVisibility(View.GONE);
                         layoutHidden3.setVisibility(View.VISIBLE);
-                        bnd.addTextView(46, bnd.TYPE_DATA, R.id.bnd_2020_pump_from_bnd_2020_id_46_42);
-                        bnd.addTextView(47, bnd.TYPE_SPEC_NKO, R.id.bnd_2020_pump_from_bnd_2020_id_47_43);
-                        bnd.removeView(42);
-                        bnd.removeView(43);
+                        bnd.overrideId(42, 46);
+                        bnd.overrideId(43, 47);
+                        Log.e( "RADIO ___ 2", "1");
                         break;
                     case R.id.bnd_2020_pump_radio_group_hidden_1_button_2:
                         layoutHidden1.setVisibility(View.VISIBLE);
                         layoutHidden3.setVisibility(View.GONE);
-                        bnd.addTextView(42, bnd.TYPE_DATA, R.id.bnd_2020_pump_from_bnd_2020_id_46_42);
-                        bnd.addTextView(43, bnd.TYPE_SPEC_NKO, R.id.bnd_2020_pump_from_bnd_2020_id_47_43);
-                        bnd.removeView(46);
-                        bnd.removeView(47);
+                        bnd.overrideId(46, 42);
+                        bnd.overrideId(47, 43);
+                        Log.e( "RADIO ___ 2", "2");
                         break;
                 }
             }
@@ -194,6 +193,7 @@ public class PumpControlCard extends AppCompatActivity {
          * 2) добавляем вьюхи
          * 3) делаем чеки по базе
          * 4) инициализируем листенеры
+         */
 
         pump = new Summary(this, this, Shared.nameBashneft2020_Nasos,
                 Shared.nameDefectBashneft2020_Nasos, mDb, position);
@@ -252,6 +252,8 @@ public class PumpControlCard extends AppCompatActivity {
          * И ОТПРАВИТЬ ИХ
          * ДЕЛАЕМ ЭТО В ЛИСТЕНЕРЕ
          * КНОПКИ SAVE
+         *
+         * */
          
 
         //  Находим нашу заветную кнопочку Save
@@ -273,7 +275,6 @@ public class PumpControlCard extends AppCompatActivity {
                 startActivity(IntentSittings);
             }
         });
-           */
     }
 
     @Override

@@ -70,7 +70,7 @@
             android:label="@string/title_activity_spisok"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ControlCard.PumpControlCard"
+            android:name=".ControlCard.BND.PumpControlCard"
             android:label="Сводная таблица"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Camera" />

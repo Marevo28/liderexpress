@@ -13,7 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.lider_express.R;
-import com.example.lider_express.ControlCard.PumpControlCard;
+import com.example.lider_express.ControlCard.BND.PumpControlCard;
 
 public class SpisokBND extends AppCompatActivity {
     TextView selection;
@@ -35,7 +35,7 @@ public class SpisokBND extends AppCompatActivity {
         Bundle arguments = getIntent().getExtras();
         PEOPLE = arguments.getString("people");
         switch (PEOPLE){
-            case "EXPERTS_JOURNAL":
+            case "EXP_JOURNAL":
                 spisochek = getResources().getStringArray(R.array.bnd_experts_journal);// создаем адаптер
                 break;
             case "SPEC_JOURNAL":
