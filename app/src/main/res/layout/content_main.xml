@@ -1,161 +1,366 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/phon"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
     tools:context=".MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:showIn="@layout/app_bar_main"
+    android:layout_marginTop="?attr/actionBarSize">
 
 
-    <Button
-        android:id="@+id/btnposition"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:background="@drawable/button"
-        android:text="ОК"
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="@+id/textpositon"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp">
 
-    <EditText
-        android:id="@+id/textpositon"
-        android:layout_width="140dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/edit_text_position"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:backgroundTint="@color/colorElements_dark"
+            android:ems="10"
+            android:hint="id"
+            android:inputType="number" />
 
-    <TextView
-        android:id="@+id/textuprav"
-        android:layout_width="wrap_content"
-        android:layout_height="18dp"
-        android:layout_marginTop="16dp"
-        android:text="Управление"
-        app:layout_constraintStart_toStartOf="@+id/texttypetu"
-        app:layout_constraintTop_toBottomOf="@+id/texttypetu" />
+        <Button
+            android:id="@+id/btn_position"
+            style="@style/text_grid_bold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="30"
+            android:background="@drawable/background_container_solid"
+            android:text="Поиск" />
 
-    <TextView
-        android:id="@+id/texttypetu"
-        android:layout_width="wrap_content"
-        android:layout_height="18dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="16dp"
+    </LinearLayout>
 
-        android:text="Тип ту"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textceh"
-        android:layout_width="wrap_content"
-        android:layout_height="18dp"
-        android:layout_marginTop="16dp"
-        android:text="Цех"
-        app:layout_constraintStart_toStartOf="@+id/texttypetu"
-        app:layout_constraintTop_toBottomOf="@+id/textuprav" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="45"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="3dp">
 
-    <TextView
-        android:id="@+id/textobekt"
-        android:layout_width="wrap_content"
-        android:layout_height="18dp"
-        android:layout_marginTop="16dp"
-        android:text="Объект"
-        app:layout_constraintStart_toStartOf="@+id/texttypetu"
-        app:layout_constraintTop_toBottomOf="@+id/textceh" />
+        <!-- ТИП ТУ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/summary_background_container"
+            android:orientation="horizontal"
 
-    <TextView
-        android:id="@+id/textskvazhina"
-        android:layout_width="wrap_content"
-        android:layout_height="18dp"
-        android:layout_marginTop="16dp"
-        android:text="Скважина"
-        app:layout_constraintStart_toStartOf="@+id/texttypetu"
-        app:layout_constraintTop_toBottomOf="@+id/textobekt" />
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
 
-    <TextView
-        android:id="@+id/NameTu"
-        android:layout_width="wrap_content"
-        android:layout_height="18dp"
-        android:layout_marginTop="16dp"
-        android:text="Скважина"
-        app:layout_constraintStart_toStartOf="@+id/texttypetu"
-        app:layout_constraintTop_toBottomOf="@+id/textskvazhina" />
+            <TextView
+                style="@style/text_grid_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Тип ТУ:"
 
-    <Button
-        android:id="@+id/btnKarta"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="234dp"
-        android:background="@drawable/button"
-        android:text="Заполнение карты"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="5dp"/>
 
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/text_view_typetu"
+                style="@style/text_grid_italic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
 
-    <Button
-        android:id="@+id/btnSvodnaya"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/button"
-        android:text="Заполнение сводной"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="5dp"/>
 
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="@+id/btnKarta"
-        app:layout_constraintTop_toBottomOf="@+id/btnKarta" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/btnPhotoTu"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/button"
-        android:text="Фото объекта"
+        <!-- Имя устройства -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/summary_background_container"
+            android:orientation="horizontal"
 
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="@+id/btnKarta"
-        app:layout_constraintTop_toBottomOf="@+id/btnSvodnaya" />
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
 
-    <Button
-        android:id="@+id/btnPhotoDoc"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/button"
-        android:text="Фото документов"
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="@+id/btnKarta"
-        app:layout_constraintTop_toBottomOf="@+id/btnPhotoTu" />
+            <TextView
+                style="@style/text_grid_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Имя устройства:"
 
-    <Button
-        android:id="@+id/btnPhotoKontrol"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/button"
-        android:text="Фото контроля"
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="@+id/btnKarta"
-        app:layout_constraintTop_toBottomOf="@+id/btnPhotoDoc" />
+                android:gravity="center_vertical|left"
+                android:paddingLeft="5dp"/>
 
-    <Button
-        android:id="@+id/btnNavigation"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="84dp"
-        android:background="@drawable/button"
-        android:text="Построить маршрут"
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="@+id/btnKarta"
-        app:layout_constraintTop_toBottomOf="@+id/btnPhotoDoc" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/text_view_nametu"
+                style="@style/text_grid_italic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:gravity="center_vertical|left"
+                android:paddingLeft="5dp"/>
+
+        </LinearLayout>
+
+        <!-- Управление -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/summary_background_container"
+            android:orientation="horizontal"
+
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
+
+            <TextView
+                style="@style/text_grid_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Управление:"
+
+                android:gravity="center_vertical|left"
+                android:paddingLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/text_view_uprav"
+                style="@style/text_grid_italic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:gravity="center_vertical|left"
+                android:paddingLeft="5dp"/>
+
+        </LinearLayout>
+
+        <!-- Цех -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/summary_background_container"
+            android:orientation="horizontal"
+
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
+
+            <TextView
+                style="@style/text_grid_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Цех:"
+
+                android:gravity="center_vertical|left"
+                android:paddingLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/text_view_ceh"
+                style="@style/text_grid_italic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:gravity="center_vertical|left"
+                android:paddingLeft="5dp"/>
+
+        </LinearLayout>
+
+        <!-- Объект -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/summary_background_container"
+            android:orientation="horizontal"
+
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
+
+            <TextView
+                style="@style/text_grid_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Обьект: "
+
+                android:gravity="center_vertical|left"
+                android:paddingLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/text_view_object"
+                style="@style/text_grid_italic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:gravity="center_vertical|left"
+                android:paddingLeft="5dp"/>
+        </LinearLayout>
+
+        <!-- Скважина -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/summary_background_container"
+            android:orientation="horizontal"
+
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
+
+            <TextView
+                style="@style/text_grid_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Скважина:"
+
+                android:gravity="center_vertical|left"
+                android:paddingLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/text_view_skvajina"
+                style="@style/text_grid_italic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:gravity="center_vertical|left"
+                android:paddingLeft="5dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="45"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:orientation="vertical"
+
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:orientation="vertical"
+
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
+
+
+        <Button
+            android:id="@+id/button_card_control"
+            style="@style/text_grid_bold"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:background="@drawable/background_container_solid"
+            android:text="Карта контроля"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:id="@+id/button_photo_object"
+            style="@style/text_grid_bold"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:background="@drawable/background_container_solid"
+            android:text="Фото объекта"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <Button
+            android:id="@+id/button_photo_doc"
+            style="@style/text_grid_bold"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:background="@drawable/background_container_solid"
+            android:text="Фото документов"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:id="@+id/button_photo_control"
+            style="@style/text_grid_bold"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:background="@drawable/background_container_solid"
+            android:text="Фото контроля"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:id="@+id/button_photo_route"
+            style="@style/text_grid_bold"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:background="@drawable/background_container_solid"
+            android:text="Построить маршрут"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:orientation="vertical"
+
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -36,20 +36,49 @@
 
 
     <style name="h1">
-        <item name="android:textColor">@color/colorBlack900</item>
+        <item name="android:textColor">@color/dark_900</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="h1_element">
+        <item name="android:textColor">@color/colorElementsMenu</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="fragment_title">
+        <item name="android:textColor">@color/dark_900</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
     <style name="h2">
-        <item name="android:textColor">@color/colorBlack900</item>
+        <item name="android:textColor">@color/dark_900</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="text_grid_bold">
+        <item name="android:textColor">@color/dark_900</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="text_grid_italic">
+        <item name="android:textColor">@color/dark_900</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="p">
-        <item name="android:textColor">@color/colorBlack900</item>
+        <item name="android:textColor">@color/dark_900</item>
         <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TableDialogStyle" parent="Base.Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">95%</item>
+        <item name="android:windowMinWidthMinor">95%</item>
+        <item name="windowFixedHeightMajor">95%</item>
+        <item name="windowFixedHeightMinor">95%</item>
     </style>
 
 </resources>

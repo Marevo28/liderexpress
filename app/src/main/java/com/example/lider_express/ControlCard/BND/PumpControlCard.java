@@ -1,15 +1,21 @@
 package com.example.lider_express.ControlCard.BND;
 
+import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
 
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import android.widget.RadioButton;
@@ -17,6 +23,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.lider_express.DataBase.DatabaseHelper;
@@ -25,12 +32,14 @@ import com.example.lider_express.R;
 import com.example.lider_express.Shared;
 import com.example.lider_express.Svodnaya.Summary;
 
+import java.util.ArrayList;
+
 /**
  * @author LeStat
  * ДОКУМЕНТАЦИЮ
  * ПО ИСПОЛЬЗОВАНИЮ ХЕЛПЕРА SUMMARY
  * И РЕКОМАНДАЦИЮ ПО ИМЕНОВАНИЮ
- * ВЬШЕК ОПИСАНО В КЛАССЕ SUMMARY
+ * ВЬЮШЕК ОПИСАНО В КЛАССЕ SUMMARY
  */
 
 public class PumpControlCard extends AppCompatActivity {
@@ -44,8 +53,12 @@ public class PumpControlCard extends AppCompatActivity {
      */
     private Summary bnd;
     private Summary pump;
+    private TextView quantification;
+    private ImageButton imageButton;
+    private Dialog tableDialog;
 
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,6 +106,14 @@ public class PumpControlCard extends AppCompatActivity {
 
         bnd.addTextView(37, bnd.TYPE_DATA, R.id.bnd_2020_pump_from_bnd_2020_id_37);
         bnd.addTextView(38, bnd.TYPE_DATA, R.id.bnd_2020_pump_from_bnd_2020_id_38);
+
+        bnd.addRadioGroup(51, R.id.bnd_2020_pump_from_bnd_2020_id_51,
+                R.id.bnd_2020_pump_from_bnd_2020_id_51_1, R.id.bnd_2020_pump_from_bnd_2020_id_51_2);
+
+        bnd.addTextView(15, bnd.TYPE_EDIT_TEXT, R.id.bnd_2020_pump_id_15);
+        bnd.addTextView(7, bnd.TYPE_EDIT_TEXT, R.id.bnd_2020_pump_id_7);
+        bnd.addTextView(10, bnd.TYPE_EDIT_TEXT, R.id.bnd_2020_pump_id_10);
+        bnd.addTextView(12, bnd.TYPE_EDIT_TEXT, R.id.bnd_2020_pump_id_12);
 
 
         //  Чекаем данные из базы
@@ -146,9 +167,7 @@ public class PumpControlCard extends AppCompatActivity {
         // АКТИВНЫМ БУДЕТ ТОТ ЛИСТЕНЕР, КОТОРЫЙ
         // ИНИЦИАЛИЗИРОВАН ПОСЛЕДНИМ!!!
         // Поэтому можно лекго переопредялть
-        // листены по свеому желанию
-        // Класс Summary позволяет делать все
-        // необходимые действия
+        // листенеры по свеому желанию
         radioGroupHidden1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -158,14 +177,14 @@ public class PumpControlCard extends AppCompatActivity {
                         layoutHidden3.setVisibility(View.VISIBLE);
                         bnd.overrideId(42, 46);
                         bnd.overrideId(43, 47);
-                        Log.e( "RADIO ___ 2", "1");
+                        Log.e("RADIO ___ 2", "1");
                         break;
                     case R.id.bnd_2020_pump_radio_group_hidden_1_button_2:
                         layoutHidden1.setVisibility(View.VISIBLE);
                         layoutHidden3.setVisibility(View.GONE);
                         bnd.overrideId(46, 42);
                         bnd.overrideId(47, 43);
-                        Log.e( "RADIO ___ 2", "2");
+                        Log.e("RADIO ___ 2", "2");
                         break;
                 }
             }
@@ -177,15 +196,14 @@ public class PumpControlCard extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId) {
                     case R.id.bnd_2020_pump_radio_group_hidden_2_button_1:
-                        layoutHidden2.setVisibility(View.GONE);
+                        layoutHidden2.setVisibility(View.VISIBLE);
                         break;
                     case R.id.bnd_2020_pump_radio_group_hidden_2_button_2:
-                        layoutHidden2.setVisibility(View.VISIBLE);
+                        layoutHidden2.setVisibility(View.GONE);
                         break;
                 }
             }
         });
-
 
         /**
          * ПОДГОТАВЛИВАЕМ ДАННЫЕ ДЛЯ КАРТЫ КОНТРОЛЯ PUMP
@@ -197,11 +215,6 @@ public class PumpControlCard extends AppCompatActivity {
 
         pump = new Summary(this, this, Shared.nameBashneft2020_Nasos,
                 Shared.nameDefectBashneft2020_Nasos, mDb, position);
-
-        pump.addTextView(15, bnd.TYPE_DATA, R.id.bnd_2020_pump_id_15);
-        pump.addTextView(7, bnd.TYPE_EXP_JOURNAL, R.id.bnd_2020_pump_id_7);
-        pump.addTextView(10, bnd.TYPE_DATA, R.id.bnd_2020_pump_id_10);
-        pump.addTextView(12, bnd.TYPE_SPEC_JOURNAL, R.id.bnd_2020_pump_id_12);
 
         pump.addRadioGroup(43, R.id.bnd_2020_pump_id_43,
                 R.id.bnd_2020_pump_id_43_1, R.id.bnd_2020_pump_id_43_2);
@@ -217,33 +230,43 @@ public class PumpControlCard extends AppCompatActivity {
                 R.id.bnd_2020_pump_id_48_1, R.id.bnd_2020_pump_id_48_2);
         pump.addRadioGroup(49, R.id.bnd_2020_pump_id_48,
                 R.id.bnd_2020_pump_id_49_1, R.id.bnd_2020_pump_id_49_2);
+        pump.addRadioGroup(57, R.id.bnd_2020_pump_id_57,
+                R.id.bnd_2020_pump_id_57_1, R.id.bnd_2020_pump_id_57_2);
+        pump.addRadioGroup(58, R.id.bnd_2020_pump_id_58,
+                R.id.bnd_2020_pump_id_58_1, R.id.bnd_2020_pump_id_58_2);
 
         pump.addEditText(39, R.id.bnd_2020_pump_id_39);
         pump.addEditText(40, R.id.bnd_2020_pump_id_40);
         pump.addEditText(41, R.id.bnd_2020_pump_id_41);
         pump.addEditText(42, R.id.bnd_2020_pump_id_42);
 
-        pump.addEditText(57, R.id.bnd_2020_pump_id_57);
-        pump.addEditText(58, R.id.bnd_2020_pump_id_58);
-        pump.addEditText(59, R.id.bnd_2020_pump_id_59);
-        pump.addEditText(60, R.id.bnd_2020_pump_id_60);
-        pump.addEditText(61, R.id.bnd_2020_pump_id_61);
-        pump.addEditText(62, R.id.bnd_2020_pump_id_62);
-        pump.addEditText(63, R.id.bnd_2020_pump_id_63);
-        pump.addEditText(64, R.id.bnd_2020_pump_id_64);
-        pump.addEditText(65, R.id.bnd_2020_pump_id_65);
-        pump.addEditText(66, R.id.bnd_2020_pump_id_66);
-        pump.addEditText(67, R.id.bnd_2020_pump_id_67);
-        pump.addEditText(68, R.id.bnd_2020_pump_id_68);
+        pump.addEditText(71, R.id.bnd_2020_pump_id_71);
+        pump.addEditText(72, R.id.bnd_2020_pump_id_72);
+        pump.addEditText(73, R.id.bnd_2020_pump_id_73);
+        pump.addEditText(74, R.id.bnd_2020_pump_id_74);
+        pump.addEditText(75, R.id.bnd_2020_pump_id_75);
+        pump.addEditText(76, R.id.bnd_2020_pump_id_76);
+        pump.addEditText(77, R.id.bnd_2020_pump_id_77);
+        pump.addEditText(78, R.id.bnd_2020_pump_id_78);
+        pump.addEditText(79, R.id.bnd_2020_pump_id_79);
+        pump.addEditText(80, R.id.bnd_2020_pump_id_80);
+        pump.addEditText(81, R.id.bnd_2020_pump_id_81);
+        pump.addEditText(82, R.id.bnd_2020_pump_id_82);
 
-        // pump.addEditText(69, R.id.bnd_2020_pump_id_69);
+        // TextView колличественная оценка
+        quantification = findViewById(R.id.bnd_2020_pump_id_69);
+        // Групповой Листенер для замеров и оценки тех сост. агрегата
+        int[] idColumns = new int[]{71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82};
+        pump.setGroupTextChangedListener(idColumns, listenerVibration(pump));
 
-        //  Чекаем данные из базы
+        // Чекаем данные из базы
         pump.checkData();
 
         //  Делаем листенеры
         pump.initListener();
 
+        // Устанавливаем колличественную оценку
+        setQuantification(pump);
 
         /**
          * КОГДА СДЕЛАЛИ ЧЕКЕРЫ И ИНИЦИАЛИЗАЦИЮ
@@ -254,7 +277,17 @@ public class PumpControlCard extends AppCompatActivity {
          * КНОПКИ SAVE
          *
          * */
-         
+
+        // Информационная табличка
+        tableDialog = new Dialog(PumpControlCard.this, R.style.TableDialogStyle);
+        tableDialog.setContentView(R.layout.table_dialog);
+        imageButton = findViewById(R.id.bnd_2020_pump_info_table);
+        imageButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                tableDialog.show();
+            }
+        });
 
         //  Находим нашу заветную кнопочку Save
         Button save = findViewById(R.id.bnd_2020_pump_save);
@@ -289,5 +322,59 @@ public class PumpControlCard extends AppCompatActivity {
         }
     }
 
+    //  Кастомный листенер для EditText
+    //  Кол. оченка агрегата
+    TextWatcher listenerVibration(final Summary summary) {
+        TextWatcher listener = new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                setQuantification(summary);
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+        };
+
+        return listener;
+    }
+
+    // Установить колличественную оценку
+    private void setQuantification(Summary summary){
+        ArrayList<EditText> listEditTexts = new ArrayList<>();
+        int count = 71;
+        while (count < 83) {
+            if (summary.getView(count).getClass() == AppCompatEditText.class) {
+                listEditTexts.add((EditText) summary.getView(count));
+            }
+            count++;
+        }
+        float maxVibration = 0;
+        for (EditText editText : listEditTexts) {
+            String strVibration = editText.getText().toString();
+            if (strVibration != null && strVibration.length() != 0) {
+                float vibration = Float.parseFloat(strVibration);
+                if (vibration > maxVibration) {
+                    maxVibration = vibration;
+                }
+            }
+        }
+        if (maxVibration < 4.5) {
+            quantification.setText("Хорошо");
+        }
+        if (maxVibration >= 4.5 && maxVibration < 7.0) {
+            quantification.setText("Удовлетворительно");
+        }
+        if (maxVibration >= 7.0 && maxVibration <= 11.2) {
+            quantification.setText("Еще допустимо");
+        }
+        if (maxVibration > 11.2) {
+            quantification.setText("Недопустимо");
+        }
+    }
 
 }

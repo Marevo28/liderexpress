@@ -7,8 +7,12 @@
     <color name="icons_background">#20000000</color> <!-- when used as background color for imagebutton, the rgb color seems to be ignored for Android 6 onwards, but still relevant for older versions -->
     <color name="icons_background_tint">#ff000000</color>
 
-    <color name="colorBashneftBorder">#C5CAE9</color>
-    <color name="colorBashneftBorder500">#F8FDFC</color>
-    <color name="colorBlack900">#111111</color>
-    <color name="colorBlack100">#CCCCCC</color>
+    <color name="backgroundColor">#FAFAFA</color>
+    <color name="colorElementsMenu">#FAFAFA</color>
+    <color name="colorElements_light_50">#F9FBF7</color>
+    <color name="colorElements_light">#C5CAE9</color>
+    <color name="colorElements_dark">#3F51B5</color>
+    <color name="dark_900">#111111</color>
+    <color name="dark_100">#CCCCCC</color>
+
 </resources>

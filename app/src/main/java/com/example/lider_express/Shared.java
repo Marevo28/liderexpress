@@ -89,6 +89,6 @@ public class Shared {
     // Адрес для скачивания базы данных
     public static String URL = "http://officele.ru/files/leaderexpert.db";
 
-    public static String URLAllForm = "http://peremoga.tech/Android/DefectBND2020_AllForm.php";
+    public static String URLAllForm = "http://officele.ru/Android/DefectBND2020_AllForm.php";
 
 }

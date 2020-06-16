@@ -65,7 +65,7 @@ public class Synchronization extends AppCompatActivity {
         btnSendData = view.findViewById(R.id.ButtonSendData);
         btnDeleteRecord = view.findViewById(R.id.Button_DeleteRecord);
         editTextDeleteRecord = view.findViewById(R.id.EditText_DeleteRecord);
-        textPostion = view.findViewById(R.id.textpositon);
+        textPostion = view.findViewById(R.id.edit_text_position);
         TextKolvoZap = view.findViewById(R.id.TextKolvoZap);
         spinnerDefect = view.findViewById(R.id.spinnerDefect);
 
@@ -160,8 +160,10 @@ public class Synchronization extends AppCompatActivity {
             while (move){
                 LinkedHashMap<String, String> row = new LinkedHashMap<>();
                 for(int i = 0; i < column; i ++){
-                    row.put(cursor.getColumnName(i), cursor.getString(i));
-                    System.out.println("-- Header --" + cursor.getColumnName(i) + " -- Cell --" + cursor.getString(i));
+                    if(i > 0) {
+                        row.put(cursor.getColumnName(i), cursor.getString(i));
+                        System.out.println("-- Header --" + cursor.getColumnName(i) + " -- Cell --" + cursor.getString(i));
+                    }
                 }
                 rows.add(row);
                 // Переключили курсор на следующую позицию

@@ -7,8 +7,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.text.Layout;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -88,6 +94,7 @@ public class Summary {
 
     public static final int TYPE_EDIT_TEXT = 5;
     public static final int TYPE_RADIO_GROUP = 6;
+    public static final int TYPE_TEXT_VIEW = 7;
 
     static final private int PEOPLE = 0;
 
@@ -127,8 +134,6 @@ public class Summary {
         cursor = database.query(nameReadDb, null, "POSITION = ?",
                 new String[]{position}, null, null, null);
         cursor.moveToFirst();
-        int c = cursor.getCount();
-
 
         views = new LinkedHashMap<>();
         values = new LinkedHashMap<>();
@@ -346,8 +351,8 @@ public class Summary {
             initialValues.put(key, values.get(idColumn));
         }
 
-        for(String k: initialValues.keySet()){
-            Log.e( k + ": => ", initialValues.get(k).toString());
+        for (String k : initialValues.keySet()) {
+            Log.e(k + ": => ", initialValues.get(k).toString());
         }
 
         database.insert(nameWriteDb, null, initialValues);
@@ -425,7 +430,10 @@ public class Summary {
         return cursor;
     }
 
-
+    /**
+     * @param id1
+     * @param id2
+     */
     public void overrideId(int id1, int id2) {
         if (views.get(id1) != null) {
             View view = null;
@@ -447,6 +455,26 @@ public class Summary {
             }
             views.put(id2, afterHash);
             values.put(id2, "");
+        }
+    }
+
+    /**
+     * @param idColumns - массив с id View в Hash views
+     * @param listener  - Listener для каждой View
+     *                  устанавливается одинаково
+     *                  для все View
+     */
+    public void setGroupTextChangedListener(int[] idColumns, TextWatcher listener) {
+        for (int i = 0; i < idColumns.length; i++) {
+            int id = idColumns[i];
+            View view = null;
+            if (views.get(id) != null) {
+                HashMap<Integer, ArrayList<View>> hashViews = views.get(id);
+                for (Integer TYPE : hashViews.keySet()) {
+                    view = hashViews.get(TYPE).get(0);
+                }
+                ((EditText) view).addTextChangedListener(listener);
+            }
         }
     }
 

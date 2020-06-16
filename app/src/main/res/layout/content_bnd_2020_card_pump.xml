@@ -9,6 +9,7 @@
     tools:showIn="@layout/activity_bnd_summary">
 
     <LinearLayout
+        android:id="@+id/bnd_2020_pump_control_card_linear_layout"
         android:layout_width="match_parent"
         android:layout_height="2000dp"
         android:orientation="vertical">
@@ -25,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@drawable/bashneft_background_linearlayout"
+            android:background="@drawable/summary_background_container"
             android:orientation="horizontal"
             android:padding="5dp">
 
@@ -50,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@drawable/bashneft_background_linearlayout"
+            android:background="@drawable/summary_background_container"
             android:orientation="horizontal"
             android:padding="5dp">
 
@@ -79,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@drawable/bashneft_background_linearlayout"
+            android:background="@drawable/summary_background_container"
             android:orientation="vertical"
             android:padding="5dp">
 
@@ -146,7 +147,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@drawable/bashneft_background_linearlayout"
+            android:background="@drawable/summary_background_container"
             android:orientation="vertical"
             android:padding="5dp">
 
@@ -207,26 +208,160 @@
                     android:gravity="center_vertical|left"
                     android:text="Выбрать..." />
             </LinearLayout>
-
         </LinearLayout>
 
-        <!--   ***********  SEPARATOR    ***********
+        <!-- Акт Непредоставления документов составлен? -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bashneft_background_linearlayout_separator"
-            android:dividerPadding="1dp"
-            android:showDividers="middle"
-            android:orientation="vertical"
-            android:layout_margin="5dp"/>
-            -->
+            android:layout_margin="5dp"
+            android:background="@drawable/summary_background_container"
+            android:orientation="vertical">
+
+            <!-- H2 -->
+            <TextView
+                style="@style/h2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Акт непредоставления документов составлен?" />
+
+            <RadioGroup
+                android:id="@+id/bnd_2020_pump_from_bnd_2020_id_45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/bnd_2020_pump_from_bnd_2020_id_45_1"
+                    style="@style/p"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Да" />
+
+                <RadioButton
+                    android:id="@+id/bnd_2020_pump_from_bnd_2020_id_45_2"
+                    style="@style/p"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Нет" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Оборудование было в останове? -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/summary_background_container"
+            android:orientation="vertical">
+
+            <!-- H2 -->
+            <TextView
+                style="@style/h2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Оборудование было в останове?" />
+
+            <RadioGroup
+                android:id="@+id/bnd_2020_pump_radio_group_hidden_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/bnd_2020_pump_radio_group_hidden_2_button_1"
+                    style="@style/p"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Да" />
+
+                <RadioButton
+                    android:id="@+id/bnd_2020_pump_radio_group_hidden_2_button_2"
+                    style="@style/p"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Нет" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- HIDDEN-2 -->
+        <LinearLayout
+            android:id="@+id/bnd_2020_pump_layout_hidden_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Дата начала останова -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="horizontal"
+                android:padding="5dp">
+                <!-- H2 -->
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Дата начала останова " />
+
+                <TextView
+                    android:id="@+id/bnd_2020_pump_from_bnd_2020_id_37"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Выбрать" />
+            </LinearLayout>
+
+            <!-- Дата окончания останова -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="horizontal"
+                android:padding="5dp">
+                <!-- H2 -->
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Дата окончания останова" />
+
+                <TextView
+                    android:id="@+id/bnd_2020_pump_from_bnd_2020_id_38"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Выбрать" />
+            </LinearLayout>
+        </LinearLayout>
+
+
 
         <!-- Обследование проводилось? -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@drawable/bashneft_background_linearlayout"
+            android:background="@drawable/summary_background_container"
             android:orientation="vertical"
             android:padding="5dp">
 
@@ -273,15 +408,12 @@
             android:orientation="vertical">
 
             <!-- какой выезд? -->
-            <!-- НЕТ В ТАБЛИЦЕ -->
-            <!-- НЕ АКТИВНО -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
-                android:orientation="vertical"
-                android:visibility="gone">
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
 
                 <!-- H2 -->
                 <TextView
@@ -289,14 +421,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="какой выезд?" />
+                    android:text="Какой выезд?" />
 
                 <RadioGroup
+                    android:id="@+id/bnd_2020_pump_from_bnd_2020_id_51"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/bnd_2020_pump_from_bnd_2020_id_51_1"
                         style="@style/p"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -305,6 +439,7 @@
                         android:text="Первичный" />
 
                     <RadioButton
+                        android:id="@+id/bnd_2020_pump_from_bnd_2020_id_51_2"
                         style="@style/p"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -313,15 +448,13 @@
                         android:text="Повторный" />
                 </RadioGroup>
             </LinearLayout>
-            <!-- НЕ АКТИВНО -->
-
 
             <!-- Акт неготовности оборудования составлен? -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="vertical">
 
                 <TextView
@@ -357,55 +490,14 @@
                 </RadioGroup>
             </LinearLayout>
 
-            <!-- Акт неготовности документов составлен? -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
-                android:orientation="vertical">
 
-                <!-- H2 -->
-                <TextView
-                    style="@style/h2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Акт неготовности документов составлен?" />
-
-                <RadioGroup
-                    android:id="@+id/bnd_2020_pump_from_bnd_2020_id_45"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/bnd_2020_pump_from_bnd_2020_id_45_1"
-                        style="@style/p"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:gravity="center_vertical|left"
-                        android:text="Да" />
-
-                    <RadioButton
-                        android:id="@+id/bnd_2020_pump_from_bnd_2020_id_45_2"
-                        style="@style/p"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:gravity="center_vertical|left"
-                        android:text="Нет" />
-                </RadioGroup>
-
-            </LinearLayout>
 
             <!-- Причина по которой не проводилось обследование? -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="vertical">
 
                 <!-- H2 -->
@@ -423,110 +515,6 @@
                     android:hint="Причина"
                     android:textSize="14sp" />
             </LinearLayout>
-
-
-            <!-- Оборудование было в останове? -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
-                android:orientation="vertical">
-
-                <!-- H2 -->
-                <TextView
-                    style="@style/h2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Оборудование было в останове?" />
-
-                <RadioGroup
-                    android:id="@+id/bnd_2020_pump_radio_group_hidden_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/bnd_2020_pump_radio_group_hidden_2_button_1"
-                        style="@style/p"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:gravity="center_vertical|left"
-                        android:text="Да" />
-
-                    <RadioButton
-                        android:id="@+id/bnd_2020_pump_radio_group_hidden_2_button_2"
-                        style="@style/p"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:gravity="center_vertical|left"
-                        android:text="Нет" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <!-- HIDDEN-2  внутри HIDDEN 1-->
-            <LinearLayout
-                android:id="@+id/bnd_2020_pump_layout_hidden_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <!-- Дата начала останова -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/bashneft_background_linearlayout"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-                    <!-- H2 -->
-                    <TextView
-                        style="@style/h2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:gravity="center_vertical|left"
-                        android:text="Дата начала останова " />
-
-                    <TextView
-                        android:id="@+id/bnd_2020_pump_from_bnd_2020_id_37"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:gravity="center_vertical|left"
-                        android:text="Выбрать" />
-                </LinearLayout>
-
-                <!-- Дата окончания останова -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/bashneft_background_linearlayout"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-                    <!-- H2 -->
-                    <TextView
-                        style="@style/h2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:gravity="center_vertical|left"
-                        android:text="Дата окончания останова" />
-
-                    <TextView
-                        android:id="@+id/bnd_2020_pump_from_bnd_2020_id_38"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:gravity="center_vertical|left"
-                        android:text="Выбрать" />
-                </LinearLayout>
-
-            </LinearLayout>
             <!-- END HIDDEN-1 -->
         </LinearLayout>
 
@@ -543,12 +531,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Обьем/Куст -->
+            <!-- Обьект/Куст -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="vertical">
 
                 <!-- H2 -->
@@ -557,13 +545,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Обьем/Куст" />
+                    android:text="Обьект/Куст" />
 
                 <EditText
                     android:id="@+id/bnd_2020_pump_id_15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Обьем/Куст"
+                    android:hint="Обьект/Куст"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -572,7 +560,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="vertical">
 
                 <!-- H2 -->
@@ -596,7 +584,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="vertical">
 
                 <!-- H2 -->
@@ -620,7 +608,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="vertical">
 
                 <!-- H2 -->
@@ -635,7 +623,7 @@
                     android:id="@+id/bnd_2020_pump_id_12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Обьем/Куст"
+                    android:hint="Технологический №"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -656,7 +644,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="vertical">
 
                 <!-- H2 -->
@@ -698,7 +686,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="vertical">
 
                 <!-- H2 -->
@@ -740,7 +728,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="vertical">
 
                 <!-- H2 -->
@@ -782,7 +770,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="vertical">
 
                 <!-- H2 -->
@@ -825,7 +813,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="vertical">
 
                 <!-- H2 -->
@@ -873,7 +861,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="vertical">
 
                 <!-- H2 -->
@@ -915,7 +903,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="vertical">
 
                 <!-- H2 -->
@@ -953,14 +941,12 @@
             </LinearLayout>
 
             <!-- На напорном трубопроводе установлен обратный клапан  -->
-            <!-- ПОКА НЕ АКТИВНО ! -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
-                android:orientation="vertical"
-                android:visibility="gone">
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
 
                 <!-- H2 -->
                 <TextView
@@ -968,14 +954,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="На напорном трубопроводе установлен обратный клапан " />
+                    android:text="На напорном трубопроводе установлен обратный клапан?" />
 
                 <RadioGroup
+                    android:id="@+id/bnd_2020_pump_id_57"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/bnd_2020_pump_id_57_1"
                         style="@style/p"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -984,6 +972,7 @@
                         android:text="Да" />
 
                     <RadioButton
+                        android:id="@+id/bnd_2020_pump_id_57_2"
                         style="@style/p"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -994,14 +983,12 @@
             </LinearLayout>
 
             <!-- На двигателе указано направление вращения ротора -->
-            <!-- ПОКА НЕ АКТИВНО ! -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
-                android:orientation="vertical"
-                android:visibility="gone">
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
 
                 <!-- H2 -->
                 <TextView
@@ -1012,11 +999,13 @@
                     android:text="На двигателе указано направление вращения ротора?" />
 
                 <RadioGroup
+                    android:id="@+id/bnd_2020_pump_id_58"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/bnd_2020_pump_id_58_1"
                         style="@style/p"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -1025,6 +1014,7 @@
                         android:text="Да" />
 
                     <RadioButton
+                        android:id="@+id/bnd_2020_pump_id_58_2"
                         style="@style/p"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -1060,7 +1050,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="horizontal"
                 android:padding="5dp">
 
@@ -1078,7 +1068,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:hint="...мм" />
+                    android:hint="...мм"
+                    android:inputType="numberDecimal"/>
             </LinearLayout>
 
             <!-- Толщина, мм -->
@@ -1086,7 +1077,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="horizontal"
                 android:padding="5dp">
 
@@ -1104,7 +1095,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:hint="...мм" />
+                    android:hint="...мм"
+                    android:inputType="numberDecimal"/>
             </LinearLayout>
 
 
@@ -1121,7 +1113,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="horizontal"
                 android:padding="5dp">
 
@@ -1139,7 +1131,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:hint="...мм" />
+                    android:hint="...мм"
+                    android:inputType="numberDecimal"/>
             </LinearLayout>
 
             <!-- Толщина, мм -->
@@ -1147,7 +1140,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
+                android:background="@drawable/summary_background_container"
                 android:orientation="horizontal"
                 android:padding="5dp">
 
@@ -1165,7 +1158,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:hint="...мм" />
+                    android:hint="...мм"
+                    android:inputType="numberDecimal"/>
             </LinearLayout>
 
 
@@ -1183,13 +1177,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@drawable/bashneft_background_button"
+                android:background="@drawable/summary_background_container"
                 android:layout_margin="5dp"
                 android:padding="5dp">
                 <ImageView
+                    android:id="@+id/bnd_2020_pump_image"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/nasos" />
+                    android:src="@drawable/nasos"
+                    android:adjustViewBounds="true"/>
             </LinearLayout>
 
 
@@ -1212,7 +1208,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:layout_weight="50"
-                        android:background="@drawable/bashneft_background_linearlayout"
+                        android:background="@drawable/summary_background_container"
                         android:orientation="vertical"
                         android:padding="5dp">
 
@@ -1239,12 +1235,13 @@
                                 android:text="X" />
 
                             <EditText
-                                android:id="@+id/bnd_2020_pump_id_57"
+                                android:id="@+id/bnd_2020_pump_id_71"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
-                                android:hint="...мм" />
+                                android:hint="...мм"
+                                android:inputType="numberDecimal"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -1262,12 +1259,13 @@
                                 android:text="Y" />
 
                             <EditText
-                                android:id="@+id/bnd_2020_pump_id_58"
+                                android:id="@+id/bnd_2020_pump_id_72"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
-                                android:hint="...мм" />
+                                android:hint="...мм"
+                                android:inputType="numberDecimal"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -1285,12 +1283,13 @@
                                 android:text="Z" />
 
                             <EditText
-                                android:id="@+id/bnd_2020_pump_id_59"
+                                android:id="@+id/bnd_2020_pump_id_73"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
-                                android:hint="...мм" />
+                                android:hint="...мм"
+                                android:inputType="numberDecimal"/>
                         </LinearLayout>
 
                     </LinearLayout> <!-- column dim -->
@@ -1301,7 +1300,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:layout_weight="50"
-                        android:background="@drawable/bashneft_background_linearlayout"
+                        android:background="@drawable/summary_background_container"
                         android:orientation="vertical"
                         android:padding="5dp">
 
@@ -1328,12 +1327,13 @@
                                 android:text="X" />
 
                             <EditText
-                                android:id="@+id/bnd_2020_pump_id_60"
+                                android:id="@+id/bnd_2020_pump_id_74"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
-                                android:hint="...мм" />
+                                android:hint="...мм"
+                                android:inputType="numberDecimal"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -1351,12 +1351,13 @@
                                 android:text="Y" />
 
                             <EditText
-                                android:id="@+id/bnd_2020_pump_id_61"
+                                android:id="@+id/bnd_2020_pump_id_75"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
-                                android:hint="...мм" />
+                                android:hint="...мм"
+                                android:inputType="numberDecimal"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -1374,12 +1375,13 @@
                                 android:text="Z" />
 
                             <EditText
-                                android:id="@+id/bnd_2020_pump_id_62"
+                                android:id="@+id/bnd_2020_pump_id_76"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
-                                android:hint="...мм" />
+                                android:hint="...мм"
+                                android:inputType="numberDecimal"/>
                         </LinearLayout>
 
                     </LinearLayout> <!-- column dim -->
@@ -1400,7 +1402,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:layout_weight="50"
-                        android:background="@drawable/bashneft_background_linearlayout"
+                        android:background="@drawable/summary_background_container"
                         android:orientation="vertical"
                         android:padding="5dp">
 
@@ -1427,12 +1429,13 @@
                                 android:text="X" />
 
                             <EditText
-                                android:id="@+id/bnd_2020_pump_id_63"
+                                android:id="@+id/bnd_2020_pump_id_77"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
-                                android:hint="...мм" />
+                                android:hint="...мм"
+                                android:inputType="numberDecimal"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -1450,12 +1453,13 @@
                                 android:text="Y" />
 
                             <EditText
-                                android:id="@+id/bnd_2020_pump_id_64"
+                                android:id="@+id/bnd_2020_pump_id_78"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
-                                android:hint="...мм" />
+                                android:hint="...мм"
+                                android:inputType="numberDecimal"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -1473,12 +1477,13 @@
                                 android:text="Z" />
 
                             <EditText
-                                android:id="@+id/bnd_2020_pump_id_65"
+                                android:id="@+id/bnd_2020_pump_id_79"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
-                                android:hint="...мм" />
+                                android:hint="...мм"
+                                android:inputType="numberDecimal"/>
                         </LinearLayout>
 
                     </LinearLayout> <!-- column dim -->
@@ -1489,7 +1494,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:layout_weight="50"
-                        android:background="@drawable/bashneft_background_linearlayout"
+                        android:background="@drawable/summary_background_container"
                         android:orientation="vertical"
                         android:padding="5dp">
 
@@ -1516,12 +1521,13 @@
                                 android:text="X" />
 
                             <EditText
-                                android:id="@+id/bnd_2020_pump_id_66"
+                                android:id="@+id/bnd_2020_pump_id_80"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
-                                android:hint="...мм" />
+                                android:hint="...мм"
+                                android:inputType="numberDecimal"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -1539,12 +1545,13 @@
                                 android:text="Y" />
 
                             <EditText
-                                android:id="@+id/bnd_2020_pump_id_67"
+                                android:id="@+id/bnd_2020_pump_id_81"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
-                                android:hint="...мм" />
+                                android:hint="...мм"
+                                android:inputType="numberDecimal"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -1562,12 +1569,14 @@
                                 android:text="Z" />
 
                             <EditText
-                                android:id="@+id/bnd_2020_pump_id_68"
+                                android:id="@+id/bnd_2020_pump_id_82"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
-                                android:hint="...мм" />
+                                android:hint="...мм"
+                                android:inputType="numberDecimal"
+                               />
                         </LinearLayout>
 
                     </LinearLayout> <!-- column dim -->
@@ -1581,29 +1590,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@drawable/bashneft_background_linearlayout"
-                android:orientation="vertical"
+                android:background="@drawable/summary_background_container"
+                android:orientation="horizontal"
                 android:padding="5dp">
 
-                <!-- H2 -->
-                <TextView
-                    style="@style/h2"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Качественная оценка технического состояния агрегата:" />
+                    android:layout_weight="70"
+                    android:orientation="vertical">
+                    <!-- H2 -->
+                    <TextView
+                        style="@style/h2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|left"
+                        android:text="Качественная оценка технического состояния агрегата:" />
 
-                <EditText
-                    android:id="@+id/bnd_2020_pump_id_69"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Пример: Удовлетворительно"
-                    android:textSize="14sp" />
+                    <TextView
+                        style="@style/h2"
+                        android:textColor="@color/colorElements_dark"
+                        android:id="@+id/bnd_2020_pump_id_69"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/bnd_2020_pump_info_table"
+                    android:background="@android:color/transparent"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30"
+                    android:src="@drawable/ic_baseline_help_outline_24"
+                    android:scaleType="fitCenter"
+                    android:padding="0dp"/>
+
             </LinearLayout>
         </LinearLayout>
 
         <Button
-            android:background="@drawable/bashneft_background_button"
+            android:background="@drawable/summary_background_container"
             android:id="@+id/bnd_2020_pump_save"
             style="@style/h2"
             android:layout_margin="5dp"

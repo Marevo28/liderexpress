@@ -94,10 +94,10 @@ public class JsonRequest extends Thread {
         System.out.println("------обрабатываем полученный json------");
         try {
             JSONObject json_data = new JSONObject(result);
-            position= (json_data.getString("a"));
+            position= (json_data.getString("position"));
             Log.e("pass 3", position);
         } catch (Exception e) {
-            Log.e("Fail 3", e.toString());
+            Log.e("Fail 3", e.getMessage());
         }
     }
 
