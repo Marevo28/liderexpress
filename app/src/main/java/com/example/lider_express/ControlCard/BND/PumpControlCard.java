@@ -2,6 +2,7 @@ package com.example.lider_express.ControlCard.BND;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 
 import android.database.SQLException;
@@ -22,6 +23,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.Toolbar;
@@ -375,6 +377,23 @@ public class PumpControlCard extends AppCompatActivity {
         if (maxVibration > 11.2) {
             quantification.setText("Недопустимо");
         }
+    }
+
+    @Override
+    public void onBackPressed(){
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("Остались несохранненые данные!")
+                .setMessage("Хотите выйти?")
+                .setPositiveButton("Да", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("Нет", null)
+                .show();
     }
 
 }
