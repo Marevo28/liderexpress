@@ -354,7 +354,47 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- какой выезд? -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/summary_background_container"
+            android:orientation="vertical">
 
+            <!-- H2 -->
+            <TextView
+                style="@style/h2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Какой выезд?" />
+
+            <RadioGroup
+                android:id="@+id/bnd_2020_pump_from_bnd_2020_id_51"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/bnd_2020_pump_from_bnd_2020_id_51_1"
+                    style="@style/p"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Первичный" />
+
+                <RadioButton
+                    android:id="@+id/bnd_2020_pump_from_bnd_2020_id_51_2"
+                    style="@style/p"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Повторный" />
+            </RadioGroup>
+        </LinearLayout>
 
         <!-- Обследование проводилось? -->
         <LinearLayout
@@ -406,48 +446,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <!-- какой выезд? -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/summary_background_container"
-                android:orientation="vertical">
-
-                <!-- H2 -->
-                <TextView
-                    style="@style/h2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Какой выезд?" />
-
-                <RadioGroup
-                    android:id="@+id/bnd_2020_pump_from_bnd_2020_id_51"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/bnd_2020_pump_from_bnd_2020_id_51_1"
-                        style="@style/p"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:gravity="center_vertical|left"
-                        android:text="Первичный" />
-
-                    <RadioButton
-                        android:id="@+id/bnd_2020_pump_from_bnd_2020_id_51_2"
-                        style="@style/p"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:gravity="center_vertical|left"
-                        android:text="Повторный" />
-                </RadioGroup>
-            </LinearLayout>
 
             <!-- Акт неготовности оборудования составлен? -->
             <LinearLayout
