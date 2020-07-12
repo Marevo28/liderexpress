@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_checked="true"
         android:color="@color/colorElements_dark"
-        android:drawable="@drawable/background_container_solid">
+        android:drawable="@drawable/background_container_transparent">
 
     </item>
     <item android:state_checked="false"

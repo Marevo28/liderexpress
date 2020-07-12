@@ -57,6 +57,11 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">14sp</item>
     </style>
+    <style name="h1.5">
+        <item name="android:textColor">@color/dark_900</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">17sp</item>
+    </style>
 
     <style name="text_grid_bold">
         <item name="android:textColor">@color/dark_900</item>

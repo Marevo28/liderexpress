@@ -489,7 +489,6 @@
             </LinearLayout>
 
 
-
             <!-- Причина по которой не проводилось обследование? -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -515,11 +514,6 @@
             </LinearLayout>
             <!-- END HIDDEN-1 -->
         </LinearLayout>
-
-
-
-
-
 
 
         <!-- HIDDEN - 3 -->
@@ -1067,7 +1061,7 @@
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
                     android:hint="...мм"
-                    android:inputType="numberDecimal"/>
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
             <!-- Толщина, мм -->
@@ -1094,7 +1088,7 @@
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
                     android:hint="...мм"
-                    android:inputType="numberDecimal"/>
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
 
@@ -1130,7 +1124,7 @@
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
                     android:hint="...мм"
-                    android:inputType="numberDecimal"/>
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
             <!-- Толщина, мм -->
@@ -1157,7 +1151,7 @@
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
                     android:hint="...мм"
-                    android:inputType="numberDecimal"/>
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
 
@@ -1174,16 +1168,17 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/summary_background_container"
                 android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical"
                 android:padding="5dp">
+
                 <ImageView
                     android:id="@+id/bnd_2020_pump_image"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/nasos"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/nasos" />
             </LinearLayout>
 
 
@@ -1239,7 +1234,7 @@
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
                                 android:hint="...мм"
-                                android:inputType="numberDecimal"/>
+                                android:inputType="numberDecimal" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1263,7 +1258,7 @@
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
                                 android:hint="...мм"
-                                android:inputType="numberDecimal"/>
+                                android:inputType="numberDecimal" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1287,7 +1282,7 @@
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
                                 android:hint="...мм"
-                                android:inputType="numberDecimal"/>
+                                android:inputType="numberDecimal" />
                         </LinearLayout>
 
                     </LinearLayout> <!-- column dim -->
@@ -1331,7 +1326,7 @@
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
                                 android:hint="...мм"
-                                android:inputType="numberDecimal"/>
+                                android:inputType="numberDecimal" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1355,7 +1350,7 @@
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
                                 android:hint="...мм"
-                                android:inputType="numberDecimal"/>
+                                android:inputType="numberDecimal" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1379,7 +1374,7 @@
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
                                 android:hint="...мм"
-                                android:inputType="numberDecimal"/>
+                                android:inputType="numberDecimal" />
                         </LinearLayout>
 
                     </LinearLayout> <!-- column dim -->
@@ -1433,7 +1428,7 @@
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
                                 android:hint="...мм"
-                                android:inputType="numberDecimal"/>
+                                android:inputType="numberDecimal" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1457,7 +1452,7 @@
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
                                 android:hint="...мм"
-                                android:inputType="numberDecimal"/>
+                                android:inputType="numberDecimal" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1481,7 +1476,7 @@
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
                                 android:hint="...мм"
-                                android:inputType="numberDecimal"/>
+                                android:inputType="numberDecimal" />
                         </LinearLayout>
 
                     </LinearLayout> <!-- column dim -->
@@ -1525,7 +1520,7 @@
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
                                 android:hint="...мм"
-                                android:inputType="numberDecimal"/>
+                                android:inputType="numberDecimal" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1549,7 +1544,7 @@
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
                                 android:hint="...мм"
-                                android:inputType="numberDecimal"/>
+                                android:inputType="numberDecimal" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1573,8 +1568,7 @@
                                 android:layout_weight="85"
                                 android:gravity="center_vertical|left"
                                 android:hint="...мм"
-                                android:inputType="numberDecimal"
-                               />
+                                android:inputType="numberDecimal" />
                         </LinearLayout>
 
                     </LinearLayout> <!-- column dim -->
@@ -1606,36 +1600,737 @@
                         android:text="Качественная оценка технического состояния агрегата:" />
 
                     <TextView
-                        style="@style/h2"
-                        android:textColor="@color/colorElements_dark"
                         android:id="@+id/bnd_2020_pump_id_69"
+                        style="@style/h2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorElements_dark" />
                 </LinearLayout>
 
                 <ImageButton
                     android:id="@+id/bnd_2020_pump_info_table"
-                    android:background="@android:color/transparent"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="30"
-                    android:src="@drawable/ic_baseline_help_outline_24"
+                    android:background="@android:color/transparent"
+                    android:padding="0dp"
                     android:scaleType="fitCenter"
-                    android:padding="0dp"/>
+                    android:src="@drawable/ic_baseline_help_outline_24" />
 
             </LinearLayout>
         </LinearLayout>
 
-        <Button
-            android:background="@drawable/summary_background_container"
-            android:id="@+id/bnd_2020_pump_save"
-            style="@style/h2"
-            android:layout_margin="5dp"
-            android:padding="5dp"
+
+        <!-- ДЕРЕВО ДЕФЕКТОВ  -->
+        <!-- КОРПУС  -->
+        <LinearLayout
+            android:id="@+id/bnd_2020_pump_control_defect_tree"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Сохранить" />
+            android:orientation="vertical">
 
-    </LinearLayout> <!-- 2000 dp -->
+            <!-- H1 -->
+            <TextView
+                style="@style/h1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Дерево дефектов" />
 
-</ScrollView>
+            <!-- H1 -->
+            <TextView
+                style="@style/h1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Корпус" />
+
+            <!-- КОРПУС -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
+
+                <!-- H2 -->
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Механические дефекты" />
+
+                <RadioGroup
+                    android:id="@+id/bnd_2020_pump_control_id_101"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bnd_2020_pump_control_id_101_1"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Есть" />
+
+                    <RadioButton
+                        android:id="@+id/bnd_2020_pump_control_id_101_2"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Нет" />
+                </RadioGroup>
+
+                <!-- Hidden Механические дефекты-->
+                <LinearLayout
+                    android:id="@+id/bnd_2020_pump_control_hidden_101"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/bnd_2020_pump_control_hidden_101_linear_ist_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ExpandableListView
+                            android:id="@+id/bnd_2020_pump_control_hidden_101_list_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:choiceMode="multipleChoice"
+                            android:divider="@null"
+                            android:dividerHeight="5dp" />
+                    </LinearLayout>
+
+                    <!-- ADD Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/bnd_2020_pump_control_hidden_101_button_add"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="100dp"
+                            android:background="@drawable/selector_button"
+                            android:clickable="true"
+                            android:padding="0dp"
+                            android:src="@drawable/ic_baseline_add_48" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <!-- Корозия -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/summary_background_container"
+            android:orientation="vertical">
+
+            <!-- H2 -->
+            <TextView
+                style="@style/h2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Коррозия" />
+
+            <RadioGroup
+                android:id="@+id/bnd_2020_pump_control_id_102"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/bnd_2020_pump_control_id_102_1"
+                    style="@style/p"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Локальная" />
+
+                <RadioButton
+                    android:id="@+id/bnd_2020_pump_control_id_102_2"
+                    style="@style/p"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Сплошная" />
+
+                <RadioButton
+                    android:id="@+id/bnd_2020_pump_control_id_102_3"
+                    style="@style/p"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Нет" />
+            </RadioGroup>
+
+            <!-- Hidden Локальная-->
+            <LinearLayout
+                android:id="@+id/bnd_2020_pump_control_hidden_102"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|top"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/bnd_2020_pump_control_hidden_102_spinner"
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/summary_background_container" />
+
+                <!-- Продольный - поперечный глубина -->
+                <LinearLayout
+                    android:id="@+id/bnd_2020_pump_control_hidden_102_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <!-- Продольный-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/h2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:gravity="center_vertical|left"
+                            android:text="Продольный" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:hint="...мм"
+                            android:inputType="numberDecimal"
+                            android:paddingBottom="20dp"
+                            android:layout_marginRight="15dp"/>
+
+                    </LinearLayout>
+
+                    <!-- Поперечный-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/h2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:gravity="center_vertical|left"
+                            android:text="Поперечный" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:hint="...мм"
+                            android:inputType="numberDecimal"
+                            android:paddingBottom="20dp"
+                            android:layout_marginRight="15dp" />
+                    </LinearLayout>
+
+                    <!-- Глубина-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/h2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:gravity="center_vertical|left"
+                            android:text="Глубина" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:hint="...мм"
+                            android:inputType="numberDecimal"
+                            android:paddingBottom="20dp"
+                            android:layout_marginRight="15dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Диаметр -->
+                <LinearLayout
+                    android:id="@+id/bnd_2020_pump_control_hidden_102_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <!-- Диаметр-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/h2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:gravity="center_vertical|left"
+                            android:text="Диаметр" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:hint="...мм"
+                            android:inputType="numberDecimal"
+                            android:paddingBottom="20dp"
+                            android:layout_marginRight="15dp"/>
+
+                    </LinearLayout>
+
+                    <!-- Глубина-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/h2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:gravity="center_vertical|left"
+                            android:text="Глубина" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:hint="...мм"
+                            android:inputType="numberDecimal"
+                            android:paddingBottom="20dp"
+                            android:layout_marginRight="15dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Продольный - поперечный -->
+                <LinearLayout
+                    android:id="@+id/bnd_2020_pump_control_hidden_102_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- Продольный-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/h2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:gravity="center_vertical|left"
+                            android:text="Продольный" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:hint="...мм"
+                            android:inputType="numberDecimal"
+                            android:paddingBottom="20dp"
+                            android:layout_marginRight="15dp" />
+
+                    </LinearLayout>
+
+                    <!-- Поперечный-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/h2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:gravity="center_vertical|left"
+                            android:text="Поперечный" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:hint="...мм"
+                            android:inputType="numberDecimal"
+                            android:paddingBottom="20dp"
+                            android:layout_marginRight="15dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- Hidden Сплошная-->
+            <LinearLayout
+                android:id="@+id/bnd_2020_pump_control_hidden_103"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|top"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="5dp">
+
+                <Spinner
+                    android:id="@+id/bnd_2020_pump_control_hidden_103_spinner"
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/summary_background_container" />
+
+                <!-- Продольный - поперечный глубина -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="vertical">
+
+
+                    <!-- Диаметр-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/h2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:gravity="center_vertical|left"
+                            android:text="Диаметр" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:hint="...мм"
+                            android:inputType="numberDecimal"
+                            android:paddingBottom="20dp"
+                            android:layout_marginRight="15dp"/>
+
+                    </LinearLayout>
+
+                    <!-- Поперечный-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/h2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:gravity="center_vertical|left"
+                            android:text="Поперечный" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:hint="...мм"
+                            android:inputType="numberDecimal"
+                            android:paddingBottom="20dp"
+                            android:layout_marginRight="15dp"/>
+                    </LinearLayout>
+
+                    <!-- Глубина-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/h2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:gravity="center_vertical|left"
+                            android:text="Глубина" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:hint="...мм"
+                            android:inputType="numberDecimal"
+                            android:paddingBottom="20dp"
+                            android:layout_marginRight="15dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- Соединения -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/summary_background_container"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <!-- H2 -->
+            <TextView
+                style="@style/h2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Соединения" />
+
+            <Spinner
+                android:id="@+id/bnd_2020_pump_control_spinner_104"
+                style="@style/h2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/summary_background_container" />
+
+
+            <!-- Продольный - поперечный глубина -->
+            <LinearLayout
+                android:id="@+id/bnd_2020_pump_control_hidden_104_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|top"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <!-- Продольный-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/h2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="60"
+                        android:gravity="center_vertical|left"
+                        android:text="Продольный" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:hint="...мм"
+                        android:inputType="numberDecimal"
+                        android:paddingBottom="20dp"
+                        android:layout_marginRight="15dp"/>
+
+                </LinearLayout>
+
+                <!-- Поперечный-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/h2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="60"
+                        android:gravity="center_vertical|left"
+                        android:text="Поперечный" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:hint="...мм"
+                        android:inputType="numberDecimal"
+                        android:paddingBottom="20dp"
+                        android:layout_marginRight="15dp" />
+                </LinearLayout>
+
+                <!-- Глубина-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/h2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="60"
+                        android:gravity="center_vertical|left"
+                        android:text="Глубина" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:hint="...мм"
+                        android:inputType="numberDecimal"
+                        android:paddingBottom="20dp"
+                        android:layout_marginRight="15dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bnd_2020_pump_control_hidden_104_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|top"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <!-- Продольный-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/h2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="60"
+                        android:gravity="center_vertical|left"
+                        android:text="Продольный" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:hint="...мм"
+                        android:inputType="numberDecimal"
+                        android:paddingBottom="20dp"
+                        android:layout_marginRight="15dp"/>
+
+                </LinearLayout>
+
+                <!-- Поперечный-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/h2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="60"
+                        android:gravity="center_vertical|left"
+                        android:text="Поперечный" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:hint="...мм"
+                        android:inputType="numberDecimal"
+                        android:paddingBottom="20dp"
+                        android:layout_marginRight="15dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Другое -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/summary_background_container"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- H2 -->
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Другое" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Причина"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bnd_2020_pump_save"
+        style="@style/h2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/summary_background_container"
+        android:padding="5dp"
+        android:text="Сохранить" />
+
+</LinearLayout> <!-- 2000 dp -->
+
+    </ScrollView>
