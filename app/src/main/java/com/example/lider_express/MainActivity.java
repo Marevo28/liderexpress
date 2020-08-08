@@ -32,11 +32,11 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.lider_express.DataBase.DatabaseHelper;
-import com.example.lider_express.ControlCard.BND.PumpControlCard;
+import com.example.lider_express.Tools.BND.PumpControlCard;
 import com.example.lider_express.Svodnaya.KartaKontrolyaSPPK;
 import com.example.lider_express.Svodnaya.KartaKontrolyaYDE;
 import com.example.lider_express.Synchronization.Synchronization;
-import com.example.lider_express.Tools.Menu_tools;
+import com.example.lider_express.Instruments.Menu_tools;
 import com.example.lider_express.Сamera2.MainCamera2;
 import com.google.android.material.navigation.NavigationView;
 

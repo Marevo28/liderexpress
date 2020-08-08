@@ -23,7 +23,7 @@ import com.example.lider_express.DataBase.DatabaseHelper;
 import com.example.lider_express.MainActivity;
 import com.example.lider_express.R;
 import com.example.lider_express.Shared;
-import com.example.lider_express.Tools.SpisokBND;
+import com.example.lider_express.Instruments.SpisokBND;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

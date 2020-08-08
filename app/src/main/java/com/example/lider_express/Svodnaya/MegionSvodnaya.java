@@ -8,7 +8,6 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -25,7 +24,7 @@ import com.example.lider_express.DataBase.DatabaseHelper;
 import com.example.lider_express.MainActivity;
 import com.example.lider_express.R;
 import com.example.lider_express.Shared;
-import com.example.lider_express.Tools.SpisokMegion;
+import com.example.lider_express.Instruments.SpisokMegion;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
