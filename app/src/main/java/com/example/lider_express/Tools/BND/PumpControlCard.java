@@ -38,11 +38,16 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.lider_express.Core.DefectTree.DataList;
 import com.example.lider_express.Core.DefectTree.CustomListAdapter;
+import com.example.lider_express.Core.Handlers.RadioGroupHandler;
+import com.example.lider_express.Core.Handlers.TextViewHandler;
+import com.example.lider_express.Core.Item;
 import com.example.lider_express.DataBase.DatabaseHelper;
 import com.example.lider_express.MainActivity;
 import com.example.lider_express.R;
 import com.example.lider_express.Shared;
 import com.example.lider_express.Core.Summary.Summary;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -203,6 +208,7 @@ public class PumpControlCard extends AppCompatActivity {
                         break;
                 }
             }
+
         });
 
         RadioGroup radioGroupHidden2 = findViewById(R.id.bnd_2020_pump_radio_group_hidden_2);
@@ -304,6 +310,32 @@ public class PumpControlCard extends AppCompatActivity {
             }
         });
 
+        Item item101 = new Item(this, R.id.bnd2020_pump_defectTree_101, false);
+        Item item102 = new Item(this, R.id.bnd2020_pump_defectTree_102, false, View.GONE);
+        RadioGroupHandler.setActionSingleHidden(this, item101, item102, new String[]{"Нет"});
+
+        Item item103 = new Item(this, R.id.bnd2020_pump_defectTree_103, false);
+        Item item104 = new Item(this, R.id.bnd2020_pump_defectTree_104, false, View.GONE);
+        TextViewHandler.setActionSingleHidden(item103, item104);
+
+//        Log.i("PARAMS-", "-Params");
+//        HashMap<String, String> params = item103.params();
+//        for(String key: params.keySet()){
+//            Log.i("Message", key + ": " +params.get(key));
+//        }
+
+//        Item mehDefects = new Item(this, R.id.bnd_2020_pump_control_id_101, false, "bnd2020", "defectTree");
+//        Item mehDefectsLayoutHidden = new Item(this, R.id.bnd_2020_pump_control_hidden_101, false, "bnd2020", "defectTree");
+//        RadioGroupHandler.setActionSingleHidden(this, mehDefects, mehDefectsLayoutHidden, new String[]{"Нет"});
+
+
+
+
+
+
+
+
+
 
 
 
@@ -313,24 +345,34 @@ public class PumpControlCard extends AppCompatActivity {
         /**  ---------------  ВРЕМЕННО --------------- **/
         /**  ---------------  ВРЕМЕННО --------------- **/
         /**  ---------------  ВРЕМЕННО --------------- **/
+
+
 
         final ExpandableListView expListView = (ExpandableListView) findViewById(R.id.bnd_2020_pump_control_hidden_101_list_view);
+        // ImageButton
         ImageButton imageButtonAdd = findViewById(R.id.bnd_2020_pump_control_hidden_101_button_add);
+
+        //DataList
         final List<String> expListTitle = new ArrayList<>();
         dataList = new DataList();
 
         // Dialog
         final Dialog defectTreeDialog = new Dialog(PumpControlCard.this, R.style.TableDialogStyle);
         defectTreeDialog.setContentView(R.layout.defect_tree_dialog);
+
         final String[] defect_tree_array_meh_defect = new String[]{"Скол", "Задир", "Трещина", "Риска"};
 
+        // adapter
         final ArrayAdapter<String> defect_tree_meh_defect_adapter  =  new  ArrayAdapter<String>(
                 this, android.R.layout.simple_list_item_1, defect_tree_array_meh_defect);
 
+        // Spinner Dialog
         final Spinner spinnerDefectTreeDialog = defectTreeDialog.findViewById(R.id.defect_tree_dialog_spinner);
+        // Button Dialog
         Button buttonDefectTreeDialog = defectTreeDialog.findViewById(R.id.defect_tree_dialog_button_ok);
+        // Set Adapter For Spinner
         spinnerDefectTreeDialog.setAdapter(defect_tree_meh_defect_adapter);
-
+        //
         buttonDefectTreeDialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -500,11 +542,9 @@ public class PumpControlCard extends AppCompatActivity {
             }
         });
 
-
-
-
-
         /**  ---------------  ВРЕМЕННО --------------- **/
+
+
 
 
 
@@ -615,14 +655,8 @@ public class PumpControlCard extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
     // УБрать в будущем !
-
+    // Установить высоту Листу
     public static boolean setListViewHeightBasedOnItems(ListView listView) {
 
         ListAdapter listAdapter = listView.getAdapter();

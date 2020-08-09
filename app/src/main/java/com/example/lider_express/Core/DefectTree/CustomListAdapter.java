@@ -28,9 +28,7 @@ public class CustomListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public Object getChild(int listPosition, int expListPosition) {
-        return expListDetail.get(
-                expListTitle.get(listPosition)
-        ).get(expListPosition);
+        return expListDetail.get(expListTitle.get(listPosition)).get(expListPosition);
     }
 
     @Override

@@ -14,6 +14,7 @@ import com.example.lider_express.Core.Handlers.RadioGroupHandler;
 import com.example.lider_express.Core.Handlers.SpinnerHandler;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Item {
 
@@ -29,12 +30,14 @@ public class Item {
     private String value;
     private Adapter adapter;
 
-    private String tool;
-    private String form;
-    private String id;
-    private String subId;
+    private String location = "location";
+    private String section = "section";
+    private String form = "form";
+    private String id = "id";
+    private String subId = "subId";
 
     // variable for link on column DB
+    private String tableName = "";
     private String column = "";
 
     // default - visible
@@ -43,6 +46,28 @@ public class Item {
     // for Defect Tree
     private int parentId;
     private int referenceId;
+
+    public HashMap<String, String> params(){
+        HashMap<String, String> params = new HashMap<>();
+        params.put("Activity", activity.toString());
+        params.put("ResourceId", String.valueOf(resourceId));
+        params.put("View", view.toString());
+        params.put("Type", type);
+        params.put("Is given", String.valueOf(isGiven));
+        params.put("Value", value);
+        params.put("Location", location);
+        params.put("Section", section);
+        params.put("Form", form);
+        params.put("Id", id);
+        params.put("Sub id", subId);
+        params.put("Table name", tableName);
+        params.put("Column", column);
+        params.put("visibility", String.valueOf(visibility));
+        params.put("Parent id", value);
+        params.put("Reference id", value);
+
+        return params;
+    }
 
     /**
      * Constructor for TextView, EditText, Button, RadioGroup
@@ -55,8 +80,38 @@ public class Item {
         this.resourceId = resourceId;
         this.isGiven = isGiven;
         this.view = activity.findViewById(resourceId);
+        view.setVisibility(visibility);
 
         type = Types.getTypeView(view);
+
+        HashMap<String, String> description = ParseResourceId.parse(activity, resourceId);
+        location = description.get(location);
+        section = description.get(section);
+        form = description.get(form);
+        id = description.get(id);
+    }
+
+    /**
+     * Constructor for TextView, EditText, Button, RadioGroup
+     * @param activity - Parent Activity
+     * @param resourceId - Id View
+     * @param isGiven - flag, that give info about this View(This View have data, that need write to DataBase)
+     */
+    public Item(Activity activity, int resourceId, boolean isGiven, int visibility){
+        this.activity = activity;
+        this.resourceId = resourceId;
+        this.isGiven = isGiven;
+        this.view = activity.findViewById(resourceId);
+        this.visibility = visibility;
+        view.setVisibility(visibility);
+
+        type = Types.getTypeView(view);
+
+        HashMap<String, String> description = ParseResourceId.parse(activity, resourceId);
+        location = description.get(location);
+        section = description.get(section);
+        form = description.get(form);
+        id = description.get(id);
     }
 
     /**
@@ -125,6 +180,12 @@ public class Item {
         return value;
     }
 
+    // set visibility
+    public void hidden(int visibility){
+        this.visibility = visibility;
+        view.setVisibility(visibility);
+    }
+
     /** GETTERS and SETTERS **/
 
     // Resource Id View
@@ -149,8 +210,8 @@ public class Item {
         return view;
     }
 
-    public Object getViewType(){
-        return view.getClass();
+    public String type(){
+        return type;
     }
 
     public String getColumn() {
@@ -185,6 +246,14 @@ public class Item {
 
     public void setAdapter(Adapter adapter) {
         this.adapter = adapter;
+    }
+
+    public String getTableName() {
+        return tableName;
+    }
+
+    public void setTableName(String tableName) {
+        this.tableName = tableName;
     }
 
 

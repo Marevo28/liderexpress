@@ -6,14 +6,15 @@ import java.util.List;
 
 public class DataList {
 
+    // String Title -> List<String> dimensions
     public HashMap<String, List<String>> expDetails = new HashMap<>();
+
     public List<String> oopLanguages = new ArrayList<>();
 
     public DataList(){
         oopLanguages.add("Продольный");
         oopLanguages.add("Поперечный");
         oopLanguages.add("Глубина");
-
     }
 
 

@@ -3,42 +3,20 @@ package com.example.lider_express.Core;
 import android.app.Activity;
 import android.view.View;
 
+import java.util.HashMap;
+
 public class ParseResourceId {
 
-    public static String tool;
-
-    public static String form;
-
-    public static String mainId;
-
-    public static String subId;
-
-    public static Activity activity;
-
-    public ParseResourceId(Activity activity){
-        this.activity = activity;
-    }
-
-    public static void parse(int idResource){
+    public static HashMap<String, String> parse(Activity activity, int idResource){
+        HashMap<String, String> description = new HashMap<>();
         View view = activity.findViewById(idResource);
-        String fullName = activity.getResources().getResourceName(view.getId());
-        String name = fullName.substring(fullName.lastIndexOf("/") + 1);
-
-        String[] names = name.split("_");
-
-        if(names[0] != null)
-            tool = names[0];
-
-        if(names[1] != null)
-            form = names[1];
-
-        if(names[2] != null)
-            mainId = names[2];
-
-        if(names[3] != null)
-            subId = names[3];
+        String fullName = activity.getResources().getResourceName(idResource);
+        String[] fields = fullName.split("/")[1].split("_");
+        description.put("location", fields[0]);
+        description.put("section", fields[1]);
+        description.put("form", fields[2]);
+        description.put("id", fields[3]);
+        return description;
     }
-
-
 
 }

@@ -5,15 +5,11 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.example.lider_express.Core.Item;
+
 import java.util.ArrayList;
 
-public class RadioGroupHandler implements RadioGroup.OnCheckedChangeListener {
-
-
-    @Override
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-    }
+public class RadioGroupHandler{
 
     public static String getValueSelectedButton(Activity activity, RadioGroup radioGroup){
         return ((RadioButton)activity.findViewById(radioGroup.getCheckedRadioButtonId())).getText().toString();
@@ -29,6 +25,32 @@ public class RadioGroupHandler implements RadioGroup.OnCheckedChangeListener {
             }
         }
         return buttons;
+    }
+
+    public static void setActionSingleHidden(final Activity activity, Item mainItem, final Item hiddenItem, final String[] negativeValues){
+        ((RadioGroup) mainItem.getView()).setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton button = activity.findViewById(checkedId);
+                for (int i = 0; i < negativeValues.length; i++){
+                    if(button.getText().toString().equals(negativeValues[i])){
+                        hiddenItem.hidden(View.GONE);
+                    }else{
+                        hiddenItem.hidden(View.VISIBLE);
+                    }
+                }
+            }
+        });
+    }
+
+    // !!!
+    public static void setActionMultipleHidden(Item mainItem, Item hiddenItem){
+        ((RadioGroup) mainItem.getView()).setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+            }
+        });
     }
 
 
