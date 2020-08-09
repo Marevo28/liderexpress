@@ -17,15 +17,15 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 import com.example.lider_express.DataBase.UpdateDataBaseHelper;
 import com.example.lider_express.MainActivity;
 import com.example.lider_express.R;
 import com.example.lider_express.Shared;
+
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.TreeMap;
 
 public class Synchronization extends AppCompatActivity {
 
@@ -33,7 +33,7 @@ public class Synchronization extends AppCompatActivity {
      private Spinner spinnerDefect;
      private AppCompatActivity appCompatActivity;
      private String[] Zakazchiki = {//"Башнефть 2019", "Мегион 2019", "Полюс 2019",
-             "Башнефть 2020", "Мегион 2020", "Башнефть 2020 УДЭ", "Башнефть 2020 Насосы" //"Полюс 2020",
+             "Башнефть 2020", "Мегион 2020", "Башнефть 2020 УДЭ", "Башнефть 2020 Насосы", "Башнефть 2020 СППК" //"Полюс 2020",
             // "Башнефть 2021", "Мегион 2021", "Полюс 2021"
                            };
 
@@ -65,7 +65,7 @@ public class Synchronization extends AppCompatActivity {
         btnSendData = view.findViewById(R.id.ButtonSendData);
         btnDeleteRecord = view.findViewById(R.id.Button_DeleteRecord);
         editTextDeleteRecord = view.findViewById(R.id.EditText_DeleteRecord);
-        textPostion = view.findViewById(R.id.textpositon);
+        textPostion = view.findViewById(R.id.edit_text_position);
         TextKolvoZap = view.findViewById(R.id.TextKolvoZap);
         spinnerDefect = view.findViewById(R.id.spinnerDefect);
 
@@ -103,6 +103,7 @@ public class Synchronization extends AppCompatActivity {
                     case 1: Zakazchik = Shared.nameDefectMegion2020; break;
                     case 2: Zakazchik = Shared.nameDefectBashneft2020_UDE; break;
                     case 3: Zakazchik = Shared.nameDefectBashneft2020_Nasos; break;
+                    case 4: Zakazchik = Shared.nameDefectBashneft2020_SPPK; break;
                  //   case 5: Zakazchik = Shared.nameDefectPolus2020;**/  break;
                  //   case 6: Zakazchik = Shared.nameDefectBND2021; break;
                  //   case 7: Zakazchik = Shared.nameDefectMegion2021; break;
@@ -159,8 +160,10 @@ public class Synchronization extends AppCompatActivity {
             while (move){
                 LinkedHashMap<String, String> row = new LinkedHashMap<>();
                 for(int i = 0; i < column; i ++){
-                    row.put(cursor.getColumnName(i), cursor.getString(i));
-                    System.out.println("-- Header --" + cursor.getColumnName(i) + " -- Cell --" + cursor.getString(i));
+                    if(i > 0) {
+                        row.put(cursor.getColumnName(i), cursor.getString(i));
+                        System.out.println("-- Header --" + cursor.getColumnName(i) + " -- Cell --" + cursor.getString(i));
+                    }
                 }
                 rows.add(row);
                 // Переключили курсор на следующую позицию

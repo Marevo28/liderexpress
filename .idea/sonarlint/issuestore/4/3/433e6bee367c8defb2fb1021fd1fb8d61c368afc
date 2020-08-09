@@ -1,0 +1,9 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ê±›Ñúÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Øø€¬
+x
+java:S1450"[Remove the "Button_tool1" field and declare it as a local variable in the relevant methods.(¹ÓÂé8ß¸Êê¢.
+s	java:S116"WRename this field "Button_tool2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øú€8Ä”Ãç¢.
+s	java:S116"WRename this field "Button_tool1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ÓÂé8Ä”Ãç¢.
+x
+java:S1450"[Remove the "Button_tool2" field and declare it as a local variable in the relevant methods.(Øú€8ß¸Êê¢.

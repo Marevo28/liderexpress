@@ -993,4 +993,5 @@
     <string name="title_activity_oborudovanie">Oborudovanie</string>
     <string name="title_activity_transport_list">Transport_list</string>
     <string name="title_activity_karta_s_p_p_k">KartaSPPK</string>
+    <string name="title_activity_menu_tools">Menu_tools</string>
 </resources>

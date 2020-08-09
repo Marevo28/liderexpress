@@ -5,19 +5,19 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_оbekt"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_oborud"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/menu_send" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/transport_list"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/menu_transport_list" />
         <item
-            android:id="@+id/nav_tools"
+            android:id="@+id/nav_sinhron"
             android:icon="@drawable/ic_loop_black_24dp"
             android:title="@string/menu_tools" />
     </group>
@@ -29,13 +29,9 @@
                 android:icon="@drawable/ic_menu_share"
                 android:title="Настройки" />
             <item
-                android:id="@+id/nav_photo"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="@string/menu_send" />
-            <item
-                android:id="@+id/transport_list"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="@string/menu_transport_list" />
+                android:id="@+id/nav_tools"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Инструменты" />
         </menu>
     </item>
 

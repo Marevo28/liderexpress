@@ -1,133 +1,133 @@
 
-€	java:S116?"dRename this field "RadioGroup_sppk_Zaglushka" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸Ÿ¯÷8¿î°£¡.
-n
-java:S1301Ú"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8ÍÛà¿¡.
-n
-java:S1301®"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8Á—û¿¡.
-
-java:S1450C"mRemove the "RadioGroup_sppk_germetikklapan" field and declare it as a local variable in the relevant methods.(•éÔ–øÿÿÿÿ8·º¶£¡.
-}	java:S116K"aRename this field "EditText_sppk_VhodUZT3" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©¡–…8ääè£¡.
-t	java:S116e"SRename this field "VhodUZT1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šú›¢øÿÿÿÿ8Óº¾§¡.
-}	java:S1169"\Rename this field "EditText_sppk_Inv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øç“©şÿÿÿÿ8æÙê¢¡.
-g
-java:S1124&"EReorder the modifiers to comply with the Java Language Specification.(Ú›†ùûÿÿÿÿ8Ï—°¿¡.
-ƒ
-java:S1450O"aRemove the "Button_sppk_Vnesti" field and declare it as a local variable in the relevant methods.(ÂÃÚüÿÿÿÿ8¼…Â§¡.
-{	java:S116-"ZRename this field "ZakazchikDefect" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢À—™ÿÿÿÿÿ8ºª’§¡.
-D	java:S131§""Add a default case to this switch.(€ÆèÔÿÿÿÿÿ8Ù²¸¿¡.
-Š	java:S116C"iRename this field "RadioGroup_sppk_germetikklapan" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•éÔ–øÿÿÿÿ8·º¶£¡.
-n
-java:S1301’"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8ù½ò¿¡.
-o	java:S116Z"NRename this field "AKP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(— ùæøÿÿÿÿ8ú¸§¡.
-‰
-java:S1845+"gRename field "position" to prevent any misunderstanding/clash with field "POSITION" defined on line 39.(©ùéäıÿÿÿÿ8â’§¡.
-„	java:S116:"cRename this field "EditText_sppk_usl_prohod" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¶óüÿÿÿÿ8¬Ø£¡.
-n
-java:S1301è"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8ûøä¿¡.
-„	java:S116>"hRename this field "RadioGroup_sppk_SostoyanieAKP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹©¸š8¹™¦£¡.
-}	java:S116L"bRename this field "EditText_sppk_VihodUZT3" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ÌŞO8Òœè£¡.
-x	java:S116d"WRename this field "VihodDiametr" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦£Ÿùÿÿÿÿ8õù¼§¡.
-}	java:S1168"\Rename this field "EditText_sppk_Zav" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û™ı´ûÿÿÿÿ8”ïé¢¡.
-i
-java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ƒ“¯Œ8ÎÂ¿¡.
-„
-java:S1450D"gRemove the "RadioGroup_sppk_pruzhina" field and declare it as a local variable in the relevant methods.(À›§ò8à€º£¡.
-„
-java:S1450@"hRemove the "RadioGroup_sppk_tablichka" field and declare it as a local variable in the relevant methods.(„îÏZ8×¨£¡.
-‚
-java:S14507"eRemove the "Button_sppk_SpecProvNK" field and declare it as a local variable in the relevant methods.(îî¤æ8¸¦è¢¡.
-~	java:S116O"]Rename this field "Button_sppk_Vnesti" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÃÚüÿÿÿÿ8×ô÷£¡.
-}	java:S116A"aRename this field "EditText_sppk_factdavl" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–Ø¬Å8é–®£¡.
-†	java:S116;"eRename this field "EditText_sppk_usl_davlenie" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á©®şÿÿÿÿ8¸¿£¡.
-w	java:S116c"VRename this field "VhodDiametr" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êùíÈüÿÿÿÿ8óÊ¼§¡.
-D	java:S131 ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8¤Ÿõ¿¡.
-D	java:S131Ì""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8ÎÂ¿¡.
-u
-java:S1450,"XRemove the "Zakazchik" field and declare it as a local variable in the relevant methods.(§ÍÒŞ8£³Â¿¡.
-‰
-java:S1450>"lRemove the "RadioGroup_sppk_SostoyanieAKP" field and declare it as a local variable in the relevant methods.(‹©¸š8¹™¦£¡.
-o	java:S116k"SRename this field "VhodUZT4" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿš¶î8ÃŠ¿§¡.
-q	java:S1161"URename this field "SpinerSppk" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šõãü8†¿œü .
-p	java:S116h"TRename this field "VihodUZT2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ô”©Ë8Óº¾§¡.
-u	java:S116ş"XRename this field "Picker_DataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÒ³8ÎÂ¿¡.
-n
-java:S1301„"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8ı•ì¿¡.
-}	java:S116G"aRename this field "EditText_sppk_VhodUZT1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìşÿ£8æÑç£¡.
-	java:S116F"eRename this field "EditText_sppk_VihodDiametr" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦½üÅ8ÌÀÆ£¡.
-…	java:S116E"dRename this field "EditText_sppk_VhodDiametr" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æøÌ¹ùÿÿÿÿ8ÌÀÆ£¡.
-q	java:S116W"URename this field "Usl_prohod" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ôë‡8µŞ·§¡.
-p	java:S116\"TRename this field "Zaglushka" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê‡ı‡8å¹§¡.
-j	java:S116V"NRename this field "Inv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×–û”8½òµ¦¡.
-n
-java:S1301ö"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8èÌè¿¡.
-w
-java:S1104#"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ8¦é¹¦¡.
-p	java:S116f"TRename this field "VihodUZT1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ¢´8Óº¾§¡.
-p	java:S116T"URename this field "SpecProvNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æÂ¾g8½òµ¦¡.
-n
-java:S1301§"KReplace this "switch" statement by "if" statements to increase readability.(€ÆèÔÿÿÿÿÿ8Ù²¸¿¡.
-	java:S116B"cRename this field "RadioGroup_sppk_germetik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀìŸš8Ùà´£¡.
-ƒ	java:S116N"bRename this field "EditText_sppk_VihodUZT4" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô’¢„şÿÿÿÿ8¢·è£¡.
-‚
-java:S1450<"eRemove the "RadioGroup_sppk_Plombs" field and declare it as a local variable in the relevant methods.(€„®£8ı¤¤£¡.
-p	java:S116l"TRename this field "VihodUZT4" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼êÕ¤8ä¿¿§¡.
-X
-java:S1068."6Remove this unused "nameTableForCursor" private field.(ŸŒÁÈÿÿÿÿÿ8¨ßÃ¿¡.
-x	java:S116X"WRename this field "Usl_davlenie" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØµÄŸøÿÿÿÿ8µŞ·§¡.
-t	java:S116["XRename this field "SostoyanieAKP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÓ—â8ó²¸§¡.
-¤
-java:S1186Ÿ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‹ûÄ‚üÿÿÿÿ8Ï—°¿¡.
-t
-java:S3776o"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(¨Œşÿÿÿÿ8¤Ÿõ¿¡.
-p	java:S116_"TRename this field "SbrosSppk" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø¯¨ã8ôä±¿¡.
-D	java:S131®""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8Á—û¿¡.
-y	java:S1165"]Rename this field "Button_sppk_DataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•ÌÁ8è¸¢¡.
-}	java:S116I"aRename this field "EditText_sppk_VhodUZT2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Æˆ‡8Òœè£¡.
-o	java:S116i"SRename this field "VhodUZT3" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÃ–“8ÃŠ¿§¡.
-?	java:S131""Add a default case to this switch.(ƒ“¯Œ8ÎÂ¿¡.
-u	java:S116j"TRename this field "VihodUZT3" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Ö££şÿÿÿÿ8ä¿¿§¡.
-~
-java:S14505"aRemove the "Button_sppk_DataNK" field and declare it as a local variable in the relevant methods.(•ÌÁ8œ´ç¢¡.
-o	java:S116g"SRename this field "VhodUZT2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ğ±¯8Óº¾§¡.
-~	java:S116J"bRename this field "EditText_sppk_VihodUZT2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°£ç8Òœè£¡.
-|
-java:S2293’"YReplace the type specification in this constructor call with the diamond operator ("<>").(á˜¤¶ıÿÿÿÿ8Ï—°¿¡.
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ì¼úşÿÿÿÿ
-r	java:S116S"QRename this field "DataNk" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¿Ôıüÿÿÿÿ8½òµ¦¡.
-D	java:S131è""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8ûøä¿¡.
-	java:S116="^Rename this field "RadioGroup_sppk_AKP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ûû¡ÿÿÿÿÿ8½¶¥£¡.
-D	java:S131„""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8ı•ì¿¡.
-„
-java:S1450B"gRemove the "RadioGroup_sppk_germetik" field and declare it as a local variable in the relevant methods.(ÀìŸš8Èµ£¡.
-‚	java:S116M"aRename this field "EditText_sppk_VhodUZT4" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆĞùÿÿÿÿ8ääè£¡.
-D	java:S131Ú""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8ÍÛà¿¡.
-q
-java:S1104$"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ8¦é¹¦¡.
-u
-java:S2737°"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ8ÎÂ¿¡.
-„
-java:S1450="bRemove the "RadioGroup_sppk_AKP" field and declare it as a local variable in the relevant methods.(‘ûû¡ÿÿÿÿÿ8½¶¥£¡.
-v
-java:S1450)"TRemove the "lampa" field and declare it as a local variable in the relevant methods.(«õ®üÿÿÿÿ8êôé¦¡.
 	java:S1166"`Rename this field "Text_sppk__SpecProvNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø¿Å§ıÿÿÿÿ8ø½à¢¡.
 	java:S116@"dRename this field "RadioGroup_sppk_tablichka" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„îÏZ8×¨£¡.
-ƒ	java:S116H"bRename this field "EditText_sppk_VihodUZT1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß¦÷Šüÿÿÿÿ8æÑç£¡.
-	java:S116D"cRename this field "RadioGroup_sppk_pruzhina" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À›§ò8ªƒ¹£¡.
-N
-java:S1172ÿ"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8ÎÂ¿¡.
-w	java:S1164"[Rename this field "Text_sppk_DataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖşáŒ8“šİ¢¡.
-…
-java:S1450?"hRemove the "RadioGroup_sppk_Zaglushka" field and declare it as a local variable in the relevant methods.(¸Ÿ¯÷8¿î°£¡.
-r	java:S116Y"QRename this field "Plombs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿‡³ûÿÿÿÿ8£´À¦¡.
+o	java:S116g"SRename this field "VhodUZT2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ğ±¯8Óº¾§¡.
+t
+java:S3776o"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(¨Œşÿÿÿÿ8¤Ÿõ¿¡.
+t	java:S116["XRename this field "SostoyanieAKP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÓ—â8ó²¸§¡.
+u	java:S116j"TRename this field "VihodUZT3" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Ö££şÿÿÿÿ8ä¿¿§¡.
+}	java:S116I"aRename this field "EditText_sppk_VhodUZT2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Æˆ‡8Òœè£¡.
+‚	java:S116M"aRename this field "EditText_sppk_VhodUZT4" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆĞùÿÿÿÿ8ääè£¡.
+x	java:S116d"WRename this field "VihodDiametr" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦£Ÿùÿÿÿÿ8õù¼§¡.
+D	java:S131®""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8Á—û¿¡.
+o	java:S116Z"NRename this field "AKP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(— ùæøÿÿÿÿ8ú¸§¡.
+}	java:S1167"aRename this field "Button_sppk_SpecProvNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îî¤æ8„öç¢¡.
+¤
+java:S1186Ÿ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‹ûÄ‚üÿÿÿÿ8Ï—°¿¡.
+v
+java:S1450)"TRemove the "lampa" field and declare it as a local variable in the relevant methods.(«õ®üÿÿÿÿ8êôé¦¡.
+u	java:S116ş"XRename this field "Picker_DataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÒ³8ÎÂ¿¡.
+n
+java:S1301è"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8ûøä¿¡.
+p	java:S116\"TRename this field "Zaglushka" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê‡ı‡8å¹§¡.
+D	java:S131Ì""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8ÎÂ¿¡.
+	java:S116="^Rename this field "RadioGroup_sppk_AKP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ûû¡ÿÿÿÿÿ8½¶¥£¡.
+	java:S116B"cRename this field "RadioGroup_sppk_germetik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀìŸš8Ùà´£¡.
+„
+java:S1450="bRemove the "RadioGroup_sppk_AKP" field and declare it as a local variable in the relevant methods.(‘ûû¡ÿÿÿÿÿ8½¶¥£¡.
+}	java:S1168"\Rename this field "EditText_sppk_Zav" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û™ı´ûÿÿÿÿ8”ïé¢¡.
+Š	java:S116C"iRename this field "RadioGroup_sppk_germetikklapan" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•éÔ–øÿÿÿÿ8·º¶£¡.
+p	java:S116T"URename this field "SpecProvNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æÂ¾g8½òµ¦¡.
+D	java:S131’""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8ù½ò¿¡.
 ƒ
 java:S1450."aRemove the "nameTableForCursor" field and declare it as a local variable in the relevant methods.(ŸŒÁÈÿÿÿÿÿ8¨ßÃ¿¡.
+}	java:S116K"aRename this field "EditText_sppk_VhodUZT3" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©¡–…8ääè£¡.
+X
+java:S1068."6Remove this unused "nameTableForCursor" private field.(ŸŒÁÈÿÿÿÿÿ8¨ßÃ¿¡.
+o	java:S116k"SRename this field "VhodUZT4" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿš¶î8ÃŠ¿§¡.
+}	java:S1169"\Rename this field "EditText_sppk_Inv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øç“©şÿÿÿÿ8æÙê¢¡.
+„	java:S116>"hRename this field "RadioGroup_sppk_SostoyanieAKP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹©¸š8¹™¦£¡.
+w	java:S1164"[Rename this field "Text_sppk_DataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖşáŒ8“šİ¢¡.
+„	java:S116:"cRename this field "EditText_sppk_usl_prohod" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¶óüÿÿÿÿ8¬Ø£¡.
+o	java:S116U"NRename this field "Zav" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èå‘öøÿÿÿÿ8½òµ¦¡.
+p	java:S116l"TRename this field "VihodUZT4" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼êÕ¤8ä¿¿§¡.
+{	java:S116-"ZRename this field "ZakazchikDefect" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢À—™ÿÿÿÿÿ8ºª’§¡.
+‰
+java:S1845+"gRename field "position" to prevent any misunderstanding/clash with field "POSITION" defined on line 39.(©ùéäıÿÿÿÿ8â’§¡.
 n
 java:S1301 "KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8¤Ÿõ¿¡.
-}	java:S1167"aRename this field "Button_sppk_SpecProvNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îî¤æ8„öç¢¡.
+w	java:S116c"VRename this field "VhodDiametr" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êùíÈüÿÿÿÿ8óÊ¼§¡.
+D	java:S131§""Add a default case to this switch.(€ÆèÔÿÿÿÿÿ8Ù²¸¿¡.
+n
+java:S1301’"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8ù½ò¿¡.
+}	java:S116A"aRename this field "EditText_sppk_factdavl" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–Ø¬Å8é–®£¡.
+i
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ƒ“¯Œ8ÎÂ¿¡.
+n
+java:S1301§"KReplace this "switch" statement by "if" statements to increase readability.(€ÆèÔÿÿÿÿÿ8Ù²¸¿¡.
+u
+java:S1450,"XRemove the "Zakazchik" field and declare it as a local variable in the relevant methods.(§ÍÒŞ8£³Â¿¡.
+ƒ	java:S116H"bRename this field "EditText_sppk_VihodUZT1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß¦÷Šüÿÿÿÿ8æÑç£¡.
+}	java:S116L"bRename this field "EditText_sppk_VihodUZT3" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ÌŞO8Òœè£¡.
+D	java:S131è""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8ûøä¿¡.
+x	java:S116X"WRename this field "Usl_davlenie" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØµÄŸøÿÿÿÿ8µŞ·§¡.
+D	java:S131Ú""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8ÍÛà¿¡.
+r	java:S116Y"QRename this field "Plombs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿‡³ûÿÿÿÿ8£´À¦¡.
+
+java:S1450C"mRemove the "RadioGroup_sppk_germetikklapan" field and declare it as a local variable in the relevant methods.(•éÔ–øÿÿÿÿ8·º¶£¡.
+p	java:S116,"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ÍÒŞ8ºª’§¡.
+‚
+java:S14507"eRemove the "Button_sppk_SpecProvNK" field and declare it as a local variable in the relevant methods.(îî¤æ8¸¦è¢¡.
 }	java:S116<"aRename this field "RadioGroup_sppk_Plombs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€„®£8ı¤¤£¡.
-o	java:S116U"NRename this field "Zav" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èå‘öøÿÿÿÿ8½òµ¦¡.
+p	java:S116_"TRename this field "SbrosSppk" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø¯¨ã8ôä±¿¡.
 D	java:S131ö""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8èÌè¿¡.
+?	java:S131""Add a default case to this switch.(ƒ“¯Œ8ÎÂ¿¡.
+D	java:S131 ""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8¤Ÿõ¿¡.
+q	java:S1161"URename this field "SpinerSppk" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šõãü8†¿œü .
+…	java:S116E"dRename this field "EditText_sppk_VhodDiametr" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æøÌ¹ùÿÿÿÿ8ÌÀÆ£¡.
+p	java:S116f"TRename this field "VihodUZT1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ¢´8Óº¾§¡.
+o	java:S116i"SRename this field "VhodUZT3" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÃ–“8ÃŠ¿§¡.
+‰
+java:S1450>"lRemove the "RadioGroup_sppk_SostoyanieAKP" field and declare it as a local variable in the relevant methods.(‹©¸š8¹™¦£¡.
+n
+java:S1301ö"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8èÌè¿¡.
+n
+java:S1301„"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8ı•ì¿¡.
+~
+java:S14505"aRemove the "Button_sppk_DataNK" field and declare it as a local variable in the relevant methods.(•ÌÁ8œ´ç¢¡.
+g
+java:S1124&"EReorder the modifiers to comply with the Java Language Specification.(Ú›†ùûÿÿÿÿ8Ï—°¿¡.
+j	java:S116V"NRename this field "Inv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×–û”8½òµ¦¡.
+„
+java:S1450@"hRemove the "RadioGroup_sppk_tablichka" field and declare it as a local variable in the relevant methods.(„îÏZ8×¨£¡.
+~	java:S116O"]Rename this field "Button_sppk_Vnesti" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÃÚüÿÿÿÿ8×ô÷£¡.
+r	java:S116S"QRename this field "DataNk" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¿Ôıüÿÿÿÿ8½òµ¦¡.
+u
+java:S2737°"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(¡Üğˆ8ÎÂ¿¡.
+t	java:S116e"SRename this field "VhodUZT1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šú›¢øÿÿÿÿ8Óº¾§¡.
+q	java:S116W"URename this field "Usl_prohod" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ôë‡8µŞ·§¡.
+~	java:S116J"bRename this field "EditText_sppk_VihodUZT2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°£ç8Òœè£¡.
+„
+java:S1450D"gRemove the "RadioGroup_sppk_pruzhina" field and declare it as a local variable in the relevant methods.(À›§ò8à€º£¡.
+ƒ
+java:S1450O"aRemove the "Button_sppk_Vnesti" field and declare it as a local variable in the relevant methods.(ÂÃÚüÿÿÿÿ8¼…Â§¡.
+}	java:S116G"aRename this field "EditText_sppk_VhodUZT1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìşÿ£8æÑç£¡.
 n
 java:S1301Ì"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8ÎÂ¿¡.
-D	java:S131’""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8ù½ò¿¡.
-p	java:S116,"TRename this field "Zakazchik" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ÍÒŞ8ºª’§¡.
+w
+java:S1104#"UMake mDBHelper a static final constant or non-public and provide accessors if needed.(Éº¾Òûÿÿÿÿ8¦é¹¦¡.
+ƒ	java:S116N"bRename this field "EditText_sppk_VihodUZT4" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô’¢„şÿÿÿÿ8¢·è£¡.
+p	java:S116h"TRename this field "VihodUZT2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ô”©Ë8Óº¾§¡.
+…
+java:S1450?"hRemove the "RadioGroup_sppk_Zaglushka" field and declare it as a local variable in the relevant methods.(¸Ÿ¯÷8¿î°£¡.
+	java:S116D"cRename this field "RadioGroup_sppk_pruzhina" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À›§ò8ªƒ¹£¡.
+	java:S116F"eRename this field "EditText_sppk_VihodDiametr" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦½üÅ8ÌÀÆ£¡.
+q
+java:S1104$"OMake mDb a static final constant or non-public and provide accessors if needed.(¸Ñ˜­úÿÿÿÿ8¦é¹¦¡.
+n
+java:S1301®"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8Á—û¿¡.
+‚
+java:S1450<"eRemove the "RadioGroup_sppk_Plombs" field and declare it as a local variable in the relevant methods.(€„®£8ı¤¤£¡.
+€	java:S116?"dRename this field "RadioGroup_sppk_Zaglushka" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸Ÿ¯÷8¿î°£¡.
+†	java:S116;"eRename this field "EditText_sppk_usl_davlenie" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á©®şÿÿÿÿ8¸¿£¡.
+„
+java:S1450B"gRemove the "RadioGroup_sppk_germetik" field and declare it as a local variable in the relevant methods.(ÀìŸš8Èµ£¡.
+y	java:S1165"]Rename this field "Button_sppk_DataNK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•ÌÁ8è¸¢¡.
+D	java:S131„""Add a default case to this switch.(ÿ«¬‹üÿÿÿÿ8ı•ì¿¡.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ì¼úşÿÿÿÿ
+|
+java:S2293’"YReplace the type specification in this constructor call with the diamond operator ("<>").(á˜¤¶ıÿÿÿÿ8Ï—°¿¡.
+n
+java:S1301Ú"KReplace this "switch" statement by "if" statements to increase readability.(ÿ«¬‹üÿÿÿÿ8ÍÛà¿¡.
+N
+java:S1172ÿ"+Remove this unused method parameter "view".(¾›·ãøÿÿÿÿ8ÎÂ¿¡.

@@ -927,4 +927,17 @@
         <item>preference_panorama_save_all</item>
         <item>preference_panorama_save_all_plus_debug</item>
     </string-array>
+
+
+
+
+
+
+    <string-array name="defect_tree_meh_defect">
+        <item>Скол</item>
+        <item>Задир</item>
+        <item>Трещина</item>
+        <item>Риска</item>
+    </string-array>
+
 </resources>

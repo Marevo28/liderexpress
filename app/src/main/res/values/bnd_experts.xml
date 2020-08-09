@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="bnd_experts">
+    <!-- вписанные в журанл -->
+    <string-array name="bnd_experts_journal">
         <item>Михайлов Е.А.</item>
         <item>Семенов В.Ю.</item>
         <item>Голуб Е.Д.</item>
         <item>Шафиков А.Ф.</item>
     </string-array>
-    <string-array name="bnd_defects">
+    <!-- Специалисты вписанные в журнал -->
+    <string-array name="bnd_spec_journal">
         <item>Козлов П.А.</item>
         <item>Калинин В.А.</item>
         <item>Иванов А.А.</item>
@@ -19,7 +21,8 @@
         <item>Абдуллин А.Р.</item>
         <item>Ворушило В.С.</item>
     </string-array>
-    <string-array name="bnd_irldefects">
+    <!-- Специалисты проводили НК-->
+    <string-array name="bnd_spec_nko">
         <item>Абдуллин А.Р.</item>
         <item>Ахметшин Р.М.</item>
         <item>Байсарин И.Р.</item>

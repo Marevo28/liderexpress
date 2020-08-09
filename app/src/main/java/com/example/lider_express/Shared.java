@@ -39,7 +39,7 @@ public class Shared {
     public static String nameBashneft2020_UDE = "Bashneft2020_UDE";
     public static String nameDefectBashneft2020_UDE = "DefectBND2020_UDE";
     public static String nameDefectBashneft2020_SPPK = "DefectBND2020_SPPK";
-    public static String nameBashneft2020_Nasos = "BND2020_Nasos";
+    public static String nameBashneft2020_Nasos = "Bashneft2020_Nasos";
     public static String nameDefectBashneft2020_Nasos = "DefectBND2020_Nasos";
 
 
@@ -72,6 +72,14 @@ public class Shared {
     public static String nameDefectMegion2024 = "defectMegion2024";
     public static String nameDefectPolus2024 = "defectPolus2024";
 
+
+    // Const
+    public static final String BND_TYPE_SPEC_ALL = "0";
+    public static final String BND_TYPE_DATA = "1";
+    public static final String BND_TYPE_SPEC_NKO = "2";
+    public static final String BND_TYPE_SPEC_JOURNAL = "3";
+    public static final String BND_TYPE_EXP_JOURNAL = "4";
+
     // Путь папки для обновления файла баззы данных
     public static String pathUpdateDB = "data/data/com.example.lider_express/databaseUpdate";
 
@@ -79,8 +87,8 @@ public class Shared {
     public static String pathDB = "data/data/com.example.lider_express/databases";
 
     // Адрес для скачивания базы данных
-    public static String URL = "http://peremoga.tech/leaderexpert.db";
+    public static String URL = "http://officele.ru/files/leaderexpert.db";
 
-    public static String URLAllForm = "http://peremoga.tech/Android/DefectBND2020_AllForm.php";
+    public static String URLAllForm = "http://officele.ru/Android/DefectBND2020_AllForm.php";
 
 }
