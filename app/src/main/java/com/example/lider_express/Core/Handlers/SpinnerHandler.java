@@ -7,17 +7,10 @@ import android.widget.Spinner;
 
 import java.util.ArrayList;
 
-public class SpinnerHandler implements Spinner.OnItemSelectedListener{
+public class SpinnerHandler{
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-    }
 
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
 
     public static String getValueSelectedItem(Spinner spinner){
         return spinner.getItemAtPosition(spinner.getSelectedItemPosition()).toString();

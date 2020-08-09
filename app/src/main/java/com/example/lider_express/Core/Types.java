@@ -12,6 +12,7 @@ public class Types {
     public static final String IMAGE_BUTTON = "ImageButton";
     public static final String APP_COMPAT_BUTTON = "AppCompatButton";
     public static final String LIST_VIEW = "ListView";
+    public static final String EXPANDABLE_LIST_VIEW = "ExpandableListView";
     public static final String SPINNER = "Spinner";
     public static final String LINEAR_LAYOUT = "LinearLayout";
 
@@ -25,13 +26,14 @@ public class Types {
             case "TextView": type = TEXT_VIEW; break;
             case "EditText": type = EDIT_TEXT; break;
             case "Button": type = BUTTON; break;
+            case "AppCompatButton": type = APP_COMPAT_BUTTON; break;
             case "RadioGroup": type = RADIO_GROUP; break;
             case "RadioButton": type = RADIO_BUTTON; break;
             case "ImageButton": type = IMAGE_BUTTON; break;
             case "ListView": type = LIST_VIEW; break;
+            case "ExpandableListView": type = EXPANDABLE_LIST_VIEW; break;
             case "Spinner": type = SPINNER; break;
             case "LinearLayout": type = LINEAR_LAYOUT; break;
-            case "AppCompatButton": type = APP_COMPAT_BUTTON; break;
         }
         return type;
     }

@@ -38,6 +38,9 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.lider_express.Core.DefectTree.DataList;
 import com.example.lider_express.Core.DefectTree.CustomListAdapter;
+import com.example.lider_express.Core.DefectTree.DefectTree;
+import com.example.lider_express.Core.Handlers.ButtonHandler;
+import com.example.lider_express.Core.Handlers.ExpandableListViewHandle;
 import com.example.lider_express.Core.Handlers.RadioGroupHandler;
 import com.example.lider_express.Core.Handlers.TextViewHandler;
 import com.example.lider_express.Core.Item;
@@ -310,6 +313,9 @@ public class PumpControlCard extends AppCompatActivity {
             }
         });
 
+
+
+
         Item item101 = new Item(this, R.id.bnd2020_pump_defectTree_101, false);
         Item item102 = new Item(this, R.id.bnd2020_pump_defectTree_102, false, View.GONE);
         RadioGroupHandler.setActionSingleHidden(this, item101, item102, new String[]{"Нет"});
@@ -317,6 +323,41 @@ public class PumpControlCard extends AppCompatActivity {
         Item item103 = new Item(this, R.id.bnd2020_pump_defectTree_103, false);
         Item item104 = new Item(this, R.id.bnd2020_pump_defectTree_104, false, View.GONE);
         TextViewHandler.setActionSingleHidden(item103, item104);
+
+        DefectTree defectTree1 = new DefectTree(this, this);
+        ArrayList<String> properties1 = new ArrayList<>();
+        properties1.add("Продольный");
+        properties1.add("Поперечный");
+        properties1.add("Глубина");
+        defectTree1.addSingleConformity("Скол", properties1);
+        defectTree1.addSingleConformity("Задир", properties1);
+        defectTree1.addSingleConformity("Трещина", properties1);
+        defectTree1.addSingleConformity("Риска", properties1);
+
+        defectTree1.customizeSingleDialog();
+
+        Item ItemSpinnerDefectTreeDialog = new Item(this, defectTree1.getDialogAddProperty(), R.id.defect_tree_dialog_spinner, false);
+        final ArrayAdapter<String> adapter1  =  new  ArrayAdapter<String>(
+                this, android.R.layout.simple_list_item_1, defectTree1.getItemsForSpinner());
+        ((Spinner) ItemSpinnerDefectTreeDialog.getView()).setAdapter(adapter1);
+
+        defectTree1.setSpinnerLevel1(((Spinner) ItemSpinnerDefectTreeDialog.getView()));
+
+        Item itemButtonAdd = new Item(this, R.id.bnd_2020_pump_control_hidden_101_button_add, false);
+        ButtonHandler.setActionShowDialog(itemButtonAdd, defectTree1);
+
+        // Exp List View Meh defects Corpus
+        Item itemExpListView = new Item(this, R.id.bnd_2020_pump_control_hidden_101_list_view, false);
+
+        Item ItemButtonDefectTreeDialog = new Item(this, defectTree1.getDialogAddProperty(), R.id.defect_tree_dialog_button_ok, false);
+
+        ButtonHandler.setActionCancelDialog(ItemButtonDefectTreeDialog, itemExpListView, defectTree1);
+
+        ExpandableListViewHandle.setExpand(itemExpListView);
+        ExpandableListViewHandle.setCollapse(itemExpListView);
+
+
+
 
 //        Log.i("PARAMS-", "-Params");
 //        HashMap<String, String> params = item103.params();
@@ -348,47 +389,55 @@ public class PumpControlCard extends AppCompatActivity {
 
 
 
-        final ExpandableListView expListView = (ExpandableListView) findViewById(R.id.bnd_2020_pump_control_hidden_101_list_view);
-        // ImageButton
-        ImageButton imageButtonAdd = findViewById(R.id.bnd_2020_pump_control_hidden_101_button_add);
+//        final ExpandableListView expListView = (ExpandableListView) findViewById(R.id.bnd_2020_pump_control_hidden_101_list_view);
+//        // ImageButton
+//        ImageButton imageButtonAdd = findViewById(R.id.bnd_2020_pump_control_hidden_101_button_add);
+//
+//        // expListTitle
+//        final List<String> expListTitle = new ArrayList<>();
+//        //DataList
+//        dataList = new DataList();
+//
+//        // Dialog
+//        final Dialog defectTreeDialog = new Dialog(PumpControlCard.this, R.style.TableDialogStyle);
+//        defectTreeDialog.setContentView(R.layout.defect_tree_dialog);
+//
+//        final String[] defect_tree_array_meh_defect = new String[]{"Скол", "Задир", "Трещина", "Риска"};
+//
+//        // adapter for spinner
+//        final ArrayAdapter<String> defect_tree_meh_defect_adapter  =  new  ArrayAdapter<String>(
+//                this, android.R.layout.simple_list_item_1, defect_tree_array_meh_defect);
+//
+//        // Spinner Dialog
+//        final Spinner spinnerDefectTreeDialog = defectTreeDialog.findViewById(R.id.defect_tree_dialog_spinner);
+//        // Button Dialog
+//        Button buttonDefectTreeDialog = defectTreeDialog.findViewById(R.id.defect_tree_dialog_button_ok);
+//        // Set Adapter For Spinner
+//        spinnerDefectTreeDialog.setAdapter(defect_tree_meh_defect_adapter);
+//        //
+//        buttonDefectTreeDialog.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                String title = spinnerDefectTreeDialog.getSelectedItem().toString();
+//                addViewToAdapter(expListView, expListTitle, title);
+//                defectTreeDialog.cancel();
+//                setListViewHeightBasedOnItems(expListView);
+//            }
+//        });
 
-        //DataList
-        final List<String> expListTitle = new ArrayList<>();
-        dataList = new DataList();
+//        imageButtonAdd.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                defectTreeDialog.show();
+//            }
+//        });
 
-        // Dialog
-        final Dialog defectTreeDialog = new Dialog(PumpControlCard.this, R.style.TableDialogStyle);
-        defectTreeDialog.setContentView(R.layout.defect_tree_dialog);
 
-        final String[] defect_tree_array_meh_defect = new String[]{"Скол", "Задир", "Трещина", "Риска"};
 
-        // adapter
-        final ArrayAdapter<String> defect_tree_meh_defect_adapter  =  new  ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, defect_tree_array_meh_defect);
 
-        // Spinner Dialog
-        final Spinner spinnerDefectTreeDialog = defectTreeDialog.findViewById(R.id.defect_tree_dialog_spinner);
-        // Button Dialog
-        Button buttonDefectTreeDialog = defectTreeDialog.findViewById(R.id.defect_tree_dialog_button_ok);
-        // Set Adapter For Spinner
-        spinnerDefectTreeDialog.setAdapter(defect_tree_meh_defect_adapter);
-        //
-        buttonDefectTreeDialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String title = spinnerDefectTreeDialog.getSelectedItem().toString();
-                addViewToAdapter(expListView, expListTitle, title);
-                defectTreeDialog.cancel();
-                setListViewHeightBasedOnItems(expListView);
-            }
-        });
 
-        imageButtonAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                defectTreeDialog.show();
-            }
-        });
+
+
 
         RadioGroup radioGroup_101 = findViewById(R.id.bnd_2020_pump_control_id_101);
         final LinearLayout hidden_101 = findViewById(R.id.bnd_2020_pump_control_hidden_101);
@@ -407,27 +456,11 @@ public class PumpControlCard extends AppCompatActivity {
                 }
             }
         });
-        expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
 
-            @Override
-            public void onGroupExpand(int groupPosition) {
-                setListViewHeightBasedOnItems(expListView);
-            }
-        });
-        expListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
 
-            @Override
-            public void onGroupCollapse(int groupPosition) {
-                setListViewHeightBasedOnItems(expListView);
-            }
-        });
-        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v,
-                                        int groupPosition, int childPosition, long id) {
-                return false;
-            }
-        });
+
+
+
 
         RadioGroup radioGroup_102 = findViewById(R.id.bnd_2020_pump_control_id_102);
         final LinearLayout hidden_102 = findViewById(R.id.bnd_2020_pump_control_hidden_102);
@@ -691,22 +724,5 @@ public class PumpControlCard extends AppCompatActivity {
         }
     }
 
-    public void addViewToAdapter(ExpandableListView listView, List<String> listTitle, String title){
-        dataList.setTitle(title);
-        HashMap<String, List<String>> expListDetail = dataList.loadData();
-        listTitle.add(title);
-
-        ExpandableListAdapter expListAdapter = new CustomListAdapter(this, listTitle, expListDetail);
-        listView.setAdapter(expListAdapter);
-    }
-
-    public void removeViewToAdapter(ExpandableListView listView, List<String> listTitle, String title){
-        dataList.setTitle(title);
-        HashMap<String, List<String>> expListDetail = dataList.loadData();
-        listTitle.add(title);
-
-        ExpandableListAdapter expListAdapter = new CustomListAdapter(this, listTitle, expListDetail);
-        listView.setAdapter(expListAdapter);
-    }
 
 }

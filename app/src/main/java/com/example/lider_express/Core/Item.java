@@ -1,6 +1,7 @@
 package com.example.lider_express.Core;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.Button;
@@ -46,6 +47,8 @@ public class Item {
     // for Defect Tree
     private int parentId;
     private int referenceId;
+
+
 
     public HashMap<String, String> params(){
         HashMap<String, String> params = new HashMap<>();
@@ -115,21 +118,43 @@ public class Item {
     }
 
     /**
-     * Constructor for Spinner, ListView
-     * @param activity - Parent Activity
+     * Constructor for TextView, EditText, Button, RadioGroup
+     * @param dialog
      * @param resourceId - Id View
      * @param isGiven - flag, that give info about this View(This View have data, that need write to DataBase)
-     * @param adapter
      */
-    public Item(Activity activity, int resourceId, boolean isGiven, Adapter adapter){
+    public Item(Activity activity, Dialog dialog, int resourceId, boolean isGiven){
         this.activity = activity;
         this.resourceId = resourceId;
         this.isGiven = isGiven;
-        this.view = activity.findViewById(resourceId);
-        this.adapter = adapter;
+        this.view = dialog.findViewById(resourceId);
+        view.setVisibility(visibility);
 
         type = Types.getTypeView(view);
+
+        HashMap<String, String> description = ParseResourceId.parse(activity, dialog, resourceId);
+        location = description.get(location);
+        section = description.get(section);
+        form = description.get(form);
+        id = description.get(id);
     }
+
+//    /**
+//     * Constructor for Spinner, ListView
+//     * @param activity - Parent Activity
+//     * @param resourceId - Id View
+//     * @param isGiven - flag, that give info about this View(This View have data, that need write to DataBase)
+//     * @param adapter
+//     */
+//    public Item(Activity activity, int resourceId, boolean isGiven, Adapter adapter){
+//        this.activity = activity;
+//        this.resourceId = resourceId;
+//        this.isGiven = isGiven;
+//        this.view = activity.findViewById(resourceId);
+//        this.adapter = adapter;
+//
+//        type = Types.getTypeView(view);
+//    }
 
     // Set view values like DB
     public void setState(String value){
