@@ -9,9 +9,6 @@ import java.util.ArrayList;
 
 public class SpinnerHandler{
 
-
-
-
     public static String getValueSelectedItem(Spinner spinner){
         return spinner.getItemAtPosition(spinner.getSelectedItemPosition()).toString();
     }

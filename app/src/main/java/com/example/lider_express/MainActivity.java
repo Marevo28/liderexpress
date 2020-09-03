@@ -32,6 +32,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.lider_express.DataBase.DatabaseHelper;
+import com.example.lider_express.Tools.BND.ContainersControlCard;
 import com.example.lider_express.Tools.BND.PumpControlCard;
 import com.example.lider_express.Svodnaya.KartaKontrolyaSPPK;
 import com.example.lider_express.Svodnaya.KartaKontrolyaYDE;
@@ -40,11 +41,12 @@ import com.example.lider_express.Instruments.Menu_tools;
 import com.example.lider_express.Сamera2.MainCamera2;
 import com.google.android.material.navigation.NavigationView;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     public static final String APP_FILES = "mysettings";
     public static final String APP_ZAKAZCHIK = "Zakazchik";
-    public static final String APP_CAMERA = "Camera";
     private SharedPreferences mSettings;
     static SharedPreferences mPrefs;
 
@@ -52,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public static SQLiteDatabase mDb;
 
     private static Context context;
-    private static AppCompatActivity appCompatActivity;
 
     private static int mDisplayWidth;
     private static int mDisplayHeight;
@@ -70,33 +71,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private TextView textViewTypeTU;
     private TextView textViewSkvazhina;
     private TextView textViewNameTu;
+
     private static String position;
     private static String Papka;
-    private static String NameTU;
-    private String Zakazchik;
-
     private String typeTU;
-    private String Card;
-    private int intPosition;
-    public String formattedDate;
-
-
-    public static DatabaseHelper getDBHelper() {
-        return mDBHelper;
-    }
-
-    public static Context getContext() {
-        return context;
-    }
-
-    public static AppCompatActivity getAppCompatActivity() {
-        return appCompatActivity;
-    }
-
-    public static SQLiteDatabase getSQLiteDatabase() {
-        return mDb;
-    }
-
+    private static String NameTU;
+    // Bashneft, Megion and other
+    private String location = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,7 +93,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-
 
         editTextPosition = findViewById(R.id.edit_text_position);
         btnPosition = (Button) findViewById(R.id.btn_position);
@@ -174,62 +154,43 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 //сквозной номер
                 position = editTextPosition.getText().toString();
 
-                if (position.length() > 0) {
-                    intPosition = Integer.parseInt(position);
-                    Zakazchik = mSettings.getString(APP_ZAKAZCHIK, "Zakazchik");
-
-                    switch (Zakazchik) {
+                // StringUtils.isBlank("") = true
+                // StringUtils.isBlank(" ") = true
+                // StringUtils.isBlank(null) = true
+                if (!StringUtils.isBlank(position)) {
+                    int number = Integer.parseInt(position);
+                    // Defining an object
+                    location = mSettings.getString(APP_ZAKAZCHIK, "Zakazchik");
+                    switch (location) {
                         case "Башнефть 2020":
-                            Zakazchik = Shared.nameBND2020;
-                            break;
-                        default:
-                            Zakazchik = "No";
+                            location = Shared.nameBND2020;
                             break;
                     }
-                    if (Zakazchik != "No") {
-                        if (Integer.parseInt(position) != 0 && position.length() != 0) {
-                            long rowCount = DatabaseUtils.queryNumEntries(mDb, Zakazchik);
-                            if (Integer.parseInt(position) > rowCount) {
-                                displayMessage(getBaseContext(), "Обьект не существует!");
-                            } else {
-                                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                                imm.hideSoftInputFromWindow(btnPosition.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 
-                                setEnabledButton(true);
+                    if (!StringUtils.isBlank(location)) {
+                        long rowCount = DatabaseUtils.queryNumEntries(mDb, location);
+                        if (number > 0 || number < rowCount) {
+                            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(btnPosition.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 
-                                Cursor cursor = mDb.query(Zakazchik, null, "POSITION = ?", new String[]{position},
-                                        null, null, null);
-                                cursor.moveToFirst();
+                            setEnabledButton(true);
 
-                                textViewTypeTU.setText(cursor.getString(2));//Тип оборудования
-                                typeTU = cursor.getString(2);
-                                textViewNameTu.setText(cursor.getString(7));
-                                NameTU = cursor.getString(7);
-                                textViewUprav.setText(cursor.getString(5));// Управление
-                                textViewCeh.setText(cursor.getString(14));//Цех
-                                textViewObject.setText(cursor.getString(15));//объект
-                                textViewSkvazhina.setText(cursor.getString(16));//скважина
+                            Cursor cursor = mDb.query(location, null, "POSITION = ?", new String[]{position},
+                                    null, null, null);
+                            cursor.moveToFirst();
 
-                                /**
-                                String blockUDE = "Блок реагентов (УДЭ)";
-                                String pump = "Насос";
-                                String SPPK = "СППК";
+                            textViewTypeTU.setText(cursor.getString(2));//Тип оборудования
+                            typeTU = cursor.getString(2);
+                            textViewNameTu.setText(cursor.getString(7));
+                            NameTU = cursor.getString(7);
+                            textViewUprav.setText(cursor.getString(5));// Управление
+                            textViewCeh.setText(cursor.getString(14));//Цех
+                            textViewObject.setText(cursor.getString(15));//объект
+                            textViewSkvazhina.setText(cursor.getString(16));//скважина
 
-                                if (blockUDE.equals(cursor.getString(2))) {
-                                    btnKarta.setEnabled(true);
-                                } else if (pump.equals(cursor.getString(2))) {
-                                    btnKarta.setEnabled(true);
-                                } else if (SPPK.equals(cursor.getString(2))) {
-                                    btnKarta.setEnabled(true);
-                                } else {
-                                    btnKarta.setEnabled(false);
-                                }
-                                 **/
-
-                                cursor.close();
-                            }
+                            cursor.close();
                         } else {
-                            displayMessage(getBaseContext(), "Выберите существующую позицию или обновите базу!");
+                            displayMessage(getBaseContext(), "Выберите позицию или обновите базу!");
                         }
                     } else {
                         displayMessage(getBaseContext(), "Выберите объект!");
@@ -240,78 +201,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return listener;
     }
 
-    View.OnClickListener listenerBtnCardControl() {
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                switch (typeTU) {
-                    case "Насос":
-                        /** ИСПРАВИТЬ!!!!!!!
-                         * ДЛЯ КАРТЫ НАСОСА ОТДЕЛЬНЫЙ КЛАСС!!!
-                         * ВРЕМЕННО!!!!
-                         */
-                        Intent IntentCardPump = new Intent(MainActivity.this, PumpControlCard.class);
-                        IntentCardPump.putExtra("position", position);
-                        IntentCardPump.putExtra("Zakazchik", getNameZakaz(Zakazchik));
-                        startIntent(IntentCardPump);
-                        break;
-                    case "Блок реагентов (УДЭ)":
-                        Intent IntentKartaKontrolyaUde = new Intent(MainActivity.this, KartaKontrolyaYDE.class);
-                        IntentKartaKontrolyaUde.putExtra("position", position);
-                        IntentKartaKontrolyaUde.putExtra("Zakazchik", getNameZakaz(Zakazchik));
-                        startIntent(IntentKartaKontrolyaUde);
-                        break;
-                    case "СППК":
-                        Intent IntentKartaKontrolyaSppk = new Intent(MainActivity.this, KartaKontrolyaSPPK.class);
-                        IntentKartaKontrolyaSppk.putExtra("position", position);
-                        IntentKartaKontrolyaSppk.putExtra("Zakazchik", getNameZakaz(Zakazchik));
-                        startIntent(IntentKartaKontrolyaSppk);
-                        break;
-                    default:
-                        displayMessage(getBaseContext(), "Выберите существующую позицию или обновите базу!");
-                }
-
-            }
-        };
-        return listener;
+    public static DatabaseHelper getDBHelper() {
+        return mDBHelper;
     }
 
-    View.OnClickListener listenerBtnPhotoObject(String folder) {
-        View.OnClickListener listener = null;
+    public static Context getContext() {
+        return context;
+    }
 
-        if (folder == "Фото"){
-            listener = new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent IntentPhoto = new Intent(MainActivity.this, MainCamera2.class);//кнопка вызова Фото документов
-                    Papka = "Фото";
-                    startActivity(IntentPhoto);
-                }
-            };
-        }
-
-        if (folder == "Документы"){
-            listener = new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent IntentPhoto = new Intent(MainActivity.this, MainCamera2.class);//кнопка вызова Фото документов
-                    Papka = "Документы";
-                    startActivity(IntentPhoto);
-                }
-            };
-        }
-
-        if (folder == "Контроль"){
-            listener = new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent IntentPhoto = new Intent(MainActivity.this, MainCamera2.class);//кнопка вызова Фото документов
-                    Papka = "Контроль";
-                    startActivity(IntentPhoto);
-                }
-            };
-        }
-        return listener;
+    public static SQLiteDatabase getSQLiteDatabase() {
+        return mDb;
     }
 
     public static boolean getFirstRun() {
@@ -326,7 +225,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public void startIntent(Intent intent) {
         intent.putExtra("position", position);
-        intent.putExtra("Zakazchik", Zakazchik);
+        intent.putExtra("Zakazchik", location);
         startActivity(intent);
     }
 
@@ -369,6 +268,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return mDisplayHeight;
     }
 
+    @Deprecated
     public String getNameZakaz(String str) {
         String zakazchik = "def";
         switch (str) {
@@ -378,8 +278,84 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case "Megion2019":
                 zakazchik = "Мегион_2019";
                 break;
+            default:
+
         }
         return zakazchik;
+    }
+
+    View.OnClickListener listenerBtnCardControl() {
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (typeTU) {
+                    case "Насос":
+                        Intent IntentCardPump = new Intent(MainActivity.this, PumpControlCard.class);
+                        IntentCardPump.putExtra("position", position);
+                        startIntent(IntentCardPump);
+                        break;
+                    case "Сосуд":
+                        Intent IntentCardContainer = new Intent(MainActivity.this, ContainersControlCard.class);
+                        IntentCardContainer.putExtra("position", position);
+                        startIntent(IntentCardContainer);
+                        break;
+
+                    case "Блок реагентов (УДЭ)":
+                        Intent IntentKartaKontrolyaUde = new Intent(MainActivity.this, KartaKontrolyaYDE.class);
+                        IntentKartaKontrolyaUde.putExtra("position", position);
+                        IntentKartaKontrolyaUde.putExtra("Zakazchik", getNameZakaz(location));
+                        startIntent(IntentKartaKontrolyaUde);
+                        break;
+                    case "СППК":
+                        Intent IntentKartaKontrolyaSppk = new Intent(MainActivity.this, KartaKontrolyaSPPK.class);
+                        IntentKartaKontrolyaSppk.putExtra("position", position);
+                        IntentKartaKontrolyaSppk.putExtra("Zakazchik", getNameZakaz(location));
+                        startIntent(IntentKartaKontrolyaSppk);
+                        break;
+                    default:
+                        displayMessage(getBaseContext(), "Допустимые типы ТУ: Насос, Сосуд, Блок реагентов (УДЭ), СППК");
+                }
+            }
+        };
+        return listener;
+    }
+
+    View.OnClickListener listenerBtnPhotoObject(String folder) {
+        View.OnClickListener listener = null;
+
+        if (folder == "Фото") {
+            listener = new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent IntentPhoto = new Intent(MainActivity.this, MainCamera2.class);//кнопка вызова Фото документов
+                    Papka = "Фото";
+                    startActivity(IntentPhoto);
+                }
+            };
+        }
+
+        if (folder == "Документы") {
+            listener = new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent IntentPhoto = new Intent(MainActivity.this, MainCamera2.class);//кнопка вызова Фото документов
+                    Papka = "Документы";
+                    startActivity(IntentPhoto);
+                }
+            };
+        }
+
+        if (folder == "Контроль") {
+            listener = new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent IntentPhoto = new Intent(MainActivity.this, MainCamera2.class);//кнопка вызова Фото документов
+                    Papka = "Контроль";
+                    startActivity(IntentPhoto);
+                }
+            };
+        }
+        return listener;
     }
 
     @Override

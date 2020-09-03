@@ -66,7 +66,6 @@ import java.util.List;
 
 public class PumpControlCard extends AppCompatActivity {
 
-    public static final String POSITION = "Position";
     public DatabaseHelper mDBHelper;
     public SQLiteDatabase mDb;
     public DataList dataList;
@@ -315,269 +314,262 @@ public class PumpControlCard extends AppCompatActivity {
 
 
 
-
-        Item item101 = new Item(this, R.id.bnd2020_pump_defectTree_101, false);
-        Item item102 = new Item(this, R.id.bnd2020_pump_defectTree_102, false, View.GONE);
-        RadioGroupHandler.setActionSingleHidden(this, item101, item102, new String[]{"Нет"});
-
-        Item item103 = new Item(this, R.id.bnd2020_pump_defectTree_103, false);
-        Item item104 = new Item(this, R.id.bnd2020_pump_defectTree_104, false, View.GONE);
-        TextViewHandler.setActionSingleHidden(item103, item104);
-
-        DefectTree defectTree1 = new DefectTree(this, this);
-        ArrayList<String> properties1 = new ArrayList<>();
-        properties1.add("Продольный");
-        properties1.add("Поперечный");
-        properties1.add("Глубина");
-        defectTree1.addSingleConformity("Скол", properties1);
-        defectTree1.addSingleConformity("Задир", properties1);
-        defectTree1.addSingleConformity("Трещина", properties1);
-        defectTree1.addSingleConformity("Риска", properties1);
-
-        defectTree1.customizeSingleDialog();
-
-        Item ItemSpinnerDefectTreeDialog = new Item(this, defectTree1.getDialogAddProperty(), R.id.defect_tree_dialog_spinner, false);
-        final ArrayAdapter<String> adapter1  =  new  ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, defectTree1.getItemsForSpinner());
-        ((Spinner) ItemSpinnerDefectTreeDialog.getView()).setAdapter(adapter1);
-
-        defectTree1.setSpinnerLevel1(((Spinner) ItemSpinnerDefectTreeDialog.getView()));
-
-        Item itemButtonAdd = new Item(this, R.id.bnd_2020_pump_control_hidden_101_button_add, false);
-        ButtonHandler.setActionShowDialog(itemButtonAdd, defectTree1);
-
-        // Exp List View Meh defects Corpus
-        Item itemExpListView = new Item(this, R.id.bnd_2020_pump_control_hidden_101_list_view, false);
-
-        Item ItemButtonDefectTreeDialog = new Item(this, defectTree1.getDialogAddProperty(), R.id.defect_tree_dialog_button_ok, false);
-
-        ButtonHandler.setActionCancelDialog(ItemButtonDefectTreeDialog, itemExpListView, defectTree1);
-
-        ExpandableListViewHandle.setExpand(itemExpListView);
-        ExpandableListViewHandle.setCollapse(itemExpListView);
-
-
-
-
-//        Log.i("PARAMS-", "-Params");
-//        HashMap<String, String> params = item103.params();
-//        for(String key: params.keySet()){
-//            Log.i("Message", key + ": " +params.get(key));
-//        }
-
-//        Item mehDefects = new Item(this, R.id.bnd_2020_pump_control_id_101, false, "bnd2020", "defectTree");
-//        Item mehDefectsLayoutHidden = new Item(this, R.id.bnd_2020_pump_control_hidden_101, false, "bnd2020", "defectTree");
-//        RadioGroupHandler.setActionSingleHidden(this, mehDefects, mehDefectsLayoutHidden, new String[]{"Нет"});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /**  ---------------  ВРЕМЕННО --------------- **/
-        /**  ---------------  ВРЕМЕННО --------------- **/
-        /**  ---------------  ВРЕМЕННО --------------- **/
-
-
-
-//        final ExpandableListView expListView = (ExpandableListView) findViewById(R.id.bnd_2020_pump_control_hidden_101_list_view);
-//        // ImageButton
-//        ImageButton imageButtonAdd = findViewById(R.id.bnd_2020_pump_control_hidden_101_button_add);
 //
-//        // expListTitle
-//        final List<String> expListTitle = new ArrayList<>();
-//        //DataList
-//        dataList = new DataList();
+//        Item item101 = new Item(this, R.id.bnd2020_pump_defectTree_101, false);
+//        Item item102 = new Item(this, R.id.bnd2020_pump_defectTree_102, false, View.GONE);
+//        RadioGroupHandler.setActionSingleHidden(this, item101, item102, new String[]{"Нет"});
 //
-//        // Dialog
-//        final Dialog defectTreeDialog = new Dialog(PumpControlCard.this, R.style.TableDialogStyle);
-//        defectTreeDialog.setContentView(R.layout.defect_tree_dialog);
+//        Item item103 = new Item(this, R.id.bnd2020_pump_defectTree_103, false);
+//        Item item104 = new Item(this, R.id.bnd2020_pump_defectTree_104, false, View.GONE);
+//        TextViewHandler.setActionSingleHidden(item103, item104);
 //
-//        final String[] defect_tree_array_meh_defect = new String[]{"Скол", "Задир", "Трещина", "Риска"};
+//        DefectTree defectTree1 = new DefectTree(this, this);
+//        ArrayList<String> properties1 = new ArrayList<>();
+//        properties1.add("Продольный");
+//        properties1.add("Поперечный");
+//        properties1.add("Глубина");
+//        defectTree1.addSingleConformity("Скол", properties1);
+//        defectTree1.addSingleConformity("Задир", properties1);
+//        defectTree1.addSingleConformity("Трещина", properties1);
+//        defectTree1.addSingleConformity("Риска", properties1);
 //
-//        // adapter for spinner
-//        final ArrayAdapter<String> defect_tree_meh_defect_adapter  =  new  ArrayAdapter<String>(
-//                this, android.R.layout.simple_list_item_1, defect_tree_array_meh_defect);
+//        defectTree1.customizeSingleDialog();
 //
-//        // Spinner Dialog
-//        final Spinner spinnerDefectTreeDialog = defectTreeDialog.findViewById(R.id.defect_tree_dialog_spinner);
-//        // Button Dialog
-//        Button buttonDefectTreeDialog = defectTreeDialog.findViewById(R.id.defect_tree_dialog_button_ok);
-//        // Set Adapter For Spinner
-//        spinnerDefectTreeDialog.setAdapter(defect_tree_meh_defect_adapter);
-//        //
-//        buttonDefectTreeDialog.setOnClickListener(new View.OnClickListener() {
+//        Item ItemSpinnerDefectTreeDialog = new Item(this, defectTree1.getDialogAddProperty(), R.id.defect_tree_dialog_spinner, false);
+//        final ArrayAdapter<String> adapter1  =  new  ArrayAdapter<String>(
+//                this, android.R.layout.simple_list_item_1, defectTree1.getItemsForSpinner());
+//        ((Spinner) ItemSpinnerDefectTreeDialog.getView()).setAdapter(adapter1);
+//
+//        defectTree1.setSpinnerLevel1(((Spinner) ItemSpinnerDefectTreeDialog.getView()));
+//
+//        Item itemButtonAdd = new Item(this, R.id.bnd_2020_pump_control_hidden_101_button_add, false);
+//        ButtonHandler.setActionShowDialog(itemButtonAdd, defectTree1);
+//
+//        // Exp List View Meh defects Corpus
+//        Item itemExpListView = new Item(this, R.id.bnd_2020_pump_control_hidden_101_list_view, false);
+//
+//        Item ItemButtonDefectTreeDialog = new Item(this, defectTree1.getDialogAddProperty(), R.id.defect_tree_dialog_button_ok, false);
+//
+//        ButtonHandler.setActionCancelDialog(ItemButtonDefectTreeDialog, itemExpListView, defectTree1);
+//
+//        ExpandableListViewHandle.setExpand(itemExpListView);
+//        ExpandableListViewHandle.setCollapse(itemExpListView);
+//
+//
+//
+//
+////        Log.i("PARAMS-", "-Params");
+////        HashMap<String, String> params = item103.params();
+////        for(String key: params.keySet()){
+////            Log.i("Message", key + ": " +params.get(key));
+////        }
+//
+////        Item mehDefects = new Item(this, R.id.bnd_2020_pump_control_id_101, false, "bnd2020", "defectTree");
+////        Item mehDefectsLayoutHidden = new Item(this, R.id.bnd_2020_pump_control_hidden_101, false, "bnd2020", "defectTree");
+////        RadioGroupHandler.setActionSingleHidden(this, mehDefects, mehDefectsLayoutHidden, new String[]{"Нет"});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//        /**  ---------------  ВРЕМЕННО --------------- **/
+//        /**  ---------------  ВРЕМЕННО --------------- **/
+//        /**  ---------------  ВРЕМЕННО --------------- **/
+//
+//
+//
+////        final ExpandableListView expListView = (ExpandableListView) findViewById(R.id.bnd_2020_pump_control_hidden_101_list_view);
+////        // ImageButton
+////        ImageButton imageButtonAdd = findViewById(R.id.bnd_2020_pump_control_hidden_101_button_add);
+////
+////        // expListTitle
+////        final List<String> expListTitle = new ArrayList<>();
+////        //DataList
+////        dataList = new DataList();
+////
+////        // Dialog
+////        final Dialog defectTreeDialog = new Dialog(PumpControlCard.this, R.style.TableDialogStyle);
+////        defectTreeDialog.setContentView(R.layout.defect_tree_dialog);
+////
+////        final String[] defect_tree_array_meh_defect = new String[]{"Скол", "Задир", "Трещина", "Риска"};
+////
+////        // adapter for spinner
+////        final ArrayAdapter<String> defect_tree_meh_defect_adapter  =  new  ArrayAdapter<String>(
+////                this, android.R.layout.simple_list_item_1, defect_tree_array_meh_defect);
+////
+////        // Spinner Dialog
+////        final Spinner spinnerDefectTreeDialog = defectTreeDialog.findViewById(R.id.defect_tree_dialog_spinner);
+////        // Button Dialog
+////        Button buttonDefectTreeDialog = defectTreeDialog.findViewById(R.id.defect_tree_dialog_button_ok);
+////        // Set Adapter For Spinner
+////        spinnerDefectTreeDialog.setAdapter(defect_tree_meh_defect_adapter);
+////        //
+////        buttonDefectTreeDialog.setOnClickListener(new View.OnClickListener() {
+////            @Override
+////            public void onClick(View view) {
+////                String title = spinnerDefectTreeDialog.getSelectedItem().toString();
+////                addViewToAdapter(expListView, expListTitle, title);
+////                defectTreeDialog.cancel();
+////                setListViewHeightBasedOnItems(expListView);
+////            }
+////        });
+//
+////        imageButtonAdd.setOnClickListener(new View.OnClickListener() {
+////            @Override
+////            public void onClick(View view) {
+////                defectTreeDialog.show();
+////            }
+////        });
+//
+//
+//
+//
+//
+//
+//
+//
+//        RadioGroup radioGroup_101 = findViewById(R.id.bnd_2020_pump_control_id_101);
+//        final LinearLayout hidden_101 = findViewById(R.id.bnd_2020_pump_control_hidden_101);
+//        final LinearLayout hidden_101_linear_list_view = findViewById(R.id.bnd_2020_pump_control_hidden_101_linear_ist_view);
+//
+//        radioGroup_101.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 //            @Override
-//            public void onClick(View view) {
-//                String title = spinnerDefectTreeDialog.getSelectedItem().toString();
-//                addViewToAdapter(expListView, expListTitle, title);
-//                defectTreeDialog.cancel();
-//                setListViewHeightBasedOnItems(expListView);
+//            public void onCheckedChanged(RadioGroup group, int checkedId) {
+//                switch (checkedId) {
+//                    case R.id.bnd_2020_pump_control_id_101_1:
+//                        hidden_101.setVisibility(View.VISIBLE);
+//                        break;
+//                    case R.id.bnd_2020_pump_control_id_101_2:
+//                        hidden_101.setVisibility(View.GONE);
+//                        break;
+//                }
 //            }
 //        });
-
-//        imageButtonAdd.setOnClickListener(new View.OnClickListener() {
+//
+//        RadioGroup radioGroup_102 = findViewById(R.id.bnd_2020_pump_control_id_102);
+//        final LinearLayout hidden_102 = findViewById(R.id.bnd_2020_pump_control_hidden_102);
+//        final LinearLayout hidden_102_1 = findViewById(R.id.bnd_2020_pump_control_hidden_102_1);
+//        final LinearLayout hidden_102_2 = findViewById(R.id.bnd_2020_pump_control_hidden_102_2);
+//        final LinearLayout hidden_102_3 = findViewById(R.id.bnd_2020_pump_control_hidden_102_3);
+//        final LinearLayout hidden_103 = findViewById(R.id.bnd_2020_pump_control_hidden_103);
+//
+//        final String[] defectTreeLocalArray = new String[]{"Пятнами, более 50", "Язвенная, от 2 до 50 мм", "Точечная (Питтинг) до 2 мм",
+//                "Щелевая", "Сквозная", "Межкристаллитная"};
+//
+//        final ArrayAdapter<String>  defectTreeLocal = new ArrayAdapter<String>(
+//                this, android.R.layout.simple_list_item_1, defectTreeLocalArray);
+//
+//        final Spinner spinnerKorozLocal = findViewById(R.id.bnd_2020_pump_control_hidden_102_spinner);
+//        spinnerKorozLocal.setAdapter(defectTreeLocal);
+//
+//        spinnerKorozLocal.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
 //            @Override
-//            public void onClick(View view) {
-//                defectTreeDialog.show();
+//            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+//                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Пятнами, более 50"){
+//                    hidden_102_1.setVisibility(View.VISIBLE);
+//                    hidden_102_2.setVisibility(View.GONE);
+//                    hidden_102_3.setVisibility(View.GONE);
+//                }
+//                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Язвенная, от 2 до 50 мм"){
+//                    hidden_102_1.setVisibility(View.GONE);
+//                    hidden_102_2.setVisibility(View.VISIBLE);
+//                    hidden_102_3.setVisibility(View.GONE);
+//                }
+//                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Точечная (Питтинг) до 2 мм"){
+//                    hidden_102_1.setVisibility(View.GONE);
+//                    hidden_102_2.setVisibility(View.VISIBLE);
+//                    hidden_102_3.setVisibility(View.GONE);
+//                }
+//                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Щелевая"){
+//                    hidden_102_1.setVisibility(View.VISIBLE);
+//                    hidden_102_2.setVisibility(View.GONE);
+//                    hidden_102_3.setVisibility(View.GONE);
+//                }
+//                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Сквозная"){
+//                    hidden_102_1.setVisibility(View.GONE);
+//                    hidden_102_2.setVisibility(View.GONE);
+//                    hidden_102_3.setVisibility(View.VISIBLE);
+//                }
+//                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Межкристаллитная"){
+//                    hidden_102_1.setVisibility(View.GONE);
+//                    hidden_102_2.setVisibility(View.GONE);
+//                    hidden_102_3.setVisibility(View.VISIBLE);
+//                }
+//            }
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parentView) {
 //            }
 //        });
-
-
-
-
-
-
-
-
-        RadioGroup radioGroup_101 = findViewById(R.id.bnd_2020_pump_control_id_101);
-        final LinearLayout hidden_101 = findViewById(R.id.bnd_2020_pump_control_hidden_101);
-        final LinearLayout hidden_101_linear_list_view = findViewById(R.id.bnd_2020_pump_control_hidden_101_linear_ist_view);
-
-        radioGroup_101.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId) {
-                    case R.id.bnd_2020_pump_control_id_101_1:
-                        hidden_101.setVisibility(View.VISIBLE);
-                        break;
-                    case R.id.bnd_2020_pump_control_id_101_2:
-                        hidden_101.setVisibility(View.GONE);
-                        break;
-                }
-            }
-        });
-
-
-
-
-
-
-        RadioGroup radioGroup_102 = findViewById(R.id.bnd_2020_pump_control_id_102);
-        final LinearLayout hidden_102 = findViewById(R.id.bnd_2020_pump_control_hidden_102);
-        final LinearLayout hidden_102_1 = findViewById(R.id.bnd_2020_pump_control_hidden_102_1);
-        final LinearLayout hidden_102_2 = findViewById(R.id.bnd_2020_pump_control_hidden_102_2);
-        final LinearLayout hidden_102_3 = findViewById(R.id.bnd_2020_pump_control_hidden_102_3);
-        final LinearLayout hidden_103 = findViewById(R.id.bnd_2020_pump_control_hidden_103);
-
-        final String[] defectTreeLocalArray = new String[]{"Пятнами, более 50", "Язвенная, от 2 до 50 мм", "Точечная (Питтинг) до 2 мм",
-                "Щелевая", "Сквозная", "Межкристаллитная"};
-
-        final ArrayAdapter<String>  defectTreeLocal = new ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, defectTreeLocalArray);
-
-        final Spinner spinnerKorozLocal = findViewById(R.id.bnd_2020_pump_control_hidden_102_spinner);
-        spinnerKorozLocal.setAdapter(defectTreeLocal);
-
-        spinnerKorozLocal.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Пятнами, более 50"){
-                    hidden_102_1.setVisibility(View.VISIBLE);
-                    hidden_102_2.setVisibility(View.GONE);
-                    hidden_102_3.setVisibility(View.GONE);
-                }
-                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Язвенная, от 2 до 50 мм"){
-                    hidden_102_1.setVisibility(View.GONE);
-                    hidden_102_2.setVisibility(View.VISIBLE);
-                    hidden_102_3.setVisibility(View.GONE);
-                }
-                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Точечная (Питтинг) до 2 мм"){
-                    hidden_102_1.setVisibility(View.GONE);
-                    hidden_102_2.setVisibility(View.VISIBLE);
-                    hidden_102_3.setVisibility(View.GONE);
-                }
-                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Щелевая"){
-                    hidden_102_1.setVisibility(View.VISIBLE);
-                    hidden_102_2.setVisibility(View.GONE);
-                    hidden_102_3.setVisibility(View.GONE);
-                }
-                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Сквозная"){
-                    hidden_102_1.setVisibility(View.GONE);
-                    hidden_102_2.setVisibility(View.GONE);
-                    hidden_102_3.setVisibility(View.VISIBLE);
-                }
-                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Межкристаллитная"){
-                    hidden_102_1.setVisibility(View.GONE);
-                    hidden_102_2.setVisibility(View.GONE);
-                    hidden_102_3.setVisibility(View.VISIBLE);
-                }
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-            }
-        });
-
-
-
-        final String[] defectTreeSolidArray = new String[]{"Равномерная", "Неравномерная", "Избирательная"};
-
-        final ArrayAdapter<String> defectTreeSolid  =  new  ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, defectTreeSolidArray);
-
-        final Spinner spinnerSolid = findViewById(R.id.bnd_2020_pump_control_hidden_103_spinner);
-        spinnerSolid.setAdapter(defectTreeSolid);
-
-        radioGroup_102.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId) {
-                    case R.id.bnd_2020_pump_control_id_102_1:
-                        hidden_102.setVisibility(View.VISIBLE);
-                        hidden_103.setVisibility(View.GONE);
-                        break;
-                    case R.id.bnd_2020_pump_control_id_102_2:
-                        hidden_102.setVisibility(View.GONE);
-                        hidden_103.setVisibility(View.VISIBLE);
-                        break;
-                    case R.id.bnd_2020_pump_control_id_102_3:
-                        hidden_102.setVisibility(View.GONE);
-                        hidden_103.setVisibility(View.GONE);
-                        break;
-                }
-            }
-        });
-
-
-        final String[] defectTreeSoedArray = new String[]{"Включения", "Несплавление", "Непровар", "Наплыв", "Полость", "Пора", "Трещина", "Свищ"};
-
-        final ArrayAdapter<String>  defectTreeSoed  =  new  ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, defectTreeSoedArray);
-
-        final Spinner spinnerSoed = findViewById(R.id.bnd_2020_pump_control_spinner_104);
-        final LinearLayout hidden_104_1 = findViewById(R.id.bnd_2020_pump_control_hidden_104_1);
-        final LinearLayout hidden_104_2 = findViewById(R.id.bnd_2020_pump_control_hidden_104_2);
-
-        spinnerSoed.setAdapter(defectTreeSoed);
-
-        spinnerSoed.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                if(spinnerSoed.getItemAtPosition(position).toString() == "Свищ"){
-                    hidden_104_1.setVisibility(View.GONE);
-                    hidden_104_2.setVisibility(View.VISIBLE);
-                }else{
-                    hidden_104_1.setVisibility(View.VISIBLE);
-                    hidden_104_2.setVisibility(View.GONE);
-                }
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-            }
-        });
-
-        /**  ---------------  ВРЕМЕННО --------------- **/
-
-
+//
+//        final String[] defectTreeSolidArray = new String[]{"Равномерная", "Неравномерная", "Избирательная"};
+//
+//        final ArrayAdapter<String> defectTreeSolid  =  new  ArrayAdapter<String>(
+//                this, android.R.layout.simple_list_item_1, defectTreeSolidArray);
+//
+//        final Spinner spinnerSolid = findViewById(R.id.bnd_2020_pump_control_hidden_103_spinner);
+//        spinnerSolid.setAdapter(defectTreeSolid);
+//
+//        radioGroup_102.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(RadioGroup group, int checkedId) {
+//                switch (checkedId) {
+//                    case R.id.bnd_2020_pump_control_id_102_1:
+//                        hidden_102.setVisibility(View.VISIBLE);
+//                        hidden_103.setVisibility(View.GONE);
+//                        break;
+//                    case R.id.bnd_2020_pump_control_id_102_2:
+//                        hidden_102.setVisibility(View.GONE);
+//                        hidden_103.setVisibility(View.VISIBLE);
+//                        break;
+//                    case R.id.bnd_2020_pump_control_id_102_3:
+//                        hidden_102.setVisibility(View.GONE);
+//                        hidden_103.setVisibility(View.GONE);
+//                        break;
+//                }
+//            }
+//        });
+//
+//
+//        final String[] defectTreeSoedArray = new String[]{"Включения", "Несплавление", "Непровар", "Наплыв", "Полость", "Пора", "Трещина", "Свищ"};
+//
+//        final ArrayAdapter<String>  defectTreeSoed  =  new  ArrayAdapter<String>(
+//                this, android.R.layout.simple_list_item_1, defectTreeSoedArray);
+//
+//        final Spinner spinnerSoed = findViewById(R.id.bnd_2020_pump_control_spinner_104);
+//        final LinearLayout hidden_104_1 = findViewById(R.id.bnd_2020_pump_control_hidden_104_1);
+//        final LinearLayout hidden_104_2 = findViewById(R.id.bnd_2020_pump_control_hidden_104_2);
+//
+//        spinnerSoed.setAdapter(defectTreeSoed);
+//
+//        spinnerSoed.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+//                if(spinnerSoed.getItemAtPosition(position).toString() == "Свищ"){
+//                    hidden_104_1.setVisibility(View.GONE);
+//                    hidden_104_2.setVisibility(View.VISIBLE);
+//                }else{
+//                    hidden_104_1.setVisibility(View.VISIBLE);
+//                    hidden_104_2.setVisibility(View.GONE);
+//                }
+//            }
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parentView) {
+//            }
+//        });
+//
+//        /**  ---------------  ВРЕМЕННО --------------- **/
+//
+//
 
 
 

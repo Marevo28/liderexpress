@@ -48,8 +48,6 @@ public class Item {
     private int parentId;
     private int referenceId;
 
-
-
     public HashMap<String, String> params(){
         HashMap<String, String> params = new HashMap<>();
         params.put("Activity", activity.toString());
