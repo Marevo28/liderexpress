@@ -14,13 +14,9 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 
 import android.widget.EditText;
-import android.widget.ExpandableListAdapter;
-import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
@@ -28,7 +24,6 @@ import android.widget.ListAdapter;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -37,24 +32,13 @@ import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.lider_express.Core.DefectTree.DataList;
-import com.example.lider_express.Core.DefectTree.CustomListAdapter;
-import com.example.lider_express.Core.DefectTree.DefectTree;
-import com.example.lider_express.Core.Handlers.ButtonHandler;
-import com.example.lider_express.Core.Handlers.ExpandableListViewHandle;
-import com.example.lider_express.Core.Handlers.RadioGroupHandler;
-import com.example.lider_express.Core.Handlers.TextViewHandler;
-import com.example.lider_express.Core.Item;
 import com.example.lider_express.DataBase.DatabaseHelper;
 import com.example.lider_express.MainActivity;
 import com.example.lider_express.R;
 import com.example.lider_express.Shared;
 import com.example.lider_express.Core.Summary.Summary;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 /**
  * @author LeStat

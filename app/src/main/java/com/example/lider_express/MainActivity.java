@@ -17,8 +17,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Adapter;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,7 +37,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.lider_express.DataBase.DatabaseHelper;
-import com.example.lider_express.Tools.BND.ContainersControlCard;
+import com.example.lider_express.Tools.BND.ContainerControlCard;
 import com.example.lider_express.Tools.BND.PumpControlCard;
 import com.example.lider_express.Svodnaya.KartaKontrolyaSPPK;
 import com.example.lider_express.Svodnaya.KartaKontrolyaYDE;
@@ -58,8 +63,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private static int mDisplayWidth;
     private static int mDisplayHeight;
 
-    private EditText editTextPosition;
-    private Button btnPosition;
+    private EditText EntryField;
+    private ImageButton btnSearch;
 
     private Button btnCardControl;
     private Button btnPhotoObject;
@@ -71,7 +76,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private TextView textViewTypeTU;
     private TextView textViewSkvazhina;
     private TextView textViewNameTu;
+    private Spinner spinnerTypeTU;
 
+    private static String enteredValue;
     private static String position;
     private static String Papka;
     private String typeTU;
@@ -94,8 +101,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-        editTextPosition = findViewById(R.id.edit_text_position);
-        btnPosition = (Button) findViewById(R.id.btn_position);
+        EntryField = findViewById(R.id.edit_text_position);
+        btnSearch = (ImageButton) findViewById(R.id.btn_search);
         btnCardControl = (Button) findViewById(R.id.button_card_control);
         btnPhotoObject = (Button) findViewById(R.id.button_photo_object);
         btnPhotoDoc = (Button) findViewById(R.id.button_photo_doc);
@@ -107,6 +114,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         textViewCeh = (TextView) findViewById(R.id.text_view_ceh);
         textViewObject = (TextView) findViewById(R.id.text_view_object);
         textViewSkvazhina = (TextView) findViewById(R.id.text_view_skvajina);
+
+        spinnerTypeTU = (Spinner) findViewById(R.id.spinner_type_tu);
+
+        final String[] search = new String[]{"Позиция", "Тип ТУ", "Имя устройства"};
+
+        ArrayAdapter<String> searchAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, search);
+        searchAdapter.setDropDownViewResource(R.layout.custom_spinner_style);
+        spinnerTypeTU.setAdapter(searchAdapter);
 
         setEnabledButton(false);
 
@@ -139,66 +154,98 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         }
 
-        btnPosition.setOnClickListener(listenerBtnPosition()); // - btnpostion -
+        btnSearch.setOnClickListener(listenerBtnPosition()); // - btnpostion -
 
         btnCardControl.setOnClickListener(listenerBtnCardControl());
         btnPhotoObject.setOnClickListener(listenerBtnPhotoObject("Фото"));
         btnPhotoDoc.setOnClickListener(listenerBtnPhotoObject("Документы"));
         btnPhotoControl.setOnClickListener(listenerBtnPhotoObject("Контроль"));
+
+        spinnerTypeTU.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent,
+                                       View itemSelected, int selectedItemPosition, long selectedId) {
+                EntryField.setHint(search[selectedItemPosition]);
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
     }
 
     View.OnClickListener listenerBtnPosition() {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //сквозной номер
-                position = editTextPosition.getText().toString();
+
+                // Selected Object
+                location = mSettings.getString(APP_ZAKAZCHIK, "Zakazchik");
+                switch (location) {
+                    case "Башнефть 2020":
+                        location = Shared.nameBND2020;
+                        break;
+                }
+                // Selected field for search
+                String selectedSearch = spinnerTypeTU.getSelectedItem().toString();
+                String selection = null;
+                switch (selectedSearch){
+                    case "Позиция":
+                        selection = "POSITION";
+                        break;
+                    case "Тип ТУ":
+                        selection = "field2";
+                        break;
+                    case "Имя устройства":
+                        selection = "field7";
+                        break;
+                }
+                // Entry value in edit text
+                enteredValue = EntryField.getText().toString();
 
                 // StringUtils.isBlank("") = true
                 // StringUtils.isBlank(" ") = true
                 // StringUtils.isBlank(null) = true
-                if (!StringUtils.isBlank(position)) {
-                    int number = Integer.parseInt(position);
-                    // Defining an object
-                    location = mSettings.getString(APP_ZAKAZCHIK, "Zakazchik");
-                    switch (location) {
-                        case "Башнефть 2020":
-                            location = Shared.nameBND2020;
-                            break;
+                if (!StringUtils.isBlank(location) && !location.equals("Zakazchik")) {
+                    if(!StringUtils.isBlank(enteredValue)){
+                        search(location, selection, enteredValue);
+                    }else{
+                        displayMessage(getBaseContext(), "Строка поиска пуста, пожалуйста введите значение.");
                     }
+                }else{
+                    displayMessage(getBaseContext(), "Объект не выбран! Пожалуйста перейдите в настройки и выберите объект.");
+                }
 
-                    if (!StringUtils.isBlank(location)) {
-                        long rowCount = DatabaseUtils.queryNumEntries(mDb, location);
-                        if (number > 0 || number < rowCount) {
-                            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                            imm.hideSoftInputFromWindow(btnPosition.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-
-                            setEnabledButton(true);
-
-                            Cursor cursor = mDb.query(location, null, "POSITION = ?", new String[]{position},
-                                    null, null, null);
-                            cursor.moveToFirst();
-
-                            textViewTypeTU.setText(cursor.getString(2));//Тип оборудования
-                            typeTU = cursor.getString(2);
-                            textViewNameTu.setText(cursor.getString(7));
-                            NameTU = cursor.getString(7);
-                            textViewUprav.setText(cursor.getString(5));// Управление
-                            textViewCeh.setText(cursor.getString(14));//Цех
-                            textViewObject.setText(cursor.getString(15));//объект
-                            textViewSkvazhina.setText(cursor.getString(16));//скважина
-
-                            cursor.close();
-                        } else {
-                            displayMessage(getBaseContext(), "Выберите позицию или обновите базу!");
-                        }
-                    } else {
-                        displayMessage(getBaseContext(), "Выберите объект!");
-                    }
-                } // - if -
             } // - onClick -
         };
         return listener;
+    }
+
+    private void search(String location, String selection, String enteredValue){
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(btnSearch.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+
+        Cursor cursor = mDb.query(location, null, selection + " = ?", new String[]{enteredValue},
+                null, null, null);
+        cursor.moveToFirst();
+        if( cursor.getCount() > 0 ){
+            setEnabledButton(true);
+
+            // сосуд
+
+            textViewTypeTU.setText(cursor.getString(2));//Тип оборудования
+            typeTU = cursor.getString(2);
+            textViewNameTu.setText(cursor.getString(7));
+            NameTU = cursor.getString(7);
+            textViewUprav.setText(cursor.getString(5));// Управление
+            textViewCeh.setText(cursor.getString(14));//Цех
+            textViewObject.setText(cursor.getString(15));//объект
+            textViewSkvazhina.setText(cursor.getString(16));//скважина
+            // set select position
+            position = cursor.getString(cursor.getColumnIndex("POSITION"));
+
+            cursor.close();
+        }else{
+            setEnabledButton(false);
+            displayMessage(getBaseContext(), "Пожалуйста выберите существующее устрйоство или обновите базу");
+        }
     }
 
     public static DatabaseHelper getDBHelper() {
@@ -290,12 +337,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onClick(View view) {
                 switch (typeTU) {
                     case "Насос":
-                        Intent IntentCardPump = new Intent(MainActivity.this, PumpControlCard.class);
+                        Intent IntentCardPump = new Intent(MainActivity.this, ContainerControlCard.class);
                         IntentCardPump.putExtra("position", position);
                         startIntent(IntentCardPump);
                         break;
                     case "Сосуд":
-                        Intent IntentCardContainer = new Intent(MainActivity.this, ContainersControlCard.class);
+                        Intent IntentCardContainer = new Intent(MainActivity.this, ContainerControlCard.class);
                         IntentCardContainer.putExtra("position", position);
                         startIntent(IntentCardContainer);
                         break;

@@ -5,15 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="?attr/actionBarSize"
-    tools:context=".Tools.BND.PumpControlCard"
+    tools:context=".Tools.BND.ContainerControlCard"
     tools:showIn="@layout/activity_bnd_summary">
-
-    <TextView
-        style="@style/h1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Сосуды" />
 
     <LinearLayout
         android:id="@+id/bnd2020_container_controlCard_1"
@@ -457,10 +450,10 @@
             </RadioGroup>
             <!-- hidden TextEdit -->
             <EditText
-                android:id="@+id/bnd2020_container_controlCard_16"
+                android:id="@+id/bnd2020_container_controlCard_15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint=":____"
+                android:hint=":"
                 android:textSize="14sp" />
         </LinearLayout>
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Соответствие маркировки ////////////////////// -->
@@ -485,12 +478,12 @@
                 android:id="@+id/bnd2020_container_controlCard_17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_17_1"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -499,7 +492,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_17_2"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -508,7 +501,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_17_3"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -517,7 +510,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_17_4"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -575,13 +568,13 @@
                     android:gravity="center_vertical|left"
                     android:text="Другое" />
                 <!-- hidden TextEdit -->
-                <EditText
-                    android:id="@+id/bnd2020_container_controlCard_19"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint=":______"
-                    android:textSize="14sp" />
             </RadioGroup>
+            <EditText
+                android:id="@+id/bnd2020_container_controlCard_19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Другое"
+                android:textSize="14sp" />
         </LinearLayout>
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Исполнение ////////////////////// -->
         <!-- ============================================================================ -->
@@ -691,12 +684,12 @@
                 android:id="@+id/bnd2020_container_controlCard_22"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_22_1"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -705,7 +698,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_22_2"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -714,7 +707,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_22_3"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -723,7 +716,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_22_4"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -752,12 +745,12 @@
                 android:id="@+id/bnd2020_container_controlCard_23"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_23_1"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -766,7 +759,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_23_2"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -775,7 +768,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_23_3"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -784,7 +777,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_23_4"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -813,12 +806,12 @@
                 android:id="@+id/bnd2020_container_controlCard_24"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_24_1"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -827,7 +820,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_24_2"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -836,7 +829,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_24_3"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -845,7 +838,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_24_4"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -862,6 +855,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:paddingTop="30dp"
             android:text="Наличие и вид опор" />
         <!-- ////////////////////// Виды опор \\\\\\\\\\\\\\\\\\\\\\ -->
         <LinearLayout
@@ -873,7 +867,7 @@
 
             <!-- H2 -->
             <TextView
-                style="@style/h2"
+                style="@style/h1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -1973,7 +1967,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Вакуумметр" />
+                android:text="Запорная или запорно-регулирующая арматура" />
 
             <RadioGroup
                 android:id="@+id/bnd2020_container_controlCard_57"
@@ -2035,49 +2029,6 @@
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_58_2"
-                    style="@style/p"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="50"
-                    android:gravity="center_vertical|left"
-                    android:text="Нет" />
-            </RadioGroup>
-        </LinearLayout>
-        <!-- \\\\\\\\\\\\\\\\\\\\\\ Предохранительное устройство (СППК) ////////////////////// -->
-        <!-- ============================================================================ -->
-        <!-- ////////////////////// Зав. № СППК  \\\\\\\\\\\\\\\\\\\\\\ -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/summary_background_container"
-            android:orientation="vertical">
-
-            <!-- H2 -->
-            <TextView
-                style="@style/h2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Предохранительное устройство (СППК)" />
-
-            <RadioGroup
-                android:id="@+id/bnd2020_container_controlCard_59"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/bnd2020_container_controlCard_59_1"
-                    style="@style/p"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="50"
-                    android:gravity="center_vertical|left"
-                    android:text="Есть" />
-
-                <RadioButton
-                    android:id="@+id/bnd2020_container_controlCard_59_2"
                     style="@style/p"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -2226,12 +2177,12 @@
                 android:id="@+id/bnd2020_container_controlCard_64"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_64_1"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -2240,7 +2191,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_64_2"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -2249,7 +2200,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_64_3"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -2259,7 +2210,7 @@
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Конструкция сосуда соответствует паспорту ////////////////////// -->
 
         <Button
-            android:id="@+id/bnd_2020_pump_save"
+            android:id="@+id/bnd2020_container_save"
             style="@style/h2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

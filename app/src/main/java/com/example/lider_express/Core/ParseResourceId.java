@@ -8,6 +8,12 @@ import java.util.HashMap;
 
 public class ParseResourceId {
 
+    /**
+     *
+     * @param activity
+     * @param idResource
+     * @return
+     */
     public static HashMap<String, String> parse(Activity activity, int idResource){
         HashMap<String, String> description = new HashMap<>();
         View view = activity.findViewById(idResource);
@@ -20,6 +26,13 @@ public class ParseResourceId {
         return description;
     }
 
+    /**
+     *
+     * @param activity
+     * @param dialog
+     * @param idResource
+     * @return
+     */
     public static HashMap<String, String> parse(Activity activity, Dialog dialog, int idResource){
         HashMap<String, String> description = new HashMap<>();
         View view = dialog.findViewById(idResource);

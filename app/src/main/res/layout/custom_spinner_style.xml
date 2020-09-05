@@ -1,0 +1,7 @@
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="@style/text_grid_bold"
+    android:singleLine="true"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:ellipsize="marquee"/>

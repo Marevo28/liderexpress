@@ -1,10 +1,18 @@
 package com.example.lider_express.Core.Handlers;
 
+import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
+import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.lider_express.Core.DefectTree.DefectTree;
 import com.example.lider_express.Core.Item;
+import com.example.lider_express.R;
+import com.example.lider_express.Tools.BND.PumpControlCard;
 
 public class ButtonHandler {
 
@@ -35,6 +43,24 @@ public class ButtonHandler {
             @Override
             public void onClick(View view) {
                 defectTree.cancelSingleDialog(item);
+            }
+        });
+    }
+
+    public static void setActionInfDialog(final Activity activity, Item itemButton, final int idResource){
+
+        itemButton.getView().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Dialog tableDialog = new Dialog(activity, R.style.TableDialogStyle);
+                tableDialog.setContentView(R.layout.info_dialog);
+                Log.e("Activitu", activity.getClass().toString() );
+                Log.e("IMAGE", String.valueOf(activity.findViewById(R.id.info_dialog_image)));
+                ImageView image = (ImageView) activity.findViewById(R.id.info_dialog_image);
+                if(image != null){
+                    image.setImageResource(idResource);
+                    tableDialog.show();
+                }
             }
         });
     }
