@@ -25,16 +25,25 @@ public class ButtonHandler {
         mainItem.getView().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                defectTree.showSingleDialog();
+                defectTree.showDialog();
             }
         });
     }
 
-    public static void setActionCancelDialog(Item mainItem, final Item item, final DefectTree defectTree){
+    public static void setActionCancelSingleDialog(Item mainItem, final Item item, final DefectTree defectTree){
         mainItem.getView().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 defectTree.cancelSingleDialog(item);
+            }
+        });
+    }
+
+    public static void setActionCancelDoubleDialog(Item mainItem, final Item item, final DefectTree defectTree){
+        mainItem.getView().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                defectTree.cancelDoubleDialog(item);
             }
         });
     }

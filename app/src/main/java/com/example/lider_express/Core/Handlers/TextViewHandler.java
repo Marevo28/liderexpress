@@ -12,7 +12,6 @@ public class TextViewHandler {
         mainItem.getView().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("PRESSSSSSSSSSSS)" + "   " + hiddenItem.getVisibility() + "    " + View.GONE + "    " + View.VISIBLE);
                 if(hiddenItem.getVisibility() == View.GONE){
                     hiddenItem.hidden(View.VISIBLE);
                 }else{

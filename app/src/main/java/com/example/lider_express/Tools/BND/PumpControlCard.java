@@ -42,6 +42,7 @@ import com.example.lider_express.Core.DefectTree.DefectTree;
 import com.example.lider_express.Core.Handlers.ButtonHandler;
 import com.example.lider_express.Core.Handlers.ExpandableListViewHandle;
 import com.example.lider_express.Core.Handlers.RadioGroupHandler;
+import com.example.lider_express.Core.Handlers.SpinnerHandler;
 import com.example.lider_express.Core.Handlers.TextViewHandler;
 import com.example.lider_express.Core.Item;
 import com.example.lider_express.DataBase.DatabaseHelper;
@@ -320,15 +321,23 @@ public class PumpControlCard extends AppCompatActivity {
         Item item102 = new Item(this, R.id.bnd2020_pump_defectTree_102, false, View.GONE);
         RadioGroupHandler.setActionSingleHidden(this, item101, item102, new String[]{"Нет"});
 
+        /** ----------------  КОРПУС МЕХАНИЧЕСКИЕ ДЕФЕКТЫ ---------------------**/
+
         Item item103 = new Item(this, R.id.bnd2020_pump_defectTree_103, false);
         Item item104 = new Item(this, R.id.bnd2020_pump_defectTree_104, false, View.GONE);
         TextViewHandler.setActionSingleHidden(item103, item104);
 
+        Item item105 = new Item(this, R.id.bnd2020_pump_defectTree_105, false);
+        Item item106 = new Item(this, R.id.bnd2020_pump_defectTree_106, false, View.GONE);
+        RadioGroupHandler.setActionSingleHidden(this, item105, item106, new String[]{"Нет"});
+
         DefectTree defectTree1 = new DefectTree(this, this);
         ArrayList<String> properties1 = new ArrayList<>();
-        properties1.add("Продольный");
-        properties1.add("Поперечный");
-        properties1.add("Глубина");
+        properties1.add("Продольный размер");
+        properties1.add("Поперечный размер");
+        properties1.add("Глубина дефекта");
+        properties1.add("Привязать дефект(по вертикали)");
+        properties1.add("Привязать дефект(по горизонтали)");
         defectTree1.addSingleConformity("Скол", properties1);
         defectTree1.addSingleConformity("Задир", properties1);
         defectTree1.addSingleConformity("Трещина", properties1);
@@ -336,247 +345,469 @@ public class PumpControlCard extends AppCompatActivity {
 
         defectTree1.customizeSingleDialog();
 
-        Item ItemSpinnerDefectTreeDialog = new Item(this, defectTree1.getDialogAddProperty(), R.id.defect_tree_dialog_spinner, false);
-        final ArrayAdapter<String> adapter1  =  new  ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, defectTree1.getItemsForSpinner());
-        ((Spinner) ItemSpinnerDefectTreeDialog.getView()).setAdapter(adapter1);
+        Item ItemSpinnerDefectTree1 = new Item(this, defectTree1.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_1, false);
+        final ArrayAdapter<String> adapterDefectTree1  =  new  ArrayAdapter<String>(
+                this, android.R.layout.simple_list_item_1, defectTree1.getItemsSingleBranch());
+        ((Spinner) ItemSpinnerDefectTree1.getView()).setAdapter(adapterDefectTree1);
 
-        defectTree1.setSpinnerLevel1(((Spinner) ItemSpinnerDefectTreeDialog.getView()));
+        defectTree1.setSpinnerLevel1(((Spinner) ItemSpinnerDefectTree1.getView()));
 
-        Item itemButtonAdd = new Item(this, R.id.bnd_2020_pump_control_hidden_101_button_add, false);
-        ButtonHandler.setActionShowDialog(itemButtonAdd, defectTree1);
+        Item item109 = new Item(this, R.id.bnd2020_pump_defectTree_109, false);
+        ButtonHandler.setActionShowDialog(item109, defectTree1);
 
         // Exp List View Meh defects Corpus
-        Item itemExpListView = new Item(this, R.id.bnd_2020_pump_control_hidden_101_list_view, false);
+        Item item108 = new Item(this, R.id.bnd2020_pump_defectTree_108, false);
 
-        Item ItemButtonDefectTreeDialog = new Item(this, defectTree1.getDialogAddProperty(), R.id.defect_tree_dialog_button_ok, false);
+        Item ItemButtonDefectTreeDialogDefectTree1 = new Item(this, defectTree1.getDialogAddProperty(), R.id.defect_tree_dialog_button_ok, false);
 
-        ButtonHandler.setActionCancelDialog(ItemButtonDefectTreeDialog, itemExpListView, defectTree1);
+        ButtonHandler.setActionCancelSingleDialog(ItemButtonDefectTreeDialogDefectTree1, item108, defectTree1);
 
-        ExpandableListViewHandle.setExpand(itemExpListView);
-        ExpandableListViewHandle.setCollapse(itemExpListView);
-
-
+        ExpandableListViewHandle.setExpand(item108);
+        ExpandableListViewHandle.setCollapse(item108);
 
 
-//        Log.i("PARAMS-", "-Params");
-//        HashMap<String, String> params = item103.params();
-//        for(String key: params.keySet()){
-//            Log.i("Message", key + ": " +params.get(key));
-//        }
+        /** ----------------  КОРПУС КОРРОЗИЯ ---------------------**/
+        Item item110 = new Item(this, R.id.bnd2020_pump_defectTree_110, false);
+        Item item111 = new Item(this, R.id.bnd2020_pump_defectTree_111, false, View.GONE);
+        RadioGroupHandler.setActionSingleHidden(this, item110, item111, new String[]{"Нет"});
 
-//        Item mehDefects = new Item(this, R.id.bnd_2020_pump_control_id_101, false, "bnd2020", "defectTree");
-//        Item mehDefectsLayoutHidden = new Item(this, R.id.bnd_2020_pump_control_hidden_101, false, "bnd2020", "defectTree");
-//        RadioGroupHandler.setActionSingleHidden(this, mehDefects, mehDefectsLayoutHidden, new String[]{"Нет"});
+        DefectTree defectTree2 = new DefectTree(this, this);
+        defectTree2.addDoubleConformity("Локальная","Пятнаями, более 50 мм", properties1);
 
+        ArrayList<String> properties2 = new ArrayList<>();
+        properties2.add("Диаметр");
+        properties2.add("Глубина");
+        properties2.add("Привязать дефект(по вертикали)");
+        properties2.add("Привязать дефект(по горизонтали)");
 
+        defectTree2.addDoubleConformity("Локальная","Язвенная, от 2 до 50 мм", properties2);
+        defectTree2.addDoubleConformity("Локальная","Точечная (Питтинг) до 2 мм", properties2);
+        defectTree2.addDoubleConformity("Локальная","Щелевая", properties1);
 
+        ArrayList<String> properties3 = new ArrayList<>();
+        properties3.add("Продольный");
+        properties3.add("Поперечный");
+        properties3.add("Привязать дефект(по вертикали)");
+        properties3.add("Привязать дефект(по горизонтали)");
 
+        defectTree2.addDoubleConformity("Локальная","Сквозная", properties3);
+        defectTree2.addDoubleConformity("Локальная","Межкристалитная", properties3);
+        defectTree2.addDoubleConformity("Сплошная","Равномерная", properties1);
+        defectTree2.addDoubleConformity("Сплошная","Неравномерная", properties1);
+        defectTree2.addDoubleConformity("Сплошная","Избирательная", properties1);
 
+        defectTree2.customizeDoubleDialog();
 
+        Item ItemSpinnerDefectTree2Level1 = new Item(this, defectTree2.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_1, false);
+        Item ItemSpinnerDefectTree2Level2 = new Item(this, defectTree2.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_2, false);
 
+        final ArrayAdapter<String> adapterDefectTree2SpinnerLevel1  =  new  ArrayAdapter<String>(
+                this, android.R.layout.simple_list_item_1, defectTree2.getItemsDoubleBranchLevel1());
+        ((Spinner) ItemSpinnerDefectTree2Level1.getView()).setAdapter(adapterDefectTree2SpinnerLevel1);
+        defectTree2.setSpinnerLevel1(((Spinner) ItemSpinnerDefectTree2Level1.getView()));
 
+        SpinnerHandler.setListenerDoubleSpinner(this, ItemSpinnerDefectTree2Level1, ItemSpinnerDefectTree2Level2, defectTree2);
 
+        Item item114 = new Item(this, R.id.bnd2020_pump_defectTree_114, false);
+        ButtonHandler.setActionShowDialog(item114, defectTree2);
 
+        // Exp List View Meh defects Corpus
+        Item item113 = new Item(this, R.id.bnd2020_pump_defectTree_113, false);
 
+        Item ItemButtonDefectTreeDialogDefectTree2 = new Item(this, defectTree2.getDialogAddProperty(), R.id.defect_tree_dialog_button_ok, false);
 
+        ButtonHandler.setActionCancelDoubleDialog(ItemButtonDefectTreeDialogDefectTree2, item113, defectTree2);
 
+        ExpandableListViewHandle.setExpand(item113);
+        ExpandableListViewHandle.setCollapse(item113);
 
+        /** ----------------  КОРПУС СОЕДИНЕНИЯ ---------------------**/
+        Item item115 = new Item(this, R.id.bnd2020_pump_defectTree_115, false);
+        Item item116 = new Item(this, R.id.bnd2020_pump_defectTree_116, false, View.GONE);
+        RadioGroupHandler.setActionSingleHidden(this, item115, item116, new String[]{"Нет"});
 
-        /**  ---------------  ВРЕМЕННО --------------- **/
-        /**  ---------------  ВРЕМЕННО --------------- **/
-        /**  ---------------  ВРЕМЕННО --------------- **/
+        DefectTree defectTree3 = new DefectTree(this, this);
 
+        ArrayList<String> properties4 = new ArrayList<>();
+        properties4.add("Продольный");
+        properties4.add("Поперечный");
+        properties4.add("Глубина");
+        properties4.add("Привязать дефект(по вертикали)");
+        properties4.add("Привязать дефект(по горизонтали)");
 
+        defectTree3.addDoubleConformity("Сварка","Включения", properties4);
+        defectTree3.addDoubleConformity("Сварка","Несплавление", properties4);
+        defectTree3.addDoubleConformity("Сварка","Непровар", properties4);
+        defectTree3.addDoubleConformity("Сварка","Наплыв", properties4);
+        defectTree3.addDoubleConformity("Сварка","Полость", properties4);
+        defectTree3.addDoubleConformity("Сварка","Пора", properties4);
+        defectTree3.addDoubleConformity("Сварка","Трещина", properties4);
 
-//        final ExpandableListView expListView = (ExpandableListView) findViewById(R.id.bnd_2020_pump_control_hidden_101_list_view);
-//        // ImageButton
-//        ImageButton imageButtonAdd = findViewById(R.id.bnd_2020_pump_control_hidden_101_button_add);
-//
-//        // expListTitle
-//        final List<String> expListTitle = new ArrayList<>();
-//        //DataList
-//        dataList = new DataList();
-//
-//        // Dialog
-//        final Dialog defectTreeDialog = new Dialog(PumpControlCard.this, R.style.TableDialogStyle);
-//        defectTreeDialog.setContentView(R.layout.defect_tree_dialog);
-//
-//        final String[] defect_tree_array_meh_defect = new String[]{"Скол", "Задир", "Трещина", "Риска"};
-//
-//        // adapter for spinner
-//        final ArrayAdapter<String> defect_tree_meh_defect_adapter  =  new  ArrayAdapter<String>(
-//                this, android.R.layout.simple_list_item_1, defect_tree_array_meh_defect);
-//
-//        // Spinner Dialog
-//        final Spinner spinnerDefectTreeDialog = defectTreeDialog.findViewById(R.id.defect_tree_dialog_spinner);
-//        // Button Dialog
-//        Button buttonDefectTreeDialog = defectTreeDialog.findViewById(R.id.defect_tree_dialog_button_ok);
-//        // Set Adapter For Spinner
-//        spinnerDefectTreeDialog.setAdapter(defect_tree_meh_defect_adapter);
-//        //
-//        buttonDefectTreeDialog.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String title = spinnerDefectTreeDialog.getSelectedItem().toString();
-//                addViewToAdapter(expListView, expListTitle, title);
-//                defectTreeDialog.cancel();
-//                setListViewHeightBasedOnItems(expListView);
-//            }
-//        });
+        defectTree3.addDoubleConformity("Сварка","Свищ", properties3);
 
-//        imageButtonAdd.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                defectTreeDialog.show();
-//            }
-//        });
+        defectTree3.customizeDoubleDialog();
 
+        Item ItemSpinnerDefectTree3Level1 = new Item(this, defectTree3.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_1, false);
+        Item ItemSpinnerDefectTree3Level2 = new Item(this, defectTree3.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_2, false);
 
+        final ArrayAdapter<String> adapterDefectTree3SpinnerLevel1  =  new  ArrayAdapter<String>(
+                this, android.R.layout.simple_list_item_1, defectTree3.getItemsDoubleBranchLevel1());
+        ((Spinner) ItemSpinnerDefectTree3Level1.getView()).setAdapter(adapterDefectTree3SpinnerLevel1);
+        defectTree3.setSpinnerLevel1(((Spinner) ItemSpinnerDefectTree3Level1.getView()));
 
+        SpinnerHandler.setListenerDoubleSpinner(this, ItemSpinnerDefectTree3Level1, ItemSpinnerDefectTree3Level2, defectTree3);
 
+        Item item119 = new Item(this, R.id.bnd2020_pump_defectTree_119, false);
+        ButtonHandler.setActionShowDialog(item119, defectTree3);
 
+        // Exp List View Meh defects Corpus
+        Item item118 = new Item(this, R.id.bnd2020_pump_defectTree_118, false);
 
+        Item ItemButtonDefectTreeDialogDefectTree3 = new Item(this, defectTree3.getDialogAddProperty(), R.id.defect_tree_dialog_button_ok, false);
 
+        ButtonHandler.setActionCancelDoubleDialog(ItemButtonDefectTreeDialogDefectTree3, item118, defectTree3);
 
-        RadioGroup radioGroup_101 = findViewById(R.id.bnd_2020_pump_control_id_101);
-        final LinearLayout hidden_101 = findViewById(R.id.bnd_2020_pump_control_hidden_101);
-        final LinearLayout hidden_101_linear_list_view = findViewById(R.id.bnd_2020_pump_control_hidden_101_linear_ist_view);
-
-        radioGroup_101.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId) {
-                    case R.id.bnd_2020_pump_control_id_101_1:
-                        hidden_101.setVisibility(View.VISIBLE);
-                        break;
-                    case R.id.bnd_2020_pump_control_id_101_2:
-                        hidden_101.setVisibility(View.GONE);
-                        break;
-                }
-            }
-        });
-
-
-
-
-
-
-        RadioGroup radioGroup_102 = findViewById(R.id.bnd_2020_pump_control_id_102);
-        final LinearLayout hidden_102 = findViewById(R.id.bnd_2020_pump_control_hidden_102);
-        final LinearLayout hidden_102_1 = findViewById(R.id.bnd_2020_pump_control_hidden_102_1);
-        final LinearLayout hidden_102_2 = findViewById(R.id.bnd_2020_pump_control_hidden_102_2);
-        final LinearLayout hidden_102_3 = findViewById(R.id.bnd_2020_pump_control_hidden_102_3);
-        final LinearLayout hidden_103 = findViewById(R.id.bnd_2020_pump_control_hidden_103);
-
-        final String[] defectTreeLocalArray = new String[]{"Пятнами, более 50", "Язвенная, от 2 до 50 мм", "Точечная (Питтинг) до 2 мм",
-                "Щелевая", "Сквозная", "Межкристаллитная"};
-
-        final ArrayAdapter<String>  defectTreeLocal = new ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, defectTreeLocalArray);
-
-        final Spinner spinnerKorozLocal = findViewById(R.id.bnd_2020_pump_control_hidden_102_spinner);
-        spinnerKorozLocal.setAdapter(defectTreeLocal);
-
-        spinnerKorozLocal.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Пятнами, более 50"){
-                    hidden_102_1.setVisibility(View.VISIBLE);
-                    hidden_102_2.setVisibility(View.GONE);
-                    hidden_102_3.setVisibility(View.GONE);
-                }
-                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Язвенная, от 2 до 50 мм"){
-                    hidden_102_1.setVisibility(View.GONE);
-                    hidden_102_2.setVisibility(View.VISIBLE);
-                    hidden_102_3.setVisibility(View.GONE);
-                }
-                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Точечная (Питтинг) до 2 мм"){
-                    hidden_102_1.setVisibility(View.GONE);
-                    hidden_102_2.setVisibility(View.VISIBLE);
-                    hidden_102_3.setVisibility(View.GONE);
-                }
-                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Щелевая"){
-                    hidden_102_1.setVisibility(View.VISIBLE);
-                    hidden_102_2.setVisibility(View.GONE);
-                    hidden_102_3.setVisibility(View.GONE);
-                }
-                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Сквозная"){
-                    hidden_102_1.setVisibility(View.GONE);
-                    hidden_102_2.setVisibility(View.GONE);
-                    hidden_102_3.setVisibility(View.VISIBLE);
-                }
-                if(spinnerKorozLocal.getItemAtPosition(position).toString() == "Межкристаллитная"){
-                    hidden_102_1.setVisibility(View.GONE);
-                    hidden_102_2.setVisibility(View.GONE);
-                    hidden_102_3.setVisibility(View.VISIBLE);
-                }
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-            }
-        });
+        ExpandableListViewHandle.setExpand(item118);
+        ExpandableListViewHandle.setCollapse(item118);
 
 
 
-        final String[] defectTreeSolidArray = new String[]{"Равномерная", "Неравномерная", "Избирательная"};
+        /** ----------------  МУФТА ---------------------**/
 
-        final ArrayAdapter<String> defectTreeSolid  =  new  ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, defectTreeSolidArray);
+        Item item120 = new Item(this, R.id.bnd2020_pump_defectTree_120, false);
+        Item item121 = new Item(this, R.id.bnd2020_pump_defectTree_121, false, View.GONE);
+        TextViewHandler.setActionSingleHidden(item120, item121);
 
-        final Spinner spinnerSolid = findViewById(R.id.bnd_2020_pump_control_hidden_103_spinner);
-        spinnerSolid.setAdapter(defectTreeSolid);
+        /** ----------------  МУФТА МЕХАНИЧЕСКИЕ ДЕФЕКТЫ ---------------------**/
 
-        radioGroup_102.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId) {
-                    case R.id.bnd_2020_pump_control_id_102_1:
-                        hidden_102.setVisibility(View.VISIBLE);
-                        hidden_103.setVisibility(View.GONE);
-                        break;
-                    case R.id.bnd_2020_pump_control_id_102_2:
-                        hidden_102.setVisibility(View.GONE);
-                        hidden_103.setVisibility(View.VISIBLE);
-                        break;
-                    case R.id.bnd_2020_pump_control_id_102_3:
-                        hidden_102.setVisibility(View.GONE);
-                        hidden_103.setVisibility(View.GONE);
-                        break;
-                }
-            }
-        });
+        Item item122 = new Item(this, R.id.bnd2020_pump_defectTree_122, false);
+        Item item123 = new Item(this, R.id.bnd2020_pump_defectTree_123, false, View.GONE);
+        RadioGroupHandler.setActionSingleHidden(this, item122, item123, new String[]{"Нет"});
+
+        DefectTree defectTree4 = new DefectTree(this, this);
+
+        defectTree4.addSingleConformity("Скол", properties1);
+        defectTree4.addSingleConformity("Задир", properties1);
+        defectTree4.addSingleConformity("Трещина", properties1);
+        defectTree4.addSingleConformity("Риска", properties1);
+
+        defectTree4.customizeSingleDialog();
+
+        Item ItemSpinnerDefectTree4 = new Item(this, defectTree4.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_1, false);
+        final ArrayAdapter<String> adapterDefectTree4  =  new  ArrayAdapter<String>(
+                this, android.R.layout.simple_list_item_1, defectTree4.getItemsSingleBranch());
+        ((Spinner) ItemSpinnerDefectTree4.getView()).setAdapter(adapterDefectTree4);
+
+        defectTree4.setSpinnerLevel1(((Spinner) ItemSpinnerDefectTree4.getView()));
+
+        Item item126 = new Item(this, R.id.bnd2020_pump_defectTree_126, false);
+        ButtonHandler.setActionShowDialog(item126, defectTree4);
+
+        // Exp List View Meh defects Corpus
+        Item item125 = new Item(this, R.id.bnd2020_pump_defectTree_125, false);
+
+        Item ItemButtonDefectTreeDialogDefectTree4 = new Item(this, defectTree4.getDialogAddProperty(), R.id.defect_tree_dialog_button_ok, false);
+
+        ButtonHandler.setActionCancelSingleDialog(ItemButtonDefectTreeDialogDefectTree4, item125, defectTree4);
+
+        ExpandableListViewHandle.setExpand(item125);
+        ExpandableListViewHandle.setCollapse(item125);
+
+        /** ----------------  МУФТА КОРРОЗИЯ ---------------------**/
+
+        Item item127 = new Item(this, R.id.bnd2020_pump_defectTree_127, false);
+        Item item128 = new Item(this, R.id.bnd2020_pump_defectTree_128, false, View.GONE);
+        RadioGroupHandler.setActionSingleHidden(this, item127, item128, new String[]{"Нет"});
+
+        DefectTree defectTree5 = new DefectTree(this, this);
+
+        defectTree5.addDoubleConformity("Локальная","Пятнаями, более 50 мм", properties1);
+        defectTree5.addDoubleConformity("Локальная","Язвенная, от 2 до 50 мм", properties2);
+        defectTree5.addDoubleConformity("Локальная","Точечная (Питтинг) до 2 мм", properties2);
+        defectTree5.addDoubleConformity("Локальная","Щелевая", properties1);
+        defectTree5.addDoubleConformity("Локальная","Сквозная", properties3);
+        defectTree5.addDoubleConformity("Сплошная","Равномерная", properties1);
+        defectTree5.addDoubleConformity("Сплошная","Неравномерная", properties1);
+        defectTree5.addDoubleConformity("Сплошная","Избирательная", properties1);
+
+        defectTree5.customizeDoubleDialog();
+
+        Item ItemSpinnerDefectTree5Level1 = new Item(this, defectTree5.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_1, false);
+        Item ItemSpinnerDefectTree5Level2 = new Item(this, defectTree5.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_2, false);
+
+        final ArrayAdapter<String> adapterDefectTree5SpinnerLevel1  =  new  ArrayAdapter<String>(
+                this, android.R.layout.simple_list_item_1, defectTree5.getItemsDoubleBranchLevel1());
+        ((Spinner) ItemSpinnerDefectTree5Level1.getView()).setAdapter(adapterDefectTree5SpinnerLevel1);
+        defectTree5.setSpinnerLevel1(((Spinner) ItemSpinnerDefectTree5Level1.getView()));
+
+        SpinnerHandler.setListenerDoubleSpinner(this, ItemSpinnerDefectTree5Level1, ItemSpinnerDefectTree5Level2, defectTree5);
+
+        Item item131 = new Item(this, R.id.bnd2020_pump_defectTree_131, false);
+        ButtonHandler.setActionShowDialog(item131, defectTree5);
+
+        // Exp List View Meh defects Corpus
+        Item item130 = new Item(this, R.id.bnd2020_pump_defectTree_130, false);
+
+        Item ItemButtonDefectTreeDialogDefectTree5 = new Item(this, defectTree5.getDialogAddProperty(), R.id.defect_tree_dialog_button_ok, false);
+
+        ButtonHandler.setActionCancelDoubleDialog(ItemButtonDefectTreeDialogDefectTree5, item130, defectTree5);
+
+        ExpandableListViewHandle.setExpand(item130);
+        ExpandableListViewHandle.setCollapse(item130);
 
 
-        final String[] defectTreeSoedArray = new String[]{"Включения", "Несплавление", "Непровар", "Наплыв", "Полость", "Пора", "Трещина", "Свищ"};
 
-        final ArrayAdapter<String>  defectTreeSoed  =  new  ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, defectTreeSoedArray);
+        /** ----------------  ДВИГАТЕЛЬ ---------------------**/
 
-        final Spinner spinnerSoed = findViewById(R.id.bnd_2020_pump_control_spinner_104);
-        final LinearLayout hidden_104_1 = findViewById(R.id.bnd_2020_pump_control_hidden_104_1);
-        final LinearLayout hidden_104_2 = findViewById(R.id.bnd_2020_pump_control_hidden_104_2);
+        Item item132 = new Item(this, R.id.bnd2020_pump_defectTree_132, false);
+        Item item133 = new Item(this, R.id.bnd2020_pump_defectTree_133, false, View.GONE);
+        TextViewHandler.setActionSingleHidden(item132, item133);
 
-        spinnerSoed.setAdapter(defectTreeSoed);
+        /** ----------------  Отсутствие двигателя ---------------------**/
+        Item item134 = new Item(this, R.id.bnd2020_pump_defectTree_134, false);
+        Item item135 = new Item(this, R.id.bnd2020_pump_defectTree_135, false, View.GONE);
+        RadioGroupHandler.setActionSingleHidden(this, item134, item135, new String[]{"Отсутствует"});
 
-        spinnerSoed.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                if(spinnerSoed.getItemAtPosition(position).toString() == "Свищ"){
-                    hidden_104_1.setVisibility(View.GONE);
-                    hidden_104_2.setVisibility(View.VISIBLE);
-                }else{
-                    hidden_104_1.setVisibility(View.VISIBLE);
-                    hidden_104_2.setVisibility(View.GONE);
-                }
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-            }
-        });
+        /** ----------------  ДВИГАТЕЛЬ МЕХАНИЧЕСКИЕ ДЕФЕКТЫ ---------------------**/
+        Item item136 = new Item(this, R.id.bnd2020_pump_defectTree_136, false);
+        Item item137 = new Item(this, R.id.bnd2020_pump_defectTree_137, false, View.GONE);
+        RadioGroupHandler.setActionSingleHidden(this, item136, item137, new String[]{"Нет"});
 
-        /**  ---------------  ВРЕМЕННО --------------- **/
+        DefectTree defectTree6 = new DefectTree(this, this);
 
+        defectTree6.addSingleConformity("Скол", properties1);
+        defectTree6.addSingleConformity("Задир", properties1);
+        defectTree6.addSingleConformity("Трещина", properties1);
+        defectTree6.addSingleConformity("Риска", properties1);
+
+        defectTree6.customizeSingleDialog();
+
+        Item ItemSpinnerDefectTree6 = new Item(this, defectTree6.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_1, false);
+        final ArrayAdapter<String> adapterDefectTree6  =  new  ArrayAdapter<String>(
+                this, android.R.layout.simple_list_item_1, defectTree6.getItemsSingleBranch());
+        ((Spinner) ItemSpinnerDefectTree6.getView()).setAdapter(adapterDefectTree6);
+
+        defectTree6.setSpinnerLevel1(((Spinner) ItemSpinnerDefectTree6.getView()));
+
+        Item item140 = new Item(this, R.id.bnd2020_pump_defectTree_140, false);
+        ButtonHandler.setActionShowDialog(item140, defectTree6);
+
+        // Exp List View Meh defects Corpus
+        Item item139 = new Item(this, R.id.bnd2020_pump_defectTree_139, false);
+
+        Item ItemButtonDefectTreeDialogDefectTree6 = new Item(this, defectTree6.getDialogAddProperty(), R.id.defect_tree_dialog_button_ok, false);
+
+        ButtonHandler.setActionCancelSingleDialog(ItemButtonDefectTreeDialogDefectTree6, item139, defectTree6);
+
+        ExpandableListViewHandle.setExpand(item139);
+        ExpandableListViewHandle.setCollapse(item139);
+
+        /** ----------------  ДВИГАТЕЛЬ КОРРОЗИЯ ---------------------**/
+
+        Item item141 = new Item(this, R.id.bnd2020_pump_defectTree_141, false);
+        Item item142 = new Item(this, R.id.bnd2020_pump_defectTree_142, false, View.GONE);
+        RadioGroupHandler.setActionSingleHidden(this, item141, item142, new String[]{"Нет"});
+
+        DefectTree defectTree7 = new DefectTree(this, this);
+
+        defectTree7.addDoubleConformity("Локальная","Пятнаями, более 50 мм", properties1);
+        defectTree7.addDoubleConformity("Локальная","Язвенная, от 2 до 50 мм", properties2);
+        defectTree7.addDoubleConformity("Локальная","Точечная (Питтинг) до 2 мм", properties2);
+        defectTree7.addDoubleConformity("Локальная","Щелевая", properties1);
+        defectTree7.addDoubleConformity("Локальная","Сквозная", properties3);
+        defectTree7.addDoubleConformity("Сплошная","Равномерная", properties1);
+        defectTree7.addDoubleConformity("Сплошная","Неравномерная", properties1);
+        defectTree7.addDoubleConformity("Сплошная","Избирательная", properties1);
+
+        defectTree7.customizeDoubleDialog();
+
+        Item ItemSpinnerDefectTree7Level1 = new Item(this, defectTree7.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_1, false);
+        Item ItemSpinnerDefectTree7Level2 = new Item(this, defectTree7.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_2, false);
+
+        final ArrayAdapter<String> adapterDefectTree7SpinnerLevel1  =  new  ArrayAdapter<String>(
+                this, android.R.layout.simple_list_item_1, defectTree7.getItemsDoubleBranchLevel1());
+        ((Spinner) ItemSpinnerDefectTree7Level1.getView()).setAdapter(adapterDefectTree7SpinnerLevel1);
+        defectTree7.setSpinnerLevel1(((Spinner) ItemSpinnerDefectTree7Level1.getView()));
+
+        SpinnerHandler.setListenerDoubleSpinner(this, ItemSpinnerDefectTree7Level1, ItemSpinnerDefectTree7Level2, defectTree7);
+
+        Item item145 = new Item(this, R.id.bnd2020_pump_defectTree_145, false);
+        ButtonHandler.setActionShowDialog(item145, defectTree7);
+
+        // Exp List View Meh defects Corpus
+        Item item144 = new Item(this, R.id.bnd2020_pump_defectTree_144, false);
+
+        Item ItemButtonDefectTreeDialogDefectTree7 = new Item(this, defectTree7.getDialogAddProperty(), R.id.defect_tree_dialog_button_ok, false);
+
+        ButtonHandler.setActionCancelDoubleDialog(ItemButtonDefectTreeDialogDefectTree7, item144, defectTree7);
+
+        ExpandableListViewHandle.setExpand(item144);
+        ExpandableListViewHandle.setCollapse(item144);
+
+
+
+
+        /** ----------------  РАМПА МЕХАНИЧЕСКИЕ ДЕФЕКТЫ ---------------------**/
+
+        Item item146 = new Item(this, R.id.bnd2020_pump_defectTree_146, false);
+        Item item147 = new Item(this, R.id.bnd2020_pump_defectTree_147, false, View.GONE);
+        TextViewHandler.setActionSingleHidden(item146, item147);
+
+        Item item148 = new Item(this, R.id.bnd2020_pump_defectTree_148, false);
+        Item item149 = new Item(this, R.id.bnd2020_pump_defectTree_149, false, View.GONE);
+        RadioGroupHandler.setActionSingleHidden(this, item148, item149, new String[]{"Нет"});
+
+        DefectTree defectTree8 = new DefectTree(this, this);
+        defectTree8.addSingleConformity("Скол", properties1);
+        defectTree8.addSingleConformity("Задир", properties1);
+        defectTree8.addSingleConformity("Трещина", properties1);
+        defectTree8.addSingleConformity("Риска", properties1);
+
+        defectTree8.customizeSingleDialog();
+
+        Item ItemSpinnerDefectTree8 = new Item(this, defectTree8.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_1, false);
+        final ArrayAdapter<String> adapterDefectTree8  =  new  ArrayAdapter<String>(
+                this, android.R.layout.simple_list_item_1, defectTree8.getItemsSingleBranch());
+        ((Spinner) ItemSpinnerDefectTree8.getView()).setAdapter(adapterDefectTree8);
+
+        defectTree8.setSpinnerLevel1(((Spinner) ItemSpinnerDefectTree8.getView()));
+
+        Item item152 = new Item(this, R.id.bnd2020_pump_defectTree_152, false);
+        ButtonHandler.setActionShowDialog(item152, defectTree8);
+
+        // Exp List View Meh defects Corpus
+        Item item151 = new Item(this, R.id.bnd2020_pump_defectTree_151, false);
+
+        Item ItemButtonDefectTreeDialogDefectTree8 = new Item(this, defectTree8.getDialogAddProperty(), R.id.defect_tree_dialog_button_ok, false);
+
+        ButtonHandler.setActionCancelSingleDialog(ItemButtonDefectTreeDialogDefectTree8, item151, defectTree8);
+
+        ExpandableListViewHandle.setExpand(item151);
+        ExpandableListViewHandle.setCollapse(item151);
+
+
+        /** ----------------  РАМПА КОРРОЗИЯ ---------------------**/
+        Item item153 = new Item(this, R.id.bnd2020_pump_defectTree_153, false);
+        Item item154 = new Item(this, R.id.bnd2020_pump_defectTree_154, false, View.GONE);
+        RadioGroupHandler.setActionSingleHidden(this, item153, item154, new String[]{"Нет"});
+
+        DefectTree defectTree9 = new DefectTree(this, this);
+        defectTree2.addDoubleConformity("Локальная","Пятнаями, более 50 мм", properties1);
+
+        defectTree9.addDoubleConformity("Локальная","Язвенная, от 2 до 50 мм", properties2);
+        defectTree9.addDoubleConformity("Локальная","Точечная (Питтинг) до 2 мм", properties2);
+        defectTree9.addDoubleConformity("Локальная","Щелевая", properties1);
+
+        defectTree9.addDoubleConformity("Локальная","Сквозная", properties3);
+        defectTree9.addDoubleConformity("Локальная","Межкристалитная", properties3);
+        defectTree9.addDoubleConformity("Сплошная","Равномерная", properties1);
+        defectTree9.addDoubleConformity("Сплошная","Неравномерная", properties1);
+        defectTree9.addDoubleConformity("Сплошная","Избирательная", properties1);
+
+        defectTree9.customizeDoubleDialog();
+
+        Item ItemSpinnerDefectTree9Level1 = new Item(this, defectTree9.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_1, false);
+        Item ItemSpinnerDefectTree9Level2 = new Item(this, defectTree9.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_2, false);
+
+        final ArrayAdapter<String> adapterDefectTree9SpinnerLevel1  =  new  ArrayAdapter<String>(
+                this, android.R.layout.simple_list_item_1, defectTree9.getItemsDoubleBranchLevel1());
+        ((Spinner) ItemSpinnerDefectTree9Level1.getView()).setAdapter(adapterDefectTree9SpinnerLevel1);
+        defectTree9.setSpinnerLevel1(((Spinner) ItemSpinnerDefectTree9Level1.getView()));
+
+        SpinnerHandler.setListenerDoubleSpinner(this, ItemSpinnerDefectTree9Level1, ItemSpinnerDefectTree9Level2, defectTree9);
+
+        Item item157 = new Item(this, R.id.bnd2020_pump_defectTree_157, false);
+        ButtonHandler.setActionShowDialog(item157, defectTree9);
+
+        // Exp List View Meh defects Corpus
+        Item item156 = new Item(this, R.id.bnd2020_pump_defectTree_156, false);
+
+        Item ItemButtonDefectTreeDialogDefectTree9 = new Item(this, defectTree9.getDialogAddProperty(), R.id.defect_tree_dialog_button_ok, false);
+
+        ButtonHandler.setActionCancelDoubleDialog(ItemButtonDefectTreeDialogDefectTree9, item156, defectTree9);
+
+        ExpandableListViewHandle.setExpand(item156);
+        ExpandableListViewHandle.setCollapse(item156);
+
+        /** ----------------  РАМПА СОЕДИНЕНИЯ ---------------------**/
+        Item item158 = new Item(this, R.id.bnd2020_pump_defectTree_158, false);
+        Item item159 = new Item(this, R.id.bnd2020_pump_defectTree_159, false, View.GONE);
+        RadioGroupHandler.setActionSingleHidden(this, item158, item159, new String[]{"Нет"});
+
+        DefectTree defectTree10 = new DefectTree(this, this);
+
+        defectTree10.addDoubleConformity("Сварка","Включения", properties4);
+        defectTree10.addDoubleConformity("Сварка","Несплавление", properties4);
+        defectTree10.addDoubleConformity("Сварка","Непровар", properties4);
+        defectTree10.addDoubleConformity("Сварка","Наплыв", properties4);
+        defectTree10.addDoubleConformity("Сварка","Полость", properties4);
+        defectTree10.addDoubleConformity("Сварка","Пора", properties4);
+        defectTree10.addDoubleConformity("Сварка","Трещина", properties4);
+
+        defectTree10.addDoubleConformity("Сварка","Свищ", properties3);
+
+        defectTree10.customizeDoubleDialog();
+
+        Item ItemSpinnerDefectTree10Level1 = new Item(this, defectTree10.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_1, false);
+        Item ItemSpinnerDefectTree10Level2 = new Item(this, defectTree10.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_2, false);
+
+        final ArrayAdapter<String> adapterDefectTree10SpinnerLevel1  =  new  ArrayAdapter<String>(
+                this, android.R.layout.simple_list_item_1, defectTree10.getItemsDoubleBranchLevel1());
+        ((Spinner) ItemSpinnerDefectTree10Level1.getView()).setAdapter(adapterDefectTree10SpinnerLevel1);
+        defectTree10.setSpinnerLevel1(((Spinner) ItemSpinnerDefectTree10Level1.getView()));
+
+        SpinnerHandler.setListenerDoubleSpinner(this, ItemSpinnerDefectTree10Level1, ItemSpinnerDefectTree10Level2, defectTree10);
+
+        Item item162 = new Item(this, R.id.bnd2020_pump_defectTree_162, false);
+        ButtonHandler.setActionShowDialog(item162, defectTree10);
+
+        // Exp List View Meh defects Corpus
+        Item item161 = new Item(this, R.id.bnd2020_pump_defectTree_161, false);
+
+        Item ItemButtonDefectTreeDialogDefectTree10 = new Item(this, defectTree10.getDialogAddProperty(), R.id.defect_tree_dialog_button_ok, false);
+
+        ButtonHandler.setActionCancelDoubleDialog(ItemButtonDefectTreeDialogDefectTree10, item161, defectTree10);
+
+        ExpandableListViewHandle.setExpand(item161);
+        ExpandableListViewHandle.setCollapse(item161);
+
+
+
+        /** ----------------  ОНОВАНИЕ ДЕФЕКТЫ ---------------------**/
+
+        Item item163 = new Item(this, R.id.bnd2020_pump_defectTree_163, false);
+        Item item164 = new Item(this, R.id.bnd2020_pump_defectTree_164, false, View.GONE);
+        TextViewHandler.setActionSingleHidden(item163, item164);
+
+        Item item165 = new Item(this, R.id.bnd2020_pump_defectTree_165, false);
+        Item item166 = new Item(this, R.id.bnd2020_pump_defectTree_166, false, View.GONE);
+        RadioGroupHandler.setActionSingleHidden(this, item165, item166, new String[]{"Нет"});
+
+        DefectTree defectTree11 = new DefectTree(this, this);
+        defectTree11.addSingleConformity("Выбоина", properties1);
+        defectTree11.addSingleConformity("Трещина", properties1);
+
+        defectTree11.customizeSingleDialog();
+
+        Item ItemSpinnerDefectTree11 = new Item(this, defectTree11.getDialogAddProperty(), R.id.defect_tree_dialog_spinner_level_1, false);
+        final ArrayAdapter<String> adapterDefectTree11  =  new  ArrayAdapter<String>(
+                this, android.R.layout.simple_list_item_1, defectTree11.getItemsSingleBranch());
+        ((Spinner) ItemSpinnerDefectTree11.getView()).setAdapter(adapterDefectTree11);
+
+        defectTree11.setSpinnerLevel1(((Spinner) ItemSpinnerDefectTree11.getView()));
+
+        Item item169 = new Item(this, R.id.bnd2020_pump_defectTree_169, false);
+        ButtonHandler.setActionShowDialog(item169, defectTree11);
+
+        // Exp List View Meh defects Corpus
+        Item item168 = new Item(this, R.id.bnd2020_pump_defectTree_168, false);
+
+        Item ItemButtonDefectTreeDialogDefectTree11 = new Item(this, defectTree11.getDialogAddProperty(), R.id.defect_tree_dialog_button_ok, false);
+
+        ButtonHandler.setActionCancelSingleDialog(ItemButtonDefectTreeDialogDefectTree11, item168, defectTree11);
+
+        ExpandableListViewHandle.setExpand(item168);
+        ExpandableListViewHandle.setCollapse(item168);
 
 
 

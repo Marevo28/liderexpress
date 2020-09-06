@@ -9,10 +9,19 @@
     <Spinner
         style="@style/h2"
         android:background="@drawable/background_container_transparent"
-        android:id="@+id/defect_tree_dialog_spinner"
+        android:id="@+id/defect_tree_dialog_spinner_level_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"/>
+
+    <Spinner
+        style="@style/h2"
+        android:background="@drawable/background_container_transparent"
+        android:id="@+id/defect_tree_dialog_spinner_level_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
 
     <Button
         style="@style/h2"

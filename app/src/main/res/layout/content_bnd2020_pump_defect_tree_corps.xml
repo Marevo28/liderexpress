@@ -1,0 +1,1328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Есть дефекты? -->
+    <TextView
+        style="@style/h1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Есть дефекты?" />
+
+    <RadioGroup
+        android:id="@+id/bnd2020_pump_defectTree_101"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/bnd2020_pump_defectTree_101_1"
+            style="@style/p"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center_vertical|left"
+            android:text="Есть" />
+
+        <RadioButton
+            android:id="@+id/bnd2020_pump_defectTree_101_2"
+            style="@style/p"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center_vertical|left"
+            android:text="Нет" />
+    </RadioGroup>
+
+    <!-- ДЕФЕКТЫ -->
+    <LinearLayout
+        android:id="@+id/bnd2020_pump_defectTree_102"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/summary_background_container"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bnd2020_pump_defectTree_103"
+            style="@style/h2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/summary_background_container"
+            android:padding="5dp"
+            android:text="Корпус" />
+
+        <!-- КОРПУС  -->
+        <LinearLayout
+            android:id="@+id/bnd2020_pump_defectTree_104"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
+
+                <!-- H2 -->
+                <!-- Механические дефекты -->
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Механические дефекты" />
+
+                <RadioGroup
+                    android:id="@+id/bnd2020_pump_defectTree_105"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_105_1"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Есть" />
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_105_2"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Нет" />
+                </RadioGroup>
+
+                <!-- Hidden Механические дефекты-->
+                <LinearLayout
+                    android:id="@+id/bnd2020_pump_defectTree_106"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/bnd2020_pump_defectTree_107"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ExpandableListView
+                            android:id="@+id/bnd2020_pump_defectTree_108"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:choiceMode="multipleChoice"
+                            android:divider="@null"
+                            android:dividerHeight="5dp" />
+                    </LinearLayout>
+
+                    <!-- ADD Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/bnd2020_pump_defectTree_109"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="100dp"
+                            android:background="@drawable/selector_button"
+                            android:clickable="true"
+                            android:padding="0dp"
+                            android:src="@drawable/ic_baseline_add_48" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <!-- КОРРОЗИЯ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
+
+                <!-- H2 -->
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Коррозия" />
+
+                <RadioGroup
+                    android:id="@+id/bnd2020_pump_defectTree_110"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_110_1"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Есть" />
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_110_2"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Нет" />
+                </RadioGroup>
+
+                <!-- Hidden КОРРОЗИЯ-->
+                <LinearLayout
+                    android:id="@+id/bnd2020_pump_defectTree_111"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/bnd2020_pump_defectTree_112"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ExpandableListView
+                            android:id="@+id/bnd2020_pump_defectTree_113"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:choiceMode="multipleChoice"
+                            android:divider="@null"
+                            android:dividerHeight="5dp" />
+                    </LinearLayout>
+
+                    <!-- ADD Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/bnd2020_pump_defectTree_114"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="100dp"
+                            android:background="@drawable/selector_button"
+                            android:clickable="true"
+                            android:padding="0dp"
+                            android:src="@drawable/ic_baseline_add_48" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- СОЕДИНЕНИЯ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
+
+                <!-- H2 -->
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Дефекты соединений" />
+
+                <RadioGroup
+                    android:id="@+id/bnd2020_pump_defectTree_115"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_115_1"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Есть" />
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_115_2"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Нет" />
+                </RadioGroup>
+
+                <!-- Hidden Соединения-->
+                <LinearLayout
+                    android:id="@+id/bnd2020_pump_defectTree_116"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/bnd2020_pump_defectTree_117"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ExpandableListView
+                            android:id="@+id/bnd2020_pump_defectTree_118"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:choiceMode="multipleChoice"
+                            android:divider="@null"
+                            android:dividerHeight="5dp" />
+                    </LinearLayout>
+
+                    <!-- ADD Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/bnd2020_pump_defectTree_119"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="100dp"
+                            android:background="@drawable/selector_button"
+                            android:clickable="true"
+                            android:padding="0dp"
+                            android:src="@drawable/ic_baseline_add_48" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Другое-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- H2 -->
+                    <TextView
+                        style="@style/h2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Другое" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Другое"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- ================== МУФТА ========================= -->
+
+        <Button
+            android:id="@+id/bnd2020_pump_defectTree_120"
+            style="@style/h2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/summary_background_container"
+            android:padding="5dp"
+            android:text="Муфта" />
+
+        <!-- МУФТА  -->
+        <LinearLayout
+            android:id="@+id/bnd2020_pump_defectTree_121"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
+
+                <!-- H2 -->
+                <!-- Механические дефекты -->
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Механические дефекты" />
+
+                <RadioGroup
+                    android:id="@+id/bnd2020_pump_defectTree_122"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_122_1"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Есть" />
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_122_2"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Нет" />
+                </RadioGroup>
+
+                <!-- Hidden Механические дефекты-->
+                <LinearLayout
+                    android:id="@+id/bnd2020_pump_defectTree_123"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/bnd2020_pump_defectTree_124"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ExpandableListView
+                            android:id="@+id/bnd2020_pump_defectTree_125"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:choiceMode="multipleChoice"
+                            android:divider="@null"
+                            android:dividerHeight="5dp" />
+                    </LinearLayout>
+
+                    <!-- ADD Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/bnd2020_pump_defectTree_126"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="100dp"
+                            android:background="@drawable/selector_button"
+                            android:clickable="true"
+                            android:padding="0dp"
+                            android:src="@drawable/ic_baseline_add_48" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <!-- КОРРОЗИЯ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
+
+                <!-- H2 -->
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Коррозия" />
+
+                <RadioGroup
+                    android:id="@+id/bnd2020_pump_defectTree_127"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_127_1"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Есть" />
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_127_2"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Нет" />
+                </RadioGroup>
+
+                <!-- Hidden КОРРОЗИЯ-->
+                <LinearLayout
+                    android:id="@+id/bnd2020_pump_defectTree_128"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/bnd2020_pump_defectTree_129"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ExpandableListView
+                            android:id="@+id/bnd2020_pump_defectTree_130"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:choiceMode="multipleChoice"
+                            android:divider="@null"
+                            android:dividerHeight="5dp" />
+                    </LinearLayout>
+
+                    <!-- ADD Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/bnd2020_pump_defectTree_131"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="100dp"
+                            android:background="@drawable/selector_button"
+                            android:clickable="true"
+                            android:padding="0dp"
+                            android:src="@drawable/ic_baseline_add_48" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Другое-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- H2 -->
+                    <TextView
+                        style="@style/h2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Другое" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Другое"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- ================== ДВИГАТЕЛЬ ========================= -->
+
+        <Button
+            android:id="@+id/bnd2020_pump_defectTree_132"
+            style="@style/h2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/summary_background_container"
+            android:padding="5dp"
+            android:text="Двигатель" />
+
+        <!-- Двигатель  -->
+        <LinearLayout
+            android:id="@+id/bnd2020_pump_defectTree_133"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- H2 -->
+            <!-- Отсутствие двигателя-->
+            <RadioGroup
+                android:id="@+id/bnd2020_pump_defectTree_134"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/bnd2020_pump_defectTree_134_1"
+                    style="@style/p"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Есть" />
+
+                <RadioButton
+                    android:id="@+id/bnd2020_pump_defectTree_134_2"
+                    style="@style/p"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Отсутствует" />
+            </RadioGroup>
+
+            <!-- Двигатель  -->
+            <LinearLayout
+                android:id="@+id/bnd2020_pump_defectTree_135"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/summary_background_container"
+                    android:orientation="vertical">
+
+                    <!-- H2 -->
+                    <!-- Механические дефекты -->
+                    <TextView
+                        style="@style/h2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Механические дефекты" />
+
+                    <RadioGroup
+                        android:id="@+id/bnd2020_pump_defectTree_136"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/bnd2020_pump_defectTree_136_1"
+                            style="@style/p"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:gravity="center_vertical|left"
+                            android:text="Есть" />
+
+                        <RadioButton
+                            android:id="@+id/bnd2020_pump_defectTree_136_2"
+                            style="@style/p"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:gravity="center_vertical|left"
+                            android:text="Нет" />
+                    </RadioGroup>
+
+                    <!-- Hidden Механические дефекты-->
+                    <LinearLayout
+                        android:id="@+id/bnd2020_pump_defectTree_137"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|top"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/bnd2020_pump_defectTree_138"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ExpandableListView
+                                android:id="@+id/bnd2020_pump_defectTree_139"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:choiceMode="multipleChoice"
+                                android:divider="@null"
+                                android:dividerHeight="5dp" />
+                        </LinearLayout>
+
+                        <!-- ADD Button -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageButton
+                                android:id="@+id/bnd2020_pump_defectTree_140"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="100dp"
+                                android:layout_marginRight="100dp"
+                                android:background="@drawable/selector_button"
+                                android:clickable="true"
+                                android:padding="0dp"
+                                android:src="@drawable/ic_baseline_add_48" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <!-- КОРРОЗИЯ -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/summary_background_container"
+                    android:orientation="vertical">
+
+                    <!-- H2 -->
+                    <TextView
+                        style="@style/h2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Коррозия" />
+
+                    <RadioGroup
+                        android:id="@+id/bnd2020_pump_defectTree_141"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/bnd2020_pump_defectTree_141_1"
+                            style="@style/p"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:gravity="center_vertical|left"
+                            android:text="Есть" />
+
+                        <RadioButton
+                            android:id="@+id/bnd2020_pump_defectTree_141_2"
+                            style="@style/p"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:gravity="center_vertical|left"
+                            android:text="Нет" />
+                    </RadioGroup>
+
+                    <!-- Hidden КОРРОЗИЯ-->
+                    <LinearLayout
+                        android:id="@+id/bnd2020_pump_defectTree_142"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|top"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/bnd2020_pump_defectTree_143"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ExpandableListView
+                                android:id="@+id/bnd2020_pump_defectTree_144"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:choiceMode="multipleChoice"
+                                android:divider="@null"
+                                android:dividerHeight="5dp" />
+                        </LinearLayout>
+
+                        <!-- ADD Button -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageButton
+                                android:id="@+id/bnd2020_pump_defectTree_145"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="100dp"
+                                android:layout_marginRight="100dp"
+                                android:background="@drawable/selector_button"
+                                android:clickable="true"
+                                android:padding="0dp"
+                                android:src="@drawable/ic_baseline_add_48" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--Другое-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/summary_background_container"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- H2 -->
+                        <TextView
+                            style="@style/h2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Другое" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Другое"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- ================== РАМПА ========================= -->
+
+        <Button
+            android:id="@+id/bnd2020_pump_defectTree_146"
+            style="@style/h2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/summary_background_container"
+            android:padding="5dp"
+            android:text="Рампа(Плита)" />
+
+        <LinearLayout
+            android:id="@+id/bnd2020_pump_defectTree_147"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
+
+                <!-- H2 -->
+                <!-- Механические дефекты -->
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Механические дефекты" />
+
+                <RadioGroup
+                    android:id="@+id/bnd2020_pump_defectTree_148"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_148_1"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Есть" />
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_148_2"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Нет" />
+                </RadioGroup>
+
+                <!-- Hidden Механические дефекты-->
+                <LinearLayout
+                    android:id="@+id/bnd2020_pump_defectTree_149"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/bnd2020_pump_defectTree_150"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ExpandableListView
+                            android:id="@+id/bnd2020_pump_defectTree_151"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:choiceMode="multipleChoice"
+                            android:divider="@null"
+                            android:dividerHeight="5dp" />
+                    </LinearLayout>
+
+                    <!-- ADD Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/bnd2020_pump_defectTree_152"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="100dp"
+                            android:background="@drawable/selector_button"
+                            android:clickable="true"
+                            android:padding="0dp"
+                            android:src="@drawable/ic_baseline_add_48" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <!-- КОРРОЗИЯ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
+
+                <!-- H2 -->
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Коррозия" />
+
+                <RadioGroup
+                    android:id="@+id/bnd2020_pump_defectTree_153"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_153_1"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Есть" />
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_153_2"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Нет" />
+                </RadioGroup>
+
+                <!-- Hidden КОРРОЗИЯ-->
+                <LinearLayout
+                    android:id="@+id/bnd2020_pump_defectTree_154"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/bnd2020_pump_defectTree_155"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ExpandableListView
+                            android:id="@+id/bnd2020_pump_defectTree_156"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:choiceMode="multipleChoice"
+                            android:divider="@null"
+                            android:dividerHeight="5dp" />
+                    </LinearLayout>
+
+                    <!-- ADD Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/bnd2020_pump_defectTree_157"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="100dp"
+                            android:background="@drawable/selector_button"
+                            android:clickable="true"
+                            android:padding="0dp"
+                            android:src="@drawable/ic_baseline_add_48" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- СОЕДИНЕНИЯ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
+
+                <!-- H2 -->
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Дефекты соединений" />
+
+                <RadioGroup
+                    android:id="@+id/bnd2020_pump_defectTree_158"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_158_1"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Есть" />
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_158_2"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Нет" />
+                </RadioGroup>
+
+                <!-- Hidden Соединения-->
+                <LinearLayout
+                    android:id="@+id/bnd2020_pump_defectTree_159"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/bnd2020_pump_defectTree_160"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ExpandableListView
+                            android:id="@+id/bnd2020_pump_defectTree_161"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:choiceMode="multipleChoice"
+                            android:divider="@null"
+                            android:dividerHeight="5dp" />
+                    </LinearLayout>
+
+                    <!-- ADD Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/bnd2020_pump_defectTree_162"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="100dp"
+                            android:background="@drawable/selector_button"
+                            android:clickable="true"
+                            android:padding="0dp"
+                            android:src="@drawable/ic_baseline_add_48" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Другое-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- H2 -->
+                    <TextView
+                        style="@style/h2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Другое" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Другое"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/bnd2020_pump_defectTree_163"
+            style="@style/h2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/summary_background_container"
+            android:padding="5dp"
+            android:text="Основание(Фундамент)" />
+
+        <LinearLayout
+            android:id="@+id/bnd2020_pump_defectTree_164"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
+
+                <!-- H2 -->
+                <!-- Механические дефекты -->
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Механические дефекты" />
+
+                <RadioGroup
+                    android:id="@+id/bnd2020_pump_defectTree_165"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_165_1"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Есть" />
+
+                    <RadioButton
+                        android:id="@+id/bnd2020_pump_defectTree_165_2"
+                        style="@style/p"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical|left"
+                        android:text="Нет" />
+                </RadioGroup>
+
+                <!-- Hidden Механические дефекты-->
+                <LinearLayout
+                    android:id="@+id/bnd2020_pump_defectTree_166"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/bnd2020_pump_defectTree_167"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ExpandableListView
+                            android:id="@+id/bnd2020_pump_defectTree_168"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:choiceMode="multipleChoice"
+                            android:divider="@null"
+                            android:dividerHeight="5dp" />
+                    </LinearLayout>
+
+                    <!-- ADD Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/bnd2020_pump_defectTree_169"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="100dp"
+                            android:background="@drawable/selector_button"
+                            android:clickable="true"
+                            android:padding="0dp"
+                            android:src="@drawable/ic_baseline_add_48" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <!--Другое-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- H2 -->
+                    <TextView
+                        style="@style/h2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Другое" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Другое"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

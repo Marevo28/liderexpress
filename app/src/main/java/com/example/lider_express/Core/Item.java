@@ -269,9 +269,9 @@ public class Item {
         return adapter;
     }
 
-    public void setAdapter(Adapter adapter) {
-        this.adapter = adapter;
-    }
+//    public void setAdapter(Adapter adapter) {
+//        this.adapter = adapter;
+//    }
 
     public String getTableName() {
         return tableName;
