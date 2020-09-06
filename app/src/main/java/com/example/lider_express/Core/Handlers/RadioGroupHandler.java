@@ -34,9 +34,9 @@ public class RadioGroupHandler{
                 RadioButton button = activity.findViewById(checkedId);
                 for (int i = 0; i < negativeValues.length; i++){
                     if(button.getText().toString().equals(negativeValues[i])){
-                        hiddenItem.hidden(View.GONE);
-                    }else{
                         hiddenItem.hidden(View.VISIBLE);
+                    }else{
+                        hiddenItem.hidden(View.GONE);
                     }
                 }
             }

@@ -73,6 +73,10 @@
             android:name=".Tools.BND.PumpControlCard"
             android:label="Сводная таблица"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tools.BND.ContainerControlCard"
+            android:label="Сосуды карта контроля"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Camera" />
         <activity
             android:name=".Svodnaya.KartaKontrolyaYDE"
