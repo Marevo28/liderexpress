@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Дата НК" />
+            android:text="Сосуды" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -847,8 +847,7 @@
         </LinearLayout>
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Антикорозийное покрытие(на внутренней поверхности) ////////////////////// -->
         <!-- ============================================================================ -->
-        <!-- ////////////////////// Соответствие маркировки TextView Hidden \\\\\\\\\\\\\\\\\\\\\\ -->
-
+        
         <!-- НАЛИЧИЕ И ВИД ОПОР -->
         <TextView
             style="@style/h1"
