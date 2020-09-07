@@ -33,7 +33,7 @@ import java.util.List;
 
 public class SittingsActivity extends AppCompatActivity {
     String[] Zakazchiki = {//"Башнефть 2019", "Мегион 2019", "Полюс 2019",
-            "Башнефть 2020", "Мегион 2020", // "Полюс 2020",
+            "Башнефть 2020", "XMMP", // "Полюс 2020",
             //"Башнефть 2021", "Мегион 2021", "Полюс 2021"
     };
     String[] Cameras = {"Camera API2","Open Camera"};

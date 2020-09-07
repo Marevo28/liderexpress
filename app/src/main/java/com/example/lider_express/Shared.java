@@ -42,6 +42,12 @@ public class Shared {
     public static String nameBashneft2020_Nasos = "Bashneft2020_Nasos";
     public static String nameDefectBashneft2020_Nasos = "DefectBND2020_Nasos";
 
+    /**
+     *
+     * Container XMMP
+     *
+     */
+    public static String XMMP_Container = "DefectBND2020_Container";
 
     // 2021
     public static String nameBND2021 = "Bashneft2021";

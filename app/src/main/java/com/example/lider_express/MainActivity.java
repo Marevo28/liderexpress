@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         spinnerTypeTU = (Spinner) findViewById(R.id.spinner_type_tu);
 
-        final String[] search = new String[]{"Позиция", "Тип ТУ", "Имя устройства"};
+        final String[] search = new String[]{"Позиция", "Имя устройства"};
 
         ArrayAdapter<String> searchAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, search);
         searchAdapter.setDropDownViewResource(R.layout.custom_spinner_style);
@@ -166,6 +166,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                        View itemSelected, int selectedItemPosition, long selectedId) {
                 EntryField.setHint(search[selectedItemPosition]);
             }
+
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
@@ -182,17 +183,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     case "Башнефть 2020":
                         location = Shared.nameBND2020;
                         break;
+                    case "XMMP":
+                        location = Shared.nameBND2020;
+                        break;
                 }
                 // Selected field for search
                 String selectedSearch = spinnerTypeTU.getSelectedItem().toString();
                 String selection = null;
-                switch (selectedSearch){
+                switch (selectedSearch) {
                     case "Позиция":
                         selection = "POSITION";
                         break;
-                    case "Тип ТУ":
-                        selection = "field2";
-                        break;
+//                    case "Тип ТУ":
+//                        selection = "field2";
+//                        break;
                     case "Имя устройства":
                         selection = "field7";
                         break;
@@ -204,12 +208,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 // StringUtils.isBlank(" ") = true
                 // StringUtils.isBlank(null) = true
                 if (!StringUtils.isBlank(location) && !location.equals("Zakazchik")) {
-                    if(!StringUtils.isBlank(enteredValue)){
+                    if (!StringUtils.isBlank(enteredValue)) {
                         search(location, selection, enteredValue);
-                    }else{
+                    } else {
                         displayMessage(getBaseContext(), "Строка поиска пуста, пожалуйста введите значение.");
                     }
-                }else{
+                } else {
                     displayMessage(getBaseContext(), "Объект не выбран! Пожалуйста перейдите в настройки и выберите объект.");
                 }
 
@@ -218,14 +222,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return listener;
     }
 
-    private void search(String location, String selection, String enteredValue){
+    private void search(String location, String selection, String enteredValue) {
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(btnSearch.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 
         Cursor cursor = mDb.query(location, null, selection + " = ?", new String[]{enteredValue},
                 null, null, null);
         cursor.moveToFirst();
-        if( cursor.getCount() > 0 ){
+        if (cursor.getCount() > 0) {
             setEnabledButton(true);
 
             // сосуд
@@ -242,9 +246,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             position = cursor.getString(cursor.getColumnIndex("POSITION"));
 
             cursor.close();
-        }else{
+        } else {
             setEnabledButton(false);
-            displayMessage(getBaseContext(), "Пожалуйста выберите существующее устрйоство или обновите базу");
+            displayMessage(getBaseContext(), "Пожалуйста выберите существующее устройство или обновите базу");
         }
     }
 
@@ -322,8 +326,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case "ZayavkaBND":
                 zakazchik = "Башнефть_2019";
                 break;
-            case "Megion2019":
-                zakazchik = "Мегион_2019";
+            case "MXXP":
+                zakazchik = "MXXP";
                 break;
             default:
 
@@ -341,7 +345,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         IntentCardPump.putExtra("position", position);
                         startIntent(IntentCardPump);
                         break;
-                    case "Сосуд":
+                    case "СРПД":
                         Intent IntentCardContainer = new Intent(MainActivity.this, ContainerControlCard.class);
                         IntentCardContainer.putExtra("position", position);
                         startIntent(IntentCardContainer);
@@ -360,7 +364,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         startIntent(IntentKartaKontrolyaSppk);
                         break;
                     default:
-                        displayMessage(getBaseContext(), "Допустимые типы ТУ: Насос, Сосуд, Блок реагентов (УДЭ), СППК");
+                        displayMessage(getBaseContext(), "Допустимые типы ТУ: Насос, СРПД, Блок реагентов (УДЭ), СППК");
                 }
             }
         };
