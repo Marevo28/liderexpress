@@ -41,13 +41,18 @@ public class Shared {
     public static String nameDefectBashneft2020_SPPK = "DefectBND2020_SPPK";
     public static String nameBashneft2020_Nasos = "Bashneft2020_Nasos";
     public static String nameDefectBashneft2020_Nasos = "DefectBND2020_Nasos";
+    public static String nameDefectBashneft2020_Container = "DefectBND2020_Container";
 
     /**
      *
-     * Container XMMP
+     *  XMMP
      *
      */
-    public static String XMMP_Container = "DefectBND2020_Container";
+    public static String nameHMMR = "HMMR";
+    public static String nameHMMP_Pump = "HMMR_Pump";
+    public static String nameHMMP_Container = "HMMR_Container";
+    public static String nameDefectHMMR_Pump = "DefectHMMR_Pump";
+    public static String nameDefectHMMR_Container = "DefectHMMR_Container";
 
     // 2021
     public static String nameBND2021 = "Bashneft2021";

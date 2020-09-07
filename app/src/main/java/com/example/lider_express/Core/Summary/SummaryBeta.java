@@ -78,11 +78,18 @@ public class SummaryBeta {
         String column;
         for (int changePath : items.keySet()) {
             column = constantPath + changePath;
-            initialValues.put(column, items.get(changePath).getValue());
+            if(items.get(changePath) != null){
+                initialValues.put(column, items.get(changePath).getValue());
+            }
         }
 
         for (String k : initialValues.keySet()) {
-            Log.e(k + ": => ", initialValues.get(k).toString());
+            if(initialValues.get(k) != null){
+                Log.e(k + ": => ", initialValues.get(k).toString());
+            }else{
+                Log.e(k + ": => ", "Null");
+            }
+
         }
 
         database.insert(writeDb, null, initialValues);

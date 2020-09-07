@@ -1,4 +1,4 @@
-package com.example.lider_express.Tools.XMMP;
+package com.example.lider_express.Tools.HMMR;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -53,7 +53,7 @@ import java.util.ArrayList;
  * ВЬЮШЕК ОПИСАНО В КЛАССЕ SUMMARY
  */
 
-public class PumpControlCard extends AppCompatActivity {
+public class HMMRPumpControlCard extends AppCompatActivity {
 
     public static final String POSITION = "Position";
     public DatabaseHelper mDBHelper;
@@ -227,7 +227,7 @@ public class PumpControlCard extends AppCompatActivity {
          */
 
         pump = new Summary(this, this, Shared.nameBashneft2020_Nasos,
-                Shared.nameDefectBashneft2020_Nasos, mDb, position);
+                Shared.nameDefectHMMR_Pump, mDb, position);
 
         pump.addRadioGroup(43, R.id.bnd_2020_pump_id_43,
                 R.id.bnd_2020_pump_id_43_1, R.id.bnd_2020_pump_id_43_2);
@@ -292,7 +292,7 @@ public class PumpControlCard extends AppCompatActivity {
          * */
 
         // Информационная табличка
-        tableDialog = new Dialog(PumpControlCard.this, R.style.TableDialogStyle);
+        tableDialog = new Dialog(HMMRPumpControlCard.this, R.style.TableDialogStyle);
         tableDialog.setContentView(R.layout.table_dialog);
         imageButton = findViewById(R.id.bnd_2020_pump_info_table);
         imageButton.setOnClickListener(new View.OnClickListener(){
@@ -808,14 +808,14 @@ public class PumpControlCard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //  Собираем данные от вьюшек
-                bnd.collectData();
+//                bnd.collectData();
                 pump.collectData();
                 //  Сохраняем данные в базу
-                bnd.saveData();
+//                bnd.saveData();
                 pump.saveData();
                 // Уходим на главную активити
                 // Да все так просто ! =)
-                Intent IntentSittings = new Intent(PumpControlCard.this, MainActivity.class);
+                Intent IntentSittings = new Intent(HMMRPumpControlCard.this, MainActivity.class);
                 startActivity(IntentSittings);
             }
         });

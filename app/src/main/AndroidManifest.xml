@@ -77,6 +77,14 @@
             android:name=".Tools.BND.ContainerControlCard"
             android:label="Сосуды карта контроля"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tools.HMMR.HMMRPumpControlCard"
+            android:label="Сосуды карта контроля"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tools.HMMR.HMMRContainerControlCard"
+            android:label="Сосуды карта контроля"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Camera" />
         <activity
             android:name=".Svodnaya.KartaKontrolyaYDE"

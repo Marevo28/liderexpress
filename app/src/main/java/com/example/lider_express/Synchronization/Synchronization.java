@@ -33,7 +33,9 @@ public class Synchronization extends AppCompatActivity {
      private Spinner spinnerDefect;
      private AppCompatActivity appCompatActivity;
      private String[] Zakazchiki = {//"Башнефть 2019", "Мегион 2019", "Полюс 2019",
-             "Башнефть 2020", "Мегион 2020", "Башнефть 2020 УДЭ", "Башнефть 2020 Насосы", "Башнефть 2020 СППК" //"Полюс 2020",
+             "Башнефть 2020", "Башнефть 2020 УДЭ", "Башнефть 2020 Насосы",
+             "Башнефть 2020 СППК", "ХММР Насосы", "ХММР Сосуды",
+             //"Полюс 2020",
             // "Башнефть 2021", "Мегион 2021", "Полюс 2021"
                            };
 
@@ -96,18 +98,12 @@ public class Synchronization extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
-                 //   case 0: Zakazchik = Shared.nameDefectBND2019; break;
-                 //   case 1: Zakazchik = Shared.nameDefectMegion2019; break;
-                 //   case 2: /** Zakazchik = Shared.nameDefectPolus2019; **/ break;
                     case 0: Zakazchik = Shared.nameDefectBND2020; break;
-                    case 1: Zakazchik = Shared.nameDefectMegion2020; break;
-                    case 2: Zakazchik = Shared.nameDefectBashneft2020_UDE; break;
-                    case 3: Zakazchik = Shared.nameDefectBashneft2020_Nasos; break;
-                    case 4: Zakazchik = Shared.nameDefectBashneft2020_SPPK; break;
-                 //   case 5: Zakazchik = Shared.nameDefectPolus2020;**/  break;
-                 //   case 6: Zakazchik = Shared.nameDefectBND2021; break;
-                 //   case 7: Zakazchik = Shared.nameDefectMegion2021; break;
-                 //   case 8: Zakazchik = Shared.nameDefectPolus2021;**/  break;
+                    case 1: Zakazchik = Shared.nameDefectBashneft2020_UDE; break;
+                    case 2: Zakazchik = Shared.nameDefectBashneft2020_Nasos; break;
+                    case 3: Zakazchik = Shared.nameDefectBashneft2020_SPPK; break;
+                    case 4: Zakazchik = Shared.nameDefectHMMR_Pump; break;
+                    case 5: Zakazchik = Shared.nameDefectHMMR_Container; break;
                 }
             }
             @Override

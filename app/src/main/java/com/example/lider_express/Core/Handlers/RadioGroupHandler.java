@@ -12,7 +12,11 @@ import java.util.ArrayList;
 public class RadioGroupHandler{
 
     public static String getValueSelectedButton(Activity activity, RadioGroup radioGroup){
-        return ((RadioButton)activity.findViewById(radioGroup.getCheckedRadioButtonId())).getText().toString();
+        if(radioGroup.getCheckedRadioButtonId() != -1){
+            return ((RadioButton)activity.findViewById(radioGroup.getCheckedRadioButtonId())).getText().toString();
+        }else {
+            return null;
+        }
     }
 
     public static ArrayList<RadioButton> getButtons(RadioGroup radioGroup){

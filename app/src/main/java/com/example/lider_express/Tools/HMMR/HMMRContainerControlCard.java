@@ -1,4 +1,4 @@
-package com.example.lider_express.Tools.XMMP;
+package com.example.lider_express.Tools.HMMR;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -24,7 +24,7 @@ import com.example.lider_express.MainActivity;
 import com.example.lider_express.R;
 import com.example.lider_express.Shared;
 
-public class ContainerControlCard extends AppCompatActivity implements SummaryBehavior {
+public class HMMRContainerControlCard extends AppCompatActivity implements SummaryBehavior {
 
     public DatabaseHelper mDBHelper;
     public SQLiteDatabase mDb;
@@ -88,7 +88,7 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         String position = arguments.getString("position");
 
         containers = new SummaryBeta(this, this, Shared.nameBND2020,
-                Shared.XMMP_Container, mDb, position);
+                Shared.nameDefectHMMR_Container, mDb, position);
 
         initializeItems();
 
@@ -107,7 +107,7 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
             public void onClick(View v) {
                 // Save values to data base
                 containers.saveData();
-                Intent IntentSittings = new Intent(ContainerControlCard.this, MainActivity.class);
+                Intent IntentSittings = new Intent(HMMRContainerControlCard.this, MainActivity.class);
                 startActivity(IntentSittings);
             }
         });
@@ -255,8 +255,8 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         TextViewHandler.setStartActivityListener(this, this, item2, TextViewHandler.DESTINATION_DATA);
         TextViewHandler.setStartActivityListener(this, this, item3, TextViewHandler.DESTINATION_SPEC_NKO);
 
-        RadioGroupHandler.setActionSingleHidden(this, item14, item15, new String[]{"Не соответствует"});
-        RadioGroupHandler.setActionSingleHidden(this, item18, item19, new String[]{"Другое"});
+        RadioGroupHandler.setActionSingleHiddenPositive(this, item14, item15, new String[]{"Не соответствует"});
+        RadioGroupHandler.setActionSingleHiddenPositive(this, item18, item19, new String[]{"Другое"});
 
         ButtonHandler.setActionInfDialog(this, item25, R.drawable.conteiner_on_the_ground);
         ButtonHandler.setActionInfDialog(this, item26, R.drawable.container_rack_supports);
@@ -267,7 +267,7 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         ButtonHandler.setActionInfDialog(this, item31, R.drawable.container_cylindrical_support);
         ButtonHandler.setActionInfDialog(this, item32, R.drawable.container_ring_supports);
 
-        RadioGroupHandler.setActionSingleHidden(this, item44, item45, new String[]{"Есть"});
+        RadioGroupHandler.setActionSingleHiddenPositive(this, item44, item45, new String[]{"Есть"});
     }
 
     @Override

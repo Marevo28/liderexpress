@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Point;
 import android.os.Bundle;
@@ -17,7 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -37,12 +35,13 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.lider_express.DataBase.DatabaseHelper;
-import com.example.lider_express.Tools.BND.ContainerControlCard;
 import com.example.lider_express.Tools.BND.PumpControlCard;
 import com.example.lider_express.Svodnaya.KartaKontrolyaSPPK;
 import com.example.lider_express.Svodnaya.KartaKontrolyaYDE;
 import com.example.lider_express.Synchronization.Synchronization;
 import com.example.lider_express.Instruments.Menu_tools;
+import com.example.lider_express.Tools.HMMR.HMMRContainerControlCard;
+import com.example.lider_express.Tools.HMMR.HMMRPumpControlCard;
 import com.example.lider_express.Сamera2.MainCamera2;
 import com.google.android.material.navigation.NavigationView;
 
@@ -85,6 +84,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private static String NameTU;
     // Bashneft, Megion and other
     private String location = "";
+    // TODO DELETE!
+    private String temporaryLocation = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -177,14 +178,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
 
-                // Selected Object
+                // Selected location
                 location = mSettings.getString(APP_ZAKAZCHIK, "Zakazchik");
                 switch (location) {
                     case "Башнефть 2020":
                         location = Shared.nameBND2020;
+                        temporaryLocation = Shared.nameBND2020;
                         break;
                     case "XMMP":
+                        // TODO Change Table on HMMR
                         location = Shared.nameBND2020;
+                        temporaryLocation = Shared.nameHMMR;
                         break;
                 }
                 // Selected field for search
@@ -231,8 +235,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         cursor.moveToFirst();
         if (cursor.getCount() > 0) {
             setEnabledButton(true);
-
-            // сосуд
 
             textViewTypeTU.setText(cursor.getString(2));//Тип оборудования
             typeTU = cursor.getString(2);
@@ -326,8 +328,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case "ZayavkaBND":
                 zakazchik = "Башнефть_2019";
                 break;
-            case "MXXP":
-                zakazchik = "MXXP";
+            case "ХММР":
+                zakazchik = "HMMP";
                 break;
             default:
 
@@ -339,32 +341,47 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switch (typeTU) {
-                    case "Насос":
-                        Intent IntentCardPump = new Intent(MainActivity.this, PumpControlCard.class);
-                        IntentCardPump.putExtra("position", position);
-                        startIntent(IntentCardPump);
-                        break;
-                    case "СРПД":
-                        Intent IntentCardContainer = new Intent(MainActivity.this, ContainerControlCard.class);
-                        IntentCardContainer.putExtra("position", position);
-                        startIntent(IntentCardContainer);
-                        break;
+                // TODO CHANGE!
+                if(temporaryLocation == Shared.nameBND2020){
+                    switch (typeTU) {
+                        case "Насос":
+                            Intent IntentCardPump = new Intent(MainActivity.this, PumpControlCard.class);
+                            IntentCardPump.putExtra("position", position);
+                            IntentCardPump.putExtra("location", temporaryLocation);
+                            startIntent(IntentCardPump);
+                            break;
+                        case "Блок реагентов (УДЭ)":
+                            Intent IntentKartaKontrolyaUde = new Intent(MainActivity.this, KartaKontrolyaYDE.class);
+                            IntentKartaKontrolyaUde.putExtra("position", position);
+                            IntentKartaKontrolyaUde.putExtra("Zakazchik", getNameZakaz(location));
+                            startIntent(IntentKartaKontrolyaUde);
+                            break;
+                        case "СППК":
+                            Intent IntentKartaKontrolyaSppk = new Intent(MainActivity.this, KartaKontrolyaSPPK.class);
+                            IntentKartaKontrolyaSppk.putExtra("position", position);
+                            IntentKartaKontrolyaSppk.putExtra("Zakazchik", getNameZakaz(location));
+                            startIntent(IntentKartaKontrolyaSppk);
+                            break;
+                        default:
+                            displayMessage(getBaseContext(), "Допустимые типы ТУ: Насос, Блок реагентов (УДЭ), СППК");
+                    }
+                }else if (temporaryLocation == Shared.nameHMMR){
+                    switch (typeTU) {
+                        case "Насос":
+                            Intent IntentCardPump = new Intent(MainActivity.this, HMMRPumpControlCard.class);
+                            IntentCardPump.putExtra("position", position);
+                            startIntent(IntentCardPump);
+                            break;
+                        case "СРПД":
+                            Intent IntentCardContainer = new Intent(MainActivity.this, HMMRContainerControlCard.class);
+                            IntentCardContainer.putExtra("position", position);
+                            startIntent(IntentCardContainer);
+                            break;
+                        default:
+                            displayMessage(getBaseContext(), "Допустимые типы ТУ: Насос, СРПД");
+                    }
+                }else {
 
-                    case "Блок реагентов (УДЭ)":
-                        Intent IntentKartaKontrolyaUde = new Intent(MainActivity.this, KartaKontrolyaYDE.class);
-                        IntentKartaKontrolyaUde.putExtra("position", position);
-                        IntentKartaKontrolyaUde.putExtra("Zakazchik", getNameZakaz(location));
-                        startIntent(IntentKartaKontrolyaUde);
-                        break;
-                    case "СППК":
-                        Intent IntentKartaKontrolyaSppk = new Intent(MainActivity.this, KartaKontrolyaSPPK.class);
-                        IntentKartaKontrolyaSppk.putExtra("position", position);
-                        IntentKartaKontrolyaSppk.putExtra("Zakazchik", getNameZakaz(location));
-                        startIntent(IntentKartaKontrolyaSppk);
-                        break;
-                    default:
-                        displayMessage(getBaseContext(), "Допустимые типы ТУ: Насос, СРПД, Блок реагентов (УДЭ), СППК");
                 }
             }
         };
