@@ -341,7 +341,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onClick(View view) {
                 switch (typeTU) {
                     case "Насос":
-                        Intent IntentCardPump = new Intent(MainActivity.this, ContainerControlCard.class);
+                        Intent IntentCardPump = new Intent(MainActivity.this, PumpControlCard.class);
                         IntentCardPump.putExtra("position", position);
                         startIntent(IntentCardPump);
                         break;

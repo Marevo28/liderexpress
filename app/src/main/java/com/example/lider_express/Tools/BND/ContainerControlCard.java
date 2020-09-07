@@ -7,8 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -32,12 +30,6 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
     public SQLiteDatabase mDb;
 
     private SummaryBeta containers;
-
-    /** LinearLayout */
-    /** Radio */
-    /** TextView */
-    /** EditText */
-    /** Button */
 
     Item item1 /** LinearLayout */,                             item2  /** TextView Дата НК */,
             item3 /** TextView ФИО Спец НК*/,                   item4  /** Radio Сосуд в останове? */,
@@ -92,11 +84,6 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         containers = new SummaryBeta(this, this, Shared.nameBND2020,
                 Shared.nameDefectBND2020, mDb, position);
 
-
-        //        Item item101 = new Item(this, R.id.bnd2020_pump_defectTree_101, false);
-//        Item item102 = new Item(this, R.id.bnd2020_pump_defectTree_102, false, View.GONE);
-//        RadioGroupHandler.setActionSingleHidden(this, item101, item102, new String[]{"Нет"});
-
         initializeItems();
 
         initializeSummary();
@@ -106,12 +93,8 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         initializeListeners();
 
 
-
-        //  Находим нашу заветную кнопочку Save
-        Button save = findViewById(R.id.bnd2020_container_save);
-
-        //  Листенер на нашу кнопочку
-        save.setOnClickListener(new View.OnClickListener() {
+        Button buttonSave = findViewById(R.id.bnd2020_container_save);
+        buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Save values to data base
@@ -125,7 +108,7 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
 
     @Override
     public void initializeItems() {
-        item1 = new Item(this, R.id.bnd2020_container_controlCard_1, true);
+        item1 = new Item(this, R.id.bnd2020_container_controlCard_1, false);
         item2 = new Item(this, R.id.bnd2020_container_controlCard_2, true);
         item3 = new Item(this, R.id.bnd2020_container_controlCard_3, true);
         item4 = new Item(this, R.id.bnd2020_container_controlCard_4, true);
@@ -149,14 +132,14 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         item22 = new Item(this, R.id.bnd2020_container_controlCard_22, true);
         item23 = new Item(this, R.id.bnd2020_container_controlCard_23, true);
         item24 = new Item(this, R.id.bnd2020_container_controlCard_24, true);
-        item25 = new Item(this, R.id.bnd2020_container_controlCard_25, true);
-        item26 = new Item(this, R.id.bnd2020_container_controlCard_26, true);
-        item27 = new Item(this, R.id.bnd2020_container_controlCard_27, true);
-        item28 = new Item(this, R.id.bnd2020_container_controlCard_28, true);
-        item29 = new Item(this, R.id.bnd2020_container_controlCard_29, true);
-        item30 = new Item(this, R.id.bnd2020_container_controlCard_30, true);
-        item31 = new Item(this, R.id.bnd2020_container_controlCard_31, true);
-        item32 = new Item(this, R.id.bnd2020_container_controlCard_32, true);
+        item25 = new Item(this, R.id.bnd2020_container_controlCard_25, false);
+        item26 = new Item(this, R.id.bnd2020_container_controlCard_26, false);
+        item27 = new Item(this, R.id.bnd2020_container_controlCard_27, false);
+        item28 = new Item(this, R.id.bnd2020_container_controlCard_28, false);
+        item29 = new Item(this, R.id.bnd2020_container_controlCard_29, false);
+        item30 = new Item(this, R.id.bnd2020_container_controlCard_30, false);
+        item31 = new Item(this, R.id.bnd2020_container_controlCard_31, false);
+        item32 = new Item(this, R.id.bnd2020_container_controlCard_32, false);
         item33 = new Item(this, R.id.bnd2020_container_controlCard_33, true);
         item34 = new Item(this, R.id.bnd2020_container_controlCard_34, true);
         item35 = new Item(this, R.id.bnd2020_container_controlCard_35, true);
@@ -264,8 +247,8 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         TextViewHandler.setStartActivityListener(this, this, item2, TextViewHandler.DESTINATION_DATA);
         TextViewHandler.setStartActivityListener(this, this, item3, TextViewHandler.DESTINATION_SPEC_NKO);
 
-        RadioGroupHandler.setActionSingleHidden(this, item14, item15, new String[]{"Не соответствует"});
-        RadioGroupHandler.setActionSingleHidden(this, item18, item19, new String[]{"Другое"});
+        RadioGroupHandler.setActionSingleHiddenPositive(this, item14, item15, new String[]{"Не соответствует"});
+        RadioGroupHandler.setActionSingleHiddenPositive(this, item18, item19, new String[]{"Другое"});
 
         ButtonHandler.setActionInfDialog(this, item25, R.drawable.conteiner_on_the_ground);
         ButtonHandler.setActionInfDialog(this, item26, R.drawable.container_rack_supports);
@@ -276,7 +259,7 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         ButtonHandler.setActionInfDialog(this, item31, R.drawable.container_cylindrical_support);
         ButtonHandler.setActionInfDialog(this, item32, R.drawable.container_ring_supports);
 
-        RadioGroupHandler.setActionSingleHidden(this, item44, item45, new String[]{"Есть"});
+        RadioGroupHandler.setActionSingleHiddenPositive(this, item44, item45, new String[]{"Есть"});
     }
 
     @Override
@@ -301,43 +284,7 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
             String exp = data.getStringExtra("select");
-            // Сюда вью
-            // которую выбрали
-            // когда переходи в активити со списком экспертов
             ((TextView) TextViewHandler.variableView).setText(exp);
         }
     }
-
-//    private void initializeItems() {
-//        for (int i = 0; i < items.length; i++) {
-//            String[] structure = Tools.BND.getStructure(Tools.BND.CONTAINER_CONTROL_CARD);
-//            String itemId = StringHelper.join(structure, "_", true) + (i + 1);
-//            items[i] = new Item(this,
-//                    getResources().getIdentifier(itemId, "id", getApplicationContext().getPackageName()),
-//                    true);
-//        }
-//    }
-//
-//    /**
-//     * @param id - number item in Name id != 0
-//     * @return - element array (id - 1)
-//     */
-//    private Item getItem(int id) {
-//        int index = id - 1;
-//        Item item = null;
-//        try {
-//            item = items[index];
-//        } catch (ArrayIndexOutOfBoundsException e) {
-//            Log.e("ContainerControlCard", "Items Array index < 0");
-//            startActivityException("Exception", "ArrayIndexOutOfBounds");
-//        }
-//        return item;
-//    }
-//
-//    private void startActivityException(String name, String value) {
-//        Intent intent = new Intent(ContainersControlCard.this, MainActivity.class);
-//        intent.putExtra(name, value);
-//        startActivity(intent);
-//    }
-
 }

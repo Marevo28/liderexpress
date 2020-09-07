@@ -137,23 +137,6 @@ public class Item {
         id = description.get(id);
     }
 
-//    /**
-//     * Constructor for Spinner, ListView
-//     * @param activity - Parent Activity
-//     * @param resourceId - Id View
-//     * @param isGiven - flag, that give info about this View(This View have data, that need write to DataBase)
-//     * @param adapter
-//     */
-//    public Item(Activity activity, int resourceId, boolean isGiven, Adapter adapter){
-//        this.activity = activity;
-//        this.resourceId = resourceId;
-//        this.isGiven = isGiven;
-//        this.view = activity.findViewById(resourceId);
-//        this.adapter = adapter;
-//
-//        type = Types.getTypeView(view);
-//    }
-
     // Set view values like DB
     public void setState(String value){
         switch (type){

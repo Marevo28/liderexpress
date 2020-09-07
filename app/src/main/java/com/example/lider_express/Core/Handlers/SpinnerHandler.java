@@ -11,7 +11,6 @@ import com.example.lider_express.Core.DefectTree.DefectTree;
 import com.example.lider_express.Core.Item;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class SpinnerHandler{
 
@@ -20,7 +19,6 @@ public class SpinnerHandler{
         ((Spinner) spinnerLevel1.getView()).setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                // spinnerKorozLocal.getItemAtPosition(position).toString()
                 final ArrayAdapter<String>  adapter = new ArrayAdapter<String>(activity, android.R.layout.simple_list_item_1,
                         defectTree.getItemsDoubleBranchLevel2(((Spinner) spinnerLevel1.getView()).getItemAtPosition(position).toString()));
                 ((Spinner) spinnerLevel2.getView()).setAdapter(adapter);

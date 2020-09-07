@@ -34,6 +34,22 @@ public class RadioGroupHandler{
                 RadioButton button = activity.findViewById(checkedId);
                 for (int i = 0; i < negativeValues.length; i++){
                     if(button.getText().toString().equals(negativeValues[i])){
+                        hiddenItem.hidden(View.GONE);
+                    }else{
+                        hiddenItem.hidden(View.VISIBLE);
+                    }
+                }
+            }
+        });
+    }
+
+    public static void setActionSingleHiddenPositive(final Activity activity, Item mainItem, final Item hiddenItem, final String[] positiveValues){
+        ((RadioGroup) mainItem.getView()).setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton button = activity.findViewById(checkedId);
+                for (int i = 0; i < positiveValues.length; i++){
+                    if(button.getText().toString().equals(positiveValues[i])){
                         hiddenItem.hidden(View.VISIBLE);
                     }else{
                         hiddenItem.hidden(View.GONE);
