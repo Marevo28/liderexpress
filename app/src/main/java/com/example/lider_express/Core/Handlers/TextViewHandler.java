@@ -47,6 +47,7 @@ public class TextViewHandler {
     public static final String DESTINATION_SPEC_NKO = "SPEC_NKO";
     public static final String DESTINATION_SPEC_JOURNAL = "SPEC_JOURNAL";
     public static final String DESTINATION_EXP_JOURNAL = "EXP_JOURNAL";
+    public static final String DESTINATION_HMMR_SPEC_NKO = "HMMR_EXP_JOURNAL";
 
 
 
@@ -84,6 +85,8 @@ public class TextViewHandler {
                         IntentSittings.putExtra("people", "SPEC_JOURNAL");
                     }else if(destination == DESTINATION_EXP_JOURNAL){
                         IntentSittings.putExtra("people", "EXP_JOURNAL");
+                    }else if(destination == DESTINATION_HMMR_SPEC_NKO){
+                        IntentSittings.putExtra("people", "HMMR_SPEC_NKO");
                     }
 
                     activity.startActivityForResult(IntentSittings, 0);

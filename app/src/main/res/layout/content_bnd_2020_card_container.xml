@@ -121,73 +121,75 @@
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Сосуд в останове? ////////////////////// -->
         <!-- ============================================================================ -->
         <!-- ////////////////////// Управление \\\\\\\\\\\\\\\\\\\\\\ -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/summary_background_container"
-            android:orientation="vertical">
 
-            <!-- H2 -->
-            <TextView
-                style="@style/h2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Управление" />
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_margin="5dp"-->
+        <!--            android:background="@drawable/summary_background_container"-->
+        <!--            android:orientation="vertical">-->
 
-            <RadioGroup
-                android:id="@+id/bnd2020_container_controlCard_5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+        <!--            &lt;!&ndash; H2 &ndash;&gt;-->
+        <!--            <TextView-->
+        <!--                style="@style/h2"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="Управление" />-->
 
-                <RadioButton
-                    android:id="@+id/bnd2020_container_controlCard_5_1"
-                    style="@style/p"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="50"
-                    android:gravity="center_vertical|left"
-                    android:text="Арлан." />
+        <!--            <RadioGroup-->
+        <!--                android:id="@+id/bnd2020_container_controlCard_5"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:orientation="horizontal">-->
 
-                <RadioButton
-                    android:id="@+id/bnd2020_container_controlCard_5_2"
-                    style="@style/p"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="50"
-                    android:gravity="center_vertical|left"
-                    android:text="Ишим." />
+        <!--                <RadioButton-->
+        <!--                    android:id="@+id/bnd2020_container_controlCard_5_1"-->
+        <!--                    style="@style/p"-->
+        <!--                    android:layout_width="0dp"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_weight="50"-->
+        <!--                    android:gravity="center_vertical|left"-->
+        <!--                    android:text="Арлан." />-->
 
-                <RadioButton
-                    android:id="@+id/bnd2020_container_controlCard_5_3"
-                    style="@style/p"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="50"
-                    android:gravity="center_vertical|left"
-                    android:text="Чекм." />
+        <!--                <RadioButton-->
+        <!--                    android:id="@+id/bnd2020_container_controlCard_5_2"-->
+        <!--                    style="@style/p"-->
+        <!--                    android:layout_width="0dp"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_weight="50"-->
+        <!--                    android:gravity="center_vertical|left"-->
+        <!--                    android:text="Ишим." />-->
 
-                <RadioButton
-                    android:id="@+id/bnd2020_container_controlCard_5_4"
-                    style="@style/p"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="50"
-                    android:gravity="center_vertical|left"
-                    android:text="Уф." />
+        <!--                <RadioButton-->
+        <!--                    android:id="@+id/bnd2020_container_controlCard_5_3"-->
+        <!--                    style="@style/p"-->
+        <!--                    android:layout_width="0dp"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_weight="50"-->
+        <!--                    android:gravity="center_vertical|left"-->
+        <!--                    android:text="Чекм." />-->
 
-                <RadioButton
-                    android:id="@+id/bnd2020_container_controlCard_5_5"
-                    style="@style/p"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="50"
-                    android:gravity="center_vertical|left"
-                    android:text="Туйм." />
-            </RadioGroup>
-        </LinearLayout>
+        <!--                <RadioButton-->
+        <!--                    android:id="@+id/bnd2020_container_controlCard_5_4"-->
+        <!--                    style="@style/p"-->
+        <!--                    android:layout_width="0dp"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_weight="50"-->
+        <!--                    android:gravity="center_vertical|left"-->
+        <!--                    android:text="Уф." />-->
+
+        <!--                <RadioButton-->
+        <!--                    android:id="@+id/bnd2020_container_controlCard_5_5"-->
+        <!--                    style="@style/p"-->
+        <!--                    android:layout_width="0dp"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_weight="50"-->
+        <!--                    android:gravity="center_vertical|left"-->
+        <!--                    android:text="Туйм." />-->
+        <!--            </RadioGroup>-->
+        <!--        </LinearLayout>-->
+
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Управление ////////////////////// -->
         <!-- ============================================================================ -->
         <!-- ////////////////////// Цех \\\\\\\\\\\\\\\\\\\\\\ -->
@@ -422,7 +424,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Соответствие маркировки треб. НТД (№ оборудования (по системе нумерации, принятой экспл. орг.; рег. №; разрешенные параметры (давл., темп.); даты след. НВО и ГИ" />
+                android:text="Соответствие маркировки треб. НТД (№ оборудования (по системе нумерации, принятой экспл. орг.); рег. №; разрешенные параметры (давл., темп.); даты след. НВО и ГИ)" />
 
             <RadioGroup
                 android:id="@+id/bnd2020_container_controlCard_14"
@@ -539,36 +541,34 @@
                 android:id="@+id/bnd2020_container_controlCard_18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_18_1"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
                     android:gravity="center_vertical|left"
                     android:text="Вертикальное" />
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_18_2"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
                     android:gravity="center_vertical|left"
                     android:text="Горизонтальное" />
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_18_3"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
                     android:gravity="center_vertical|left"
                     android:text="Другое" />
                 <!-- hidden TextEdit -->
             </RadioGroup>
+
             <EditText
                 android:id="@+id/bnd2020_container_controlCard_19"
                 android:layout_width="match_parent"
@@ -664,8 +664,9 @@
         </LinearLayout>
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Изоляция ////////////////////// -->
         <!-- ============================================================================ -->
-        <!-- ////////////////////// Соответствие изоляции \\\\\\\\\\\\\\\\\\\\\\ -->
+        <!-- ////////////////////// Состояние изоляции \\\\\\\\\\\\\\\\\\\\\\ -->
         <LinearLayout
+            android:id="@+id/bnd2020_container_controlCard_22_h"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -678,7 +679,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Соответствие изоляции" />
+                android:text="Состояние изоляции" />
 
             <RadioGroup
                 android:id="@+id/bnd2020_container_controlCard_22"
@@ -750,7 +751,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_23_1"
                     style="@style/p"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -759,25 +760,25 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_23_2"
                     style="@style/p"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Удовл." />
+                    android:text="Удовлетворительное" />
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_23_3"
                     style="@style/p"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Неудовл." />
+                    android:text="Неудовлетворительное" />
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_23_4"
                     style="@style/p"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -811,7 +812,7 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_24_1"
                     style="@style/p"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -820,25 +821,25 @@
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_24_2"
                     style="@style/p"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Удовл." />
+                    android:text="Удовлетворительно" />
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_24_3"
                     style="@style/p"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Неудовл." />
+                    android:text="Неудовлетворительно" />
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_24_4"
                     style="@style/p"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:gravity="center_vertical|left"
@@ -847,7 +848,7 @@
         </LinearLayout>
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Антикорозийное покрытие(на внутренней поверхности) ////////////////////// -->
         <!-- ============================================================================ -->
-        
+
         <!-- НАЛИЧИЕ И ВИД ОПОР -->
         <TextView
             style="@style/h1"
@@ -856,7 +857,7 @@
             android:gravity="center"
             android:paddingTop="30dp"
             android:text="Наличие и вид опор" />
-        <!-- ////////////////////// Виды опор \\\\\\\\\\\\\\\\\\\\\\ -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -870,87 +871,88 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Виды опор" />
+                android:text="Вид опоры" />
 
-            <Button
-                android:id="@+id/bnd2020_container_controlCard_25"
-                style="@style/h2"
+            <RadioGroup
+                android:id="@+id/bnd2020_container_controlCard_16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/summary_background_container"
-                android:padding="5dp"
-                android:text="На грунте" />
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/bnd2020_container_controlCard_26"
-                style="@style/h2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/summary_background_container"
-                android:padding="5dp"
-                android:text="Опоры стойки" />
+                <RadioButton
+                    android:id="@+id/bnd2020_container_controlCard_16_1"
+                    style="@style/p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="На грунте" />
 
-            <Button
-                android:id="@+id/bnd2020_container_controlCard_27"
-                style="@style/h2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/summary_background_container"
-                android:padding="5dp"
-                android:text="Опоры лапы" />
+                <RadioButton
+                    android:id="@+id/bnd2020_container_controlCard_16_2"
+                    style="@style/p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Опоры стойки" />
 
-            <Button
-                android:id="@+id/bnd2020_container_controlCard_28"
-                style="@style/h2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/summary_background_container"
-                android:padding="5dp"
-                android:text="Седловые опоры" />
+                <RadioButton
+                    android:id="@+id/bnd2020_container_controlCard_16_3"
+                    style="@style/p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Опоры лапы" />
 
-            <Button
-                android:id="@+id/bnd2020_container_controlCard_29"
-                style="@style/h2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/summary_background_container"
-                android:padding="5dp"
-                android:text="Механическая несущая конструкция" />
+                <RadioButton
+                    android:id="@+id/bnd2020_container_controlCard_16_4"
+                    style="@style/p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Седловые опоры" />
 
-            <Button
-                android:id="@+id/bnd2020_container_controlCard_30"
-                style="@style/h2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/summary_background_container"
-                android:padding="5dp"
-                android:text="Коническая опора" />
+                <RadioButton
+                    android:id="@+id/bnd2020_container_controlCard_16_5"
+                    style="@style/p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Механическая несущая конструкция" />
 
-            <Button
-                android:id="@+id/bnd2020_container_controlCard_31"
-                style="@style/h2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/summary_background_container"
-                android:padding="5dp"
-                android:text="Цилиндрическая опора" />
+                <RadioButton
+                    android:id="@+id/bnd2020_container_controlCard_16_6"
+                    style="@style/p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Коническая опора" />
 
-            <Button
-                android:id="@+id/bnd2020_container_controlCard_32"
-                style="@style/h2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/summary_background_container"
-                android:padding="5dp"
-                android:text="Кольцевые опоры" />
+                <RadioButton
+                    android:id="@+id/bnd2020_container_controlCard_16_7"
+                    style="@style/p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Цилиндрическая опора" />
+
+                <RadioButton
+                    android:id="@+id/bnd2020_container_controlCard_16_8"
+                    style="@style/p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Кольцевые опоры" />
+
+            </RadioGroup>
+
         </LinearLayout>
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Виды опор ////////////////////// -->
         <!-- ============================================================================ -->
@@ -1042,6 +1044,7 @@
         <!-- ============================================================================ -->
         <!-- ////////////////////// Состояние фундамента \\\\\\\\\\\\\\\\\\\\\\ -->
         <LinearLayout
+            android:id="@+id/bnd2020_container_controlCard_35_h"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -1128,6 +1131,7 @@
         <!-- ============================================================================ -->
         <!-- ////////////////////// Состояние заземления \\\\\\\\\\\\\\\\\\\\\\ -->
         <LinearLayout
+            android:id="@+id/bnd2020_container_controlCard_37_h"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -1214,6 +1218,7 @@
         <!-- ============================================================================ -->
         <!-- ////////////////////// Состояние молниезащиты \\\\\\\\\\\\\\\\\\\\\\ -->
         <LinearLayout
+            android:id="@+id/bnd2020_container_controlCard_39_h"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -1300,6 +1305,7 @@
         <!-- ============================================================================ -->
         <!-- ////////////////////// Анкерные болты \\\\\\\\\\\\\\\\\\\\\\ -->
         <LinearLayout
+            android:id="@+id/bnd2020_container_controlCard_41_h"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -1386,6 +1392,7 @@
         <!-- ============================================================================ -->
         <!-- ////////////////////// Состояние футеровки \\\\\\\\\\\\\\\\\\\\\\ -->
         <LinearLayout
+            android:id="@+id/bnd2020_container_controlCard_43_h"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -1602,6 +1609,14 @@
                         android:gravity="center_vertical|left"
                         android:text="Нет" />
                 </RadioGroup>
+
+                <EditText
+                    android:id="@+id/bnd2020_container_controlCard_65"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Год"
+                    android:textSize="14sp" />
+
             </LinearLayout>
             <!-- \\\\\\\\\\\\\\\\\\\\\\ Поверка на манометре действующая (какой год) ////////////////////// -->
             <!-- ============================================================================ -->
@@ -2207,6 +2222,325 @@
             </RadioGroup>
         </LinearLayout>
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Конструкция сосуда соответствует паспорту ////////////////////// -->
+        <!-- ============================================================================ -->
+        <!-- ////////////////////// Был ли по факту проведен осмотр внутренней поверхности сосуда \\\\\\\\\\\\\\\\\\\\\\ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/summary_background_container"
+            android:orientation="vertical">
+
+            <!-- H2 -->
+            <TextView
+                style="@style/h2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Был ли по факту проведен осмотр внутренней поверхности сосуда" />
+
+            <RadioGroup
+                android:id="@+id/bnd2020_container_controlCard_66"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/bnd2020_container_controlCard_66_1"
+                    style="@style/p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Да" />
+
+                <RadioButton
+                    android:id="@+id/bnd2020_container_controlCard_66_2"
+                    style="@style/p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical|left"
+                    android:text="Нет" />
+
+            </RadioGroup>
+        </LinearLayout>
+        <!-- \\\\\\\\\\\\\\\\\\\\\\ Был ли по факту проведен осмотр внутренней поверхности сосуда ////////////////////// -->
+        <!-- ============================================================================ -->
+        <!-- ////////////////////// Дефекты \\\\\\\\\\\\\\\\\\\\\\ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/summary_background_container"
+            android:orientation="vertical">
+
+            <!-- H2 -->
+            <TextView
+                style="@style/h1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Дефекты" />
+
+            <LinearLayout
+                android:id="@+id/bnd2020_container_controlCard_102"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/bnd2020_container_controlCard_67"
+                    android:layout_width="0dp"
+                    android:layout_weight="80"
+                    android:layout_height="wrap_content"
+                    android:hint="Дефект"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/bnd2020_container_controlCard_103"
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_button"
+                    android:clickable="true"
+                    android:padding="0dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_remove_circle_outline_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bnd2020_container_controlCard_104"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/bnd2020_container_controlCard_68"
+                    android:layout_width="0dp"
+                    android:layout_weight="80"
+                    android:layout_height="wrap_content"
+                    android:hint="Дефект"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/bnd2020_container_controlCard_105"
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_button"
+                    android:clickable="true"
+                    android:padding="0dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_remove_circle_outline_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bnd2020_container_controlCard_106"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/bnd2020_container_controlCard_69"
+                    android:layout_width="0dp"
+                    android:layout_weight="80"
+                    android:layout_height="wrap_content"
+                    android:hint="Дефект"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/bnd2020_container_controlCard_107"
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_button"
+                    android:clickable="true"
+                    android:padding="0dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_remove_circle_outline_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bnd2020_container_controlCard_108"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/bnd2020_container_controlCard_70"
+                    android:layout_width="0dp"
+                    android:layout_weight="80"
+                    android:layout_height="wrap_content"
+                    android:hint="Дефект"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/bnd2020_container_controlCard_109"
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_button"
+                    android:clickable="true"
+                    android:padding="0dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_remove_circle_outline_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bnd2020_container_controlCard_110"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/bnd2020_container_controlCard_71"
+                    android:layout_width="0dp"
+                    android:layout_weight="80"
+                    android:layout_height="wrap_content"
+                    android:hint="Дефект"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/bnd2020_container_controlCard_111"
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_button"
+                    android:clickable="true"
+                    android:padding="0dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_remove_circle_outline_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bnd2020_container_controlCard_112"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/bnd2020_container_controlCard_72"
+                    android:layout_width="0dp"
+                    android:layout_weight="80"
+                    android:layout_height="wrap_content"
+                    android:hint="Дефект"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/bnd2020_container_controlCard_113"
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_button"
+                    android:clickable="true"
+                    android:padding="0dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_remove_circle_outline_24" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/bnd2020_container_controlCard_114"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/bnd2020_container_controlCard_73"
+                    android:layout_width="0dp"
+                    android:layout_weight="80"
+                    android:layout_height="wrap_content"
+                    android:hint="Дефект"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/bnd2020_container_controlCard_115"
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_button"
+                    android:clickable="true"
+                    android:padding="0dp"
+                    android:src="@drawable/ic_baseline_remove_circle_outline_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bnd2020_container_controlCard_116"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/summary_background_container"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/bnd2020_container_controlCard_74"
+                    android:layout_width="0dp"
+                    android:layout_weight="80"
+                    android:layout_height="wrap_content"
+                    android:hint="Дефект"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/bnd2020_container_controlCard_117"
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_button"
+                    android:clickable="true"
+                    android:padding="0dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_remove_circle_outline_24" />
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+        <!-- \\\\\\\\\\\\\\\\\\\\\\ Дефекты ////////////////////// -->
+
+        <!-- ADD Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/bnd2020_container_controlCard_101"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/selector_button"
+                android:clickable="true"
+                android:padding="0dp"
+                android:src="@drawable/ic_baseline_add_48" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/bnd2020_container_save"

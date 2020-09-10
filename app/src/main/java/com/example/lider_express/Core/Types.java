@@ -22,18 +22,26 @@ public class Types {
         // ["android", "widget", "Button"]
         int lastElement = view.getClass().getName().split("\\.").length - 1;
         String typeView = view.getClass().getName().split("\\.")[lastElement];
-        switch (typeView){
-            case "TextView": type = TEXT_VIEW; break;
-            case "EditText": type = EDIT_TEXT; break;
-            case "Button": type = BUTTON; break;
-            case "AppCompatButton": type = APP_COMPAT_BUTTON; break;
-            case "RadioGroup": type = RADIO_GROUP; break;
-            case "RadioButton": type = RADIO_BUTTON; break;
-            case "ImageButton": type = IMAGE_BUTTON; break;
-            case "ListView": type = LIST_VIEW; break;
-            case "ExpandableListView": type = EXPANDABLE_LIST_VIEW; break;
-            case "Spinner": type = SPINNER; break;
-            case "LinearLayout": type = LINEAR_LAYOUT; break;
+        if(typeView.contains("TextView")) {
+            type = TEXT_VIEW;
+        } else if (typeView.contains("EditText")) {
+            type = EDIT_TEXT;
+        } else if (typeView.contains("Button")) {
+            type = BUTTON;
+        } else if (typeView.contains("RadioGroup")) {
+            type = RADIO_GROUP;
+        } else if (typeView.contains("RadioButton")) {
+            type = RADIO_BUTTON;
+        } else if (typeView.contains("ImageButton")) {
+            type = IMAGE_BUTTON;
+        } else if (typeView.contains("ListView")) {
+            type = LIST_VIEW;
+        } else if (typeView.contains("ExpandableListView")) {
+            type = EXPANDABLE_LIST_VIEW;
+        } else if (typeView.contains("Spinner")) {
+            type = SPINNER;
+        } else if (typeView.contains("LinearLayout")) {
+            type = LINEAR_LAYOUT;
         }
         return type;
     }

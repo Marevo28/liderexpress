@@ -36,4 +36,10 @@
         <item>Чернышов А.Б.</item>
         <item>Юсупов И.А.</item>
     </string-array>
+
+    <!-- Специалисты проводили НК -->
+    <string-array name="hmmr_spec_nko">
+        <item>Михайлов Е.А.</item>
+        <item>Гусар А.Г.</item>
+    </string-array>
 </resources>

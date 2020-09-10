@@ -24,29 +24,37 @@ import com.example.lider_express.MainActivity;
 import com.example.lider_express.R;
 import com.example.lider_express.Shared;
 
+import java.util.HashMap;
+
 public class ContainerControlCard extends AppCompatActivity implements SummaryBehavior {
+
+    /**
+     * НЕ АКТИВЕН!
+     */
 
     public DatabaseHelper mDBHelper;
     public SQLiteDatabase mDb;
 
     private SummaryBeta containers;
+    private final String CONTAINER_READ_DATA_BASE = "";
+    private final String CONTAINER_WRITE_DATA_BASE = "";
 
     Item item1 /** LinearLayout */,                             item2  /** TextView Дата НК */,
             item3 /** TextView ФИО Спец НК*/,                   item4  /** Radio Сосуд в останове? */,
-            item5 /** Управление */,                            item6  /** EditText Цех */,
+            item5 /* Свободный */,                              item6  /** EditText Цех */,
             item7 /** EditText Обьект */,                       item8  /** EditText Наименование */,
             item9 /** EditText Зав № */,                        item10 /** EditText Инв № */,
             item11 /** EditText Техн № */,                      item12 /** EditText Рег № */,
             item13 /** Radio Маркировка */,                     item14 /** Radio Соответствие маркировки */,
-            item15 /** EditText Не соотв маркировки Hidden */,  item16 /* Свободный */,
+            item15 /** EditText Не соотв маркировки Hidden */,  item16 /** Radio Вид опор */,
             item17 /** Размещение */,                           item18 /** Radio Исполнение */,
             item19 /** EditText Исполнение другое Hidden */,    item20 /** Radio Форма*/,
             item21 /** Radio Изоляция */,                       item22 /** Radio Соотв изоляции */,
             item23 /** Radio Антикор покр наружн*/,             item24 /** Radio Антикор покр внутр*/,
-            item25 /** Button Опора на грунте*/,                item26 /** Button Опоры стойки*/,
-            item27 /** Button Опоры лапы*/,                     item28 /** Button Седловые опоры*/,
-            item29 /** Button Мех нес констр */,                item30 /** Button Коническая опора */,
-            item31 /** Button Цилиндрическая опора */,          item32 /** Button Кольцевые опоры */,
+            item25 /* Свободный */,                             item26 /* Свободный */,
+            item27 /* Свободный */,                             item28 /* Свободный */,
+            item29 /* Свободный */,                             item30 /* Свободный */,
+            item31 /* Свободный */,                             item32 /* Свободный */,
             item33 /** Radio Сост опор */,                      item34 /** Radio Фундамент */,
             item35 /** Radio Сост фундамента */,                item36 /** Radio Заземление */,
             item37 /** Radio Состояние заземления */,           item38 /** Radio Молниезащита */,
@@ -62,7 +70,16 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
             item57 /** Radio Запорная арматура */,              item58 /** Radio Предохр устройство */,
             item59 /* Свободный */,                             item60 /** EditText  Зав. № СППК */,
             item61 /** EditText Условн проход СППК, мм */,      item62 /** EditText Условное давление СППК, МПа */,
-            item63 /** Radio между ... запор арм устан. */,     item64 /** Radio Конструкция сосуда соответствует паспорту */;
+            item63 /** Radio между ... запор арм устан. */,     item64 /** Radio Конструкция сосуда соответствует паспорту */,
+            item65 /** EditText Год поверки манометра */,       item66 /** Radio Был ли по факту проведен осмотр внутренней поверхности сосуда */,
+            item67, item68,
+            item69, item70,
+            item71, item72,
+            item73, item74;
+
+    Item item102, item104, item106, item108, item110, item112, item114, item116;
+    Item item103, item105, item107, item109, item111, item113, item115, item117;
+    Item item101;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,8 +98,8 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         Bundle arguments = getIntent().getExtras();
         String position = arguments.getString("position");
 
-        containers = new SummaryBeta(this, this, Shared.nameBND2020,
-                Shared.nameDefectBND2020, mDb, position);
+        containers = new SummaryBeta(this, this, CONTAINER_READ_DATA_BASE,
+                CONTAINER_WRITE_DATA_BASE, mDb, position);
 
         initializeItems();
 
@@ -112,7 +129,7 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         item2 = new Item(this, R.id.bnd2020_container_controlCard_2, true);
         item3 = new Item(this, R.id.bnd2020_container_controlCard_3, true);
         item4 = new Item(this, R.id.bnd2020_container_controlCard_4, true);
-        item5 = new Item(this, R.id.bnd2020_container_controlCard_5, true);
+//        item5 = new Item(this, R.id.bnd2020_container_controlCard_5, true);
         item6 = new Item(this, R.id.bnd2020_container_controlCard_6, true);
         item7 = new Item(this, R.id.bnd2020_container_controlCard_7, true);
         item8 = new Item(this, R.id.bnd2020_container_controlCard_8, true);
@@ -123,7 +140,7 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         item13 = new Item(this, R.id.bnd2020_container_controlCard_13, true);
         item14 = new Item(this, R.id.bnd2020_container_controlCard_14, true);
         item15 = new Item(this, R.id.bnd2020_container_controlCard_15, false);
-//        item16 = new Item(this, R.id.bnd2020_container_controlCard_16, true);
+        item16 = new Item(this, R.id.bnd2020_container_controlCard_16, true);
         item17 = new Item(this, R.id.bnd2020_container_controlCard_17, true);
         item18 = new Item(this, R.id.bnd2020_container_controlCard_18, true);
         item19 = new Item(this, R.id.bnd2020_container_controlCard_19, true);
@@ -132,14 +149,14 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         item22 = new Item(this, R.id.bnd2020_container_controlCard_22, true);
         item23 = new Item(this, R.id.bnd2020_container_controlCard_23, true);
         item24 = new Item(this, R.id.bnd2020_container_controlCard_24, true);
-        item25 = new Item(this, R.id.bnd2020_container_controlCard_25, false);
-        item26 = new Item(this, R.id.bnd2020_container_controlCard_26, false);
-        item27 = new Item(this, R.id.bnd2020_container_controlCard_27, false);
-        item28 = new Item(this, R.id.bnd2020_container_controlCard_28, false);
-        item29 = new Item(this, R.id.bnd2020_container_controlCard_29, false);
-        item30 = new Item(this, R.id.bnd2020_container_controlCard_30, false);
-        item31 = new Item(this, R.id.bnd2020_container_controlCard_31, false);
-        item32 = new Item(this, R.id.bnd2020_container_controlCard_32, false);
+//        item25 = new Item(this, R.id.bnd2020_container_controlCard_25, false);
+//        item26 = new Item(this, R.id.bnd2020_container_controlCard_26, false);
+//        item27 = new Item(this, R.id.bnd2020_container_controlCard_27, false);
+//        item28 = new Item(this, R.id.bnd2020_container_controlCard_28, false);
+//        item29 = new Item(this, R.id.bnd2020_container_controlCard_29, false);
+//        item30 = new Item(this, R.id.bnd2020_container_controlCard_30, false);
+//        item31 = new Item(this, R.id.bnd2020_container_controlCard_31, false);
+//        item32 = new Item(this, R.id.bnd2020_container_controlCard_32, false);
         item33 = new Item(this, R.id.bnd2020_container_controlCard_33, true);
         item34 = new Item(this, R.id.bnd2020_container_controlCard_34, true);
         item35 = new Item(this, R.id.bnd2020_container_controlCard_35, true);
@@ -172,6 +189,36 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         item62 = new Item(this, R.id.bnd2020_container_controlCard_62, true);
         item63 = new Item(this, R.id.bnd2020_container_controlCard_63, true);
         item64 = new Item(this, R.id.bnd2020_container_controlCard_64, true);
+        item65 = new Item(this, R.id.bnd2020_container_controlCard_65, true);
+        item66 = new Item(this, R.id.bnd2020_container_controlCard_66, true);
+
+        item67 = new Item(this, R.id.bnd2020_container_controlCard_67, true);
+        item68 = new Item(this, R.id.bnd2020_container_controlCard_68, true);
+        item69 = new Item(this, R.id.bnd2020_container_controlCard_69, true);
+        item70 = new Item(this, R.id.bnd2020_container_controlCard_70, true);
+        item71 = new Item(this, R.id.bnd2020_container_controlCard_71, true);
+        item72 = new Item(this, R.id.bnd2020_container_controlCard_72, true);
+        item73 = new Item(this, R.id.bnd2020_container_controlCard_73, true);
+        item74 = new Item(this, R.id.bnd2020_container_controlCard_74, true);
+
+        item101 = new Item(this, R.id.bnd2020_container_controlCard_101, true);
+        item102 = new Item(this, R.id.bnd2020_container_controlCard_102, true);
+        item103 = new Item(this, R.id.bnd2020_container_controlCard_103, true);
+        item104 = new Item(this, R.id.bnd2020_container_controlCard_104, true);
+        item105 = new Item(this, R.id.bnd2020_container_controlCard_105, true);
+        item106 = new Item(this, R.id.bnd2020_container_controlCard_106, true);
+        item107 = new Item(this, R.id.bnd2020_container_controlCard_107, true);
+        item108 = new Item(this, R.id.bnd2020_container_controlCard_108, true);
+        item109 = new Item(this, R.id.bnd2020_container_controlCard_109, true);
+        item110 = new Item(this, R.id.bnd2020_container_controlCard_110, true);
+        item111 = new Item(this, R.id.bnd2020_container_controlCard_111, true);
+        item112 = new Item(this, R.id.bnd2020_container_controlCard_112, true);
+        item113 = new Item(this, R.id.bnd2020_container_controlCard_113, true);
+        item114 = new Item(this, R.id.bnd2020_container_controlCard_114, true);
+        item115 = new Item(this, R.id.bnd2020_container_controlCard_115, true);
+        item116 = new Item(this, R.id.bnd2020_container_controlCard_116, true);
+        item117 = new Item(this, R.id.bnd2020_container_controlCard_117, true);
+
     }
 
     @Override
@@ -180,7 +227,7 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         containers.addItem(2, item2);
         containers.addItem(3, item3);
         containers.addItem(4, item4);
-        containers.addItem(5, item5);
+//        containers.addItem(5, item5);
         containers.addItem(6, item6);
         containers.addItem(7, item7);
         containers.addItem(8, item8);
@@ -191,7 +238,7 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         containers.addItem(13, item13);
         containers.addItem(14, item14);
         containers.addItem(15, item15);
-//        containers.addItem(16, item16);
+        containers.addItem(16, item16);
         containers.addItem(17, item17);
         containers.addItem(18, item18);
         containers.addItem(19, item19);
@@ -200,14 +247,14 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         containers.addItem(22, item22);
         containers.addItem(23, item23);
         containers.addItem(24, item24);
-        containers.addItem(25, item25);
-        containers.addItem(26, item26);
-        containers.addItem(27, item27);
-        containers.addItem(28, item28);
-        containers.addItem(29, item29);
-        containers.addItem(30, item30);
-        containers.addItem(31, item31);
-        containers.addItem(32, item32);
+//        containers.addItem(25, item25);
+//        containers.addItem(26, item26);
+//        containers.addItem(27, item27);
+//        containers.addItem(28, item28);
+//        containers.addItem(29, item29);
+//        containers.addItem(30, item30);
+//        containers.addItem(31, item31);
+//        containers.addItem(32, item32);
         containers.addItem(33, item33);
         containers.addItem(34, item34);
         containers.addItem(35, item35);
@@ -232,14 +279,25 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
         containers.addItem(54, item54);
         containers.addItem(55, item55);
         containers.addItem(56, item56);
-        containers.addItem(56, item57);
-        containers.addItem(56, item58);
+        containers.addItem(57, item57);
+        containers.addItem(58, item58);
 //        containers.addItem(59, item59);
-        containers.addItem(56, item60);
-        containers.addItem(56, item61);
-        containers.addItem(56, item62);
-        containers.addItem(56, item63);
-        containers.addItem(56, item64);
+        containers.addItem(60, item60);
+        containers.addItem(61, item61);
+        containers.addItem(62, item62);
+        containers.addItem(63, item63);
+        containers.addItem(64, item64);
+        containers.addItem(65, item65);
+        containers.addItem(66, item66);
+
+        containers.addItem(67, item67);
+        containers.addItem(68, item68);
+        containers.addItem(69, item69);
+        containers.addItem(70, item70);
+        containers.addItem(71, item71);
+        containers.addItem(72, item72);
+        containers.addItem(73, item73);
+        containers.addItem(74, item74);
     }
 
     @Override
@@ -249,17 +307,35 @@ public class ContainerControlCard extends AppCompatActivity implements SummaryBe
 
         RadioGroupHandler.setActionSingleHiddenPositive(this, item14, item15, new String[]{"Не соответствует"});
         RadioGroupHandler.setActionSingleHiddenPositive(this, item18, item19, new String[]{"Другое"});
+        RadioGroupHandler.setActionSingleHiddenPositive(this, item21, item22, new String[]{"Есть"});
+        RadioGroupHandler.setActionSingleHiddenPositive(this, item34, item35, new String[]{"Есть"});
+        RadioGroupHandler.setActionSingleHiddenPositive(this, item36, item37, new String[]{"Есть"});
+        RadioGroupHandler.setActionSingleHiddenPositive(this, item38, item39, new String[]{"Есть"});
+        RadioGroupHandler.setActionSingleHiddenPositive(this, item40, item41, new String[]{"Есть"});
+        RadioGroupHandler.setActionSingleHiddenPositive(this, item42, item43, new String[]{"Есть"});
 
-        ButtonHandler.setActionInfDialog(this, item25, R.drawable.conteiner_on_the_ground);
-        ButtonHandler.setActionInfDialog(this, item26, R.drawable.container_rack_supports);
-        ButtonHandler.setActionInfDialog(this, item27, R.drawable.container_paw_supports);
-        ButtonHandler.setActionInfDialog(this, item28, R.drawable.container_saddle_supports);
-        ButtonHandler.setActionInfDialog(this, item29, R.drawable.container_metal_supporting_structure);
-        ButtonHandler.setActionInfDialog(this, item30, R.drawable.container_conical_support);
-        ButtonHandler.setActionInfDialog(this, item31, R.drawable.container_cylindrical_support);
-        ButtonHandler.setActionInfDialog(this, item32, R.drawable.container_ring_supports);
+        RadioGroupHandler.setActionShowDialog(this, R.id.bnd2020_container_controlCard_16_1, R.drawable.conteiner_on_the_ground);
+        RadioGroupHandler.setActionShowDialog(this, R.id.bnd2020_container_controlCard_16_2, R.drawable.container_rack_supports);
+        RadioGroupHandler.setActionShowDialog(this, R.id.bnd2020_container_controlCard_16_3, R.drawable.container_paw_supports);
+        RadioGroupHandler.setActionShowDialog(this, R.id.bnd2020_container_controlCard_16_4, R.drawable.container_saddle_supports);
+        RadioGroupHandler.setActionShowDialog(this, R.id.bnd2020_container_controlCard_16_5, R.drawable.container_metal_supporting_structure);
+        RadioGroupHandler.setActionShowDialog(this, R.id.bnd2020_container_controlCard_16_6, R.drawable.container_conical_support);
+        RadioGroupHandler.setActionShowDialog(this, R.id.bnd2020_container_controlCard_16_7, R.drawable.container_cylindrical_support);
+        RadioGroupHandler.setActionShowDialog(this, R.id.bnd2020_container_controlCard_16_8, R.drawable.container_ring_supports);
 
         RadioGroupHandler.setActionSingleHiddenPositive(this, item44, item45, new String[]{"Есть"});
+
+        Item[] items = new Item[]{item102, item104, item106, item108, item110, item112, item114, item116};
+        ButtonHandler.setActionAddItemToUI(item101, true, items);
+
+        ButtonHandler.setActionSingleHidden(item103, item102);
+        ButtonHandler.setActionSingleHidden(item105, item104);
+        ButtonHandler.setActionSingleHidden(item107, item106);
+        ButtonHandler.setActionSingleHidden(item109, item108);
+        ButtonHandler.setActionSingleHidden(item111, item110);
+        ButtonHandler.setActionSingleHidden(item113, item112);
+        ButtonHandler.setActionSingleHidden(item115, item114);
+        ButtonHandler.setActionSingleHidden(item117, item116);
     }
 
     @Override

@@ -29,7 +29,6 @@ public class Item {
     private String type;
     private boolean isGiven;
     private String value;
-    private Adapter adapter;
 
     private String location = "location";
     private String section = "section";
@@ -47,6 +46,8 @@ public class Item {
     // for Defect Tree
     private int parentId;
     private int referenceId;
+
+    private Item[] childs;
 
     public HashMap<String, String> params(){
         HashMap<String, String> params = new HashMap<>();
@@ -90,6 +91,31 @@ public class Item {
         section = description.get(section);
         form = description.get(form);
         id = description.get(id);
+    }
+
+    /**
+     * Constructor for TextView, EditText, Button, RadioGroup
+     * @param activity - Parent Activity
+     * @param resourceId - Id View
+     * @param isGiven - flag, that give info about this View(This View have data, that need write to DataBase)
+     * @param childs - childs of Container
+     */
+    public Item(Activity activity, int resourceId, boolean isGiven, Item[] childs){
+        this.activity = activity;
+        this.resourceId = resourceId;
+        this.isGiven = isGiven;
+        this.view = activity.findViewById(resourceId);
+        view.setVisibility(visibility);
+
+        type = Types.getTypeView(view);
+
+        HashMap<String, String> description = ParseResourceId.parse(activity, resourceId);
+        location = description.get(location);
+        section = description.get(section);
+        form = description.get(form);
+        id = description.get(id);
+
+        this.childs = childs;
     }
 
     /**
@@ -242,13 +268,14 @@ public class Item {
         return referenceId;
     }
 
+    public Item[] getChilds(){
+        return childs;
+    }
+
     public void setReferenceId(int parentId){
         this.referenceId = referenceId;
     }
 
-    public Adapter getAdapter() {
-        return adapter;
-    }
 
 //    public void setAdapter(Adapter adapter) {
 //        this.adapter = adapter;

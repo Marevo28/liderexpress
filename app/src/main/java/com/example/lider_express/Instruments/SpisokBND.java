@@ -44,6 +44,9 @@ public class SpisokBND extends AppCompatActivity {
             case "SPEC_NKO":
                 spisochek = getResources().getStringArray(R.array.bnd_spec_nko);// создаем адаптер
                 break;
+            case "HMMR_SPEC_NKO":
+                spisochek = getResources().getStringArray(R.array.hmmr_spec_nko);// создаем адаптер
+                break;
             case "defectsbeznk":
               //  spisochek = getResources().getStringArray(R.array.bnd_irldefects);// создаем адаптер
                 break;

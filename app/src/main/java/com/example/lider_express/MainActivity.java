@@ -185,9 +185,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         location = Shared.nameBND2020;
                         temporaryLocation = Shared.nameBND2020;
                         break;
-                    case "XMMP":
+                    case "XMMP Насосы":
                         // TODO Change Table on HMMR
-                        location = Shared.nameBND2020;
+                        location = Shared.nameHMMP_Pump;
+                        temporaryLocation = Shared.nameHMMR;
+                        break;
+                    case "XMMP Сосуды":
+                        // TODO Change Table on HMMR
+                        location = Shared.nameHMMP_Container;
                         temporaryLocation = Shared.nameHMMR;
                         break;
                 }
@@ -245,7 +250,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             textViewObject.setText(cursor.getString(15));//объект
             textViewSkvazhina.setText(cursor.getString(16));//скважина
             // set select position
-            position = cursor.getString(cursor.getColumnIndex("POSITION"));
+            position = cursor.getString(cursor.getColumnIndex("Position"));
 
             cursor.close();
         } else {
@@ -347,7 +352,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         case "Насос":
                             Intent IntentCardPump = new Intent(MainActivity.this, PumpControlCard.class);
                             IntentCardPump.putExtra("position", position);
-                            IntentCardPump.putExtra("location", temporaryLocation);
                             startIntent(IntentCardPump);
                             break;
                         case "Блок реагентов (УДЭ)":
@@ -484,8 +488,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent IntentSittings = new Intent(MainActivity.this, SittingsActivity.class);
             startActivity(IntentSittings);
         } else if (id == R.id.nav_tools) {
-            Intent IntentSittings = new Intent(MainActivity.this, Menu_tools.class);
-            startActivity(IntentSittings);
+//            Intent IntentSittings = new Intent(MainActivity.this, Menu_tools.class);
+//            startActivity(IntentSittings);
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
