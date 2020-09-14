@@ -976,25 +976,23 @@
                 android:id="@+id/bnd2020_container_controlCard_33"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_33_1"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Удовл." />
+                    android:text="Удовлетворительно" />
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_33_2"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Неудовл." />
+                    android:text="Неудовлетворительно" />
             </RadioGroup>
         </LinearLayout>
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Состояние опор ////////////////////// -->
@@ -1063,25 +1061,23 @@
                 android:id="@+id/bnd2020_container_controlCard_35"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_35_1"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Удовл." />
+                    android:text="Удовлетворительно" />
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_35_2"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Неудовл." />
+                    android:text="Неудовлетворительно" />
             </RadioGroup>
         </LinearLayout>
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Состояние фундамента ////////////////////// -->
@@ -1150,25 +1146,23 @@
                 android:id="@+id/bnd2020_container_controlCard_37"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_37_1"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Удовл." />
+                    android:text="Удовлетворительно" />
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_37_2"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Неудовл." />
+                    android:text="Неудовлетворительно" />
             </RadioGroup>
         </LinearLayout>
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Состояние заземления ////////////////////// -->
@@ -1237,25 +1231,23 @@
                 android:id="@+id/bnd2020_container_controlCard_39"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_39_1"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Удовл." />
+                    android:text="Удовлетворительно" />
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_39_2"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Неудовл." />
+                    android:text="Неудовлетворительно" />
             </RadioGroup>
         </LinearLayout>
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Состояние молниезащиты ////////////////////// -->
@@ -1324,25 +1316,23 @@
                 android:id="@+id/bnd2020_container_controlCard_41"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_41_1"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Удовл." />
+                    android:text="Удовлетворительно" />
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_41_2"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Неудовл." />
+                    android:text="Неудовлетворительно" />
             </RadioGroup>
         </LinearLayout>
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Состояние анкерныйх болтов ////////////////////// -->
@@ -1411,25 +1401,23 @@
                 android:id="@+id/bnd2020_container_controlCard_43"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_43_1"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Удовл." />
+                    android:text="Удовлетворительно" />
 
                 <RadioButton
                     android:id="@+id/bnd2020_container_controlCard_43_2"
                     style="@style/p"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
                     android:gravity="center_vertical|left"
-                    android:text="Неудовл." />
+                    android:text="Неудовлетворительно" />
             </RadioGroup>
         </LinearLayout>
         <!-- \\\\\\\\\\\\\\\\\\\\\\ Состояние футеровки ////////////////////// -->
