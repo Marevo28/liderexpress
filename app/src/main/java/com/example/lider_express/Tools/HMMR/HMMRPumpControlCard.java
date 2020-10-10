@@ -44,7 +44,7 @@ public class HMMRPumpControlCard extends AppCompatActivity implements SummaryBeh
     public SQLiteDatabase mDb;
 
     private SummaryBeta pump;
-    private final String PUMP_READ_DATA_BASE = Shared.nameHMMP_Pump;
+    private final String PUMP_READ_DATA_BASE = Shared.nameHMMR_SUMMARY;
     private final String PUMP_WRITE_DATA_BASE = Shared.nameDefectHMMR_Pump;
 
     Item item7 ,item8,
@@ -65,7 +65,8 @@ public class HMMRPumpControlCard extends AppCompatActivity implements SummaryBeh
             item75 ,item76,
             item77 ,item78,
             item79 ,item80,
-            item81 ,item82;
+            item81 ,item82,
+            item101;
 
 
     Item bndItem27 ,bndItem28,
@@ -88,7 +89,7 @@ public class HMMRPumpControlCard extends AppCompatActivity implements SummaryBeh
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bnd_2020_pump_control_card);
+        setContentView(R.layout.activity_hmmr_2020_pump_control_card);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -117,7 +118,7 @@ public class HMMRPumpControlCard extends AppCompatActivity implements SummaryBeh
 
 
         //  Находим нашу заветную кнопочку Save
-        Button save = findViewById(R.id.bnd_2020_pump_save);
+        Button save = findViewById(R.id.hmmr_pump_save);
 
         //  Листенер на нашу кнопочку
         save.setOnClickListener(new View.OnClickListener() {
@@ -133,57 +134,58 @@ public class HMMRPumpControlCard extends AppCompatActivity implements SummaryBeh
 
     @Override
     public void initializeItems() {
-        bndItem27 = new Item(this, R.id.bnd_2020_pump_from_bnd_2020_id_27, true);
-        bndItem28 = new Item(this, R.id.bnd_2020_pump_from_bnd_2020_id_28, true);
-        bndItem29 = new Item(this, R.id.bnd_2020_pump_from_bnd_2020_id_29, true);
-        bndItem30 = new Item(this, R.id.bnd_2020_pump_from_bnd_2020_id_30, true);
-        bndItem37 = new Item(this, R.id.bnd_2020_pump_from_bnd_2020_id_37, true);
-        bndItem38 = new Item(this, R.id.bnd_2020_pump_from_bnd_2020_id_38, true);
-        bndItem44 = new Item(this, R.id.bnd_2020_pump_from_bnd_2020_id_44, true);
-        bndItem45 = new Item(this, R.id.bnd_2020_pump_from_bnd_2020_id_45, true);
-        bndItem46 = new Item(this, R.id.bnd_2020_pump_from_bnd_2020_id_46_42, true);
-        bndItem47 = new Item(this, R.id.bnd_2020_pump_from_bnd_2020_id_47_43, true);
-        bndItem49 = new Item(this, R.id.bnd_2020_pump_from_bnd_2020_id_49, true);
-        bndItem51 = new Item(this, R.id.bnd_2020_pump_from_bnd_2020_id_51, true);
+        bndItem27 = new Item(this, R.id.hmmr_pump_from_hmmr_id_27, true);
+        bndItem28 = new Item(this, R.id.hmmr_pump_from_hmmr_id_28, true);
+        bndItem29 = new Item(this, R.id.hmmr_pump_from_hmmr_id_29, true);
+        bndItem30 = new Item(this, R.id.hmmr_pump_from_hmmr_id_30, true);
+        bndItem37 = new Item(this, R.id.hmmr_pump_from_hmmr_id_37, true);
+        bndItem38 = new Item(this, R.id.hmmr_pump_from_hmmr_id_38, true);
+        bndItem44 = new Item(this, R.id.hmmr_pump_from_hmmr_id_44, true);
+        bndItem45 = new Item(this, R.id.hmmr_pump_from_hmmr_id_45, true);
+        bndItem46 = new Item(this, R.id.hmmr_pump_from_hmmr_id_46_42, true);
+        bndItem47 = new Item(this, R.id.hmmr_pump_from_hmmr_id_47_43, true);
+        bndItem49 = new Item(this, R.id.hmmr_pump_from_hmmr_id_49, true);
+        bndItem51 = new Item(this, R.id.hmmr_pump_from_hmmr_id_51, true);
 
-        item7 = new Item(this, R.id.bnd_2020_pump_id_7, true);
-        item10 = new Item(this, R.id.bnd_2020_pump_id_10, true);
-        item12 = new Item(this, R.id.bnd_2020_pump_id_12, true);
-        item15 = new Item(this, R.id.bnd_2020_pump_id_15, true);
-        item39 = new Item(this, R.id.bnd_2020_pump_id_39, true);
-        item40 = new Item(this, R.id.bnd_2020_pump_id_40, true);
-        item41 = new Item(this, R.id.bnd_2020_pump_id_41, true);
-        item42 = new Item(this, R.id.bnd_2020_pump_id_42, true);
-        item43 = new Item(this, R.id.bnd_2020_pump_id_43, true);
-        item44 = new Item(this, R.id.bnd_2020_pump_id_44, true);
-        item45 = new Item(this, R.id.bnd_2020_pump_id_45, true);
-        item46 = new Item(this, R.id.bnd_2020_pump_id_46, true);
-        item47 = new Item(this, R.id.bnd_2020_pump_id_47, true);
-        item48 = new Item(this, R.id.bnd_2020_pump_id_48, true);
-        item49 = new Item(this, R.id.bnd_2020_pump_id_49, true);
-        item57 = new Item(this, R.id.bnd_2020_pump_id_57, true);
-        item58 = new Item(this, R.id.bnd_2020_pump_id_58, true);
-        item69 = new Item(this, R.id.bnd_2020_pump_id_69, true);
-        item71 = new Item(this, R.id.bnd_2020_pump_id_71, true);
-        item72 = new Item(this, R.id.bnd_2020_pump_id_72, true);
-        item73 = new Item(this, R.id.bnd_2020_pump_id_73, true);
-        item74 = new Item(this, R.id.bnd_2020_pump_id_74, true);
-        item75 = new Item(this, R.id.bnd_2020_pump_id_75, true);
-        item76 = new Item(this, R.id.bnd_2020_pump_id_76, true);
-        item77 = new Item(this, R.id.bnd_2020_pump_id_77, true);
-        item78 = new Item(this, R.id.bnd_2020_pump_id_78, true);
-        item79 = new Item(this, R.id.bnd_2020_pump_id_79, true);
-        item80 = new Item(this, R.id.bnd_2020_pump_id_80, true);
-        item81 = new Item(this, R.id.bnd_2020_pump_id_81, true);
-        item82 = new Item(this, R.id.bnd_2020_pump_id_82, true);
+        item7 = new Item(this,  R.id.hmmr_pump_id_7, true);
+        item10 = new Item(this, R.id.hmmr_pump_id_10, true);
+        item12 = new Item(this, R.id.hmmr_pump_id_12, true);
+        item15 = new Item(this, R.id.hmmr_pump_id_15, true);
+        item39 = new Item(this, R.id.hmmr_pump_id_39, true);
+        item40 = new Item(this, R.id.hmmr_pump_id_40, true);
+        item41 = new Item(this, R.id.hmmr_pump_id_41, true);
+        item42 = new Item(this, R.id.hmmr_pump_id_42, true);
+        item43 = new Item(this, R.id.hmmr_pump_id_43, true);
+        item44 = new Item(this, R.id.hmmr_pump_id_44, true);
+        item45 = new Item(this, R.id.hmmr_pump_id_45, true);
+        item46 = new Item(this, R.id.hmmr_pump_id_46, true);
+        item47 = new Item(this, R.id.hmmr_pump_id_47, true);
+        item48 = new Item(this, R.id.hmmr_pump_id_48, true);
+        item49 = new Item(this, R.id.hmmr_pump_id_49, true);
+        item57 = new Item(this, R.id.hmmr_pump_id_57, true);
+        item58 = new Item(this, R.id.hmmr_pump_id_58, true);
+        item69 = new Item(this, R.id.hmmr_pump_id_69, true);
+        item71 = new Item(this, R.id.hmmr_pump_id_71, true);
+        item72 = new Item(this, R.id.hmmr_pump_id_72, true);
+        item73 = new Item(this, R.id.hmmr_pump_id_73, true);
+        item74 = new Item(this, R.id.hmmr_pump_id_74, true);
+        item75 = new Item(this, R.id.hmmr_pump_id_75, true);
+        item76 = new Item(this, R.id.hmmr_pump_id_76, true);
+        item77 = new Item(this, R.id.hmmr_pump_id_77, true);
+        item78 = new Item(this, R.id.hmmr_pump_id_78, true);
+        item79 = new Item(this, R.id.hmmr_pump_id_79, true);
+        item80 = new Item(this, R.id.hmmr_pump_id_80, true);
+        item81 = new Item(this, R.id.hmmr_pump_id_81, true);
+        item82 = new Item(this, R.id.hmmr_pump_id_82, true);
+        item101 = new Item(this, R.id.hmmr_pump_defectTree_101, true);
 
-        radioHiddenItem1 = new Item(this, R.id.bnd_2020_pump_radio_group_hidden_1, true);
-        radioHiddenItem2 = new Item(this, R.id.bnd_2020_pump_radio_group_hidden_2, true);
-        linearHiddenItem1 = new Item(this, R.id.bnd_2020_pump_layout_hidden_1, true);
-        linearHiddenItem2 = new Item(this, R.id.bnd_2020_pump_layout_hidden_2, true);
-        linearHiddenItem3 = new Item(this, R.id.bnd_2020_pump_layout_hidden_3, true);
+        radioHiddenItem1 = new Item(this,  R.id.hmmr_pump_radio_group_hidden_1, true);
+        radioHiddenItem2 = new Item(this,  R.id.hmmr_pump_radio_group_hidden_2, true);
+        linearHiddenItem1 = new Item(this, R.id.hmmr_pump_layout_hidden_1, true);
+        linearHiddenItem2 = new Item(this, R.id.hmmr_pump_layout_hidden_2, true);
+        linearHiddenItem3 = new Item(this, R.id.hmmr_pump_layout_hidden_3, true);
 
-        imageItem1 = new Item(this, R.id.bnd_2020_pump_info_table, true);
+        imageItem1 = new Item(this, R.id.hmmr_pump_info_table, true);
         ButtonHandler.setActionInfDialog(this, imageItem1, R.drawable.nasos_table);
     }
 
@@ -191,48 +193,101 @@ public class HMMRPumpControlCard extends AppCompatActivity implements SummaryBeh
     @Override
     public void initializeSummary() {
 
-        pump.addItem(1, bndItem27);
-        pump.addItem(2, bndItem28);
-        pump.addItem(3, bndItem29);
-        pump.addItem(4, bndItem30);
-        pump.addItem(5, bndItem37);
-        pump.addItem(6, bndItem38);
-        pump.addItem(7, bndItem44);
-        pump.addItem(8, bndItem45);
-        pump.addItem(9, bndItem46);
-        pump.addItem(10, bndItem47);
-        pump.addItem(11, bndItem49);
-        pump.addItem(12, bndItem51);
-        pump.addItem(13, item7);
-        pump.addItem(14, item10);
-        pump.addItem(15, item12);
-        pump.addItem(16, item15);
-        pump.addItem(17, item39);
-        pump.addItem(18, item40);
-        pump.addItem(19, item41);
-        pump.addItem(20, item42);
-        pump.addItem(21, item43);
-        pump.addItem(22, item44);
-        pump.addItem(23, item45);
-        pump.addItem(24, item46);
-        pump.addItem(25, item47);
-        pump.addItem(26, item48);
-        pump.addItem(27, item49);
-        pump.addItem(28, item57);
-        pump.addItem(29, item58);
-        pump.addItem(30, item69);
-        pump.addItem(31, item71);
-        pump.addItem(32, item72);
-        pump.addItem(33, item73);
-        pump.addItem(34, item74);
-        pump.addItem(35, item75);
-        pump.addItem(36, item76);
-        pump.addItem(37, item77);
-        pump.addItem(38, item78);
-        pump.addItem(39, item79);
-        pump.addItem(30, item80);
-        pump.addItem(41, item81);
-        pump.addItem(42, item82);
+        pump.addItem(1, bndItem27); //  Эксперты, записанные в журнал "Дата записи:
+        pump.addItem(2, bndItem28); //   Эксперты, записанные в журнал ФИО:
+        pump.addItem(3, bndItem29); //  Аттестованные специалисты НК, вписанные в журнал инструктажа Дата записи:
+        pump.addItem(4, bndItem30); //   Аттестованные специалисты НК, вписанные в журнал инструктажа ФИО:
+        pump.addItem(5, bndItem37); //  Дата начала останова
+        pump.addItem(6, bndItem38); //  Дата окончания останова
+        pump.addItem(7, bndItem44); //  Акт неготовности оборудования составлен?
+        pump.addItem(8, bndItem45); // Акт непредоставления документов составлен?
+        pump.addItem(9, bndItem46); // Дата НК:
+        pump.addItem(10, bndItem47); // ФИО Специалиста:
+        pump.addItem(11, bndItem49); // Причина по которой не проводилось обследование?
+        pump.addItem(12, bndItem51); // Какой выезд?
+        pump.addItem(13, item7); //  Наименовение
+        pump.addItem(14, item10); // Заводской №
+        pump.addItem(15, item12); // Технологический №
+        pump.addItem(16, item15); // Обьект/Куст
+        pump.addItem(17, item39); // Напорный патрубок (от корпуса насоса до фланца) Наружный диаметр, мм:
+        pump.addItem(18, item40); // Напорный патрубок (от корпуса насоса до фланца) Толщина, мм
+        pump.addItem(19, item41); //  Всасывающий патрубок (от корпуса насоса до фланца) Наружный диаметр, мм:
+        pump.addItem(20, item42); //  Всасывающий патрубок (от корпуса насоса до фланца) Толщина, мм
+        pump.addItem(21, item43); //  Работоспособное состояние?
+        pump.addItem(22, item44); //  Наличие маркировки завода изготовителя
+        pump.addItem(23, item45); //  Состояние фундамента
+        pump.addItem(24, item46); //  Состояние ЛКП
+        pump.addItem(25, item47); // Наличие заземления
+        pump.addItem(26, item48); // Протечки торцевых уплотнений
+        pump.addItem(27, item49); // Имеются стрелки направления среды
+        pump.addItem(28, item57); // На напорном трубопроводе установлен обратный клапан?
+        pump.addItem(29, item58); // На двигателе указано направление вращения ротора?
+        pump.addItem(30, item69); // Качественная оценка технического состояния агрегата:
+        pump.addItem(31, item71); // 1 - X мм
+        pump.addItem(32, item72); // 1 - Y мм
+        pump.addItem(33, item73); // 1 - Z мм
+        pump.addItem(34, item74); // 2 - X мм
+        pump.addItem(35, item75); // 2 - Y мм
+        pump.addItem(36, item76); // 2 - Z мм
+        pump.addItem(37, item77); // 3 - X мм
+        pump.addItem(38, item78); // 3 - Y мм
+        pump.addItem(39, item79); // 3 - Z мм
+        pump.addItem(40, item80); // 4 - X мм
+        pump.addItem(41, item81); // 4 - Y мм
+        pump.addItem(42, item82); // 4 - Z мм
+        pump.addItem(43, item101); // 4 - Z мм
+
+
+//
+//
+//
+        /**
+         *
+         *
+         *         1 //  Эксперты, записанные в журнал "Дата записи:
+         *         2 //   Эксперты, записанные в журнал ФИО:
+         *         3 //  Аттестованные специалисты НК, вписанные в журнал инструктажа Дата записи:
+         *         4 //   Аттестованные специалисты НК, вписанные в журнал инструктажа ФИО:
+         *         5 //  Дата начала останова
+         *         6 //  Дата окончания останова
+         *         7 //  Акт неготовности оборудования составлен?
+         *         8 // Акт непредоставления документов составлен?
+         *         9 // Дата НК:
+         *         10 // ФИО Специалиста:
+         *         11 // Причина по которой не проводилось обследование?
+         *         12 // Какой выезд?
+         *         13 //  Наименовение
+         *         14  // Заводской №
+         *         15  // Технологический №
+         *         16  // Обьект/Куст
+         *         17  // Напорный патрубок (от корпуса насоса до фланца) Наружный диаметр, мм:
+         *         18  // Напорный патрубок (от корпуса насоса до фланца) Толщина, мм
+         *         19  //  Всасывающий патрубок (от корпуса насоса до фланца) Наружный диаметр, мм:
+         *         20  //  Всасывающий патрубок (от корпуса насоса до фланца) Толщина, мм
+         *         21  //  Работоспособное состояние?
+         *         22  //  Наличие маркировки завода изготовителя
+         *         23  //  Состояние фундамента
+         *         24  //  Состояние ЛКП
+         *         25  // Наличие заземления
+         *         26  // Протечки торцевых уплотнений
+         *         27  // Имеются стрелки направления среды
+         *         28  // На напорном трубопроводе установлен обратный клапан?
+         *         29  // На двигателе указано направление вращения ротора?
+         *         30  // Качественная оценка технического состояния агрегата:
+         *         31  // 1 - X мм
+         *         32  // 1 - Y мм
+         *         33  // 1 - Z мм
+         *         34  // 2 - X мм
+         *         35  // 2 - Y мм
+         *         36  // 2 - Z мм
+         *         37  // 3 - X мм
+         *         38  // 3 - Y мм
+         *         39  // 3 - Z мм
+         *         30  // 4 - X мм
+         *         41  // 4 - Y мм
+         *         42  // 4 - Z мм
+         */
+
     }
 
     @Override

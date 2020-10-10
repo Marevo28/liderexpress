@@ -50,9 +50,9 @@ public class SummaryBeta {
     }
 
     public void addItem(int column, Item item) {
-        if (item != null){
+        if (item != null) {
             items.put(column, item);
-        }else{
+        } else {
             Log.e("SummaryBetta", "Item is null - column: " + column);
         }
     }
@@ -70,6 +70,10 @@ public class SummaryBeta {
         }
     }
 
+    public void setState(Item item, String value) {
+        item.setState(value);
+    }
+
     public void saveData() {
         ContentValues initialValues = new ContentValues();
         initialValues.put("Position", position);
@@ -78,15 +82,15 @@ public class SummaryBeta {
         String column;
         for (int changePath : items.keySet()) {
             column = constantPath + changePath;
-            if(items.get(changePath) != null){
+            if (items.get(changePath) != null) {
                 initialValues.put(column, items.get(changePath).getValue());
             }
         }
 
         for (String k : initialValues.keySet()) {
-            if(initialValues.get(k) != null){
+            if (initialValues.get(k) != null) {
                 Log.e(k + ": => ", initialValues.get(k).toString());
-            }else{
+            } else {
                 Log.e(k + ": => ", "Null");
             }
 

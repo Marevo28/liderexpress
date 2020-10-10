@@ -185,14 +185,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         location = Shared.nameBND2020;
                         temporaryLocation = Shared.nameBND2020;
                         break;
-                    case "XMMP Насосы":
+                    case "XMMP":
                         // TODO Change Table on HMMR
-                        location = Shared.nameHMMP_Pump;
-                        temporaryLocation = Shared.nameHMMR;
-                        break;
-                    case "XMMP Сосуды":
-                        // TODO Change Table on HMMR
-                        location = Shared.nameHMMP_Container;
+                        location = Shared.nameHMMR_SUMMARY;
                         temporaryLocation = Shared.nameHMMR;
                         break;
                 }
@@ -376,13 +371,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                             IntentCardPump.putExtra("position", position);
                             startIntent(IntentCardPump);
                             break;
-                        case "СРПД":
+                        case "Сосуд":
                             Intent IntentCardContainer = new Intent(MainActivity.this, HMMRContainerControlCard.class);
                             IntentCardContainer.putExtra("position", position);
                             startIntent(IntentCardContainer);
                             break;
                         default:
-                            displayMessage(getBaseContext(), "Допустимые типы ТУ: Насос, СРПД");
+                            displayMessage(getBaseContext(), "Допустимые типы ТУ: Насос, Сосуд");
                     }
                 }else {
 

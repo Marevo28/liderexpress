@@ -37,9 +37,10 @@
         <item>Юсупов И.А.</item>
     </string-array>
 
-    <!-- Специалисты проводили НК -->
+    <!-- Специалисты проводили НК HHMR -->
     <string-array name="hmmr_spec_nko">
-        <item>Михайлов Е.А.</item>
-        <item>Гусар А.Г.</item>
+        <item>Карпов С.</item>
+        <item>Трифанов А.</item>
+        <item>Грищенко А.</item>
     </string-array>
 </resources>

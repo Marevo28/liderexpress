@@ -49,6 +49,7 @@ public class Shared {
      *
      */
     public static String nameHMMR = "HMMR";
+    public static String nameHMMR_SUMMARY = "HMMR2020";
     public static String nameHMMP_Pump = "HMMR_Pump";
     public static String nameHMMP_Container = "HMMR_Container";
     public static String nameDefectHMMR_Pump = "DefectHMMR_Pump";
